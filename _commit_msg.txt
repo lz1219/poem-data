@@ -1,0 +1,9 @@
+feat(server-django): export_json——数据库导出回 data/*.json，往返无损
+
+- 新增 export_json 命令：一作品一文件、原子写入、自动重算 index.json
+- --check 模式只比对不写，有差异退出码 1（已做成常驻闸门）
+- 往返验证：108 个文件与源数据 0 差异（仅 generatedAt 时间戳忽略）
+- 修 import_json：生卒字符串（CBDB 的 "803"）统一转整数
+- 修 export：经纬度 30.0 → 30；editions 写到仓库根 shared/；
+  index 按 key 排序并补 origin 字段
+- 源数据修正：p21194（杜牧）、p24146（陈寿）的 span 由字符串改为整数

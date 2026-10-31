@@ -1,14 +1,4 @@
 {
-  "quanshi-cp-2026": {
-    "book": "全唐诗",
-    "name": "全唐詩（chinese-poetry 電子本）",
-    "kind": "电子",
-    "year": null,
-    "yearText": null,
-    "publisher": null,
-    "parent": null,
-    "note": "据 chinese-poetry 语料库；题作《琵琶引》"
-  },
   "baisi-changqing": {
     "book": "白氏长庆集",
     "name": "白氏長慶集（傳統底本，未入庫）",
@@ -18,5 +8,15 @@
     "publisher": null,
     "parent": null,
     "note": "尚未取得文本；仅作为版本参照登记"
+  },
+  "quanshi-cp-2026": {
+    "book": "全唐诗",
+    "name": "全唐詩（chinese-poetry 電子本）",
+    "kind": "电子",
+    "year": null,
+    "yearText": null,
+    "publisher": null,
+    "parent": null,
+    "note": "据 chinese-poetry 语料库；题作《琵琶引》"
   }
 }

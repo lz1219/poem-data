@@ -26,3 +26,6 @@ server-django/db.sqlite3
 server-django/staticfiles/
 __pycache__/
 *.pyc
+
+# 导出校验临时目录
+server-django/_export_check/

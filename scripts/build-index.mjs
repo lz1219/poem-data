@@ -29,7 +29,7 @@ const idx = {
     file: `data/works/${w.key}.json`,
   })),
   persons: persons.map((p) => ({ key: p.key, zh: p.zh, span: p.span, hasJourney: !!p.journeyKey, file: `data/persons/${p.key}.json` })),
-  journeys: journeys.map((j) => ({ key: j.key, titleZh: j.titleZh, stops: (j.stops || []).length, file: `data/journeys/${j.key}.json` })),
+  journeys: journeys.map((j) => ({ key: j.key, titleZh: j.titleZh, stops: (j.stops || []).length, origin: j.origin, file: `data/journeys/${j.key}.json` })),
 };
 
 fs.writeFileSync(path.join(ROOT, 'data/index.json'), JSON.stringify(idx, null, 2) + '\n');

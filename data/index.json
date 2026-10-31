@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T17:58:13.544Z",
+  "generatedAt": "2026-10-31T18:57:55Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -985,8 +985,8 @@
       "key": "p21194",
       "zh": "杜牧",
       "span": [
-        "803",
-        "853"
+        803,
+        853
       ],
       "hasJourney": false,
       "file": "data/persons/p21194.json"
@@ -995,8 +995,8 @@
       "key": "p24146",
       "zh": "陈寿",
       "span": [
-        "0",
-        "0"
+        0,
+        0
       ],
       "hasJourney": false,
       "file": "data/persons/p24146.json"
@@ -1107,60 +1107,70 @@
       "key": "baijuyi",
       "titleZh": "白居易：从拾遗到香山",
       "stops": 11,
+      "origin": "overlay",
       "file": "data/journeys/baijuyi.json"
     },
     {
       "key": "dufu",
       "titleZh": "杜甫：从长安到湘江",
       "stops": 11,
+      "origin": "overlay",
       "file": "data/journeys/dufu.json"
     },
     {
       "key": "jiangjie",
       "titleZh": "蒋捷：宋亡之后的竹山",
       "stops": 9,
+      "origin": "overlay",
       "file": "data/journeys/jiangjie.json"
     },
     {
       "key": "libai",
       "titleZh": "李白仗剑壮游行迹",
       "stops": 16,
+      "origin": "upstream",
       "file": "data/journeys/libai.json"
     },
     {
       "key": "qinshihuang",
       "titleZh": "秦始皇一统六国行迹",
       "stops": 9,
+      "origin": "upstream",
       "file": "data/journeys/qinshihuang.json"
     },
     {
       "key": "sushi",
       "titleZh": "苏轼宦海贬谪行迹",
       "stops": 11,
+      "origin": "upstream",
       "file": "data/journeys/sushi.json"
     },
     {
       "key": "wangyangming",
       "titleZh": "王阳明知行悟道行迹",
       "stops": 10,
+      "origin": "upstream",
       "file": "data/journeys/wangyangming.json"
     },
     {
       "key": "xuanzang",
       "titleZh": "玄奘西行求法行迹",
       "stops": 12,
+      "origin": "upstream",
       "file": "data/journeys/xuanzang.json"
     },
     {
       "key": "zhangqian",
       "titleZh": "张骞凿空西域行迹",
       "stops": 9,
+      "origin": "upstream",
       "file": "data/journeys/zhangqian.json"
     },
     {
       "key": "zhugeliang",
       "titleZh": "诸葛亮出山北伐行迹",
       "stops": 11,
+      "origin": "upstream",
       "file": "data/journeys/zhugeliang.json"
     }
   ]

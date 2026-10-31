@@ -78,6 +78,8 @@ class Command(BaseCommand):
         for f in sorted((data_dir / "persons").glob("*.json")):
             p = json.loads(f.read_text("utf-8"))
             span = p.get("span") or [None, None]
+            # 有些来源把生卒存成字符串（如 CBDB 导入的 "803"），统一转整数
+            span = [int(x) if isinstance(x, str) and x.lstrip("-").isdigit() else x for x in span]
             obj, _ = Person.objects.update_or_create(
                 key=p["key"][:80],
                 defaults={
