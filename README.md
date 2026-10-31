@@ -9,7 +9,10 @@
 
 | 目录 | 内容 |
 |---|---|
-| `data/works/` | 一件作品一个文件：正文、大意、注释、背景、赏析、校记、系年 |
+| web/ | 前端单页（零构建） |
+| server-django/ | Django 后端：admin 录入 + 只读 API |
+| docs/ | 结构与 AI 编码规范 |
+| data/works/ | 一件作品一个文件：正文、大意、注释、背景、赏析、校记、系年 |
 | `data/persons/` | 人物：生卒、字号、别名、CBDB/Wikidata ID |
 | `data/journeys/` | 行迹：站点、年代、经纬度、出处、站间承接语 |
 | `data/comments/` | 历代评点（仅有评点的作品才建文件） |
@@ -24,10 +27,11 @@
 3. **评点与赏析分栏。** 评点是古人说的（须有评者·朝代·原文·卷页），
    赏析是本站自撰（`by: 本站自撰`）。**不允许把 AI 生成的话放进评点栏。**
 
-## 校验
+## 校验与提交闸门
 
 ```bash
-node scripts/validate.mjs
+node scripts/check.mjs        # 三道：数据契约 / 索引同步 / 数据库往返
+node scripts/install-hooks.mjs  # 装 pre-commit，自动拦不合格提交
 ```
 
 零依赖。检查：字段与枚举、繁简段数一致、校记有无依据、评点是否已核原文、

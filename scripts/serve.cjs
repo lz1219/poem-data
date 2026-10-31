@@ -15,7 +15,7 @@ const MIME = {
 http
   .createServer((req, res) => {
     let p = decodeURIComponent(req.url.split('?')[0]);
-    if (p === '/') p = '/index.html';
+    if (p === '/') p = '/web/index.html';
     const f = path.resolve(path.join(ROOT, p));
     if (!f.startsWith(ROOT)) {
       res.writeHead(403);

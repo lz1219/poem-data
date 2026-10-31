@@ -32,5 +32,24 @@ const idx = {
   journeys: journeys.map((j) => ({ key: j.key, titleZh: j.titleZh, stops: (j.stops || []).length, origin: j.origin, file: `data/journeys/${j.key}.json` })),
 };
 
-fs.writeFileSync(path.join(ROOT, 'data/index.json'), JSON.stringify(idx, null, 2) + '\n');
+const OUT = path.join(ROOT, 'data/index.json');
+const text = JSON.stringify(idx, null, 2) + '\n';
+
+// --check：只比对不写，供提交闸门使用（忽略 generatedAt）
+if (process.argv.includes('--check')) {
+  const norm = (s) => {
+    const d = JSON.parse(s);
+    delete d.generatedAt;
+    return JSON.stringify(d);
+  };
+  const old = fs.existsSync(OUT) ? fs.readFileSync(OUT, 'utf8') : '';
+  if (norm(old) !== norm(text)) {
+    console.error('index.json 与 data/ 不同步，请运行：node scripts/build-index.mjs');
+    process.exit(1);
+  }
+  console.log('index.json 已同步');
+  process.exit(0);
+}
+
+fs.writeFileSync(OUT, text);
 console.log(JSON.stringify({ works: idx.works.length, persons: idx.persons.length, journeys: idx.journeys.length }));

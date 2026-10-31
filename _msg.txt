@@ -1,0 +1,19 @@
+chore: 整理项目结构、加提交闸门与 AI 编码规范
+
+结构
+- 删除 FastAPI 后端 server/（Django 已取代；线上 8081 跑的是服务器副本）
+- 删除无引用的 viewer-debug.html
+- index.html 移入 web/；Django 路由与 serve.cjs 同步（URL 不变）
+
+性能
+- /api/index 修 N+1：行迹站点数改 annotate(Count)，加 60 秒缓存
+  实测（远程 PG）：868 ms → 543 ms 冷 / 7.5 ms 热，响应带 X-Cache 头
+
+闸门
+- 新增 scripts/check.mjs：数据契约 / 索引同步 / 数据库往返三道
+- 新增 scripts/install-hooks.mjs：装 pre-commit，实测能拦下不一致提交
+- build-index.mjs 支持 --check（只比对不写）
+
+文档
+- docs/aicoding.md：五条不可妥协、改动流程、命名规则、AI 代理约定、禁区
+- docs/structure.md：目录清单（含哪些不进 git）、数据流向、放置规则

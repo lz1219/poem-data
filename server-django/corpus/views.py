@@ -104,7 +104,21 @@ def meta(request):
 
 @api_view(["GET"])
 def index(request):
-    return Response({
+    """首屏索引：一次查询取完所有计数，结果缓存 60 秒。"""
+    hit = _cache_get("api:index")
+    if hit is not None:
+        resp = Response(hit)
+        resp["X-Cache"] = "HIT"
+        return resp
+
+    works = (
+        Work.objects.select_related("author")
+        .annotate(_apparatus=Count("apparatus", distinct=True), _comments=Count("commentaries", distinct=True))
+        .order_by("key")
+    )
+    journeys = Journey.objects.annotate(_stops=Count("stops", distinct=True)).select_related("person").order_by("key")
+
+    payload = {
         "generatedAt": None,
         "works": [
             {
@@ -112,24 +126,28 @@ def index(request):
                 "authorKey": w.author.key if w.author_id else None,
                 "genre": w.genre, "level": w.level, "year": w.year,
                 "traditionalDerived": w.traditional_derived,
-                "apparatus": w.apparatus_count,
-                "hasComments": w.commentary_count > 0,
+                "apparatus": w._apparatus,
+                "hasComments": w._comments > 0,
                 "file": f"/api/works/{w.key}",
             }
-            for w in Work.objects.annotate(apparatus_count=Count("apparatus", distinct=True),
-                                           commentary_count=Count("commentaries", distinct=True)).select_related("author")
+            for w in works
         ],
         "persons": [
             {"key": p.key, "zh": p.zh, "span": [p.born, p.died],
              "hasJourney": bool(p.journey_key), "file": f"/api/persons/{p.key}"}
-            for p in Person.objects.all()
+            for p in Person.objects.order_by("key")
         ],
         "journeys": [
-            {"key": j.key, "titleZh": j.title_zh, "stops": j.stops.count(),
+            {"key": j.key, "titleZh": j.title_zh, "stops": j._stops,
              "origin": j.origin, "file": f"/api/journeys/{j.key}"}
-            for j in Journey.objects.all()
+            for j in journeys
         ],
-    })
+    }
+    _cache_put("api:index", payload)
+    resp = Response(payload)
+    resp["X-Cache"] = "MISS"
+    resp["Cache-Control"] = f"public, max-age={CACHE_TTL}"
+    return resp
 
 
 @api_view(["GET"])
