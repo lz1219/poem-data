@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江山行止 · 文献</title>
+<meta name="description" content="中国古典诗文的笺注本：作品、人物、行迹。">
+<style>
+  :root{
+    --paper:#f3efe6; --panel:#fdfbf5; --ink:#3a3428; --muted:#a0917a; --line:#e4dcc9;
+    --gold:#b08d5a; --gold-d:#9d7c4c; --acc:#a83824;
+    --serif:'Songti SC','SimSun','Noto Serif SC',serif;
+    --kai:'Kaiti SC','STKaiti','KaiTi',serif;
+    --sans:'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;
+       background-image:radial-gradient(ellipse 900px 500px at 50% -10%, rgba(176,141,90,.10), transparent)}
+  .container{max-width:1080px;margin:0 auto;padding:26px 20px 60px}
+  h1{margin:0;font-family:var(--kai);font-size:26px;letter-spacing:6px;color:#5a4632;font-weight:600}
+  .subtitle{margin:6px 0 18px;color:var(--muted);font-size:12.5px;letter-spacing:2px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;
+         box-shadow:0 2px 10px rgba(120,96,60,.06)}
+
+  /* 模式切换 */
+  .modes{display:flex;gap:8px;margin-bottom:14px}
+  .modes button{border:1px solid var(--line);background:#fff;color:var(--muted);padding:6px 16px;
+                border-radius:999px;cursor:pointer;font-family:inherit;font-size:13px;letter-spacing:1px}
+  .modes button.on{background:var(--gold);border-color:var(--gold);color:#fff}
+
+  /* 工具栏 */
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px}
+  .toolbar input[type=text]{flex:1;min-width:170px;padding:8px 13px;font-size:13.5px;border:1px solid var(--line);
+                            border-radius:8px;background:#fff;color:var(--ink);outline:none;font-family:inherit}
+  .toolbar input[type=text]:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(176,141,90,.15)}
+  select{padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);
+         font-family:inherit;font-size:13px;outline:none}
+  .btn{border:1px solid var(--line);background:#fff;color:#7a6a52;padding:7px 14px;border-radius:8px;
+       cursor:pointer;font-family:inherit;font-size:13px}
+  .btn:hover{background:#f5efe2}
+  .btn-primary{background:var(--gold);border-color:var(--gold);color:#fff}
+  .btn-primary:hover{background:var(--gold-d)}
+  .count{font-size:12px;color:var(--muted);margin-left:auto}
+
+  /* 主体 */
+  .main{display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:start;margin-top:16px}
+  @media (max-width:860px){.main{grid-template-columns:1fr}}
+  .list{padding:10px;max-height:calc(100vh - 220px);overflow:auto}
+  .item{padding:9px 11px;border-radius:8px;cursor:pointer;display:flex;justify-content:space-between;
+        align-items:baseline;gap:8px;transition:background .12s}
+  .item:hover{background:#f5efe2}
+  .item.on{background:#efe5d0;box-shadow:inset 2px 0 0 var(--gold)}
+  .item .t{font-family:var(--serif);font-size:14.5px}
+  .item .m{font-size:11.5px;color:var(--muted);white-space:nowrap}
+  .more{text-align:center;padding:10px 0 4px}
+  .empty{text-align:center;color:var(--muted);padding:40px 0;font-size:13px}
+
+  /* 阅读区 */
+  .reader{padding:30px 34px 34px;min-height:520px;max-height:calc(100vh - 220px);overflow:auto}
+  .rt{font-family:var(--kai);font-size:27px;color:#4a3a26;letter-spacing:2px;margin:0 0 6px}
+  .ra{font-size:12.5px;color:var(--muted);letter-spacing:1px;margin-bottom:14px}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+  .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:1px 9px;color:var(--muted)}
+  .tag.acc{border-color:rgba(168,56,36,.45);color:var(--acc)}
+  .tag.warn{border-color:#d3b53f;color:#9a7b12}
+  .rc{font-family:var(--serif);font-size:18.5px;line-height:2.1;white-space:pre-line;text-align:center;
+      color:#3a3428;max-width:600px;margin:0 auto 18px}
+  .bh{font-family:var(--kai);font-size:13px;letter-spacing:3px;color:var(--acc);
+      margin:24px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  p{margin:0 0 10px;line-height:1.95}
+  .note{border-left:2px solid var(--acc);background:rgba(168,56,36,.05);padding:9px 13px;margin:8px 0;border-radius:0 6px 6px 0}
+  .note .k{font-size:10.5px;letter-spacing:2px;color:var(--acc)}
+  .src{font-size:11px;color:var(--muted);margin-top:5px}
+  .muted{color:var(--muted)}
+  table{border-collapse:collapse;width:100%;font-size:13px;margin:6px 0 10px}
+  th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:500;font-size:11.5px}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:#efe7d6;padding:1px 4px;border-radius:3px}
+  mark{background:#f2d98c;color:inherit;border-radius:2px;padding:0 1px}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>江山行止 · 文献</h1>
+  <p class="subtitle" id="sub">作品 · 人物 · 行迹</p>
+
+  <div class="modes">
+    <button data-mode="works" class="on">作品</button>
+    <button data-mode="persons">人物</button>
+    <button data-mode="journeys">行迹</button>
+  </div>
+
+  <div class="panel">
+    <div class="toolbar">
+      <input id="q" type="text" placeholder="搜索标题 / 作者 / 诗句，如：明月、苏轼、大江东去">
+      <select id="f1"></select>
+      <select id="f2"></select>
+      <button class="btn-primary" id="rand">随机一首</button>
+      <button class="btn" id="daily">今日一首</button>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="panel list" id="list"></div>
+    <div class="panel reader" id="reader"><p class="empty">从左侧选一条。</p></div>
+  </div>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const GENRE = { shi:'诗', ci:'词', fu:'赋', wen:'文', history:'史传', qu:'曲' };
+const PAGE = 120;
+
+let IDX = null, MODE = 'works', CUR = null, KEYWORD = '', shown = 0, filtered = [], cache = new Map();
+
+/* ── 启动 ── */
+(async function boot() {
+  IDX = await fetch('data/index.json').then(r => r.json());
+  $('#sub').textContent = `作品 ${IDX.works.length} · 人物 ${IDX.persons.length} · 行迹 ${IDX.journeys.length} · 每条叙述带出处`;
+  buildFilters();
+  renderList();
+  route();
+  if (!location.hash) showRandom(false);
+})();
+
+document.querySelectorAll('.modes button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.modes button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  MODE = b.dataset.mode;
+  buildFilters();
+  renderList();
+  $('#reader').innerHTML = '<p class="empty">从左侧选一条。</p>';
+  CUR = null;
+}));
+
+$('#q').addEventListener('input', () => { clearTimeout(window.__t); window.__t = setTimeout(renderList, 180); });
+$('#f1').addEventListener('change', renderList);
+$('#f2').addEventListener('change', renderList);
+$('#rand').addEventListener('click', () => showRandom(true));
+$('#daily').addEventListener('click', () => showDaily());
+
+/* ── 筛选器 ── */
+function buildFilters() {
+  const f1 = $('#f1'), f2 = $('#f2');
+  f1.innerHTML = ''; f2.innerHTML = '';
+  if (MODE === 'works') {
+    const dyn = {}; IDX.persons.forEach(p => { /* 朝代由人物推断，简化为按文体 */ });
+    f1.innerHTML = '<option value="all">全部文体</option>' +
+      Object.entries(GENRE).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
+    f2.innerHTML = '<option value="all">全部级别</option><option value="academic">学术级</option><option value="popular">通俗级</option>';
+  } else if (MODE === 'persons') {
+    f1.innerHTML = '<option value="all">全部人物</option><option value="journey">有行迹</option><option value="nojourney">无行迹</option>';
+    f2.innerHTML = '<option value="all">全部</option>';
+  } else {
+    f1.innerHTML = '<option value="all">全部行迹</option><option value="overlay">本仓库补录</option><option value="upstream">上游数据</option>';
+    f2.innerHTML = '<option value="all">全部</option>';
+  }
+}
+
+/* ── 列表 ── */
+function renderList() {
+  KEYWORD = $('#q').value.trim();
+  const a = $('#f1').value, b = $('#f2').value;
+  const kw = KEYWORD.toLowerCase();
+
+  if (MODE === 'works') {
+    filtered = IDX.works.filter(w => {
+      if (a !== 'all' && w.genre !== a) return false;
+      if (b !== 'all' && w.level !== b) return false;
+      if (!kw) return true;
+      const p = IDX.persons.find(x => x.key === w.authorKey);
+      return w.titleZh.toLowerCase().includes(kw) || (p?.zh || '').includes(KEYWORD);
+    }).sort((x, y) => (x.year || 0) - (y.year || 0));
+  } else if (MODE === 'persons') {
+    filtered = IDX.persons.filter(p => {
+      if (a === 'journey' && !p.hasJourney) return false;
+      if (a === 'nojourney' && p.hasJourney) return false;
+      if (!kw) return true;
+      return p.zh.includes(KEYWORD);
+    }).sort((x, y) => (y.span?.[0] || 0) - (x.span?.[0] || 0));
+  } else {
+    filtered = IDX.journeys.filter(j => (a === 'all' ? true : j.origin === a) && (!kw || j.titleZh.includes(KEYWORD)));
+  }
+
+  shown = 0;
+  $('#list').innerHTML = '';
+  $('#count').textContent = `共 ${filtered.length} 条`;
+  renderMore();
+}
+
+function renderMore() {
+  const list = $('#list');
+  const end = Math.min(shown + PAGE, filtered.length);
+  let html = '';
+  for (let i = shown; i < end; i++) {
+    const r = filtered[i];
+    let t, meta, key;
+    if (MODE === 'works') {
+      const p = IDX.persons.find(x => x.key === r.authorKey);
+      t = r.titleZh; meta = `${r.year ?? '?'} · ${p?.zh || ''}`; key = r.key;
+    } else if (MODE === 'persons') {
+      t = r.zh; meta = r.span?.[0] ? `${r.span[0]}—${r.span[1] ?? '?'}` : '生卒未详'; key = r.key;
+    } else {
+      t = r.titleZh; meta = `${r.stops} 站`; key = r.key;
+    }
+    html += `<div class="item${CUR && CUR.key === key ? ' on' : ''}" data-key="${esc(key)}">
+      <span class="t">${hi(t)}</span><span class="m">${esc(meta)}</span></div>`;
+  }
+  if (shown === 0 && filtered.length === 0) html = '<div class="empty">没有找到</div>';
+  list.insertAdjacentHTML('beforeend', html);
+  shown = end;
+  if (shown < filtered.length) {
+    if (!document.getElementById('moreWrap')) {
+      list.insertAdjacentHTML('beforeend', '<div class="more" id="moreWrap"><button class="btn" id="moreBtn">加载更多</button></div>');
+      document.getElementById('moreBtn').addEventListener('click', () => {
+        document.getElementById('moreWrap').remove();
+        renderMore();
+      });
+    }
+  }
+  list.querySelectorAll('.item').forEach(el => el.addEventListener('click', () => {
+    list.querySelectorAll('.item').forEach(x => x.classList.remove('on'));
+    el.classList.add('on');
+    open(MODE, el.dataset.key);
+  }));
+}
+
+function hi(text) {
+  if (!KEYWORD) return esc(text);
+  const safe = esc(KEYWORD);
+  return esc(text).split(safe).join('<mark>' + safe + '</mark>');
+}
+
+/* ── 打开详情 ── */
+async function open(mode, key) {
+  const meta = IDX[mode].find(x => x.key === key);
+  if (!meta) return;
+  const id = mode + ':' + key;
+  let data = cache.get(id);
+  if (!data) {
+    data = await fetch(meta.file).then(r => r.json());
+    cache.set(id, data);
+  }
+  CUR = { key, mode };
+  const el = $('#reader');
+  if (mode === 'works') el.innerHTML = renderWork(data);
+  else if (mode === 'persons') el.innerHTML = renderPerson(data);
+  else el.innerHTML = renderJourney(data);
+  el.scrollTop = 0;
+  history.replaceState(null, '', `#/${mode === 'works' ? 'work' : mode === 'persons' ? 'person' : 'journey'}/${encodeURIComponent(key)}`);
+}
+
+/* ── 作品 ── */
+function renderWork(w) {
+  const author = IDX.persons.find(p => p.key === w.authorKey);
+  const badges = [
+    w.level === 'academic' ? '<span class="tag acc">学术级</span>' : '<span class="tag">通俗级</span>',
+    `<span class="tag">${GENRE[w.genre] || w.genre}</span>`,
+    `<span class="tag">系年 ${w.certainty}</span>`,
+    w.text?.traditionalDerived ? '<span class="tag warn">繁体为反推</span>' : '<span class="tag">繁体取自底本</span>',
+  ].join('');
+  return `
+    <h2 class="rt">${esc(w.titleZh)}</h2>
+    <div class="ra">${esc(w.titleEn || '')}${w.aliases?.length > 1 ? ' · 又作 ' + esc(w.aliases.slice(1).join('、')) : ''}${author ? ' · ' + esc(author.zh) : ''}</div>
+    <div class="badges">${badges}</div>
+    <div class="rc">${esc((w.text?.paragraphs || []).join('\n'))}</div>
+    <div class="src" style="text-align:center">${w.composed?.placeZh ? '作于 ' + esc(w.composed.placeZh) + ' · ' : ''}${esc(w.citation || '')}</div>
+    ${w.meaning ? `<div class="bh">大意</div><p>${esc(w.meaning)}</p>` : ''}
+    ${w.notes?.length ? `<div class="bh">注释</div><table>${w.notes.map(n => `<tr><th style="width:120px">${esc(n.term)}</th><td>${esc(n.explain)}</td></tr>`).join('')}</table>` : ''}
+    ${w.background ? `<div class="bh">写作背景</div><p>${esc(w.background)}</p>` : ''}
+    ${w.appreciation?.text ? `<div class="bh">赏析</div><p>${esc(w.appreciation.text)}</p>
+      ${w.appreciation.inference ? `<div class="note"><div class="k">推测</div>${esc(w.appreciation.inference.text)}
+        <div class="src">依据：${esc(w.appreciation.inference.basis)}</div></div>` : ''}
+      <div class="src">${esc(w.appreciation.by)} · ${esc(w.appreciation.license)}</div>` : ''}
+    ${w.apparatus?.length ? `<div class="bh">校记</div>${w.apparatus.map(a => `<div class="note">
+        <div class="k">异文</div>
+        <div><code>${esc(a.baseText)}</code> / <code>${esc(a.variantText)}</code>${a.locator?.label ? ' · ' + esc(a.locator.label) : ''} · 判定 <b>${esc(a.judgement)}</b></div>
+        <div class="src">${esc(a.basis)}</div></div>`).join('')}` : ''}
+    ${w.dating?.length ? `<div class="bh">系年</div><table>
+      <tr><th>说法</th><th>依据</th><th>采否</th></tr>
+      ${w.dating.map(d => `<tr><td>${esc(d.claim)}</td>
+        <td>${d.evidence.map(e => `${esc(e.quote)}<div class="src">${esc(e.source)}（${esc(e.grade)} 级）</div>`).join('')}</td>
+        <td>${esc(d.stance)}</td></tr>`).join('')}</table>` : ''}
+    <div class="bh">历代评点</div>
+    <p class="empty">${w.commentaryFile ? '见 ' + esc(w.commentaryFile) : '暂无。未找到可核原文的评点，不编造。'}</p>`;
+}
+
+/* ── 人物 ── */
+function renderPerson(p) {
+  const works = IDX.works.filter(w => w.authorKey === p.key);
+  return `
+    <h2 class="rt">${esc(p.zh)}</h2>
+    <div class="ra">${esc(p.courtesyZh || '')} · ${p.span?.[0] ?? '?'}—${p.span?.[1] ?? '?'}${p.spanNote ? ` （${esc(p.spanNote)}）` : ''}</div>
+    <div class="badges">
+      ${p.journeyKey ? '<span class="tag acc">有行迹</span>' : ''}
+      ${p.externalIds?.cbdb ? `<span class="tag">CBDB ${esc(p.externalIds.cbdb)}</span>` : ''}
+      <span class="tag">${works.length} 篇</span>
+    </div>
+    ${p.aliases?.length ? `<div class="bh">别名</div><p>${esc(p.aliases.join('、'))}</p>` : ''}
+    ${p.journeyKey ? `<div class="bh">行迹</div><p><a href="#" data-jump="${esc(p.journeyKey)}" style="border-bottom:1px dotted var(--gold)">查看行迹 →</a></p>` : ''}
+    <div class="bh">作品</div>
+    <table>${works.map(w => `<tr>
+      <td style="width:90px" class="muted">${w.year ?? '?'}</td>
+      <td><a href="#" data-work="${esc(w.key)}" style="border-bottom:1px dotted var(--line)">${esc(w.titleZh)}</a></td>
+      <td class="muted">${GENRE[w.genre] || w.genre}</td></tr>`).join('')}</table>`;
+}
+
+/* ── 行迹 ── */
+function renderJourney(j) {
+  const links = j.links || {};
+  const rows = j.stops.map((s, i) => {
+    const link = links[String(i + 1)];
+    return `${link ? `<tr><td colspan="3"><div class="note"><div class="k">承接</div>${esc(link.text)}
+        <div class="src">据 ${esc(link.source)}</div></div></td></tr>` : ''}
+      <tr><td style="width:96px;font-family:var(--serif);color:var(--gold)">${esc(s.eraZh || s.year || '')}</td>
+      <td style="width:120px"><b>${esc(s.place.ancient)}</b>${s.place.modern ? `<div class="src">${esc(s.place.modern)}</div>` : ''}</td>
+      <td>${esc(s.titleZh)}<div class="muted" style="font-size:12.5px">${esc(s.descZh)}</div>
+        ${s.quote ? `<div style="font-family:var(--serif);color:#5a4a34">${esc(s.quote)}</div>` : ''}
+        <div class="src">据 ${esc(s.source)}</div></td></tr>`;
+  }).join('');
+
+  return `
+    <h2 class="rt">${esc(j.titleZh)}</h2>
+    <div class="ra">${esc(j.spanZh || '')} · ${j.stops.length} 站 · ${j.origin === 'overlay' ? '本仓库补录' : '上游数据'}</div>
+    ${j.intro ? `<div class="bh">读本</div><p>${esc(j.intro.text)}</p><div class="src">据 ${esc(j.intro.source)}</div>` : ''}
+    <div class="bh">站点</div><table>${rows}</table>`;
+}
+
+/* ── 随机 / 今日 ── */
+function dayOfYear(d) { return Math.floor((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(d.getFullYear(), 0, 1)) / 86400000) + 1; }
+
+function showRandom(animate) {
+  const pool = filtered.length ? filtered : IDX[MODE];
+  if (!pool.length) return;
+  const r = pool[Math.floor(Math.random() * pool.length)];
+  document.querySelectorAll('.item').forEach(x => x.classList.toggle('on', x.dataset.key === r.key));
+  open(MODE, r.key);
+}
+
+function showDaily() {
+  const t = new Date();
+  const seed = t.getFullYear() * 1000 + dayOfYear(t);
+  const idx = (seed * 31) % IDX.works.length;
+  const w = IDX.works[idx];
+  document.querySelectorAll('.item').forEach(x => x.classList.toggle('on', x.dataset.key === w.key));
+  open('works', w.key);
+}
+
+/* 详情里的跳转链接 */
+document.addEventListener('click', (e) => {
+  const aw = e.target.closest('[data-work]');
+  const aj = e.target.closest('[data-jump]');
+  if (aw) { e.preventDefault(); open('works', aw.dataset.work); }
+  if (aj) { e.preventDefault(); MODE = 'journeys'; document.querySelectorAll('.modes button').forEach(b => b.classList.toggle('on', b.dataset.mode === 'journeys')); buildFilters(); renderList(); open('journeys', aj.dataset.jump); }
+});
+
+/* 深链 */
+function route() {
+  const h = location.hash.replace(/^#\/?/, '');
+  if (!h) return;
+  const [kind, ...rest] = h.split('/');
+  const key = decodeURIComponent(rest.join('/'));
+  const map = { work: 'works', person: 'persons', journey: 'journeys' };
+  if (map[kind]) {
+    MODE = map[kind];
+    document.querySelectorAll('.modes button').forEach(b => b.classList.toggle('on', b.dataset.mode === MODE));
+    buildFilters(); renderList();
+    open(MODE, key);
+  }
+}
+
+</script>
+</body>
+</html>

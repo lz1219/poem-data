@@ -1,0 +1,1167 @@
+{
+  "generatedAt": "2026-10-31T17:58:13.544Z",
+  "works": [
+    {
+      "key": "一剪梅·舟过吴江",
+      "titleZh": "一剪梅 · 舟过吴江",
+      "authorKey": "jiangjie",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1277,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/一剪梅·舟过吴江.json"
+    },
+    {
+      "key": "三国志·诸葛亮传",
+      "titleZh": "三国志 · 诸葛亮传",
+      "authorKey": "p24146",
+      "genre": "history",
+      "level": "popular",
+      "year": 208,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/三国志·诸葛亮传.json"
+    },
+    {
+      "key": "上安州裴长史书",
+      "titleZh": "上安州裴长史书",
+      "authorKey": "libai",
+      "genre": "wen",
+      "level": "popular",
+      "year": 705,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/上安州裴长史书.json"
+    },
+    {
+      "key": "与杨仕德薛尚谦书",
+      "titleZh": "与杨仕德薛尚谦书",
+      "authorKey": "wangyangming",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1517,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/与杨仕德薛尚谦书.json"
+    },
+    {
+      "key": "与梅圣俞书",
+      "titleZh": "与梅圣俞书",
+      "authorKey": "ouyangxiu",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1057,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/与梅圣俞书.json"
+    },
+    {
+      "key": "临路歌",
+      "titleZh": "临路歌",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 762,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/临路歌.json"
+    },
+    {
+      "key": "传习录",
+      "titleZh": "传习录",
+      "authorKey": "wangyangming",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1492,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/传习录.json"
+    },
+    {
+      "key": "六月二十日夜渡海",
+      "titleZh": "六月二十日夜渡海",
+      "authorKey": "sushi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1100,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/六月二十日夜渡海.json"
+    },
+    {
+      "key": "出师表",
+      "titleZh": "出师表",
+      "authorKey": "zhugeliang",
+      "genre": "wen",
+      "level": "popular",
+      "year": 227,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/出师表.json"
+    },
+    {
+      "key": "初发嘉州",
+      "titleZh": "初发嘉州",
+      "authorKey": "sushi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1056,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/初发嘉州.json"
+    },
+    {
+      "key": "卖炭翁",
+      "titleZh": "卖炭翁",
+      "authorKey": "baijuyi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 809,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/卖炭翁.json"
+    },
+    {
+      "key": "南陵别儿童入京",
+      "titleZh": "南陵别儿童入京",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 742,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/南陵别儿童入京.json"
+    },
+    {
+      "key": "卜算子",
+      "titleZh": "卜算子 · 黄州定慧院寓居作",
+      "authorKey": "sushi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1082,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/卜算子.json"
+    },
+    {
+      "key": "史记·大宛列传",
+      "titleZh": "史记 · 大宛列传",
+      "authorKey": "simaqian",
+      "genre": "history",
+      "level": "popular",
+      "year": -138,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/史记·大宛列传.json"
+    },
+    {
+      "key": "史记·白起王翦列传",
+      "titleZh": "史记·白起王翦列传",
+      "authorKey": "simaqian",
+      "genre": "history",
+      "level": "popular",
+      "year": -223,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/史记·白起王翦列传.json"
+    },
+    {
+      "key": "史记·秦始皇本纪",
+      "titleZh": "史记·秦始皇本纪",
+      "authorKey": "simaqian",
+      "genre": "history",
+      "level": "popular",
+      "year": -238,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/史记·秦始皇本纪.json"
+    },
+    {
+      "key": "告谕庐陵父老",
+      "titleZh": "告谕庐陵父老",
+      "authorKey": "wangyangming",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1510,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/告谕庐陵父老.json"
+    },
+    {
+      "key": "唐左拾遗翰林学士李公新墓碑",
+      "titleZh": "唐左拾遗翰林学士李公新墓碑",
+      "authorKey": "au003",
+      "genre": "wen",
+      "level": "popular",
+      "year": 701,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/唐左拾遗翰林学士李公新墓碑.json"
+    },
+    {
+      "key": "喜雨亭记",
+      "titleZh": "喜雨亭记",
+      "authorKey": "sushi",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1061,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/喜雨亭记.json"
+    },
+    {
+      "key": "大唐西域记",
+      "titleZh": "大唐西域记",
+      "authorKey": "au002",
+      "genre": "history",
+      "level": "popular",
+      "year": 628,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/大唐西域记.json"
+    },
+    {
+      "key": "大慈恩寺三藏法师传",
+      "titleZh": "大慈恩寺三藏法师传",
+      "authorKey": "au001",
+      "genre": "history",
+      "level": "popular",
+      "year": 627,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/大慈恩寺三藏法师传.json"
+    },
+    {
+      "key": "天泉证道·四句教",
+      "titleZh": "天泉证道·四句教",
+      "authorKey": "wangyangming",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1521,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/天泉证道·四句教.json"
+    },
+    {
+      "key": "定风波",
+      "titleZh": "定风波 · 莫听穿林打叶声",
+      "authorKey": "sushi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1082,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/定风波.json"
+    },
+    {
+      "key": "宣州谢朓楼饯别校书叔云",
+      "titleZh": "宣州谢朓楼饯别校书叔云",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 753,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/宣州谢朓楼饯别校书叔云.json"
+    },
+    {
+      "key": "寄李十二白二十韵",
+      "titleZh": "寄李十二白二十韵",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 744,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/寄李十二白二十韵.json"
+    },
+    {
+      "key": "峨眉山月歌",
+      "titleZh": "峨眉山月歌",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 724,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/峨眉山月歌.json"
+    },
+    {
+      "key": "忆江南",
+      "titleZh": "忆江南三首",
+      "authorKey": "baijuyi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 838,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/忆江南.json"
+    },
+    {
+      "key": "念奴娇",
+      "titleZh": "念奴娇 · 赤壁怀古",
+      "authorKey": "sushi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1082,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/念奴娇.json"
+    },
+    {
+      "key": "战国策",
+      "titleZh": "战国策",
+      "authorKey": "anonymous",
+      "genre": "history",
+      "level": "popular",
+      "year": -228,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/战国策.json"
+    },
+    {
+      "key": "战国策·燕策三",
+      "titleZh": "战国策·燕策三",
+      "authorKey": "anonymous",
+      "genre": "history",
+      "level": "popular",
+      "year": -226,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/战国策·燕策三.json"
+    },
+    {
+      "key": "擒获宸濠捷音疏",
+      "titleZh": "擒获宸濠捷音疏",
+      "authorKey": "wangyangming",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1519,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/擒获宸濠捷音疏.json"
+    },
+    {
+      "key": "旅夜书怀",
+      "titleZh": "旅夜书怀",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 765,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/旅夜书怀.json"
+    },
+    {
+      "key": "旧唐书·玄奘传",
+      "titleZh": "旧唐书·玄奘传",
+      "authorKey": "anonymous",
+      "genre": "history",
+      "level": "popular",
+      "year": 645,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/旧唐书·玄奘传.json"
+    },
+    {
+      "key": "早发白帝城",
+      "titleZh": "早发白帝城",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 759,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/早发白帝城.json"
+    },
+    {
+      "key": "明史·王守仁传",
+      "titleZh": "明史·王守仁传",
+      "authorKey": "anonymous",
+      "genre": "history",
+      "level": "popular",
+      "year": 1489,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/明史·王守仁传.json"
+    },
+    {
+      "key": "春望",
+      "titleZh": "春望",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 757,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/春望.json"
+    },
+    {
+      "key": "月夜",
+      "titleZh": "月夜",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 756,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/月夜.json"
+    },
+    {
+      "key": "望岳",
+      "titleZh": "望岳",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 736,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/望岳.json"
+    },
+    {
+      "key": "望江南",
+      "titleZh": "望江南 · 超然台作",
+      "authorKey": "sushi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1076,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/望江南.json"
+    },
+    {
+      "key": "梁园吟",
+      "titleZh": "梁园吟",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 744,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/梁园吟.json"
+    },
+    {
+      "key": "梦游天姥吟留别",
+      "titleZh": "梦游天姥吟留别",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 745,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/梦游天姥吟留别.json"
+    },
+    {
+      "key": "水调歌头",
+      "titleZh": "水调歌头 · 明月几时有",
+      "authorKey": "sushi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1076,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/水调歌头.json"
+    },
+    {
+      "key": "汉书·张骞传",
+      "titleZh": "汉书 · 张骞传",
+      "authorKey": "p135114",
+      "genre": "history",
+      "level": "popular",
+      "year": -138,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/汉书·张骞传.json"
+    },
+    {
+      "key": "汉晋春秋",
+      "titleZh": "汉晋春秋 · 南征",
+      "authorKey": "p418976",
+      "genre": "history",
+      "level": "popular",
+      "year": 225,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/汉晋春秋.json"
+    },
+    {
+      "key": "江城子",
+      "titleZh": "江城子 · 乙卯正月二十日夜记梦",
+      "authorKey": "sushi",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1075,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/江城子.json"
+    },
+    {
+      "key": "泛海",
+      "titleZh": "泛海",
+      "authorKey": "wangyangming",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1506,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/泛海.json"
+    },
+    {
+      "key": "渡荆门送别",
+      "titleZh": "渡荆门送别",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 725,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/渡荆门送别.json"
+    },
+    {
+      "key": "独坐敬亭山",
+      "titleZh": "独坐敬亭山",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 753,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/独坐敬亭山.json"
+    },
+    {
+      "key": "狱中寄子由",
+      "titleZh": "狱中寄子由",
+      "authorKey": "sushi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1079,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/狱中寄子由.json"
+    },
+    {
+      "key": "王阳明先生年谱",
+      "titleZh": "王阳明先生年谱",
+      "authorKey": "au004",
+      "genre": "history",
+      "level": "popular",
+      "year": 1472,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/王阳明先生年谱.json"
+    },
+    {
+      "key": "王阳明年谱",
+      "titleZh": "王阳明年谱",
+      "authorKey": "au004",
+      "genre": "history",
+      "level": "popular",
+      "year": 1508,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/王阳明年谱.json"
+    },
+    {
+      "key": "琵琶行",
+      "titleZh": "琵琶行",
+      "authorKey": "baijuyi",
+      "genre": "shi",
+      "level": "academic",
+      "year": 816,
+      "traditionalDerived": false,
+      "apparatus": 1,
+      "hasComments": false,
+      "file": "data/works/琵琶行.json"
+    },
+    {
+      "key": "登岳阳楼",
+      "titleZh": "登岳阳楼",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 768,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/登岳阳楼.json"
+    },
+    {
+      "key": "登高",
+      "titleZh": "登高",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 767,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/登高.json"
+    },
+    {
+      "key": "秋浦歌",
+      "titleZh": "秋浦歌（其十五）",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 754,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/秋浦歌.json"
+    },
+    {
+      "key": "答范淳甫",
+      "titleZh": "答范淳甫",
+      "authorKey": "sushi",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1077,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/答范淳甫.json"
+    },
+    {
+      "key": "自题金山画像",
+      "titleZh": "自题金山画像",
+      "authorKey": "sushi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1101,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/自题金山画像.json"
+    },
+    {
+      "key": "茅屋为秋风所破歌",
+      "titleZh": "茅屋为秋风所破歌",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 761,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/茅屋为秋风所破歌.json"
+    },
+    {
+      "key": "虞美人·听雨",
+      "titleZh": "虞美人 · 听雨",
+      "authorKey": "jiangjie",
+      "genre": "ci",
+      "level": "popular",
+      "year": 1305,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/虞美人·听雨.json"
+    },
+    {
+      "key": "蜀相",
+      "titleZh": "蜀相",
+      "authorKey": "dufu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 760,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/蜀相.json"
+    },
+    {
+      "key": "观刈麦",
+      "titleZh": "观刈麦",
+      "authorKey": "baijuyi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 806,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/观刈麦.json"
+    },
+    {
+      "key": "赋得古原草送别",
+      "titleZh": "赋得古原草送别",
+      "authorKey": "baijuyi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 787,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/赋得古原草送别.json"
+    },
+    {
+      "key": "赠汪伦",
+      "titleZh": "赠汪伦",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 755,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/赠汪伦.json"
+    },
+    {
+      "key": "进西域记表",
+      "titleZh": "进西域记表",
+      "authorKey": "xuanzang",
+      "genre": "wen",
+      "level": "popular",
+      "year": 644,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/进西域记表.json"
+    },
+    {
+      "key": "钱塘湖春行",
+      "titleZh": "钱塘湖春行",
+      "authorKey": "baijuyi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 823,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/钱塘湖春行.json"
+    },
+    {
+      "key": "阿房宫赋",
+      "titleZh": "阿房宫赋",
+      "authorKey": "p21194",
+      "genre": "fu",
+      "level": "popular",
+      "year": -221,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/阿房宫赋.json"
+    },
+    {
+      "key": "食荔枝",
+      "titleZh": "食荔枝（惠州一绝）",
+      "authorKey": "sushi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1096,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/食荔枝.json"
+    },
+    {
+      "key": "饮湖上初晴后雨",
+      "titleZh": "饮湖上初晴后雨（其二）",
+      "authorKey": "sushi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 1073,
+      "traditionalDerived": true,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/饮湖上初晴后雨.json"
+    },
+    {
+      "key": "黄鹤楼送孟浩然之广陵",
+      "titleZh": "黄鹤楼送孟浩然之广陵",
+      "authorKey": "libai",
+      "genre": "shi",
+      "level": "popular",
+      "year": 730,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/黄鹤楼送孟浩然之广陵.json"
+    }
+  ],
+  "persons": [
+    {
+      "key": "anonymous",
+      "zh": "佚名",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/anonymous.json"
+    },
+    {
+      "key": "au001",
+      "zh": "慧立、彦悰",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/au001.json"
+    },
+    {
+      "key": "au002",
+      "zh": "玄奘述、辩机编",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/au002.json"
+    },
+    {
+      "key": "au003",
+      "zh": "范传正",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/au003.json"
+    },
+    {
+      "key": "au004",
+      "zh": "门人编",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/au004.json"
+    },
+    {
+      "key": "baijuyi",
+      "zh": "白居易",
+      "span": [
+        772,
+        846
+      ],
+      "hasJourney": true,
+      "file": "data/persons/baijuyi.json"
+    },
+    {
+      "key": "dufu",
+      "zh": "杜甫",
+      "span": [
+        712,
+        770
+      ],
+      "hasJourney": true,
+      "file": "data/persons/dufu.json"
+    },
+    {
+      "key": "guanyu",
+      "zh": "关羽",
+      "span": [
+        160,
+        220
+      ],
+      "hasJourney": false,
+      "file": "data/persons/guanyu.json"
+    },
+    {
+      "key": "hanwudi",
+      "zh": "汉武帝",
+      "span": [
+        -156,
+        -87
+      ],
+      "hasJourney": false,
+      "file": "data/persons/hanwudi.json"
+    },
+    {
+      "key": "jiangjie",
+      "zh": "蒋捷",
+      "span": [
+        1245,
+        1314
+      ],
+      "hasJourney": true,
+      "file": "data/persons/jiangjie.json"
+    },
+    {
+      "key": "libai",
+      "zh": "李白",
+      "span": [
+        701,
+        762
+      ],
+      "hasJourney": true,
+      "file": "data/persons/libai.json"
+    },
+    {
+      "key": "lisi",
+      "zh": "李斯",
+      "span": [
+        -284,
+        -208
+      ],
+      "hasJourney": false,
+      "file": "data/persons/lisi.json"
+    },
+    {
+      "key": "liubei",
+      "zh": "刘备",
+      "span": [
+        161,
+        223
+      ],
+      "hasJourney": false,
+      "file": "data/persons/liubei.json"
+    },
+    {
+      "key": "ouyangxiu",
+      "zh": "欧阳修",
+      "span": [
+        1007,
+        1072
+      ],
+      "hasJourney": false,
+      "file": "data/persons/ouyangxiu.json"
+    },
+    {
+      "key": "p135114",
+      "zh": "班固",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/p135114.json"
+    },
+    {
+      "key": "p21194",
+      "zh": "杜牧",
+      "span": [
+        "803",
+        "853"
+      ],
+      "hasJourney": false,
+      "file": "data/persons/p21194.json"
+    },
+    {
+      "key": "p24146",
+      "zh": "陈寿",
+      "span": [
+        "0",
+        "0"
+      ],
+      "hasJourney": false,
+      "file": "data/persons/p24146.json"
+    },
+    {
+      "key": "p418976",
+      "zh": "习凿齿",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/p418976.json"
+    },
+    {
+      "key": "qinshihuang",
+      "zh": "秦始皇",
+      "span": [
+        -259,
+        -210
+      ],
+      "hasJourney": true,
+      "file": "data/persons/qinshihuang.json"
+    },
+    {
+      "key": "simaqian",
+      "zh": "司马迁",
+      "span": [
+        -145,
+        -86
+      ],
+      "hasJourney": false,
+      "file": "data/persons/simaqian.json"
+    },
+    {
+      "key": "sushi",
+      "zh": "苏轼",
+      "span": [
+        1037,
+        1101
+      ],
+      "hasJourney": true,
+      "file": "data/persons/sushi.json"
+    },
+    {
+      "key": "wangyangming",
+      "zh": "王阳明",
+      "span": [
+        1472,
+        1529
+      ],
+      "hasJourney": true,
+      "file": "data/persons/wangyangming.json"
+    },
+    {
+      "key": "xuanzang",
+      "zh": "玄奘",
+      "span": [
+        602,
+        664
+      ],
+      "hasJourney": true,
+      "file": "data/persons/xuanzang.json"
+    },
+    {
+      "key": "zhangfei",
+      "zh": "张飞",
+      "span": [
+        165,
+        221
+      ],
+      "hasJourney": false,
+      "file": "data/persons/zhangfei.json"
+    },
+    {
+      "key": "zhangqian",
+      "zh": "张骞",
+      "span": [
+        -164,
+        -114
+      ],
+      "hasJourney": true,
+      "file": "data/persons/zhangqian.json"
+    },
+    {
+      "key": "zhaoyun",
+      "zh": "赵云",
+      "span": [
+        168,
+        229
+      ],
+      "hasJourney": false,
+      "file": "data/persons/zhaoyun.json"
+    },
+    {
+      "key": "zhugeliang",
+      "zh": "诸葛亮",
+      "span": [
+        181,
+        234
+      ],
+      "hasJourney": true,
+      "file": "data/persons/zhugeliang.json"
+    }
+  ],
+  "journeys": [
+    {
+      "key": "baijuyi",
+      "titleZh": "白居易：从拾遗到香山",
+      "stops": 11,
+      "file": "data/journeys/baijuyi.json"
+    },
+    {
+      "key": "dufu",
+      "titleZh": "杜甫：从长安到湘江",
+      "stops": 11,
+      "file": "data/journeys/dufu.json"
+    },
+    {
+      "key": "jiangjie",
+      "titleZh": "蒋捷：宋亡之后的竹山",
+      "stops": 9,
+      "file": "data/journeys/jiangjie.json"
+    },
+    {
+      "key": "libai",
+      "titleZh": "李白仗剑壮游行迹",
+      "stops": 16,
+      "file": "data/journeys/libai.json"
+    },
+    {
+      "key": "qinshihuang",
+      "titleZh": "秦始皇一统六国行迹",
+      "stops": 9,
+      "file": "data/journeys/qinshihuang.json"
+    },
+    {
+      "key": "sushi",
+      "titleZh": "苏轼宦海贬谪行迹",
+      "stops": 11,
+      "file": "data/journeys/sushi.json"
+    },
+    {
+      "key": "wangyangming",
+      "titleZh": "王阳明知行悟道行迹",
+      "stops": 10,
+      "file": "data/journeys/wangyangming.json"
+    },
+    {
+      "key": "xuanzang",
+      "titleZh": "玄奘西行求法行迹",
+      "stops": 12,
+      "file": "data/journeys/xuanzang.json"
+    },
+    {
+      "key": "zhangqian",
+      "titleZh": "张骞凿空西域行迹",
+      "stops": 9,
+      "file": "data/journeys/zhangqian.json"
+    },
+    {
+      "key": "zhugeliang",
+      "titleZh": "诸葛亮出山北伐行迹",
+      "stops": 11,
+      "file": "data/journeys/zhugeliang.json"
+    }
+  ]
+}

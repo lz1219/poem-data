@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>江山行止 · 数据查看器</title>
+<style>
+  :root{
+    --paper:#f6f1e6; --ink:#3a3126; --muted:#8b7a5f; --line:#e0d6c2;
+    --acc:#a83824; --panel:#fbf7ee;
+    --serif: 'Songti SC','SimSun',serif;
+    --sans: 'PingFang SC','Microsoft YaHei',sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px}
+  header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+  header h1{margin:0;font-family:var(--serif);font-size:19px;letter-spacing:3px;font-weight:600}
+  header .sub{color:var(--muted);font-size:12px}
+  nav{margin-left:auto;display:flex;gap:6px}
+  nav button{border:1px solid var(--line);background:#fff;color:var(--muted);padding:5px 12px;border-radius:6px;cursor:pointer;font-size:13px}
+  nav button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+  .wrap{display:grid;grid-template-columns:330px 1fr;height:calc(100vh - 56px)}
+  aside{border-right:1px solid var(--line);overflow:auto;background:var(--panel)}
+  aside input{width:calc(100% - 20px);margin:10px;padding:7px 10px;border:1px solid var(--line);border-radius:6px;font-family:inherit}
+  .item{padding:8px 12px;cursor:pointer;border-bottom:1px solid rgba(224,214,194,.55);display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+  .item:hover{background:#f3ebdb}
+  .item.on{background:#efe3cb;box-shadow:inset 2px 0 0 var(--acc)}
+  .item .t{font-family:var(--serif);font-size:14px}
+  .item .m{font-size:11px;color:var(--muted);white-space:nowrap}
+  main{overflow:auto;padding:22px 28px}
+  h2{font-family:var(--serif);font-size:22px;margin:0 0 4px;letter-spacing:1px}
+  .metaline{color:var(--muted);font-size:12px;margin-bottom:16px}
+  .badge{display:inline-block;font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-right:6px}
+  .badge.acc{border-color:rgba(168,56,36,.5);color:var(--acc)}
+  .badge.warn{border-color:#c9a227;color:#9a7b12}
+  section{margin:18px 0;padding-top:14px;border-top:1px solid var(--line)}
+  section h3{font-family:var(--serif);font-size:13px;letter-spacing:2px;color:var(--acc);margin:0 0 10px;font-weight:600}
+  .verse{font-family:var(--serif);font-size:17px;line-height:2;text-align:center;white-space:pre-line}
+  p{margin:0 0 10px;line-height:1.9}
+  .muted{color:var(--muted)}
+  table{border-collapse:collapse;width:100%;font-size:13px}
+  th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  th{color:var(--muted);font-weight:500;font-size:12px}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:#efe7d6;padding:1px 4px;border-radius:3px}
+  .note{border-left:2px solid var(--acc);background:rgba(168,56,36,.05);padding:8px 12px;margin:8px 0}
+  .empty{color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<header>
+  <h1>江山行止 · 数据</h1>
+  <span class="sub" id="stat">加载中…</span>
+  <nav>
+    <button data-tab="works" class="on">作品</button>
+    <button data-tab="persons">人物</button>
+    <button data-tab="journeys">行迹</button>
+  </nav>
+</header>
+<div class="wrap">
+  <aside>
+    <input id="q" placeholder="筛选…">
+    <div id="list"></div>
+  </aside>
+  <main id="pane"><p class="empty">从左侧选择一条。</p></main>
+</div>
+
+<script>
+let INDEX = null, TAB = 'works', CUR = null;
+
+fetch('data/index.json').then(r => r.json()).then(j => {
+  INDEX = j;
+  document.getElementById('stat').textContent =
+    `作品 ${j.works.length} · 人物 ${j.persons.length} · 行迹 ${j.journeys.length} · 生成于 ${j.generatedAt.slice(0,10)}`;
+  renderList();
+});
+
+document.querySelectorAll('nav button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('nav button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  TAB = b.dataset.tab;
+  CUR = null;
+  renderList();
+  document.getElementById('pane').innerHTML = '<p class="empty">从左侧选择一条。</p>';
+}));
+
+document.getElementById('q').addEventListener('input', renderList);
+
+function renderList() {
+  if (!INDEX) return;
+  const q = document.getElementById('q').value.trim();
+  const rows = (INDEX[TAB] || []).filter(r => {
+    const hay = TAB === 'works' ? r.titleZh : TAB === 'persons' ? r.zh : r.titleZh;
+    return !q || hay.includes(q);
+  });
+  document.getElementById('list').innerHTML = rows.map(r => {
+    const t = TAB === 'works' ? r.titleZh : TAB === 'persons' ? r.zh : r.titleZh;
+    const m = TAB === 'works'
+      ? `${r.year ?? '?'} · ${r.genre}${r.apparatus ? ' · 校记' + r.apparatus : ''}`
+      : TAB === 'persons'
+      ? (r.span?.[0] ? `${r.span[0]}—${r.span[1] ?? '?'}` : '生卒未详')
+      : `${r.stops} 站`;
+    return `<div class="item" data-key="${r.key}"><span class="t">${t}</span><span class="m">${m}</span></div>`;
+  }).join('') || '<p class="empty" style="padding:20px">无匹配</p>';
+
+  document.querySelectorAll('.item').forEach(el => el.addEventListener('click', () => {
+    document.querySelectorAll('.item').forEach(x => x.classList.remove('on'));
+    el.classList.add('on');
+    open(TAB, el.dataset.key);
+  }));
+}
+
+async function open(tab, key) {
+  const row = INDEX[tab].find(r => r.key === key);
+  if (!row) return;
+  const data = await fetch(row.file).then(r => r.json());
+  CUR = data;
+  const pane = document.getElementById('pane');
+  pane.innerHTML = tab === 'works' ? renderWork(data) : tab === 'persons' ? renderPerson(data) : renderJourney(data);
+  pane.scrollTop = 0;
+}
+
+function renderWork(w) {
+  const badges = [
+    `<span class="badge ${w.level === 'academic' ? 'acc' : ''}">${w.level === 'academic' ? '学术级' : '通俗级'}</span>`,
+    `<span class="badge">${w.genre}</span>`,
+    `<span class="badge">系年 ${w.certainty}</span>`,
+    w.text?.traditionalDerived ? '<span class="badge warn">繁体为反推</span>' : '<span class="badge">繁体取自底本</span>'
+  ].join('');
+  return `
+    <h2>${w.titleZh}</h2>
+    <div class="metaline">${w.titleEn || ''} · ${w.aliases?.length ? '又作 ' + w.aliases.slice(1).join('、') : ''}</div>
+    <div>${badges}</div>
+    <section><h3>正文 · ${w.text?.paragraphs?.length || 0} 句</h3>
+      <div class="verse">${(w.text?.paragraphs || []).join('\n')}</div>
+    </section>
+    ${w.meaning ? `<section><h3>大意</h3><p>${w.meaning}</p></section>` : ''}
+    ${w.appreciation?.text ? `<section><h3>本站赏析</h3><p>${w.appreciation.text}</p>
+      ${w.appreciation.inference ? `<div class="note"><b>推测</b>：${w.appreciation.inference.text}<br><span class="muted">依据：${w.appreciation.inference.basis}</span></div>` : ''}
+      <p class="muted" style="font-size:11px">${w.appreciation.by} · ${w.appreciation.license}</p></section>` : ''}
+    ${w.apparatus?.length ? `<section><h3>校记</h3>${w.apparatus.map(a => `
+      <div class="note"><code>${a.baseText}</code> / <code>${a.variantText}</code>
+      · ${a.locator?.label || ''} · 判定 <b>${a.judgement}</b><br><span class="muted">${a.basis}</span></div>`).join('')}</section>` : ''}
+    ${w.dating?.length ? `<section><h3>系年</h3><table><tr><th>说法</th><th>依据</th><th>采否</th></tr>
+      ${w.dating.map(d => `<tr><td>${d.claim}</td><td>${d.evidence.map(e => `${e.quote}<br><span class="muted">${e.source}（${e.grade}）</span>`).join('<br>')}</td><td>${d.stance}</td></tr>`).join('')}
+      </table></section>` : ''}
+    ${w.commentaryFile ? `<section><h3>历代评点</h3><p class="muted">见 ${w.commentaryFile}</p></section>`
+      : '<section><h3>历代评点</h3><p class="empty">暂无（未找到可核原文的评点，不编造）</p></section>'}
+  `;
+}
+
+function renderPerson(p) {
+  return `<h2>${p.zh}</h2>
+    <div class="metaline">${p.en || ''} · ${p.courtesyZh || ''}</div>
+    <section><h3>基本信息</h3><table>
+      <tr><th>生卒</th><td>${p.span?.[0] ?? '?'} — ${p.span?.[1] ?? '?'} ${p.spanNote ? `<span class="muted">（${p.spanNote}）</span>` : ''}</td></tr>
+      <tr><th>别名</th><td>${(p.aliases || []).join('、') || '—'}</td></tr>
+      <tr><th>CBDB</th><td>${p.externalIds?.cbdb || '—'}</td></tr>
+      <tr><th>行迹</th><td>${p.journeyKey || '—'}</td></tr>
+    </table></section>`;
+}
+
+function renderJourney(j) {
+  return `<h2>${j.titleZh}</h2>
+    <div class="metaline">${j.spanZh || ''} · ${j.origin === 'overlay' ? '本仓库补录' : '上游数据'} · ${j.stops.length} 站</div>
+    ${j.intro ? `<section><h3>行迹读本</h3><p>${j.intro.text}</p><p class="muted" style="font-size:11px">据 ${j.intro.source}</p></section>` : ''}
+    <section><h3>站点</h3><table>
+      <tr><th>#</th><th>年</th><th>地</th><th>事</th><th>出处</th></tr>
+      ${j.stops.map(s => `<tr><td>${s.seq}</td><td>${s.year ?? '?'}</td>
+        <td>${s.place.ancient}${s.place.modern ? `<br><span class="muted">${s.place.modern}</span>` : ''}</td>
+        <td>${s.titleZh}<br><span class="muted">${s.descZh}</span></td>
+        <td class="muted" style="font-size:11px">${s.source}</td></tr>`).join('')}
+    </table></section>`;
+}
+</script>
+</body>
+</html>
