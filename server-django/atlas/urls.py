@@ -1,0 +1,19 @@
+"""路由：/admin 后台，/api 只读接口，/ 静态前端。"""
+import os
+from pathlib import Path
+
+from django.contrib import admin
+from django.urls import include, path, re_path
+from django.views.static import serve
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+REPO_DIR = Path(os.getenv("PUBLIC_DIR") or BASE_DIR.parent)
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("api/", include("corpus.urls")),
+    # 前端首页
+    path("", serve, {"path": "index.html", "document_root": str(REPO_DIR)}),
+    # 静态资源与 data/*.json
+    re_path(r"^(?P<path>.*)$", serve, {"document_root": str(REPO_DIR)}),
+]

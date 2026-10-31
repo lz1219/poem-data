@@ -19,3 +19,10 @@ data/.cache/
 Thumbs.db
 .vscode/
 .idea/
+
+# Django
+server-django/.venv/
+server-django/db.sqlite3
+server-django/staticfiles/
+__pycache__/
+*.pyc
