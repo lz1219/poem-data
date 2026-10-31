@@ -612,6 +612,18 @@ h1 { transition: color .25s; }
 .maplink:hover { color: var(--accent); border-color: var(--accent); }
 a.tag.maplink { margin-top: 0; padding: 2px 9px; border: 1px dashed var(--line-2); border-radius: 999px; }
 
+.static-note {
+  margin: 0 0 26px;
+  padding: 11px 16px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+}
+.static-note a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted currentColor; margin-left: 6px; }
+
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -700,6 +712,10 @@ const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<':
 const GENRE = { shi:'诗', ci:'词', fu:'赋', wen:'文', history:'史传', qu:'曲' };
 
 /* 地图站（江山行止）。部署到别处时改这里，或在外层页面预设 window.ATLAS_BASE */
+/* 静态版开关：由 scripts/build-static.mjs 注入 window.STATIC_ONLY */
+const STATIC_ONLY = (typeof window !== 'undefined' && window.STATIC_ONLY) === true;
+const FULL_SITE = (typeof window !== 'undefined' && window.FULL_SITE) || '';
+
 const ATLAS_BASE = (typeof window !== 'undefined' && window.ATLAS_BASE) ||
   (location.hostname === '127.0.0.1' || location.hostname === 'localhost'
     ? 'http://127.0.0.1:5199/'
@@ -719,8 +735,9 @@ let CORPUS = { poems: null, juan: null, authors: null };
 (async function boot() {
   IDX = await fetch('data/index.json').then(r => r.json());
   $('#sub').textContent = `作品 ${IDX.works.length} · 人物 ${IDX.persons.length} · 行迹 ${IDX.journeys.length} · 每条叙述带出处`;
+  if (STATIC_ONLY) applyStaticMode();
   buildFilters();
-  loadCorpusStats();
+  if (!STATIC_ONLY) loadCorpusStats();
   if (!route()) goHome();
   // 阅读区内容变化 → 重挂进度条
   // 站内外深链切换（#/person/x → #/work/y）不会重载页面，必须监听 hashchange
@@ -751,6 +768,23 @@ async function loadCorpusStats() {
   } catch (e) { /* 语料接口不可用时目录页仍显示策展数据 */ }
 }
 
+/* 静态版：去掉依赖服务器的功能，给出完整版入口 */
+function applyStaticMode() {
+  ['authors', 'texts'].forEach((m) => {
+    const b = document.querySelector('.modes button[data-mode="' + m + '"]');
+    if (b) b.remove();
+  });
+  if (FULL_SITE) {
+    const bar = document.createElement('div');
+    bar.className = 'static-note';
+    bar.innerHTML =
+      '静态版：仅含策展作品 / 人物 / 行迹。' +
+      '<a href="' + FULL_SITE + '" target="_blank" rel="noopener">完整版（含 6.7 万首诗与 1,301 卷原典）↗</a>';
+    const home = document.getElementById('home');
+    if (home && home.parentNode) home.parentNode.insertBefore(bar, home);
+  }
+}
+
 function goHome() {
   MODE = 'home';
   CUR = null;
@@ -779,17 +813,19 @@ function renderHome() {
     ['作品', IDX.works.length],
     ['人物', IDX.persons.length],
     ['行迹', IDX.journeys.length],
+  ].concat(STATIC_ONLY ? [] : [
     ['语料·诗', CORPUS.poems ? CORPUS.poems.toLocaleString() : '—'],
     ['语料·卷', CORPUS.juan ? CORPUS.juan.toLocaleString() : '—'],
     ['作者', CORPUS.authors ? CORPUS.authors.toLocaleString() : '—'],
-  ];
+  ]);
   const cards = [
     ['01', '作品', '有注疏的策展条目：正文、大意、注释、赏析、校记、系年', IDX.works.length, 'works'],
     ['02', '人物', '生卒、字号、CBDB 仕历与语录', IDX.persons.length, 'persons'],
     ['03', '行迹', '按年编排的站点，每站带引文与出处', IDX.journeys.length, 'journeys'],
+  ].concat(STATIC_ONLY ? [] : [
     ['04', '作者', '语料库中的 3,879 位作者，点开即读其全部诗作', CORPUS.authors || 0, 'authors'],
     ['05', '典籍', '史部原典 1,301 卷，按卷阅读', CORPUS.juan || 0, 'texts'],
-  ];
+  ]);
   $('#home').innerHTML = `
     <p class="lede">在行迹停下的地方，把一句摘引展开成可读的文献。每条叙述都带出处；没有出处的，宁可不写。</p>
     <div class="stats">
@@ -1145,6 +1181,12 @@ function renderPerson(p) {
 async function loadCareer(key) {
   const slot = document.getElementById('career-slot');
   if (!slot) return;
+  if (STATIC_ONLY) {
+    slot.innerHTML = FULL_SITE
+      ? '<div class="bh">仕历</div><p class="empty">仕历来自 CBDB，需在<a href="' + FULL_SITE + '/#/person/' + encodeURIComponent(key) + '" target="_blank" rel="noopener">完整版</a>查看。</p>'
+      : '<div class="bh">仕历</div><p class="empty">静态版不含仕历数据。</p>';
+    return;
+  }
   try {
     const r = await fetch(`/api/persons/${encodeURIComponent(key)}/career`).then(x => x.json());
     if (!r.items || !r.items.length) {

@@ -9,7 +9,8 @@ _pool = None
 
 
 def dsn() -> str:
-    url = os.getenv("DATABASE_URL", "")
+    # 语料库独立于 Django 的业务库：优先 CORPUS_DSN，其次 DATABASE_URL
+    url = os.getenv("CORPUS_DSN") or os.getenv("DATABASE_URL", "")
     if url.startswith("postgres"):
         return url
     host = os.getenv("PGHOST")

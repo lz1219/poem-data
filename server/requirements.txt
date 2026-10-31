@@ -3,3 +3,5 @@ djangorestframework==3.18.3
 psycopg[binary]==3.2.3
 psycopg-pool==3.2.3
 django-unfold==0.110.0
+whitenoise==6.8.2
+gunicorn==23.0.0

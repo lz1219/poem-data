@@ -42,6 +42,19 @@ node scripts/emit-atlas.mjs --target ../jiangshan-xingzhi --check  # 只比对
 - 上游已有的行迹只**补缺站**（按「年 + 古地名」去重），不覆盖上游
 - 提交闸门会跑 `--check`，生成物与数据不一致就拒绝提交
 
+## 两种部署
+
+| 形态 | 在哪 | 能力 |
+|---|---|---|
+| **完整版**（同源） | 自有服务器 `:8081`，Django 同时托管前端与 API | 作品 / 人物 / 行迹 / 作者 / 典籍 / 仕历 / 全文检索 |
+| **静态版** | GitHub Pages | 作品 / 人物 / 行迹（语料库功能隐藏，顶部给出完整版入口） |
+
+```bash
+node scripts/build-static.mjs --full-site http://47.94.110.181:8081/   # 产出 dist/
+```
+
+静态版由 `.github/workflows/pages.yml` 在推送 main 时自动构建发布。
+
 ## 校验与提交闸门
 
 ```bash

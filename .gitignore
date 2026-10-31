@@ -29,3 +29,6 @@ __pycache__/
 
 # 导出校验临时目录
 server/_export_check/
+
+# 静态构建产物（CI 生成）
+dist/

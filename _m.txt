@@ -1,13 +1,14 @@
-feat(emit): 站点数据改为生成物——poem-data 是唯一真相
+feat(deploy): 同源部署 Django + GitHub Pages 静态版
 
-新增 scripts/emit-atlas.mjs：从 data/*.json 生成江山行止的三个数据文件
-- js/atlas_works.js      作品 69 条（简体正文供站点显示，繁体仍留本仓库）
-- js/atlas_overlay.js    人物档案 + 行迹；上游已有的行迹只补缺站（按年+地名去重）
-- js/atlas_journeys.js   读本导语与承接语 10 条
+同源部署（完整版）
+- server/Dockerfile：gunicorn + whitenoise；启动时 migrate + import_json
+- 业务库与语料库分离：DATABASE_URL=jiangshan_web，CORPUS_DSN=jiangshan
+- 已部署至 47.94.110.181:8081：/ 与全部 API 200，白居易仕历 27 条、典籍 8 部
+- 旧 FastAPI 容器已停用
 
-策略：不覆盖上游。李白 12 站 → 补 4 站变 16；白居易/杜甫/蒋捷整条新建。
-
-闸门新增第 4 道：emit-atlas --check，生成物与数据不一致即拒绝提交。
-
-实测：生成后作品 69 / 行迹 10 / 读本 10；浏览器验证白居易 11 站、李白 16 站、
-杜甫 11 站，健康检查 ok，无报错。
+静态版（GitHub Pages）
+- scripts/build-static.mjs：注入 STATIC_ONLY，只带 data/ 策展内容，产出 dist/（329 KB）
+- 前端按 STATIC_ONLY 降级：隐藏作者/典籍模式与语料统计，仕历改为指向完整版
+- 顶部提示条给出完整版入口；实测零失败请求、无报错
+- .github/workflows/pages.yml：push main 时 check.mjs → build-static → 部署 Pages
+- dist/ 加入 .gitignore

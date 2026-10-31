@@ -1,0 +1,47 @@
+name: pages
+
+# GitHub Pages 只发静态策展版；含语料库的完整版在自有服务器上运行。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 数据闸门：契约 + 索引一致（生成物与数据库检查在没有兄弟仓库/环境时会自动跳过）
+      - name: Validate data
+        run: node scripts/check.mjs
+
+      - name: Build static site
+        run: node scripts/build-static.mjs --full-site "${{ vars.FULL_SITE_URL || 'http://47.94.110.181:8081/' }}"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
