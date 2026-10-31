@@ -147,3 +147,58 @@ def juan_detail(request, unit_id: int):
     paras = db.query("SELECT seq, body FROM paragraph WHERE unit_id = %s ORDER BY seq", (unit_id,))
     unit["paragraphs"] = paras
     return Response(unit)
+
+CAREER_SQL = """
+SELECT p.c_firstyear AS first_year,
+       p.c_lastyear  AS last_year,
+       p.c_sequence  AS seq,
+       o.c_office_chn AS office,
+       (SELECT string_agg(a.c_name_chn, '、')
+          FROM cbdb."POSTED_TO_ADDR_DATA" pa
+          JOIN cbdb."ADDR_CODES" a ON a.c_addr_id = pa.c_addr_id
+         WHERE pa.c_posting_id = p.c_posting_id) AS places
+FROM cbdb."POSTED_TO_OFFICE_DATA" p
+LEFT JOIN cbdb."OFFICE_CODES" o ON o.c_office_id = p.c_office_id
+WHERE p.c_personid = %s
+ORDER BY p.c_firstyear NULLS LAST, p.c_sequence
+"""
+
+
+@api_view(["GET"])
+def person_career(request, key):
+    """人物仕历：来自 CBDB 的 59 万条任职记录。"""
+    from .models import Person
+
+    if not db.available():
+        return _unavailable()
+    try:
+        p = Person.objects.get(key=key)
+    except Person.DoesNotExist:
+        return Response({"detail": f"未找到人物：{key}"}, status=404)
+
+    cbdb_id = (p.cbdb_id or "").strip()
+    if not cbdb_id.isdigit():
+        return Response(
+            {
+                "person": key,
+                "cbdbId": None,
+                "items": [],
+                "note": "该人物尚未与 CBDB 建立可靠映射（生卒无法互相印证），故不展示仕历。",
+            }
+        )
+
+    rows = db.query(CAREER_SQL, (int(cbdb_id),))
+    bio = db.one(
+        'SELECT c_name_chn, c_birthyear, c_deathyear FROM cbdb."BIOG_MAIN" WHERE c_personid = %s',
+        (int(cbdb_id),),
+    )
+    return Response(
+        {
+            "person": key,
+            "cbdbId": cbdb_id,
+            "cbdbName": (bio or {}).get("c_name_chn"),
+            "span": [(bio or {}).get("c_birthyear"), (bio or {}).get("c_deathyear")],
+            "total": len(rows),
+            "items": rows,
+        }
+    )

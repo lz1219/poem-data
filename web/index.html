@@ -394,6 +394,8 @@ function renderWork(w) {
 /* ── 人物 ── */
 function renderPerson(p) {
   const works = IDX.works.filter(w => w.authorKey === p.key);
+  // 仕历是异步的，先占位，回来再填
+  setTimeout(() => loadCareer(p.key), 0);
   return `
     <h2 class="rt">${esc(p.zh)}</h2>
     <div class="ra">${esc(p.courtesyZh || '')} · ${p.span?.[0] ?? '?'}—${p.span?.[1] ?? '?'}${p.spanNote ? ` （${esc(p.spanNote)}）` : ''}</div>
@@ -402,6 +404,7 @@ function renderPerson(p) {
       ${p.externalIds?.cbdb ? `<span class="tag">CBDB ${esc(p.externalIds.cbdb)}</span>` : ''}
       <span class="tag">${works.length} 篇</span>
     </div>
+    <div id="career-slot"></div>
     ${p.aliases?.length ? `<div class="bh">别名</div><p>${esc(p.aliases.join('、'))}</p>` : ''}
     ${p.journeyKey ? `<div class="bh">行迹</div><p><a href="#" data-jump="${esc(p.journeyKey)}" style="border-bottom:1px dotted var(--gold)">查看行迹 →</a></p>` : ''}
     <div class="bh">作品</div>
@@ -409,6 +412,26 @@ function renderPerson(p) {
       <td style="width:90px" class="muted">${w.year ?? '?'}</td>
       <td><a href="#" data-work="${esc(w.key)}" style="border-bottom:1px dotted var(--line)">${esc(w.titleZh)}</a></td>
       <td class="muted">${GENRE[w.genre] || w.genre}</td></tr>`).join('')}</table>`;
+}
+
+/* 仕历：CBDB 的任职记录，59 万条里属于这个人的那几十条 */
+async function loadCareer(key) {
+  const slot = document.getElementById('career-slot');
+  if (!slot) return;
+  try {
+    const r = await fetch(`/api/persons/${encodeURIComponent(key)}/career`).then(x => x.json());
+    if (!r.items || !r.items.length) {
+      slot.innerHTML = `<div class="bh">仕历</div><p class="empty">${esc(r.note || 'CBDB 无任职记录')}</p>`;
+      return;
+    }
+    slot.innerHTML = `<div class="bh">仕历 <span class="tag">CBDB ${esc(r.cbdbId)} · ${r.total} 条</span></div>
+      <table>${r.items.map(x => `<tr>
+        <td style="width:96px" class="muted">${x.first_year ?? '?'}${x.last_year ? '–' + x.last_year : ''}</td>
+        <td>${esc(x.office || '')}</td>
+        <td class="muted" style="width:120px">${esc(x.places || '')}</td></tr>`).join('')}</table>`;
+  } catch (e) {
+    slot.innerHTML = '<div class="bh">仕历</div><p class="empty">接口不可用</p>';
+  }
 }
 
 /* ── 行迹 ── */

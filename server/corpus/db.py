@@ -32,6 +32,9 @@ def init_pool() -> None:
         from psycopg_pool import ConnectionPool
 
         _pool = ConnectionPool(d, min_size=1, max_size=4, timeout=5, open=True)
+        import atexit
+
+        atexit.register(_pool.close)  # 退出时优雅关闭，避免线程警告淹没输出
         print("[ok] 语料库连接池已建立")
     except Exception as e:  # noqa: BLE001
         print(f"[warn] 语料库连接池失败：{e}")
