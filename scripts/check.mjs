@@ -29,6 +29,14 @@ run('data', 'node', ['scripts/validate.mjs']);
 // ② 索引同步
 run('index', 'node', ['scripts/build-index.mjs', '--check']);
 
+// ④ 站点生成物是否与数据一致（兄弟仓库存在时才跑）
+const atlasDir = path.join(ROOT, '..', 'jiangshan-xingzhi');
+if (existsSync(atlasDir)) {
+  run('atlas', 'node', ['scripts/emit-atlas.mjs', '--target', atlasDir, '--check']);
+} else {
+  steps.push({ name: 'atlas', ok: true, skipped: true, out: '未找到 ../jiangshan-xingzhi，跳过生成物检查' });
+}
+
 // ③ 数据库往返（有 venv 才跑；没有则跳过）
 const py = isWin
   ? path.join(ROOT, 'server/.venv/Scripts/python.exe')

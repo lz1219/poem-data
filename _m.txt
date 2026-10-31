@@ -1,12 +1,13 @@
-feat(web): 反向互链江山行止 + 修同页深链不生效
+feat(emit): 站点数据改为生成物——poem-data 是唯一真相
 
-- 新增 ATLAS_BASE 与 atlasLink()：指向江山行止的深链
-  （本地自动 127.0.0.1:5199，线上 lz1219.github.io/jiangshan-xingzhi；
-   可用 window.ATLAS_BASE 覆盖）
-- 行迹站点每站加「地图 ↗」，带去 person 与 year
-- 人物页加「在地图上看 ↗」
-- 作品页徽标行加「地图 ↗」（作者有行迹时）
-- 修：只改 hash 不重载页面导致深链切换无效，补 hashchange 监听
-- 样式：.maplink 虚线链接，悬停转朱砂
+新增 scripts/emit-atlas.mjs：从 data/*.json 生成江山行止的三个数据文件
+- js/atlas_works.js      作品 69 条（简体正文供站点显示，繁体仍留本仓库）
+- js/atlas_overlay.js    人物档案 + 行迹；上游已有的行迹只补缺站（按年+地名去重）
+- js/atlas_journeys.js   读本导语与承接语 10 条
 
-两站分工：地图在江山行止，注疏在本站，用深链跳转，互不重画界面。
+策略：不覆盖上游。李白 12 站 → 补 4 站变 16；白居易/杜甫/蒋捷整条新建。
+
+闸门新增第 4 道：emit-atlas --check，生成物与数据不一致即拒绝提交。
+
+实测：生成后作品 69 / 行迹 10 / 读本 10；浏览器验证白居易 11 站、李白 16 站、
+杜甫 11 站，健康检查 ok，无报错。

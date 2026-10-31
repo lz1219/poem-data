@@ -27,6 +27,21 @@
 3. **评点与赏析分栏。** 评点是古人说的（须有评者·朝代·原文·卷页），
    赏析是本站自撰（`by: 本站自撰`）。**不允许把 AI 生成的话放进评点栏。**
 
+## 生成站点的数据文件
+
+`js/atlas_works.js` / `atlas_overlay.js` / `atlas_journeys.js`
+在 [江山行止](https://github.com/lz1219/jiangshan-xingzhi) 仓库里是**生成物**：
+
+```bash
+node scripts/emit-atlas.mjs --target ../jiangshan-xingzhi          # 生成
+node scripts/emit-atlas.mjs --target ../jiangshan-xingzhi --check  # 只比对
+```
+
+规则：
+- **本仓库的 `data/*.json` 是唯一真相**，站点文件不手改
+- 上游已有的行迹只**补缺站**（按「年 + 古地名」去重），不覆盖上游
+- 提交闸门会跑 `--check`，生成物与数据不一致就拒绝提交
+
 ## 校验与提交闸门
 
 ```bash
