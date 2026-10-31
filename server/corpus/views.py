@@ -35,17 +35,13 @@ def _cache_put(key: str, value):
 
 
 def _corpus_dsn() -> str:
-    """语料检索用的连接串：优先 DATABASE_URL，其次由 PGHOST 等拼装。"""
-    if PGDSN.startswith("postgres"):
-        return PGDSN
-    host = os.getenv("PGHOST")
-    if not host:
-        return ""
-    user = os.getenv("PGUSER", "")
-    pwd = os.getenv("PGPASSWORD", "")
-    port = os.getenv("PGPORT", "5432")
-    db = os.getenv("PGDATABASE", "jiangshan")
-    return f"postgresql://{user}:{pwd}@{host}:{port}/{db}"
+    """语料检索用的连接串：统一走 corpus.db.dsn()（优先 CORPUS_DSN）。
+
+    以前这里自己拼 PGHOST，在"业务库与语料库分离"的部署下会连错库。
+    """
+    from . import db as _db
+
+    return _db.dsn()
 
 
 def _matching_corpus(q: str, limit: int = 20):
@@ -63,7 +59,7 @@ def _matching_corpus(q: str, limit: int = 20):
         with psycopg.connect(dsn, connect_timeout=5) as conn:
             with conn.cursor() as cur:
                 cur.execute(
-                    """SELECT coalesce(title_display, title) AS title, author, coalesce(body_simplified, body)
+                    """SELECT coalesce(nullif(title_display, ''), title) AS title, author, coalesce(body_simplified, body)
                        FROM corpus_poem
                        WHERE coalesce(body_simplified, body) LIKE %s
                        LIMIT %s""",

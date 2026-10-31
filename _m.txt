@@ -1,20 +1,7 @@
-feat(data): 摘录标注、交叉校验、地名核对、语料展示标题
+fix(corpus): 检索连错库——views 里的 _corpus_dsn 优先用了业务库
 
-摘录标注（26 条）
-- 判定：文/史传体裁 + 诗词与语料精确比对短于 80%
-- 标题模糊匹配会误判（月夜、旅夜书怀命中更长同题诗），改为精确匹配后零误标
-- schema 增加 excerpt；模型/导入/导出/序列化/界面全链路；列表前置「摘」
+业务库（jiangshan_web）与语料库（jiangshan）分离部署后，
+views.py 自拼的 DSN 优先取 DATABASE_URL，导致 corpus_poem 不存在、检索恒为空。
+改为统一走 corpus.db.dsn()（优先 CORPUS_DSN）。
 
-校验工具（只报告，不改数据）
-- manage.py crosscheck_career：行迹 ↔ CBDB 仕历，分六类
-  印证 15 / 地名不同 8 / CBDB 未记地点 7 / 生卒游历 17 / 无记录 32 / 跳过 3
-- manage.py check_places：站点 ↔ 38,489 条地名库，命中 84、一致 62
-  发现「江州」同名歧义（其一今地指向重庆）
-- manage.py discover_variants：异文发现；20 条底本作品与语料零差异（本就同源）
-
-语料层
-- corpus_poem 增 title_display（去题注、截断 24 字），语料接口与检索改用展示标题
-- 元曲「曲牌・曲文」混入标题 8,248 条、题注过长 2,849 条，均不改原数据
-
-文档
-- docs/data-status.md：覆盖率、校验结论、受源限制项（底本补繁体、评点）、语料缺陷
+验证：线上 /api/search?q=明月&scope=corpus 返回 20 条。
