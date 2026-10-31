@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "key": "赋得古原草送别",
+  "titleZh": "赋得古原草送别",
+  "titleEn": "Grass on the Ancient Plain: Farewell",
+  "aliases": [
+    "赋得古原草送别",
+    "赋得古原草送别",
+    "古原草"
+  ],
+  "authorKey": "baijuyi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 787,
+    "yearKind": "composition",
+    "placeZh": "长安",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "離離原上草，一歲一枯榮。",
+      "野火燒不盡，春風吹又生。",
+      "遠芳侵古道，晴翠接荒城。",
+      "又送王孫去，萋萋滿別情。"
+    ],
+    "paragraphsSimplified": [
+      "离离原上草，一岁一枯荣。",
+      "野火烧不尽，春风吹又生。",
+      "远芳侵古道，晴翠接荒城。",
+      "又送王孙去，萋萋满别情。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "以原上草写别情：草年年枯荣而根不死，野火烧不尽；再由草及人，芳草侵古道、接荒城，最后落到送别——萋萋满别情。",
+  "notes": [
+    {
+      "term": "赋得",
+      "explain": "限定题目作诗，多为应考或集会之作。"
+    },
+    {
+      "term": "离离",
+      "explain": "草木茂盛的样子。"
+    },
+    {
+      "term": "王孙",
+      "explain": "贵族子弟，此处指所送之人。"
+    }
+  ],
+  "background": "相传为白居易十六岁应考时的习作，以「野火烧不尽，春风吹又生」得名。",
+  "appreciation": {
+    "text": "前四句写草的生命：一岁一枯荣是常态，野火烧不尽是反常，春风吹又生是回归。后四句转写人：芳草侵古道、接荒城，草越盛而人越远，末句「萋萋满别情」把草色直接读成离情。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "787",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "787",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

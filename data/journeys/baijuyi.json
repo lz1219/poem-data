@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "1.0",
+  "key": "baijuyi",
+  "personKey": "baijuyi",
+  "titleZh": "白居易：从拾遗到香山",
+  "titleEn": "Bai Juyi: From Remonstrance to Fragrant Hills",
+  "spanZh": "772年 — 846年",
+  "origin": "overlay",
+  "intro": {
+    "text": "白居易（772—846）活到七十五岁，在唐代诗人里算长寿。他的一生几乎可以用官职串起来：校书郎、盩厔县尉、左拾遗、江州司马、忠州刺史、杭州刺史、苏州刺史、太子宾客分司东都。三十岁登第，四十余岁贬江州，五十岁后在杭州、苏州各做一任刺史——他最好的诗，一半写在被贬之后，一半写在为官任上。",
+    "source": "《旧唐书》卷一六六《白居易传》；CBDB 32227"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 772,
+      "eraZh": "大历七年",
+      "place": {
+        "ancient": "新郑",
+        "modern": "河南新郑",
+        "coord": [
+          113.74,
+          34.39
+        ]
+      },
+      "titleZh": "生于新郑",
+      "descZh": "白居易生于郑州新郑县。祖籍太原，曾祖时迁居下邽。",
+      "quote": null,
+      "source": "《旧唐书》卷一六六《白居易传》；CBDB 32227"
+    },
+    {
+      "seq": 2,
+      "year": 787,
+      "eraZh": "贞元三年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.94,
+          34.34
+        ]
+      },
+      "titleZh": "少年入长安",
+      "descZh": "少年白居易携诗文谒顾况，顾况见「野火烧不尽」句而改容。此为传世轶闻，见唐人记载。",
+      "quote": "白居易《赋得古原草送别》：“野火烧不尽，春风吹又生。”",
+      "source": "唐·张固《幽闲鼓吹》；《赋得古原草送别》"
+    },
+    {
+      "seq": 3,
+      "year": 800,
+      "eraZh": "贞元十六年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.94,
+          34.34
+        ]
+      },
+      "titleZh": "进士及第",
+      "descZh": "贞元十六年登进士第，年二十九。",
+      "quote": null,
+      "source": "《旧唐书》卷一六六《白居易传》；CBDB 32227"
+    },
+    {
+      "seq": 4,
+      "year": 806,
+      "eraZh": "元和元年",
+      "place": {
+        "ancient": "盩厔",
+        "modern": "陕西周至",
+        "coord": [
+          108.22,
+          34.16
+        ]
+      },
+      "titleZh": "盩厔县尉",
+      "descZh": "任盩厔县尉，亲见麦收之苦，作《观刈麦》。同年作《长恨歌》。",
+      "quote": "白居易《观刈麦》：“足蒸暑土气，背灼炎天光。”",
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）；《观刈麦》"
+    },
+    {
+      "seq": 5,
+      "year": 808,
+      "eraZh": "元和三年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.94,
+          34.34
+        ]
+      },
+      "titleZh": "左拾遗",
+      "descZh": "拜左拾遗，屡上疏言事。这一时期所作讽谕诗最多。",
+      "quote": null,
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）"
+    },
+    {
+      "seq": 6,
+      "year": 815,
+      "eraZh": "元和十年",
+      "place": {
+        "ancient": "江州",
+        "modern": "江西九江",
+        "coord": [
+          115.99,
+          29.71
+        ]
+      },
+      "titleZh": "贬江州司马",
+      "descZh": "因上疏请捕刺宰相之贼，贬江州司马。次年秋作《琵琶行》。",
+      "quote": "白居易《琵琶行》：“同是天涯沦落人，相逢何必曾相识。”",
+      "source": "《旧唐书》卷一六六《白居易传》；CBDB 32227；《琵琶行》"
+    },
+    {
+      "seq": 7,
+      "year": 818,
+      "eraZh": "元和十三年",
+      "place": {
+        "ancient": "忠州",
+        "modern": "重庆忠县",
+        "coord": [
+          108.04,
+          30.3
+        ]
+      },
+      "titleZh": "忠州刺史",
+      "descZh": "量移忠州刺史，自江州溯江西上。",
+      "quote": null,
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）"
+    },
+    {
+      "seq": 8,
+      "year": 822,
+      "eraZh": "长庆二年",
+      "place": {
+        "ancient": "杭州",
+        "modern": "浙江杭州",
+        "coord": [
+          120.15,
+          30.27
+        ]
+      },
+      "titleZh": "杭州刺史",
+      "descZh": "任杭州刺史，筑堤蓄水灌田，西湖至今有白堤。任上作《钱塘湖春行》。",
+      "quote": "白居易《钱塘湖春行》：“乱花渐欲迷人眼，浅草才能没马蹄。”",
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）；《钱塘湖春行》"
+    },
+    {
+      "seq": 9,
+      "year": 825,
+      "eraZh": "宝历元年",
+      "place": {
+        "ancient": "苏州",
+        "modern": "江苏苏州",
+        "coord": [
+          120.59,
+          31.3
+        ]
+      },
+      "titleZh": "苏州刺史",
+      "descZh": "转苏州刺史，次年因病去职。晚年所忆「江南」，一半是杭州，一半是苏州。",
+      "quote": "白居易《忆江南》：“江南忆，其次忆吴宫。”",
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）；《忆江南》"
+    },
+    {
+      "seq": 10,
+      "year": 829,
+      "eraZh": "大和三年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.45,
+          34.62
+        ]
+      },
+      "titleZh": "分司东都",
+      "descZh": "以太子宾客分司东都，居洛阳履道里，自此不复出。",
+      "quote": null,
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）"
+    },
+    {
+      "seq": 11,
+      "year": 846,
+      "eraZh": "会昌六年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.45,
+          34.62
+        ]
+      },
+      "titleZh": "卒于洛阳",
+      "descZh": "会昌六年卒于洛阳，年七十五，葬龙门香山。",
+      "quote": null,
+      "source": "《旧唐书》卷一六六《白居易传》；CBDB 32227"
+    }
+  ],
+  "links": {
+    "4": {
+      "text": "进士及第三年后授盩厔县尉——这是他第一次真正到民间，麦收之苦与拾穗之穷都写进了《观刈麦》。",
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）；《观刈麦》"
+    },
+    "6": {
+      "text": "元和十年上疏请捕刺宰相之贼，被贬江州司马；闲职无事，才有了浔阳江头那一夜。",
+      "source": "《旧唐书》卷一六六《白居易传》；《琵琶行》"
+    },
+    "8": {
+      "text": "从忠州召回后，他先后出任杭州、苏州刺史——西湖白堤与苏州虎丘，都留下他任上的诗。",
+      "source": "CBDB POSTED_TO_OFFICE_DATA（32227）"
+    },
+    "10": {
+      "text": "大和三年以太子宾客分司东都，居洛阳履道里；此后十七年不再出仕，卒于香山。",
+      "source": "《旧唐书》卷一六六《白居易传》"
+    }
+  }
+}

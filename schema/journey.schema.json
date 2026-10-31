@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lz1219/poem-data/schema/journey.schema.json",
+  "title": "行迹",
+  "type": "object",
+  "required": ["schemaVersion", "key", "personKey", "titleZh", "stops"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "key": { "type": "string" },
+    "personKey": { "type": "string" },
+    "titleZh": { "type": "string" },
+    "titleEn": { "type": ["string", "null"] },
+    "spanZh": { "type": ["string", "null"] },
+    "origin": { "enum": ["upstream", "overlay"] },
+    "intro": {
+      "type": ["object", "null"],
+      "required": ["text", "source"],
+      "additionalProperties": false,
+      "properties": { "text": { "type": "string" }, "source": { "type": "string" } }
+    },
+    "stops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["seq", "year", "place", "titleZh", "descZh", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "seq": { "type": "integer" },
+          "year": { "type": ["integer", "null"] },
+          "eraZh": { "type": ["string", "null"] },
+          "place": {
+            "type": "object",
+            "required": ["ancient"],
+            "additionalProperties": false,
+            "properties": {
+              "ancient": { "type": "string" },
+              "modern": { "type": ["string", "null"] },
+              "coord": {
+                "type": ["array", "null"],
+                "items": { "type": "number" },
+                "minItems": 2,
+                "maxItems": 2
+              }
+            }
+          },
+          "titleZh": { "type": "string" },
+          "descZh": { "type": "string" },
+          "quote": { "type": ["string", "null"] },
+          "source": { "type": "string" }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["text", "source"],
+        "additionalProperties": false,
+        "properties": { "text": { "type": "string" }, "source": { "type": "string" } }
+      },
+      "description": "站间承接语：键为「第几站」（1 起），插在该站之前"
+    }
+  }
+}

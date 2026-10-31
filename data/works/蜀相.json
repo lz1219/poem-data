@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "1.0",
+  "key": "蜀相",
+  "titleZh": "蜀相",
+  "titleEn": "The Prime Minister of Shu",
+  "aliases": [
+    "蜀相"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 760,
+    "yearKind": "composition",
+    "placeZh": "成都",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "丞相祠堂何處尋，錦官城外柏森森。",
+      "映堦碧草自春色，隔葉黃鸝空好音。",
+      "三顧頻煩天下計，兩朝開濟老臣心。",
+      "出師未捷身先死，長使英雄淚滿襟。"
+    ],
+    "paragraphsSimplified": [
+      "丞相祠堂何处寻，锦官城外柏森森。",
+      "映阶碧草自春色，隔叶黄鹂空好音。",
+      "三顾频烦天下计，两朝开济老臣心。",
+      "出师未捷身先死，长使英雄泪满襟。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "寻访武侯祠而作。前四句写祠堂之静：柏森森，草自春，鹂空好，一片无人之境；后四句转写其人：三顾为天下计，两朝见老臣心；末句「出师未捷身先死」一收，哭武侯亦哭自己。",
+  "notes": [
+    {
+      "term": "丞相祠堂",
+      "explain": "武侯祠，在今成都。"
+    },
+    {
+      "term": "锦官城",
+      "explain": "成都别称。蜀汉设锦官管理织锦，故名。"
+    },
+    {
+      "term": "三顾",
+      "explain": "刘备三顾草庐。诸葛亮《出师表》「三顾臣于草庐之中」。"
+    },
+    {
+      "term": "两朝",
+      "explain": "先主刘备、后主刘禅两朝。"
+    },
+    {
+      "term": "开济",
+      "explain": "开国济民。"
+    }
+  ],
+  "background": "上元元年春，杜甫初到成都，寻访武侯祠而作。他一生自比稷契，见祠堂而伤己，末句哭的是诸葛亮，也是自己。",
+  "appreciation": {
+    "text": "前四句写祠堂之静，「自」「空」二字最冷：草木自春，鹂声自好，与人事无涉。后四句转写其人，末句一「泪」字，哭武侯亦哭自己——杜甫一生自许稷契，终究只能旁观别人的功业。",
+    "inference": {
+      "text": "「长使英雄泪满襟」的英雄，恐怕兼指杜甫自己——他一生自许稷契，终究只能旁观别人的功业。",
+      "basis": "上元元年春杜甫初到成都，此前已弃华州司功参军之职，携家漂泊入蜀。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "760",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "760",
+          "source": "《杜诗详注》卷九",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《杜诗详注》卷九"
+}

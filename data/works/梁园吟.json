@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "梁园吟",
+  "titleZh": "梁园吟",
+  "titleEn": null,
+  "aliases": [
+    "梁园吟"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 744,
+    "yearKind": "composition",
+    "placeZh": "睢阳",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "我浮黃河去京闕，掛席欲進波連山。天長水闊厭遠涉，訪古始及平臺間。"
+    ],
+    "paragraphsSimplified": [
+      "我浮黄河去京阙，挂席欲进波连山。天长水阔厌远涉，访古始及平台间。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "李白浮黄河去京阙，访古平台，见梁园荒芜而感怀，借信陵君旧事自况。",
+  "notes": [
+    {
+      "term": "平台",
+      "explain": "梁园中的台名，在今河南商丘。"
+    }
+  ],
+  "background": "李白东游梁宋时作。访古平台，感怀信陵君，末以「东山高卧时起来」自许。",
+  "appreciation": {
+    "text": "起句「我浮黄河去京阙」以动写行，落到「访古始及平台间」以静写怀。李白的怀古，总从脚步开始。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "744",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "744",
+          "source": "《李太白全集》卷七",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷七"
+}

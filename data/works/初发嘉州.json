@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "初发嘉州",
+  "titleZh": "初发嘉州",
+  "titleEn": null,
+  "aliases": [
+    "初发嘉州"
+  ],
+  "authorKey": "sushi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1056,
+    "yearKind": "composition",
+    "placeZh": "眉州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "朝發鼓闐闐，西風獵畫旃。故鄉飄已遠，往意浩無邊。"
+    ],
+    "paragraphsSimplified": [
+      "朝发鼓阗阗，西风猎画旃。故乡飘已远，往意浩无边。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "苏轼出蜀赴京，舟发嘉州：鼓声阗阗，西风猎旃，故乡渐远而往意无边。",
+  "notes": [
+    {
+      "term": "阗阗",
+      "explain": "鼓声。一说形容鼓声盛大。"
+    }
+  ],
+  "background": "嘉祐四年苏轼服母丧期满，与父弟自眉山赴京，舟发嘉州时作。",
+  "appreciation": {
+    "text": "「朝发鼓阗阗」以声起程，「故乡飘已远」以远收束；中间「往意浩无边」一句，是少年出蜀的心气。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1056",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1056",
+          "source": "《苏轼诗集》卷一",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼诗集》卷一"
+}

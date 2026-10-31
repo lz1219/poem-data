@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "zhaoyun",
+  "zh": "赵云",
+  "en": "Zhao Yun",
+  "courtesyZh": "顺平侯 · 字子龙 · 常山赵子龙",
+  "dynastyKey": "sanguo",
+  "span": [
+    168,
+    229
+  ],
+  "spanNote": null,
+  "aliases": [
+    "赵子龙",
+    "子龙"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

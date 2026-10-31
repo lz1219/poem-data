@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "key": "qinshihuang",
+  "zh": "秦始皇",
+  "en": "Qin Shi Huang",
+  "courtesyZh": "嬴政 · 始皇帝",
+  "dynastyKey": "qin",
+  "span": [
+    -259,
+    -210
+  ],
+  "spanNote": null,
+  "aliases": [
+    "嬴政",
+    "秦王政",
+    "始皇帝",
+    "祖龙",
+    "First Emperor"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "qinshihuang"
+}

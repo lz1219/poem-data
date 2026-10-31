@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "key": "独坐敬亭山",
+  "titleZh": "独坐敬亭山",
+  "titleEn": "Sitting Alone on Jingting Mountain",
+  "aliases": [
+    "独坐敬亭山",
+    "獨坐敬亭山"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 753,
+    "yearKind": "composition",
+    "placeZh": "宣城",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "衆鳥高飛盡，孤雲獨去閑。",
+      "相看兩不厭，只有敬亭山。"
+    ],
+    "paragraphsSimplified": [
+      "众鸟高飞尽，孤云独去闲。",
+      "相看两不厌，只有敬亭山。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "众鸟飞尽、孤云独去，只剩自己与敬亭山相对；相看两不厌，天下只剩下这座山。",
+  "notes": [
+    {
+      "term": "敬亭山",
+      "explain": "在今安徽宣城北，李白多次登临。"
+    },
+    {
+      "term": "厌",
+      "explain": "满足、厌倦；此言彼此看不厌。"
+    }
+  ],
+  "background": "约天宝十二载（753）李白游宣城时作。此时他已离开长安近十年。",
+  "appreciation": {
+    "text": "前两句把周围一切清空：鸟尽、云去，只剩两样东西——人和山。后两句反过来写「不厌」，是把自己也放进了物象里。全诗二十字，无一字说孤独，而孤独满纸。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "753",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "753",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

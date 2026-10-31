@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "阿房宫赋",
+  "titleZh": "阿房宫赋",
+  "titleEn": null,
+  "aliases": [
+    "阿房宫赋"
+  ],
+  "authorKey": "p21194",
+  "genre": "fu",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": -221,
+    "yearKind": "composition",
+    "placeZh": "临淄",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "六王畢，四海一。"
+    ],
+    "paragraphsSimplified": [
+      "六王毕，四海一。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "开篇六字「六王毕，四海一」写秦并天下，继而铺陈阿房宫的规模与奢靡，为后文的警戒立势。",
+  "notes": [
+    {
+      "term": "六王",
+      "explain": "齐、楚、燕、韩、赵、魏六国之王。"
+    }
+  ],
+  "background": "杜牧借秦宫奢靡以警当世的赋作。开篇「六王毕，四海一」六字写尽秦并天下。",
+  "appreciation": {
+    "text": "起手六字三顿，节奏如刀：「六王毕，四海一」把百年战事压成一句。后文铺陈愈盛，此句愈冷——赋的铺排，本就是为了后文的倒塌。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "-221",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "-221",
+          "source": "《樊川文集》卷一",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《樊川文集》卷一"
+}

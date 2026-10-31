@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0",
+  "key": "卖炭翁",
+  "titleZh": "卖炭翁",
+  "titleEn": "The Old Charcoal Seller",
+  "aliases": [
+    "卖炭翁"
+  ],
+  "authorKey": "baijuyi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 809,
+    "yearKind": "composition",
+    "placeZh": "长安",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "賣炭翁，伐薪燒炭南山中。",
+      "滿面塵灰煙火色，兩鬢蒼蒼十指黑。",
+      "賣炭得錢何所營？身上衣裳口中食。",
+      "可憐身上衣正單，心憂炭賤願天寒。",
+      "夜來城外一尺雪，曉駕炭車輾冰轍。",
+      "牛困人飢日已高，市南門外泥中歇。",
+      "翩翩兩騎來是誰？黃衣使者白衫兒。",
+      "手把文書口稱敕，回車叱牛牽向北。",
+      "一車炭，千餘斤，宮使驅將惜不得。",
+      "半匹紅紗一丈綾，系向牛頭充炭直。"
+    ],
+    "paragraphsSimplified": [
+      "卖炭翁，伐薪烧炭南山中。",
+      "满面尘灰烟火色，两鬓苍苍十指黑。",
+      "卖炭得钱何所营？身上衣裳口中食。",
+      "可怜身上衣正单，心忧炭贱愿天寒。",
+      "夜来城外一尺雪，晓驾炭车辗冰辙。",
+      "牛困人饥日已高，市南门外泥中歇。",
+      "翩翩两骑来是谁？黄衣使者白衫儿。",
+      "手把文书口称敕，回车叱牛牵向北。",
+      "一车炭，千余斤，宫使驱将惜不得。",
+      "半匹红纱一丈绫，系向牛头充炭直。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "卖炭翁伐薪烧炭，衣单而愿天寒，只为炭能卖个好价。雪后驾车入城，却被宫使以一纸文书强行征走，半匹纱一丈绫就算炭钱。",
+  "notes": [
+    {
+      "term": "何所营",
+      "explain": "做什么用。"
+    },
+    {
+      "term": "黄衣使者白衫儿",
+      "explain": "宦官（黄衣）及其爪牙（白衫）。"
+    },
+    {
+      "term": "敕",
+      "explain": "皇帝诏令，此处指宫市采办的凭据。"
+    },
+    {
+      "term": "炭直",
+      "explain": "炭的价钱；直通「值」。"
+    }
+  ],
+  "background": "《新乐府》五十首之一，序称「苦宫市也」。宫市是中唐弊政：宦官以采办为名强买民物。",
+  "appreciation": {
+    "text": "「可怜身上衣正单，心忧炭贱愿天寒」一联最狠：把人的处境与愿望写成矛盾，越冷越有指望。末句「系向牛头充炭直」只写动作，不写愤怒，而愤怒自见。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "809",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "809",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

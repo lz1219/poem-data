@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "王阳明年谱",
+  "titleZh": "王阳明年谱",
+  "titleEn": null,
+  "aliases": [
+    "王阳明年谱"
+  ],
+  "authorKey": "au004",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1508,
+    "yearKind": "event",
+    "placeZh": "龙场",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "聖人之道，吾性自足，向之求理於事物者誤也。"
+    ],
+    "paragraphsSimplified": [
+      "圣人之道，吾性自足，向之求理于事物者误也。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "龙场大悟：圣人之道，吾性自足，向之求理于事物者误也。",
+  "notes": [
+    {
+      "term": "吾性自足",
+      "explain": "谓理具于本心，不必外求。此为阳明学的起点。"
+    }
+  ],
+  "background": "记正德三年王守仁谪居贵州龙场，中夜大悟格物致知之旨，史称「龙场悟道」。",
+  "appreciation": {
+    "text": "「吾性自足」四字是龙场一悟的全部结论；后半句「向之求理于事物者误也」才是转折——向外的路到此为止。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1508",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1508",
+          "source": "《王阳明全集》年谱",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《王阳明全集》年谱"
+}

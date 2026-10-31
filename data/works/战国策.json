@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "战国策",
+  "titleZh": "战国策",
+  "titleEn": null,
+  "aliases": [
+    "战国策"
+  ],
+  "authorKey": "anonymous",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": -228,
+    "yearKind": "event",
+    "placeZh": "邯郸",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "趙蔥死，顏聚亡，後三月，王翦因急擊，大破趙，殺趙蔥，虜趙王遷及其將顏聚，遂滅趙。"
+    ],
+    "paragraphsSimplified": [
+      "赵葱死，颜聚亡，后三月，王翦因急击，大破赵，杀赵葱，虏赵王迁及其将颜聚，遂灭赵。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "秦将王翦急击赵军，赵葱战死、颜聚逃亡，赵王迁被虏——赵国至此亡。",
+  "notes": [
+    {
+      "term": "颜聚",
+      "explain": "赵国将领，与赵葱同御秦军。"
+    }
+  ],
+  "background": "记战国策士游说与列国攻守。此段记秦将王翦急击赵军、虏赵王迁。",
+  "appreciation": {
+    "text": "记赵亡只三句：赵葱死、颜聚亡、王翦急击。策书为纵横家立言，叙事极简，胜负全靠动作交代。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "-228",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "-228",
+          "source": "《战国策·赵策》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《战国策·赵策》"
+}

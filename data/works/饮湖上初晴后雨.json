@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "key": "饮湖上初晴后雨",
+  "titleZh": "饮湖上初晴后雨（其二）",
+  "titleEn": "Drinking on the Lake, Clear Then Rainy (II)",
+  "aliases": [
+    "饮湖上初晴后雨",
+    "饮湖上初晴后雨（其二）"
+  ],
+  "authorKey": "sushi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1073,
+    "yearKind": "composition",
+    "placeZh": "杭州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "水光瀲灩晴方好，山色空濛雨亦奇。",
+      "欲把西湖比西子，淡妝濃抹總相宜。"
+    ],
+    "paragraphsSimplified": [
+      "水光潋滟晴方好，山色空蒙雨亦奇。",
+      "欲把西湖比西子，淡妆浓抹总相宜。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "一首把西湖写定的诗。前两句对举晴雨：晴时水光潋滟，雨中山色空蒙，各极其妙；后两句忽然换喻，把湖比作西施——浓妆淡抹都合宜。自此「西子湖」成了西湖的别名。",
+  "notes": [
+    {
+      "term": "潋滟",
+      "explain": "水波荡漾、光色闪动。写「晴」之实，与下句「空蒙」写「雨」之虚相对。"
+    },
+    {
+      "term": "空蒙",
+      "explain": "细雨迷蒙、若有若无。苏轼用一实一虚两个词，把两种天气各归其位。"
+    },
+    {
+      "term": "西子",
+      "explain": "西施。以美人比湖是苏轼的发明，此前诗多称「钱塘湖」。"
+    },
+    {
+      "term": "相宜",
+      "explain": "合适。既指妆容，也指湖景——一词两面，是本诗的眼。"
+    }
+  ],
+  "background": "通判杭州时作。前二句写晴雨两态，后二句以西施为喻，自此「西子湖」成为西湖别名。",
+  "appreciation": {
+    "text": "两句写两态，第三句忽然换喻，把风景变成人物——从此西湖有了姓。「总相宜」三字最见分寸：不是夸它绝美，是说它怎么都合宜。后来「西子湖」之名即出于此。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1073",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1073",
+          "source": "《苏轼诗集》卷九",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼诗集》卷九"
+}

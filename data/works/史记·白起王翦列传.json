@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "史记·白起王翦列传",
+  "titleZh": "史记·白起王翦列传",
+  "titleEn": null,
+  "aliases": [
+    "史记·白起王翦列传"
+  ],
+  "authorKey": "simaqian",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": -223,
+    "yearKind": "event",
+    "placeZh": "寿春",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "王翦果代李信擊荊……荊數挑戰而秦不出。乃引而東。翦因舉兵追之，令壯士擊，大破荊軍。"
+    ],
+    "paragraphsSimplified": [
+      "王翦果代李信击荆……荆数挑战而秦不出。乃引而东。翦因举兵追之，令壮士击，大破荆军。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "王翦代李信击楚，坚壁不战；楚军数挑战而秦不出，乃引兵而东，王翦乘势纵兵大破之。",
+  "notes": [
+    {
+      "term": "荆",
+      "explain": "楚国。秦人称楚为荆，避庄襄王子楚之讳。"
+    }
+  ],
+  "background": "白起、王翦两位秦将的合传。此段记王翦代李信击楚，坚壁不战，待楚军东退而纵兵击之。",
+  "appreciation": {
+    "text": "「荆数挑战而秦不出」七个字写尽王翦的定力；「乃引而东」一转，秦军才动。司马迁写战争，胜负常在一「不动」之间。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "-223",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "-223",
+          "source": "《史记》卷七十三",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《史记》卷七十三"
+}

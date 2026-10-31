@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0",
+  "key": "黄鹤楼送孟浩然之广陵",
+  "titleZh": "黄鹤楼送孟浩然之广陵",
+  "titleEn": "Seeing Off Meng Haoran at Yellow Crane Tower",
+  "aliases": [
+    "黄鹤楼送孟浩然之广陵"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 730,
+    "yearKind": "composition",
+    "placeZh": "江夏",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "故人西辭黃鶴樓，煙花三月下揚州。",
+      "孤帆遠影碧山盡，唯見長江天際流。"
+    ],
+    "paragraphsSimplified": [
+      "故人西辞黄鹤楼，烟花三月下扬州。",
+      "孤帆远影碧空尽，唯见长江天际流。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "全诗不写送别的场面，只写「看不见了」的那一刻。前两句轻快：故人东下，烟花三月正是好时节；后两句忽然空了：帆影一尽，只剩长江向天边流。别情全在「唯见」二字里。",
+  "notes": [
+    {
+      "term": "黄鹤楼",
+      "explain": "在今武汉蛇山，长江边上，古人送别常在此。"
+    },
+    {
+      "term": "广陵",
+      "explain": "今江苏扬州。"
+    },
+    {
+      "term": "烟花",
+      "explain": "春日繁花如烟。把离别写成春游，是这两句的轻。"
+    },
+    {
+      "term": "孤帆",
+      "explain": "江上帆多而只见故人一舟，是心在舟上。"
+    }
+  ],
+  "background": "李白在江夏送孟浩然东下扬州。孟浩然长他十二岁，是他青年时最倾慕的前辈。",
+  "appreciation": {
+    "text": "全诗不写送别的场面，只写「看不见了」的那一刻。前两句轻快，「烟花三月」把离别写成春游；后两句忽然空了——帆影一尽，只剩江水。别情全在「唯见」二字里。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "730",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "730",
+          "source": "《李太白全集》卷十五",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷十五"
+}

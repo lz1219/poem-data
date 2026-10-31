@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "喜雨亭记",
+  "titleZh": "喜雨亭记",
+  "titleEn": null,
+  "aliases": [
+    "喜雨亭记"
+  ],
+  "authorKey": "sushi",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1061,
+    "yearKind": "composition",
+    "placeZh": "凤翔府",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "使天而雨珠，寒者不得以為襦；使天而雨玉，飢者不得以為粟。"
+    ],
+    "paragraphsSimplified": [
+      "使天而雨珠，寒者不得以为襦；使天而雨玉，饥者不得以为粟。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "凤翔久旱得雨，苏轼以「使天而雨珠」「使天而雨玉」反衬雨之可贵，亭因此得名。",
+  "notes": [
+    {
+      "term": "襦",
+      "explain": "短衣。"
+    }
+  ],
+  "background": "苏轼签判凤翔时建亭，适逢久旱得雨，遂名「喜雨」并作记。",
+  "appreciation": {
+    "text": "以两个假设起：雨珠不能为襦，雨玉不能为粟。把「雨」从祥瑞拉回粟米——记的是一亭之名，说的是一方之饥。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1061",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1061",
+          "source": "《苏轼文集》卷十一",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼文集》卷十一"
+}

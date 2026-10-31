@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "key": "dufu",
+  "zh": "杜甫",
+  "en": "Du Fu",
+  "courtesyZh": "字子美 · 自号少陵野老 · 世称杜工部",
+  "dynastyKey": "tang",
+  "span": [
+    712,
+    770
+  ],
+  "spanNote": null,
+  "aliases": [
+    "子美",
+    "少陵野老",
+    "杜工部",
+    "杜少陵",
+    "诗圣",
+    "Du Fu"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "dufu"
+}

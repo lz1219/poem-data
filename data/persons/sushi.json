@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "key": "sushi",
+  "zh": "苏轼",
+  "en": "Su Shi",
+  "courtesyZh": "苏东坡 · 字子瞻 · 东坡居士",
+  "dynastyKey": "beisong",
+  "span": [
+    1037,
+    1101
+  ],
+  "spanNote": null,
+  "aliases": [
+    "东坡",
+    "苏东坡",
+    "子瞻",
+    "苏子瞻",
+    "东坡居士",
+    "Su Dongpo",
+    "Dongpo"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "sushi"
+}

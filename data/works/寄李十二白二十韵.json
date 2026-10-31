@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "key": "寄李十二白二十韵",
+  "titleZh": "寄李十二白二十韵",
+  "titleEn": null,
+  "aliases": [
+    "寄李十二白二十韵"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 744,
+    "yearKind": "composition",
+    "placeZh": "洛阳",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "乞歸優詔許，遇我宿心親。醉舞梁園夜，行歌泗水春。"
+    ],
+    "paragraphsSimplified": [
+      "乞归优诏许，遇我宿心亲。醉舞梁园夜，行歌泗水春。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "杜甫追述与李白同游：醉舞梁园之夜、行歌泗水之春，兼叙其才名与放归。",
+  "notes": [
+    {
+      "term": "李十二",
+      "explain": "李白在同族兄弟中排行十二，唐人常以行第称人。"
+    },
+    {
+      "term": "梁园",
+      "explain": "在今河南商丘，汉梁孝王所筑兔园，李白、杜甫、高适曾同游。"
+    }
+  ],
+  "background": "杜甫寄赠李白之作，二十韵追述二人同游梁宋、醉舞行歌的旧事，兼叙其才名与遭遇。",
+  "appreciation": {
+    "text": "「醉舞梁园夜，行歌泗水春」一联，把两人同游写成对句；不叙交情而交情自见，是杜甫赠诗的写法。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "744",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "744",
+          "source": "《杜诗详注》卷一",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《杜诗详注》卷一"
+}

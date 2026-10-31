@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "答范淳甫",
+  "titleZh": "答范淳甫",
+  "titleEn": null,
+  "aliases": [
+    "答范淳甫"
+  ],
+  "authorKey": "sushi",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1077,
+    "yearKind": "composition",
+    "placeZh": "徐州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "吾在徐州，與民同患難，水退而築黃樓以鎮之。"
+    ],
+    "paragraphsSimplified": [
+      "吾在徐州，与民同患难，水退而筑黄楼以镇之。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "苏轼知徐州时与范淳甫书，自述与民同患难，水退后筑黄楼以镇之。",
+  "notes": [
+    {
+      "term": "黄楼",
+      "explain": "徐州城东门上的楼，苏轼筑以镇水，取土能克水之义。"
+    }
+  ],
+  "background": "苏轼知徐州时与范淳甫书。熙宁十年黄河决口，徐州城下水深数丈，苏轼亲率军民守城七十余日。",
+  "appreciation": {
+    "text": "「吾在徐州，与民同患难」——不叙水势，只叙同患难；「筑黄楼以镇之」的「镇」字，既是治水，也是安民。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1077",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1077",
+          "source": "《苏轼文集》卷五十",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼文集》卷五十"
+}

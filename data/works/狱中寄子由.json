@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "key": "狱中寄子由",
+  "titleZh": "狱中寄子由",
+  "titleEn": null,
+  "aliases": [
+    "狱中寄子由"
+  ],
+  "authorKey": "sushi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1079,
+    "yearKind": "composition",
+    "placeZh": "湖州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "是處青山可埋骨，他年夜雨獨傷神。與君世世為兄弟，更結來生未了因。"
+    ],
+    "paragraphsSimplified": [
+      "是处青山可埋骨，他年夜雨独伤神。与君世世为兄弟，更结来生未了因。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "乌台诗案系狱，苏轼自度必死：是处青山可埋骨，惟愿与弟世世为兄弟。",
+  "notes": [
+    {
+      "term": "是处青山",
+      "explain": "到处青山。谓死无处不可埋。"
+    },
+    {
+      "term": "夜雨",
+      "explain": "用韦应物「宁知风雨夜，复此对床眠」意，指兄弟旧约。"
+    }
+  ],
+  "background": "元丰二年乌台诗案，苏轼系御史台狱，自度必死，作诗二首寄弟苏辙，托以后事。",
+  "appreciation": {
+    "text": "「是处青山可埋骨」把死说得极轻，「与君世世为兄弟」又把情说得极重；一轻一重之间，是狱中的自知无望。",
+    "inference": {
+      "text": "这两首诗是当作遗言写的，兄弟之约并非泛语。",
+      "basis": "乌台诗案系御史台狱，苏轼自度必死（见本条写作背景），故有「埋骨」与「来生」之语。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1079",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1079",
+          "source": "《苏轼诗集》卷十九",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼诗集》卷十九"
+}

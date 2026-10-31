@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "key": "六月二十日夜渡海",
+  "titleZh": "六月二十日夜渡海",
+  "titleEn": "Crossing the Sea at Night",
+  "aliases": [
+    "六月二十日夜渡海",
+    "夜渡海"
+  ],
+  "authorKey": "sushi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1100,
+    "yearKind": "composition",
+    "placeZh": "儋州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "參橫斗轉欲三更，苦雨終風也解晴。",
+      "雲散月明誰點綴？天容海色本澄清。",
+      "空餘魯叟乘桴意，粗識軒轅奏樂聲。",
+      "九死南荒吾不恨，茲遊奇絕冠平生。"
+    ],
+    "paragraphsSimplified": [
+      "参横斗转欲三更，苦雨终风也解晴。",
+      "云散月明谁点缀？天容海色本澄清。",
+      "空余鲁叟乘桴意，粗识轩辕奏乐声。",
+      "九死南荒吾不恨，兹游奇绝冠平生。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "遇赦北归，夜半渡琼州海峡而作。前四句写天气：久雨终风忽然放晴，云散月明，天容海色本来澄澈——以景起兴，暗喻心境；五六句连用孔子乘桴、黄帝奏乐两典，说自己早有浮海之意，又仿佛听见海涛如天乐；末联收束：九死南荒而不悔，反以此游为平生奇绝。",
+  "notes": [
+    {
+      "term": "参横斗转",
+      "explain": "参星横斜、北斗转向，指夜将尽。"
+    },
+    {
+      "term": "鲁叟乘桴",
+      "explain": "《论语·公冶长》孔子曰「道不行，乘桴浮于海」。"
+    },
+    {
+      "term": "轩辕奏乐",
+      "explain": "《庄子·天运》黄帝张咸池之乐于洞庭之野。此处喻海涛之声。"
+    },
+    {
+      "term": "南荒",
+      "explain": "儋耳，宋时最远的贬所。"
+    }
+  ],
+  "background": "元符三年，哲宗崩，徽宗即位，大赦。苏轼自儋州渡琼州海峡北归，夜半放舟，作此诗。",
+  "appreciation": {
+    "text": "前四句一路「解晴」「澄清」，把天气写成心境的转晴。五六句借《论语》《庄子》两个典故，说自己有浮海之意、又听见天乐。末联把六年的贬谪一句勾销——不是不苦，是不肯让苦成为结论。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1100",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1100",
+          "source": "《苏轼诗集》卷四十三",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼诗集》卷四十三"
+}

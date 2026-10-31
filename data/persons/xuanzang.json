@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "key": "xuanzang",
+  "zh": "玄奘",
+  "en": "Xuanzang",
+  "courtesyZh": "三藏法师 · 西行求法",
+  "dynastyKey": "tang",
+  "span": [
+    602,
+    664
+  ],
+  "spanNote": null,
+  "aliases": [
+    "唐僧",
+    "唐三藏",
+    "陈祎",
+    "三藏法师"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "xuanzang"
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "战国策·燕策三",
+  "titleZh": "战国策·燕策三",
+  "titleEn": null,
+  "aliases": [
+    "战国策·燕策三"
+  ],
+  "authorKey": "anonymous",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": -226,
+    "yearKind": "event",
+    "placeZh": "蓟城",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "風蕭蕭兮易水寒，壯士一去兮不復還！"
+    ],
+    "paragraphsSimplified": [
+      "风萧萧兮易水寒，壮士一去兮不复还！"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "荆轲易水辞别：风萧萧兮易水寒，壮士一去兮不复还。此句即出自这段送别。",
+  "notes": [
+    {
+      "term": "易水",
+      "explain": "在今河北易县，燕太子丹送荆轲处。"
+    }
+  ],
+  "background": "荆轲刺秦王一段。易水送别时高渐离击筑、荆轲和歌，即出于此。",
+  "appreciation": {
+    "text": "荆轲易水一歌，把送别写成决绝。「风萧萧兮易水寒」以景起，「壮士一去兮不复还」以誓结，两句之间没有过渡——这正是刺客的语速。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "-226",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "-226",
+          "source": "《战国策·燕策三》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《战国策·燕策三》"
+}

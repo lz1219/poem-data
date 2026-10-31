@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "key": "lisi",
+  "zh": "李斯",
+  "en": "Li Si",
+  "courtesyZh": "秦朝丞相",
+  "dynastyKey": "qin",
+  "span": [
+    -284,
+    -208
+  ],
+  "spanNote": null,
+  "aliases": [
+    "李丞相"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

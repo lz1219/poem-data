@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lz1219/poem-data/schema/person.schema.json",
+  "title": "人物",
+  "type": "object",
+  "required": ["schemaVersion", "key", "zh"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "key": { "type": "string" },
+    "zh": { "type": "string" },
+    "en": { "type": ["string", "null"] },
+    "courtesyZh": { "type": ["string", "null"], "description": "字/号/别称一行" },
+    "dynastyKey": { "type": ["string", "null"] },
+    "span": {
+      "type": "array",
+      "items": { "type": ["integer", "null"] },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "[生年, 卒年]，负数为公元前"
+    },
+    "spanNote": { "type": ["string", "null"], "description": "生卒有异说时写在这里" },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "externalIds": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cbdb": { "type": ["string", "null"] },
+        "wikidata": { "type": ["string", "null"] }
+      }
+    },
+    "journeyKey": { "type": ["string", "null"] }
+  }
+}

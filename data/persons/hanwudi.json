@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "key": "hanwudi",
+  "zh": "汉武帝",
+  "en": "Emperor Wu of Han",
+  "courtesyZh": "刘彻 · 雄才大略",
+  "dynastyKey": "xihan",
+  "span": [
+    -156,
+    -87
+  ],
+  "spanNote": null,
+  "aliases": [
+    "刘彻",
+    "汉世宗",
+    "刘彘"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

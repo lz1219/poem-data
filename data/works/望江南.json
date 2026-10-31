@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "key": "望江南",
+  "titleZh": "望江南 · 超然台作",
+  "titleEn": "Wang Jiang Nan: On the Transcendence Terrace",
+  "aliases": [
+    "望江南",
+    "望江南 · 超然台作"
+  ],
+  "authorKey": "sushi",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1076,
+    "yearKind": "composition",
+    "placeZh": "密州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "春未老，風細柳斜斜。試上超然臺上看，半壕春水一城花。煙雨暗千家。",
+      "寒食後，酒醒卻諮嗟。休對故人思故國，且將新火試新茶。詩酒趁年華。"
+    ],
+    "paragraphsSimplified": [
+      "春未老，风细柳斜斜。试上超然台上看，半壕春水一城花。烟雨暗千家。",
+      "寒食后，酒醒却咨嗟。休对故人思故国，且将新火试新茶。诗酒趁年华。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "登超然台而作。上阕写景：春未老，风细柳斜，半壕春水一城花，末以「烟雨暗千家」把画面压暗；下阕由景入情：寒食后酒醒，劝自己别对故人思故国，且用新火煎新茶——「诗酒趁年华」既是旷达，也是无计可施时的解法。",
+  "notes": [
+    {
+      "term": "超然台",
+      "explain": "密州城北旧台，苏轼修葺，苏辙名之曰「超然」并作记。"
+    },
+    {
+      "term": "半壕春水",
+      "explain": "护城河春水半满。与「一城花」构成上下的全景。"
+    },
+    {
+      "term": "寒食",
+      "explain": "清明前一二日，旧俗禁火，故后有「新火」。"
+    },
+    {
+      "term": "咨嗟",
+      "explain": "叹息。"
+    },
+    {
+      "term": "诗酒趁年华",
+      "explain": "趁年华未老，且以诗酒自遣。语似旷达，实为退一步的解法。"
+    }
+  ],
+  "background": "熙宁九年暮春，苏轼登密州超然台。台为其所修，弟苏辙命名并作记。北望故乡不可归，遂以「诗酒趁年华」自解。",
+  "appreciation": {
+    "text": "上阕写登台所见，「半壕春水一城花」七字压住全景，结以「烟雨暗千家」忽然转暗。下阕由景入情，一句「休对故人思故国」把自己劝住；末句「诗酒趁年华」既是旷达，也是无计可施时的解法。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1076",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1076",
+          "source": "《东坡乐府》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《东坡乐府》"
+}

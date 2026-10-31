@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "key": "与梅圣俞书",
+  "titleZh": "与梅圣俞书",
+  "titleEn": null,
+  "aliases": [
+    "与梅圣俞书"
+  ],
+  "authorKey": "ouyangxiu",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1057,
+    "yearKind": "composition",
+    "placeZh": "东京开封府",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "讀軾書，不覺汗出，快哉快哉！老夫當避路，放他出一頭地也。"
+    ],
+    "paragraphsSimplified": [
+      "读轼书，不觉汗出，快哉快哉！老夫当避路，放他出一头地也。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "欧阳修读苏轼之文而惊喜：不觉汗出，愿避路放他出一头地。",
+  "notes": [
+    {
+      "term": "梅圣俞",
+      "explain": "梅尧臣，字圣俞，北宋诗人，欧阳修挚友。"
+    },
+    {
+      "term": "避路",
+      "explain": "让路。谓自己应当退让，让苏轼出头。"
+    }
+  ],
+  "background": "欧阳修与梅尧臣的信。嘉祐二年知贡举，读苏轼文而惊喜，此信即写当时之感。",
+  "appreciation": {
+    "text": "一封信只写一个反应：汗出。欧阳修不评文章高低，只说自己的生理反应，推许之意全在这三个字里。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1057",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1057",
+          "source": "《欧阳文忠公集》卷一百四十九",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《欧阳文忠公集》卷一百四十九"
+}

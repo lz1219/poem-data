@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "key": "临路歌",
+  "titleZh": "临路歌",
+  "titleEn": null,
+  "aliases": [
+    "临路歌"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 762,
+    "yearKind": "composition",
+    "placeZh": "当涂",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "大鵬飛兮振八裔，中天摧兮力不濟。餘風激兮萬世，遊扶桑兮掛石袂。"
+    ],
+    "paragraphsSimplified": [
+      "大鹏飞兮振八裔，中天摧兮力不济。馀风激兮万世，游扶桑兮挂石袂。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "以大鹏自况：飞振八裔而中天摧折，余风犹可激扬万世——李白绝笔。",
+  "notes": [
+    {
+      "term": "八裔",
+      "explain": "八方边远之地。"
+    },
+    {
+      "term": "扶桑",
+      "explain": "神话中的东方神木，日出之处。"
+    }
+  ],
+  "background": "李白临终前所作，以大鹏自况：飞振八裔而中天摧折，余风犹可激扬万世。",
+  "appreciation": {
+    "text": "以大鹏自比：飞振八裔是生，中天摧折是死。「余风激兮万世」把自己交给了后世，绝笔而无一语及身。",
+    "inference": {
+      "text": "此诗当作于李白病重将歿之际，语调已不是壮游时的自负，而是交代。",
+      "basis": "本条写作背景记为「李白临终前所作」；诗中「中天摧兮力不济」与壮年「大鹏一日同风起」形成对照。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "762",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "762",
+          "source": "《李太白全集》卷八",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷八"
+}

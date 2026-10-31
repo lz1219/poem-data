@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "key": "jiangjie",
+  "zh": "蒋捷",
+  "en": "Jiang Jie",
+  "courtesyZh": "字胜欲 · 号竹山 · 生卒年无确考（约1245—1314 之后，卒年有异说）",
+  "dynastyKey": "nansong",
+  "span": [
+    1245,
+    1314
+  ],
+  "spanNote": "字胜欲 · 号竹山 · 生卒年无确考（约1245—1314 之后，卒年有异说）",
+  "aliases": [
+    "竹山",
+    "竹山先生",
+    "胜欲",
+    "樱桃进士",
+    "Jiang Jie",
+    "Zhushan"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "jiangjie"
+}

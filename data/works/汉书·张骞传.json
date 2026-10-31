@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "key": "汉书·张骞传",
+  "titleZh": "汉书 · 张骞传",
+  "titleEn": "Book of Han: Zhang Qian",
+  "aliases": [
+    "汉书·张骞传"
+  ],
+  "authorKey": "p135114",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": -138,
+    "yearKind": "event",
+    "placeZh": "陇西",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "出隴西，徑匈奴，匈奴得之。"
+    ],
+    "paragraphsSimplified": [
+      "出陇西，径匈奴，匈奴得之。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "张骞出陇西，取道匈奴地界，被匈奴擒获。",
+  "notes": [
+    {
+      "term": "径",
+      "explain": "取道、经过。"
+    },
+    {
+      "term": "陇西",
+      "explain": "郡名，在今甘肃东南一带。"
+    }
+  ],
+  "background": "班固《汉书》为张骞立传，承《史记》而有所增补。此句记其初次出使甫出陇西即被匈奴截获。",
+  "appreciation": {
+    "text": "仅十四字记一次出使的失败：「出陇西，径匈奴，匈奴得之。」班固不写张骞如何被扣，只写结果——史传的省略本身就是判断。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "-138",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "-138",
+          "source": "《汉书》卷六十一",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《汉书》卷六十一"
+}

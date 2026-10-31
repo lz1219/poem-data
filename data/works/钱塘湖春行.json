@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "key": "钱塘湖春行",
+  "titleZh": "钱塘湖春行",
+  "titleEn": "Spring Walk by West Lake",
+  "aliases": [
+    "钱塘湖春行",
+    "錢唐湖春行"
+  ],
+  "authorKey": "baijuyi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 823,
+    "yearKind": "composition",
+    "placeZh": "杭州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "孤山寺北賈亭西，水面初平雲腳低。",
+      "幾處早鶯爭暖樹，誰家新燕啄春泥。",
+      "亂花漸欲迷人眼，淺草才能沒馬蹄。",
+      "最愛湖東行不足，綠楊陰裡白沙堤。"
+    ],
+    "paragraphsSimplified": [
+      "孤山寺北贾亭西，水面初平云脚低。",
+      "几处早莺争暖树，谁家新燕啄春泥。",
+      "乱花渐欲迷人眼，浅草才能没马蹄。",
+      "最爱湖东行不足，绿杨阴里白沙堤。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "从孤山寺北、贾亭西起步，写湖水初平、云脚低垂；早莺争树、新燕啄泥，乱花迷眼、浅草没蹄；末句「最爱湖东行不足」收在绿杨白堤。",
+  "notes": [
+    {
+      "term": "钱塘湖",
+      "explain": "即西湖。"
+    },
+    {
+      "term": "贾亭",
+      "explain": "唐时杭州刺史贾全所建之亭。"
+    },
+    {
+      "term": "云脚低",
+      "explain": "云层低垂，与湖面相接。"
+    },
+    {
+      "term": "白沙堤",
+      "explain": "即白堤，西湖东岸长堤。"
+    }
+  ],
+  "background": "长庆二年至四年（822—824）白居易任杭州刺史，此诗作于任上，写西湖早春。",
+  "appreciation": {
+    "text": "四联都是动的：水面平而云脚低，是上下相接；莺争、燕啄，是争与啄两个动词；乱花「渐欲」迷人眼、浅草「才能」没马蹄，用两个未完成态写早春——景未到盛时，人才走得进去。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "823",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "823",
+          "source": "《全唐诗》（chinese-poetry 语料，题作《錢唐湖春行》）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料，题作《錢唐湖春行》）"
+}

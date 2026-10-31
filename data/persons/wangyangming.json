@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "key": "wangyangming",
+  "zh": "王阳明",
+  "en": "Wang Yangming",
+  "courtesyZh": "王守仁 · 阳明心学宗师 · 知行合一",
+  "dynastyKey": "ming",
+  "span": [
+    1472,
+    1529
+  ],
+  "spanNote": null,
+  "aliases": [
+    "王守仁",
+    "伯安",
+    "王伯安",
+    "阳明先生",
+    "王文成公"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "wangyangming"
+}

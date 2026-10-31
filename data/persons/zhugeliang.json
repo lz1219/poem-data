@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0",
+  "key": "zhugeliang",
+  "zh": "诸葛亮",
+  "en": "Zhuge Liang",
+  "courtesyZh": "武乡侯 · 字孔明 · 卧龙",
+  "dynastyKey": "sanguo",
+  "span": [
+    181,
+    234
+  ],
+  "spanNote": null,
+  "aliases": [
+    "孔明",
+    "诸葛孔明",
+    "卧龙",
+    "武侯",
+    "诸葛武侯",
+    "Kongming"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "zhugeliang"
+}

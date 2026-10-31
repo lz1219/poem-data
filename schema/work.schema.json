@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lz1219/poem-data/schema/work.schema.json",
+  "title": "作品",
+  "type": "object",
+  "required": ["schemaVersion", "key", "titleZh", "authorKey", "genre", "level", "text", "appreciation"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "key": { "type": "string", "description": "站内/跨项目稳定键，通常是《书名》原样" },
+    "titleZh": { "type": "string" },
+    "titleEn": { "type": ["string", "null"] },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "authorKey": { "type": "string", "description": "指向 persons/<key>.json" },
+
+    "genre": { "enum": ["shi", "ci", "fu", "wen", "history", "qu"] },
+    "level": { "enum": ["academic", "popular"], "description": "academic 表示有校记/评点/系年考辨" },
+    "certainty": { "enum": ["confirmed", "probable", "disputed", "unknown"] },
+    "composed": {
+      "type": "object",
+      "required": ["year"],
+      "additionalProperties": false,
+      "properties": {
+        "year": { "type": ["integer", "null"], "description": "系年锚点；含义见 yearKind" },
+        "yearKind": { "enum": ["composition", "event"], "description": "composition=作年；event=所述之年（史传）" },
+        "placeZh": { "type": ["string", "null"] },
+        "placeKey": { "type": ["string", "null"] }
+      }
+    },
+
+    "text": {
+      "type": "object",
+      "required": ["sourceEdition", "paragraphs"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceEdition": { "type": "string", "description": "指向 shared/editions.json 的键" },
+        "paragraphs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string" },
+          "description": "繁体原文，按诗句分段（一句一项）"
+        },
+        "paragraphsSimplified": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "简体，供检索与比对；与 paragraphs 一一对应"
+        },
+        "simplifiedBy": { "type": ["string", "null"], "description": "转换器与版本，如 opencc-t2s@1.1.9" },
+        "traditionalDerived": {
+          "type": "boolean",
+          "description": "true 表示繁体是由简体反推的（非原始底本），引用时须注明"
+        }
+      }
+    },
+
+    "meaning": { "type": ["string", "null"], "description": "大意：说什么、怎么转、落在哪" },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["term", "explain"],
+        "additionalProperties": false,
+        "properties": { "term": { "type": "string" }, "explain": { "type": "string" } }
+      }
+    },
+    "background": { "type": ["string", "null"] },
+
+    "appreciation": {
+      "type": "object",
+      "required": ["text", "by", "license"],
+      "additionalProperties": false,
+      "properties": {
+        "text": { "type": "string" },
+        "inference": {
+          "type": ["object", "null"],
+          "required": ["text", "basis"],
+          "additionalProperties": false,
+          "properties": { "text": { "type": "string" }, "basis": { "type": "string" } }
+        },
+        "by": { "const": "本站自撰" },
+        "license": { "const": "CC BY-SA 4.0" }
+      }
+    },
+
+    "apparatus": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "baseEdition", "baseText", "variantText", "judgement", "basis"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "locator": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "paragraph": { "type": "integer", "description": "第几段，从 1 起（对应 text.paragraphs 下标+1）" },
+              "charOffset": { "type": "integer", "description": "该段内的字符偏移，基于繁体 paragraphs" },
+              "label": { "type": "string", "description": "人读定位，如「第2句」" }
+            }
+          },
+          "baseEdition": { "type": "string" },
+          "baseText": { "type": "string" },
+          "variantEdition": { "type": ["string", "null"] },
+          "variantText": { "type": "string" },
+          "judgement": { "enum": ["pending", "base-right", "var-right", "both"] },
+          "basis": { "type": "string", "minLength": 4 }
+        }
+      }
+    },
+
+    "commentaryFile": { "type": ["string", "null"], "description": "如 comments/登高.json；无评点为 null" },
+
+    "dating": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim", "stance", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "stance": { "enum": ["adopted", "rejected", "pending"] },
+          "note": { "type": ["string", "null"] },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["quote", "source", "grade"],
+              "additionalProperties": false,
+              "properties": {
+                "quote": { "type": "string" },
+                "source": { "type": "string" },
+                "grade": { "enum": ["A", "B", "C", "D"] }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "citation": { "type": ["string", "null"], "description": "出处字符串，与 dating.evidence.source 呼应" }
+  }
+}

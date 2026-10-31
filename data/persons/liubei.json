@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "key": "liubei",
+  "zh": "刘备",
+  "en": "Liu Bei",
+  "courtesyZh": "汉昭烈帝 · 字玄德",
+  "dynastyKey": "sanguo",
+  "span": [
+    161,
+    223
+  ],
+  "spanNote": null,
+  "aliases": [
+    "玄德",
+    "刘玄德",
+    "汉昭烈帝",
+    "昭烈帝",
+    "先主"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0",
+  "key": "登高",
+  "titleZh": "登高",
+  "titleEn": "Climbing High",
+  "aliases": [
+    "登高"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 767,
+    "yearKind": "composition",
+    "placeZh": "夔州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "風急天高猨嘯哀，渚清沙白鳥飛迴。",
+      "無邊落木蕭蕭下，不盡長江衮衮來。",
+      "萬里悲秋常作客，百年多病獨登臺。",
+      "艱難苦恨繁霜鬢，潦倒新停濁酒桮。"
+    ],
+    "paragraphsSimplified": [
+      "风急天高猨啸哀，渚清沙白鸟飞回。",
+      "无边落木萧萧下，不尽长江衮衮来。",
+      "万里悲秋常作客，百年多病独登台。",
+      "艰难苦恨繁霜鬓，潦倒新停浊酒桮。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "风急天高、猿啸鸟回；无边落木萧萧下，不尽长江滚滚来。万里悲秋常作客，百年多病独登台。艰难苦恨使霜鬓更繁，潦倒之中又停了浊酒杯。",
+  "notes": [
+    {
+      "term": "渚",
+      "explain": "水中小洲。"
+    },
+    {
+      "term": "百年",
+      "explain": "指一生。"
+    },
+    {
+      "term": "新停浊酒杯",
+      "explain": "因肺病戒酒。"
+    }
+  ],
+  "background": "大历二年（767）重阳，杜甫在夔州登高时作。",
+  "appreciation": {
+    "text": "全诗八句皆对，前四句写景对得极工（风急/渚清，落木/长江），后四句写情也对（万里/百年，悲秋/多病）。景由高远收到自身，最后止于一个动作：停杯。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "767",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "767",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

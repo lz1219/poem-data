@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "key": "天泉证道·四句教",
+  "titleZh": "天泉证道·四句教",
+  "titleEn": null,
+  "aliases": [
+    "天泉证道·四句教"
+  ],
+  "authorKey": "wangyangming",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1521,
+    "yearKind": "composition",
+    "placeZh": "绍兴",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "無善無噁心之體，有善有惡意之動。知善知惡是良知，為善去惡是格物。"
+    ],
+    "paragraphsSimplified": [
+      "无善无恶心之体，有善有恶意之动。知善知恶是良知，为善去恶是格物。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "四句教：无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。",
+  "notes": [
+    {
+      "term": "四句教",
+      "explain": "无善无恶心之体，有善有恶意之动，知善知恶是良知，为善去恶是格物。"
+    },
+    {
+      "term": "格物",
+      "explain": "阳明释为「正其不正以归于正」，与朱熹「即物穷理」不同。"
+    }
+  ],
+  "background": "嘉靖六年王守仁出征思田前，于天泉桥与钱德洪、王汝中论学，提出四句教，史称「天泉证道」。",
+  "appreciation": {
+    "text": "四句教四层递进：体、意、知、格。前两句说本体，后两句说工夫；王门后学分派，就分在对这四句的解释上。",
+    "inference": {
+      "text": "把四句教放在出征前夕讲，是有意作一次总收束，而非随口问答。",
+      "basis": "本条写作背景记「嘉靖六年出征思田前，于天泉桥与钱德洪、王汝中论学」；此后阳明未再系统论学。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1521",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1521",
+          "source": "《传习录》下",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《传习录》下"
+}

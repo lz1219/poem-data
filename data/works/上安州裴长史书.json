@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "key": "上安州裴长史书",
+  "titleZh": "上安州裴长史书",
+  "titleEn": null,
+  "aliases": [
+    "上安州裴长史书"
+  ],
+  "authorKey": "libai",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 705,
+    "yearKind": "composition",
+    "placeZh": "绵州青莲",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "五歲誦六甲，十歲觀百家……十五觀奇書，作賦凌相如。",
+      "曩昔東遊維揚，不逾一年，散金三十餘萬，有落魄公子，悉皆濟之。"
+    ],
+    "paragraphsSimplified": [
+      "五岁诵六甲，十岁观百家……十五观奇书，作赋凌相如。",
+      "曩昔东游维扬，不逾一年，散金三十余万，有落魄公子，悉皆济之。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "李白自述早年：五岁诵六甲，十岁观百家，十五观奇书、作赋凌相如——干谒前的自我介绍。",
+  "notes": [
+    {
+      "term": "六甲",
+      "explain": "指童子启蒙所习的干支之书，代指幼学。"
+    },
+    {
+      "term": "相如",
+      "explain": "司马相如，汉代辞赋大家。"
+    }
+  ],
+  "background": "李白青年时上书安州裴长史的自荐书，自述家世、师承与交游，是了解其早年最直接的材料。",
+  "appreciation": {
+    "text": "干谒之文先立身：五岁、十岁、十五，三个年岁递进，把自己写成早慧而自负的人。求荐而不言求，是唐人的分寸。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "705",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "705",
+          "source": "《李太白全集》卷二十六",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷二十六"
+}

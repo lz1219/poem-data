@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "key": "guanyu",
+  "zh": "关羽",
+  "en": "Guan Yu",
+  "courtesyZh": "汉寿亭侯 · 字云长",
+  "dynastyKey": "sanguo",
+  "span": [
+    160,
+    220
+  ],
+  "spanNote": null,
+  "aliases": [
+    "云长",
+    "关云长",
+    "关公",
+    "美髯公",
+    "武圣"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

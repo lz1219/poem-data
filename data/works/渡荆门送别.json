@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "key": "渡荆门送别",
+  "titleZh": "渡荆门送别",
+  "titleEn": "Farewell at Jingmen",
+  "aliases": [
+    "渡荆门送别"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 725,
+    "yearKind": "composition",
+    "placeZh": "荆门",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "渡遠荆門外，來從楚國遊。",
+      "山隨平野盡，江入大荒流。",
+      "月下飛天鏡，雲生結海樓。",
+      "仍連故鄉水，萬里送行舟。"
+    ],
+    "paragraphsSimplified": [
+      "渡远荆门外，来从楚国游。",
+      "山随平野尽，江入大荒流。",
+      "月下飞天镜，云生结海楼。",
+      "仍怜故乡水，万里送行舟。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "出蜀东下，舟过荆门而作。中间两联是全诗的骨：山随平野而尽，江入大荒而流，月如天镜飞下，云似海楼结起——写视野的骤然打开；末联把江水认作故乡来的送行者，景语一转成情语。",
+  "notes": [
+    {
+      "term": "荆门",
+      "explain": "荆门山，在今湖北宜都西北，古为楚蜀交界，蜀地群山至此而尽。"
+    },
+    {
+      "term": "大荒",
+      "explain": "广阔的原野。"
+    },
+    {
+      "term": "天镜",
+      "explain": "月倒映江中，如天镜飞下。"
+    },
+    {
+      "term": "海楼",
+      "explain": "海市蜃楼，喻江上云霞。"
+    },
+    {
+      "term": "故乡水",
+      "explain": "长江自蜀东流，故称。"
+    }
+  ],
+  "background": "出蜀东下，舟过荆门，蜀地群山至此尽处，江面豁然开阔。青年李白第一次看见「大荒」。",
+  "appreciation": {
+    "text": "中间两联是全诗的骨：「山随平野尽」写视野的打开，「江入大荒流」写空间的骤然放大。末联忽然把江水认作故乡来的送行者——景语一转成情语，二十岁的李白已经在用这种方式告别。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "725",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "725",
+          "source": "《李太白全集》卷十五",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷十五"
+}

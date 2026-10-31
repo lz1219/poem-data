@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "zhangfei",
+  "zh": "张飞",
+  "en": "Zhang Fei",
+  "courtesyZh": "车骑将军 · 字益德",
+  "dynastyKey": "sanguo",
+  "span": [
+    165,
+    221
+  ],
+  "spanNote": null,
+  "aliases": [
+    "张翼德",
+    "张益德"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

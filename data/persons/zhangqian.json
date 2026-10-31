@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "zhangqian",
+  "zh": "张骞",
+  "en": "Zhang Qian",
+  "courtesyZh": "博望侯 · 凿空西域",
+  "dynastyKey": "xihan",
+  "span": [
+    -164,
+    -114
+  ],
+  "spanNote": null,
+  "aliases": [
+    "博望侯",
+    "张子文"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "zhangqian"
+}

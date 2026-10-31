@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "key": "simaqian",
+  "zh": "司马迁",
+  "en": "Sima Qian",
+  "courtesyZh": "太史公 · 字子长",
+  "dynastyKey": "xihan",
+  "span": [
+    -145,
+    -86
+  ],
+  "spanNote": null,
+  "aliases": [
+    "子长",
+    "太史公",
+    "司马子长"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

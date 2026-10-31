@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "key": "食荔枝",
+  "titleZh": "食荔枝（惠州一绝）",
+  "titleEn": "Eating Lychees",
+  "aliases": [
+    "食荔枝",
+    "惠州一绝",
+    "食荔枝（惠州一绝）"
+  ],
+  "authorKey": "sushi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1096,
+    "yearKind": "composition",
+    "placeZh": "惠州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "羅浮山下四時春，盧橘楊梅次第新。",
+      "日啖荔枝三百顆，不辭長作嶺南人。"
+    ],
+    "paragraphsSimplified": [
+      "罗浮山下四时春，卢橘杨梅次第新。",
+      "日啖荔枝三百颗，不辞长作岭南人。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "前两句写惠州风物之盛：罗浮山下四时如春，卢橘杨梅次第而新；后两句以「日啖三百颗」的夸张表态——若能这样吃荔枝，长做岭南人也甘愿。以口腹之乐写贬所，是苏轼惯用的转笔。",
+  "notes": [
+    {
+      "term": "罗浮山",
+      "explain": "在惠州博罗，道教第七洞天，相传葛洪炼丹于此。"
+    },
+    {
+      "term": "卢橘",
+      "explain": "一说金橘，一说枇杷。此处不必确指，取其与杨梅「次第新」而已。"
+    },
+    {
+      "term": "三百颗",
+      "explain": "极言其多，非实数。"
+    },
+    {
+      "term": "岭南",
+      "explain": "五岭以南。宋时为瘴疠之地，贬官最重者往焉。"
+    }
+  ],
+  "background": "绍圣三年，苏轼贬惠州第三年。岭南瘴疠之地，他却写尽口腹之乐，以旷达消解流放。",
+  "appreciation": {
+    "text": "题目是「食荔枝」，写的却是「留下来」的理由。贬惠州本是极坏的处境，他却把日子过成了口福——「不辞长作岭南人」是自嘲，也是硬撑的旷达。两句写景，两句表态，中间没有一句诉苦。",
+    "inference": {
+      "text": "「不辞长作岭南人」的旷达里带着对抗意味：以口腹之乐回敬贬谪的羞辱，越写得轻快，越见其不甘。",
+      "basis": "绍圣元年苏轼贬惠州，同时期苏辙贬雷州，党禁方严（见本条写作背景）。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1096",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1096",
+          "source": "《苏轼诗集》卷四十",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼诗集》卷四十"
+}

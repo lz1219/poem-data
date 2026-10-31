@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0",
+  "key": "汉晋春秋",
+  "titleZh": "汉晋春秋 · 南征",
+  "titleEn": "Chronicles of Han and Jin: The Southern Campaign",
+  "aliases": [
+    "汉晋春秋"
+  ],
+  "authorKey": "p418976",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 225,
+    "yearKind": "event",
+    "placeZh": "滇池",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "亮笑，縱使更戰，七縱七禽，而亮猶遣獲。獲止不去，曰：「公，天威也，南人不復反矣。」"
+    ],
+    "paragraphsSimplified": [
+      "亮笑，纵使更战，七纵七禽，而亮犹遣获。获止不去，曰：「公，天威也，南人不复反矣。」"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "诸葛亮南征，对孟获七纵七擒，孟获终于不再离去，说：公真是天威，南人不再反叛了。",
+  "notes": [
+    {
+      "term": "七纵七禽",
+      "explain": "禽，同「擒」。七次释放又七次擒获，以服其心。"
+    },
+    {
+      "term": "南人",
+      "explain": "南中夷人，约当今云南、贵州一带。"
+    },
+    {
+      "term": "裴松之注",
+      "explain": "南朝宋裴松之为《三国志》作注，广引他书补阙，此条即由注引而存。"
+    }
+  ],
+  "background": "东晋习凿齿所撰，记诸葛亮南征对孟获七擒七纵事。此段不见于陈寿正文，赖裴松之注引以存，是「七擒孟获」一说的最早来源。",
+  "appreciation": {
+    "text": "「七纵七禽」四字把一场南征写成反复的耐心；末句借孟获之口说「天威」，既记功又不自夸。此条不见于陈寿正文，赖裴注而存——读它时要知道自己在读一条「注引」，不是正史本文。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "225",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "225",
+          "source": "习凿齿《汉晋春秋》（裴松之注引）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "习凿齿《汉晋春秋》（裴松之注引）"
+}

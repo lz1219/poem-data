@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0",
+  "key": "念奴娇",
+  "titleZh": "念奴娇 · 赤壁怀古",
+  "titleEn": "Nian Nu Jiao: Memories of Red Cliff",
+  "aliases": [
+    "念奴娇",
+    "念奴娇 · 赤壁怀古",
+    "赤壁怀古"
+  ],
+  "authorKey": "sushi",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1082,
+    "yearKind": "composition",
+    "placeZh": "黄州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "大江東去，浪淘盡，千古風流人物。故壘西邊，人道是，三國周郎赤壁。亂石穿空，驚濤拍岸，捲起千堆雪。江山如畫，一時多少豪傑。",
+      "遙想公瑾當年，小喬初嫁了，雄姿英發。羽扇綸巾，談笑間，檣櫓灰飛煙滅。故國神遊，多情應笑我，早生華髮。人生如夢，一尊還酹江月。"
+    ],
+    "paragraphsSimplified": [
+      "大江东去，浪淘尽，千古风流人物。故垒西边，人道是，三国周郎赤壁。乱石穿空，惊涛拍岸，卷起千堆雪。江山如画，一时多少豪杰。",
+      "遥想公瑾当年，小乔初嫁了，雄姿英发。羽扇纶巾，谈笑间，樯橹灰飞烟灭。故国神游，多情应笑我，早生华发。人生如梦，一尊还酹江月。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "登赤鼻矶，望江而怀古。上阕写景：大江东去，浪淘千古人物，乱石惊涛，江山如画；下阕写人：遥想周瑜少年破敌，反照自己早生华发，终以「人生如梦」作结，把一腔感慨交给江月。",
+  "notes": [
+    {
+      "term": "大江",
+      "explain": "长江。开篇三字即是全词的气口。"
+    },
+    {
+      "term": "故垒",
+      "explain": "旧时营垒。"
+    },
+    {
+      "term": "周郎",
+      "explain": "周瑜，二十四岁为建威中郎将，吴中皆呼周郎。"
+    },
+    {
+      "term": "纶巾",
+      "explain": "青丝带头巾，儒将之服。与「羽扇」同为从容之象。"
+    },
+    {
+      "term": "樯橹",
+      "explain": "桅杆与船桨，代指曹军战船。"
+    },
+    {
+      "term": "酹",
+      "explain": "以酒洒地祭奠。"
+    }
+  ],
+  "background": "元丰五年，苏轼谪居黄州第三年，游城西赤鼻矶，误以为即三国赤壁之战故地，作此词。开豪放词之宗。",
+  "appreciation": {
+    "text": "苏轼写赤壁，明知此处未必是古战场——词中「人道是」三字已自留余地——却不妨他把周瑜写成一个自己无法成为的人：少年得志，谈笑破敌。「多情应笑我」一转，把作者从历史里拉回贬所，豪放词自此有了沉痛的地基。",
+    "inference": {
+      "text": "「人道是」三字暗示他清楚此处未必是真赤壁，却仍据以填词——这是有意识地借一个不确定的地名抒怀，而非考据失误。",
+      "basis": "黄州赤鼻矶与蒲圻赤壁之别，宋人已有辨说；词中自用「人道是，三国周郎赤壁」，语气已留余地。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1082",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1082",
+          "source": "《东坡乐府》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《东坡乐府》"
+}

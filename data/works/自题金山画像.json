@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "key": "自题金山画像",
+  "titleZh": "自题金山画像",
+  "titleEn": "Inscription on My Portrait at Jinshan",
+  "aliases": [
+    "自题金山画像",
+    "金山画像"
+  ],
+  "authorKey": "sushi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1101,
+    "yearKind": "composition",
+    "placeZh": "镇江",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "心似已灰之木，身如不繫之舟。",
+      "問汝平生功業，黃州惠州儋州。"
+    ],
+    "paragraphsSimplified": [
+      "心似已灰之木，身如不系之舟。",
+      "问汝平生功业，黄州惠州儋州。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "六言四句。前两句自写真容：心如死灰，身似孤舟；后两句自问平生功业，答以黄州、惠州、儋州三处贬所——以流放之地为功业，是自嘲，也是自负。",
+  "notes": [
+    {
+      "term": "金山",
+      "explain": "金山寺，在今镇江。李公麟曾为苏轼画像，留于寺中。"
+    },
+    {
+      "term": "已灰之木",
+      "explain": "《庄子·齐物论》形如槁木、心如死灰。"
+    },
+    {
+      "term": "不系之舟",
+      "explain": "《庄子·列御寇》「泛若不系之舟」。"
+    },
+    {
+      "term": "六言",
+      "explain": "六字一句，唐人偶用，宋人少见，句式本近赋体。"
+    }
+  ],
+  "background": "建中靖国元年，苏轼北归过镇江，游金山寺，见李公麟所绘己像，题此六言。两月后卒于常州。",
+  "appreciation": {
+    "text": "六言四句：前两句是自画像的形，后两句是自题的骨。把三处贬所当成功业，字面是自嘲，底下是自负——那些地方才是他真正活过的地方。题诗两月后卒于常州，这四句几乎成了墓志。",
+    "inference": {
+      "text": "把三处贬所写成「平生功业」，语带反讽；题诗两月后即卒，此作近乎自撰的墓志。",
+      "basis": "本条写作背景记「建中靖国元年……题此六言。两月后卒于常州」。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1101",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1101",
+          "source": "《苏轼诗集》卷四十八",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《苏轼诗集》卷四十八"
+}

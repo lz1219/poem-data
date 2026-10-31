@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0",
+  "key": "忆江南",
+  "titleZh": "忆江南三首",
+  "titleEn": "Recalling Jiangnan (three poems)",
+  "aliases": [
+    "忆江南",
+    "憶江南"
+  ],
+  "authorKey": "baijuyi",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 838,
+    "yearKind": "composition",
+    "placeZh": "洛阳",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "江南好，風景舊曾諳。",
+      "日出江花紅勝火，春來江水綠如藍，能不憶江南。",
+      "江南憶，最憶是杭州。",
+      "山寺月中尋桂子，郡亭枕上看潮頭，何日更重遊。",
+      "江南憶，其次憶吳宮。",
+      "吳酒一杯春竹葉，吳娃雙舞醉芙蓉，早晚得相逢。"
+    ],
+    "paragraphsSimplified": [
+      "江南好，风景旧曾谙。",
+      "日出江花红胜火，春来江水绿如蓝，能不忆江南。",
+      "江南忆，最忆是杭州。",
+      "山寺月中寻桂子，郡亭枕上看潮头，何日更重游。",
+      "江南忆，其次忆吴宫。",
+      "吴酒一杯春竹叶，吴娃双舞醉芙蓉，早晚得相逢。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "三首分忆江南：一忆江南春色（江花、江水），二忆杭州（山寺寻桂、郡亭看潮），三忆吴宫（吴酒、吴娃）。三首各系一处，末句都以「能不忆」「何日更重游」「早晚得相逢」收。",
+  "notes": [
+    {
+      "term": "谙",
+      "explain": "熟悉。"
+    },
+    {
+      "term": "蓝",
+      "explain": "蓼蓝，可制青碧染料，此处形容江水之色。"
+    },
+    {
+      "term": "山寺月中寻桂子",
+      "explain": "杭州灵隐、天竺一带传说中秋有桂子飘落。"
+    },
+    {
+      "term": "吴宫",
+      "explain": "苏州，春秋吴国故地。"
+    }
+  ],
+  "background": "白居易早年任杭州、苏州刺史，晚年闲居洛阳时追忆江南风物而作，时为开成三年（838）前后。",
+  "appreciation": {
+    "text": "三首是同一句式的三次变奏：第一首以「江南好」起，第二首以「江南忆，最忆是杭州」把范围收窄，第三首再收窄到「吴宫」。范围越来越小，情却越来越具体——从风景写到酒与舞，从地方写到人。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "838",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "838",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

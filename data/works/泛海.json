@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "泛海",
+  "titleZh": "泛海",
+  "titleEn": null,
+  "aliases": [
+    "泛海"
+  ],
+  "authorKey": "wangyangming",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1506,
+    "yearKind": "composition",
+    "placeZh": "钱塘江",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "險夷原不滯胸中，何異浮雲過太空！夜靜海濤三萬裡，月明飛錫下天風。"
+    ],
+    "paragraphsSimplified": [
+      "险夷原不滞胸中，何异浮云过太空！夜静海涛三万里，月明飞锡下天风。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "赴谪龙场途中渡海：险夷原不滞胸中，何异浮云过太空。",
+  "notes": [
+    {
+      "term": "飞锡",
+      "explain": "僧人云游。锡，锡杖。"
+    }
+  ],
+  "background": "正德元年王守仁因忤刘瑾被贬贵州龙场，赴谪途中渡海而作。",
+  "appreciation": {
+    "text": "「险夷原不滞胸中」是海上的自况，「何异浮云过太空」把险夷一并看轻；后两句夜静海涛、月明飞锡，写的是渡，也是悟。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1506",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1506",
+          "source": "《王阳明全集·静心录》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《王阳明全集·静心录》"
+}

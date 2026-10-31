@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lz1219/poem-data/schema/comment.schema.json",
+  "title": "历代评点",
+  "type": "object",
+  "required": ["schemaVersion", "workKey", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "workKey": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "critic", "dynasty", "text", "source", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "critic": { "type": "string", "description": "评者姓名" },
+          "dynasty": { "type": "string", "description": "评者朝代，如「清」「宋」" },
+          "text": { "type": "string", "description": "评语原文，须逐字核对" },
+          "source": { "type": "string", "description": "出处：书名 + 卷页" },
+          "topic": { "enum": ["章法", "用字", "声情", "本事", "总评", null] },
+          "alsoIn": { "type": ["string", "null"], "description": "亦见之书（辑录本），分号分隔" },
+          "status": { "enum": ["verified", "pending"], "description": "pending=尚未核对到原书（不得对外发布）" }
+        }
+      }
+    }
+  }
+}

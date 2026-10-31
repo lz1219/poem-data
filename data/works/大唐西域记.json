@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "key": "大唐西域记",
+  "titleZh": "大唐西域记",
+  "titleEn": null,
+  "aliases": [
+    "大唐西域记"
+  ],
+  "authorKey": "au002",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 628,
+    "yearKind": "event",
+    "placeZh": "龟兹",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "山谷積雪，春夏合凍，雖時消泮，尋復結冰。",
+      "清池西北行五百餘里至素葉水城，逢突厥葉護可汗方事畋遊。",
+      "縛喝國，伽藍百有餘所，僧徒三千餘人。",
+      "自古大聖賢，多生此國，作論諸師，亦多出此。",
+      "僧徒數千，並俊才高學也，德重當時，聲馳異域者，數百餘矣。"
+    ],
+    "paragraphsSimplified": [
+      "山谷积雪，春夏合冻，虽时消泮，寻复结冰。",
+      "清池西北行五百余里至素叶水城，逢突厥叶护可汗方事畋游。",
+      "缚喝国，伽蓝百有余所，僧徒三千余人。",
+      "自古大圣贤，多生此国，作论诸师，亦多出此。",
+      "僧徒数千，并俊才高学也，德重当时，声驰异域者，数百余矣。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "五段记西域风土：龟兹凌山积雪、素叶水城遇突厥叶护可汗、缚喝国伽蓝百余所、健驮逻多出论师。",
+  "notes": [
+    {
+      "term": "素叶水城",
+      "explain": "即碎叶城，今吉尔吉斯斯坦托克马克附近。"
+    },
+    {
+      "term": "叶护可汗",
+      "explain": "西突厥最高首领的称号。"
+    },
+    {
+      "term": "伽蓝",
+      "explain": "梵语僧园，指佛寺。"
+    }
+  ],
+  "background": "玄奘口述、辩机编次的西域见闻录，记一百三十八国地理、物产、风俗与佛教遗迹。所摘五段自龟兹凌山至健驮逻。",
+  "appreciation": {
+    "text": "记风土而不写感想，是这部的体例。「山谷积雪，春夏合冻」只写物候，「伽蓝百余所，僧徒三千余人」只写数目——地理书的分寸感，全在不抒情。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "628",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "628",
+          "source": "玄奘述、辩机编《大唐西域记》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "玄奘述、辩机编《大唐西域记》"
+}

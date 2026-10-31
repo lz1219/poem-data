@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "anonymous",
+  "zh": "佚名",
+  "en": "Anonymous",
+  "courtesyZh": null,
+  "dynastyKey": null,
+  "span": [
+    null,
+    null
+  ],
+  "spanNote": null,
+  "aliases": [
+    "无名氏",
+    "佚名"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

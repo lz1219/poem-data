@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "旧唐书·玄奘传",
+  "titleZh": "旧唐书·玄奘传",
+  "titleEn": null,
+  "aliases": [
+    "旧唐书·玄奘传"
+  ],
+  "authorKey": "anonymous",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 645,
+    "yearKind": "event",
+    "placeZh": "长安",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "貞觀十九年，歸至京師，太宗見之大悅，與之談論。"
+    ],
+    "paragraphsSimplified": [
+      "贞观十九年，归至京师，太宗见之大悦，与之谈论。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "贞观十九年玄奘归至京师，太宗召见，与之谈论西域事。",
+  "notes": [
+    {
+      "term": "贞观十九年",
+      "explain": "645 年。玄奘于是年正月还至长安。"
+    }
+  ],
+  "background": "后晋刘昫等修《旧唐书》为玄奘立传，记其贞观十九年归京、太宗召见问西域事。",
+  "appreciation": {
+    "text": "「太宗见之大悦，与之谈论」——正史写高僧，落点在帝王的态度；一句「大悦」，玄奘在当时的地位就清楚了。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "645",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "645",
+          "source": "《旧唐书》卷一九一",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《旧唐书》卷一九一"
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0",
+  "key": "擒获宸濠捷音疏",
+  "titleZh": "擒获宸濠捷音疏",
+  "titleEn": null,
+  "aliases": [
+    "擒获宸濠捷音疏"
+  ],
+  "authorKey": "wangyangming",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1519,
+    "yearKind": "composition",
+    "placeZh": "南昌",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "臣等仰仗天威，一鼓而克其巢穴，再戰而擒其渠魁。"
+    ],
+    "paragraphsSimplified": [
+      "臣等仰仗天威，一鼓而克其巢穴，再战而擒其渠魁。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "平宁王朱宸濠后的报捷疏：一鼓克其巢穴，再战擒其渠魁。",
+  "notes": [
+    {
+      "term": "宸濠",
+      "explain": "宁王朱宸濠，明宗室，正德十四年叛乱。"
+    },
+    {
+      "term": "渠魁",
+      "explain": "首领。"
+    }
+  ],
+  "background": "正德十四年宁王朱宸濠举兵反，王守仁以三十五日平之，此疏即报捷之文。",
+  "appreciation": {
+    "text": "奏疏写战功用「一鼓」「再战」两个节奏，把三十五日的战事压成一句；「仰仗天威」是套语，也是自保。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1519",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1519",
+          "source": "《王阳明全集·顺生录》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《王阳明全集·顺生录》"
+}

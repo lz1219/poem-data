@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "key": "登岳阳楼",
+  "titleZh": "登岳阳楼",
+  "titleEn": "Climbing Yueyang Tower",
+  "aliases": [
+    "登岳阳楼",
+    "登岳陽樓"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 768,
+    "yearKind": "composition",
+    "placeZh": "岳阳",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "昔聞洞庭水，今上岳陽樓。",
+      "吳楚東南坼，乾坤日夜浮。",
+      "親朋無一字，老病有孤舟。",
+      "戎馬關山北，憑軒涕泗流。"
+    ],
+    "paragraphsSimplified": [
+      "昔闻洞庭水，今上岳阳楼。",
+      "吴楚东南坼，乾坤日夜浮。",
+      "亲朋无一字，老病有孤舟。",
+      "戎马关山北，凭轩涕泗流。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "昔闻洞庭、今上此楼；吴楚在此东南分坼，乾坤日夜浮于水面。亲朋无一字，老病只一舟。北方戎马未息，凭窗涕泗交流。",
+  "notes": [
+    {
+      "term": "坼",
+      "explain": "分裂。"
+    },
+    {
+      "term": "戎马关山北",
+      "explain": "指当时吐蕃侵扰、北方战事未息。"
+    }
+  ],
+  "background": "大历三年（768）冬，杜甫漂泊至岳州，登岳阳楼作。",
+  "appreciation": {
+    "text": "前四句极阔：一「坼」一「浮」，把洞庭写成能分开吴楚、浮起乾坤的水面。后四句极窄：亲朋无一字、老病有孤舟。阔与窄对撞，末句「凭轩涕泗流」不是因为景，而是因为关山北的戎马。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "768",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "768",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

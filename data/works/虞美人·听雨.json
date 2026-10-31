@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "key": "虞美人·听雨",
+  "titleZh": "虞美人 · 听雨",
+  "titleEn": "Yu Mei Ren: Listening to Rain",
+  "aliases": [
+    "虞美人·听雨",
+    "虞美人"
+  ],
+  "authorKey": "jiangjie",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 1305,
+    "yearKind": "composition",
+    "placeZh": "宜兴",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "少年聽雨歌樓上，紅燭昏羅帳。",
+      "壯年聽雨客舟中，江闊雲低、斷雁叫西風。",
+      "而今聽雨僧廬下，鬢已星星也。",
+      "悲歡離合總無情，一任階前、點滴到天明。"
+    ],
+    "paragraphsSimplified": [
+      "少年听雨歌楼上，红烛昏罗帐。",
+      "壮年听雨客舟中，江阔云低、断雁叫西风。",
+      "而今听雨僧庐下，鬓已星星也。",
+      "悲欢离合总无情，一任阶前、点滴到天明。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "以三场雨写一生：少年在歌楼，红烛罗帐；壮年在客舟，江阔云低、断雁西风；如今在僧庐，鬓已斑白。悲欢离合总归无情，任凭阶前雨点滴到天明。",
+  "notes": [
+    {
+      "term": "僧庐",
+      "explain": "僧舍。"
+    },
+    {
+      "term": "星星",
+      "explain": "形容鬓发花白。"
+    },
+    {
+      "term": "断雁",
+      "explain": "失群的雁。"
+    }
+  ],
+  "background": "蒋捷晚年隐居竹山时作。三场雨分写少年、壮年、晚年，地点一次比一次空。",
+  "appreciation": {
+    "text": "三场雨，三个年龄，三个地点：歌楼、客舟、僧庐。地点一次比一次空，声音一次比一次少，最后只剩「点滴到天明」。全词不着一句国破，而国破在其中。",
+    "inference": {
+      "text": "「僧庐」「鬓已星星」与宋亡后不仕的处境相合，此词当作于入元之后。",
+      "basis": "蒋捷宋亡不仕、隐居竹山（见 js/atlas_overlay.js 的行迹叙述）；词中「而今」而僧庐听雨，非仕宋时境。"
+    },
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1305",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "1305",
+          "source": "《竹山词》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《竹山词》"
+}

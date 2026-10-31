@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "与杨仕德薛尚谦书",
+  "titleZh": "与杨仕德薛尚谦书",
+  "titleEn": null,
+  "aliases": [
+    "与杨仕德薛尚谦书"
+  ],
+  "authorKey": "wangyangming",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1517,
+    "yearKind": "composition",
+    "placeZh": "赣州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "破山中賊易，破心中賊難。"
+    ],
+    "paragraphsSimplified": [
+      "破山中贼易，破心中贼难。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "与门人论学：破山中贼易，破心中贼难。",
+  "notes": [
+    {
+      "term": "仕德、尚谦",
+      "explain": "杨骥、薛侃，皆王门弟子。"
+    }
+  ],
+  "background": "王守仁与门人论学之书。「破山中贼易，破心中贼难」即出于此。",
+  "appreciation": {
+    "text": "「破山中贼易，破心中贼难」十字对举，把事功与心学放在同一把尺上；说这话时，他刚平了山贼。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1517",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1517",
+          "source": "《王阳明全集·静心录》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《王阳明全集·静心录》"
+}

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "key": "峨眉山月歌",
+  "titleZh": "峨眉山月歌",
+  "titleEn": "The Moon over Mount Emei",
+  "aliases": [
+    "峨眉山月歌"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 724,
+    "yearKind": "composition",
+    "placeZh": "渝州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "峨眉山月半輪秋，影入平羌江水流。",
+      "夜發清溪向三峽，思君不見下渝州。"
+    ],
+    "paragraphsSimplified": [
+      "峨眉山月半轮秋，影入平羌江水流。",
+      "夜发清溪向三峡，思君不见下渝州。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "出蜀纪行。半轮秋月映在平羌江上，随舟而行；夜里从清溪出发，直下三峡，一路到渝州，而月仍在，人已远——「思君不见」的君，可指月，也可指人。",
+  "notes": [
+    {
+      "term": "平羌",
+      "explain": "平羌江，即今青衣江，在峨眉山东北。"
+    },
+    {
+      "term": "清溪",
+      "explain": "清溪驿，在今四川犍为。"
+    },
+    {
+      "term": "三峡",
+      "explain": "瞿塘、巫、西陵三峡谷的总称。"
+    },
+    {
+      "term": "渝州",
+      "explain": "今重庆。"
+    },
+    {
+      "term": "五地名",
+      "explain": "二十八字连用峨眉山、平羌江、清溪、三峡、渝州五地而不见堆砌，为绝句中所罕见。"
+    }
+  ],
+  "background": "开元十二年，李白「仗剑去国，辞亲远游」，自蜀中沿岷江、长江东下。二十八字里连用五个地名，却不见堆砌。",
+  "appreciation": {
+    "text": "二十八字连用峨眉山、平羌江、清溪、三峡、渝州五个地名，读来却不觉堆砌——因为它们连成一条水路。月是唯一的伴侣，所以「思君不见」的君，可能指月，也可能指人。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "724",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "724",
+          "source": "《李太白全集》卷八",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷八"
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.0",
+  "key": "baijuyi",
+  "zh": "白居易",
+  "en": "Bai Juyi",
+  "courtesyZh": "字乐天 · 号香山居士 · 醉吟先生",
+  "dynastyKey": "tang",
+  "span": [
+    772,
+    846
+  ],
+  "spanNote": null,
+  "aliases": [
+    "乐天",
+    "香山居士",
+    "醉吟先生",
+    "白乐天",
+    "Bai Juyi"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "baijuyi"
+}

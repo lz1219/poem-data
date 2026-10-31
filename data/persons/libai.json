@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "key": "libai",
+  "zh": "李白",
+  "en": "Li Bai",
+  "courtesyZh": "诗仙 · 字太白 · 青莲居士",
+  "dynastyKey": "tang",
+  "span": [
+    701,
+    762
+  ],
+  "spanNote": null,
+  "aliases": [
+    "太白",
+    "李太白",
+    "青莲居士",
+    "诗仙",
+    "谪仙人",
+    "Li Po",
+    "Taibai"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": "libai"
+}

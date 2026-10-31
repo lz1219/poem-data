@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "key": "告谕庐陵父老",
+  "titleZh": "告谕庐陵父老",
+  "titleEn": null,
+  "aliases": [
+    "告谕庐陵父老"
+  ],
+  "authorKey": "wangyangming",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1510,
+    "yearKind": "composition",
+    "placeZh": "庐陵",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "一念之善，即吉神佑之；一念之惡，即厲鬼隨之。"
+    ],
+    "paragraphsSimplified": [
+      "一念之善，即吉神佑之；一念之恶，即厉鬼随之。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "知庐陵时告谕乡里：一念之善，吉神佑之；一念之恶，厉鬼随之。",
+  "notes": [],
+  "background": "正德五年王守仁知庐陵县，出示告谕父老，以善恶一念劝谕乡里。",
+  "appreciation": {
+    "text": "告谕以对句出之：一念善则吉神佑，一念恶则厉鬼随。不为民立法，只为民立念，是阳明讲学的口气。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1510",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1510",
+          "source": "《王阳明全集·知行录》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《王阳明全集·知行录》"
+}

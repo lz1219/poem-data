@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "key": "王阳明先生年谱",
+  "titleZh": "王阳明先生年谱",
+  "titleEn": null,
+  "aliases": [
+    "王阳明先生年谱"
+  ],
+  "authorKey": "au004",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1472,
+    "yearKind": "event",
+    "placeZh": "余姚",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "登第恐未為第一等事，或讀書學聖賢耳。",
+      "此心光明，亦復何言！"
+    ],
+    "paragraphsSimplified": [
+      "登第恐未为第一等事，或读书学圣贤耳。",
+      "此心光明，亦复何言！"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "两段记学思转折：少年以登第为非第一等事、读书学圣贤耳；中年龙场悟道，始知圣人之道吾性自足。",
+  "notes": [
+    {
+      "term": "登第",
+      "explain": "科举及第。少年阳明认为登第并非第一等事。"
+    }
+  ],
+  "background": "门人所编王守仁年谱，逐年记其学思转折与事功。所摘两段：少年立志学圣贤、龙场悟道。",
+  "appreciation": {
+    "text": "年谱记学不记事功：少年一句「读书学圣贤耳」，中年一句「吾性自足」。两句相隔三十年，正是王学的来路。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1472",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1472",
+          "source": "《王阳明全集》年谱",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《王阳明全集》年谱"
+}

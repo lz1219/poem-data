@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "key": "秋浦歌",
+  "titleZh": "秋浦歌（其十五）",
+  "titleEn": "Song of Qiupu (No.15)",
+  "aliases": [
+    "秋浦歌",
+    "秋浦歌十七首"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 754,
+    "yearKind": "composition",
+    "placeZh": "秋浦",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "白髮三千丈，緣愁似個長。",
+      "不知明鏡裡，何處得秋霜。"
+    ],
+    "paragraphsSimplified": [
+      "白发三千丈，缘愁似个长。",
+      "不知明镜里，何处得秋霜。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "白发三千丈，只因愁有那样长；不知明镜里，这满头秋霜是从哪里来的。",
+  "notes": [
+    {
+      "term": "缘",
+      "explain": "因为。"
+    },
+    {
+      "term": "秋霜",
+      "explain": "喻白发。"
+    }
+  ],
+  "background": "天宝十三载（754）前后李白客游秋浦（今安徽池州）时作，原为十七首，此其十五。",
+  "appreciation": {
+    "text": "「白发三千丈」是极夸张，但下一句立刻给出理由——「缘愁似个长」，把夸张坐实成度量。末二句故作不知，问镜中秋霜从何而来，是明知故问：愁的来处他当然知道。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "754",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "754",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

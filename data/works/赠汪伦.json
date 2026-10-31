@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0",
+  "key": "赠汪伦",
+  "titleZh": "赠汪伦",
+  "titleEn": "To Wang Lun",
+  "aliases": [
+    "赠汪伦",
+    "贈汪倫"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 755,
+    "yearKind": "composition",
+    "placeZh": "泾县",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "李白乘舟將欲行，忽聞岸上踏歌聲。",
+      "桃花潭水深千尺，不及汪倫送我情。"
+    ],
+    "paragraphsSimplified": [
+      "李白乘舟将欲行，忽闻岸上踏歌声。",
+      "桃花潭水深千尺，不及汪伦送我情。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "将行之际忽闻岸上踏歌声，知是汪伦相送；桃花潭水纵有千尺，也不及这份情。",
+  "notes": [
+    {
+      "term": "踏歌",
+      "explain": "以脚踏地为节拍的歌唱，唐人送别之俗。"
+    },
+    {
+      "term": "桃花潭",
+      "explain": "在今安徽泾县西南。"
+    }
+  ],
+  "background": "天宝十四载（755）李白游泾县桃花潭，临行汪伦踏歌相送，因作此诗。",
+  "appreciation": {
+    "text": "前两句是「忽闻」——他不知道有人来送，所以才有惊喜。后两句把潭水与情比深浅，比法极直，却因「不及」二字而翻出一层：水再深也有量，情没有。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "755",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "755",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

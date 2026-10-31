@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "key": "南陵别儿童入京",
+  "titleZh": "南陵别儿童入京",
+  "titleEn": "Leaving My Children at Nanling for the Capital",
+  "aliases": [
+    "南陵别儿童入京"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 742,
+    "yearKind": "composition",
+    "placeZh": "南陵",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "白酒新熟山中歸，黃雞啄黍秋正肥。",
+      "呼童烹雞酌白酒，兒女嬉笑牽人衣。",
+      "高歌取醉欲自慰，起舞落日爭光輝。",
+      "游說萬乘苦不早，著鞭跨馬涉遠道。",
+      "會稽愚婦輕買臣，余亦辭家西入秦。",
+      "仰天大笑出門去，我輩豈是蓬蒿人。"
+    ],
+    "paragraphsSimplified": [
+      "白酒新熟山中归，黄鸡啄黍秋正肥。",
+      "呼童烹鸡酌白酒，儿女嬉笑牵人衣。",
+      "高歌取醉欲自慰，起舞落日争光辉。",
+      "游说万乘苦不早，著鞭跨马涉远道。",
+      "会稽愚妇轻买臣，余亦辞家西入秦。",
+      "仰天大笑出门去，我辈岂是蓬蒿人。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "前半是一幅家常的饯别图：新熟的白酒、啄黍的黄鸡、牵衣嬉笑的儿女，高歌起舞与落日争辉；后半陡然拔起：自比朱买臣，辞家西入秦，「仰天大笑出门去，我辈岂是蓬蒿人」。四十余年的干谒与失意，被这一笑勾销。",
+  "notes": [
+    {
+      "term": "南陵",
+      "explain": "今安徽南陵。李白寓家于此。"
+    },
+    {
+      "term": "买臣",
+      "explain": "朱买臣，汉会稽人，家贫好读书，其妻求去；后为会稽太守。此处自比。"
+    },
+    {
+      "term": "万乘",
+      "explain": "指天子。"
+    },
+    {
+      "term": "蓬蒿人",
+      "explain": "草野之人，指默默无闻者。"
+    },
+    {
+      "term": "天宝元年",
+      "explain": "742 年，玄宗诏征李白入京，此诗即作于将行之际。"
+    }
+  ],
+  "background": "天宝元年，玄宗诏征李白入京。他半生干谒终于得偿，归家别子，作此诗。「仰天大笑出门去」一句，是盛唐最响的一声。",
+  "appreciation": {
+    "text": "前半是一幅家常的饯别图：鸡、酒、儿女，全是烟火气；后半陡然拔起，「仰天大笑出门去」把四十余年的干谒与失意一并笑掉。这一句之所以传诵，是因为它不掩饰得意——盛唐的底气就在这里。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "742",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "742",
+          "source": "《李太白全集》卷十五",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《李太白全集》卷十五"
+}

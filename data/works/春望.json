@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "key": "春望",
+  "titleZh": "春望",
+  "titleEn": "Spring View",
+  "aliases": [
+    "春望"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 757,
+    "yearKind": "composition",
+    "placeZh": "长安",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "國破山河在，城春草木深。",
+      "感時花濺淚，恨別鳥驚心。",
+      "烽火連三月，家書抵萬金。",
+      "白頭搔更短，渾欲不勝簪。"
+    ],
+    "paragraphsSimplified": [
+      "国破山河在，城春草木深。",
+      "感时花溅泪，恨别鸟惊心。",
+      "烽火连三月，家书抵万金。",
+      "白头搔更短，浑欲不胜簪。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "国已破而山河仍在，城逢春而草木深。感时则花溅泪，恨别则鸟惊心。烽火连月，家书抵万金。末以白头搔短、不胜簪收束。",
+  "notes": [
+    {
+      "term": "国破",
+      "explain": "指至德元年（756）长安陷于安史叛军。"
+    },
+    {
+      "term": "浑欲不胜簪",
+      "explain": "头发稀疏，简直插不住簪子。"
+    }
+  ],
+  "background": "至德二年（757）春，杜甫困居沦陷的长安时作。",
+  "appreciation": {
+    "text": "前四句一句一折：国破而山河在，是转折；城春而草木深，是荒凉；花溅泪、鸟惊心，是把物象写成自己的耳目。后四句从家国收到自身：烽火、家书、白头，一层层缩小，最后缩到一根簪子。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "757",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "757",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

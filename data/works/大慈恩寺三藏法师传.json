@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "key": "大慈恩寺三藏法师传",
+  "titleZh": "大慈恩寺三藏法师传",
+  "titleEn": null,
+  "aliases": [
+    "大慈恩寺三藏法师传"
+  ],
+  "authorKey": "au001",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 627,
+    "yearKind": "event",
+    "placeZh": "长安",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "遂發足西行，自爾孑然孤遊。",
+      "涼州為河西都會，僧徒既多，請留開講。",
+      "莫賀延磧長八百餘里，古曰沙河，上無飛鳥，下無走獸。",
+      "任師西邁，乞垂早食……遂共結為兄弟。",
+      "若其間有一字無理能難破者，請斬首相謝。"
+    ],
+    "paragraphsSimplified": [
+      "遂发足西行，自尔孑然孤游。",
+      "凉州为河西都会，僧徒既多，请留开讲。",
+      "莫贺延碛长八百余里，古曰沙河，上无飞鸟，下无走兽。",
+      "任师西迈，乞垂早食……遂共结为兄弟。",
+      "若其间有一字无理能难破者，请斩首相谢。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "五段记玄奘西行：发足孤游、凉州开讲、穿越莫贺延碛、与高昌王结为兄弟、曲女城立誓「一字无理，斩首相谢」。",
+  "notes": [
+    {
+      "term": "莫贺延碛",
+      "explain": "今甘肃瓜州至新疆哈密间的戈壁，古称沙河。"
+    },
+    {
+      "term": "曲女城",
+      "explain": "今印度北方邦卡瑙季，戒日王在此设无遮大会。"
+    },
+    {
+      "term": "斩首相谢",
+      "explain": "立誓语：若有一字被难倒，愿斩首谢罪。"
+    }
+  ],
+  "background": "玄奘弟子慧立所撰、彦悰续成的传记，记其西行求法与归国译经始末。所摘五段自长安发足至曲女城论辩。",
+  "appreciation": {
+    "text": "五段串起一条西行路线：发足、开讲、越碛、结盟、立誓。传记以行程为骨、以对话为肉；「请斩首相谢」一句，是玄奘少见的锋锐。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "627",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "627",
+          "source": "慧立撰、彦悰笺《大慈恩寺三藏法师传》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "慧立撰、彦悰笺《大慈恩寺三藏法师传》"
+}

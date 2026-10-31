@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "key": "一剪梅·舟过吴江",
+  "titleZh": "一剪梅 · 舟过吴江",
+  "titleEn": "Yi Jian Mei: Boat Past Wujiang",
+  "aliases": [
+    "一剪梅·舟过吴江",
+    "一剪梅"
+  ],
+  "authorKey": "jiangjie",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 1277,
+    "yearKind": "composition",
+    "placeZh": "吴江",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "一片春愁待酒澆。江上舟搖，樓上簾招。秋娘渡與泰娘橋，風又飄飄，雨又蕭蕭。",
+      "何日歸家洗客袍？銀字笙調，心字香燒。流光容易把人拋，紅了櫻桃，綠了芭蕉。"
+    ],
+    "paragraphsSimplified": [
+      "一片春愁待酒浇。江上舟摇，楼上帘招。秋娘渡与泰娘桥，风又飘飘，雨又萧萧。",
+      "何日归家洗客袍？银字笙调，心字香烧。流光容易把人抛，红了樱桃，绿了芭蕉。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "上阕写舟行所见：春愁待酒，舟摇帘招，过了秋娘渡与泰娘桥，一路风飘雨萧。下阕转到归家之愿——何日才能洗净客袍？末以「红了樱桃，绿了芭蕉」收束，用植物的颜色写时间流逝。",
+  "notes": [
+    {
+      "term": "秋娘渡、泰娘桥",
+      "explain": "吴江一带地名，以唐代歌妓秋娘、泰娘命名。"
+    },
+    {
+      "term": "银字笙",
+      "explain": "管上以银字标识音高的笙。"
+    },
+    {
+      "term": "心字香",
+      "explain": "制成心字形的香。"
+    }
+  ],
+  "background": "宋亡后蒋捷漂泊吴中，舟过吴江作此词。「何日归家洗客袍」是羁旅之问，也是遗民之问。",
+  "appreciation": {
+    "text": "上阕四个短句连下：舟、帘、渡、桥一闪而过，写的是「行」；下阕忽然转「归家」，末句以樱桃芭蕉收束——用植物的颜色写时间，比任何感叹都狠。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1277",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "1277",
+          "source": "《竹山词》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《竹山词》"
+}

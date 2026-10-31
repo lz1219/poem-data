@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "明史·王守仁传",
+  "titleZh": "明史·王守仁传",
+  "titleEn": null,
+  "aliases": [
+    "明史·王守仁传"
+  ],
+  "authorKey": "anonymous",
+  "genre": "history",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1489,
+    "yearKind": "event",
+    "placeZh": "广信",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "過廣信，謁婁諒，語以聖人可學而至，遂深契之。"
+    ],
+    "paragraphsSimplified": [
+      "过广信，谒娄谅，语以圣人可学而至，遂深契之。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "过广信谒娄谅，闻「圣人可学而至」，遂深契之——王学转向的起点。",
+  "notes": [
+    {
+      "term": "娄谅",
+      "explain": "明代学者，吴与弼弟子，以「圣人可学而至」教人。"
+    }
+  ],
+  "background": "清张廷玉等修《明史》为王守仁立传。此段记其过广信谒娄谅，闻「圣人可学而至」而深契。",
+  "appreciation": {
+    "text": "史传记谒娄谅只一句「遂深契之」，不释其义；正史于思想转折，常只留一个「契」字，让读者自去溯。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1489",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1489",
+          "source": "《明史》卷一九五",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《明史》卷一九五"
+}

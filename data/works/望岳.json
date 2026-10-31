@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0",
+  "key": "望岳",
+  "titleZh": "望岳",
+  "titleEn": "Gazing at the Holy Mountain",
+  "aliases": [
+    "望岳",
+    "望嶽"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 736,
+    "yearKind": "composition",
+    "placeZh": "兖州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "西岳崚嶒竦處尊，諸峰羅立如兒孫。",
+      "安得仙人九節杖，拄到玉女洗頭盆。",
+      "車箱入谷無歸路，箭栝通天有一門。",
+      "稍待西風涼冷後，高尋白帝問真源。"
+    ],
+    "paragraphsSimplified": [
+      "岱宗夫如何，齐鲁青未了。",
+      "造化钟神秀，阴阳割昏晓。",
+      "荡胷生曾云，决眦入归鸟。",
+      "会当凌绝顶，一览众山小。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "远望泰山：齐鲁之间青色不尽，天地在这里分割昏晓；云气荡胸、归鸟入目。末联说一定要登到绝顶，看众山皆小。",
+  "notes": [
+    {
+      "term": "岱宗",
+      "explain": "泰山。"
+    },
+    {
+      "term": "齐鲁青未了",
+      "explain": "泰山横跨齐鲁，青色望不到尽头。"
+    },
+    {
+      "term": "决眦",
+      "explain": "睁裂眼眶，形容极力远望。"
+    }
+  ],
+  "background": "约开元二十四年（736）杜甫游齐赵时作，是他现存最早的诗之一，此时尚未登顶。",
+  "appreciation": {
+    "text": "全诗八句，句句是「望」而非「登」：先从齐鲁两边看青色，再从造化看神秀，最后从云与鸟看自身。末联「会当凌绝顶」把未完成的动作留在这里——他还没上去，所以这句是志愿，不是记游。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "736",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "736",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

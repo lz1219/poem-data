@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "key": "江城子",
+  "titleZh": "江城子 · 乙卯正月二十日夜记梦",
+  "titleEn": "Jiang Cheng Zi: A Dream",
+  "aliases": [
+    "江城子",
+    "江城子 · 乙卯正月二十日夜记梦",
+    "江城子 · 密州出猎"
+  ],
+  "authorKey": "sushi",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1075,
+    "yearKind": "composition",
+    "placeZh": "密州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "十年生死兩茫茫，不思量，自難忘。千里孤墳，無處話淒涼。縱使相逢應不識，塵滿面，鬢如霜。",
+      "夜來幽夢忽還鄉，小軒窗，正梳妝。相顧無言，惟有淚千行。料得年年腸斷處，明月夜，短松岡。"
+    ],
+    "paragraphsSimplified": [
+      "十年生死两茫茫，不思量，自难忘。千里孤坟，无处话凄凉。纵使相逢应不识，尘满面，鬓如霜。",
+      "夜来幽梦忽还乡，小轩窗，正梳妆。相顾无言，惟有泪千行。料得年年肠断处，明月夜，短松冈。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "悼亡之作。上阕写十年生死相隔，孤坟千里，纵然相逢也认不出自己满面风尘；下阕转入梦境：小窗前她正梳妆，相顾无言，只有泪千行；梦醒后想到年年肠断处，都在那明月夜的短松冈。",
+  "notes": [
+    {
+      "term": "乙卯",
+      "explain": "熙宁八年（1075）。词前小序所记之年。"
+    },
+    {
+      "term": "王弗",
+      "explain": "苏轼妻，十六岁嫁，二十七岁病逝于京师，葬眉山。"
+    },
+    {
+      "term": "千里孤坟",
+      "explain": "王弗葬眉州，距密州数千里。"
+    },
+    {
+      "term": "小轩窗",
+      "explain": "指眉山旧居的窗。上阕写己之老，此句写她之少。"
+    },
+    {
+      "term": "短松冈",
+      "explain": "坟前手植松树三万株，见苏轼《亡妻王氏墓志铭》。"
+    }
+  ],
+  "background": "王弗十六岁嫁苏轼，二十七岁病逝于京师，葬于眉山。此词作于密州任上，距其卒整十年。",
+  "appreciation": {
+    "text": "苏轼把悼亡写成了对话——「相顾无言，惟有泪千行」，比任何哭诉都重。上阕写自己的老，下阕写她的年轻（小轩窗，正梳妆），十年被折叠在同一瞬里。此前的悼亡词多是代言，这一首是第一人称的私语。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1075",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1075",
+          "source": "《东坡乐府》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《东坡乐府》"
+}

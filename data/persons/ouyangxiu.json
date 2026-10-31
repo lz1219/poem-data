@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "key": "ouyangxiu",
+  "zh": "欧阳修",
+  "en": "Ouyang Xiu",
+  "courtesyZh": "醉翁 · 六一居士 · 字永叔",
+  "dynastyKey": "beisong",
+  "span": [
+    1007,
+    1072
+  ],
+  "spanNote": null,
+  "aliases": [
+    "永叔",
+    "醉翁",
+    "六一居士",
+    "欧阳文忠公"
+  ],
+  "externalIds": {
+    "cbdb": null,
+    "wikidata": null
+  },
+  "journeyKey": null
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "唐左拾遗翰林学士李公新墓碑",
+  "titleZh": "唐左拾遗翰林学士李公新墓碑",
+  "titleEn": null,
+  "aliases": [
+    "唐左拾遗翰林学士李公新墓碑"
+  ],
+  "authorKey": "au003",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 701,
+    "yearKind": "composition",
+    "placeZh": "碎叶城",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "隋末多難，一房被竄於碎葉，流離散落，隱易姓名。"
+    ],
+    "paragraphsSimplified": [
+      "隋末多难，一房被窜于碎叶，流离散落，隐易姓名。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "记李白先世：隋末多难，一支被窜于碎叶，流离散落、隐易姓名。",
+  "notes": [
+    {
+      "term": "一房",
+      "explain": "家族中的一支。"
+    }
+  ],
+  "background": "唐范传正所撰李白墓碑，记其先世谪居碎叶、而后归蜀。「李白出生于碎叶」一说本此。",
+  "appreciation": {
+    "text": "碑文记先世只一句「一房被窜于碎叶」。墓志重世系，此句为李白籍贯之争留下了唯一的实物依据。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "701",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "701",
+          "source": "范传正《唐左拾遗翰林学士李公新墓碑》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "范传正《唐左拾遗翰林学士李公新墓碑》"
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "传习录",
+  "titleZh": "传习录",
+  "titleEn": null,
+  "aliases": [
+    "传习录"
+  ],
+  "authorKey": "wangyangming",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1492,
+    "yearKind": "composition",
+    "placeZh": "京师",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "眾人只說格物要依晦翁，何曾把他的說去用？我著實曾用來。"
+    ],
+    "paragraphsSimplified": [
+      "众人只说格物要依晦翁，何曾把他的说去用？我着实曾用来。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "阳明自述：众人只说格物要依朱熹，何曾真去用；我着实曾用来。",
+  "notes": [
+    {
+      "term": "晦翁",
+      "explain": "朱熹，字元晦，号晦庵，世称晦翁。"
+    }
+  ],
+  "background": "王守仁门人徐爱等所录的语录与论学书信，阳明学的主要文本。",
+  "appreciation": {
+    "text": "语录体贵在语气：「何曾把他的说去用」「我着实曾用来」——两个「用」字，把朱王之争从义理拉回到实践。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1492",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1492",
+          "source": "《传习录》上",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《传习录》上"
+}

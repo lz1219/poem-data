@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "key": "卜算子",
+  "titleZh": "卜算子 · 黄州定慧院寓居作",
+  "titleEn": "Bu Suan Zi: Lodging at Dinghui Temple",
+  "aliases": [
+    "卜算子",
+    "卜算子 · 黄州定慧院寓居作"
+  ],
+  "authorKey": "sushi",
+  "genre": "ci",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1082,
+    "yearKind": "composition",
+    "placeZh": "黄州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "缺月掛疏桐，漏斷人初靜。誰見幽人獨往來，縹緲孤鴻影。",
+      "驚起卻回頭，有恨無人省。揀盡寒枝不肯棲，寂寞沙洲冷。"
+    ],
+    "paragraphsSimplified": [
+      "缺月挂疏桐，漏断人初静。谁见幽人独往来，缥缈孤鸿影。",
+      "惊起却回头，有恨无人省。拣尽寒枝不肯栖，寂寞沙洲冷。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "写一只不肯落脚的孤鸿。上阕以「谁见」发问，把幽人与鸿影叠在一处；下阕写它惊起、回头、有恨无人省，拣尽寒枝终不肯栖，只落得沙洲寂寞。鸿即人，人即鸿。",
+  "notes": [
+    {
+      "term": "定慧院",
+      "explain": "在黄州，苏轼初贬时寓居于此。"
+    },
+    {
+      "term": "漏断",
+      "explain": "漏壶水尽，指夜深。"
+    },
+    {
+      "term": "幽人",
+      "explain": "幽居之人，词人自指。"
+    },
+    {
+      "term": "省",
+      "explain": "读 xǐng，理解、明白。"
+    },
+    {
+      "term": "拣尽寒枝",
+      "explain": "鸿雁择木而栖，拣尽而不肯下，喻不肯苟合。"
+    }
+  ],
+  "background": "初贬黄州，寓居定慧院。乌台诗案的惊惧未消，夜深人静，以孤鸿自况。",
+  "appreciation": {
+    "text": "全词写一只不肯落脚的鸿。上阕以「谁见」发问，把人和鸿叠成一个影子；下阕「拣尽寒枝不肯栖」是词眼——不是无处可栖，是不肯将就。初贬黄州，乌台诗案的余悸还在，这份孤高里带着惊惧。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1082",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "1082",
+          "source": "《东坡乐府》",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《东坡乐府》"
+}

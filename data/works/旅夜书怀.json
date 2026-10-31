@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0",
+  "key": "旅夜书怀",
+  "titleZh": "旅夜书怀",
+  "titleEn": "Night Thoughts on a Journey",
+  "aliases": [
+    "旅夜书怀",
+    "旅夜書懷"
+  ],
+  "authorKey": "dufu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 765,
+    "yearKind": "composition",
+    "placeZh": "渝州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "細草微風岸，危檣獨夜舟。",
+      "星垂平野闊，月湧大江流。",
+      "名豈文章著，官因老病休。",
+      "飄飄何所似，天地一沙鷗。"
+    ],
+    "paragraphsSimplified": [
+      "细草微风岸，危樯独夜舟。",
+      "星垂平野阔，月涌大江流。",
+      "名岂文章着，官因老病休。",
+      "飘飘何所似，天地一沙鸥。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "细草微风、危樯独舟；星垂平野阔，月涌大江流。名声不该因文章而著，官也因老病而休。末以「天地一沙鸥」自况。",
+  "notes": [
+    {
+      "term": "危樯",
+      "explain": "高高的桅杆。"
+    },
+    {
+      "term": "名岂文章著",
+      "explain": "名声难道该由文章而来——是反语。"
+    }
+  ],
+  "background": "永泰元年（765）杜甫携家离成都东下，舟行途中作。",
+  "appreciation": {
+    "text": "前四句都是大景：平野、大江、星、月，而「危樯独夜舟」一句把人钉在中间。后四句转为自问，末句「天地一沙鸥」把前面所有的开阔都变成了衬托——景越大，人越小。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "765",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "765",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

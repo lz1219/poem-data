@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0",
+  "key": "进西域记表",
+  "titleZh": "进西域记表",
+  "titleEn": null,
+  "aliases": [
+    "进西域记表"
+  ],
+  "authorKey": "xuanzang",
+  "genre": "wen",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 644,
+    "yearKind": "composition",
+    "placeZh": "于阗",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "冒越憲章，私往天竺……歷覽周遊，一十七載。"
+    ],
+    "paragraphsSimplified": [
+      "冒越宪章，私往天竺……历览周游，一十七载。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": true
+  },
+  "meaning": "玄奘进书之表：自陈冒越宪章、私往天竺，历览周游一十七载。",
+  "notes": [
+    {
+      "term": "冒越宪章",
+      "explain": "触犯禁令。唐初禁百姓私自出境。"
+    }
+  ],
+  "background": "玄奘归国后进呈《西域记》的表文，自陈违禁私往天竺、历十七年而还。",
+  "appreciation": {
+    "text": "表文把十七年压成两句：冒越宪章、私往天竺。不辩不得已，只陈事实——臣子对君主的谦抑写法。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "644",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "644",
+          "source": "《大唐西域记》卷首",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《大唐西域记》卷首"
+}

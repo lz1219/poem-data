@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "key": "宣州谢朓楼饯别校书叔云",
+  "titleZh": "宣州谢朓楼饯别校书叔云",
+  "titleEn": "Farewell at Xie Tiao's Tower",
+  "aliases": [
+    "宣州谢朓楼饯别校书叔云",
+    "宣州謝朓樓餞別校書叔雲"
+  ],
+  "authorKey": "libai",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "probable",
+  "composed": {
+    "year": 753,
+    "yearKind": "composition",
+    "placeZh": "宣城",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "棄我去者昨日之日不可留，亂我心者今日之日多煩憂。",
+      "長風萬里送秋雁，對此可以酣高樓。",
+      "蓬萊文章建安骨，中間小謝又清發。",
+      "俱懷逸興壯思飛，欲上青天覽日月。",
+      "抽刀斷水水更流，舉杯銷愁愁更愁。",
+      "人生在世不稱意，明朝散髮弄扁舟。"
+    ],
+    "paragraphsSimplified": [
+      "弃我去者昨日之日不可留，乱我心者今日之日多烦忧。",
+      "长风万里送秋雁，对此可以酣高楼。",
+      "蓬莱文章建安骨，中间小谢又清发。",
+      "俱怀逸兴壮思飞，欲上青天览日月。",
+      "抽刀断水水更流，举杯销愁愁更愁。",
+      "人生在世不称意，明朝散发弄扁舟。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "弃我去者昨日之日不可留，乱我心者今日之日多烦忧。长风万里送秋雁，对此可以酣高楼。末以「抽刀断水水更流，举杯消愁愁更愁」作结，归于散发弄舟。",
+  "notes": [
+    {
+      "term": "谢朓楼",
+      "explain": "南齐诗人谢朓任宣城太守时所建，又名北楼。"
+    },
+    {
+      "term": "蓬莱文章建安骨",
+      "explain": "赞李云文章有建安风骨。"
+    },
+    {
+      "term": "小谢",
+      "explain": "谢朓，与谢灵运（大谢）相对。"
+    }
+  ],
+  "background": "约天宝十二载（753）于宣城谢朓楼饯别族叔李云时作。",
+  "appreciation": {
+    "text": "起手两个长句连着「昨日」「今日」，是散文的句法，用来写时间不可留。中间忽然放开——长风、秋雁、高楼，情绪转扬；末四句又沉下去，「抽刀断水」「举杯消愁」两喻都是徒劳。全诗一起一落，最后落在「散发弄扁舟」的出走姿态上。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "753",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 probable",
+      "evidence": [
+        {
+          "quote": "753",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}

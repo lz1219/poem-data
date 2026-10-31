@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "1.0",
+  "key": "观刈麦",
+  "titleZh": "观刈麦",
+  "titleEn": "Watching the Wheat Harvest",
+  "aliases": [
+    "观刈麦"
+  ],
+  "authorKey": "baijuyi",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 806,
+    "yearKind": "composition",
+    "placeZh": "盩厔",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "田家少閑月，五月人倍忙。",
+      "夜來南風起，小麥覆隴黃。",
+      "婦姑荷簞食，童穉攜壺漿。",
+      "相隨餉田去，丁壯在南岡。",
+      "足蒸暑土氣，背灼炎天光。",
+      "力盡不知熱，但惜夏日長。",
+      "復有貧婦人，抱子在其傍。",
+      "右手秉遺穗，左臂懸敝筐。",
+      "聽其相顧言，聞者爲悲傷。",
+      "家田輸稅盡，拾此充飢腸。",
+      "今我何功德，曾不事農桑。",
+      "吏祿三百石，歲晏有餘糧。",
+      "念此私自媿盡日不能忘。"
+    ],
+    "paragraphsSimplified": [
+      "田家少闲月，五月人倍忙。",
+      "夜来南风起，小麦覆陇黄。",
+      "妇姑荷箪食，童穉携壶浆。",
+      "相随饷田去，丁壮在南冈。",
+      "足蒸暑土气，背灼炎天光。",
+      "力尽不知热，但惜夏日长。",
+      "复有贫妇人，抱子在其傍。",
+      "右手秉遗穗，左臂悬敝筐。",
+      "听其相顾言，闻者为悲伤。",
+      "家田输税尽，拾此充饥肠。",
+      "今我何功德，曾不事农桑。",
+      "吏禄三百石，岁晏有余粮。",
+      "念此私自媿尽日不能忘。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "五月麦熟，妇人携童送饭，丁壮在南冈割麦，足蒸暑气、背灼日光。又见一贫妇抱子拾穗，诉说田宅尽输、拾此充饥。末以「今我何功德」自惭。",
+  "notes": [
+    {
+      "term": "刈",
+      "explain": "割。"
+    },
+    {
+      "term": "箪食",
+      "explain": "用竹器盛的饭食。"
+    },
+    {
+      "term": "岁晏",
+      "explain": "年底。"
+    },
+    {
+      "term": "曾不事农桑",
+      "explain": "从未做过农活；此为诗人自指。"
+    }
+  ],
+  "background": "元和元年（806）白居易任盩厔县尉时作。县尉是亲民之职，此诗即写他任上所见的麦收。",
+  "appreciation": {
+    "text": "全诗三层：先写众人割麦之苦，再写贫妇拾穗之穷，末写自己「曾不事农桑」而坐享俸禄的愧。前两层是看见，第三层是看见之后的转向自身——这是白居易「讽谕」一路的写法。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "806",
+      "stance": "adopted",
+      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "evidence": [
+        {
+          "quote": "806",
+          "source": "《全唐诗》（chinese-poetry 语料）",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "citation": "《全唐诗》（chinese-poetry 语料）"
+}
