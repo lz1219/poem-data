@@ -94,6 +94,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+LOGIN_REDIRECT_URL = "/admin/"
+LOGOUT_REDIRECT_URL = "/admin/login/"
+
 REST_FRAMEWORK = {
     "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     "DEFAULT_PAGINATION_CLASS": None,
