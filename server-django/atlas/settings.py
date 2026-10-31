@@ -20,6 +20,9 @@ DEBUG = os.getenv("DJANGO_DEBUG", "1") == "1"
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
+    "unfold",
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -97,7 +100,71 @@ REST_FRAMEWORK = {
     "UNAUTHENTICATED_USER": None,
 }
 
-# 后台标题
+# 后台外观（django-unfold）
+UNFOLD = {
+    "SITE_TITLE": "江山行止 · 文献",
+    "SITE_HEADER": "江山行止 · 文献",
+    "SITE_SUBHEADER": "每条叙述带出处",
+    "SITE_URL": "/",
+    "SHOW_HISTORY": True,
+    "SHOW_VIEW_ON_SITE": True,
+    "ENVIRONMENT": None,
+    "COLORS": {
+        "primary": {
+            "50": "250 247 240",
+            "100": "243 238 228",
+            "200": "229 220 202",
+            "300": "214 200 174",
+            "400": "196 176 142",
+            "500": "176 141 90",
+            "600": "157 124 76",
+            "700": "132 103 62",
+            "800": "106 82 49",
+            "900": "80 62 37",
+            "950": "48 37 22",
+        },
+    },
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": False,
+        "navigation": [
+            {
+                "title": "文献",
+                "separator": True,
+                "items": [
+                    {"title": "作品", "icon": "menu_book", "link": "/admin/corpus/work/"},
+                    {"title": "人物", "icon": "person", "link": "/admin/corpus/person/"},
+                    {"title": "行迹", "icon": "route", "link": "/admin/corpus/journey/"},
+                ],
+            },
+            {
+                "title": "考据",
+                "separator": True,
+                "items": [
+                    {"title": "校记", "icon": "difference", "link": "/admin/corpus/apparatus/"},
+                    {"title": "历代评点", "icon": "comment", "link": "/admin/corpus/commentary/"},
+                    {"title": "系年考辨", "icon": "history", "link": "/admin/corpus/dating/"},
+                    {"title": "版本", "icon": "book", "link": "/admin/corpus/edition/"},
+                ],
+            },
+            {
+                "title": "行迹细节",
+                "separator": True,
+                "items": [
+                    {"title": "站点", "icon": "place", "link": "/admin/corpus/stop/"},
+                    {"title": "承接语", "icon": "arrow_forward", "link": "/admin/corpus/journeylink/"},
+                ],
+            },
+            {
+                "title": "系统",
+                "separator": True,
+                "items": [
+                    {"title": "用户", "icon": "people", "link": "/admin/auth/user/"},
+                    {"title": "组", "icon": "group", "link": "/admin/auth/group/"},
+                ],
+            },
+        ],
+    },
+}
+
 ADMIN_SITE_HEADER = "江山行止 · 文献"
-ADMIN_SITE_TITLE = "文献管理"
-ADMIN_INDEX_TITLE = "作品、人物与行迹"

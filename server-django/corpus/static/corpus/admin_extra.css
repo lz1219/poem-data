@@ -1,0 +1,16 @@
+/* 后台微调：作者控件的图标不要竖排；下拉宽度给足 */
+.related-widget-wrapper {
+  display: flex !important;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap !important;
+}
+.related-widget-wrapper > * { flex: 0 0 auto; }
+.related-widget-wrapper select,
+.related-widget-wrapper .select2-container { min-width: 300px; }
+
+/* 长文本字段的等宽更易校对 */
+.vLargeTextField { line-height: 1.7; }
+
+/* 内联表格更紧凑 */
+.tabular td, .tabular th { padding: 6px 8px !important; }

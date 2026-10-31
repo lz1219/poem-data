@@ -34,7 +34,7 @@ class Edition(models.Model):
 class Person(models.Model):
     key = models.SlugField(max_length=80, unique=True)
     zh = models.CharField("姓名", max_length=80)
-    en = models.CharField(max_length=120, blank=True)
+    en = models.CharField("英文名", max_length=120, blank=True)
     courtesy_zh = models.CharField("字号", max_length=160, blank=True)
     dynasty_key = models.CharField(max_length=40, blank=True)
     born = models.IntegerField(null=True, blank=True)
@@ -70,13 +70,13 @@ class Work(models.Model):
     certainty = models.CharField("系年可信度", max_length=20, choices=CERTAINTY, default="unknown")
 
     year = models.IntegerField("系年", null=True, blank=True)
-    year_kind = models.CharField(max_length=20, default="composition")
+    year_kind = models.CharField("系年类型", max_length=20, default="composition")
     place_zh = models.CharField("作地", max_length=80, blank=True)
 
-    source_edition = models.ForeignKey(Edition, null=True, blank=True, on_delete=models.SET_NULL, related_name="works")
+    source_edition = models.ForeignKey(Edition, null=True, blank=True, on_delete=models.SET_NULL, related_name="works", verbose_name="正文所据版本")
     paragraphs = models.JSONField("正文（繁体，按句）", default=list)
     paragraphs_simplified = models.JSONField("正文（简体）", default=list, blank=True)
-    simplified_by = models.CharField(max_length=60, blank=True)
+    simplified_by = models.CharField("简繁转换器", max_length=60, blank=True)
     traditional_derived = models.BooleanField("繁体为反推", default=False)
 
     meaning = models.TextField("大意", blank=True)
