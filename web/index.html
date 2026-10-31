@@ -598,6 +598,20 @@ h1 { transition: color .25s; }
   .pick-row .a { display: none; }
 }
 
+.maplink {
+  display: inline-block;
+  margin-top: 4px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .08em;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--line-2);
+  transition: color .18s, border-color .18s;
+}
+.maplink:hover { color: var(--accent); border-color: var(--accent); }
+a.tag.maplink { margin-top: 0; padding: 2px 9px; border: 1px dashed var(--line-2); border-radius: 999px; }
+
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -684,6 +698,18 @@ h1 { transition: color .25s; }
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const GENRE = { shi:'诗', ci:'词', fu:'赋', wen:'文', history:'史传', qu:'曲' };
+
+/* 地图站（江山行止）。部署到别处时改这里，或在外层页面预设 window.ATLAS_BASE */
+const ATLAS_BASE = (typeof window !== 'undefined' && window.ATLAS_BASE) ||
+  (location.hostname === '127.0.0.1' || location.hostname === 'localhost'
+    ? 'http://127.0.0.1:5199/'
+    : 'https://lz1219.github.io/jiangshan-xingzhi/');
+
+/** 拼江山行止的深链：person=人物key，year/place=年份与地名 */
+function atlasLink(params) {
+  const q = new URLSearchParams(Object.entries(params).filter(([, v]) => v != null && v !== '')).toString();
+  return ATLAS_BASE + (q ? '?' + q : '');
+}
 const PAGE = 120;
 
 let IDX = null, MODE = 'home', CUR = null, KEYWORD = '', shown = 0, filtered = [], cache = new Map();
@@ -697,6 +723,11 @@ let CORPUS = { poems: null, juan: null, authors: null };
   loadCorpusStats();
   if (!route()) goHome();
   // 阅读区内容变化 → 重挂进度条
+  // 站内外深链切换（#/person/x → #/work/y）不会重载页面，必须监听 hashchange
+  window.addEventListener('hashchange', () => {
+    if (!route()) goHome();
+  });
+
   const r = $('#reader');
   if (r) {
     new MutationObserver(() => bindProgress()).observe(r, { childList: true });
@@ -1061,7 +1092,7 @@ function renderWork(w) {
   return `
     <h2 class="rt">${esc(w.titleZh)}</h2>
     <div class="ra">${[w.titleEn, w.aliases?.length > 1 ? '又作 ' + w.aliases.slice(1).join('、') : null, author?.zh].filter(Boolean).map(esc).join(' · ')}</div>
-    <div class="badges">${badges}</div>
+    <div class="badges">${badges}${author?.journeyKey ? `<a class="tag maplink" href="${atlasLink({ person: author.journeyKey, year: w.composed?.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</div>
     <div class="rc${w.genre === 'shi' || w.genre === 'ci' ? '' : ' left'}">${esc((w.text?.paragraphs || []).join('\n'))}</div>
     <div class="src" style="text-align:center">${w.composed?.placeZh ? '作于 ' + esc(w.composed.placeZh) + ' · ' : ''}${esc(w.citation || '')}</div>
     ${w.meaning ? `<div class="bh">大意</div><p>${esc(w.meaning)}</p>` : ''}
@@ -1099,7 +1130,10 @@ function renderPerson(p) {
     </div>
     <div id="career-slot"></div>
     ${p.aliases?.length ? `<div class="bh">别名</div><p>${esc(p.aliases.join('、'))}</p>` : ''}
-    ${p.journeyKey ? `<div class="bh">行迹</div><p><a href="#" data-jump="${esc(p.journeyKey)}" style="border-bottom:1px dotted var(--gold)">查看行迹 →</a></p>` : ''}
+    ${p.journeyKey ? `<div class="bh">行迹</div>
+      <p><a href="#" data-jump="${esc(p.journeyKey)}" style="border-bottom:1px dotted var(--line-2)">在本站读行迹 →</a>
+         &nbsp;·&nbsp;
+         <a class="maplink" href="${atlasLink({ person: p.journeyKey })}" target="_blank" rel="noopener">在地图上看 ↗</a></p>` : ''}
     <div class="bh">作品</div>
     <table>${works.map(w => `<tr>
       <td style="width:90px" class="muted">${w.year ?? '?'}</td>
@@ -1135,7 +1169,9 @@ function renderJourney(j) {
     return `${link ? `<tr><td colspan="3"><div class="note"><div class="k">承接</div>${esc(link.text)}
         <div class="src">据 ${esc(link.source)}</div></div></td></tr>` : ''}
       <tr><td style="width:96px;font-family:var(--serif);color:var(--gold)">${esc(s.eraZh || s.year || '')}</td>
-      <td style="width:120px"><b>${esc(s.place.ancient)}</b>${s.place.modern ? `<div class="src">${esc(s.place.modern)}</div>` : ''}</td>
+      <td style="width:132px"><b>${esc(s.place.ancient)}</b>
+        ${s.place.modern ? `<div class="src">${esc(s.place.modern)}</div>` : ''}
+        ${s.place.ancient ? `<a class="maplink" href="${atlasLink({ person: j.personKey || j.key, year: s.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</td>
       <td>${esc(s.titleZh)}<div class="muted" style="font-size:12.5px">${esc(s.descZh)}</div>
         ${s.quote ? `<div style="font-family:var(--serif);color:#5a4a34">${esc(s.quote)}</div>` : ''}
         <div class="src">据 ${esc(s.source)}</div></td></tr>`;
