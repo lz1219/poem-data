@@ -1,14 +1,12 @@
-feat(deploy): 同源部署 Django + GitHub Pages 静态版
+feat(deploy): 江山行止同源托管到 /atlas/
 
-同源部署（完整版）
-- server/Dockerfile：gunicorn + whitenoise；启动时 migrate + import_json
-- 业务库与语料库分离：DATABASE_URL=jiangshan_web，CORPUS_DSN=jiangshan
-- 已部署至 47.94.110.181:8081：/ 与全部 API 200，白居易仕历 27 条、典籍 8 部
-- 旧 FastAPI 容器已停用
+- 新增 corpus/views_atlas.py：按路径安全解析并发送静态文件（含越界防护）
+  带 ?v= 的资源长缓存 immutable，其余 5 分钟；/atlas 自动补斜杠
+- atlas/urls.py 挂载 /atlas/ 与 /atlas/<path>
+- 前端 ATLAS_BASE 改为按环境推断：本地→5199、GitHub Pages→另一仓库地址、
+  自有服务器→同源 /atlas/
+- 容器增加 -v /opt/atlas-site:/atlas-site:ro 与 ATLAS_DIR
 
-静态版（GitHub Pages）
-- scripts/build-static.mjs：注入 STATIC_ONLY，只带 data/ 策展内容，产出 dist/（329 KB）
-- 前端按 STATIC_ONLY 降级：隐藏作者/典籍模式与语料统计，仕历改为指向完整版
-- 顶部提示条给出完整版入口；实测零失败请求、无报错
-- .github/workflows/pages.yml：push main 时 check.mjs → build-static → 部署 Pages
-- dist/ 加入 .gitignore
+实测（47.94.110.181:8081）：
+  /atlas/ 200、/atlas/js/app.js 200、地图完整渲染、健康检查 ok
+  文献站行迹页 11 个「地图 ↗」全部指向 /atlas/?person=…&year=…

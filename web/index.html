@@ -716,10 +716,18 @@ const GENRE = { shi:'诗', ci:'词', fu:'赋', wen:'文', history:'史传', qu:'
 const STATIC_ONLY = (typeof window !== 'undefined' && window.STATIC_ONLY) === true;
 const FULL_SITE = (typeof window !== 'undefined' && window.FULL_SITE) || '';
 
-const ATLAS_BASE = (typeof window !== 'undefined' && window.ATLAS_BASE) ||
-  (location.hostname === '127.0.0.1' || location.hostname === 'localhost'
-    ? 'http://127.0.0.1:5199/'
-    : 'https://lz1219.github.io/jiangshan-xingzhi/');
+function atlasBase() {
+  if (window.ATLAS_BASE) return window.ATLAS_BASE;
+  const host = location.hostname;
+  const local = host === '127.0.0.1' || host === 'localhost';
+  // 本地开发：两站各起一个端口
+  if (local) return 'http://127.0.0.1:5199/';
+  // GitHub Pages：本站是静态的，地图站在另一个仓库
+  if (host.endsWith('github.io')) return 'https://lz1219.github.io/jiangshan-xingzhi/';
+  // 自有服务器：江山行止挂在同一个源的 /atlas/ 下
+  return '/atlas/';
+}
+const ATLAS_BASE = atlasBase();
 
 /** 拼江山行止的深链：person=人物key，year/place=年份与地名 */
 function atlasLink(params) {
