@@ -21,11 +21,11 @@ Thumbs.db
 .idea/
 
 # Django
-server-django/.venv/
-server-django/db.sqlite3
-server-django/staticfiles/
+server/.venv/
+server/db.sqlite3
+server/staticfiles/
 __pycache__/
 *.pyc
 
 # 导出校验临时目录
-server-django/_export_check/
+server/_export_check/

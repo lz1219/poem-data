@@ -19,7 +19,7 @@ Python 生态里的对等物是 Django：
 ## 本地启动
 
 ```powershell
-cd server-django
+cd server
 python -m venv .venv
 .\.venv\Scripts\pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 

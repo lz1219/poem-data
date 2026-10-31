@@ -8,7 +8,7 @@ poem-data/
 ├── schema/         数据契约（JSON Schema）
 ├── shared/         共享表（版本、书目）
 ├── web/            前端（零构建，单页）
-├── server-django/  Django 后端（admin + API）
+├── server/  Django 后端（admin + API）
 ├── scripts/        校验、索引、闸门、本地服务
 ├── docs/           文档
 ├── README.md  LICENSE  .gitignore  .env.example
@@ -23,10 +23,10 @@ poem-data/
 | `schema/` | 四个 JSON Schema：work / comment / person / journey | ✅ | **必须**，前后端与校验器共用 |
 | `shared/` | `editions.json`（版本表） | ✅ | **必须**，作品用 id 引用 |
 | `web/` | 前端单页与资源 | ✅ | **必须** |
-| `server-django/` | Django 工程（`atlas/` 配置、`corpus/` 应用） | ✅ | **必须** |
-| `server-django/.venv/` | Python 虚拟环境 | ❌ | 本地生成，可随时重建 |
-| `server-django/staticfiles/` | `collectstatic` 产物 | ❌ | 部署时生成 |
-| `server-django/db.sqlite3` | 本地开发库 | ❌ | 本地生成，可随时 `import_json` 重建 |
+| `server/` | Django 工程（`atlas/` 配置、`corpus/` 应用） | ✅ | **必须** |
+| `server/.venv/` | Python 虚拟环境 | ❌ | 本地生成，可随时重建 |
+| `server/staticfiles/` | `collectstatic` 产物 | ❌ | 部署时生成 |
+| `server/db.sqlite3` | 本地开发库 | ❌ | 本地生成，可随时 `import_json` 重建 |
 | `__pycache__/`、`*.pyc` | Python 字节码 | ❌ | 自动生成 |
 | `scripts/` | 校验器、索引生成、提交闸门、本地静态服务 | ✅ | **必须** |
 | `docs/` | 结构与 AI 编码规范 | ✅ | **必须** |
@@ -63,6 +63,6 @@ data/*.json ──import_json──▶ 数据库（SQLite 本地 / PostgreSQL �
 | 一条新行迹 | `data/journeys/<拼音>.json` |
 | 一条评点 | `data/comments/<作品key>.json`（无评点则不建文件） |
 | 新字段 | 先改 `schema/`，再改模型与导入导出 |
-| 新命令 | `server-django/corpus/management/commands/` |
+| 新命令 | `server/corpus/management/commands/` |
 | 新校验 | `scripts/validate.mjs` |
 | 新文档 | `docs/` |

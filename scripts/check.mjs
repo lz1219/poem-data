@@ -31,9 +31,9 @@ run('index', 'node', ['scripts/build-index.mjs', '--check']);
 
 // ③ 数据库往返（有 venv 才跑；没有则跳过）
 const py = isWin
-  ? path.join(ROOT, 'server-django/.venv/Scripts/python.exe')
-  : path.join(ROOT, 'server-django/.venv/bin/python');
-const django = path.join(ROOT, 'server-django');
+  ? path.join(ROOT, 'server/.venv/Scripts/python.exe')
+  : path.join(ROOT, 'server/.venv/bin/python');
+const django = path.join(ROOT, 'server');
 if (existsSync(py) && existsSync(path.join(django, 'db.sqlite3'))) {
   run('db', py, ['manage.py', 'export_json', '--check'], {
     cwd: django,
@@ -45,7 +45,7 @@ if (existsSync(py) && existsSync(path.join(django, 'db.sqlite3'))) {
     },
   });
 } else {
-  steps.push({ name: 'db', ok: true, skipped: true, out: '未装 server-django 环境，跳过往返检查' });
+  steps.push({ name: 'db', ok: true, skipped: true, out: '未装 server 环境，跳过往返检查' });
 }
 
 // ── 汇总 ──

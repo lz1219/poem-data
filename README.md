@@ -10,7 +10,7 @@
 | 目录 | 内容 |
 |---|---|
 | web/ | 前端单页（零构建） |
-| server-django/ | Django 后端：admin 录入 + 只读 API |
+| server/ | Django 后端：admin 录入 + 只读 API |
 | docs/ | 结构与 AI 编码规范 |
 | data/works/ | 一件作品一个文件：正文、大意、注释、背景、赏析、校记、系年 |
 | `data/persons/` | 人物：生卒、字号、别名、CBDB/Wikidata ID |
