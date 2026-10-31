@@ -74,6 +74,7 @@ for (const w of works) {
     source: w.citation || '',
     // 以下为站点可选使用的考据字段
     level: w.level,
+    excerpt: !!w.excerpt,
     apparatus: w.apparatus || [],
     dating: w.dating || [],
   };

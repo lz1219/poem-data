@@ -75,7 +75,7 @@ def author_detail(request, name):
         return Response({"detail": f"语料库中未找到作者：{name}"}, status=404)
 
     rows = db.query(
-        f"""SELECT id, title, author, left(coalesce(body_simplified, body), 80) AS head,
+        f"""SELECT id, coalesce(title_display, title) AS title, author, left(coalesce(body_simplified, body), 80) AS head,
                    length(coalesce(body_simplified, body)) AS chars
             FROM corpus_poem
             WHERE {col} = %s
@@ -91,7 +91,7 @@ def poem_detail(request, poem_id: int):
     if not db.available():
         return _unavailable()
     row = db.one(
-        """SELECT p.id, p.title, p.author, coalesce(p.author_simplified, p.author) AS author_simplified,
+        """SELECT p.id, coalesce(p.title_display, p.title) AS title, p.title AS title_raw, p.author, coalesce(p.author_simplified, p.author) AS author_simplified,
                   p.genre, p.body, p.body_simplified, p.book_id, b.title AS book
            FROM corpus_poem p LEFT JOIN book b ON b.id = p.book_id
            WHERE p.id = %s""",

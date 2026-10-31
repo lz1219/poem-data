@@ -63,7 +63,7 @@ def _matching_corpus(q: str, limit: int = 20):
         with psycopg.connect(dsn, connect_timeout=5) as conn:
             with conn.cursor() as cur:
                 cur.execute(
-                    """SELECT title, author, coalesce(body_simplified, body)
+                    """SELECT coalesce(title_display, title) AS title, author, coalesce(body_simplified, body)
                        FROM corpus_poem
                        WHERE coalesce(body_simplified, body) LIKE %s
                        LIMIT %s""",

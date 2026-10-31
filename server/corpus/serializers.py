@@ -35,7 +35,7 @@ class WorkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Work
         fields = (
-            "key", "titleZh", "titleEn", "aliases", "authorKey", "genre", "level", "certainty",
+            "key", "titleZh", "titleEn", "aliases", "authorKey", "genre", "level", "certainty", "excerpt",
             "composed", "text", "meaning", "notes", "background", "appreciation_field",
             "apparatus", "dating", "citation",
         )

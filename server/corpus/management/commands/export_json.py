@@ -126,6 +126,7 @@ class Command(BaseCommand):
                 "genre": w.genre,
                 "level": w.level,
                 "certainty": w.certainty,
+                **({"excerpt": True} if w.excerpt else {}),
                 "composed": {
                     "year": w.year,
                     "yearKind": w.year_kind,

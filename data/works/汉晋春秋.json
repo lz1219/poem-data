@@ -10,6 +10,7 @@
   "genre": "history",
   "level": "popular",
   "certainty": "probable",
+  "excerpt": true,
   "composed": {
     "year": 225,
     "yearKind": "event",

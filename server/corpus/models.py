@@ -69,6 +69,7 @@ class Work(models.Model):
     level = models.CharField("级别", max_length=20, choices=LEVEL, default="popular")
     certainty = models.CharField("系年可信度", max_length=20, choices=CERTAINTY, default="unknown")
 
+    excerpt = models.BooleanField("摘录", default=False, help_text="正文为长文中的一段，非全篇")
     year = models.IntegerField("系年", null=True, blank=True)
     year_kind = models.CharField("系年类型", max_length=20, default="composition")
     place_zh = models.CharField("作地", max_length=80, blank=True)

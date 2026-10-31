@@ -10,6 +10,7 @@
   "genre": "history",
   "level": "popular",
   "certainty": "confirmed",
+  "excerpt": true,
   "composed": {
     "year": 627,
     "yearKind": "event",

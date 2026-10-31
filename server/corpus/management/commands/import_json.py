@@ -120,6 +120,7 @@ class Command(BaseCommand):
                     "genre": w.get("genre") or "shi",
                     "level": w.get("level") or "popular",
                     "certainty": w.get("certainty") or "unknown",
+                    "excerpt": bool(w.get("excerpt")),
                     "year": comp.get("year"),
                     "year_kind": comp.get("yearKind") or "composition",
                     "place_zh": comp.get("placeZh") or "",

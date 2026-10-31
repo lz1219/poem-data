@@ -978,7 +978,7 @@ function renderMore() {
     let t, meta, key;
     if (MODE === 'works') {
       const p = IDX.persons.find(x => x.key === r.authorKey);
-      t = r.titleZh; meta = `${r.year ?? '?'} · ${p?.zh || ''}`; key = r.key;
+      t = (r.excerpt ? '摘 ' : '') + r.titleZh; meta = `${r.year ?? '?'} · ${p?.zh || ''}`; key = r.key;
     } else if (MODE === 'persons') {
       t = r.zh; meta = r.span?.[0] ? `${r.span[0]}—${r.span[1] ?? '?'}` : '生卒未详'; key = r.key;
     } else {
@@ -1129,6 +1129,7 @@ function renderWork(w) {
   const author = IDX.persons.find(p => p.key === w.authorKey);
   const badges = [
     w.level === 'academic' ? '<span class="tag acc">学术级</span>' : '<span class="tag">通俗级</span>',
+    w.excerpt ? '<span class="tag warn" title="正文为长文中的一段，非全篇">摘录</span>' : '',
     `<span class="tag">${GENRE[w.genre] || w.genre}</span>`,
     `<span class="tag">系年 ${w.certainty}</span>`,
     w.text?.traditionalDerived ? '<span class="tag warn">繁体为反推</span>' : '<span class="tag">繁体取自底本</span>',

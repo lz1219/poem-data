@@ -10,6 +10,7 @@
   "genre": "wen",
   "level": "popular",
   "certainty": "confirmed",
+  "excerpt": true,
   "composed": {
     "year": 1521,
     "yearKind": "composition",
