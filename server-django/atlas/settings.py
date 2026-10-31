@@ -63,15 +63,19 @@ WSGI_APPLICATION = "atlas.wsgi.application"
 
 _db_url = os.getenv("DATABASE_URL", "")
 if _db_url.startswith("postgres"):
+    from urllib.parse import unquote, urlparse
+
+    _u = urlparse(_db_url)
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
-            "NAME": "jiangshan",
-            "USER": os.getenv("PGUSER", "lz9527"),
-            "PASSWORD": os.getenv("PGPASSWORD", ""),
-            "HOST": os.getenv("PGHOST", "127.0.0.1"),
-            "PORT": os.getenv("PGPORT", "5432"),
+            "NAME": _u.path.lstrip("/") or "jiangshan",
+            "USER": _u.username or os.getenv("PGUSER", ""),
+            "PASSWORD": unquote(_u.password or os.getenv("PGPASSWORD", "")),
+            "HOST": _u.hostname or os.getenv("PGHOST", "127.0.0.1"),
+            "PORT": str(_u.port or os.getenv("PGPORT", "5432")),
             "OPTIONS": {"connect_timeout": 5},
+            "CONN_MAX_AGE": 60,
         }
     }
 else:
