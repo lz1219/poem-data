@@ -1,6 +1,6 @@
 from django.urls import path
 
-from . import views
+from . import views, views_corpus
 
 urlpatterns = [
     path("health", views.health),
@@ -14,4 +14,11 @@ urlpatterns = [
     path("journeys/<str:key>", views.journey_detail),
     path("comments/<str:work_key>", views.comments),
     path("search", views.search),
+    # 语料层
+    path("corpus/authors", views_corpus.authors),
+    path("corpus/authors/<str:name>", views_corpus.author_detail),
+    path("corpus/poems/<int:poem_id>", views_corpus.poem_detail),
+    path("texts", views_corpus.texts),
+    path("texts/<int:book_id>", views_corpus.book_detail),
+    path("texts/juan/<int:unit_id>", views_corpus.juan_detail),
 ]

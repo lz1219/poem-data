@@ -88,6 +88,8 @@
     <button data-mode="works" class="on">作品</button>
     <button data-mode="persons">人物</button>
     <button data-mode="journeys">行迹</button>
+    <button data-mode="authors">作者</button>
+    <button data-mode="texts">典籍</button>
   </div>
 
   <div class="panel">
@@ -150,6 +152,12 @@ function buildFilters() {
     f1.innerHTML = '<option value="all">全部文体</option>' +
       Object.entries(GENRE).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
     f2.innerHTML = '<option value="all">全部级别</option><option value="academic">学术级</option><option value="popular">通俗级</option>';
+  } else if (MODE === 'authors') {
+    f1.innerHTML = '<option value="all">全部作者</option>';
+    f2.innerHTML = '<option value="all">按作品数排序</option>';
+  } else if (MODE === 'texts') {
+    f1.innerHTML = '<option value="all">全部典籍</option>';
+    f2.innerHTML = '<option value="all">按卷数排序</option>';
   } else if (MODE === 'persons') {
     f1.innerHTML = '<option value="all">全部人物</option><option value="journey">有行迹</option><option value="nojourney">无行迹</option>';
     f2.innerHTML = '<option value="all">全部</option>';
@@ -164,6 +172,9 @@ function renderList() {
   KEYWORD = $('#q').value.trim();
   const a = $('#f1').value, b = $('#f2').value;
   const kw = KEYWORD.toLowerCase();
+
+  // 语料模式走 API（数据在 PostgreSQL，不在静态 JSON 里）
+  if (MODE === 'authors' || MODE === 'texts') { renderApiList(); return; }
 
   if (MODE === 'works') {
     filtered = IDX.works.filter(w => {
@@ -232,6 +243,99 @@ function hi(text) {
   const safe = esc(KEYWORD);
   return esc(text).split(safe).join('<mark>' + safe + '</mark>');
 }
+
+/* ── 语料模式：作者与典籍（数据来自 PostgreSQL）── */
+async function renderApiList() {
+  const kw = encodeURIComponent(KEYWORD);
+  const list = $('#list');
+  list.innerHTML = '<div class="empty">载入中…</div>';
+  try {
+    let rows;
+    if (MODE === 'authors') {
+      const r = await fetch(`/api/corpus/authors?limit=300${kw ? '&q=' + kw : ''}`).then(x => x.json());
+      rows = (r.items || []).map(a => ({ key: a.name, t: a.name, m: `${a.poems} 首` }));
+      $('#count').textContent = `作者 ${r.total ?? rows.length} 位`;
+    } else {
+      const r = await fetch('/api/texts').then(x => x.json());
+      rows = (r.items || []).map(b => ({ key: String(b.id), t: b.title, m: `${b.juan} 卷 · ${Math.round((b.chars || 0) / 10000)} 万字` }));
+      $('#count').textContent = `典籍 ${r.total ?? rows.length} 部`;
+    }
+    list.innerHTML = rows.map(r => `<div class="item" data-key="${esc(r.key)}">
+        <span class="t">${hi(r.t)}</span><span class="m">${esc(r.m)}</span></div>`).join('')
+      || '<div class="empty">没有找到</div>';
+    list.querySelectorAll('.item').forEach(el => el.addEventListener('click', () => {
+      list.querySelectorAll('.item').forEach(x => x.classList.remove('on'));
+      el.classList.add('on');
+      openApi(MODE, el.dataset.key);
+    }));
+  } catch (e) {
+    list.innerHTML = '<div class="empty">接口不可用：语料库未连接</div>';
+    $('#count').textContent = '';
+  }
+}
+
+async function openApi(mode, key) {
+  const el = $('#reader');
+  el.innerHTML = '<p class="empty">载入中…</p>';
+  try {
+    if (mode === 'authors') {
+      const r = await fetch(`/api/corpus/authors/${encodeURIComponent(key)}?limit=200`).then(x => x.json());
+      el.innerHTML = `<h2 class="rt">${esc(key)}</h2>
+        <div class="ra">语料库收录 ${r.total} 首</div>
+        <div class="bh">诗作</div>
+        <table>${(r.items || []).map(p => `<tr>
+          <td style="width:70px" class="muted">${p.id}</td>
+          <td><a href="#" data-poem="${p.id}" style="border-bottom:1px dotted var(--line)">${esc(p.title)}</a>
+            <div class="src">${esc((p.head || '').replace(/\n/g, ' '))}</div></td></tr>`).join('')}</table>
+        ${r.total > (r.items || []).length ? `<p class="src">另有 ${r.total - r.items.length} 首未列出</p>` : ''}`;
+    } else {
+      const r = await fetch(`/api/texts/${key}`).then(x => x.json());
+      const b = r.book || {};
+      el.innerHTML = `<h2 class="rt">${esc(b.title || '')}</h2>
+        <div class="ra">${esc(b.edition || '')} · 共 ${r.total} 卷</div>
+        <div class="bh">卷目</div>
+        <table>${(r.juan || []).map(j => `<tr>
+          <td style="width:180px" class="muted">${esc(j.title || '')}</td>
+          <td><a href="#" data-juan="${j.id}" style="border-bottom:1px dotted var(--line)">第 ${j.juan ?? ''} 卷</a></td>
+          <td class="muted">${(j.chars || 0).toLocaleString()} 字</td></tr>`).join('')}</table>`;
+    }
+  } catch (e) {
+    el.innerHTML = '<p class="empty">读取失败：' + esc(String(e.message || e)) + '</p>';
+  }
+}
+
+async function openPoem(id) {
+  const el = $('#reader');
+  el.innerHTML = '<p class="empty">载入中…</p>';
+  const p = await fetch(`/api/corpus/poems/${id}`).then(x => x.json());
+  const body = p.body_simplified || p.body || '';
+  el.innerHTML = `<h2 class="rt">${esc(p.title || '')}</h2>
+    <div class="ra">${esc(p.author_simplified || p.author || '')}${p.book ? ' · 《' + esc(p.book) + '》' : ''}</div>
+    <div class="rc">${esc(body)}</div>
+    <div class="bh">繁体原文</div>
+    <div class="rc" style="font-size:16px">${esc(p.body || '')}</div>`;
+  el.scrollTop = 0;
+}
+
+async function openJuan(id) {
+  const el = $('#reader');
+  el.innerHTML = '<p class="empty">载入中…</p>';
+  const j = await fetch(`/api/texts/juan/${id}`).then(x => x.json());
+  const paras = (j.paragraphs || []).map(p => esc(p.body)).join('\n');
+  const body = paras || esc(j.body_simplified || j.body || '');
+  el.innerHTML = `<h2 class="rt">${esc(j.book || '')} · ${esc(j.title || '')}</h2>
+    <div class="ra">共 ${(j.paragraphs || []).length} 段</div>
+    <div class="rc" style="text-align:left;font-size:17px">${body}</div>`;
+  el.scrollTop = 0;
+}
+
+// 详情里的诗/卷跳转
+document.addEventListener('click', (e) => {
+  const pa = e.target.closest('[data-poem]');
+  const ja = e.target.closest('[data-juan]');
+  if (pa) { e.preventDefault(); openPoem(pa.dataset.poem); }
+  if (ja) { e.preventDefault(); openJuan(ja.dataset.juan); }
+});
 
 /* ── 打开详情 ── */
 async function open(mode, key) {
