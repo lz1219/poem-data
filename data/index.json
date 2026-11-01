@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T03:18:46.020Z",
+  "generatedAt": "2026-11-01T03:28:03.236Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -1102,6 +1102,16 @@
       "file": "data/persons/xuanzang.json"
     },
     {
+      "key": "xueneng",
+      "zh": "薛能",
+      "span": [
+        0,
+        880
+      ],
+      "hasJourney": true,
+      "file": "data/persons/xueneng.json"
+    },
+    {
       "key": "yuanzhen",
       "zh": "元稹",
       "span": [
@@ -1250,6 +1260,13 @@
       "stops": 12,
       "origin": "upstream",
       "file": "data/journeys/xuanzang.json"
+    },
+    {
+      "key": "xueneng",
+      "titleZh": "薛能：从盩厔到许州",
+      "stops": 8,
+      "origin": "overlay",
+      "file": "data/journeys/xueneng.json"
     },
     {
       "key": "yuanzhen",

@@ -1,0 +1,161 @@
+{
+  "schemaVersion": "1.0",
+  "key": "xueneng",
+  "personKey": "xueneng",
+  "titleZh": "薛能：从盩厔到许州",
+  "titleEn": "Xue Neng: From Zhouzhi to Xuzhou",
+  "spanZh": "? — 880年",
+  "origin": "overlay",
+  "intro": {
+    "text": "薛能（？—880）是晚唐诗人，官至徐州感化军节度使，后为许州忠武军节度使，广明元年为乱军所杀。生年不详，CBDB 也不记；这条行迹从他 854 年做盩厔县尉起，按有地点的任职排下来。",
+    "source": "CBDB 95071（POSTED_TO_OFFICE_DATA，10 段有年份任职，9 段记任职地）"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 854,
+      "eraZh": "大中八年",
+      "place": {
+        "ancient": "盩厔",
+        "modern": "陕西周至",
+        "coord": [
+          108.22,
+          34.16
+        ]
+      },
+      "titleZh": "盩厔县尉",
+      "descZh": "初仕为盩厔县尉，在京畿。",
+      "quote": null,
+      "source": "CBDB 95071（縣尉，盩厔，854）"
+    },
+    {
+      "seq": 2,
+      "year": 868,
+      "eraZh": "咸通九年",
+      "place": {
+        "ancient": "嘉州",
+        "modern": "四川乐山",
+        "coord": [
+          103.77,
+          29.55
+        ]
+      },
+      "titleZh": "嘉州刺史",
+      "descZh": "出为嘉州刺史，治所在犍为。",
+      "quote": null,
+      "source": "CBDB 95071（州刺史，犍為／嘉州，868）"
+    },
+    {
+      "seq": 3,
+      "year": 868,
+      "eraZh": "咸通九年",
+      "place": {
+        "ancient": "江州",
+        "modern": "江西九江",
+        "coord": [
+          115.99,
+          29.71
+        ]
+      },
+      "titleZh": "江州刺史",
+      "descZh": "同年转江州刺史，治所在浔阳。",
+      "quote": null,
+      "source": "CBDB 95071（州刺史，潯陽／江州，868）"
+    },
+    {
+      "seq": 4,
+      "year": 869,
+      "eraZh": "咸通十年",
+      "place": {
+        "ancient": "同州",
+        "modern": "陕西大荔",
+        "coord": [
+          109.9393,
+          34.7972
+        ]
+      },
+      "titleZh": "同州刺史",
+      "descZh": "转同州刺史，治所在冯翊。",
+      "quote": null,
+      "source": "CBDB 95071（州刺史，馮翊／同州，869）"
+    },
+    {
+      "seq": 5,
+      "year": 870,
+      "eraZh": "咸通十一年",
+      "place": {
+        "ancient": "京兆府",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "京兆府尹",
+      "descZh": "入为京兆府尹，治京畿。",
+      "quote": null,
+      "source": "CBDB 95071（府尹，京兆府，870）"
+    },
+    {
+      "seq": 6,
+      "year": 873,
+      "eraZh": "咸通十四年",
+      "place": {
+        "ancient": "彭城",
+        "modern": "江苏徐州",
+        "coord": [
+          117.181,
+          34.261
+        ]
+      },
+      "titleZh": "徐州刺史、感化军节度使",
+      "descZh": "出为徐州刺史，领感化军，在徐州数年。",
+      "quote": null,
+      "source": "CBDB 95071（州刺史，彭城，873—875、876—878）"
+    },
+    {
+      "seq": 7,
+      "year": 878,
+      "eraZh": "乾符五年",
+      "place": {
+        "ancient": "许州",
+        "modern": "河南许昌",
+        "coord": [
+          113.85,
+          34.03
+        ]
+      },
+      "titleZh": "许州刺史、忠武军节度使",
+      "descZh": "移镇许州，领忠武军。",
+      "quote": null,
+      "source": "CBDB 95071（州刺史，許州，878—880）"
+    },
+    {
+      "seq": 8,
+      "year": 880,
+      "eraZh": "广明元年",
+      "place": {
+        "ancient": "许州",
+        "modern": "河南许昌",
+        "coord": [
+          113.85,
+          34.03
+        ]
+      },
+      "titleZh": "死于许州",
+      "descZh": "广明元年，许州军乱，薛能遇害。",
+      "quote": null,
+      "source": "CBDB 95071（c_deathyear=880）；死事据两《唐书》本传"
+    }
+  ],
+  "links": {
+    "2": {
+      "text": "从京畿外放，先到嘉州，同年又转江州；这两任都在长江沿线。",
+      "source": "CBDB 95071（盩厔 854 → 嘉州 868 → 江州 868）"
+    },
+    "6": {
+      "text": "京兆府尹之后出镇徐州，是他第一次领节；此后移镇许州，直到遇害。",
+      "source": "CBDB 95071（京兆府 870 → 彭城 873 → 許州 878）"
+    }
+  }
+}

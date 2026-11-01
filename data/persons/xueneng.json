@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "key": "xueneng",
+  "zh": "薛能",
+  "en": "Xue Neng",
+  "courtesyZh": "字太拙",
+  "dynastyKey": "tang",
+  "span": [
+    0,
+    880
+  ],
+  "spanNote": "生年不详",
+  "aliases": [
+    "太拙"
+  ],
+  "externalIds": {
+    "cbdb": "95071",
+    "wikidata": null
+  },
+  "journeyKey": "xueneng"
+}

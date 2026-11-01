@@ -664,6 +664,11 @@ body{background:#fff;}.container{max-width:none;padding:0;}
 .tl-kind { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-left: 8px; letter-spacing: .1em; }
 .tl-sum { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 6px 0 10px; }
 
+.body-hits { margin: 18px 0 8px; border-top: 1px dashed var(--line-2); padding-top: 12px; }
+.body-hits .row { padding: 8px 0; border-bottom: 1px dotted var(--line); }
+.body-hits .name { font-family: var(--serif); font-size: 15px; }
+.body-hits .desc { font-family: var(--serif); font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 1.7; }
+
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -1007,6 +1012,33 @@ function renderList() {
   $('#list').innerHTML = '';
   $('#count').textContent = `共 ${filtered.length} 条`;
   renderMore();
+
+  // 正文检索：标题/作者没命中时，再到服务器查正文、注释、大意（静态版不支持）
+  if (MODE === 'works' && KEYWORD && !STATIC_ONLY && filtered.length < 5) {
+    searchBody(KEYWORD);
+  }
+}
+
+/* 正文检索：/api/search 会匹配标题、别名、正文、注释、大意、背景 */
+let SEARCH_T = 0;
+async function searchBody(kw) {
+  const seq = ++SEARCH_T;
+  try {
+    const r = await fetch("/api/search?scope=works&limit=8&q=" + encodeURIComponent(kw)).then((x) => x.json());
+    if (seq !== SEARCH_T) return; // 有更新的检索，丢弃
+    const list = document.getElementById("list");
+    if (!list) return;
+    const seen = new Set(filtered.map((w) => w.key));
+    const extra = (r.works || []).filter((w) => !seen.has(w.key));
+    if (!extra.length) return;
+    const box = document.createElement("div");
+    box.className = "body-hits";
+    box.innerHTML = "<div class=\"bh\">正文/注释命中</div>" + extra.map((w) =>
+      "<div class=\"row\"><div class=\"name\"><a href=\"#\" data-work=\"" + w.key + "\">" +
+      w.titleZh + "</a></div><div class=\"desc\">" + (w.field || "") + "：" + (w.snippet || "") + "</div></div>"
+    ).join("");
+    list.appendChild(box);
+  } catch (e) { /* 接口不可用则静默 */ }
 }
 
 function renderMore() {

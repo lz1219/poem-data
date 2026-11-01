@@ -246,11 +246,40 @@ def search(request):
     out = {"q": q, "scope": scope, "works": [], "corpus": [], "text": []}
 
     if scope in ("works", "all"):
-        out["works"] = [
-            {"key": w.key, "titleZh": w.title_zh, "year": w.year,
-             "snippet": (w.meaning or "")[:60]}
-            for w in Work.objects.filter(title_zh__icontains=q)[:limit]
-        ]
+        # 作品只有 69 条，直接内存匹配：标题 / 别名 / 正文 / 注释 / 大意 / 背景
+        # 之前只查 title_zh，搜「莫听」命中不了《定风波》
+        ql = q.lower()
+        hits = []
+        for w in Work.objects.all().only(
+            "key", "title_zh", "aliases", "paragraphs", "notes", "meaning", "background", "year"
+        ):
+            fields = [
+                ("标题", w.title_zh or ""),
+                ("别名", "、".join(w.aliases or [])),
+                ("大意", w.meaning or ""),
+                ("背景", w.background or ""),
+            ]
+            fields += [("正文", p) for p in (w.paragraphs or [])]
+            for n in (w.notes or []):
+                if isinstance(n, dict):
+                    fields.append(("注释", f"{n.get('term', '')} {n.get('text', '')}"))
+            for label, text in fields:
+                i = (text or "").lower().find(ql)
+                if i < 0:
+                    continue
+                a = max(0, i - 24)
+                snippet = text[a : a + 80].replace("\n", " ")
+                hits.append(
+                    {
+                        "key": w.key,
+                        "titleZh": w.title_zh,
+                        "year": w.year,
+                        "field": label,
+                        "snippet": ("…" if a > 0 else "") + snippet,
+                    }
+                )
+                break
+        out["works"] = hits[:limit]
 
     if scope in ("corpus", "all"):
         out["corpus"] = _matching_corpus(q, limit) or []
