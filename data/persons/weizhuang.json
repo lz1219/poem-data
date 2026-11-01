@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "weizhuang",
+  "zh": "韦庄",
+  "en": "Wei Zhuang",
+  "courtesyZh": "字端己 · 韦应物四世孙",
+  "dynastyKey": "tang",
+  "span": [
+    836,
+    910
+  ],
+  "spanNote": null,
+  "aliases": [
+    "端己",
+    "韦端己"
+  ],
+  "externalIds": {
+    "cbdb": "92161",
+    "wikidata": null
+  },
+  "journeyKey": "weizhuang"
+}

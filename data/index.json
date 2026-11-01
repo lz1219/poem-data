@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T03:28:03.236Z",
+  "generatedAt": "2026-11-01T03:38:44.195Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -915,8 +915,8 @@
       "key": "chenshou",
       "zh": "陈寿",
       "span": [
-        0,
-        0
+        null,
+        null
       ],
       "hasJourney": false,
       "file": "data/persons/chenshou.json"
@@ -1082,6 +1082,16 @@
       "file": "data/persons/weiyingwu.json"
     },
     {
+      "key": "weizhuang",
+      "zh": "韦庄",
+      "span": [
+        836,
+        910
+      ],
+      "hasJourney": true,
+      "file": "data/persons/weizhuang.json"
+    },
+    {
       "key": "xizaochi",
       "zh": "习凿齿",
       "span": [
@@ -1105,7 +1115,7 @@
       "key": "xueneng",
       "zh": "薛能",
       "span": [
-        0,
+        null,
         880
       ],
       "hasJourney": true,
@@ -1253,6 +1263,13 @@
       "stops": 6,
       "origin": "overlay",
       "file": "data/journeys/weiyingwu.json"
+    },
+    {
+      "key": "weizhuang",
+      "titleZh": "韦庄：从长安到成都",
+      "stops": 8,
+      "origin": "overlay",
+      "file": "data/journeys/weizhuang.json"
     },
     {
       "key": "xuanzang",
