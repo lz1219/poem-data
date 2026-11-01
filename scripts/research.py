@@ -9,6 +9,8 @@ import hashlib
 import json
 import re
 import time
+import os
+import tempfile
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -30,6 +32,31 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
+def save_object(cache,body):
+    """原件按内容寻址，完整写入后链接发布，不覆盖旧字节。"""
+    digest=hashlib.sha256(body).hexdigest();folder=cache/'objects';folder.mkdir(parents=True,exist_ok=True);target=folder/digest
+    if target.exists():
+        if target.read_bytes()!=body: raise ValueError('内容哈希缓存对象已损坏')
+        return digest
+    fd,name=tempfile.mkstemp(prefix='.capture-',dir=folder)
+    try:
+        with os.fdopen(fd,'wb') as stream: stream.write(body);stream.flush();os.fsync(stream.fileno())
+        try: os.link(name,target)
+        except FileExistsError:
+            if target.read_bytes()!=body: raise ValueError('并发原件缓存冲突')
+    finally: Path(name).unlink(missing_ok=True)
+    return digest
+
+
+def cached_response(cache,url,expected_sha):
+    if not re.fullmatch(r'[a-f0-9]{64}',expected_sha): raise ValueError('缓存哈希标识非法')
+    target=cache/'objects'/expected_sha
+    if not target.exists(): target=cache/hashlib.sha256(url.encode()).hexdigest()
+    raw=target.read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=expected_sha: raise ValueError('缓存原件与固定哈希不符')
+    return raw
+
+
 def fetch(url, cache):
     """每入口最多两次；原始响应与错误元数据分开保存，不回显凭据。"""
     key = hashlib.sha256(url.encode()).hexdigest()
@@ -48,6 +75,7 @@ def fetch(url, cache):
                 if r.returncode: raise OSError('TransportError')
                 body = r.stdout
             target.parent.mkdir(parents=True, exist_ok=True)
+            save_object(cache,body)
             target.write_bytes(body)
             return {'url': url, 'checkedAt': now(), 'status': 'reachable',
                     'sha256': hashlib.sha256(body).hexdigest(), 'bytes': len(body)}, body

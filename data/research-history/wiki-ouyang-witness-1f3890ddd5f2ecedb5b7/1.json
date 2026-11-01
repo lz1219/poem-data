@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "wiki-ouyang-witness-1f3890ddd5f2ecedb5b7",
+  "subject": {
+    "type": "work",
+    "key": "与梅圣俞书"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "与梅圣俞书 · 文忠集巻一百四十九固定修订片段",
+  "claim": "在维基文库所标四库本文忠集巻一百四十九中取得对应原态片段；只证明所引片段存在，不能据此核定整篇或系年。",
+  "provenance": {
+    "origin": "machine",
+    "method": "固定页面修订，去编排符号比较后截取实际原字符"
+  },
+  "evidence": [
+    {
+      "sourceId": "wikisource-ouyang-wenzhong-siku",
+      "quote": "讀軾書不覺汗出快哉快哉老夫當避路放他出一頭地也",
+      "locator": "文忠集 (歐陽修, 四庫全書本)/卷149，修订780797",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=780797",
+      "revisionId": 780797,
+      "pageId": 295833,
+      "sha256": "6692b02bbfaa6ded04065c69e0f5917f460e3823e064455c9ca7112177dcdd7c",
+      "textFile": "data/witnesses/6692b02bbfaa6ded04065c69e0f5917f460e3823e064455c9ca7112177dcdd7c.txt",
+      "originalFileSha256": "4acca8435aab0d9d6d5bb1da053e9d7babf10757e8fa661828ffed0be3cc32f1",
+      "captureSha256": "5c4b54b8de0db44d230566e9679d65213e104252a32993fadb291296c1fe822d",
+      "verifiedQuote": true,
+      "verification": "固定维基原态逐字命中，不等于影像校核",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "仅1个段落片段命中；其他段落及版本差异待核。",
+    "所标四库底本尚待影像对校；同底本转录不算独立证据。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未完成该篇影像校核与版本异文比较；没有因片段命中判定全文、作年或人物行迹。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "wikisource-ouyang-wenzhong-siku",
+      "mode": "固定修订原态匹配",
+      "revisionId": 780797
+    }
+  ],
+  "nextAction": "对照四库影像核篇题、上下文、模板字与异文，再决定是否建立校记或替换版本。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T10:29:12.250025+00:00",
+  "sha256": "d8c2f1b1383e99bf51bd62428e41c4b9b9480d172e8886fbe9bb57a5ba5a001b"
+}

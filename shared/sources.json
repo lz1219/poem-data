@@ -1327,6 +1327,28 @@
         "redistribute": "not-cleared"
       },
       "usageNote": "完整影像只保存在隔离研究区；图像SHA1/原始响应/页面修订保留，与同底本转录不自动计独立证据。"
+    },
+    {
+      "id": "wikisource-ouyang-wenzhong-siku",
+      "name": "欧阳修文忠集 · 维基标四库本转录",
+      "kind": "text",
+      "url": "https://zh.wikisource.org/wiki/文忠集_(歐陽修,_四庫全書本)",
+      "sourceFamily": "ouyang-wenzhong-siku",
+      "upstream": [
+        "wikisource",
+        "四库全书（标示底本，待核影像）"
+      ],
+      "baseEdition": "欧阳修四库本标示，待核影像",
+      "coverage": [
+        "153卷正文与根页按修订保存；附录5卷及年谱独立范围另核"
+      ],
+      "permissions": {
+        "read": true,
+        "download": "public-api-and-export",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "同底本转载不自动计独立佐证。API失败历史与XML导出并存，原字符不扩模板、不补字，不自动成为核定正文。"
     }
   ],
   "catalogs": [

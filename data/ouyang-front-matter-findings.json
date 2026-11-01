@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-01T10:38:56.806871+00:00",
+  "items": [
+    {
+      "title": "文忠集 (歐陽修, 四庫全書本)",
+      "revisionId": 699993,
+      "sectionCandidates": [
+        {
+          "label": "文忠集年譜",
+          "startByte": 16841,
+          "endByte": 33449,
+          "sha256": "e58b1fbbbe7098d17749e763eb09919a0f52b2a5e257ec7f1f7aa96e00aa1152",
+          "status": "heading-bounded-candidate",
+          "limitation": "标题边界候选，不代替人工篇界审校"
+        }
+      ],
+      "markerCandidates": [
+        {
+          "marker": "cq=161",
+          "startByte": 8934,
+          "context": "諫院時仁宗更用大臣杜衍富弼韓琦cq=161仲淹皆在位増諫官員修首在選中每",
+          "status": "unexplained-transcription-marker",
+          "action": "保留原字符，对照影像，不补字或自动删除"
+        }
+      ]
+    }
+  ],
+  "academicReview": "pending"
+}

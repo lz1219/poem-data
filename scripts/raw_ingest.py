@@ -12,7 +12,7 @@ import sys
 import zipfile
 from pathlib import Path, PurePosixPath
 
-from research import ROOT, connect, dump, now, read
+from research import ROOT, connect, dump, now, read, cached_response
 
 GIT_PARSER = 'kanripo-source-pages-v3'
 WIKI_PARSER = 'wikisource-revision-v1'
@@ -66,7 +66,7 @@ def input_bundle(root=ROOT, cache=None):
         records.append((rid, kind, key, revision, payload, name, source_sha))
 
     for meta in manifest['repositories']:
-        raw = (cache / sha(meta['url'].encode())).read_bytes()
+        raw = cached_response(cache,meta['url'],meta['archiveSha256'])
         archive_sha = blob(raw)
         if archive_sha != meta['archiveSha256']:
             raise ValueError('缓存ZIP哈希与固定清单不符：' + meta['repository'])
@@ -96,25 +96,21 @@ def input_bundle(root=ROOT, cache=None):
     if wiki_file.exists():
         asset('data/wikisource-acquisition.json', wiki_file.read_bytes(), 'manifest')
         for meta in read(wiki_file)['pages']:
-            raw = (cache / sha(meta['url'].encode())).read_bytes()
-            from wikisource_source import inspect
+            raw = cached_response(cache,meta['url'],meta['captureSha256'])
+            from wikisource_source import inspect, decode_capture
             checked = inspect(meta, raw)
             if meta.get('kind') != 'contents' and checked.get('originalHeading') != meta.get('originalHeading'):
                 raise ValueError('维基卷题尚未按原件核对，先运行check-wikisource-coverage.py')
             if sha(raw) != meta['captureSha256']: raise ValueError('维基固定修订响应哈希不符')
-            doc = json.loads(raw)
-            page = doc['query']['pages'][0]
-            rev = page['revisions'][0]
-            if (page['pageid'], page['title'], rev['revid'], rev['timestamp']) != (meta['pageId'], meta['title'], meta['revisionId'], meta['revisionTimestamp']):
-                raise ValueError('维基原始响应的页面/修订身份不符')
-            content = rev['slots']['main']['content'].encode('utf-8')
+            capture=decode_capture(meta,raw)
+            content = capture['text'].encode('utf-8')
             if sha(content) != meta['textSha256']: raise ValueError('维基文本原态哈希不符')
             sid = sha(canonical(['wikisource', meta['pageId'], meta['revisionId'], meta['captureSha256'], meta]))
             snapshots.append((sid, 'wikisource/zh/page/' + str(meta['pageId']), None, blob(raw), meta))
             entries.append((sid, 'page.wiki', 'wikitext', blob(content)))
 
     for rel in ['data/acquisition-manifest.json', 'data/corpus-inventory.json', 'shared/sources.json', 'shared/editions.json',
-                'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json', 'data/gap-search.json', 'data/wikisource-coverage.json', 'data/source-discovery.json']:
+                'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json', 'data/gap-search.json', 'data/wikisource-coverage.json', 'data/source-discovery.json', 'data/ouyang-source-directory.json','data/ouyang-front-matter-findings.json']:
         if not (root / rel).exists(): continue
         asset(rel, (root / rel).read_bytes(), 'manifest')
     discovery = root / 'data/source-discovery.json'
@@ -123,7 +119,7 @@ def input_bundle(root=ROOT, cache=None):
             for key in ['probe','metadataProbe','artifactProbe']:
                 probe = item.get(key,{})
                 if probe.get('status') != 'reachable': continue
-                raw = (cache / sha(probe['url'].encode())).read_bytes()
+                raw = cached_response(cache,probe['url'],probe['sha256'])
                 if sha(raw) != probe['sha256']: raise ValueError('寻源/影像原始响应哈希不符')
                 asset('source-discovery/' + item['id'] + '/' + key, raw, 'image-original' if key == 'artifactProbe' else 'source-response')
     gap_search = root / 'data/gap-search.json'
@@ -131,17 +127,22 @@ def input_bundle(root=ROOT, cache=None):
         for item in read(gap_search)['items']:
             probe = item['probe']
             if probe.get('status') != 'reachable': continue
-            raw = (cache / sha(probe['url'].encode())).read_bytes()
+            raw = cached_response(cache,probe['url'],probe['sha256'])
             if sha(raw) != probe['sha256']: raise ValueError('缺口调查响应哈希不符')
             asset('gap-search/' + item['id'], raw, 'source-response')
+    directory=root/'data/ouyang-source-directory.json'
+    if directory.exists():
+        probe=read(directory)['probe'];raw=cached_response(cache,probe['url'],probe['sha256'])
+        if sha(raw)!=probe['sha256']: raise ValueError('欧阳修子页目录响应哈希不符')
+        asset('catalog/ouyang-wiki-directory.json',raw,'catalog-api-response')
     for meta in read(root / 'data/catalog-recovery.json').get('catalogs', []) if (root / 'data/catalog-recovery.json').exists() else []:
         if meta['probe']['status'] == 'reachable':
-            raw = (cache / sha(meta['probe']['url'].encode())).read_bytes()
+            raw = cached_response(cache,meta['probe']['url'],meta['probe']['sha256'])
             if sha(raw) != meta['probe']['sha256']: raise ValueError('恢复目录响应哈希不符')
             asset('catalog-recovery/' + meta['path'] + '.json', raw, 'catalog-api-response')
     for meta in read(root / 'data/branch-survey.json').get('items', []) if (root / 'data/branch-survey.json').exists() else []:
         if meta['probe']['status'] == 'reachable':
-            raw = (cache / sha(meta['probe']['url'].encode())).read_bytes()
+            raw = cached_response(cache,meta['probe']['url'],meta['probe']['sha256'])
             if sha(raw) != meta['probe']['sha256']: raise ValueError('分支调查响应哈希不符')
             asset('branch-survey/' + meta['repository'] + '.json', raw, 'branch-api-response')
     inventory = read(root / 'data/corpus-inventory.json')
@@ -149,7 +150,7 @@ def input_bundle(root=ROOT, cache=None):
     for book in inventory['books']: record('corpus_book', str(book['id']), 0, book, 'data/corpus-inventory.json#/books/' + str(book['id']), digest)
     for meta in sources.get('catalogs', []):
         if meta['status'] != 'reachable': continue
-        raw = (cache / sha(meta['url'].encode())).read_bytes()
+        raw = cached_response(cache,meta['url'],meta['sha256'])
         if sha(raw) != meta['sha256']: raise ValueError('来源目录哈希不符')
         asset('catalog/' + meta['path'], raw, 'catalog')
     for folder, kind in [('works', 'work'), ('persons', 'person'), ('journeys', 'journey')]:
@@ -188,10 +189,26 @@ def input_bundle(root=ROOT, cache=None):
             'snapshots': snapshots, 'entries': entries, 'assets': assets, 'records': records}
 
 
+def missing_page_rows(rows, present):
+    """只省略INSERT必然冲突的完整主键区间；内容正确性仍由全量回读校验。"""
+    expected={}
+    for row in rows:
+        count,low,high=expected.get(row[0],(0,row[1],row[1]))
+        expected[row[0]]=(count+1,min(low,row[1]),max(high,row[1]))
+    complete={uid for uid,stats in present.items() if stats==expected.get(uid) and stats[0]==stats[2]-stats[1]+1}
+    return [row for row in rows if row[0] not in complete]
+
+
 def copy_rows(cur, table, columns, rows):
     from psycopg import sql
     rows = list(rows)
     if not rows: return
+    if table=='page':
+        cur.execute('SELECT unit_id,count(*),min(seq),max(seq) FROM research_ingest.page WHERE unit_id=ANY(%s) GROUP BY unit_id',(sorted({row[0] for row in rows}),))
+        present={uid:(count,low,high) for uid,count,low,high in cur.fetchall()}
+        rows=missing_page_rows(rows,present)
+        print('仅追加缺少原页范围：'+str(len(rows)),flush=True)
+        if not rows:return
     # 本批固定临时表名，仅在同一事务使用；批量COPY后INSERT，不逐行走公网。
     cur.execute(sql.SQL('CREATE TEMP TABLE incoming (LIKE research_ingest.{} INCLUDING DEFAULTS) ON COMMIT DROP').format(sql.Identifier(table)))
     # 公网连接有单语句时限。COPY按负载分组，但仍属于同一原子事务。
@@ -509,10 +526,11 @@ def verify(args):
             identities = sorted((s[0], s[4].get('provider','github'), str(s[4]['revisionId']) if s[4].get('provider') == 'wikisource' else None) for s in expected['snapshots'])
             require(sorted(cur.fetchall()) == identities, 'provider-revision-identities')
             wiki = [s[4] for s in bundle['snapshots'] if s[4].get('provider') == 'wikisource']
+            wiki_coverage={}
             if wiki:
-                sections = {section: {p['juanNumber'] for p in wiki if p.get('section') == section} for section in ['蜀志','吳志']}
-                require(sections == {'蜀志': set(range(1,16)), '吳志': set(range(1,21))} and len(wiki)==36 and sum(p['kind']=='contents' for p in wiki)==1,
-                        'sanguozhi-wiki-volume-coverage')
+                from wikisource_source import collection_coverage
+                wiki_coverage=collection_coverage(wiki)
+                require(wiki_coverage.get('wikisource-sanguozhi-siku',{}).get('selectedScopeComplete'), 'sanguozhi-wiki-volume-coverage')
             require(sorted(tuple(r[:4]) for r in bundle['entries']) == sorted(expected['entries']), 'all-archive-entry-paths')
             require(normalize(sorted(bundle['records'])) == normalize(sorted(expected['records'])), 'all-record-snapshots')
             # 以完整输入的哈希集合逐个回读，不能用条数或数据库内自报哈希替代。
@@ -584,6 +602,7 @@ def verify(args):
                       'repeatImportChecked': repeat_checked,
                       'originalBlobs': len(expected['blobs']), 'originalBytes': sum(map(len, expected['blobs'].values())),
                       'sourceSnapshotCounts': {'github': len(bundle['snapshots']) - len(wiki), 'wikisource': len(wiki)},
+                      'wikiCollectionCoverage':wiki_coverage,
                       'textUnitCounts': {'gitFiles': sum(e[2]=='text' for e in bundle['entries']), 'wikiPages': len(wiki), 'wikiBodyVolumes': sum(p['kind']=='body' for p in wiki)},
                       'textFiles': len(derived['unit']), 'archiveEntries': len(expected['entries']),
                       'recordCounts': expected['manifest']['recordCounts'], 'derivedCounts': {k: len(v) for k, v in derived.items()},

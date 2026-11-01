@@ -1,9 +1,14 @@
 """原页范围和研究证据隔离的回归检查；无需数据库或网络。"""
 import unittest
-from raw_ingest import source_unit, derive, sha, record_identity
+from raw_ingest import source_unit, derive, sha, record_identity, missing_page_rows
 
 
 class SourcePagesTests(unittest.TestCase):
+    def test_existing_complete_page_keys_are_skipped_but_gaps_are_not(self):
+        rows=[('unit',n,'content') for n in range(3)]
+        self.assertEqual(missing_page_rows(rows,{'unit':(3,0,2)}),[])
+        self.assertEqual(missing_page_rows(rows,{'unit':(2,0,2)}),rows)
+        self.assertEqual(missing_page_rows(rows,{'unit':(3,0,3)}),rows)
     def test_byte_offsets_survive_bom_multibyte_and_hard_wraps(self):
         raw = ('\ufeff#+TITLE: 測試\n#+PROPERTY: BASEEDITION WYG\n#+PROPERTY: JUAN 卷一\n'
                '<pb:BOOK_001-1a>¶江頭\n送客¶\n<pb:BOOK_001-1b>秋風\n').encode('utf-8')

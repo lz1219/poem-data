@@ -4895,6 +4895,21 @@
       }
     },
     {
+      "id": "wiki-ouyang-witness-1f3890ddd5f2ecedb5b7",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "与梅圣俞书"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "与梅圣俞书 · 文忠集巻一百四十九固定修订片段",
+      "provenance": {
+        "origin": "machine",
+        "method": "固定页面修订，去编排符号比较后截取实际原字符"
+      }
+    },
+    {
       "id": "wiki-witness-1cbe93412c4ef6b13dc1",
       "revision": 1,
       "subject": {

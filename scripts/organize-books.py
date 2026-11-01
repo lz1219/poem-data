@@ -3,7 +3,7 @@ import argparse
 import collections
 import io
 import zipfile
-from research import ROOT, read, dump, connect, now
+from research import ROOT, read, dump, connect, now, cached_response
 from raw_ingest import sha, source_unit
 
 
@@ -31,11 +31,17 @@ def render_register(doc):
     lines += ['', '同书异名、版本并列与现代栏目名关系候选见 `data/book-register.json`，未自动删除、合并或补造书目。', '']
     if doc.get('wikiRevisions'):
         lines += ['## 续补：维基固定修订与影像', '',
-                  '取得蜀志15卷、吴志20卷及目录，共36页固定修订；已核页面身份和实际卷题，全文转录/模板字仍待影像对校。Git与维基分别保留，不当独立佐证。', '',
+                  '已核实际取得页面的身份、修订和原卷题；全文转录、模板字仍待影像对校。Git与维基分别保留，不当独立佐证。', '',
+                  '| 集合 | 计划正文卷 | 已取正文卷 | 尚缺卷目数 |', '|---|---|---|---|']
+        for source,coverage in doc.get('wikiCoverage',{}).items():
+            lines.append('| '+source+' | '+str(coverage['expectedBodyVolumes'])+' | '+str(coverage['acquiredBodyVolumes'])+' | '+str(len(coverage['missing']))+' |')
+        if 'wikisource-ouyang-wenzhong-siku' in doc.get('wikiCoverage',{}):
+            lines += ['', '欧阳修153卷正文已取；根页含本传/年谱材料，篇界待核。原目录附录5卷不能据此销项；全览6重引正文卷001–005，未作为附录计入。根页出现cq=161标记，保留待查，不自动补字。']
+        lines += ['',
                   '| 卷目 | 固定修订 | 文本SHA-256 |', '|---|---|---|']
         for p in doc['wikiRevisions']:
             lines.append('| ' + p['title'] + ' | [' + str(p['revisionId']) + '](' + p['permalink'] + ') | ' + p['textSha256'] + ' |')
-        lines += ['', '另取得CADAL蜀志卷五至八影像及平台版本元数据（完整原件仅隔离保存），登记NDL其他版本机构书目作为寻源线索；不据此宣称影像已经对校或底本一致。', '']
+        lines += ['', '另取得CADAL蜀志卷五至八影像及平台版本元数据（完整原件仅隔离保存），登记NDL机构书目及NCL欧阳修宋残本线索；后者存目录及居士集41–44卷，不替代卷149摘句或全本。尚未据此认定影像已对校或底本一致。', '']
     return '\n'.join(lines)
 
 
@@ -67,7 +73,7 @@ def organize(credentials=None):
     acquired = []
     observations = []
     for meta in read(ROOT / 'data/acquisition-manifest.json')['repositories']:
-        raw = (cache / sha(meta['url'].encode())).read_bytes()
+        raw = cached_response(cache,meta['url'],meta['archiveSha256'])
         if sha(raw) != meta['archiveSha256']: raise ValueError('原典包哈希不符')
         entries = []
         with zipfile.ZipFile(io.BytesIO(raw)) as archive:
@@ -107,7 +113,10 @@ def organize(credentials=None):
                     {'bookIds': [18, 20, 21, 22, 23], 'relationship': '王阳明全集、传习录与旧栏目名混列，不能当五部独立原书'}]
     wiki_path = ROOT / 'data/wikisource-acquisition.json'
     wiki_pages = read(wiki_path)['pages'] if wiki_path.exists() else []
+    coverage_path=ROOT/'data/wikisource-coverage.json'
+    wiki_coverage=read(coverage_path).get('collections',{}) if coverage_path.exists() else {}
     doc = {'checkedAt': now(), 'inventoryCheckedAt': inventory['checkedAt'], 'legacyBooks': books, 'wikiRevisions': wiki_pages,
+           'wikiCoverage':wiki_coverage,
            'titleRelationshipsPendingReview': title_groups, 'acquiredEditions': acquired, 'coverageObservations': observations,
            'blockedCandidates': blocked, 'remainingResearchNeeds': plan['remaining'],
            'counts': {'legacyBookRows': len(books), 'citationOnly': sum(b['status'] == 'citation-only' for b in books),

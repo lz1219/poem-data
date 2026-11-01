@@ -22,74 +22,7 @@
         "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/CADAL06058768_%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "descriptionurl": "https://commons.wikimedia.org/wiki/File:CADAL06058768_%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu",
         "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85354933",
-        "sha1": "488eac1d9031eeaf1fa308ff7dcdb8ed55dd025c",
-        "extmetadata": {
-          "DateTime": {
-            "value": "2019-12-28 19:00:40",
-            "source": "mediawiki-metadata",
-            "hidden": ""
-          },
-          "ObjectName": {
-            "value": "<div class=\"fn\">\n蜀志·卷五~卷八</div>",
-            "source": "commons-desc-page"
-          },
-          "CommonsMetadataExtension": {
-            "value": 1.2,
-            "source": "extension",
-            "hidden": ""
-          },
-          "Categories": {
-            "value": "PD Old|CC-PD-Mark|Books without Wikidata item|Scans from the China Academic Digital Associative Library|蜀志",
-            "source": "commons-categories",
-            "hidden": ""
-          },
-          "Assessments": {
-            "value": "",
-            "source": "commons-categories",
-            "hidden": ""
-          },
-          "Artist": {
-            "value": "<div class=\"fn value\">\n（漢）陳壽（撰）；（宋）裴松之</div>",
-            "source": "commons-desc-page"
-          },
-          "ImageDescription": {
-            "value": "<div class=\"description\">\n四庫全書；史部；正史類</div>",
-            "source": "commons-desc-page"
-          },
-          "Credit": {
-            "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Zhejiang_University\" class=\"extiw\" title=\"w:en:Zhejiang University\"><span title=\"university in Hangzhou, China\">Zhejiang University</span></a>\n</bdi>",
-            "source": "commons-desc-page"
-          },
-          "LicenseShortName": {
-            "value": "Public domain",
-            "source": "commons-desc-page",
-            "hidden": ""
-          },
-          "UsageTerms": {
-            "value": "Public domain",
-            "source": "commons-desc-page"
-          },
-          "AttributionRequired": {
-            "value": "false",
-            "source": "commons-desc-page",
-            "hidden": ""
-          },
-          "Copyrighted": {
-            "value": "False",
-            "source": "commons-desc-page",
-            "hidden": ""
-          },
-          "Restrictions": {
-            "value": "",
-            "source": "commons-desc-page",
-            "hidden": ""
-          },
-          "License": {
-            "value": "pd",
-            "source": "commons-templates",
-            "hidden": ""
-          }
-        }
+        "sha1": "488eac1d9031eeaf1fa308ff7dcdb8ed55dd025c"
       },
       "status": "image-captured-research-only",
       "relationship": "四库本影像候选；具体底本和与转录关系待核，不作独立证据",
@@ -99,7 +32,9 @@
         "status": "reachable",
         "sha256": "2b8620300e500c50fc19e971ea5b77511888d30d0d4585d601e3ff017012afc0",
         "bytes": 7139558
-      }
+      },
+      "platformLicenseLabel": "Public domain",
+      "metadataNote": "完整平台响应另存隔离库；此处只留检索标识、哈希和简短目录信息。"
     },
     {
       "id": "sanguozhi-institution-catalog",
@@ -114,6 +49,97 @@
       },
       "status": "catalog-captured",
       "relationship": "不同版本书目线索，不据此认定现有转录底本或直接导入受版权保护现代断句"
+    },
+    {
+      "id": "ouyang-sung-fragment-image",
+      "channel": "image",
+      "collection": "wikisource-ouyang-wenzhong-siku",
+      "title": "File:NCL-10102 歐陽文忠公集.pdf",
+      "metadataProbe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ANCL-10102+%E6%AD%90%E9%99%BD%E6%96%87%E5%BF%A0%E5%85%AC%E9%9B%86.pdf&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T10:36:45.381118+00:00",
+        "status": "reachable",
+        "sha256": "0ec421b54feddc9e304f68e11c0425f4103fb7962961f78e6abf91ef7c250b74",
+        "bytes": 4088
+      },
+      "status": "metadata-only",
+      "relationship": "南宋覆周必大吉州本的残本线索，未涵盖所引卷149，不替代全集或直接证明摘句",
+      "image": {
+        "size": 13093429,
+        "width": 1683,
+        "height": 1239,
+        "pagecount": 101,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/NCL-10102_%E6%AD%90%E9%99%BD%E6%96%87%E5%BF%A0%E5%85%AC%E9%9B%86.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:NCL-10102_%E6%AD%90%E9%99%BD%E6%96%87%E5%BF%A0%E5%85%AC%E9%9B%86.pdf",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=138007436",
+        "sha1": "7dc09ec7209439143f3d8f55c12a8c889c605289"
+      },
+      "revisionId": 1112850666,
+      "platformLicenseLabel": "Public domain",
+      "metadataNote": "完整平台响应另存隔离库；此处只留检索标识、哈希和简短目录信息。",
+      "catalogExtent": "目录及居士集41–44卷（平台元数据所载，实物待核）",
+      "nextAction": "研究涉及存卷时再取影像；本批保留可追溯目录和链接"
+    },
+    {
+      "id": "ouyang-institution-catalog",
+      "collection": "wikisource-ouyang-wenzhong-siku",
+      "channel": "institution-catalog",
+      "title": "欧陽文忠公集",
+      "probe": {
+        "url": "https://ndlsearch.ndl.go.jp/books/R100000001-I15111920200038",
+        "checkedAt": "2026-11-01T10:36:49.101468+00:00",
+        "status": "reachable",
+        "sha256": "c50de4f6a014a07cb7784678fe6eb62b03274d5f1ece7b0d525664462afabbe4",
+        "bytes": 186807
+      },
+      "status": "catalog-captured",
+      "relationship": "机构书目线索，不据题名推定与维基或SBCK同本"
+    },
+    {
+      "id": "ouyang-composite-links",
+      "collection": "wikisource-ouyang-wenzhong-siku",
+      "channel": "text-structure",
+      "title": "文忠集 (歐陽修, 四庫全書本)/全覽6",
+      "probe": {
+        "url": "https://zh.wikisource.org/w/api.php?format=json&formatversion=2&action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&revids=699968",
+        "checkedAt": "2026-11-01T10:36:40.443521+00:00",
+        "status": "reachable",
+        "sha256": "95470cc50dff36b559097c641ad5897468917616407958cb4911d7555b9589ec",
+        "bytes": 1504
+      },
+      "captureMetadata": {
+        "provider": "wikisource",
+        "sourceId": "wikisource-sanguozhi-siku",
+        "title": "文忠集 (歐陽修, 四庫全書本)/全覽6",
+        "pageId": 295900,
+        "revisionId": 699968,
+        "revisionTimestamp": "2016-10-16T06:58:18Z",
+        "url": "https://zh.wikisource.org/w/api.php?format=json&formatversion=2&action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&revids=699968",
+        "permalink": "https://zh.wikisource.org/w/index.php?oldid=699968",
+        "captureSha256": "95470cc50dff36b559097c641ad5897468917616407958cb4911d7555b9589ec",
+        "textSha256": "8b3418b9607c2093a1c33cf9966a3cc38d65dcc26658ac36f5f73b6d834088c5",
+        "fetchedAt": "2026-11-01T10:36:40.443521+00:00",
+        "baseEdition": "维基文库标示四库全书本；底本影像与转录质量待核",
+        "permissions": {
+          "read": true,
+          "download": "public-api",
+          "ingest": "research-copy",
+          "redistribute": "not-cleared"
+        },
+        "reviewStatus": "pending"
+      },
+      "references": [
+        "文忠集 (歐陽修, 四庫全書本)/卷151",
+        "文忠集 (歐陽修, 四庫全書本)/卷152",
+        "文忠集 (歐陽修, 四庫全書本)/卷153",
+        "文忠集 (歐陽修, 四庫全書本)/卷001",
+        "文忠集 (歐陽修, 四庫全書本)/卷002",
+        "文忠集 (歐陽修, 四庫全書本)/卷003",
+        "文忠集 (歐陽修, 四庫全書本)/卷004",
+        "文忠集 (歐陽修, 四庫全書本)/卷005"
+      ],
+      "finding": "全览6引用卷151-153后再次引用卷001-005，未见附录页引用；不能把重复正文计为附录5卷",
+      "status": "captured-structure-only"
     }
   ]
 }
