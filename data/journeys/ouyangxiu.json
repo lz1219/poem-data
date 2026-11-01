@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0",
+  "key": "ouyangxiu",
+  "personKey": "ouyangxiu",
+  "titleZh": "欧阳修：从绵州到颍州",
+  "titleEn": "Ouyang Xiu: From Mianzhou to Yingzhou",
+  "spanZh": "1007年 — 1072年",
+  "origin": "overlay",
+  "intro": {
+    "text": "欧阳修（1007—1072）的仕历在 CBDB 里有三十五段，但多数没有记年；有年份的六段恰好串起主线：河北转运使、滁州、扬州、枢密副使、参知政事、亳州。生地与卒地据史传补足，中间那些没有年份的任所，只写承接，不硬造站。",
+    "source": "CBDB 1384（POSTED_TO_OFFICE_DATA，35 段）；《宋史》卷三一九《欧阳修传》"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 1007,
+      "eraZh": "景德四年",
+      "place": {
+        "ancient": "绵州",
+        "modern": "四川绵阳",
+        "coord": [
+          104.7447,
+          31.4674
+        ]
+      },
+      "titleZh": "生于绵州",
+      "descZh": "其父欧阳观时任绵州推官，欧阳修生于绵州。",
+      "quote": null,
+      "source": "CBDB 1384（c_birthyear=1007）；《宋史》卷三一九《欧阳修传》"
+    },
+    {
+      "seq": 2,
+      "year": 1036,
+      "eraZh": "景祐三年",
+      "place": {
+        "ancient": "夷陵",
+        "modern": "湖北宜昌",
+        "coord": [
+          111.29,
+          30.69
+        ]
+      },
+      "titleZh": "贬夷陵县令",
+      "descZh": "因言范仲淹事忤权贵，贬峡州夷陵县令。CBDB 记其任「县令，夷陵」，未记年；年份据本传。",
+      "quote": null,
+      "source": "CBDB 1384（縣令，夷陵，年份缺）；《宋史》卷三一九《欧阳修传》"
+    },
+    {
+      "seq": 3,
+      "year": 1044,
+      "eraZh": "庆历四年",
+      "place": {
+        "ancient": "大名府",
+        "modern": "河北邯郸大名",
+        "coord": [
+          115.15,
+          36.28
+        ]
+      },
+      "titleZh": "河北路转运使",
+      "descZh": "任河北路转运使；河北路治所在大名府。",
+      "quote": null,
+      "source": "CBDB 1384（轉運使，河北路，1044）"
+    },
+    {
+      "seq": 4,
+      "year": 1045,
+      "eraZh": "庆历五年",
+      "place": {
+        "ancient": "滁州",
+        "modern": "安徽滁州",
+        "coord": [
+          118.317,
+          32.301
+        ]
+      },
+      "titleZh": "知滁州",
+      "descZh": "贬知滁州，在任三年；《醉翁亭记》即作于此。",
+      "quote": "欧阳修《醉翁亭记》：“醉翁之意不在酒，在乎山水之间也。”",
+      "source": "CBDB 1384（知某州軍州事，滁州，1045—1048）"
+    },
+    {
+      "seq": 5,
+      "year": 1048,
+      "eraZh": "庆历八年",
+      "place": {
+        "ancient": "扬州",
+        "modern": "江苏扬州",
+        "coord": [
+          119.411,
+          32.391
+        ]
+      },
+      "titleZh": "知扬州",
+      "descZh": "移知扬州，并兼堤堰桥道劝农使。",
+      "quote": null,
+      "source": "CBDB 1384（知某州軍州事，揚州，1048—1049）"
+    },
+    {
+      "seq": 6,
+      "year": 1060,
+      "eraZh": "嘉祐五年",
+      "place": {
+        "ancient": "开封",
+        "modern": "河南开封",
+        "coord": [
+          114.311,
+          34.801
+        ]
+      },
+      "titleZh": "同知枢密院事",
+      "descZh": "由地方入朝，任同知枢密院事。",
+      "quote": null,
+      "source": "CBDB 1384（同知樞密院事，1060）"
+    },
+    {
+      "seq": 7,
+      "year": 1061,
+      "eraZh": "嘉祐六年",
+      "place": {
+        "ancient": "开封",
+        "modern": "河南开封",
+        "coord": [
+          114.311,
+          34.801
+        ]
+      },
+      "titleZh": "参知政事",
+      "descZh": "拜参知政事，居执政之位。",
+      "quote": null,
+      "source": "CBDB 1384（參知政事，1061）"
+    },
+    {
+      "seq": 8,
+      "year": 1067,
+      "eraZh": "治平四年",
+      "place": {
+        "ancient": "亳州",
+        "modern": "安徽亳州",
+        "coord": [
+          115.78,
+          33.87
+        ]
+      },
+      "titleZh": "知亳州",
+      "descZh": "罢政出知亳州，带观文殿学士、刑部尚书衔。",
+      "quote": null,
+      "source": "CBDB 1384（知某州軍州事，亳州，1067—1068；觀文殿學士、刑部尚書亦系此年）"
+    },
+    {
+      "seq": 9,
+      "year": 1072,
+      "eraZh": "熙宁五年",
+      "place": {
+        "ancient": "颍州",
+        "modern": "安徽阜阳",
+        "coord": [
+          115.81,
+          32.89
+        ]
+      },
+      "titleZh": "卒于颍州",
+      "descZh": "晚年致仕居颍州，熙宁五年卒，年六十六。",
+      "quote": null,
+      "source": "CBDB 1384（c_deathyear=1072）；《宋史》卷三一九《欧阳修传》"
+    }
+  ],
+  "links": {
+    "6": {
+      "text": "扬州之后到嘉祐五年入朝，中间十余年，CBDB 记有多处任所而无年份；这几年他主要在地方与朝廷之间往来，故只写承接，不列站。",
+      "source": "CBDB 1384（该段多段任职缺年份）"
+    },
+    "9": {
+      "text": "亳州之后转知青州，又改知蔡州，熙宁四年致仕，归颍州而卒。这一段据本传，CBDB 只记任所不记年。",
+      "source": "《宋史》卷三一九《欧阳修传》；CBDB 1384（知青州、致仕居颍）"
+    }
+  }
+}

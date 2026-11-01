@@ -1,0 +1,212 @@
+{
+  "schemaVersion": "1.0",
+  "key": "dumu",
+  "personKey": "dumu",
+  "titleZh": "杜牧：从扬州到长安",
+  "titleEn": "Du Mu: From Yangzhou to Chang'an",
+  "spanZh": "803年 — 853年",
+  "origin": "overlay",
+  "intro": {
+    "text": "杜牧（803—853）一生大半在外任；扬州、宣州、黄州、池州、睦州、湖州，几乎是一条沿江南下的线。他的仕历在 CBDB 里有十四段记录，年份多可考，这条行迹就按任职地一站一站排下来。",
+    "source": "CBDB 21194（POSTED_TO_OFFICE_DATA，14 段任职）"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 803,
+      "eraZh": "贞元十九年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "生于京兆万年",
+      "descZh": "杜牧生于京兆府万年县，出身宰相之家，祖父杜佑撰《通典》。",
+      "quote": null,
+      "source": "CBDB 21194（c_birthyear=803）"
+    },
+    {
+      "seq": 2,
+      "year": 833,
+      "eraZh": "大和七年",
+      "place": {
+        "ancient": "扬州",
+        "modern": "江苏扬州",
+        "coord": [
+          119.411,
+          32.391
+        ]
+      },
+      "titleZh": "淮南节度推官",
+      "descZh": "入淮南节度使牛僧孺幕府为推官，居扬州。此后追忆扬州之作最多。",
+      "quote": "杜牧《遣怀》：“十年一觉扬州梦，赢得青楼薄幸名。”",
+      "source": "CBDB 21194（節度使推官，淮南道，833）"
+    },
+    {
+      "seq": 3,
+      "year": 835,
+      "eraZh": "大和九年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.451,
+          34.621
+        ]
+      },
+      "titleZh": "监察御史分司东都",
+      "descZh": "入朝为监察御史，分司东都洛阳。",
+      "quote": null,
+      "source": "CBDB 21194（監察御史分司東都，835）"
+    },
+    {
+      "seq": 4,
+      "year": 837,
+      "eraZh": "开成二年",
+      "place": {
+        "ancient": "宣州",
+        "modern": "安徽宣城",
+        "coord": [
+          118.759,
+          30.94
+        ]
+      },
+      "titleZh": "宣歙观察使团练判官",
+      "descZh": "入宣歙观察使幕为团练判官。",
+      "quote": null,
+      "source": "CBDB 21194（觀察使團練判官，宣歙，837）"
+    },
+    {
+      "seq": 5,
+      "year": 842,
+      "eraZh": "会昌二年",
+      "place": {
+        "ancient": "黄州",
+        "modern": "湖北黄冈",
+        "coord": [
+          114.88,
+          30.45
+        ]
+      },
+      "titleZh": "黄州刺史",
+      "descZh": "出为黄州刺史。",
+      "quote": null,
+      "source": "CBDB 21194（州刺史，黄州，842）"
+    },
+    {
+      "seq": 6,
+      "year": 844,
+      "eraZh": "会昌四年",
+      "place": {
+        "ancient": "池州",
+        "modern": "安徽池州",
+        "coord": [
+          117.491,
+          30.665
+        ]
+      },
+      "titleZh": "池州刺史",
+      "descZh": "转池州刺史，在任约两年。",
+      "quote": null,
+      "source": "CBDB 21194（州刺史，池州，844）"
+    },
+    {
+      "seq": 7,
+      "year": 845,
+      "eraZh": "会昌五年",
+      "place": {
+        "ancient": "睦州",
+        "modern": "浙江建德",
+        "coord": [
+          119.4989,
+          29.5445
+        ]
+      },
+      "titleZh": "睦州刺史",
+      "descZh": "再转睦州刺史。",
+      "quote": null,
+      "source": "CBDB 21194（州刺史，睦州，845）"
+    },
+    {
+      "seq": 8,
+      "year": 848,
+      "eraZh": "大中二年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "史馆修撰",
+      "descZh": "入朝为史馆修撰，回到长安。",
+      "quote": null,
+      "source": "CBDB 21194（史館修撰，848）"
+    },
+    {
+      "seq": 9,
+      "year": 850,
+      "eraZh": "大中四年",
+      "place": {
+        "ancient": "湖州",
+        "modern": "浙江湖州",
+        "coord": [
+          120.087,
+          30.894
+        ]
+      },
+      "titleZh": "湖州刺史",
+      "descZh": "出为湖州刺史。",
+      "quote": null,
+      "source": "CBDB 21194（州刺史，湖州，850—851）"
+    },
+    {
+      "seq": 10,
+      "year": 852,
+      "eraZh": "大中六年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "中书舍人",
+      "descZh": "还朝为中书舍人。",
+      "quote": null,
+      "source": "CBDB 21194（中書舍人，852）"
+    },
+    {
+      "seq": 11,
+      "year": 853,
+      "eraZh": "大中七年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "卒于长安",
+      "descZh": "大中七年卒，年五十。",
+      "quote": null,
+      "source": "CBDB 21194（c_deathyear=853）"
+    }
+  ],
+  "links": {
+    "4": {
+      "text": "由洛阳转入宣歙幕府；此后近十年，他的任所一路在南，黄州、池州、睦州、湖州。",
+      "source": "CBDB 21194（任职地：洛陽→宣歙→黃州→池州→睦州→湖州）"
+    },
+    "8": {
+      "text": "睦州任满后入朝为史馆修撰，是这条南行线上的第一次北返。",
+      "source": "CBDB 21194（睦州 845、史館修撰 848）"
+    }
+  }
+}

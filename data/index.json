@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T19:56:42Z",
+  "generatedAt": "2026-11-01T03:09:56.014Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -16,7 +16,7 @@
     {
       "key": "三国志·诸葛亮传",
       "titleZh": "三国志 · 诸葛亮传",
-      "authorKey": "p24146",
+      "authorKey": "chenshou",
       "genre": "history",
       "level": "popular",
       "year": 208,
@@ -508,7 +508,7 @@
     {
       "key": "汉书·张骞传",
       "titleZh": "汉书 · 张骞传",
-      "authorKey": "p135114",
+      "authorKey": "bangu",
       "genre": "history",
       "level": "popular",
       "year": -138,
@@ -520,7 +520,7 @@
     {
       "key": "汉晋春秋",
       "titleZh": "汉晋春秋 · 南征",
-      "authorKey": "p418976",
+      "authorKey": "xizaochi",
       "genre": "history",
       "level": "popular",
       "year": 225,
@@ -784,7 +784,7 @@
     {
       "key": "阿房宫赋",
       "titleZh": "阿房宫赋",
-      "authorKey": "p21194",
+      "authorKey": "dumu",
       "genre": "fu",
       "level": "popular",
       "year": -221,
@@ -892,6 +892,26 @@
       "file": "data/persons/baijuyi.json"
     },
     {
+      "key": "bangu",
+      "zh": "班固",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/bangu.json"
+    },
+    {
+      "key": "chenshou",
+      "zh": "陈寿",
+      "span": [
+        0,
+        0
+      ],
+      "hasJourney": false,
+      "file": "data/persons/chenshou.json"
+    },
+    {
       "key": "dufu",
       "zh": "杜甫",
       "span": [
@@ -900,6 +920,16 @@
       ],
       "hasJourney": true,
       "file": "data/persons/dufu.json"
+    },
+    {
+      "key": "dumu",
+      "zh": "杜牧",
+      "span": [
+        803,
+        853
+      ],
+      "hasJourney": true,
+      "file": "data/persons/dumu.json"
     },
     {
       "key": "guanyu",
@@ -968,48 +998,8 @@
         1007,
         1072
       ],
-      "hasJourney": false,
+      "hasJourney": true,
       "file": "data/persons/ouyangxiu.json"
-    },
-    {
-      "key": "p135114",
-      "zh": "班固",
-      "span": [
-        null,
-        null
-      ],
-      "hasJourney": false,
-      "file": "data/persons/p135114.json"
-    },
-    {
-      "key": "p21194",
-      "zh": "杜牧",
-      "span": [
-        803,
-        853
-      ],
-      "hasJourney": false,
-      "file": "data/persons/p21194.json"
-    },
-    {
-      "key": "p24146",
-      "zh": "陈寿",
-      "span": [
-        0,
-        0
-      ],
-      "hasJourney": false,
-      "file": "data/persons/p24146.json"
-    },
-    {
-      "key": "p418976",
-      "zh": "习凿齿",
-      "span": [
-        null,
-        null
-      ],
-      "hasJourney": false,
-      "file": "data/persons/p418976.json"
     },
     {
       "key": "qinshihuang",
@@ -1050,6 +1040,16 @@
       ],
       "hasJourney": true,
       "file": "data/persons/wangyangming.json"
+    },
+    {
+      "key": "xizaochi",
+      "zh": "习凿齿",
+      "span": [
+        null,
+        null
+      ],
+      "hasJourney": false,
+      "file": "data/persons/xizaochi.json"
     },
     {
       "key": "xuanzang",
@@ -1118,6 +1118,13 @@
       "file": "data/journeys/dufu.json"
     },
     {
+      "key": "dumu",
+      "titleZh": "杜牧：从扬州到长安",
+      "stops": 11,
+      "origin": "overlay",
+      "file": "data/journeys/dumu.json"
+    },
+    {
       "key": "jiangjie",
       "titleZh": "蒋捷：宋亡之后的竹山",
       "stops": 9,
@@ -1130,6 +1137,13 @@
       "stops": 16,
       "origin": "upstream",
       "file": "data/journeys/libai.json"
+    },
+    {
+      "key": "ouyangxiu",
+      "titleZh": "欧阳修：从绵州到颍州",
+      "stops": 9,
+      "origin": "overlay",
+      "file": "data/journeys/ouyangxiu.json"
     },
     {
       "key": "qinshihuang",
