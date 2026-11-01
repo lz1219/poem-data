@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-11-01T09:44:07.335411+00:00",
+  "items": [
+    {
+      "id": "sanguozhi-data",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR2a0012/git/trees/799e7fc0f38896a103e0a7482313bb4354d2e8b0?recursive=1",
+        "checkedAt": "2026-11-01T09:44:06.231371+00:00",
+        "status": "reachable",
+        "sha256": "307b012b2eb45eddc77d5424ef08e06be610680a073f045fc454960d0e6b8da4",
+        "bytes": 7802
+      }
+    },
+    {
+      "id": "wenxian",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR4d0068/commits/WYG",
+        "checkedAt": "2026-11-01T09:44:07.334434+00:00",
+        "status": "unavailable",
+        "error": "OSError",
+        "attempts": 2
+      }
+    },
+    {
+      "id": "wikisource-shu",
+      "probe": {
+        "url": "https://zh.wikisource.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&titles=%E4%B8%89%E5%9C%8B%E5%BF%97_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)/%E8%9C%80%E5%BF%97/%E5%8D%B701&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T09:44:06.579414+00:00",
+        "status": "reachable",
+        "sha256": "bb2661d18467e737c6257e71b52338a4e5e1fda632b711addd5f1dc4f8f0426c",
+        "bytes": 11740
+      }
+    }
+  ]
+}

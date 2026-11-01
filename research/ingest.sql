@@ -26,6 +26,14 @@ CREATE TABLE IF NOT EXISTS research_ingest.source_snapshot (
 -- 旧版只按包身份唯一，无法并存修订后的采集元数据；保留旧行，身份由完整内容哈希确定。
 ALTER TABLE research_ingest.source_snapshot
     DROP CONSTRAINT IF EXISTS source_snapshot_repository_commit_sha_archive_sha256_key;
+ALTER TABLE research_ingest.source_snapshot ADD COLUMN IF NOT EXISTS provider text NOT NULL DEFAULT 'github';
+ALTER TABLE research_ingest.source_snapshot ADD COLUMN IF NOT EXISTS revision_id text;
+ALTER TABLE research_ingest.source_snapshot ALTER COLUMN commit_sha DROP NOT NULL;
+ALTER TABLE research_ingest.source_snapshot DROP CONSTRAINT IF EXISTS source_snapshot_provider_identity_check;
+ALTER TABLE research_ingest.source_snapshot ADD CONSTRAINT source_snapshot_provider_identity_check CHECK (
+    (provider='github' AND commit_sha IS NOT NULL AND revision_id IS NULL)
+    OR (provider='wikisource' AND commit_sha IS NULL AND revision_id IS NOT NULL AND revision_id ~ '^[1-9][0-9]*$')
+);
 CREATE TABLE IF NOT EXISTS research_ingest.batch_source (
     batch_id text REFERENCES research_ingest.batch(id),
     snapshot_id text REFERENCES research_ingest.source_snapshot(id),
@@ -38,6 +46,8 @@ CREATE TABLE IF NOT EXISTS research_ingest.file_entry (
     blob_sha256 text NOT NULL REFERENCES research_ingest.blob(sha256),
     PRIMARY KEY (snapshot_id, path)
 );
+ALTER TABLE research_ingest.file_entry DROP CONSTRAINT IF EXISTS file_entry_role_check;
+ALTER TABLE research_ingest.file_entry ADD CONSTRAINT file_entry_role_check CHECK (role IN ('text','metadata','other','wikitext'));
 CREATE TABLE IF NOT EXISTS research_ingest.batch_asset (
     batch_id text REFERENCES research_ingest.batch(id),
     path text NOT NULL,

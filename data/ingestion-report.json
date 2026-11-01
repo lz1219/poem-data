@@ -1,36 +1,45 @@
 {
-  "batchId": "3eea1e201018d39cae7d31e64eca3f8b4504f1c7a6d96bc6ca822f1971be5ec5",
+  "batchId": "1d3137cb253a2bfbe6111377a7fcdb64c7e152d2d99fd3e37184822520b8c617",
   "phase": "verified",
-  "verifiedAt": "2026-11-01T06:26:04.787639+00:00",
+  "verifiedAt": "2026-11-01T10:12:42.245849+00:00",
   "integrityPassed": true,
   "academicReview": "pending",
   "publicExposure": false,
   "repeatImportChecked": true,
-  "originalBlobs": 2543,
-  "originalBytes": 86661977,
-  "textFiles": 1968,
-  "archiveEntries": 2019,
+  "originalBlobs": 2628,
+  "originalBytes": 96014492,
+  "sourceSnapshotCounts": {
+    "github": 29,
+    "wikisource": 36
+  },
+  "textUnitCounts": {
+    "gitFiles": 1968,
+    "wikiPages": 36,
+    "wikiBodyVolumes": 35
+  },
+  "textFiles": 2004,
+  "archiveEntries": 2055,
   "recordCounts": {
     "corpus_book": 38,
     "work": 69,
     "person": 35,
     "journey": 20,
     "stop": 201,
-    "source": 44,
+    "source": 46,
     "edition": 3,
-    "research_revision": 355
+    "research_revision": 357
   },
   "derivedCounts": {
-    "edition": 29,
-    "unit": 1968,
-    "page": 101808,
-    "record_link": 645,
-    "quote_match": 19,
+    "edition": 65,
+    "unit": 2004,
+    "page": 101844,
+    "record_link": 647,
+    "quote_match": 21,
     "issue": 900
   },
   "unitKinds": {
-    "front_matter": 27,
-    "body": 1345,
+    "front_matter": 28,
+    "body": 1380,
     "back_matter": 15,
     "unclassified": 581
   },
@@ -40,7 +49,7 @@
     "traditional-derived": 49,
     "stop-fact-review-pending": 201
   },
-  "checksPassed": 103832,
+  "checksPassed": 103910,
   "publicTableCounts": {
     "book": 38,
     "stop": 105,
@@ -56,8 +65,8 @@
     "research_note": 348
   },
   "evidenceLocations": {
-    "total": 19,
-    "exact": 19,
+    "total": 21,
+    "exact": 21,
     "unresolved": 0
   },
   "scope": "原件及快照全量存储回读验证；不等于学术内容已核，不等于原典全本无缺卷。"

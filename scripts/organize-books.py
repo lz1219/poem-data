@@ -17,7 +17,7 @@ def render_register(doc):
         lines.append('| ' + ' / '.join(e['titles']) + ' | ' + ', '.join(e['baseCodes']) + ' | [' + repo.split('/')[1] + '@' + commit[:8] + '](https://github.com/' + repo + '/tree/' + commit + ') | ' + str(e['textFiles']) + ' |')
     lines += ['', '文件数不是原书卷数。ZIP和每个原文件均保存，卷首、附录、重排编号和缺卷另核。', '',
               '## 当前已识别的问题与下一步', '',
-              '- 《三国志》master与WYG仅检出《魏志》卷首；继续寻《蜀志》《吴志》，不能把本仓库当全书。',
+              '- 《三国志》Git master与WYG仍仅有魏志；已另取维基蜀15、吴20及目录固定修订，须对照影像，不拼成未经说明的混合底本。',
               '- 《文忠集》入口受阻。另一个目录题《欧阳文粹》的仓库实际文件题《欧阳文忠公集》，须按SBCK组件和原卷编目，不能直接称选本或全集。',
               '- 《王文成公全书》的数字JUAN是重排编号候选，原FILE含不同卷号；主文、年谱、附录分别核目录，保留对应关系。',
               '- 《白氏文集》《韦刺史诗集》《刘梦得文集》等实际题名与目录存在异名，保留实际文件题名，不自动合并版本。',
@@ -29,6 +29,13 @@ def render_register(doc):
     for b in doc['legacyBooks']:
         lines.append(f'| {b["id"]} | {b["title"]} | {b["textUnits"]} | {b["poemRecords"]} | {labels[b["status"]]} |')
     lines += ['', '同书异名、版本并列与现代栏目名关系候选见 `data/book-register.json`，未自动删除、合并或补造书目。', '']
+    if doc.get('wikiRevisions'):
+        lines += ['## 续补：维基固定修订与影像', '',
+                  '取得蜀志15卷、吴志20卷及目录，共36页固定修订；已核页面身份和实际卷题，全文转录/模板字仍待影像对校。Git与维基分别保留，不当独立佐证。', '',
+                  '| 卷目 | 固定修订 | 文本SHA-256 |', '|---|---|---|']
+        for p in doc['wikiRevisions']:
+            lines.append('| ' + p['title'] + ' | [' + str(p['revisionId']) + '](' + p['permalink'] + ') | ' + p['textSha256'] + ' |')
+        lines += ['', '另取得CADAL蜀志卷五至八影像及平台版本元数据（完整原件仅隔离保存），登记NDL其他版本机构书目作为寻源线索；不据此宣称影像已经对校或底本一致。', '']
     return '\n'.join(lines)
 
 
@@ -80,7 +87,7 @@ def organize(credentials=None):
                         for label in ['魏志', '蜀志', '吳志']}
             observations.append({'repository': meta['repository'], 'commit': meta['commit'],
                 'code': 'section-coverage', 'sectionHeadingCounts': sections,
-                'nextAction': '当前master及WYG仅检出魏志卷首；蜀、吴两部分另寻原件，不视作三国志全本'})
+                'nextAction': 'Git仅检出魏志；维基另取蜀吴固定修订，须对照影像，不认作Git全本或自动拼合底本'})
         if meta['repository'].endswith('KR4e0157'):
             observations.append({'repository': meta['repository'], 'commit': meta['commit'], 'code': 'reordered-file-index',
                 'example': {k: entries[1].get(k) for k in ['path', 'juanHeader', 'fileLabel', 'juan']},
@@ -98,7 +105,9 @@ def organize(credentials=None):
                     {'bookIds': [24, 26], 'relationship': '竹山词繁简异名，版本关系待核'},
                     {'bookIds': [78, 109], 'relationship': '全唐诗同名书目，一条含诗库记录，一条可能仅出处占位'},
                     {'bookIds': [18, 20, 21, 22, 23], 'relationship': '王阳明全集、传习录与旧栏目名混列，不能当五部独立原书'}]
-    doc = {'checkedAt': now(), 'inventoryCheckedAt': inventory['checkedAt'], 'legacyBooks': books,
+    wiki_path = ROOT / 'data/wikisource-acquisition.json'
+    wiki_pages = read(wiki_path)['pages'] if wiki_path.exists() else []
+    doc = {'checkedAt': now(), 'inventoryCheckedAt': inventory['checkedAt'], 'legacyBooks': books, 'wikiRevisions': wiki_pages,
            'titleRelationshipsPendingReview': title_groups, 'acquiredEditions': acquired, 'coverageObservations': observations,
            'blockedCandidates': blocked, 'remainingResearchNeeds': plan['remaining'],
            'counts': {'legacyBookRows': len(books), 'citationOnly': sum(b['status'] == 'citation-only' for b in books),
@@ -106,6 +115,7 @@ def organize(credentials=None):
                       'withPoemsOnly': sum(b['status'] == 'has-poem-records' for b in books),
                       'acquiredRepositories': len({m['repository'] for m in acquired}), 'sourceSnapshots': len(acquired),
                       'acquiredTextFiles': sum(x['textFiles'] for x in acquired),
+                      'wikiPages': len(wiki_pages), 'wikiBodyVolumes': sum(p['kind']=='body' for p in wiki_pages),
                       'blockedCandidates': len(blocked)},
            'limitation': '书目身份和储存完整性检查，不是全文校勘；不沿用旧缺卷数字，不删除或合并现有书目。'}
     dump(ROOT / 'data/book-register.json', doc)

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "wiki-witness-1cbe93412c4ef6b13dc1",
+  "subject": {
+    "type": "work",
+    "key": "三国志·诸葛亮传"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "三国志 · 诸葛亮传 · 蜀志卷五固定修订片段",
+  "claim": "在维基文库所标四库本蜀志卷五中取得对应原态片段；只证明所引片段存在，不能据此核定整篇或系年。",
+  "provenance": {
+    "origin": "machine",
+    "method": "固定页面修订，去编排符号比较后截取实际原字符"
+  },
+  "evidence": [
+    {
+      "sourceId": "wikisource-sanguozhi-siku",
+      "quote": "亮身率諸軍攻祁山戎陣整齊賞罰肅而號令明南安天水安定三郡叛魏應亮關中響震",
+      "locator": "三國志 (四庫全書本)/蜀志/卷05，修订2687648",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2687648",
+      "revisionId": 2687648,
+      "pageId": 1244535,
+      "sha256": "fd29de29215328cf4a4d61abb8a4c984a34d780f2ada6313bad25936e38705dc",
+      "textFile": "data/witnesses/fd29de29215328cf4a4d61abb8a4c984a34d780f2ada6313bad25936e38705dc.txt",
+      "originalFileSha256": "ec107dc3df2f6c182ebd37d163999e69e3b5913b069558ef9fb2b3bd73049c0f",
+      "captureSha256": "2a2d0e218bfe547e230dc0ca89ed52460e2a1522345706704372e208ef55199a",
+      "verifiedQuote": true,
+      "verification": "固定维基原态逐字命中，不等于影像校核",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "仅2个段落片段命中；其他段落及版本差异待核。",
+    "所标四库底本尚待影像对校；同底本转录不算独立证据。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未完成该篇影像校核与版本异文比较；没有因片段命中判定全文、作年或人物行迹。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "wikisource-sanguozhi-siku",
+      "mode": "固定修订原态匹配",
+      "revisionId": 2687648
+    }
+  ],
+  "nextAction": "对照四库影像核篇题、上下文、模板字与异文，再决定是否建立校记或替换版本。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T09:53:55.999831+00:00",
+  "sha256": "c709169b95cfa5b926002a94e98bc3ceb6e30756e18e001dc5a16be5cd31030f"
+}

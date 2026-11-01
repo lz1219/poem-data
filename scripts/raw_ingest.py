@@ -14,7 +14,10 @@ from pathlib import Path, PurePosixPath
 
 from research import ROOT, connect, dump, now, read
 
-PARSER = 'kanripo-source-pages-v3'
+GIT_PARSER = 'kanripo-source-pages-v3'
+WIKI_PARSER = 'wikisource-revision-v1'
+PARSER = 'research-source-pages-v4'
+SUPPORTED_PARSERS = [GIT_PARSER, WIKI_PARSER]
 PUBLIC_TABLES = ['book', 'text_unit', 'paragraph', 'corpus_poem', 'person', 'work',
                  'journey', 'stop', 'claim', 'evidence', 'research_note', 'place']
 
@@ -89,10 +92,48 @@ def input_bundle(root=ROOT, cache=None):
         if text_count != meta['textFiles']:
             raise ValueError('原典文件数与固定清单不符：' + meta['repository'])
 
+    wiki_file = root / 'data/wikisource-acquisition.json'
+    if wiki_file.exists():
+        asset('data/wikisource-acquisition.json', wiki_file.read_bytes(), 'manifest')
+        for meta in read(wiki_file)['pages']:
+            raw = (cache / sha(meta['url'].encode())).read_bytes()
+            from wikisource_source import inspect
+            checked = inspect(meta, raw)
+            if meta.get('kind') != 'contents' and checked.get('originalHeading') != meta.get('originalHeading'):
+                raise ValueError('维基卷题尚未按原件核对，先运行check-wikisource-coverage.py')
+            if sha(raw) != meta['captureSha256']: raise ValueError('维基固定修订响应哈希不符')
+            doc = json.loads(raw)
+            page = doc['query']['pages'][0]
+            rev = page['revisions'][0]
+            if (page['pageid'], page['title'], rev['revid'], rev['timestamp']) != (meta['pageId'], meta['title'], meta['revisionId'], meta['revisionTimestamp']):
+                raise ValueError('维基原始响应的页面/修订身份不符')
+            content = rev['slots']['main']['content'].encode('utf-8')
+            if sha(content) != meta['textSha256']: raise ValueError('维基文本原态哈希不符')
+            sid = sha(canonical(['wikisource', meta['pageId'], meta['revisionId'], meta['captureSha256'], meta]))
+            snapshots.append((sid, 'wikisource/zh/page/' + str(meta['pageId']), None, blob(raw), meta))
+            entries.append((sid, 'page.wiki', 'wikitext', blob(content)))
+
     for rel in ['data/acquisition-manifest.json', 'data/corpus-inventory.json', 'shared/sources.json', 'shared/editions.json',
-                'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json']:
+                'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json', 'data/gap-search.json', 'data/wikisource-coverage.json', 'data/source-discovery.json']:
         if not (root / rel).exists(): continue
         asset(rel, (root / rel).read_bytes(), 'manifest')
+    discovery = root / 'data/source-discovery.json'
+    if discovery.exists():
+        for item in read(discovery)['items']:
+            for key in ['probe','metadataProbe','artifactProbe']:
+                probe = item.get(key,{})
+                if probe.get('status') != 'reachable': continue
+                raw = (cache / sha(probe['url'].encode())).read_bytes()
+                if sha(raw) != probe['sha256']: raise ValueError('寻源/影像原始响应哈希不符')
+                asset('source-discovery/' + item['id'] + '/' + key, raw, 'image-original' if key == 'artifactProbe' else 'source-response')
+    gap_search = root / 'data/gap-search.json'
+    if gap_search.exists():
+        for item in read(gap_search)['items']:
+            probe = item['probe']
+            if probe.get('status') != 'reachable': continue
+            raw = (cache / sha(probe['url'].encode())).read_bytes()
+            if sha(raw) != probe['sha256']: raise ValueError('缺口调查响应哈希不符')
+            asset('gap-search/' + item['id'], raw, 'source-response')
     for meta in read(root / 'data/catalog-recovery.json').get('catalogs', []) if (root / 'data/catalog-recovery.json').exists() else []:
         if meta['probe']['status'] == 'reachable':
             raw = (cache / sha(meta['probe']['url'].encode())).read_bytes()
@@ -141,7 +182,7 @@ def input_bundle(root=ROOT, cache=None):
     for _, kind, *_ in records: counts[kind] = counts.get(kind, 0) + 1
     summary = {'formatVersion': 1, 'repositories': sorted((s[1], s[2], s[3]) for s in snapshots),
                'assets': sorted(assets), 'recordIds': sorted(r[0] for r in records),
-               'textFiles': sum(e[2] == 'text' for e in entries), 'archiveEntries': len(entries),
+               'textFiles': sum(e[2] in ('text', 'wikitext') for e in entries), 'archiveEntries': len(entries),
                'recordCounts': counts, 'parser': PARSER}
     return {'id': sha(canonical(summary)), 'manifest': summary, 'blobs': blobs,
             'snapshots': snapshots, 'entries': entries, 'assets': assets, 'records': records}
@@ -230,8 +271,8 @@ def land(args):
             print('追加缺少的原件：' + str(len(bundle['blobs']) - len(existing_blobs)), flush=True)
             copy_rows(cur, 'blob', ['sha256', 'payload', 'byte_count'], [(k, v, len(v)) for k, v in bundle['blobs'].items() if k not in existing_blobs])
             print('追加来源、文件目录和对象快照', flush=True)
-            copy_rows(cur, 'source_snapshot', ['id', 'repository', 'commit_sha', 'archive_sha256', 'metadata'],
-                      [(a, b, c, d, Jsonb(e)) for a, b, c, d, e in bundle['snapshots']])
+            copy_rows(cur, 'source_snapshot', ['id', 'repository', 'commit_sha', 'archive_sha256', 'metadata', 'provider', 'revision_id'],
+                      [(a, b, c, d, Jsonb(e), e.get('provider', 'github'), str(e['revisionId']) if e.get('provider') == 'wikisource' else None) for a, b, c, d, e in bundle['snapshots']])
             copy_rows(cur, 'batch_source', ['batch_id', 'snapshot_id'], [(bundle['id'], s[0]) for s in bundle['snapshots']])
             copy_rows(cur, 'file_entry', ['snapshot_id', 'path', 'role', 'blob_sha256'], bundle['entries'])
             copy_rows(cur, 'batch_asset', ['batch_id', 'path', 'role', 'blob_sha256'], [(bundle['id'], *r) for r in bundle['assets']])
@@ -285,7 +326,7 @@ def source_unit(raw, path):
         part = raw[start:end]
         pages.append((seq, locator, start, end, part.decode('utf-8'), sha(part)))
     return {'title': title, 'base': base, 'juan': juan, 'juanHeader': juan_header,
-            'fileLabel': file_label, 'openingLines': opening_lines, 'kind': kind, 'parser': PARSER}, pages
+            'fileLabel': file_label, 'openingLines': opening_lines, 'kind': kind, 'parser': GIT_PARSER}, pages
 
 
 def db_bundle(cur, bid):
@@ -314,19 +355,33 @@ def derive(bundle, bid):
         key = sha(canonical([bid, subject, code, detail]))
         issues.append((key, bid, subject, code, detail))
     paths = {}
+    wiki_paths = {}
+    wiki_sources = {}
     repos = {s[0]: (s[1], s[2]) for s in bundle['snapshots']}
+    source_metadata = {s[0]: s[4] for s in bundle['snapshots']}
     for sid, path, role, digest, payload in bundle['entries']:
-        if role != 'text': continue
+        if role not in ('text', 'wikitext'): continue
         raw = bytes(payload)
-        meta, spans = source_unit(raw, path)
+        parser = GIT_PARSER if role == 'text' else WIKI_PARSER
+        if role == 'text': meta, spans = source_unit(raw, path)
+        else:
+            source = source_metadata[sid]
+            meta = {'title': source['title'], 'base': 'wikisource-transcription', 'juan': source.get('originalHeading'),
+                    'kind': 'front_matter' if source.get('kind') == 'contents' else 'body', 'parser': WIKI_PARSER,
+                    'revisionId': source['revisionId'], 'section': source.get('section'), 'originalFormat': 'wikitext',
+                    'basis': '固定页面修订及所选卷目；维基编号不等于已核影像页码'}
+            spans = [(0, 'oldid=' + str(source['revisionId']), 0, len(raw), raw.decode('utf-8'), sha(raw))]
         base = meta['base'] or 'UNRECORDED'
-        eid = sha(canonical([sid, base, PARSER]))
-        uid = sha(canonical([sid, path, PARSER]))
+        eid = sha(canonical([sid, base, parser]))
+        uid = sha(canonical([sid, path, parser]))
         editions.setdefault(eid, (eid, sid, base, meta['title'] or path,
-                                  {'parser': PARSER, 'basis': '原文件卷首标记，不代表版本已鉴定'}))
+                                  {'parser': parser, 'basis': '原文件卷首标记，不代表版本已鉴定'}))
         units.append((uid, sid, path, eid, meta['title'] or path, meta['juan'], meta['kind'], meta))
         pages.extend((uid, *p) for p in spans)
         paths[(*repos[sid], path)] = (uid, raw)
+        if role == 'wikitext':
+            wiki_paths[str(meta['revisionId'])] = (uid, raw)
+            wiki_sources[str(meta['revisionId'])] = source_metadata[sid]
         if not meta['base'] or not meta['title']: issue(uid, 'missing-header', meta)
         if meta['kind'] == 'unclassified': issue(uid, 'unclassified-unit', {'path': path, 'juan': meta['juan']})
     records = bundle['records']
@@ -347,14 +402,19 @@ def derive(bundle, bid):
             targets.append((subject.get('type'), subject.get('key'), 'research-subject'))
             for index, evidence in enumerate(doc.get('evidence', [])):
                 url = evidence.get('url', '')
-                hit = re.fullmatch(r'https://github.com/(kanripo/KR[0-9a-z]+)/blob/([a-f0-9]{40})/(.+)', url)
-                if not hit:
+                hit = re.fullmatch(r'https://github\.com/(kanripo/KR[0-9a-z]+)/blob/([a-f0-9]{40})/(.+)', url)
+                wiki_hit = re.fullmatch(r'https://zh\.wikisource\.org/w/index\.php\?oldid=([1-9][0-9]*)', url)
+                if not hit and not wiki_hit:
                     code = 'invalid-evidence-url' if 'github.com/kanripo/' in url else 'unsupported-evidence-location'
                     issue(rid, code, {'index': index, 'hasUrl': bool(url), 'action': '原始证据保留，尚未机器定位，不视为已核'})
                     continue
-                found = paths.get(hit.groups())
+                found = paths.get(hit.groups()) if hit else wiki_paths.get(wiki_hit[1])
                 if not found:
                     issue(rid, 'evidence-file-not-landed', {'index': index, 'url': url}); continue
+                if wiki_hit:
+                    pinned = wiki_sources[wiki_hit[1]]
+                    if (evidence.get('revisionId'), evidence.get('pageId'), evidence.get('sourceId')) != (pinned['revisionId'], pinned['pageId'], pinned['sourceId']):
+                        issue(rid, 'evidence-revision-mismatch', {'index': index})
                 uid, raw = found
                 quote = evidence.get('quote', '').encode('utf-8')
                 start = raw.find(quote) if quote else -1
@@ -445,6 +505,14 @@ def verify(args):
             require(bundle['status'] in ('organized', 'verified'), 'ordered-phases')
             require(bundle['manifest'] == normalize(expected['manifest']), 'batch-manifest')
             require(normalize(sorted(bundle['snapshots'])) == normalize(sorted(expected['snapshots'])), 'pinned-repository-snapshots')
+            cur.execute('SELECT id,provider,revision_id FROM research_ingest.source_snapshot WHERE id=ANY(%s)', ([s[0] for s in bundle['snapshots']],))
+            identities = sorted((s[0], s[4].get('provider','github'), str(s[4]['revisionId']) if s[4].get('provider') == 'wikisource' else None) for s in expected['snapshots'])
+            require(sorted(cur.fetchall()) == identities, 'provider-revision-identities')
+            wiki = [s[4] for s in bundle['snapshots'] if s[4].get('provider') == 'wikisource']
+            if wiki:
+                sections = {section: {p['juanNumber'] for p in wiki if p.get('section') == section} for section in ['蜀志','吳志']}
+                require(sections == {'蜀志': set(range(1,16)), '吳志': set(range(1,21))} and len(wiki)==36 and sum(p['kind']=='contents' for p in wiki)==1,
+                        'sanguozhi-wiki-volume-coverage')
             require(sorted(tuple(r[:4]) for r in bundle['entries']) == sorted(expected['entries']), 'all-archive-entry-paths')
             require(normalize(sorted(bundle['records'])) == normalize(sorted(expected['records'])), 'all-record-snapshots')
             # 以完整输入的哈希集合逐个回读，不能用条数或数据库内自报哈希替代。
@@ -457,7 +525,7 @@ def verify(args):
             require(sorted(cur.fetchall()) == sorted(expected['assets']), 'all-source-assets')
             derived = derive(bundle, bid)
             blocking = {'quote-not-exact', 'quote-hash-mismatch', 'evidence-file-hash-mismatch',
-                        'evidence-file-not-landed', 'unresolved-object', 'invalid-evidence-url'}
+                        'evidence-file-not-landed', 'unresolved-object', 'invalid-evidence-url', 'evidence-revision-mismatch'}
             require(not any(row[3] in blocking for row in derived['issue']), 'no-broken-evidence-or-object-links')
             expected_evidence = {(r[0], i) for r in bundle['records'] if r[1] == 'research_revision'
                                  for i, e in enumerate(r[4].get('evidence', []))}
@@ -474,10 +542,10 @@ def verify(args):
                 else: where, ids = 'batch_id', [bid]
                 query = sql.SQL('SELECT {} FROM research_ingest.{} WHERE {}=ANY(%s)').format(
                     sql.SQL(',').join(map(sql.Identifier, columns)), sql.Identifier(table), sql.Identifier(where))
-                if table in ('edition', 'unit'): query += sql.SQL(" AND metadata->>'parser'=%s")
+                if table in ('edition', 'unit'): query += sql.SQL(" AND metadata->>'parser'=ANY(%s)")
                 values = []
                 for offset in range(0, len(ids), 8):
-                    params = (ids[offset:offset + 8], PARSER) if table in ('edition', 'unit') else (ids[offset:offset + 8],)
+                    params = (ids[offset:offset + 8], SUPPORTED_PARSERS) if table in ('edition', 'unit') else (ids[offset:offset + 8],)
                     cur.execute(query, params)
                     values.extend(cur.fetchall())
                 actual = sorted(values, key=lambda row: canonical(row))
@@ -486,7 +554,7 @@ def verify(args):
             cur.execute('SELECT count(*) FROM research_ingest.edition WHERE id=ANY(%s) AND review_status<>%s', ([row[0] for row in derived['edition']], 'pending'))
             require(cur.fetchone()[0] == 0, 'no-false-academic-review')
             # 独立检查范围拼合与证据定位，避免仅仅重复同一个解析器。
-            raws = {(sid, path): bytes(payload) for sid, path, role, digest, payload in bundle['entries'] if role == 'text'}
+            raws = {(sid, path): bytes(payload) for sid, path, role, digest, payload in bundle['entries'] if role in ('text','wikitext')}
             spans_by_unit = {}
             for p in derived['page']: spans_by_unit.setdefault(p[0], []).append(p)
             for uid, sid, path, *_ in derived['unit']:
@@ -515,6 +583,8 @@ def verify(args):
                       'integrityPassed': True, 'academicReview': 'pending', 'publicExposure': False,
                       'repeatImportChecked': repeat_checked,
                       'originalBlobs': len(expected['blobs']), 'originalBytes': sum(map(len, expected['blobs'].values())),
+                      'sourceSnapshotCounts': {'github': len(bundle['snapshots']) - len(wiki), 'wikisource': len(wiki)},
+                      'textUnitCounts': {'gitFiles': sum(e[2]=='text' for e in bundle['entries']), 'wikiPages': len(wiki), 'wikiBodyVolumes': sum(p['kind']=='body' for p in wiki)},
                       'textFiles': len(derived['unit']), 'archiveEntries': len(expected['entries']),
                       'recordCounts': expected['manifest']['recordCounts'], 'derivedCounts': {k: len(v) for k, v in derived.items()},
                       'unitKinds': {kind: sum(u[6] == kind for u in derived['unit']) for kind in ['front_matter', 'body', 'back_matter', 'unclassified']},

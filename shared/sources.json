@@ -1283,6 +1283,50 @@
       "repository": "kanripo/KR4e0157",
       "commit": "27e8f3a6207522f559c90db4d027aa4be1b71a3a",
       "branch": "SBCK"
+    },
+    {
+      "id": "wikisource-sanguozhi-siku",
+      "name": "三国志四库本 · 维基转录",
+      "kind": "text",
+      "url": "https://zh.wikisource.org/wiki/三國志_(四庫全書本)",
+      "sourceFamily": "sanguozhi-siku",
+      "upstream": [
+        "wikisource",
+        "四库全书文渊阁本（标示底本，待核影像）"
+      ],
+      "baseEdition": "维基标示四库本，未人工鉴定",
+      "coverage": [
+        "按固定页面修订保存目录及蜀、吴两部分；原卷题和文本完整性另核"
+      ],
+      "permissions": {
+        "read": true,
+        "download": "public-api",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "转录与底本分开；与同四库底本的Git转载不自动计独立佐证；完整原件仅隔离研究保存。"
+    },
+    {
+      "id": "commons-cadal-shuzhi",
+      "name": "CADAL蜀志卷五至八影像 · Commons提供",
+      "kind": "image",
+      "url": "https://commons.wikimedia.org/wiki/File:CADAL06058768_%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu",
+      "sourceFamily": "sanguozhi-siku",
+      "upstream": [
+        "CADAL",
+        "Wikimedia Commons"
+      ],
+      "baseEdition": "平台标示四库本，具体版本与卷叶对应待核",
+      "coverage": [
+        "蜀志卷五至八影像候选；未声称已对校转录"
+      ],
+      "permissions": {
+        "read": true,
+        "download": "public-image",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整影像只保存在隔离研究区；图像SHA1/原始响应/页面修订保留，与同底本转录不自动计独立证据。"
     }
   ],
   "catalogs": [

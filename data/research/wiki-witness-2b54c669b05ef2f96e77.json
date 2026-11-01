@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "id": "wiki-witness-2b54c669b05ef2f96e77",
+  "subject": {
+    "type": "work",
+    "key": "出师表"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "出师表 · 蜀志卷五固定修订片段",
+  "claim": "在维基文库所标四库本蜀志卷五中取得对应原态片段；只证明所引片段存在，不能据此核定整篇或系年。",
+  "provenance": {
+    "origin": "machine",
+    "method": "固定页面修订，去编排符号比较后截取实际原字符"
+  },
+  "evidence": [
+    {
+      "sourceId": "wikisource-sanguozhi-siku",
+      "quote": "受任於敗軍之際奉命於危難之間爾來二十有一年矣",
+      "locator": "三國志 (四庫全書本)/蜀志/卷05，修订2687648",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2687648",
+      "revisionId": 2687648,
+      "pageId": 1244535,
+      "sha256": "363d4c887dad3907ab4b83385e74dd707dfffa8f9acc683d80ae3131c35f244e",
+      "textFile": "data/witnesses/363d4c887dad3907ab4b83385e74dd707dfffa8f9acc683d80ae3131c35f244e.txt",
+      "originalFileSha256": "ec107dc3df2f6c182ebd37d163999e69e3b5913b069558ef9fb2b3bd73049c0f",
+      "captureSha256": "2a2d0e218bfe547e230dc0ca89ed52460e2a1522345706704372e208ef55199a",
+      "verifiedQuote": true,
+      "verification": "固定维基原态逐字命中，不等于影像校核",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "仅1个段落片段命中；其他段落及版本差异待核。",
+    "所标四库底本尚待影像对校；同底本转录不算独立证据。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未完成该篇影像校核与版本异文比较；没有因片段命中判定全文、作年或人物行迹。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "wikisource-sanguozhi-siku",
+      "mode": "固定修订原态匹配",
+      "revisionId": 2687648
+    }
+  ],
+  "nextAction": "对照四库影像核篇题、上下文、模板字与异文，再决定是否建立校记或替换版本。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T09:53:56.005739+00:00",
+  "sha256": "16144e15218c124e0a3fe0eb392f4dbfc268ffbf0009113069e58c78f74eb777"
+}

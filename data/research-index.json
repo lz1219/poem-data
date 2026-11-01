@@ -4895,6 +4895,36 @@
       }
     },
     {
+      "id": "wiki-witness-1cbe93412c4ef6b13dc1",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "三国志·诸葛亮传"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "三国志 · 诸葛亮传 · 蜀志卷五固定修订片段",
+      "provenance": {
+        "origin": "machine",
+        "method": "固定页面修订，去编排符号比较后截取实际原字符"
+      }
+    },
+    {
+      "id": "wiki-witness-2b54c669b05ef2f96e77",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "出师表"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "出师表 · 蜀志卷五固定修订片段",
+      "provenance": {
+        "origin": "machine",
+        "method": "固定页面修订，去编排符号比较后截取实际原字符"
+      }
+    },
+    {
       "id": "witness-010d407072a94abfc23c",
       "revision": 1,
       "subject": {

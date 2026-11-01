@@ -1,0 +1,300 @@
+{
+  "checkedAt": "2026-11-01T09:51:44.483304+00:00",
+  "expected": {
+    "蜀志": 15,
+    "吳志": 20,
+    "目录": 1
+  },
+  "acquired": 36,
+  "revisionAndHeadingCheckPassed": true,
+  "academicReview": "pending",
+  "items": [
+    {
+      "title": "三國志 (四庫全書本)",
+      "revisionId": 2309717,
+      "directoryQuote": "魏志三十卷蜀志十五卷呉志二十卷",
+      "status": "directory-counts-present"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷01",
+      "revisionId": 2687636,
+      "originalHeading": "蜀志卷一",
+      "textBytes": 11274,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷02",
+      "revisionId": 2687638,
+      "originalHeading": "蜀志卷二",
+      "textBytes": 34802,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷03",
+      "revisionId": 2687641,
+      "originalHeading": "蜀志卷三",
+      "textBytes": 16182,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷04",
+      "revisionId": 2687647,
+      "originalHeading": "蜀志卷四",
+      "textBytes": 5775,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷05",
+      "revisionId": 2687648,
+      "originalHeading": "蜀志卷五",
+      "textBytes": 46635,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷06",
+      "revisionId": 2687649,
+      "originalHeading": "蜀志卷六",
+      "textBytes": 20713,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷07",
+      "revisionId": 2687650,
+      "originalHeading": "蜀志卷七",
+      "textBytes": 15643,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷08",
+      "revisionId": 2687652,
+      "originalHeading": "蜀志卷八",
+      "textBytes": 22123,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷09",
+      "revisionId": 2687653,
+      "originalHeading": "蜀志卷九",
+      "textBytes": 16113,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷10",
+      "revisionId": 2687654,
+      "originalHeading": "蜀志卷十",
+      "textBytes": 23344,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷11",
+      "revisionId": 2687655,
+      "originalHeading": "蜀志卷十一",
+      "textBytes": 17207,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷12",
+      "revisionId": 2687656,
+      "originalHeading": "蜀志卷十二",
+      "textBytes": 36771,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷13",
+      "revisionId": 2687658,
+      "originalHeading": "蜀志卷十三",
+      "textBytes": 17982,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷14",
+      "revisionId": 2687659,
+      "originalHeading": "蜀志卷十四",
+      "textBytes": 19884,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/蜀志/卷15",
+      "revisionId": 2687660,
+      "originalHeading": "蜀志卷十五",
+      "textBytes": 29954,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷01",
+      "revisionId": 2687662,
+      "originalHeading": "吳志卷一",
+      "textBytes": 36717,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷02",
+      "revisionId": 2687663,
+      "originalHeading": "吳志卷二",
+      "textBytes": 58285,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷03",
+      "revisionId": 2687664,
+      "originalHeading": "呉志卷三",
+      "textBytes": 54565,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷04",
+      "revisionId": 2687665,
+      "originalHeading": "呉志卷四",
+      "textBytes": 17705,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷05",
+      "revisionId": 2687666,
+      "originalHeading": "呉志卷五",
+      "textBytes": 12507,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷06",
+      "revisionId": 2687667,
+      "originalHeading": "吳志卷六",
+      "textBytes": 20611,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷07",
+      "revisionId": 2687668,
+      "originalHeading": "吳志卷七",
+      "textBytes": 37605,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷08",
+      "revisionId": 2687669,
+      "originalHeading": "呉志卷八",
+      "textBytes": 22544,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷09",
+      "revisionId": 2687670,
+      "originalHeading": "呉志卷九",
+      "textBytes": 36190,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷10",
+      "revisionId": 2687671,
+      "originalHeading": "吳志卷十",
+      "textBytes": 27482,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷11",
+      "revisionId": 2687672,
+      "originalHeading": "吳志卷十一",
+      "textBytes": 20375,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷12",
+      "revisionId": 2687673,
+      "originalHeading": "吳志卷十二",
+      "textBytes": 40042,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷13",
+      "revisionId": 2687674,
+      "originalHeading": "吳志卷十三",
+      "textBytes": 27962,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷14",
+      "revisionId": 2687675,
+      "originalHeading": "吳志卷十四",
+      "textBytes": 20248,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷15",
+      "revisionId": 2687676,
+      "originalHeading": "吳志卷十五",
+      "textBytes": 27895,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷16",
+      "revisionId": 2687677,
+      "originalHeading": "吳志卷十六",
+      "textBytes": 20738,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷17",
+      "revisionId": 2687678,
+      "originalHeading": "吳志卷十七",
+      "textBytes": 11583,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷18",
+      "revisionId": 2687679,
+      "originalHeading": "吳志卷十八",
+      "textBytes": 10252,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷19",
+      "revisionId": 2687680,
+      "originalHeading": "吳志卷十九",
+      "textBytes": 35985,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    },
+    {
+      "title": "三國志 (四庫全書本)/吳志/卷20",
+      "revisionId": 2687681,
+      "originalHeading": "吳志卷二十",
+      "textBytes": 25863,
+      "status": "heading-and-revision-present",
+      "limitation": "仅核卷题与修订原态；模板字、缺字和全文转录仍须对照影像"
+    }
+  ],
+  "limitation": "取得所选维基修订的35卷原态及目录；不证明原底本全文无缺或已完成校勘"
+}

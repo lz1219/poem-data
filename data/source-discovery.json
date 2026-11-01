@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-11-01T09:55:53.805659+00:00",
+  "gap": "三国志蜀吴",
+  "items": [
+    {
+      "id": "sanguozhi-image-shu5-8",
+      "channel": "image",
+      "title": "File:CADAL06058768 蜀志·卷五~卷八.djvu",
+      "metadataProbe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06058768+%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T09:55:49.387249+00:00",
+        "status": "reachable",
+        "sha256": "deb9a4ae5e312c69ed31cee81a2878054e076feb609cc8969b053c1ef0e92217",
+        "bytes": 2284
+      },
+      "revisionId": 1104197007,
+      "image": {
+        "size": 7139558,
+        "width": 957,
+        "height": 1359,
+        "pagecount": 169,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/CADAL06058768_%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:CADAL06058768_%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85354933",
+        "sha1": "488eac1d9031eeaf1fa308ff7dcdb8ed55dd025c",
+        "extmetadata": {
+          "DateTime": {
+            "value": "2019-12-28 19:00:40",
+            "source": "mediawiki-metadata",
+            "hidden": ""
+          },
+          "ObjectName": {
+            "value": "<div class=\"fn\">\n蜀志·卷五~卷八</div>",
+            "source": "commons-desc-page"
+          },
+          "CommonsMetadataExtension": {
+            "value": 1.2,
+            "source": "extension",
+            "hidden": ""
+          },
+          "Categories": {
+            "value": "PD Old|CC-PD-Mark|Books without Wikidata item|Scans from the China Academic Digital Associative Library|蜀志",
+            "source": "commons-categories",
+            "hidden": ""
+          },
+          "Assessments": {
+            "value": "",
+            "source": "commons-categories",
+            "hidden": ""
+          },
+          "Artist": {
+            "value": "<div class=\"fn value\">\n（漢）陳壽（撰）；（宋）裴松之</div>",
+            "source": "commons-desc-page"
+          },
+          "ImageDescription": {
+            "value": "<div class=\"description\">\n四庫全書；史部；正史類</div>",
+            "source": "commons-desc-page"
+          },
+          "Credit": {
+            "value": "<bdi><a href=\"https://en.wikipedia.org/wiki/en:Zhejiang_University\" class=\"extiw\" title=\"w:en:Zhejiang University\"><span title=\"university in Hangzhou, China\">Zhejiang University</span></a>\n</bdi>",
+            "source": "commons-desc-page"
+          },
+          "LicenseShortName": {
+            "value": "Public domain",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "UsageTerms": {
+            "value": "Public domain",
+            "source": "commons-desc-page"
+          },
+          "AttributionRequired": {
+            "value": "false",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "Copyrighted": {
+            "value": "False",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "Restrictions": {
+            "value": "",
+            "source": "commons-desc-page",
+            "hidden": ""
+          },
+          "License": {
+            "value": "pd",
+            "source": "commons-templates",
+            "hidden": ""
+          }
+        }
+      },
+      "status": "image-captured-research-only",
+      "relationship": "四库本影像候选；具体底本和与转录关系待核，不作独立证据",
+      "artifactProbe": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/CADAL06058768_%E8%9C%80%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%94~%E5%8D%B7%E5%85%AB.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "checkedAt": "2026-11-01T09:56:46.824386+00:00",
+        "status": "reachable",
+        "sha256": "2b8620300e500c50fc19e971ea5b77511888d30d0d4585d601e3ff017012afc0",
+        "bytes": 7139558
+      }
+    },
+    {
+      "id": "sanguozhi-institution-catalog",
+      "channel": "institution-catalog",
+      "title": "三國志 : 仿殿本",
+      "probe": {
+        "url": "https://ndlsearch.ndl.go.jp/books/R100000136-I1971149384868518536",
+        "checkedAt": "2026-11-01T09:55:53.805073+00:00",
+        "status": "reachable",
+        "sha256": "542a1e012b728c2273895b8e2d97bcfecdd8bf2d7734520b24f3b75d1cfb2790",
+        "bytes": 214971
+      },
+      "status": "catalog-captured",
+      "relationship": "不同版本书目线索，不据此认定现有转录底本或直接导入受版权保护现代断句"
+    }
+  ]
+}
