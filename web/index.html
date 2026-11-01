@@ -649,6 +649,21 @@ body{background:#fff;}.container{max-width:none;padding:0;}
 .compare-body { padding: 14px 16px; font-family: var(--serif); font-size: 16px; line-height: 2.05; white-space: pre-line; max-height: 340px; overflow: auto; }
 .compare-meta { padding: 0 14px 10px; font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
 
+.tl { margin: 14px 0 18px; border-left: 2px solid var(--line-2); padding-left: 16px; }
+.tl-row { position: relative; padding: 7px 0 7px 2px; }
+.tl-row::before {
+  content: ''; position: absolute; left: -21px; top: 14px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--line-2);
+}
+.tl-row.office::before { background: var(--accent); }
+.tl-row.work::before { background: #8a6d3b; }
+.tl-row.life::before { background: #2e7d32; }
+.tl-year { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-right: 10px; letter-spacing: .06em; }
+.tl-title { font-family: var(--serif); font-size: 15px; }
+.tl-place { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-left: 8px; }
+.tl-kind { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-left: 8px; letter-spacing: .1em; }
+.tl-sum { font-family: var(--mono); font-size: 10.5px; color: var(--muted); margin: 6px 0 10px; }
+
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -1142,6 +1157,37 @@ async function openJuan(id) {
 document.addEventListener('click', async (e) => {
   if (e.target.closest('[data-print]')) { window.print(); return; }
 
+  const tlBtn = e.target.closest('[data-timeline]');
+  if (tlBtn) {
+    const key = tlBtn.getAttribute('data-timeline');
+    const slot = document.getElementById('timeline-slot');
+    if (!slot) return;
+    if (slot.dataset.open === key) { slot.innerHTML = ''; slot.dataset.open = ''; return; }
+    slot.innerHTML = '<p class="empty">正在取年表…</p>';
+    try {
+      const r = await fetch('/api/persons/' + encodeURIComponent(key) + '/timeline').then((x) => x.json());
+      if (!r.events || !r.events.length) { slot.innerHTML = '<p class="empty">暂无年表数据。</p>'; return; }
+      const KIND = { life: '生卒', office: '仕历', work: '作品' };
+      const rows = r.events.map((ev) => {
+        const cls = ev.kind;
+        const t = ev.kind === 'work'
+          ? '<a href="#" data-work="' + ev.key + '" style="border-bottom:1px dotted var(--line)">' + ev.title + '</a>'
+          : (ev.title || '');
+        const place = ev.place ? ' · ' + ev.place : '';
+        return '<div class="tl-row ' + cls + '"><span class="tl-year">' + (ev.year || '?') + '</span>' +
+          '<span class="tl-title">' + t + '</span>' +
+          '<span class="tl-place">' + place + '</span>' +
+          '<span class="tl-kind">' + (KIND[ev.kind] || '') + '</span></div>';
+      }).join('');
+      slot.innerHTML = '<div class="tl-sum">' + (r.journey ? '行迹《' + r.journey + '》 · ' : '') +
+        '共 ' + r.total + ' 条（生卒 / 仕历 / 作品）</div><div class="tl">' + rows + '</div>';
+      slot.dataset.open = key;
+    } catch (err) {
+      slot.innerHTML = '<p class="empty">年表接口不可用。</p>';
+    }
+    return;
+  }
+
   const cmpBtn = e.target.closest('[data-compare]');
   if (cmpBtn) {
     const key = cmpBtn.getAttribute('data-compare');
@@ -1278,6 +1324,10 @@ function renderPerson(p) {
       ${p.externalIds?.cbdb ? `<span class="tag">CBDB ${esc(p.externalIds.cbdb)}</span>` : ''}
       <span class="tag">${works.length} 篇</span>
     </div>
+    <div class="reader-tools" style="justify-content:flex-start;margin:10px 0 2px">
+      <button data-timeline="${esc(p.key)}">作者年表</button>
+    </div>
+    <div id="timeline-slot"></div>
     <div id="career-slot"></div>
     ${p.aliases?.length ? `<div class="bh">别名</div><p>${esc(p.aliases.join('、'))}</p>` : ''}
     ${p.journeyKey ? `<div class="bh">行迹</div>

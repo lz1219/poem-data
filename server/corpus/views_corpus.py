@@ -234,3 +234,53 @@ def work_corpus_text(request, key):
         (author, list(cands)),
     )
     return Response({"work": key, "author": author, "title": w.title_zh, "matches": rows})
+
+@api_view(["GET"])
+def person_timeline(request, key):
+    """作者年表：生卒 + 行迹站点 + 作品系年，合并成一条时间轴。"""
+    from .models import Journey, Person, Work
+
+    p = Person.objects.filter(key=key).first()
+    if not p:
+        return Response({"detail": f"未找到人物：{key}"}, status=404)
+
+    events = []
+    if p.born:
+        events.append({"year": p.born, "kind": "life", "title": "生", "place": "", "source": ""})
+    if p.died:
+        events.append({"year": p.died, "kind": "life", "title": "卒", "place": "", "source": ""})
+
+    j = Journey.objects.prefetch_related("stops").filter(person=p).first()
+    if not j and p.journey_key:
+        j = Journey.objects.prefetch_related("stops").filter(key=p.journey_key).first()
+    if j:
+        for s in j.stops.all():
+            if s.year:
+                events.append({
+                    "year": s.year,
+                    "kind": "office",
+                    "title": s.title_zh,
+                    "place": s.place_ancient,
+                    "modern": s.place_modern,
+                    "source": s.source,
+                })
+
+    works = Work.objects.filter(author=p).order_by("year")
+    for w in works:
+        if w.year:
+            events.append({
+                "year": w.year,
+                "kind": "work",
+                "title": w.title_zh,
+                "place": w.place_zh or "",
+                "key": w.key,
+                "source": w.source_edition.key if w.source_edition else "",
+            })
+
+    events.sort(key=lambda e: (e["year"] or 0, {"life": 0, "office": 1, "work": 2}[e["kind"]]))
+    return Response({
+        "person": {"key": p.key, "zh": p.zh, "span": [p.born, p.died]},
+        "journey": j.title_zh if j else None,
+        "total": len(events),
+        "events": events,
+    })
