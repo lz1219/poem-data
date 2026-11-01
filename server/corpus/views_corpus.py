@@ -109,7 +109,8 @@ def texts(request):
     rows = db.query(
         """SELECT b.id, b.title, count(t.id) AS juan,
                   sum(length(t.body)) AS chars,
-                  max(t.edition) AS edition
+                  max(t.edition) AS edition,
+                  count(*) FILTER (WHERE t.punctuated) AS punctuated_juan
            FROM book b JOIN text_unit t ON t.book_id = b.id
            GROUP BY b.id, b.title
            HAVING count(t.id) > 0
@@ -126,7 +127,7 @@ def book_detail(request, book_id: int):
     if not book:
         return Response({"detail": "未找到该书"}, status=404)
     rows = db.query(
-        """SELECT id, juan, title, length(body) AS chars
+        """SELECT id, juan, title, length(body) AS chars, coalesce(punctuated, false) AS punctuated
            FROM text_unit WHERE book_id = %s ORDER BY id""",
         (book_id,),
     )
@@ -138,7 +139,8 @@ def juan_detail(request, unit_id: int):
     if not db.available():
         return _unavailable()
     unit = db.one(
-        """SELECT t.id, t.juan, t.title, t.body, t.body_simplified, b.title AS book, b.id AS book_id
+        """SELECT t.id, t.juan, t.title, t.body, t.body_simplified, b.title AS book, b.id AS book_id,
+                  coalesce(t.punctuated, false) AS punctuated, t.edition, t.source_url
            FROM text_unit t JOIN book b ON b.id = t.book_id WHERE t.id = %s""",
         (unit_id,),
     )

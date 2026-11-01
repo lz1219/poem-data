@@ -58,3 +58,12 @@ def query(sql: str, params: tuple = ()) -> list[dict]:
 def one(sql: str, params: tuple = ()) -> dict | None:
     rows = query(sql, params)
     return rows[0] if rows else None
+
+def execute(sql: str, params: tuple = ()) -> int:
+    """执行写操作，返回影响行数（语料库专用）。"""
+    if _pool is None:
+        raise RuntimeError("语料库未连接")
+    with _pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(sql, params)
+            return cur.rowcount

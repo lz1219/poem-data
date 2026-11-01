@@ -1025,7 +1025,11 @@ async function renderApiList() {
       $('#count').textContent = `作者 ${r.total ?? rows.length} 位`;
     } else {
       const r = await fetch('/api/texts').then(x => x.json());
-      rows = (r.items || []).map(b => ({ key: String(b.id), t: b.title, m: `${b.juan} 卷 · ${Math.round((b.chars || 0) / 10000)} 万字` }));
+      rows = (r.items || []).map(b => {
+        const pj = b.punctuated_juan || 0;
+        const note = pj === 0 ? ' · 无标点' : (pj >= b.juan ? ' · 标点本' : ` · 标点 ${pj}/${b.juan}`);
+        return { key: String(b.id), t: b.title, m: `${b.juan} 卷 · ${Math.round((b.chars || 0) / 10000)} 万字${note}` };
+      });
       $('#count').textContent = `典籍 ${r.total ?? rows.length} 部`;
     }
     list.innerHTML = rows.map(r => `<div class="item" data-key="${esc(r.key)}">
@@ -1091,8 +1095,16 @@ async function openJuan(id) {
   const j = await fetch(`/api/texts/juan/${id}`).then(x => x.json());
   const paras = (j.paragraphs || []).map(p => esc(p.body)).join('\n');
   const body = paras || esc(j.body_simplified || j.body || '');
+  // 无标点卷：说明来源，但**不改动原文**（标点是校勘成果，不能由程序代加）
+  const punctNote = j.punctuated === false
+    ? '<div class="note"><div class="k">原文无标点</div>' +
+      '本卷取自四庫全書本，原文不施句读；此处按原样呈现，未代加标点。' +
+      (j.edition ? '<div class="src">版本：' + esc(j.edition) + '</div>' : '') +
+      '</div>'
+    : '';
   el.innerHTML = `<h2 class="rt">${esc(j.book || '')} · ${esc(j.title || '')}</h2>
-    <div class="ra">共 ${(j.paragraphs || []).length} 段</div>
+    <div class="ra">共 ${(j.paragraphs || []).length} 段${j.punctuated === false ? ' · 无标点' : ''}</div>
+    ${punctNote}
     <div class="rc" style="text-align:left;font-size:17px">${body}</div>`;
   el.scrollTop = 0;
 }
