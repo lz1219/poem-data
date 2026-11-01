@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "1.0",
+  "key": "hanyu",
+  "personKey": "hanyu",
+  "titleZh": "韩愈：从汴徐到潮袁",
+  "titleEn": "Han Yu: From Bianzhou to Chaozhou",
+  "spanZh": "768年 — 824年",
+  "origin": "overlay",
+  "intro": {
+    "text": "韩愈（768—824）的仕历在 CBDB 里有三十五段记录，年份大多可考：汴州、徐州、长安、江陵、洛阳，然后是潮州、袁州，最后回到长安做京兆尹。他一生两次南贬，这条行迹的后半段就是那两次贬谪的路线。",
+    "source": "CBDB 3332（POSTED_TO_OFFICE_DATA，35 段任职）"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 768,
+      "eraZh": "大历三年",
+      "place": {
+        "ancient": "河阳",
+        "modern": "河南孟州",
+        "coord": [
+          112.785,
+          34.9
+        ]
+      },
+      "titleZh": "生于河阳",
+      "descZh": "韩愈生于河阳（今河南孟州），郡望昌黎。",
+      "quote": null,
+      "source": "CBDB 3332（c_birthyear=768）"
+    },
+    {
+      "seq": 2,
+      "year": 796,
+      "eraZh": "贞元十二年",
+      "place": {
+        "ancient": "汴州",
+        "modern": "河南开封",
+        "coord": [
+          114.311,
+          34.801
+        ]
+      },
+      "titleZh": "宣武军观察推官",
+      "descZh": "入宣武军节度使董晋幕为观察推官，居汴州。",
+      "quote": null,
+      "source": "CBDB 3332（觀察推官，宣武軍節度，796）"
+    },
+    {
+      "seq": 3,
+      "year": 799,
+      "eraZh": "贞元十五年",
+      "place": {
+        "ancient": "徐州",
+        "modern": "江苏徐州",
+        "coord": [
+          117.181,
+          34.261
+        ]
+      },
+      "titleZh": "武宁军节度判官",
+      "descZh": "转武宁军节度判官，居徐州。",
+      "quote": null,
+      "source": "CBDB 3332（節度使判官，武寧軍節度，799）"
+    },
+    {
+      "seq": 4,
+      "year": 802,
+      "eraZh": "贞元十八年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "四门博士",
+      "descZh": "入朝为四门博士，次年转监察御史。",
+      "quote": null,
+      "source": "CBDB 3332（四門博士，802；監察御史，803）"
+    },
+    {
+      "seq": 5,
+      "year": 805,
+      "eraZh": "永贞元年",
+      "place": {
+        "ancient": "江陵",
+        "modern": "湖北荆州",
+        "coord": [
+          112.2,
+          30.35
+        ]
+      },
+      "titleZh": "江陵府法曹参军",
+      "descZh": "贬为江陵府法曹参军。",
+      "quote": null,
+      "source": "CBDB 3332（法曹參軍，江陵府，805）"
+    },
+    {
+      "seq": 6,
+      "year": 806,
+      "eraZh": "元和元年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.451,
+          34.621
+        ]
+      },
+      "titleZh": "国子博士分司东都",
+      "descZh": "为国子博士，分司东都洛阳。",
+      "quote": null,
+      "source": "CBDB 3332（國子博士分司東都，806）"
+    },
+    {
+      "seq": 7,
+      "year": 816,
+      "eraZh": "元和十一年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "中书舍人",
+      "descZh": "迁中书舍人，在朝掌制诰。",
+      "quote": null,
+      "source": "CBDB 3332（中書舍人，816）"
+    },
+    {
+      "seq": 8,
+      "year": 819,
+      "eraZh": "元和十四年",
+      "place": {
+        "ancient": "潮州",
+        "modern": "广东潮州",
+        "coord": [
+          116.623,
+          23.657
+        ]
+      },
+      "titleZh": "贬潮州刺史",
+      "descZh": "因上表谏迎佛骨，贬潮州刺史。",
+      "quote": null,
+      "source": "CBDB 3332（州刺史，潮州，819）"
+    },
+    {
+      "seq": 9,
+      "year": 820,
+      "eraZh": "元和十五年",
+      "place": {
+        "ancient": "袁州",
+        "modern": "江西宜春",
+        "coord": [
+          114.39,
+          27.8
+        ]
+      },
+      "titleZh": "袁州刺史",
+      "descZh": "量移袁州刺史，治所在宜春。",
+      "quote": null,
+      "source": "CBDB 3332（州刺史，宜春／袁州，819—820）"
+    },
+    {
+      "seq": 10,
+      "year": 821,
+      "eraZh": "长庆元年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "兵部侍郎",
+      "descZh": "还朝为兵部侍郎，后转吏部。",
+      "quote": null,
+      "source": "CBDB 3332（兵部侍郎，821、823）"
+    },
+    {
+      "seq": 11,
+      "year": 823,
+      "eraZh": "长庆三年",
+      "place": {
+        "ancient": "京兆府",
+        "modern": "陕西西安",
+        "coord": [
+          108.9374,
+          34.3179
+        ]
+      },
+      "titleZh": "京兆尹",
+      "descZh": "为京兆尹兼御史大夫，治京畿。",
+      "quote": null,
+      "source": "CBDB 3332（京兆府尹、御史大夫，823）"
+    },
+    {
+      "seq": 12,
+      "year": 824,
+      "eraZh": "长庆四年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "卒于长安",
+      "descZh": "长庆四年卒于长安，年五十七。",
+      "quote": null,
+      "source": "CBDB 3332（c_deathyear=824）"
+    }
+  ],
+  "links": {
+    "8": {
+      "text": "从长安到潮州，是唐代最重的一次南贬之一；潮州在岭南，去长安数千里。",
+      "source": "CBDB 3332（長安 816 → 潮州 819）"
+    },
+    "9": {
+      "text": "潮州任未满一年即量移袁州，仍在江南西道。",
+      "source": "CBDB 3332（潮州 819 → 袁州 819—820）"
+    }
+  }
+}

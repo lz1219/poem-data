@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "1.0",
+  "key": "censhen",
+  "personKey": "censhen",
+  "titleZh": "岑参：从安西到嘉州",
+  "titleEn": "Cen Shen: From Anxi to Jiazhou",
+  "spanZh": "约715年 — 770年",
+  "origin": "overlay",
+  "intro": {
+    "text": "岑参（约715—770）一生两度出塞，又晚岁入蜀。这条行迹只取 CBDB 有年份的任职：安西、北庭两次幕府，中间回朝，最后出为嘉州刺史、客死成都。生年与生地各说不一，未入站。",
+    "source": "CBDB 32583（POSTED_TO_OFFICE_DATA）；生卒据 CBDB（约715—770）"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 749,
+      "eraZh": "天宝八载",
+      "place": {
+        "ancient": "安西",
+        "modern": "新疆库车",
+        "coord": [
+          82.96,
+          41.72
+        ]
+      },
+      "titleZh": "安西节度掌书记",
+      "descZh": "入安西节度使高仙芝幕府为掌书记，西出龟兹。",
+      "quote": null,
+      "source": "CBDB 32583（節度使掌書記，安西軍節度，749）"
+    },
+    {
+      "seq": 2,
+      "year": 754,
+      "eraZh": "天宝十三载",
+      "place": {
+        "ancient": "北庭",
+        "modern": "新疆吉木萨尔",
+        "coord": [
+          89.18,
+          44.01
+        ]
+      },
+      "titleZh": "安西北庭节度判官",
+      "descZh": "再度出塞，入安西北庭节度使封常清幕为判官，驻庭州。",
+      "quote": null,
+      "source": "CBDB 32583（節度使判官，安西北庭軍節度，754）"
+    },
+    {
+      "seq": 3,
+      "year": 756,
+      "eraZh": "至德元载",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "支度副使",
+      "descZh": "东归后任支度副使，安史乱起，辗转于朝。",
+      "quote": null,
+      "source": "CBDB 32583（支度副使，756）"
+    },
+    {
+      "seq": 4,
+      "year": 762,
+      "eraZh": "宝应元年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "关西节度判官",
+      "descZh": "任关西节度判官，后又为祠部员外郎。",
+      "quote": null,
+      "source": "CBDB 32583（節度使判官，關西軍節度，762；祠部員外郎，763）"
+    },
+    {
+      "seq": 5,
+      "year": 765,
+      "eraZh": "永泰元年",
+      "place": {
+        "ancient": "嘉州",
+        "modern": "四川乐山",
+        "coord": [
+          103.77,
+          29.55
+        ]
+      },
+      "titleZh": "嘉州刺史",
+      "descZh": "出为嘉州刺史，世称「岑嘉州」。",
+      "quote": null,
+      "source": "CBDB 32583（州刺史，嘉州／犍為，765—768）"
+    },
+    {
+      "seq": 6,
+      "year": 766,
+      "eraZh": "大历元年",
+      "place": {
+        "ancient": "成都",
+        "modern": "四川成都",
+        "coord": [
+          104.071,
+          30.571
+        ]
+      },
+      "titleZh": "剑南西川节度判官",
+      "descZh": "入剑南西川节度使杜鸿渐幕为判官，居成都。",
+      "quote": null,
+      "source": "CBDB 32583（節度使判官，劍南西川軍節度，766）"
+    },
+    {
+      "seq": 7,
+      "year": 770,
+      "eraZh": "大历五年",
+      "place": {
+        "ancient": "成都",
+        "modern": "四川成都",
+        "coord": [
+          104.071,
+          30.571
+        ]
+      },
+      "titleZh": "卒于成都",
+      "descZh": "罢嘉州后客居成都，大历五年卒。",
+      "quote": null,
+      "source": "CBDB 32583（c_deathyear=770）"
+    }
+  ],
+  "links": {
+    "2": {
+      "text": "两次出塞前后相隔五年，中间曾回长安应试、任职；安西北庭是唐在西域最远的两个节度。",
+      "source": "CBDB 32583（安西 749、北庭 754）"
+    },
+    "5": {
+      "text": "从长安到嘉州，是晚岁入蜀；此后他再未回到中原。",
+      "source": "CBDB 32583（長安 763 → 嘉州 765）"
+    }
+  }
+}

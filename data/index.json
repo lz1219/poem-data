@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T03:09:56.014Z",
+  "generatedAt": "2026-11-01T03:14:35.571Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -902,6 +902,16 @@
       "file": "data/persons/bangu.json"
     },
     {
+      "key": "censhen",
+      "zh": "岑参",
+      "span": [
+        715,
+        770
+      ],
+      "hasJourney": true,
+      "file": "data/persons/censhen.json"
+    },
+    {
       "key": "chenshou",
       "zh": "陈寿",
       "span": [
@@ -950,6 +960,16 @@
       ],
       "hasJourney": false,
       "file": "data/persons/hanwudi.json"
+    },
+    {
+      "key": "hanyu",
+      "zh": "韩愈",
+      "span": [
+        768,
+        824
+      ],
+      "hasJourney": true,
+      "file": "data/persons/hanyu.json"
     },
     {
       "key": "jiangjie",
@@ -1111,6 +1131,13 @@
       "file": "data/journeys/baijuyi.json"
     },
     {
+      "key": "censhen",
+      "titleZh": "岑参：从安西到嘉州",
+      "stops": 7,
+      "origin": "overlay",
+      "file": "data/journeys/censhen.json"
+    },
+    {
       "key": "dufu",
       "titleZh": "杜甫：从长安到湘江",
       "stops": 11,
@@ -1123,6 +1150,13 @@
       "stops": 11,
       "origin": "overlay",
       "file": "data/journeys/dumu.json"
+    },
+    {
+      "key": "hanyu",
+      "titleZh": "韩愈：从汴徐到潮袁",
+      "stops": 12,
+      "origin": "overlay",
+      "file": "data/journeys/hanyu.json"
     },
     {
       "key": "jiangjie",

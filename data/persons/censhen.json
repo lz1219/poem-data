@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0",
+  "key": "censhen",
+  "zh": "岑参",
+  "en": "Cen Shen",
+  "courtesyZh": "世称岑嘉州",
+  "dynastyKey": "tang",
+  "span": [
+    715,
+    770
+  ],
+  "spanNote": "生年有 715 前后数说",
+  "aliases": [
+    "岑嘉州"
+  ],
+  "externalIds": {
+    "cbdb": "32583",
+    "wikidata": null
+  },
+  "journeyKey": "censhen"
+}

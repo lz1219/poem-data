@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.0",
+  "key": "hanyu",
+  "zh": "韩愈",
+  "en": "Han Yu",
+  "courtesyZh": "字退之 · 郡望昌黎 · 世称韩昌黎",
+  "dynastyKey": "tang",
+  "span": [
+    768,
+    824
+  ],
+  "spanNote": null,
+  "aliases": [
+    "退之",
+    "韩昌黎",
+    "韩文公",
+    "昌黎先生"
+  ],
+  "externalIds": {
+    "cbdb": "3332",
+    "wikidata": null
+  },
+  "journeyKey": "hanyu"
+}
