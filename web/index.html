@@ -669,6 +669,13 @@ body{background:#fff;}.container{max-width:none;padding:0;}
 .body-hits .name { font-family: var(--serif); font-size: 15px; }
 .body-hits .desc { font-family: var(--serif); font-size: 13px; color: var(--muted); margin-top: 3px; line-height: 1.7; }
 
+.rel { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; margin: 12px 0 18px; }
+.rel h4 { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; color: var(--accent); margin: 0 0 8px; font-weight: 500; }
+.rel ul { list-style: none; margin: 0; padding: 0; }
+.rel li { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px dotted var(--line); font-family: var(--serif); font-size: 14px; }
+.rel li .r { font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; }
+@media (max-width: 720px) { .rel { grid-template-columns: 1fr; } }
+
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -1189,6 +1196,35 @@ async function openJuan(id) {
 document.addEventListener('click', async (e) => {
   if (e.target.closest('[data-print]')) { window.print(); return; }
 
+  const relBtn = e.target.closest('[data-relations]');
+  if (relBtn) {
+    const key = relBtn.getAttribute('data-relations');
+    const slot = document.getElementById('relations-slot');
+    if (!slot) return;
+    if (slot.dataset.open === key) { slot.innerHTML = ''; slot.dataset.open = ''; return; }
+    slot.innerHTML = '<p class="empty">正在取关系数据…</p>';
+    try {
+      const r = await fetch('/api/persons/' + encodeURIComponent(key) + '/relations').then((x) => x.json());
+      if (!r.kinship || (!r.kinship.length && !r.assoc.length)) {
+        slot.innerHTML = '<p class="empty">' + (r.note || 'CBDB 无关系数据') + '</p>';
+        return;
+      }
+      const kin = (r.kinship || []).map((k) =>
+        '<li><span>' + k.name + '</span><span class="r">' + (k.relation || '') + '</span></li>').join('');
+      const asso = (r.assoc || []).map((a) =>
+        '<li><span>' + a.name + '</span><span class="r">' +
+        (a.times > 1 ? a.times + ' 次' : '') + (a.first_year ? ' ' + a.first_year : '') + '</span></li>').join('');
+      slot.innerHTML = '<div class="rel">' +
+        '<div><h4>亲属 · ' + r.total.kinship + '</h4><ul>' + (kin || '<li class="muted">无</li>') + '</ul></div>' +
+        '<div><h4>交游 · ' + r.total.assoc + '</h4><ul>' + (asso || '<li class="muted">无</li>') + '</ul></div>' +
+        '</div>';
+      slot.dataset.open = key;
+    } catch (err) {
+      slot.innerHTML = '<p class="empty">关系接口不可用。</p>';
+    }
+    return;
+  }
+
   const tlBtn = e.target.closest('[data-timeline]');
   if (tlBtn) {
     const key = tlBtn.getAttribute('data-timeline');
@@ -1358,8 +1394,10 @@ function renderPerson(p) {
     </div>
     <div class="reader-tools" style="justify-content:flex-start;margin:10px 0 2px">
       <button data-timeline="${esc(p.key)}">作者年表</button>
+      <button data-relations="${esc(p.key)}">人物关系</button>
     </div>
     <div id="timeline-slot"></div>
+    <div id="relations-slot"></div>
     <div id="career-slot"></div>
     ${p.aliases?.length ? `<div class="bh">别名</div><p>${esc(p.aliases.join('、'))}</p>` : ''}
     ${p.journeyKey ? `<div class="bh">行迹</div>

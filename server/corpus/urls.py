@@ -20,6 +20,7 @@ urlpatterns = [
     path("corpus/poems/<int:poem_id>", views_corpus.poem_detail),
     path("persons/<str:key>/career", views_corpus.person_career),
     path("persons/<str:key>/timeline", views_corpus.person_timeline),
+    path("persons/<str:key>/relations", views_corpus.person_relations),
     path("works/<str:key>/corpus", views_corpus.work_corpus_text),
     path("texts", views_corpus.texts),
     path("texts/<int:book_id>", views_corpus.book_detail),

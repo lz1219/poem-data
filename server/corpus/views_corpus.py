@@ -284,3 +284,45 @@ def person_timeline(request, key):
         "total": len(events),
         "events": events,
     })
+
+@api_view(["GET"])
+def person_relations(request, key):
+    """人物关系：CBDB 亲属（KIN_DATA 56 万）与交游（ASSOC_DATA 19 万）。"""
+    from .models import Person
+
+    p = Person.objects.filter(key=key).first()
+    if not p:
+        return Response({"detail": f"未找到人物：{key}"}, status=404)
+    if not db.available():
+        return _unavailable()
+    if not (p.cbdb_id or "").isdigit():
+        return Response({"cbdb": None, "kinship": [], "assoc": [], "note": "未映射 CBDB，无关系数据"})
+
+    pid = int(p.cbdb_id)
+    kin = db.query(
+        """SELECT b.c_name_chn AS name, b.c_personid AS pid, kc.c_kinrel_chn AS relation
+             FROM cbdb."KIN_DATA" k
+             JOIN cbdb."BIOG_MAIN" b ON b.c_personid = k.c_kin_id
+             LEFT JOIN cbdb."KINSHIP_CODES" kc ON kc.c_kincode = k.c_kin_code
+            WHERE k.c_personid = %s
+            ORDER BY kc.c_pick_sorting NULLS LAST, b.c_name_chn
+            LIMIT 40""",
+        (pid,),
+    )
+    assoc = db.query(
+        """SELECT b.c_name_chn AS name, b.c_personid AS pid, count(*) AS times,
+                  min(CASE WHEN a.c_assoc_first_year > 0 THEN a.c_assoc_first_year END) AS first_year
+             FROM cbdb."ASSOC_DATA" a
+             JOIN cbdb."BIOG_MAIN" b ON b.c_personid = a.c_assoc_id
+            WHERE a.c_personid = %s AND a.c_assoc_id > 0
+            GROUP BY 1, 2
+            ORDER BY times DESC, first_year NULLS LAST
+            LIMIT 30""",
+        (pid,),
+    )
+    return Response({
+        "cbdb": p.cbdb_id,
+        "kinship": kin,
+        "assoc": assoc,
+        "total": {"kinship": len(kin), "assoc": len(assoc)},
+    })
