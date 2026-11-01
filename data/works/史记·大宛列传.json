@@ -9,7 +9,7 @@
   "authorKey": "simaqian",
   "genre": "history",
   "level": "popular",
-  "certainty": "confirmed",
+  "certainty": "unknown",
   "excerpt": true,
   "composed": {
     "year": -138,
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "騫以郎應募，使月氏，與堂邑氏胡奴甘父俱出隴西。",
       "留騫十餘歲，予妻，有子，然騫持漢節不失。",
@@ -83,8 +83,8 @@
   "dating": [
     {
       "claim": "-138",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "-138",

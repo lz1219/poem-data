@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-2f5515c9b68d7fe8",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第1站 · 眉州",
+  "claim": "年二十一的苏轼与弟苏辙随父苏洵自蜀中眉州启程，乘舟循岷江入长江，复由褒斜道越秦岭赴东京汴梁应试。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.096127+00:00",
+  "sha256": "ebc6a985f64c15ee432ff16239bd473d3ed7434dcb0ec382b79250f88e5fb7b3"
+}

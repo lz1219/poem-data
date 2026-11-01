@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-0ebda754abd9fecc",
+  "subject": {
+    "type": "stop",
+    "key": "ouyangxiu:6"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "欧阳修：从绵州到颍州 · 第6站 · 开封",
+  "claim": "由地方入朝，任同知枢密院事。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 1384（同知樞密院事，1060）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.039574+00:00",
+  "sha256": "4c7e06f40b2d91c24032c2fdc4aadba026eac0ee2ffb617ae9b61c0dfe51efad"
+}

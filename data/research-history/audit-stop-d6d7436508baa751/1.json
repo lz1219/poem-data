@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-d6d7436508baa751",
+  "subject": {
+    "type": "stop",
+    "key": "libai:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第2站 · 绵州青莲",
+  "claim": "随父客居剑南道绵州昌隆县青莲乡（自号“青莲居士”）。少时博学广览、好剑术任侠，隐大匡山读书，后游成都、登峨眉，受道士司马承祯赞为“有仙风道骨，可与神游八极之表”，作《大鹏遇希有鸟赋》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.940788+00:00",
+  "sha256": "874d7ab42fdff4f71fe2663354217e2fbbe594a3beedfa1eaf8eeb362c410a24"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-a455b865c4c78921d3e5",
+  "subject": {
+    "type": "work",
+    "key": "峨眉山月歌"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "峨眉山月歌 · KR4c0012 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "quote": "峨眉山月半輪秋影入平羌江水流",
+      "locator": "KR4c0012_006.txt",
+      "url": "https://github.com/kanripo/KR4c0012/blob/0320bec76946f08e3cc25aa9501fafa97d6f51ac/KR4c0012_006.txt",
+      "commit": "0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+      "sha256": "a6e464fb97b96a6938a47b9b1bbafacc67576bd79f8dde9822742d6643977e1b",
+      "originalFileSha256": "d54c2a4078e6404ee9b2f788aec066cb74f1aff744145558c724aa62432bd109",
+      "textFile": "data/witnesses/a6e464fb97b96a6938a47b9b1bbafacc67576bd79f8dde9822742d6643977e1b.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "2个可比片段中命中2个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "query": "峨眉山月歌",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:30.576727+00:00",
+  "sha256": "67e6958f13a67973d300ae2cb1d23ba6193975237fd022d4094db265ac116e4e"
+}

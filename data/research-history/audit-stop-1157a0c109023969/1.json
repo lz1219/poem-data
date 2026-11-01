@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-1157a0c109023969",
+  "subject": {
+    "type": "stop",
+    "key": "baijuyi:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "白居易：从拾遗到香山 · 第7站 · 忠州",
+  "claim": "量移忠州刺史，自江州溯江西上。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB POSTED_TO_OFFICE_DATA（32227）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.729308+00:00",
+  "sha256": "1eda66a44a71f353f137ced27372857af6a189473cd961606878623496083e23"
+}

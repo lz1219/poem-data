@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-d8b04c4d7f31aeaa",
+  "subject": {
+    "type": "stop",
+    "key": "dufu:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "杜甫：从长安到湘江 · 第8站 · 渝州",
+  "claim": "离成都东下，舟行于渝州、忠州间，作《旅夜书怀》。此后两年漂泊夔州。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：杜甫诗题与诗中地名；《旅夜书怀》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.802037+00:00",
+  "sha256": "3d057598eaa34e52608f186a0a6706dc1d962045682edb4606255ca6f58c30ed"
+}

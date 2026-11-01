@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-cd00c52797cd64df",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第3站 · 凤翔府",
+  "claim": "制科入第三等，授大理评事、签书凤翔府判官。初历地方吏治，兴修东湖、革除衙前弊政，作《喜雨亭记》《石鼓歌》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.100048+00:00",
+  "sha256": "f8995d37fa8ad42c1e622c746421dc99b5bbe1ff75033be6ab2b07c1884f99bd"
+}

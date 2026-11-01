@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-0709649ce26c5722",
+  "subject": {
+    "type": "stop",
+    "key": "qinshihuang:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "秦始皇一统六国行迹 · 第4站 · 邯郸",
+  "claim": "赵国名将李牧屡挫秦军。秦军重金行反间计于赵王宠臣郭开，赵王迁自毁长城冤杀李牧、废司马尚。王翦遂猛攻大破赵军，于前228年攻克赵都邯郸，俘赵王迁；秦王政亲赴邯郸尽坑昔日母家仇人。赵公子嘉率宗族北奔代郡称代王。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.069077+00:00",
+  "sha256": "26e59e1ecee26f112df52773a8f381ea0b897e6c6766118ce1c812346e594484"
+}

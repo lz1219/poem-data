@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-5e153fdf80345ab8",
+  "subject": {
+    "type": "stop",
+    "key": "jiangjie:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "蒋捷：宋亡之后的竹山 · 第3站 · 临安",
+  "claim": "德祐二年，元军入临安，宋室南奔。蒋捷义不仕元，此后以遗民自居。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《宋史》卷四七《瀛国公纪》；杨景龙校注《蒋捷词校注》（中华书局，2010）；《词林纪事》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.908409+00:00",
+  "sha256": "2548a8391d4be18b53b06f00b2f9abdebe31ea464ca598ffddbe446e27c3bbda"
+}

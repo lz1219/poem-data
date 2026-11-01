@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8b6e908c03ee23c4",
+  "subject": {
+    "type": "stop",
+    "key": "libai:6"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第6站 · 安陆",
+  "claim": "西归荆楚，赘于安陆故相许圉师孙女家，隐居白兆山桃花岩所谓“酒隐安陆，蹉跎十年”；其间频游江夏与襄阳，结交孟浩然，于黄鹤楼赋诗送其东下广陵。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.948905+00:00",
+  "sha256": "70d9c778648368bb48b826243b3fea833a3b35860706367895130e1811ce7e2c"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-fe7217699a1024f5",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第3站 · 京师",
+  "claim": "在京师欲依朱熹“即物穷理”之法穷究草木之理，与钱友同坐亭前面竹“格竹”七日七夜，理未得而劳神成疾，始疑外求之弊。弘治十二年（1499）赐进士及第，历任工部、刑部主事，究心兵法韬略与经世之学。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.172887+00:00",
+  "sha256": "dfe7f15854c1dca03faf1637f6c42a037811cf67f7e0fbfafc1d735e43c61cd0"
+}

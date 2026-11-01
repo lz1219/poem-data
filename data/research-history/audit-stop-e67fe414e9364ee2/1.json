@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-e67fe414e9364ee2",
+  "subject": {
+    "type": "stop",
+    "key": "zhugeliang:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "诸葛亮出山北伐行迹 · 第3站 · 赤壁",
+  "claim": "孙刘联军溯江西上，与曹军决战于赤壁乌林。周瑜、黄盖借东南风施火攻焚曹军连环战船，刘备、诸葛亮水陆并进追击至南郡，奠定三分天下之基。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.425028+00:00",
+  "sha256": "df90b00e87617500dc050846e51cbdf5aa6a098c53b640712366450aa76e7efd"
+}

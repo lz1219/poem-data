@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-78b48d3ed7a9a3dd",
+  "subject": {
+    "type": "stop",
+    "key": "zhugeliang:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "诸葛亮出山北伐行迹 · 第9站 · 祁山",
+  "claim": "声东击西由箕谷设疑兵、亲率大军攻祁山，戎阵整齐，南安、天水、安定三郡叛魏应亮，关中震响，收天水俊杰姜维；惜马谡违亮节度于街亭依山不下城，为张郃绝水道所破，亮拔西县千余家还汉中并自贬三等。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.439366+00:00",
+  "sha256": "fa2229f70bf2b132534bdc80d0ca78d979bec8122771e38db2092a7a0c8a8627"
+}

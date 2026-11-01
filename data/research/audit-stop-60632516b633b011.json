@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-60632516b633b011",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:12"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第12站 · 长安",
+  "claim": "贞观十九年正月返抵长安，朱雀街数十万人瞻礼迎奉六百五十七部梵经；后于弘福寺、大慈恩寺主持译场十九载，译经七十五部，撰成《大唐西域记》十二卷。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.291788+00:00",
+  "sha256": "c893fdfffcd2b5647fe6bb9a60eb9f889b5aed3e07418f61425683eab2160630"
+}

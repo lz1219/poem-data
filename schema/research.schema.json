@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "独立研究记录",
+  "type": "object",
+  "required": ["schemaVersion", "id", "revision", "subject", "kind", "status", "visibility", "title", "claim", "provenance", "evidence", "counterEvidence", "reviewHistory", "sha256", "updatedAt"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "id": {"type": "string", "minLength": 1},
+    "revision": {"type": "integer"},
+    "subject": {"type": "object", "required": ["type", "key"], "properties": {"type": {"enum": ["work", "person", "journey", "stop"]}, "key": {"type": "string"}}},
+    "kind": {"enum": ["audit", "witness", "inference"]},
+    "status": {"enum": ["pending", "partial", "verified", "restricted", "rejected"]},
+    "visibility": {"enum": ["public", "internal"]},
+    "title": {"type": "string", "minLength": 1},
+    "claim": {"type": "string", "minLength": 1},
+    "provenance": {"type": "object", "required": ["origin"], "properties": {"origin": {"enum": ["ai", "human", "mixed", "machine", "unknown"]}, "model": {"type": "string"}, "modelVersion": {"type": "string"}, "generatedAt": {"type": "string"}}},
+    "evidence": {"type": "array", "items": {"type": "object", "required": ["sourceId", "quote", "locator", "sha256", "textFile"], "properties": {"sourceId": {"type": "string"}, "quote": {"type": "string", "minLength": 1}, "locator": {"type": "string", "minLength": 1}, "sha256": {"type": "string"}, "textFile": {"type": "string"}}}},
+    "counterEvidence": {"type": "string"},
+    "reviewHistory": {"type": "array"},
+    "sha256": {"type": "string"},
+    "updatedAt": {"type": "string"}
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-463368175e9cbe83",
+  "subject": {
+    "type": "stop",
+    "key": "wangwei:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王维：从蒲州到长安 · 第1站 · 蒲州",
+  "claim": "王维生于蒲州（今山西永济），祖籍太原祁县。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32174（c_birthyear=701）；籍贯据《旧唐书》卷一九〇下《王维传》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.133501+00:00",
+  "sha256": "aef3101c86c4a1e9b532db1579fcf4ecd046e0ffd5d04548429aaab9f8a4a046"
+}

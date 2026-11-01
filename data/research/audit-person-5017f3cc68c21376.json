@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-person-5017f3cc68c21376",
+  "subject": {
+    "type": "person",
+    "key": "censhen"
+  },
+  "kind": "audit",
+  "status": "partial",
+  "visibility": "public",
+  "title": "岑参",
+  "claim": "结构与证据缺口初审；不代表史实已经核定。",
+  "provenance": {
+    "origin": "machine",
+    "method": "结构审查与公开目录检索，不是人工学术审校"
+  },
+  "issues": [
+    "人物生卒、身份映射与别名需对本传/年谱逐项核验；现有字段不等于证据。",
+    "有生卒异说，必须随展示保留。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo",
+      "queries": [
+        "岑参"
+      ],
+      "mode": "固定提交目录检索",
+      "hits": []
+    },
+    {
+      "sourceId": "nlc",
+      "mode": "影像与版本目录",
+      "status": "pending",
+      "reason": "入口已列入调查，未逐条人工检索"
+    },
+    {
+      "sourceId": "wikisource",
+      "mode": "篇卷文本检索",
+      "status": "pending",
+      "reason": "需精确篇卷或别名继续检索"
+    }
+  ],
+  "nextAction": "依据候选底本核正文/史实并登记具体卷篇与原句；无命中时转查别集异名、影像及机构目录。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.286867+00:00",
+  "sha256": "e9e9fd56907a438c0d8ab50add2f038b19e735fee3f8be6fc22a5872521f950b"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-dff941edd00adbb6",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第7站 · 大月氏蓝氏城",
+  "claim": "抵阿姆河流域，大月氏已臣服大夏（巴克特里亚），土地肥美安乐，无意东还复仇。张骞驻留岁余，详考大夏、安息、身毒及蜀布竹杖商路。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.398351+00:00",
+  "sha256": "7e4d8e13268db94e609bc600a3d3150ce0fe5faa5de4ef1c0569bf9a2a2b9148"
+}

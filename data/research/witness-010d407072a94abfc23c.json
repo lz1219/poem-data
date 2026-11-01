@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-010d407072a94abfc23c",
+  "subject": {
+    "type": "work",
+    "key": "蜀相"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "蜀相 · KR4c0015 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0015",
+      "quote": "丞相祠堂何處尋錦官城外柏森森",
+      "locator": "KR4c0015_021.txt",
+      "url": "https://github.com/kanripo/KR4c0015/blob/592e76dc91714e57f0a16beb3403c87873c89f12/KR4c0015_021.txt",
+      "commit": "592e76dc91714e57f0a16beb3403c87873c89f12",
+      "sha256": "65ea97edb89d133a798081ef109a8480e0251a47a95a2655d9f731383a1545b0",
+      "originalFileSha256": "ef7ec686d4cf10aba93158ff7ea10bf0408ba3dee3ee40189c74231fd7816996",
+      "textFile": "data/witnesses/65ea97edb89d133a798081ef109a8480e0251a47a95a2655d9f731383a1545b0.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "4个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0015",
+      "query": "蜀相",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:45.663681+00:00",
+  "sha256": "107ed7d192ed5e2821326b8ebe17d5cd72ddc93732c82faec68b1a0a65645480"
+}

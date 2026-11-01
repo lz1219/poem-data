@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-32202b071c44ee8c",
+  "subject": {
+    "type": "stop",
+    "key": "qinshihuang:6"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "秦始皇一统六国行迹 · 第6站 · 大梁",
+  "claim": "魏都大梁城垣坚厚、护城河深广，易守难攻。王翦之子王贲率军南下攻魏，掘开黄河与鸿沟水渠引水灌城。浸灌三月，大梁城墙崩坏，魏王假出降被杀，秦尽收魏地设砀郡，三晋至此尽入于秦。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.073639+00:00",
+  "sha256": "2f5bce5879a473c23e6fa12e883c00e3270cf0cadaa6ae5ff8f311aba3f18201"
+}

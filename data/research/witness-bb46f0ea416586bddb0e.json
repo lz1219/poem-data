@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-bb46f0ea416586bddb0e",
+  "subject": {
+    "type": "work",
+    "key": "卖炭翁"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "卖炭翁 · KR4c0069 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0069",
+      "quote": "賣炭得錢何所營身¶\n上衣裳口中食",
+      "locator": "KR4c0069_004.txt",
+      "url": "https://github.com/kanripo/KR4c0069/blob/a9aabe3ae87777b7ba765c4193ff551dafbdee3e/KR4c0069_004.txt",
+      "commit": "a9aabe3ae87777b7ba765c4193ff551dafbdee3e",
+      "sha256": "db7ce98b4049b04f21dfc99ef33823ec6e02dc834521ba4e9e06e9dff7bd0fac",
+      "originalFileSha256": "c42317349bcf98b10c2b6d7e8ce8ac859ca09851d17b2fc167cd1ac7ee91d2a2",
+      "textFile": "data/witnesses/db7ce98b4049b04f21dfc99ef33823ec6e02dc834521ba4e9e06e9dff7bd0fac.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "9个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0069",
+      "query": "卖炭翁",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:37:22.300160+00:00",
+  "sha256": "1c01b4c27519aac9d2ac308b0ada6ffb8cff880dfc3c45065955ce5b7d78736b"
+}

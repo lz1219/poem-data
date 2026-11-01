@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-6cafce77ce923e8f",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第8站 · 于阗",
+  "claim": "为避匈奴控制的天山北道，返程改循昆仑山北麓西域南道，经莎车、于阗、楼兰，欲从羌中归汉，不意复为匈奴游骑所得。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.400985+00:00",
+  "sha256": "afa6580d4effc2d04affc56d7acd098908c9a8788e3b1e672a68e2211aad5e56"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-da126eb37145b225",
+  "subject": {
+    "type": "stop",
+    "key": "weizhuang:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦庄：从长安到成都 · 第7站 · 成都",
+  "claim": "拜同中书门下平章事，为前蜀宰相。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 92161（同中書門下平章事、門下侍郎，908）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.249440+00:00",
+  "sha256": "29bdd220ff26b8c2444e9e743824843d86a2a5db19b834d1350c8923092df28a"
+}

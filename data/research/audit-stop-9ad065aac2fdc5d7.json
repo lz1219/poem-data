@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-9ad065aac2fdc5d7",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第2站 · 东京开封府",
+  "claim": "嘉祐二年春闱，主考官欧阳修读苏轼《刑赏忠厚之至论》惊喜击节，苏氏兄弟同科进士及第，文名震动汴京。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.098167+00:00",
+  "sha256": "b5d365cc56820dca133c6aae8d7959c2f43ab9761e99f8344240dc9855d23460"
+}

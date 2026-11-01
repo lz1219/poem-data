@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-work-4d158aac3bbee154",
+  "subject": {
+    "type": "work",
+    "key": "唐左拾遗翰林学士李公新墓碑"
+  },
+  "kind": "audit",
+  "status": "partial",
+  "visibility": "public",
+  "title": "唐左拾遗翰林学士李公新墓碑",
+  "claim": "结构与证据缺口初审；不代表史实已经核定。",
+  "provenance": {
+    "origin": "machine",
+    "method": "结构审查与公开目录检索，不是人工学术审校"
+  },
+  "issues": [
+    "繁体由简体反推，尚缺可核底本；保留反推标识。",
+    "系年依据仅为年份占位，不是史料原句；既有年份待考据复核。",
+    "正文、释义、背景、赏析尚未逐项对原书完成学术审校。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo",
+      "queries": [
+        "唐左拾遗翰林学士李公新墓碑"
+      ],
+      "mode": "固定提交目录检索",
+      "hits": []
+    },
+    {
+      "sourceId": "nlc",
+      "mode": "影像与版本目录",
+      "status": "pending",
+      "reason": "入口已列入调查，未逐条人工检索"
+    },
+    {
+      "sourceId": "wikisource",
+      "mode": "篇卷文本检索",
+      "status": "pending",
+      "reason": "需精确篇卷或别名继续检索"
+    }
+  ],
+  "nextAction": "依据候选底本核正文/史实并登记具体卷篇与原句；无命中时转查别集异名、影像及机构目录。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:53.371298+00:00",
+  "sha256": "7ee93de14a833adcd9f369a58a0d08847e927fced78453a114541b5c9a8f2a94"
+}

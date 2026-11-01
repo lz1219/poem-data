@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-a44620299a7ee8e2",
+  "subject": {
+    "type": "stop",
+    "key": "baijuyi:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "白居易：从拾遗到香山 · 第2站 · 长安",
+  "claim": "少年白居易携诗文谒顾况，顾况见「野火烧不尽」句而改容。此为传世轶闻，见唐人记载。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：唐·张固《幽闲鼓吹》；《赋得古原草送别》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.718069+00:00",
+  "sha256": "b4901e90627dd598cd70989ee9a92434621790c907b44ccd06281bb6a0160464"
+}

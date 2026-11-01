@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-a955a59ef4856139",
+  "subject": {
+    "type": "stop",
+    "key": "baijuyi:6"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "白居易：从拾遗到香山 · 第6站 · 江州",
+  "claim": "因上疏请捕刺宰相之贼，贬江州司马。次年秋作《琵琶行》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《旧唐书》卷一六六《白居易传》；CBDB 32227；《琵琶行》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.726870+00:00",
+  "sha256": "45c6bc4cbee03c12c00e8281a99b1bc08db38fb0ada01c8b322f17e85ef32924"
+}

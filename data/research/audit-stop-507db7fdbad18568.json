@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-507db7fdbad18568",
+  "subject": {
+    "type": "stop",
+    "key": "wangwei:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王维：从蒲州到长安 · 第9站 · 长安",
+  "claim": "官终尚书右丞，世称「王右丞」；上元二年卒，年六十一。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32174（尚書右丞相 760；c_deathyear=761）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.150734+00:00",
+  "sha256": "9f27c1ac613a82b91fd741b4b9c72d554602d1aadf34c09b391f53f12fb9a0b6"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-815472d0235f3341",
+  "subject": {
+    "type": "stop",
+    "key": "weiyingwu:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦应物：从京兆到江州 · 第1站 · 长安",
+  "claim": "韦应物生于京兆长安，出身关中望族京兆韦氏。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32822（c_birthyear=737）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.205740+00:00",
+  "sha256": "073ba2534dc85a02b1e5799e916be5bc6b8d349fddc4ac2ddfaa51d00a70bcd9"
+}

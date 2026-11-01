@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-1ac8fbfbad668b9f6f9c",
+  "subject": {
+    "type": "work",
+    "key": "早发白帝城"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "早发白帝城 · KR4c0012 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "quote": "朝辭白帝彩雲間千里江陵一日還",
+      "locator": "KR4c0012_019.txt",
+      "url": "https://github.com/kanripo/KR4c0012/blob/0320bec76946f08e3cc25aa9501fafa97d6f51ac/KR4c0012_019.txt",
+      "commit": "0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+      "sha256": "f9539bb40bfec3623d1b67475969a006098b65339e2242a8ec0befcab42b2a8e",
+      "originalFileSha256": "c1b00d72ae4cf892d9458d3519f2f45ef30e7953928973b308b443a42f9d3c40",
+      "textFile": "data/witnesses/f9539bb40bfec3623d1b67475969a006098b65339e2242a8ec0befcab42b2a8e.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "2个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "query": "早发白帝城",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:30.581250+00:00",
+  "sha256": "6a04389fcfefc5199be9c45d9e281596c6bf98ffb10943ae99ba72b4ea192430"
+}

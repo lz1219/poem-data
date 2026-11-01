@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-e028b6833e68cd14",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:10"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第10站 · 曲女城",
+  "claim": "戒日王于曲女城设无遮大会，五印十八国王与僧俗数千人与会。玄奘为论主，悬所著论于会场门外，十八日间无一人能难，大乘尊为“大乘天”，小乘尊为“解脱天”。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.287738+00:00",
+  "sha256": "9f7e512f3a69264672a53737456d867882480098e1afcfdb60870a5e5b837026"
+}

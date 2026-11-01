@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-10df65fc324786f9",
+  "subject": {
+    "type": "stop",
+    "key": "xueneng:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "薛能：从盩厔到许州 · 第3站 · 江州",
+  "claim": "同年转江州刺史，治所在浔阳。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 95071（州刺史，潯陽／江州，868）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.313095+00:00",
+  "sha256": "d3ce2d8b502617a402f3260b9977051ea509bb80871f13cf72169c1edd4c3d71"
+}

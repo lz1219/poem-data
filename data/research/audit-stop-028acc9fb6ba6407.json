@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-028acc9fb6ba6407",
+  "subject": {
+    "type": "stop",
+    "key": "liuyuxi:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "刘禹锡：二十三年弃置身 · 第2站 · 扬州",
+  "claim": "入淮南节度使杜佑幕为掌书记，居扬州。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 33606（節度使掌書記，淮南道，800—802）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.989339+00:00",
+  "sha256": "9462e9d9c0acd9207cef026fdca673d309aed3954f215fc000cb75e4e87afb36"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-9583e1bbbe2a3d06",
+  "subject": {
+    "type": "stop",
+    "key": "baijuyi:10"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "白居易：从拾遗到香山 · 第10站 · 洛阳",
+  "claim": "以太子宾客分司东都，居洛阳履道里，自此不复出。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB POSTED_TO_OFFICE_DATA（32227）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.736336+00:00",
+  "sha256": "72b1911061894dc3d9c5ee5644fd273eb4c10c69b3c6adb5915252fe3179863c"
+}

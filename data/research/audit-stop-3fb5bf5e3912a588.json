@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-3fb5bf5e3912a588",
+  "subject": {
+    "type": "stop",
+    "key": "weizhuang:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦庄：从长安到成都 · 第2站 · 长安",
+  "claim": "黄巢据长安，韦庄困于城中，后以此经历作长篇《秦妇吟》；这一联写的正是长安城破后的景象。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《秦妇吟》开篇自述（中和癸卯＝883）；地点据诗中所述与《十国春秋》本传；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.238902+00:00",
+  "sha256": "e751defacbe28a1eda1c36488b0a6216a991ffea5fe22a643988208b9f66aefe"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-d0b83eff306adc88",
+  "subject": {
+    "type": "stop",
+    "key": "yuanzhen:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "元稹：从通州到越州 · 第5站 · 长安",
+  "claim": "入翰林为承旨学士，兼中书舍人，掌内外制。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32248（翰林承旨學士、中書舍人，821）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.350689+00:00",
+  "sha256": "c76ca7ec9d56eca25e75a347879be8e0b9711060694d13ac3c9064a1ec6c2d75"
+}

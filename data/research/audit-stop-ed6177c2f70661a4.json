@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-ed6177c2f70661a4",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:10"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第10站 · 南安",
+  "claim": "嘉靖六年总督两广，不费一兵一卒招抚思恩、田州卢苏王受七万众，继以奇兵荡平断藤峡八寨瑶乱。次年冬肺疾加剧上疏乞归，十一月二十九日（公历1529年1月）舟次江西南安府大余县青龙铺。门人周积问遗言，先生微笑曰：“此心光明，亦复何言！”遂瞑目而逝。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.188292+00:00",
+  "sha256": "6df0db72c390349e234a9094088c12e1e3d7b03ecbf960354a0a15faf1f13b66"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8e2dc98b8065fc46",
+  "subject": {
+    "type": "stop",
+    "key": "wangwei:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王维：从蒲州到长安 · 第7站 · 洛阳",
+  "claim": "安禄山陷两京，王维被拘，送至洛阳，迫受给事中伪职；曾服药取痢以免，仍不免。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《旧唐书》卷一九〇下《王维传》；CBDB 32174（給事中 755、756）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.146435+00:00",
+  "sha256": "4e18a21b9da4f23daf14baeb35e35bd651576534a070e6b8b8f8e8321fb26138"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-c411db5461fd5cc3",
+  "subject": {
+    "type": "stop",
+    "key": "libai:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第7站 · 长安",
+  "claim": "因道士吴筠及玉真公主举荐，唐玄宗降诏征召入京。李白高歌“仰天大笑出门去，我辈岂是蓬蒿人”西入长安，贺知章读《蜀道难》惊呼“谪仙人”，玄宗降辇步迎、供奉翰林，赋《清平调》三章。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.950792+00:00",
+  "sha256": "a0bbdd756b29889d6deadaace52f90969907a561cd8c6162ff2bc870de9755a5"
+}

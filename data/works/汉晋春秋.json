@@ -9,7 +9,7 @@
   "authorKey": "xizaochi",
   "genre": "history",
   "level": "popular",
-  "certainty": "probable",
+  "certainty": "unknown",
   "excerpt": true,
   "composed": {
     "year": 225,
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "亮笑，縱使更戰，七縱七禽，而亮猶遣獲。獲止不去，曰：「公，天威也，南人不復反矣。」"
     ],
@@ -55,8 +55,8 @@
   "dating": [
     {
       "claim": "225",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 probable",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "225",

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-c901e14e9b5ec0f9",
+  "subject": {
+    "type": "stop",
+    "key": "qinshihuang:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "秦始皇一统六国行迹 · 第2站 · 邺城",
+  "claim": "趁赵燕交兵、赵军主力北上攻燕之际，秦王政命王翦、桓齮、杨端和三路大军东出伐赵，连拔邺城、阏与等九城。此役夺取赵国南部漳水门户，正式拉开秦灭六国十年统一战争的序幕。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.064653+00:00",
+  "sha256": "f3b918cccff6223fef8075618ddb37cdd3bc728844e3317118213bb9e4491f4c"
+}

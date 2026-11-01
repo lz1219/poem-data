@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-c1efebbfe4272e3c",
+  "subject": {
+    "type": "stop",
+    "key": "weiyingwu:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦应物：从京兆到江州 · 第4站 · 栎阳",
+  "claim": "转栎阳县令，次年入朝为比部员外郎。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32822（縣令，櫟陽，779；比部員外郎 781）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.212184+00:00",
+  "sha256": "37f8b355bc9fd6e5acec7581825b27e3d005b5c0a9ec539c8cc1fe42ee69e7cb"
+}

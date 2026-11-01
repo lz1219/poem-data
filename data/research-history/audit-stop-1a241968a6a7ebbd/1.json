@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-1a241968a6a7ebbd",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第9站 · 长安",
+  "claim": "元朔三年军臣单于死、匈奴内乱，张骞与胡妻及甘父逃归长安。出使十三载，百余人唯二人得还，封博望侯，史称“凿空”。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.403366+00:00",
+  "sha256": "ee6001e95a958818df945cf0cf5d0d8ca654e4561ed3a07352e0f10d0cb3b8d9"
+}

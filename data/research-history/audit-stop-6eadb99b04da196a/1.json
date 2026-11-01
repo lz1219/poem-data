@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-6eadb99b04da196a",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:11"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第11站 · 于阗",
+  "claim": "载梵本经论越帕米尔高原东归至于阗，遣使向唐太宗奉表陈情；此时大唐已平定高昌、设安西都护府，太宗降敕欣慰迎归，命沿途州县护送。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.289686+00:00",
+  "sha256": "dc1f4dffd72fa0ff1cda77ebb26e4e364e4958772157a7d57103d33fa71acb12"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-99d94aca8873ead4",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第1站 · 余姚",
+  "claim": "王守仁诞生于浙江绍兴府余姚县瑞云楼，父王华次年高中状元。十一岁随祖父北上京师塾读，问塾师“何为第一等事”，师答“惟读书登第耳”，守仁昂然对曰：“登第恐未为第一等事，或读书学圣贤耳。”自幼立下成圣之志。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.168283+00:00",
+  "sha256": "d5090e9f674160711ca6a94c1c830ec36944d14865f3536d3a1071adf1c15af8"
+}

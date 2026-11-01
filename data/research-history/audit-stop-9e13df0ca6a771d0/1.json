@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-9e13df0ca6a771d0",
+  "subject": {
+    "type": "stop",
+    "key": "jiangjie:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "蒋捷：宋亡之后的竹山 · 第5站 · 吴江",
+  "claim": "舟过吴江而作《一剪梅》。「何日归家洗客袍」是羁旅之问，「流光容易把人抛」是亡国之叹，一句里两层。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《竹山词》词题《一剪梅·舟过吴江》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.913168+00:00",
+  "sha256": "248725cdbab0795b0d39c623a48d5a227b4337ae132f4c688b50eed89380c183"
+}

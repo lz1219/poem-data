@@ -10,7 +10,7 @@
   "authorKey": "sushi",
   "genre": "ci",
   "level": "popular",
-  "certainty": "confirmed",
+  "certainty": "unknown",
   "composed": {
     "year": 1076,
     "yearKind": "composition",
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "春未老，風細柳斜斜。試上超然臺上看，半壕春水一城花。煙雨暗千家。",
       "寒食後，酒醒卻諮嗟。休對故人思故國，且將新火試新茶。詩酒趁年華。"
@@ -65,8 +65,8 @@
   "dating": [
     {
       "claim": "1076",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "1076",

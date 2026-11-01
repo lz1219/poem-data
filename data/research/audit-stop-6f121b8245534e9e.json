@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-6f121b8245534e9e",
+  "subject": {
+    "type": "stop",
+    "key": "ouyangxiu:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "欧阳修：从绵州到颍州 · 第1站 · 绵州",
+  "claim": "其父欧阳观时任绵州推官，欧阳修生于绵州。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 1384（c_birthyear=1007）；《宋史》卷三一九《欧阳修传》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.027572+00:00",
+  "sha256": "bee2c5c782b694bbbf49f99c0fff9a7bc0d33368d78af4d68b274cbca3ace459"
+}

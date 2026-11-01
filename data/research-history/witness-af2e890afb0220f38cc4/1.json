@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-af2e890afb0220f38cc4",
+  "subject": {
+    "type": "work",
+    "key": "上安州裴长史书"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "上安州裴长史书 · KR4c0012 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "quote": "曩昔東遊維¶\n揚不逾一年散金三十餘萬有落魄公子悉皆濟之",
+      "locator": "KR4c0012_025.txt",
+      "url": "https://github.com/kanripo/KR4c0012/blob/0320bec76946f08e3cc25aa9501fafa97d6f51ac/KR4c0012_025.txt",
+      "commit": "0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+      "sha256": "f606cb9d54437820f9e79877b5e28c9db298656afb76edeefa9ca47a4557296f",
+      "originalFileSha256": "c6b36d2a4f7ee06ccd66469e9aceadaee0ce3241bd690c5b73ce3f6bd4b0b824",
+      "textFile": "data/witnesses/f606cb9d54437820f9e79877b5e28c9db298656afb76edeefa9ca47a4557296f.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "2个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "query": "上安州裴长史书",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:30.561070+00:00",
+  "sha256": "be370e6b43ef39c5c4eaa599de45c77560262a88b240a6823a4888b2396757ff"
+}

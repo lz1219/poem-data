@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8a54ff650b8aebfb",
+  "subject": {
+    "type": "stop",
+    "key": "ouyangxiu:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "欧阳修：从绵州到颍州 · 第2站 · 夷陵",
+  "claim": "因言范仲淹事忤权贵，贬峡州夷陵县令。CBDB 记其任「县令，夷陵」，未记年；年份据本传。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 1384（縣令，夷陵，年份缺）；《宋史》卷三一九《欧阳修传》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.030638+00:00",
+  "sha256": "2cf53bab48d007d24d7efae4cc44d12a60f44fbdb4fbb3c0baed2292f826bef8"
+}

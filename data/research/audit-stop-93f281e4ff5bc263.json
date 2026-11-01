@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-93f281e4ff5bc263",
+  "subject": {
+    "type": "stop",
+    "key": "dumu:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "杜牧：从扬州到长安 · 第8站 · 长安",
+  "claim": "入朝为史馆修撰，回到长安。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 21194（史館修撰，848）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.840415+00:00",
+  "sha256": "d22ad9ba57e18f870e8d45d0de60227cb9ea6ab2e43e585100d6bb261497b8d5"
+}

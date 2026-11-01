@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-81c27f3113fc41e2",
+  "subject": {
+    "type": "stop",
+    "key": "hanyu:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韩愈：从汴徐到潮袁 · 第1站 · 河阳",
+  "claim": "韩愈生于河阳（今河南孟州），郡望昌黎。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 3332（c_birthyear=768）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.863834+00:00",
+  "sha256": "0bde0397a7ad47b7412d07a0e5ef67b8d3f227aa25e6a59a98029d008082ffdc"
+}

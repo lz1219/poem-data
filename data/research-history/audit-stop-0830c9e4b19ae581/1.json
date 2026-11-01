@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-0830c9e4b19ae581",
+  "subject": {
+    "type": "stop",
+    "key": "wangwei:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王维：从蒲州到长安 · 第3站 · 济州",
+  "claim": "贬济州司仓参军，在济州约五年。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32174（州司倉參軍，濟州，721—726）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.137609+00:00",
+  "sha256": "fa7eb27130f4471a1d1a9f782d50e0897964cd8f9ec10113c7fafc0727a90b43"
+}

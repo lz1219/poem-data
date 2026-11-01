@@ -19,7 +19,9 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from corpus.models import Commentary, Edition, Journey, Person, Work
+from corpus.models import Commentary, Edition, Journey, Person, Work, SourceRecord, ResearchRevision, ResearchArtifact
+from corpus.research_rules import publishable
+from corpus.research_storage import database_context
 
 
 def _num(v):
@@ -94,7 +96,7 @@ class Command(BaseCommand):
 
         # ── 作品 ──
         for w in Work.objects.select_related("author", "source_edition").prefetch_related("apparatus", "dating").all():
-            comments = list(w.commentaries.all())
+            comments = list(w.commentaries.filter(status='verified'))
             commentary_file = None
             if comments:
                 commentary_file = f"comments/{w.key}.json"
@@ -103,7 +105,7 @@ class Command(BaseCommand):
                     "workKey": w.key,
                     "items": [
                         {
-                            "id": f"c{i:03d}",
+                            "id": c.stable_id or f"c{i:03d}",
                             "critic": c.critic,
                             "dynasty": c.dynasty,
                             "text": c.text,
@@ -131,7 +133,7 @@ class Command(BaseCommand):
                     "year": w.year,
                     "yearKind": w.year_kind,
                     "placeZh": w.place_zh or None,
-                    "placeKey": None,
+                    "placeKey": w.place_key or None,
                 },
                 "text": {
                     "sourceEdition": w.source_edition.key if w.source_edition_id else None,
@@ -153,7 +155,7 @@ class Command(BaseCommand):
                 },
                 "apparatus": [
                     {
-                        "id": f"a{i:03d}",
+                        "id": a.stable_id or f"a{i:03d}",
                         "locator": a.locator or {},
                         "baseEdition": a.base_edition or None,
                         "baseText": a.base_text,
@@ -254,6 +256,35 @@ class Command(BaseCommand):
             ],
         }
         files[out / "index.json"] = _dump(index)
+        # 研究历史逐修订导出，不覆盖或省略旧记录。
+        latest = {}
+        for r in ResearchRevision.objects.order_by('record_id', 'revision'):
+            base = out if r.payload.get('visibility') == 'public' else settings.PRIVATE_RESEARCH_DIR
+            files[base / 'research-history' / r.record_id / f'{r.revision}.json'] = _dump(r.payload)
+            latest[r.record_id] = r.payload
+        for key, doc in latest.items():
+            base = out if doc.get('visibility') == 'public' else settings.PRIVATE_RESEARCH_DIR
+            files[base / 'research' / f'{key}.json'] = _dump(doc)
+        research_index = []
+        research_context = database_context()
+        for key in sorted(latest):
+            doc = latest[key]
+            if publishable(doc, **research_context): research_index.append({k: doc[k] for k in ['id', 'revision', 'subject', 'kind', 'status', 'title', 'provenance']})
+        files[out / 'research-index.json'] = _dump({'schemaVersion': '1.0', 'records': research_index})
+        for artifact in ResearchArtifact.objects.all():
+            files[out / 'witnesses' / f'{artifact.sha256}.txt'] = artifact.text
+        source_path = (out.parent if out.name == 'data' else out) / 'shared' / 'sources.json'
+        current_sources = source_path if source_path.exists() else settings.DATA_DIR.parent / 'shared' / 'sources.json'
+        if SourceRecord.objects.exists():
+            registry = SourceRecord.objects.filter(key='__registry__').first()
+            blob = json.loads(json.dumps(registry.payload)) if registry else (json.loads(current_sources.read_text('utf-8')) if current_sources.exists() else {'schemaVersion': '1.0', 'catalogs': []})
+            blob['sources'] = [s.payload for s in SourceRecord.objects.exclude(key='__registry__').order_by('key')]
+            # 源文件排序在导入时即固定；保留原有顺序以保证字节级往返。
+            if registry or current_sources.exists():
+                original = registry.payload if registry else json.loads(current_sources.read_text('utf-8'))
+                order = {s['id']: i for i, s in enumerate(original['sources'])}
+                blob['sources'].sort(key=lambda s: order.get(s['id'], len(order)))
+            files[source_path] = _dump(blob)
 
         # ── 写入或比对 ──
         if check:
@@ -281,6 +312,9 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS(f"无差异（{len(files)} 个文件）"))
             return
 
+        for path, text in files.items():
+            if 'research-history' in path.parts and path.exists() and path.read_text('utf-8').replace('\r\n', '\n') != text:
+                raise ValueError('拒绝覆盖已有研究快照：' + str(path))
         for path, text in files.items():
             _atomic_write(path, text)
         self.stdout.write(self.style.SUCCESS(

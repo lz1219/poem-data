@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-7d83f7870bc9c3e5b1d2",
+  "subject": {
+    "type": "work",
+    "key": "登高"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "登高 · KR4c0015 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0015",
+      "quote": "無邊落木蕭蕭下¶\n不盡長江衮衮來",
+      "locator": "KR4c0015_030.txt",
+      "url": "https://github.com/kanripo/KR4c0015/blob/592e76dc91714e57f0a16beb3403c87873c89f12/KR4c0015_030.txt",
+      "commit": "592e76dc91714e57f0a16beb3403c87873c89f12",
+      "sha256": "b2d422a9c21f6144e6d08fbc529f979fbb0bb3c1bce947448c9c1aef253139cd",
+      "originalFileSha256": "d21ca8eeeb974fc4c72456071f85483b14c646d1e257f30778a1ca2880ecb6df",
+      "textFile": "data/witnesses/b2d422a9c21f6144e6d08fbc529f979fbb0bb3c1bce947448c9c1aef253139cd.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "4个可比片段中命中2个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0015",
+      "query": "登高",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:45.648662+00:00",
+  "sha256": "9e840276953caa919a2e516d4ec2d627cf94d6ce08eade37e8e4cec98eee7e85"
+}

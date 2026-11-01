@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "id": "ai-pipaxing-opening",
+  "subject": {
+    "type": "work",
+    "key": "琵琶行"
+  },
+  "kind": "inference",
+  "status": "pending",
+  "visibility": "public",
+  "title": "《琵琶行》开篇的秋景与送别：文本解释假说",
+  "claim": "开篇将江头送客与枫叶、荻花并置，可能以秋景强化离别气氛。这是文本解释假说，不据此确定实际作年、送客日期或行迹。",
+  "provenance": {
+    "origin": "ai",
+    "model": "Codex（本次会话）",
+    "modelVersion": "运行环境未提供精确模型快照标识",
+    "generatedAt": "2026-11-01T04:40:59.281842+00:00",
+    "method": "基于保存的版本原句提出解释；精确模型快照不可复现，须保留该限制"
+  },
+  "issues": [
+    "未经人工学术审校。",
+    "运行环境未公开精确模型快照版本；不得宣称可精确复现生成。"
+  ],
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0069",
+      "quote": "潯陽江頭夜送客楓葉荻花秋索索",
+      "locator": "KR4c0069_012.txt",
+      "url": "https://github.com/kanripo/KR4c0069/blob/a9aabe3ae87777b7ba765c4193ff551dafbdee3e/KR4c0069_012.txt",
+      "commit": "a9aabe3ae87777b7ba765c4193ff551dafbdee3e",
+      "sha256": "76fbd8e66b3c8ee9439546ecbea631c95e6e99ebc7af606968d0d36050196da0",
+      "originalFileSha256": "c2a3a2f4286c23a44d5978f92a389a11431577bfdef996d68e92914bed623353",
+      "textFile": "data/witnesses/76fbd8e66b3c8ee9439546ecbea631c95e6e99ebc7af606968d0d36050196da0.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "reasoning": "所引开篇把送客事件和秋景放在同一场景中；将二者理解为情绪组织是一种阅读推断，并非原文直接说明的写作意图。",
+  "counterEvidence": "尚未完成历代评点及其他版本的反证检索；当前证据只能证明文本并置，不能证明作者主观意图。",
+  "alternatives": [
+    "也可以只将秋景视为场景与时令描写，而不赋予更强的象征意义。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0069",
+      "mode": "固定提交的原文片段核对，不含独立意图证据"
+    }
+  ],
+  "nextAction": "查阅可核原典的评点，比较上下文与其他读法；由具名研究者审校。",
+  "revision": 2,
+  "updatedAt": "2026-11-01T04:40:59.292289+00:00",
+  "sha256": "f83e0f37bab1e4266f317922496b604a64ee06ab147a9a0a0b0e1b0e57eaf523"
+}

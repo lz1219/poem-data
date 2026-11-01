@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-f704194087b3a7c1",
+  "subject": {
+    "type": "stop",
+    "key": "yuanzhen:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "元稹：从通州到越州 · 第3站 · 通州",
+  "claim": "贬通州司马。白居易同时贬江州，两人有通江唱和。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32248（司馬，通州，815）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.344433+00:00",
+  "sha256": "47f2209759ab8d8347fc98c1ed13ca46f8861268992fde9b448d566e7233b112"
+}

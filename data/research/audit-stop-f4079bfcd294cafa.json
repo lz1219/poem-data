@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-f4079bfcd294cafa",
+  "subject": {
+    "type": "stop",
+    "key": "liuyuxi:11"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "刘禹锡：二十三年弃置身 · 第11站 · 洛阳",
+  "claim": "以太子宾客分司东都，此后长居洛阳，官至礼部尚书。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 33606（太子賓客分司東都，洛陽，836—842）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.008240+00:00",
+  "sha256": "770aa9362344abcd54055cf703bc5a617fbad5132cef03209926e489aa49fb62"
+}

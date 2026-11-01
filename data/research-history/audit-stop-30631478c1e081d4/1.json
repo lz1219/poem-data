@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-30631478c1e081d4",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第2站 · 广信",
+  "claim": "十八岁自南昌迎妇归余姚，舟次江西广信（今上饶），特往拜谒崇仁学派大儒娄谅（娄一斋）。娄谅向其阐发宋儒格物穷理之旨，语以“圣人必可学而至”，守仁深相契合，自此笃志圣学，归后遍读考亭朱子遗书。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.170599+00:00",
+  "sha256": "e218fe5471276f0d93e7ea574d0335430bb44a880b5b825d4b5da977644396fa"
+}

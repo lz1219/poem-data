@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-7878505c16188981",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第5站 · 龙场",
+  "claim": "抵达贵州万山丛棘、瘴疠横行之龙场驿。居东洞石棺之中，日夜端居澄默，自问“圣人处此更有何道”。正德三年中夜忽然大悟格物致知之旨，彻见“圣人之道，吾性自足，向之求理于事物者误也”，继而倡“知行合一”，开五百年阳明心学。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.177383+00:00",
+  "sha256": "a9174c41495c669fa7ea6a568b52d3ebe9787bb41f7294486dc50543efdc9932"
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-6cb9aa0607026a5e02bf",
+  "subject": {
+    "type": "work",
+    "key": "赠汪伦"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "赠汪伦 · KR4c0012 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "quote": "桃花潭水深千尺¶\n不及汪倫送我情",
+      "locator": "KR4c0012_010.txt",
+      "url": "https://github.com/kanripo/KR4c0012/blob/0320bec76946f08e3cc25aa9501fafa97d6f51ac/KR4c0012_010.txt",
+      "commit": "0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+      "sha256": "e57d5ca5808ae9d2922d8c634432ad39ebf695cb5bc4e70afb9e558e36468b96",
+      "originalFileSha256": "85ddfabe0bda15beadf1340a6e316a5f2326b3b2fbedad5149fd6ea962c055ca",
+      "textFile": "data/witnesses/e57d5ca5808ae9d2922d8c634432ad39ebf695cb5bc4e70afb9e558e36468b96.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "2个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "query": "赠汪伦",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:30.589442+00:00",
+  "sha256": "b28887f5b88093c1c3b43d78f2427b819a3f611471c76f2c50fcae56214b8e3a"
+}

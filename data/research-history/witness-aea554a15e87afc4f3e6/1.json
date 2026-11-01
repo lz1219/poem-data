@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-aea554a15e87afc4f3e6",
+  "subject": {
+    "type": "work",
+    "key": "六月二十日夜渡海"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "六月二十日夜渡海 · KR4d0076 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4d0076",
+      "quote": "空餘魯叟乘桴意粗識軒轅奏樂聲",
+      "locator": "KR4d0076_025.txt",
+      "url": "https://github.com/kanripo/KR4d0076/blob/45dbdf286472e7903757a064bb37c514c999617a/KR4d0076_025.txt",
+      "commit": "45dbdf286472e7903757a064bb37c514c999617a",
+      "sha256": "8029970a17d1c5c8ea64847693b4ef8751c1261879ba0e69aea5d2f07ff56901",
+      "originalFileSha256": "405574165a069640261fbb4ceeeb2fdbc47bcb84588e560dcc9715d250d43eab",
+      "textFile": "data/witnesses/8029970a17d1c5c8ea64847693b4ef8751c1261879ba0e69aea5d2f07ff56901.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "4个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4d0076",
+      "query": "六月二十日夜渡海",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:37:40.007815+00:00",
+  "sha256": "0090e25a73063671d1036263d6cc02605c6c99347e30d19b5e3f970368e63eb0"
+}

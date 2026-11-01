@@ -10,7 +10,7 @@
   "authorKey": "sushi",
   "genre": "ci",
   "level": "popular",
-  "certainty": "confirmed",
+  "certainty": "unknown",
   "composed": {
     "year": 1076,
     "yearKind": "composition",
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "明月幾時有？把酒問青天。不知天上宮闕，今夕是何年。我欲乘風歸去，又恐瓊樓玉宇，高處不勝寒。起舞弄清影，何似在人間。",
       "轉朱閣，低綺戶，照無眠。不應有恨，何事長向別時圓？人有悲歡離合，月有陰晴圓缺，此事古難全。但願人長久，千里共嬋娟。"
@@ -65,8 +65,8 @@
   "dating": [
     {
       "claim": "1076",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "1076",

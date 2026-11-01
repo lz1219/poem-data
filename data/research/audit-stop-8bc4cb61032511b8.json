@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8bc4cb61032511b8",
+  "subject": {
+    "type": "stop",
+    "key": "baijuyi:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "白居易：从拾遗到香山 · 第5站 · 长安",
+  "claim": "拜左拾遗，屡上疏言事。这一时期所作讽谕诗最多。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB POSTED_TO_OFFICE_DATA（32227）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.724576+00:00",
+  "sha256": "44d1806fc3f237fb1ea5f79fead0befb31bdf90627356e70f1cd8d25be966816"
+}

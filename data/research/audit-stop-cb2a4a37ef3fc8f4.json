@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-cb2a4a37ef3fc8f4",
+  "subject": {
+    "type": "stop",
+    "key": "libai:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第4站 · 荆门",
+  "claim": "怀济世远志“仗剑去国，辞亲远游”，自渝州穿瞿塘、巫峡、西陵三峡，出荆门山初见江汉平原天地壮阔，写下《渡荆门送别》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.944844+00:00",
+  "sha256": "441c4a0d9fd936379b8b2bc3b1d4d006ab398aeffa091ee19ac0651569bd63ed"
+}

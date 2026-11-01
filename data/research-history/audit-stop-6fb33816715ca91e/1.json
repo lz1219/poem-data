@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-6fb33816715ca91e",
+  "subject": {
+    "type": "stop",
+    "key": "qinshihuang:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "秦始皇一统六国行迹 · 第3站 · 新郑",
+  "claim": "韩国扼守函谷关外，为秦东进首冲。秦内史腾率军渡河急袭韩都新郑，一举俘虏韩王安，尽收其地设立颍川郡（治阳翟）。韩国成为战国七雄中第一个覆灭的诸侯国，秦军由此牢牢扼住中原腹心。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.067039+00:00",
+  "sha256": "24f7c57f4220329a436a7b51a5ad9b6db7eeb586a7d353c6ed02da8df5fa648e"
+}

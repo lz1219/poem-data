@@ -230,7 +230,7 @@ def comments(request, work_key):
         return Response({"detail": f"未找到作品：{work_key}"}, status=404)
     items = [{"id": c.id, "critic": c.critic, "dynasty": c.dynasty, "text": c.text,
               "source": c.source, "topic": c.topic, "alsoIn": c.also_in, "status": c.status}
-             for c in w.commentaries.all()]
+             for c in w.commentaries.filter(status='verified')]
     return Response({"workKey": work_key, "items": items,
                      "note": None if items else "未找到可核原文的评点，不编造。"})
 
@@ -251,7 +251,7 @@ def search(request):
         ql = q.lower()
         hits = []
         for w in Work.objects.all().only(
-            "key", "title_zh", "aliases", "paragraphs", "notes", "meaning", "background", "year"
+            "key", "title_zh", "aliases", "paragraphs", "paragraphs_simplified", "notes", "meaning", "background", "year"
         ):
             fields = [
                 ("标题", w.title_zh or ""),
@@ -260,9 +260,10 @@ def search(request):
                 ("背景", w.background or ""),
             ]
             fields += [("正文", p) for p in (w.paragraphs or [])]
+            fields += [("正文", p) for p in (w.paragraphs_simplified or [])]
             for n in (w.notes or []):
                 if isinstance(n, dict):
-                    fields.append(("注释", f"{n.get('term', '')} {n.get('text', '')}"))
+                    fields.append(("注释", f"{n.get('term', '')} {n.get('explain', '')}"))
             for label, text in fields:
                 i = (text or "").lower().find(ql)
                 if i < 0:

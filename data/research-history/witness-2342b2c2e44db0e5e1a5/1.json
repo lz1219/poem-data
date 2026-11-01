@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-2342b2c2e44db0e5e1a5",
+  "subject": {
+    "type": "work",
+    "key": "虞美人·听雨"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "虞美人 · 听雨 · KR4j0053 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4j0053",
+      "quote": "少年聽雨歌樓上紅燭昏羅帳",
+      "locator": "KR4j0053_001.txt",
+      "url": "https://github.com/kanripo/KR4j0053/blob/9c1a7a8a15650beddb528027314f30833d383ac4/KR4j0053_001.txt",
+      "commit": "9c1a7a8a15650beddb528027314f30833d383ac4",
+      "sha256": "412eab7c9f1ab939d9f0dbf1fdc1a7d65928a352380851cb9d4cc0f41c608c48",
+      "originalFileSha256": "13a4af29cb50f99251697268c1eb1b1587aed1e53a8a214e17d20f4c99e37eda",
+      "textFile": "data/witnesses/412eab7c9f1ab939d9f0dbf1fdc1a7d65928a352380851cb9d4cc0f41c608c48.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "4个可比片段中命中2个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4j0053",
+      "query": "虞美人 · 听雨",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:37:54.696416+00:00",
+  "sha256": "2c81fdeaa5a28fff667ce1c5e5fc63df10e56d13e95c390512b87079c5a3c81c"
+}

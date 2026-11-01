@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-531195aea6cc36ee",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第8站 · 南昌",
+  "claim": "六月，宁王朱宸濠于南昌起兵十万反叛，顺江东下围安庆、逼南京。守仁在丰城闻变，退保吉安特征集义军，施反间疑兵计迟滞叛军，随即乘虚直捣南昌老巢。宁王回救，两军决战于鄱阳湖黄家渡，守仁火攻大破叛军，仅三十五日生擒朱宸濠。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.183999+00:00",
+  "sha256": "6689d97656a95eeb1c0996f150d1e3ca07bd6eacc98f994d42539a2ed85a689c"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8f685c665816133b",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第2站 · 凉州",
+  "claim": "抵河西都会凉州，受众僧礼请开讲《涅槃》《摄大乘论》月余，名震葱岭以东；因朝廷严禁私度边关，由慧威法师遣徒护送昼伏夜行西赴瓜州。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.270560+00:00",
+  "sha256": "4cbe1b0d698c177f52237794b786b4117f248b68bc01bc8758007454e0ede914"
+}

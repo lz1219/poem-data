@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-7a4664695f8e5b3224db",
+  "subject": {
+    "type": "work",
+    "key": "宣州谢朓楼饯别校书叔云"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "宣州谢朓楼饯别校书叔云 · KR4c0012 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "quote": "棄我去者昨日之日不可留亂我心者今日之日多煩¶\n憂",
+      "locator": "KR4c0012_015.txt",
+      "url": "https://github.com/kanripo/KR4c0012/blob/0320bec76946f08e3cc25aa9501fafa97d6f51ac/KR4c0012_015.txt",
+      "commit": "0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+      "sha256": "8623d4597370ef24d0f7a9ed4ceb8ab5f3eefd64a6747175a1acde8ec0a4054a",
+      "originalFileSha256": "6b7ba103a65e45209e89a42b3ce2ea8b47c5bda33e516169c632ca6e2d5bb56b",
+      "textFile": "data/witnesses/8623d4597370ef24d0f7a9ed4ceb8ab5f3eefd64a6747175a1acde8ec0a4054a.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "6个可比片段中命中2个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0012",
+      "query": "宣州谢朓楼饯别校书叔云",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:36:30.573129+00:00",
+  "sha256": "58576b2e2aedf08491fb51937def19200bdea3908e65f54b9db2866eb64e10a9"
+}

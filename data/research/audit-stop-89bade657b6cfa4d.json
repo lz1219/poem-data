@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-89bade657b6cfa4d",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:11"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第11站 · 常州",
+  "claim": "元符三年徽宗即位大赦北归，渡海经廉州、永州沿赣江北上；建中靖国元年七月廿八日病逝于常州顾塘桥孙氏馆，享年六十六岁。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.116288+00:00",
+  "sha256": "06342b9ebe7ad1ae3acd849a25e53d55b9f87328d2d60dc03d0d975a69856b70"
+}

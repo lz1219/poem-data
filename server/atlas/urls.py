@@ -11,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 REPO_DIR = Path(os.getenv("PUBLIC_DIR") or BASE_DIR.parent)
 
 urlpatterns = [
+    path('research.html', serve, {'path': 'web/research.html', 'document_root': str(REPO_DIR)}),
     path("admin/", admin.site.urls),
     path("api/", include("corpus.urls")),
     # 江山行止（静态站点）挂到 /atlas/，与本站同源

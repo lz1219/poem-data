@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-1b9a494885b2c3a2",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第1站 · 长安",
+  "claim": "汉武帝欲联合大月氏共击匈奴，张骞以郎应募，与堂邑氏胡奴甘父率百余人自长安出发西行。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.383336+00:00",
+  "sha256": "23bcc57e25c759167b41352ed8ad3e604f9f317b544cf400c07e9e65b40e6500"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8b81089a60cadc43",
+  "subject": {
+    "type": "stop",
+    "key": "hanyu:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韩愈：从汴徐到潮袁 · 第9站 · 袁州",
+  "claim": "量移袁州刺史，治所在宜春。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 3332（州刺史，宜春／袁州，819—820）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.880213+00:00",
+  "sha256": "5bc8e603eb7196d2b7e3fa7152622b865cc77768997064f033453d59bdb17c3c"
+}

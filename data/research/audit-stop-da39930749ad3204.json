@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-da39930749ad3204",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第9站 · 那烂陀寺",
+  "claim": "抵中天竺摩揭陀国那烂陀寺，礼百余岁的住持戒贤论师为师，从受《瑜伽师地论》前后五年——正是当年立誓西行所求之法；其间兼习《顺正理》《中论》《百论》等诸部经论。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.285607+00:00",
+  "sha256": "75da788d40be000b84289f1f68c47bfe8e2aee55ef566cf709050b13af24ce27"
+}

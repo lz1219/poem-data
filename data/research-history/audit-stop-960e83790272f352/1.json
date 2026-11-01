@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-960e83790272f352",
+  "subject": {
+    "type": "stop",
+    "key": "weizhuang:6"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦庄：从长安到成都 · 第6站 · 成都",
+  "claim": "王建称帝，国号蜀，韦庄为左散骑常侍，参与开国制度。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 92161（左散騎常侍，907）；前蜀开国据《十国春秋》本传；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.247467+00:00",
+  "sha256": "53e518fc80464978e6d3ec69adc3df436b0c22924440ccd6ad955edaee0cd355"
+}

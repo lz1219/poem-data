@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-00fe7c4b284159d7",
+  "subject": {
+    "type": "stop",
+    "key": "weiyingwu:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦应物：从京兆到江州 · 第5站 · 滁州",
+  "claim": "出为滁州刺史，在滁州两年。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32822（州刺史，滁州／永陽，783—784）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.214604+00:00",
+  "sha256": "05fab655c0540607d20893eb07332c021a5362fc75c2bc6360eb9cd82d5b47d8"
+}

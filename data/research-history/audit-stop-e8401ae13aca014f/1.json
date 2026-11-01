@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-e8401ae13aca014f",
+  "subject": {
+    "type": "stop",
+    "key": "liuyuxi:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "刘禹锡：二十三年弃置身 · 第1站 · 长安",
+  "claim": "登进士第后为太子校书郎，在长安。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 33606（太子校書郎，長安，795—796）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.987454+00:00",
+  "sha256": "c4f8dcac4bbc9ae96824b8d2962c461ee422071e3f18ec8046ba2c7a9c76eeb1"
+}

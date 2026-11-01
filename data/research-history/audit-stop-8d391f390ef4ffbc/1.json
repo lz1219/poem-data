@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8d391f390ef4ffbc",
+  "subject": {
+    "type": "stop",
+    "key": "xueneng:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "薛能：从盩厔到许州 · 第8站 · 许州",
+  "claim": "广明元年，许州军乱，薛能遇害。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 95071（c_deathyear=880）；死事据两《唐书》本传；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.323015+00:00",
+  "sha256": "94b29152ef73d10eaf5118547219ea133ea57b1e695f0f4d3fee944a2134fad3"
+}

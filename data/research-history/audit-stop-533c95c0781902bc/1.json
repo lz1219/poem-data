@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-533c95c0781902bc",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第9站 · 绍兴",
+  "claim": "明世宗即位，封守仁新建伯，守仁归越城绍兴，于稽山书院、阳明洞聚徒讲学，正式揭出“致良知”三字教法，四方学者云集。嘉靖六年（1527）奉诏出征两广前夕，于天泉桥与大弟子钱德洪、王畿印证心学“四句教”，成心学传世纲领。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.186288+00:00",
+  "sha256": "e100fea2fff5b7e87fe23665a8be6fd143bfbd0364ac03da0de2fb3561c4c417"
+}

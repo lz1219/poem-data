@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-45e1f0aedd0ef213",
+  "subject": {
+    "type": "stop",
+    "key": "weizhuang:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦庄：从长安到成都 · 第3站 · 长安",
+  "claim": "年近六十始登进士第，释褐为校书郎。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《十国春秋》卷四十《韦庄传》（乾宁元年登进士第）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.240809+00:00",
+  "sha256": "868debeaef2f7e10011b80790a2b58885ad655dc3c1e5a026e65cdf994c37f24"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-5cb77c45f279488b",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第5站 · 密州",
+  "claim": "主动求调密州知州，抗旱捕蝗、收养弃婴；于超然台思念胞弟苏辙，写就《水调歌头·明月几时有》与《江城子·密州出猎》，开宋词豪放一派。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.104312+00:00",
+  "sha256": "167ae7e6467bdfcc28dc42df75e761c49c8a455ed1c690bd09c748c1cfdb84e4"
+}

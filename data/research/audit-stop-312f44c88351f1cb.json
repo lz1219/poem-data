@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-312f44c88351f1cb",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第4站 · 高昌王城",
+  "claim": "高昌王麴文泰虔礼挽留，玄奘水浆不涉三日以明西求大法之志；麴文泰感泣结为兄弟，修二十四封国书、备黄金百两与三十匹马护送西行。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.274798+00:00",
+  "sha256": "97d055e68ade5a2c7d2e4b21263e84912f6a6c4a72613dee477ff3f5e6ebde97"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-6283948dfd44e4d9",
+  "subject": {
+    "type": "stop",
+    "key": "libai:12"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第12站 · 秋浦",
+  "claim": "往来秋浦，作《秋浦歌》十七首。「白发三千丈」即出于此。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：李白年谱；诗题《秋浦歌十七首》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.962476+00:00",
+  "sha256": "97bf1ce6375aced67324ee963634bc75f7ed2e30c842f9440e07dbcffabd0539"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-7118884a873424f3",
+  "subject": {
+    "type": "stop",
+    "key": "yuanzhen:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "元稹：从通州到越州 · 第4站 · 长安",
+  "claim": "量移回朝，为膳部员外郎，次年转祠部郎中。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32248（膳部員外郎 819；祠部郎中 820）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.346469+00:00",
+  "sha256": "b2996b3c8fa9fba25e420491c8634fd62e1e57b29c4b2ff583c2dbba38ca076c"
+}

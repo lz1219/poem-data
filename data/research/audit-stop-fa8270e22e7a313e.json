@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-fa8270e22e7a313e",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第4站 · 钱塘江",
+  "claim": "正德元年，司礼监权宦刘瑾擅权，逮捕南京给事中戴铣等二十余人。守仁抗疏力救，触怒刘瑾，被廷杖四十下诏狱，谪贵州龙场驿丞。南下途经杭州钱塘江，刘瑾遣刺客尾随欲加害，守仁夜掷衣冠于江中留绝命诗诈死，乘海舟脱险。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.175108+00:00",
+  "sha256": "dd961aaae1412401d99228d861ab9b1fdf713b2371f2c2463333e66cb12b4cb5"
+}

@@ -73,6 +73,7 @@ class Work(models.Model):
     year = models.IntegerField("系年", null=True, blank=True)
     year_kind = models.CharField("系年类型", max_length=20, default="composition")
     place_zh = models.CharField("作地", max_length=80, blank=True)
+    place_key = models.CharField("作地标识", max_length=120, blank=True)
 
     source_edition = models.ForeignKey(Edition, null=True, blank=True, on_delete=models.SET_NULL, related_name="works", verbose_name="正文所据版本")
     paragraphs = models.JSONField("正文（繁体，按句）", default=list)
@@ -106,6 +107,7 @@ class Apparatus(models.Model):
 
     JUDGE = [("pending", "待裁"), ("base-right", "底本是"), ("var-right", "异文是"), ("both", "两通")]
     work = models.ForeignKey(Work, on_delete=models.CASCADE, related_name="apparatus")
+    stable_id = models.CharField(max_length=80, blank=True)
     locator = models.JSONField("定位", default=dict, blank=True)
     base_edition = models.CharField(max_length=80, blank=True)
     base_text = models.CharField("底本作", max_length=200)
@@ -134,6 +136,7 @@ class Commentary(models.Model):
     STATUS = [("pending", "待核原文"), ("verified", "已核")]
 
     work = models.ForeignKey(Work, on_delete=models.CASCADE, related_name="commentaries")
+    stable_id = models.CharField(max_length=80, blank=True)
     critic = models.CharField("评者", max_length=80)
     dynasty = models.CharField("朝代", max_length=20, blank=True)
     text = models.TextField("评语原文")
@@ -151,7 +154,7 @@ class Commentary(models.Model):
         return f"{self.dynasty}{self.critic}：{self.text[:20]}"
 
     def save(self, *args, **kwargs):
-        missing = [n for n in ("critic", "text", "source") if not (getattr(self, n) or "").strip()]
+        missing = [n for n in ("critic", "dynasty", "text", "source") if not (getattr(self, n) or "").strip()]
         if missing:
             raise ValueError("评点缺要素：" + "、".join(missing))
         super().save(*args, **kwargs)
@@ -249,3 +252,54 @@ class JourneyLink(models.Model):
 
     def __str__(self) -> str:
         return f"{self.position}：{self.text[:20]}"
+
+
+class SourceRecord(models.Model):
+    key = models.CharField(max_length=100, primary_key=True)
+    payload = models.JSONField(default=dict)
+
+    class Meta:
+        verbose_name = "资料来源"
+        verbose_name_plural = "资料来源"
+
+
+class ResearchArtifact(models.Model):
+    sha256 = models.CharField(max_length=64, primary_key=True)
+    text = models.TextField()
+
+    def save(self, *args, **kwargs):
+        import hashlib
+        from django.core.exceptions import ValidationError
+        if hashlib.sha256(self.text.encode('utf-8')).hexdigest() != self.sha256:
+            raise ValidationError('证据原件哈希不匹配')
+        super().save(*args, **kwargs)
+
+
+class ResearchRevision(models.Model):
+    """只增不改：同一记录的每个修订是一条独立行。"""
+    record_id = models.CharField(max_length=120)
+    revision = models.PositiveIntegerField()
+    payload = models.JSONField(default=dict)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=['record_id', 'revision'], name='research_unique_revision')]
+        ordering = ['record_id', 'revision']
+        verbose_name = "研究修订"
+        verbose_name_plural = "研究修订"
+
+    def save(self, *args, **kwargs):
+        from django.core.exceptions import ValidationError
+        from .research_rules import validate_record
+        from .research_storage import database_context
+        errors = validate_record(self.payload, **database_context())
+        if errors:
+            raise ValidationError(errors)
+        if self.payload.get('id') != self.record_id or self.payload.get('revision') != self.revision:
+            raise ValidationError('记录标识/修订号不一致')
+        if self.payload.get('visibility') == 'internal' and type(self).objects.filter(record_id=self.record_id, revision__lt=self.revision, payload__visibility='public').exists():
+            raise ValidationError('公开过的记录不能追溯保密；请新增rejected公开修订退出默认展示')
+        if self.pk:
+            old = type(self).objects.get(pk=self.pk)
+            if old.payload != self.payload or old.record_id != self.record_id or old.revision != self.revision:
+                raise ValidationError('旧修订不可改写，请创建新修订')
+        super().save(*args, **kwargs)

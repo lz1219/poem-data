@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-9c002095d366fbad",
+  "subject": {
+    "type": "stop",
+    "key": "yuanzhen:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "元稹：从通州到越州 · 第2站 · 长安",
+  "claim": "拜监察御史，分司东都，弹劾不避权贵。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32248（監察御史，809）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.342583+00:00",
+  "sha256": "4f918267b98328377c08e2248883a55e2bea9e8a98a59f92d3bdd37341bd8b71"
+}

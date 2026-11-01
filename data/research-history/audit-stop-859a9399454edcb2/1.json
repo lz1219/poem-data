@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-859a9399454edcb2",
+  "subject": {
+    "type": "stop",
+    "key": "baijuyi:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "白居易：从拾遗到香山 · 第4站 · 盩厔",
+  "claim": "任盩厔县尉，亲见麦收之苦，作《观刈麦》。同年作《长恨歌》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB POSTED_TO_OFFICE_DATA（32227）；《观刈麦》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.722493+00:00",
+  "sha256": "05bc6a92492a0d1ac94f0cd118e812e3dae1e586da4e378fea47bcb1bf3ec4ec"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-aa1caa921b7103e8",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:5"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第5站 · 大宛贰师城",
+  "claim": "翻越帕米尔高原（葱岭）抵达盛产汗血宝马的大宛国。大宛王久闻汉朝饶财欲通而不得，见张骞大喜，特派向导译员护送赴康居。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.393261+00:00",
+  "sha256": "2dffb50ae40984d69be9e7ed59a3554a5098bfc5694bd3caab57180b8ca5ca60"
+}

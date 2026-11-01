@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-c95c4da1251687c1",
+  "subject": {
+    "type": "stop",
+    "key": "libai:14"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第14站 · 庐山",
+  "claim": "安史乱起，李白携妻隐于庐山屏风叠；同年冬永王李璘遣使征召，遂入幕府。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：李白年谱；《旧唐书》卷一九〇《李白传》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.966597+00:00",
+  "sha256": "fe05c0132be7b9953682c1a28995c2cd29fcd97cccfb5083a6a3ec4ce256b57b"
+}

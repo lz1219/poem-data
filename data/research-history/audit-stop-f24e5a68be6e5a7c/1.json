@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-f24e5a68be6e5a7c",
+  "subject": {
+    "type": "stop",
+    "key": "yuanzhen:10"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "元稹：从通州到越州 · 第10站 · 鄂州",
+  "claim": "出为武昌军节度使，驻鄂州，次年卒于任。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32248（節度使，武昌軍節度，830—831）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.362157+00:00",
+  "sha256": "046e2c0d9f8b35d0459ffaeccef238f4293ea96f778e76d2cb2208f587ae14ec"
+}

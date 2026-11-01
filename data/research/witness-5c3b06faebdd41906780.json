@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-5c3b06faebdd41906780",
+  "subject": {
+    "type": "work",
+    "key": "望江南"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "望江南 · 超然台作 · KR4j0005 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4j0005",
+      "quote": "春未老風細柳斜斜試上超然臺上看半壕春水一城¶\n花煙雨暗千家",
+      "locator": "KR4j0005_001.txt",
+      "url": "https://github.com/kanripo/KR4j0005/blob/f08a2c9e20ca90ea7f84330a912249823eaaac54/KR4j0005_001.txt",
+      "commit": "f08a2c9e20ca90ea7f84330a912249823eaaac54",
+      "sha256": "8c9cbf563a1a9d28bd1535e68dc80b899ae03c183a6502ab89cc4f4a4f8ac2fa",
+      "originalFileSha256": "e963439eaa4b591deaa481b496d772016cfd0f978f39f84071733560c236cd0d",
+      "textFile": "data/witnesses/8c9cbf563a1a9d28bd1535e68dc80b899ae03c183a6502ab89cc4f4a4f8ac2fa.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "2个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4j0005",
+      "query": "望江南 · 超然台作",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:37:47.367893+00:00",
+  "sha256": "a26c616c1a2635037e1e208f1b5a62975e8096463130124e6c97c80823b2652e"
+}

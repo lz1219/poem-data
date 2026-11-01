@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-7f8570e26b9ba407",
+  "subject": {
+    "type": "stop",
+    "key": "weizhuang:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦庄：从长安到成都 · 第1站 · 长安",
+  "claim": "韦庄生于京兆杜陵，为韦应物四世孙。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 92161（c_birthyear=836）；籍贯据《十国春秋》卷四十《韦庄传》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.236952+00:00",
+  "sha256": "fc4e01da13433a54c4a6a660f6c8f5cb2507c5ee34615946721bff9b3cc6c192"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-f2b379a0bd796c3b",
+  "subject": {
+    "type": "stop",
+    "key": "liuyuxi:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "刘禹锡：二十三年弃置身 · 第4站 · 朗州",
+  "claim": "永贞革新失败，贬朗州司马，在朗州近十年。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 33606（司馬，朗州，805—814）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.993371+00:00",
+  "sha256": "ac1993249514fb086fbfc6ba145f7f12a066f2fe453d7565c6243293c188f9c3"
+}

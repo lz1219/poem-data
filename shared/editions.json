@@ -18,5 +18,15 @@
     "publisher": null,
     "parent": null,
     "note": "据 chinese-poetry 语料库；题作《琵琶引》"
+  },
+  "upstream-quote-baseline": {
+    "book": null,
+    "name": "江山时序引文基线（原典版本待核）",
+    "kind": "电子摘引",
+    "year": null,
+    "yearText": null,
+    "publisher": null,
+    "parent": null,
+    "note": "正文取自上游lore_data.js引文；繁体为反推。citation为历史出处线索，不代表已核对应底本。"
   }
 }

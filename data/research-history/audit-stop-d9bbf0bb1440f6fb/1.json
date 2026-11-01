@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-d9bbf0bb1440f6fb",
+  "subject": {
+    "type": "stop",
+    "key": "jiangjie:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "蒋捷：宋亡之后的竹山 · 第2站 · 临安",
+  "claim": "咸淳十年登进士第。时襄樊已失，宋室危殆，距临安开城不过二年。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：杨景龙校注《蒋捷词校注》（中华书局，2010）；《词林纪事》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.906374+00:00",
+  "sha256": "5bd7a93a65ebffd8bf4b047a283f699d1209c93e7b79217f53cfaca39940625a"
+}

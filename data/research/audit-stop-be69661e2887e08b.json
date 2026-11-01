@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-be69661e2887e08b",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第8站 · 黄州",
+  "claim": "出狱后责授检校水部员外郎、黄州团练副使。躬耕城东荒坡自号“东坡居士”，于困顿中完成了精神蜕变，写出《定风波》《念奴娇·赤壁怀古》、前后《赤壁赋》与《寒食帖》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.110251+00:00",
+  "sha256": "109c7d6871d74ba0bcdd003d390c44d7c9fff53f60c538d5bfd4c1ca250b983e"
+}

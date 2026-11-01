@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-3d1634783201d8be",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第4站 · 焉耆",
+  "claim": "匈奴监管渐宽，张骞与甘父乘隙逃脱，循天山南麓绿洲昼夜西驰数十日，穿越车师、焉耆、龟兹诸国。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.391046+00:00",
+  "sha256": "6f96f6c67afc868caf70e5f7c80214b722fa776c34c8eb7b0602653d485468dc"
+}

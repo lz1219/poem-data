@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-44df790f6186f611",
+  "subject": {
+    "type": "stop",
+    "key": "sushi:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "苏轼宦海贬谪行迹 · 第4站 · 杭州",
+  "claim": "因上书直陈王安石新法之弊，自请外放任杭州通判（后于元祐四年再知杭州浚湖筑苏堤），巡行属县、赈济灾荒，留下无数西湖诗篇。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.102291+00:00",
+  "sha256": "61d39de098cbfa5977ef5103218ea98a6925f4dc72a95047ed190ccde77a2fd2"
+}

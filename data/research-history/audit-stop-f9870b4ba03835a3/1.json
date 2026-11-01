@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-f9870b4ba03835a3",
+  "subject": {
+    "type": "stop",
+    "key": "wangwei:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王维：从蒲州到长安 · 第2站 · 长安",
+  "claim": "登进士第，为大乐丞；同年因伶人舞黄狮子事获罪，出为济州司仓参军。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32174（太樂丞，長安，721）；贬济州据《旧唐书》本传；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.135594+00:00",
+  "sha256": "ddb93bed7b3d6a962213145141dbc1bf896aca88558a64816cabaee7056fe202"
+}

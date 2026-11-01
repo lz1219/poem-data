@@ -10,7 +10,7 @@
   "authorKey": "sushi",
   "genre": "shi",
   "level": "popular",
-  "certainty": "confirmed",
+  "certainty": "unknown",
   "composed": {
     "year": 1100,
     "yearKind": "composition",
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "參橫斗轉欲三更，苦雨終風也解晴。",
       "雲散月明誰點綴？天容海色本澄清。",
@@ -65,8 +65,8 @@
   "dating": [
     {
       "claim": "1100",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "1100",

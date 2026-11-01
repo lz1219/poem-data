@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-60e19240fdcdaf09",
+  "subject": {
+    "type": "stop",
+    "key": "zhugeliang:10"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "诸葛亮出山北伐行迹 · 第10站 · 木门道",
+  "claim": "始以木牛运粮四出祁山，于卤城大破司马懿主力，获甲首三千级、玄铠五千领；夏六月粮尽退军，司马懿遣名将张郃追至木门道，亮乘高布伏万弩齐发，射杀张郃。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.441759+00:00",
+  "sha256": "6f2d6d9f57c61cf5e270f86d0899fe10340c457b17c8b626c5215704a1ec37a0"
+}

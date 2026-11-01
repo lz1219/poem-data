@@ -12,8 +12,9 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-REPO_DIR = Path(os.getenv("PUBLIC_DIR") or BASE_DIR.parent)
-DATA_DIR = Path(os.getenv("DATA_DIR") or (REPO_DIR / "data"))
+REPO_DIR = Path(os.getenv("PUBLIC_DIR") or BASE_DIR.parent).resolve()
+DATA_DIR = Path(os.getenv("DATA_DIR") or (REPO_DIR / "data")).resolve()
+PRIVATE_RESEARCH_DIR = Path(os.getenv('PRIVATE_RESEARCH_DIR') or (REPO_DIR.parent / '.local/research-private')).resolve()
 
 SECRET_KEY = os.getenv("DJANGO_SECRET", "dev-only-insecure-key-change-me")
 DEBUG = os.getenv("DJANGO_DEBUG", "1") == "1"

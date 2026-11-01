@@ -4,7 +4,7 @@
 
 ```
 poem-data/
-├── data/           发布物（JSON，唯一真相之一）
+├── data/           发布物（JSON，发布唯一真相）
 ├── schema/         数据契约（JSON Schema）
 ├── shared/         共享表（版本、书目）
 ├── web/            前端（零构建，单页）
@@ -51,7 +51,7 @@ data/*.json ──import_json──▶ 数据库（SQLite 本地 / PostgreSQL �
                             --check 闸门（不一致即拒绝提交）
 ```
 
-**规矩：一次只有一个真相。** 本地开发用 SQLite；线上用 PostgreSQL；
+**规矩：经审查的 JSON 是发布真相。** 数据库是编辑与研究工作台；本地开发用 SQLite，线上用 PostgreSQL；
 `data/*.json` 始终是「发布物」，承载 git 的版本与审查。
 
 ## 五、命名与放置规则
@@ -66,3 +66,7 @@ data/*.json ──import_json──▶ 数据库（SQLite 本地 / PostgreSQL �
 | 新命令 | `server/corpus/management/commands/` |
 | 新校验 | `scripts/validate.mjs` |
 | 新文档 | `docs/` |
+
+## 学术资料增补
+
+来源在 shared/sources.json；公开研究记录、修订与摘引在 data/research、data/research-history、data/witnesses。完整采集原件、备份和内部研究线索在仓库外 .local，不进入静态发布包。research-index.json 由研究脚本或数据库导出生成。

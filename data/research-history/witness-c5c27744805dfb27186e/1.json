@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-c5c27744805dfb27186e",
+  "subject": {
+    "type": "work",
+    "key": "琵琶行"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "琵琶行 · KR4c0069 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4c0069",
+      "quote": "潯陽江頭夜送客楓葉荻花秋索索",
+      "locator": "KR4c0069_012.txt",
+      "url": "https://github.com/kanripo/KR4c0069/blob/a9aabe3ae87777b7ba765c4193ff551dafbdee3e/KR4c0069_012.txt",
+      "commit": "a9aabe3ae87777b7ba765c4193ff551dafbdee3e",
+      "sha256": "76fbd8e66b3c8ee9439546ecbea631c95e6e99ebc7af606968d0d36050196da0",
+      "originalFileSha256": "c2a3a2f4286c23a44d5978f92a389a11431577bfdef996d68e92914bed623353",
+      "textFile": "data/witnesses/76fbd8e66b3c8ee9439546ecbea631c95e6e99ebc7af606968d0d36050196da0.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "44个可比片段中命中12个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4c0069",
+      "query": "琵琶行",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:37:22.323468+00:00",
+  "sha256": "d130c20e89863c9871057b8b2c60789461642d6180a96fe829a1de6199510172"
+}

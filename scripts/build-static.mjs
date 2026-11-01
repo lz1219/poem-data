@@ -10,9 +10,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url)) + '/..';
 const OUT = path.join(ROOT, 'dist');
+const localPython = path.join(ROOT, 'server/.venv', process.platform === 'win32' ? 'Scripts/python.exe' : 'bin/python');
+const verify = spawnSync(fs.existsSync(localPython) ? localPython : 'python', [path.join(ROOT, 'scripts/check-research.py')], { cwd: ROOT, encoding: 'utf8' });
+if (verify.status !== 0) {
+  console.error('研究资料发布检查失败；未修改现有静态产物。', verify.stdout || verify.error?.message || '');
+  process.exit(1);
+}
 const args = process.argv.slice(2);
 const fullSite = args.includes('--full-site')
   ? args[args.indexOf('--full-site') + 1]
@@ -39,6 +46,8 @@ if (i < 0) {
 }
 html = html.slice(0, i) + flag + html.slice(i);
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
+copy(path.join(ROOT, 'web/research.html'), path.join(OUT, 'research.html'));
+copy(path.join(ROOT, 'shared/sources.json'), path.join(OUT, 'shared/sources.json'));
 
 /* 2. 数据：只带策展内容 */
 const files = [];

@@ -9,7 +9,7 @@
   "authorKey": "libai",
   "genre": "wen",
   "level": "popular",
-  "certainty": "confirmed",
+  "certainty": "unknown",
   "excerpt": true,
   "composed": {
     "year": 705,
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "五歲誦六甲，十歲觀百家……十五觀奇書，作賦凌相如。",
       "曩昔東遊維揚，不逾一年，散金三十餘萬，有落魄公子，悉皆濟之。"
@@ -53,8 +53,8 @@
   "dating": [
     {
       "claim": "705",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "705",

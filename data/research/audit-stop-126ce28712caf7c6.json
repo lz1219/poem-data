@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-126ce28712caf7c6",
+  "subject": {
+    "type": "stop",
+    "key": "dufu:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "杜甫：从长安到湘江 · 第1站 · 巩县",
+  "claim": "杜甫生于河南巩县。祖杜审言为初唐诗人，家世「奉儒守官」。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《旧唐书》卷一九〇《杜甫传》；杜甫年谱；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.786474+00:00",
+  "sha256": "f2fb85f0b53f1e590f71e37a1f8b467b37c2ccf282c4256d3f35d825496559c5"
+}

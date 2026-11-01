@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-04e761104adc3ae2",
+  "subject": {
+    "type": "stop",
+    "key": "dufu:11"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "杜甫：从长安到湘江 · 第11站 · 潭州",
+  "claim": "大历五年冬，杜甫卒于潭州往岳阳的舟中，年五十九。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《旧唐书》卷一九〇《杜甫传》；杜甫年谱；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.808494+00:00",
+  "sha256": "d5c250921477929791ef9923cf85d50d7c5d85fd0a385427229538708685ed65"
+}

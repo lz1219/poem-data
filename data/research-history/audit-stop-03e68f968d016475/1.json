@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-03e68f968d016475",
+  "subject": {
+    "type": "stop",
+    "key": "libai:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第8站 · 洛阳",
+  "claim": "因傲岸不羁遭权贵谗毁，玄宗“赐金放还”。李白东出长安至东都洛阳，与年三十三的杜甫初遇定交，中国诗史双子星于此风云际会。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.952908+00:00",
+  "sha256": "6a7a6eca2cd8d938abae61d6d38bda2b5f082fba5583d6130199973bbc5adec7"
+}

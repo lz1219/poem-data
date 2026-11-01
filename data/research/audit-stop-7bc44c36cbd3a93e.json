@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-7bc44c36cbd3a93e",
+  "subject": {
+    "type": "stop",
+    "key": "libai:15"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "李白仗剑壮游行迹 · 第15站 · 白帝城",
+  "claim": "安史之乱起，李白怀平胡复国之志入永王李璘幕府，兵败后系浔阳狱，坐长流夜郎（黔中）；乾元二年春溯江行至巫山白帝城，忽逢关内大旱朝廷大赦天下，惊喜放舟东下江陵，写下《早发白帝城》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.968440+00:00",
+  "sha256": "f19532025c54b05a5e83a44ec8cd7ab2c676ab524e7cac4b3a1d4e99fa083b6c"
+}

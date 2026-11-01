@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-8cb78649db86c97a",
+  "subject": {
+    "type": "stop",
+    "key": "censhen:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "岑参：从安西到嘉州 · 第2站 · 北庭",
+  "claim": "再度出塞，入安西北庭节度使封常清幕为判官，驻庭州。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32583（節度使判官，安西北庭軍節度，754）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.757807+00:00",
+  "sha256": "212d17569a72f4641a7cb47e7d701dab1bd774a2abf9b8af97eacd3b113875f1"
+}

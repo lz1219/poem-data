@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-1a86a51b053f399b",
+  "subject": {
+    "type": "stop",
+    "key": "qinshihuang:9"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "秦始皇一统六国行迹 · 第9站 · 临淄",
+  "claim": "齐相后胜受秦重金贿赂，劝齐王建不修战备、不援五国，仅于西界屯兵防秦。前221年，王贲、李信、蒙恬自燕地南下避开齐军西境主力，径直突入齐都临淄，齐王建不战出降。秦王政遂完成统一大业，定尊号“始皇帝”，废分封、设三十六郡，开创中国两千年大一统格局。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.079739+00:00",
+  "sha256": "d5661e89115e8a4037f8935d8dfc175ba728e3c6443f0706cf9f6dc15349b02c"
+}

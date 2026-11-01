@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-89c917af96860079",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第8站 · 健驮逻",
+  "claim": "翻越大雪山（兴都库什山）、瞻礼梵衍那（巴米扬）石佛，入北天竺健驮逻故地；此后经迦湿弥罗驻锡两年研习经论，由此深游五印十余载。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.283364+00:00",
+  "sha256": "fa0e334b588c79e4ef7c85ff5e4f4ad4a1fce88290ec1b3adcc4398e3f218448"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-01fe8fc91f3a806b",
+  "subject": {
+    "type": "stop",
+    "key": "qinshihuang:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "秦始皇一统六国行迹 · 第7站 · 寿春",
+  "claim": "李信率二十万秦军伐楚先胜后败，为项燕所乘。秦王政亲赴频阳向老将王翦谢过，倾全国六十万大军托付王翦、蒙武。王翦坚壁不出以老楚师，待楚军东撤之际大举追击，于蕲南击杀项燕，攻克楚都寿春，俘楚王负刍，广袤楚地尽归于秦。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.075612+00:00",
+  "sha256": "fe45578d1272a755d6cbb01b924b920fee5ad6894011b0e5ca506150cf5748e3"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-be2d97933de4540e",
+  "subject": {
+    "type": "stop",
+    "key": "jiangjie:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "蒋捷：宋亡之后的竹山 · 第7站 · 龙游",
+  "claim": "南行至衢州龙游，宿于朱氏楼，作《一剪梅·宿龙游朱氏楼》。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：《竹山词》词题《一剪梅·宿龙游朱氏楼》；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.917495+00:00",
+  "sha256": "2fd883a5a7ba799a1512b84ec821f252718375a8247ac26921eab3dfc420fd92"
+}

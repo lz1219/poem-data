@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-1e6fbb4d9e62dff6",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:6"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第6站 · 碎叶城",
+  "claim": "循大清池（伊塞克湖）西北行至碎叶城，恰逢西突厥统叶护可汗游猎。可汗设宴礼敬，命通解汉言及诸国语的摩咄达官率骑护送至迦毕试国境。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.279001+00:00",
+  "sha256": "37a8e121197853905b43fec0a69e199342a951e94ccfc2be7473722dea3bcecc"
+}

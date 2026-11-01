@@ -1,0 +1,688 @@
+{
+  "schemaVersion": "1.0",
+  "sources": [
+    {
+      "id": "kanripo",
+      "name": "Kanripo 汉籍",
+      "url": "https://github.com/kanripo/KR-Catalog",
+      "kind": "github",
+      "coverage": [
+        "别集",
+        "总集",
+        "史传",
+        "诗文评"
+      ],
+      "upstream": [],
+      "sourceFamily": "kanripo",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://github.com/kanripo/KR-Catalog",
+        "checkedAt": "2026-11-01T04:28:38.535186+00:00",
+        "status": "reachable",
+        "sha256": "3cb0f9f10c236bbb76823b6f39835489e3daebd6ba8841fb1dc1543d393bdf15",
+        "bytes": 445579
+      }
+    },
+    {
+      "id": "chinese-poetry",
+      "name": "chinese-poetry",
+      "url": "https://github.com/chinese-poetry/chinese-poetry",
+      "kind": "github",
+      "coverage": [
+        "唐诗",
+        "宋诗",
+        "宋词"
+      ],
+      "upstream": [],
+      "sourceFamily": "chinese-poetry",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://github.com/chinese-poetry/chinese-poetry",
+        "checkedAt": "2026-11-01T04:28:38.795557+00:00",
+        "status": "reachable",
+        "sha256": "5465df5a1ca42ce7bd44088ec39200d8e606dd46f895c107940df31340eb306d",
+        "bytes": 312976
+      }
+    },
+    {
+      "id": "cbdb",
+      "name": "CBDB",
+      "url": "https://github.com/cbdb-project/cbdb_sqlite",
+      "kind": "github",
+      "coverage": [
+        "人物",
+        "仕历",
+        "异名"
+      ],
+      "upstream": [],
+      "sourceFamily": "cbdb",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://github.com/cbdb-project/cbdb_sqlite",
+        "checkedAt": "2026-11-01T04:28:39.212372+00:00",
+        "status": "reachable",
+        "sha256": "ca6df62854888668c5ce3a7040877af1790e07837b3ca5c1fd37707e5f941534",
+        "bytes": 235973
+      }
+    },
+    {
+      "id": "wikisource",
+      "name": "维基文库",
+      "url": "https://zh.wikisource.org/w/api.php?action=query&meta=siteinfo&format=json",
+      "kind": "text",
+      "coverage": [
+        "原典",
+        "版本",
+        "影像"
+      ],
+      "upstream": [],
+      "sourceFamily": "wikisource",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://zh.wikisource.org/w/api.php?action=query&meta=siteinfo&format=json",
+        "checkedAt": "2026-11-01T04:28:37.382545+00:00",
+        "status": "reachable",
+        "sha256": "3c292f4ab424f2d6533417b1d4c101976325bad4b25d14bef5bf8c5b445198e3",
+        "bytes": 3289
+      }
+    },
+    {
+      "id": "ctext",
+      "name": "中国哲学书电子化计划",
+      "url": "https://ctext.org/tools/api",
+      "kind": "text",
+      "coverage": [
+        "原典",
+        "检索",
+        "影像"
+      ],
+      "upstream": [],
+      "sourceFamily": "ctext",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://ctext.org/tools/api",
+        "checkedAt": "2026-11-01T04:28:37.642909+00:00",
+        "status": "reachable",
+        "sha256": "4f323319db2cfd81d5d8106ab0f3cdbf21aaf8a17f2d187347961c569bbc1d73",
+        "bytes": 2781
+      }
+    },
+    {
+      "id": "shidian",
+      "name": "识典古籍",
+      "url": "https://www.shidianguji.com/",
+      "kind": "text",
+      "coverage": [
+        "原典",
+        "底本影像"
+      ],
+      "upstream": [],
+      "sourceFamily": "shidian",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://www.shidianguji.com/",
+        "checkedAt": "2026-11-01T04:28:39.749081+00:00",
+        "status": "reachable",
+        "sha256": "2edfb503ead49c414ff4a43817237c8ac86167ebcc0d666869109046d507bdef",
+        "bytes": 38544
+      }
+    },
+    {
+      "id": "scripta-sinica",
+      "name": "中研院汉籍",
+      "url": "https://hanchi.ihp.sinica.edu.tw/",
+      "kind": "text",
+      "coverage": [
+        "史传",
+        "集部"
+      ],
+      "upstream": [],
+      "sourceFamily": "scripta-sinica",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://hanchi.ihp.sinica.edu.tw/",
+        "checkedAt": "2026-11-01T04:28:42.382990+00:00",
+        "status": "reachable",
+        "sha256": "84338fc10407c9026ebc34560ffa67f650e2560548fe1b93f74199f58d049a70",
+        "bytes": 250
+      }
+    },
+    {
+      "id": "nlc",
+      "name": "国家图书馆",
+      "url": "https://www.nlc.cn/",
+      "kind": "catalog-image",
+      "coverage": [
+        "古籍影像",
+        "目录"
+      ],
+      "upstream": [],
+      "sourceFamily": "nlc",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://www.nlc.cn/",
+        "checkedAt": "2026-11-01T04:28:43.841332+00:00",
+        "status": "reachable",
+        "sha256": "7ef2d3ce7201c8ef97a045991c6033685f394f65498c9a3ca5ce691facd048b9",
+        "bytes": 69703
+      }
+    },
+    {
+      "id": "ncl",
+      "name": "台北国家图书馆",
+      "url": "https://rbook.ncl.edu.tw/NCLSearch/Search",
+      "kind": "catalog-image",
+      "coverage": [
+        "古籍影像",
+        "目录"
+      ],
+      "upstream": [],
+      "sourceFamily": "ncl",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": false,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://rbook.ncl.edu.tw/NCLSearch/Search",
+        "checkedAt": "2026-11-01T04:28:48.709732+00:00",
+        "status": "unavailable",
+        "error": "FetchError",
+        "attempts": 2
+      }
+    },
+    {
+      "id": "harvard-yenching",
+      "name": "哈佛燕京图书馆",
+      "url": "https://library.harvard.edu/collections/chinese-collection",
+      "kind": "catalog-image",
+      "coverage": [
+        "别集",
+        "方志",
+        "古籍影像"
+      ],
+      "upstream": [],
+      "sourceFamily": "harvard-yenching",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": false,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://library.harvard.edu/collections/chinese-collection",
+        "checkedAt": "2026-11-01T04:28:53.724431+00:00",
+        "status": "unavailable",
+        "error": "FetchError",
+        "attempts": 2
+      }
+    },
+    {
+      "id": "kyoto",
+      "name": "京都大学汉籍目录",
+      "url": "https://kanji.zinbun.kyoto-u.ac.jp/kanseki/",
+      "kind": "catalog-image",
+      "coverage": [
+        "目录",
+        "版本"
+      ],
+      "upstream": [],
+      "sourceFamily": "kyoto",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": false,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://kanji.zinbun.kyoto-u.ac.jp/kanseki/",
+        "checkedAt": "2026-11-01T04:28:54.210957+00:00",
+        "status": "unavailable",
+        "error": "FetchError",
+        "attempts": 2
+      }
+    },
+    {
+      "id": "tokyo",
+      "name": "东京大学东洋文化研究所",
+      "url": "https://www.ioc.u-tokyo.ac.jp/kanseki/",
+      "kind": "catalog-image",
+      "coverage": [
+        "目录",
+        "影像"
+      ],
+      "upstream": [],
+      "sourceFamily": "tokyo",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": false,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://www.ioc.u-tokyo.ac.jp/kanseki/",
+        "checkedAt": "2026-11-01T04:28:54.998076+00:00",
+        "status": "unavailable",
+        "error": "FetchError",
+        "attempts": 2
+      }
+    },
+    {
+      "id": "shuge",
+      "name": "书格",
+      "url": "https://www.shuge.org/",
+      "kind": "catalog-image",
+      "coverage": [
+        "古籍影像"
+      ],
+      "upstream": [],
+      "sourceFamily": "shuge",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://www.shuge.org/",
+        "checkedAt": "2026-11-01T04:28:46.507332+00:00",
+        "status": "reachable",
+        "sha256": "38e122f1649f3b50182e7bb17c781b684c44ac55e346d966122ef4ef44dab444",
+        "bytes": 138621
+      }
+    },
+    {
+      "id": "wikidata",
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Main_Page",
+      "kind": "structured",
+      "coverage": [
+        "人物映射",
+        "研究线索"
+      ],
+      "upstream": [],
+      "sourceFamily": "wikidata",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": true,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://www.wikidata.org/wiki/Wikidata:Main_Page",
+        "checkedAt": "2026-11-01T04:28:50.879657+00:00",
+        "status": "reachable",
+        "sha256": "83c9774b1649d3c5448c23933604b4d86e80f9c568132b1ee59e68254e74f1f1",
+        "bytes": 211657
+      }
+    },
+    {
+      "id": "chgis",
+      "name": "CHGIS",
+      "url": "https://chgis.fas.harvard.edu/",
+      "kind": "structured",
+      "coverage": [
+        "历史建置",
+        "地名消歧"
+      ],
+      "upstream": [],
+      "sourceFamily": "chgis",
+      "baseEdition": "按具体文本核实",
+      "permissions": {
+        "read": false,
+        "download": "unknown",
+        "ingest": "unknown",
+        "redistribute": "unknown"
+      },
+      "usageNote": "入口测试不是具体文本授权；逐文件核验版本、上游与使用条款。",
+      "probe": {
+        "url": "https://chgis.fas.harvard.edu/",
+        "checkedAt": "2026-11-01T04:29:03.210368+00:00",
+        "status": "unavailable",
+        "error": "FetchError",
+        "attempts": 2
+      }
+    },
+    {
+      "id": "kanripo-kr4c0012",
+      "name": "李太白文集 / WYG",
+      "url": "https://github.com/kanripo/KR4c0012/tree/0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+      "kind": "github",
+      "coverage": [
+        "按文件卷目核对，尚未宣称全本"
+      ],
+      "sourceFamily": "KR4c0012",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "李太白文集 / WYG",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "excerpt-only"
+      },
+      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0012/zip/0320bec76946f08e3cc25aa9501fafa97d6f51ac",
+        "checkedAt": "2026-11-01T04:36:30.528547+00:00",
+        "status": "reachable",
+        "sha256": "f220ce4b7e4546d6f08b3f8341808de4725f9b7f29dc1ebd3f0c68bb2ba28e2c",
+        "bytes": 251005
+      },
+      "repository": "kanripo/KR4c0012",
+      "commit": "0320bec76946f08e3cc25aa9501fafa97d6f51ac"
+    },
+    {
+      "id": "kanripo-kr4c0015",
+      "name": "九家集注杜詩 / WYG",
+      "url": "https://github.com/kanripo/KR4c0015/tree/592e76dc91714e57f0a16beb3403c87873c89f12",
+      "kind": "github",
+      "coverage": [
+        "按文件卷目核对，尚未宣称全本"
+      ],
+      "sourceFamily": "KR4c0015",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "九家集注杜詩 / WYG",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "excerpt-only"
+      },
+      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0015/zip/592e76dc91714e57f0a16beb3403c87873c89f12",
+        "checkedAt": "2026-11-01T04:36:45.481054+00:00",
+        "status": "reachable",
+        "sha256": "3f2a85c360d89fa70dd621903bf69105e0f74de37c8b25d0a292003968b3e802",
+        "bytes": 1144506
+      },
+      "repository": "kanripo/KR4c0015",
+      "commit": "592e76dc91714e57f0a16beb3403c87873c89f12"
+    },
+    {
+      "id": "kanripo-kr4c0069",
+      "name": "白氏文集 / SBCK",
+      "url": "https://github.com/kanripo/KR4c0069/tree/a9aabe3ae87777b7ba765c4193ff551dafbdee3e",
+      "kind": "github",
+      "coverage": [
+        "按文件卷目核对，尚未宣称全本"
+      ],
+      "sourceFamily": "KR4c0069",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "白氏文集 / SBCK",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "excerpt-only"
+      },
+      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0069/zip/a9aabe3ae87777b7ba765c4193ff551dafbdee3e",
+        "checkedAt": "2026-11-01T04:37:22.192245+00:00",
+        "status": "reachable",
+        "sha256": "fd110daadd1be1bbd5dd587a76a5e53f147b1518dd87e1b9b4735a735f832169",
+        "bytes": 838566
+      },
+      "repository": "kanripo/KR4c0069",
+      "commit": "a9aabe3ae87777b7ba765c4193ff551dafbdee3e"
+    },
+    {
+      "id": "kanripo-kr4d0076",
+      "name": "東坡全集 / WYG",
+      "url": "https://github.com/kanripo/KR4d0076/tree/45dbdf286472e7903757a064bb37c514c999617a",
+      "kind": "github",
+      "coverage": [
+        "按文件卷目核对，尚未宣称全本"
+      ],
+      "sourceFamily": "KR4d0076",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "東坡全集 / WYG",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "excerpt-only"
+      },
+      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4d0076/zip/45dbdf286472e7903757a064bb37c514c999617a",
+        "checkedAt": "2026-11-01T04:37:39.801969+00:00",
+        "status": "reachable",
+        "sha256": "0baa67b239915831ca46a530d7aec5b178e9c00a8eccf003ac8b150156bb14a2",
+        "bytes": 1710921
+      },
+      "repository": "kanripo/KR4d0076",
+      "commit": "45dbdf286472e7903757a064bb37c514c999617a"
+    },
+    {
+      "id": "kanripo-kr4j0005",
+      "name": "東坡詞 / WYG",
+      "url": "https://github.com/kanripo/KR4j0005/tree/f08a2c9e20ca90ea7f84330a912249823eaaac54",
+      "kind": "github",
+      "coverage": [
+        "按文件卷目核对，尚未宣称全本"
+      ],
+      "sourceFamily": "KR4j0005",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "東坡詞 / WYG",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "excerpt-only"
+      },
+      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4j0005/zip/f08a2c9e20ca90ea7f84330a912249823eaaac54",
+        "checkedAt": "2026-11-01T04:37:47.345095+00:00",
+        "status": "reachable",
+        "sha256": "d95d2a92e75ad3b26a54a86bbac1b90f3673bce7f9309b9f3663f6e13770ae65",
+        "bytes": 49020
+      },
+      "repository": "kanripo/KR4j0005",
+      "commit": "f08a2c9e20ca90ea7f84330a912249823eaaac54"
+    },
+    {
+      "id": "kanripo-kr4j0053",
+      "name": "竹山詞 / WYG",
+      "url": "https://github.com/kanripo/KR4j0053/tree/9c1a7a8a15650beddb528027314f30833d383ac4",
+      "kind": "github",
+      "coverage": [
+        "按文件卷目核对，尚未宣称全本"
+      ],
+      "sourceFamily": "KR4j0053",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "竹山詞 / WYG",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "excerpt-only"
+      },
+      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4j0053/zip/9c1a7a8a15650beddb528027314f30833d383ac4",
+        "checkedAt": "2026-11-01T04:37:54.688977+00:00",
+        "status": "reachable",
+        "sha256": "eaf95d426e9bd9b2383463d903ef531689d1eb089678921e9c88858b23201ef6",
+        "bytes": 20984
+      },
+      "repository": "kanripo/KR4j0053",
+      "commit": "9c1a7a8a15650beddb528027314f30833d383ac4"
+    }
+  ],
+  "catalogs": [
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR2a.txt",
+      "checkedAt": "2026-11-01T04:29:22.161808+00:00",
+      "status": "unavailable",
+      "error": "FetchError",
+      "attempts": 2,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR2a.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR2g.txt",
+      "checkedAt": "2026-11-01T04:29:25.994347+00:00",
+      "status": "reachable",
+      "sha256": "ef36b59b3f91a1f9a0f4479251cc578ccb1d7ae21646c686110b51307643724b",
+      "bytes": 24451,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR2g.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR2k.txt",
+      "checkedAt": "2026-11-01T04:29:37.278934+00:00",
+      "status": "reachable",
+      "sha256": "bd72ee0b7240d652d2228ba471e93234813be2583003b49ce1eb4e405a9a483f",
+      "bytes": 63629,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR2k.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR4b.txt",
+      "checkedAt": "2026-11-01T04:29:48.271385+00:00",
+      "status": "reachable",
+      "sha256": "f59f55919aeed32d9bbfcdf8db954c8ed746d9cacd98bf9022ef74832dd5c839",
+      "bytes": 8574,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR4b.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR4c.txt",
+      "checkedAt": "2026-11-01T04:29:52.122973+00:00",
+      "status": "reachable",
+      "sha256": "3f54bf33da49cf92f41580c3920b77d7bf6866719ceaf1dba242faabc8d1e8a7",
+      "bytes": 56489,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR4c.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR4d.txt",
+      "checkedAt": "2026-11-01T04:29:58.204123+00:00",
+      "status": "reachable",
+      "sha256": "edef54c7e779c330e36d25fc5a74d3dce4227193af09b93e5a6b2a8957016252",
+      "bytes": 251877,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR4d.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR4h.txt",
+      "checkedAt": "2026-11-01T04:30:02.261973+00:00",
+      "status": "reachable",
+      "sha256": "a69558a308a00e05348284ba2d61ba3e66eb3654f3a209a8e864b10fc801c8ff",
+      "bytes": 72963,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR4h.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR4i.txt",
+      "checkedAt": "2026-11-01T04:30:05.658281+00:00",
+      "status": "reachable",
+      "sha256": "b1b0d2a500c925917f1fde8ed70566443e1c9f5204502f60790767ec5f9ef65c",
+      "bytes": 23903,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR4i.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/kanripo/KR-Catalog/781711923e2ce6f82f6dacfb8576cd80774b7ec0/KR/KR4j.txt",
+      "checkedAt": "2026-11-01T04:30:16.678558+00:00",
+      "status": "reachable",
+      "sha256": "35b50d9f13acb10e74d66d533f2cbfb64758e9b5275d97fb81afd86dba054eb9",
+      "bytes": 34093,
+      "repository": "kanripo/KR-Catalog",
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "path": "KR/KR4j.txt"
+    }
+  ]
+}

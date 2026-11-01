@@ -1,0 +1,5138 @@
+{
+  "schemaVersion": "1.0",
+  "records": [
+    {
+      "id": "ai-pipaxing-opening",
+      "revision": 3,
+      "subject": {
+        "type": "work",
+        "key": "琵琶行"
+      },
+      "kind": "inference",
+      "status": "pending",
+      "title": "《琵琶行》开篇的秋景与送别：文本解释假说",
+      "provenance": {
+        "origin": "ai",
+        "model": "Codex（本次会话）",
+        "modelVersion": "运行环境未提供精确模型快照标识",
+        "generatedAt": "2026-11-01T04:40:59.281842+00:00",
+        "method": "基于保存的版本原句提出解释；精确模型快照不可复现，须保留该限制"
+      }
+    },
+    {
+      "id": "audit-journey-0cdf8f0a1cffb3ca",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "liuyuxi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "刘禹锡：二十三年弃置身",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-11454bdea5f480b4",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "zhangqian"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "张骞凿空西域行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-14e8f12b62e14dbb",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "xuanzang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "玄奘西行求法行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-1aeba8369b0b504d",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "weizhuang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "韦庄：从长安到成都",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-1ee530386165367b",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "weiyingwu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "韦应物：从京兆到江州",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-40ebd58b42a181aa",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "dufu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "杜甫：从长安到湘江",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-40f4ca1c05889323",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "wangwei"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "王维：从蒲州到长安",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-4d774066b9dd86b6",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "qinshihuang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "秦始皇一统六国行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-5017f3cc68c21376",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "censhen"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "岑参：从安西到嘉州",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-504aa7157b58de1c",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "hanyu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "韩愈：从汴徐到潮袁",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-5d87c1242a765bb2",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "yuanzhen"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "元稹：从通州到越州",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-8505d07d661eba08",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "wangyangming"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "王阳明知行悟道行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-b482952f446e85ab",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "dumu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "杜牧：从扬州到长安",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-b838149bff443777",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "xueneng"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "薛能：从盩厔到许州",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-baf015eb84f13eff",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "libai"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "李白仗剑壮游行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-ccce358bb9dee8e8",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "zhugeliang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "诸葛亮出山北伐行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-cf98f59c0c003582",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "sushi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "苏轼宦海贬谪行迹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-da6c51e39b8ad9ae",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "baijuyi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "白居易：从拾遗到香山",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-db0ed95b426a611f",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "jiangjie"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "蒋捷：宋亡之后的竹山",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-journey-e8e53f1709b5d757",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "ouyangxiu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "欧阳修：从绵州到颍州",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-064296e97873e60f",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "au003"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "范传正",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-0cdf8f0a1cffb3ca",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "liuyuxi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "刘禹锡",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-11454bdea5f480b4",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "zhangqian"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "张骞",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-12b10ed7ccf3827d",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "simaqian"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "司马迁",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-14e8f12b62e14dbb",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "xuanzang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "玄奘",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-1aeba8369b0b504d",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "weizhuang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "韦庄",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-1c53067f598b73cc",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "au001"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "慧立、彦悰",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-1ee530386165367b",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "weiyingwu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "韦应物",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-269311153d9270e8",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "hanwudi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "汉武帝",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-2f183a4e64493af3",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "anonymous"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "佚名",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-40ebd58b42a181aa",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "dufu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "杜甫",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-40f4ca1c05889323",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "wangwei"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "王维",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-42fe48543825a158",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "zhaoyun"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "赵云",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-45ade5c9806fd358",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "lisi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "李斯",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-4d774066b9dd86b6",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "qinshihuang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "秦始皇",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-5017f3cc68c21376",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "censhen"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "岑参",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-504aa7157b58de1c",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "hanyu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "韩愈",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-5d87c1242a765bb2",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "yuanzhen"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "元稹",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-654489853dea22a5",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "bangu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "班固",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-7bf8f9bfaa503d1d",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "chenshou"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "陈寿",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-8505d07d661eba08",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "wangyangming"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "王阳明",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-8854fe705bc182b4",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "au002"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "玄奘述、辩机编",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-ae24c98c06f5826d",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "liubei"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "刘备",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-b482952f446e85ab",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "dumu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "杜牧",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-b838149bff443777",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "xueneng"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "薛能",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-baf015eb84f13eff",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "libai"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "李白",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-ccce358bb9dee8e8",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "zhugeliang"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "诸葛亮",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-cd99291d11383521",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "zhangfei"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "张飞",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-cdfbda175ea12329",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "guanyu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "关羽",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-cf98f59c0c003582",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "sushi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "苏轼",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-da6c51e39b8ad9ae",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "baijuyi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "白居易",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-db0ed95b426a611f",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "jiangjie"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "蒋捷",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-e1c2518bdc77fa08",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "xizaochi"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "习凿齿",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-e8e53f1709b5d757",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "ouyangxiu"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "欧阳修",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-person-ebf9c8f58fc38e37",
+      "revision": 1,
+      "subject": {
+        "type": "person",
+        "key": "au004"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "门人编",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-stop-00fe7c4b284159d7",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weiyingwu:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦应物：从京兆到江州 · 第5站 · 滁州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-01fe8fc91f3a806b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第7站 · 寿春",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-021197fc2e9d9e7c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第8站 · 武进",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-028acc9fb6ba6407",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第2站 · 扬州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-02a8ac43f452d407",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第6站 · 彭城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-03e68f968d016475",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第8站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-04e761104adc3ae2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第11站 · 潭州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-04f267921cead91b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第2站 · 扬州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-05ea46c86e97ce7a",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第2站 · 嘉州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-06230388dddc2628",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第9站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-0709649ce26c5722",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第4站 · 邯郸",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-0830c9e4b19ae581",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第3站 · 济州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-08713d2f452dc780",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第7站 · 滇池",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-0daa8712350ab41c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第7站 · 赣州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-0ebda754abd9fecc",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第6站 · 开封",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-0f50ef35afda5977",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第3站 · 徐州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-10df65fc324786f9",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第3站 · 江州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-1157a0c109023969",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第7站 · 忠州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-126ce28712caf7c6",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第1站 · 巩县",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-16419ec37f9b92c0",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第6站 · 白帝城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-179510579ef1ba9b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第6站 · 康居",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-1a241968a6a7ebbd",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第9站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-1a86a51b053f399b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第9站 · 临淄",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-1b9a494885b2c3a2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-1e5e55e2384b3708",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第3站 · 瓜州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-1e6fbb4d9e62dff6",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第6站 · 碎叶城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-2961548a5cfae051",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第5站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-2b800bc2383e2af3",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-2cee66cc17e6140e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第5站 · 扬州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-2f4e218d9cf5321b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第3站 · 姑臧",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-2f5515c9b68d7fe8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第1站 · 眉州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-3006d3038c987d83",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第4站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-30631478c1e081d4",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第2站 · 广信",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-30b1f126e47588bc",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第2站 · 柴桑",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-30c86614916f1aee",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第7站 · 缚喝",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-312f44c88351f1cb",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第4站 · 高昌王城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-3151a7c9d364014d",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第10站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-32202b071c44ee8c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第6站 · 大梁",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-333ed5181b5da13c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第6站 · 庐陵",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-3500d56908638b5b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第4站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-379431fe4bbcf055",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weiyingwu:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦应物：从京兆到江州 · 第2站 · 京兆府",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-3d1634783201d8be",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第4站 · 焉耆",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-3d564b05bef99904",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第10站 · 任城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-3fb5bf5e3912a588",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第2站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-40a44aef571cb275",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第10站 · 岳阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-4158f49cb6aa4f4c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第5站 · 京兆府",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-41bb423426ea0288",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第3站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-42a5f9a672a74423",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第3站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-44abf146cd16fdc8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第6站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-44df790f6186f611",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第4站 · 杭州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-4558640833ce7782",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第5站 · 嘉州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-45d0b9e1964539a6",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第4站 · 滁州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-45e1f0aedd0ef213",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第3站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-463368175e9cbe83",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第1站 · 蒲州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-49c6d7830d4a86f0",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第8站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-4c9dce28a6aed46d",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第7站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-4ce0488d90f17e55",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第5站 · 黄州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-507db7fdbad18568",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第9站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-5161b0f3d872bc8a",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第8站 · 汉中",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-521b57f7d6d2326e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第8站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-531195aea6cc36ee",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第8站 · 南昌",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-533c95c0781902bc",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第9站 · 绍兴",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-5b3374cbd6df6dec",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第7站 · 开封",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-5baab4e19e3eba4f",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第4站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-5cb77c45f279488b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第5站 · 密州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-5e153fdf80345ab8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第3站 · 临安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-5f227495dbff2796",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第7站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-60632516b633b011",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:12"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第12站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-60e19240fdcdaf09",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第10站 · 木门道",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6283948dfd44e4d9",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:12"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第12站 · 秋浦",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-63324b3c317a8341",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weiyingwu:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦应物：从京兆到江州 · 第6站 · 江州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-63605e0759231350",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第11站 · 京兆府",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-63823d667a8db049",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第6站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-651a8af2becb21d4",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第5站 · 扬州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-675ff066325ba286",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第8站 · 潮州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-680a2ac3c95c5e8c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第3站 · 大名府",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-687acdb313127cf0",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第9站 · 惠州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6b8e5018eb550353",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:13"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第13站 · 泾县",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6c26c49bdfe5987d",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第7站 · 湖州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6cafce77ce923e8f",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第8站 · 于阗",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6eadb99b04da196a",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第11站 · 于阗",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6f121b8245534e9e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第1站 · 绵州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6f9c227c796677ea",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第5站 · 江陵",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-6fb33816715ca91e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第3站 · 新郑",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7072055dbe6b3cd2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第6站 · 徐州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7118884a873424f3",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第4站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-734130cd40f8ec55",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weiyingwu:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦应物：从京兆到江州 · 第3站 · 鄠县",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7385dad28ca3497e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第4站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-741f9a04800fe9a1",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第1站 · 盩厔",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-75fdcf287d698046",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第2站 · 泰山",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7775a89514d2ba6e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第6站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7878505c16188981",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第5站 · 龙场",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-788cca0568354048",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第5站 · 鄜州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-78b48d3ed7a9a3dd",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第9站 · 祁山",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7973149d5add615e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第7站 · 同州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-798a31458e9808fc",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第5站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7ac6aa212fae5e0e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第4站 · 宣州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7b8e36dfd0a44f7d",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第6站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7bc44c36cbd3a93e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:15"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第15站 · 白帝城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7dd75f6034cc8969",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第3站 · 渝州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7dee68f9dd08c987",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第11站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7e3185670c57ca84",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第8站 · 亳州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7e69ec90b64755b7",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第4站 · 同州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-7f8570e26b9ba407",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-815472d0235f3341",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weiyingwu:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦应物：从京兆到江州 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-81c27f3113fc41e2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第1站 · 河阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-82f9cc7d2728e85e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第10站 · 汝州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-83c0b931961e0ea9",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第11站 · 五丈原",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-859a9399454edcb2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第4站 · 盩厔",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-89bade657b6cfa4d",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第11站 · 常州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-89c917af96860079",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第8站 · 健驮逻",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8a20251756a8090e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第9站 · 苏州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8a54ff650b8aebfb",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第2站 · 夷陵",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8adc8b48866b83f7",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第7站 · 和州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8b6e908c03ee23c4",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第6站 · 安陆",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8b81089a60cadc43",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第9站 · 袁州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8bc4cb61032511b8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第5站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8cb78649db86c97a",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第2站 · 北庭",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8d391f390ef4ffbc",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第8站 · 许州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8e2dc98b8065fc46",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第7站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8f685c665816133b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第2站 · 凉州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-8ff05ee65441ee54",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第8站 · 越州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-91e94a659ea1ce04",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第9站 · 睢阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-924f202ff5270154",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第2站 · 陇西",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-93f281e4ff5bc263",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第8站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9583e1bbbe2a3d06",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第10站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-960e83790272f352",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第6站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-99d94aca8873ead4",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第1站 · 余姚",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9ad065aac2fdc5d7",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第2站 · 东京开封府",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9b4e87281a467455",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第11站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9c002095d366fbad",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第2站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9e13df0ca6a771d0",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第5站 · 吴江",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9f4cb1b5f667f55e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第10站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-9fe317fab03b0c78",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第1站 · 新郑",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-a44620299a7ee8e2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第2站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-a46d6c70c594f140",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第4站 · 苏州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-a53752dc3e5454e8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "ouyangxiu:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "欧阳修：从绵州到颍州 · 第9站 · 颍州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-a955a59ef4856139",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第6站 · 江州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-aa199737e34e9297",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:12"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第12站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-aa1caa921b7103e8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第5站 · 大宛贰师城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ad9ef50cd2920eec",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第8站 · 襄平",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-adba112af114917f",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第4站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-b0821e1d079f7443",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第3站 · 渭南",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-b1243aa6aa87f4fa",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-b423c8ee47c59d4a",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第5站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-b60de7cdf19fd9c0",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第1站 · 咸阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-b8ca441f76af0714",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xueneng:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "薛能：从盩厔到许州 · 第7站 · 许州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ba56fd239c468a5f",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第11站 · 宣城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-be2d97933de4540e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第7站 · 龙游",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-be69661e2887e08b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第8站 · 黄州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-bf74bf33ffe4a32e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第6站 · 夔州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c18a71cc10c02a57",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第3站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c1d4b86e06b49054",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第5站 · 连州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c1efebbfe4272e3c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weiyingwu:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦应物：从京兆到江州 · 第4站 · 栎阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c39456e979a1f7a3",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第1站 · 碎叶城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c411db5461fd5cc3",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第7站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c889dddfbc70976d",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第6站 · 江阴",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c8dce7bc9e7cbd13",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第1站 · 安西",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c901e14e9b5ec0f9",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第2站 · 邺城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c95c4da1251687c1",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:14"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第14站 · 庐山",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-c96dacb5406fc888",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第2站 · 汴州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-cb2a4a37ef3fc8f4",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第4站 · 荆门",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-cd00c52797cd64df",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第3站 · 凤翔府",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-cf6b9cb0e8e722ea",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第9站 · 夔州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-cfd39cf5b35a81b6",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第9站 · 宜兴",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-d0b83eff306adc88",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第5站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-d3036463a5608f1b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "qinshihuang:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "秦始皇一统六国行迹 · 第5站 · 蓟城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-d4383ce2e26840ee",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第6站 · 池州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-d6d7436508baa751",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第2站 · 绵州青莲",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-d8b04c4d7f31aeaa",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dufu:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜甫：从长安到湘江 · 第8站 · 渝州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-d9bbf0bb1440f6fb",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第2站 · 临安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-da126eb37145b225",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "weizhuang:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韦庄：从长安到成都 · 第7站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-da39930749ad3204",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第9站 · 那烂陀寺",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-dce57d534945d5e8",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:6"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第6站 · 辋川",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-dd6b740b87102352",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第9站 · 苏州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ddc3492b192324ef",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第7站 · 睦州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ddc81110eaf0a5f9",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "jiangjie:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "蒋捷：宋亡之后的竹山 · 第1站 · 宜兴",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-dff941edd00adbb6",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhangqian:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "张骞凿空西域行迹 · 第7站 · 大月氏蓝氏城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e028b6833e68cd14",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第10站 · 曲女城",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e2fb6cee5e9b7848",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第1站 · 隆中",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e409fe6c2e8b83b2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:9"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第9站 · 湖州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e54b40a26175a140",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第8站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e67fe414e9364ee2",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第3站 · 赤壁",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e8401ae13aca014f",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-e94a16b4e2b21ab3",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "sushi:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "苏轼宦海贬谪行迹 · 第10站 · 儋州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ea0779f9f6ad3f13",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "hanyu:12"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "韩愈：从汴徐到潮袁 · 第12站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ebcd9aebf48e019f",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:1"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第1站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ed4487b420673f60",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "zhugeliang:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "诸葛亮出山北伐行迹 · 第4站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-ed6177c2f70661a4",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第10站 · 南安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f0214be1bdf1edbb",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "baijuyi:8"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "白居易：从拾遗到香山 · 第8站 · 杭州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f1fe84873dabc086",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "xuanzang:5"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "玄奘西行求法行迹 · 第5站 · 龟兹",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f24e5a68be6e5a7c",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:10"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第10站 · 鄂州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f2b379a0bd796c3b",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第4站 · 朗州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f4079bfcd294cafa",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "liuyuxi:11"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "刘禹锡：二十三年弃置身 · 第11站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f704194087b3a7c1",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "yuanzhen:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "元稹：从通州到越州 · 第3站 · 通州",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f878b446fdefb475",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "dumu:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "杜牧：从扬州到长安 · 第3站 · 洛阳",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-f9870b4ba03835a3",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangwei:2"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王维：从蒲州到长安 · 第2站 · 长安",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-fa8270e22e7a313e",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:4"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第4站 · 钱塘江",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-fcecb147aa4b40c9",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "libai:16"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "李白仗剑壮游行迹 · 第16站 · 当涂",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-fe7217699a1024f5",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "wangyangming:3"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "王阳明知行悟道行迹 · 第3站 · 京师",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-stop-fef59c3b1ffaa504",
+      "revision": 1,
+      "subject": {
+        "type": "stop",
+        "key": "censhen:7"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "岑参：从安西到嘉州 · 第7站 · 成都",
+      "provenance": {
+        "origin": "unknown",
+        "method": "历史叙述生成方式未记录"
+      }
+    },
+    {
+      "id": "audit-work-036cb9f0f64a32d8",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "传习录"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "传习录",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-0aeadb88c9602a8d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "黄鹤楼送孟浩然之广陵"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "黄鹤楼送孟浩然之广陵",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-0fe47bc8824f267d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "告谕庐陵父老"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "告谕庐陵父老",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-114bc14a9297e82f",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "喜雨亭记"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "喜雨亭记",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-128d0b6604fc6178",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "梦游天姥吟留别"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "梦游天姥吟留别",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-19c0e4da5c1bd13d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "秋浦歌"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "秋浦歌（其十五）",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-1a29823ed6b17c67",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "王阳明先生年谱"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "王阳明先生年谱",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-1cbe93412c4ef6b1",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "三国志·诸葛亮传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "三国志 · 诸葛亮传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-1f3890ddd5f2eced",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "与梅圣俞书"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "与梅圣俞书",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-2074e1bedf19cb4e",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "进西域记表"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "进西域记表",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-27a2ac30b18fec40",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "定风波"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "定风波 · 莫听穿林打叶声",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-28b61a5788ede3fb",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "阿房宫赋"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "阿房宫赋",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-2b54c669b05ef2f9",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "出师表"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "出师表",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-2c6a86724875c950",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "明史·王守仁传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "明史·王守仁传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-2e1225bbc0f88e93",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "答范淳甫"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "答范淳甫",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-2fa1bd18099a9061",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "大唐西域记"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "大唐西域记",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-3501ecf5c25fdb0e",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "食荔枝"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "食荔枝（惠州一绝）",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-356405b9810ed282",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "泛海"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "泛海",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-379f18125e9d95d5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "早发白帝城"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "早发白帝城",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-37b473b33bb5cdb5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "观刈麦"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "观刈麦",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-382ca8326321e806",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "自题金山画像"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "自题金山画像",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-3941eb33f89d30e1",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "与杨仕德薛尚谦书"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "与杨仕德薛尚谦书",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-3ae36ea52efe577d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "战国策"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "战国策",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-3de5742d1b0a5977",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "狱中寄子由"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "狱中寄子由",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-3f0128f248a7d1ac",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "临路歌"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "临路歌",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-40d14af04e4ae064",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "史记·秦始皇本纪"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "史记·秦始皇本纪",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-427f8b800a112f63",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "南陵别儿童入京"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "南陵别儿童入京",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-42f2110880b0bce1",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "峨眉山月歌"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "峨眉山月歌",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-46cbcd187cdbf816",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "渡荆门送别"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "渡荆门送别",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-4d158aac3bbee154",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "唐左拾遗翰林学士李公新墓碑"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "唐左拾遗翰林学士李公新墓碑",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-575e733aec312294",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "王阳明年谱"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "王阳明年谱",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-6047a8ac770abf1a",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "史记·大宛列传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "史记 · 大宛列传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-60ec48eac1a8e106",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "梁园吟"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "梁园吟",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-62cdbfde91118c6a",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "望江南"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "望江南 · 超然台作",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-664471fe276d0140",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "一剪梅·舟过吴江"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "一剪梅 · 舟过吴江",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-66ea6a16eff5c8a6",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "卖炭翁"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "卖炭翁",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-68d9a03c6d38b1d1",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "望岳"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "望岳",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-69759c2c8c3c730d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "琵琶行"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "琵琶行",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-6985f387887c17d6",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "赋得古原草送别"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "赋得古原草送别",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-6a7be36928f88042",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "汉晋春秋"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "汉晋春秋 · 南征",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-76c8ebceab97a49b",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "宣州谢朓楼饯别校书叔云"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "宣州谢朓楼饯别校书叔云",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-7b8cdf31f4472c74",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "寄李十二白二十韵"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "寄李十二白二十韵",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-7dbdc57e433a1d2d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "上安州裴长史书"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "上安州裴长史书",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-7e8c99a685a2e4c0",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "春望"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "春望",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-89ee9515cadeece5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "大慈恩寺三藏法师传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "大慈恩寺三藏法师传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-917f6147787025f1",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "六月二十日夜渡海"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "六月二十日夜渡海",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-93d74a21a7fc8c9a",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "水调歌头"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "水调歌头 · 明月几时有",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-98689cc5dd46c04a",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "卜算子"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "卜算子 · 黄州定慧院寓居作",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-99da927966deb4f4",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "虞美人·听雨"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "虞美人 · 听雨",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-a1891ec0c35c5c39",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "旅夜书怀"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "旅夜书怀",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-abb206834f5c6805",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "战国策·燕策三"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "战国策·燕策三",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-b0e50b28c51b74a7",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "茅屋为秋风所破歌"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "茅屋为秋风所破歌",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-b455c74e70dbcca5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "赠汪伦"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "赠汪伦",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-b464be6a12079dc3",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "汉书·张骞传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "汉书 · 张骞传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-b69474dfb4c772dd",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "饮湖上初晴后雨"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "饮湖上初晴后雨（其二）",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-bd856b4cb0684b03",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "擒获宸濠捷音疏"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "擒获宸濠捷音疏",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-c99008428caded75",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "初发嘉州"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "初发嘉州",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-ccb7716c17d4e0f7",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "蜀相"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "蜀相",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-cd27311aaab6e1b9",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "登高"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "登高",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-d27cb6303070889e",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "江城子"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "江城子 · 乙卯正月二十日夜记梦",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-d2ab2f76529ebec5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "月夜"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "月夜",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-d5ee946cdf3df057",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "念奴娇"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "念奴娇 · 赤壁怀古",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-de309c9d2a03a7a7",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "钱塘湖春行"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "钱塘湖春行",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-de7af41c3b61c672",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "登岳阳楼"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "登岳阳楼",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-e291a84b638035bb",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "忆江南"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "忆江南三首",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-e55a31eadf133fe3",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "旧唐书·玄奘传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "旧唐书·玄奘传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-e9904c89170bb70d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "天泉证道·四句教"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "天泉证道·四句教",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-f863951868c084a6",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "史记·白起王翦列传"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "史记·白起王翦列传",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "audit-work-f8e00a208584c2df",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "独坐敬亭山"
+      },
+      "kind": "audit",
+      "status": "partial",
+      "title": "独坐敬亭山",
+      "provenance": {
+        "origin": "machine",
+        "method": "结构审查与公开目录检索，不是人工学术审校"
+      }
+    },
+    {
+      "id": "witness-010d407072a94abfc23c",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "蜀相"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "蜀相 · KR4c0015 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-1ac8fbfbad668b9f6f9c",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "早发白帝城"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "早发白帝城 · KR4c0012 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-2342b2c2e44db0e5e1a5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "虞美人·听雨"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "虞美人 · 听雨 · KR4j0053 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-29c0f7fc7452cd6f0322",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "茅屋为秋风所破歌"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "茅屋为秋风所破歌 · KR4c0015 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-2d98f363c1a088215a06",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "南陵别儿童入京"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "南陵别儿童入京 · KR4c0012 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-5c3b06faebdd41906780",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "望江南"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "望江南 · 超然台作 · KR4j0005 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-6cb9aa0607026a5e02bf",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "赠汪伦"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "赠汪伦 · KR4c0012 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-7a4664695f8e5b3224db",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "宣州谢朓楼饯别校书叔云"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "宣州谢朓楼饯别校书叔云 · KR4c0012 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-7d83f7870bc9c3e5b1d2",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "登高"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "登高 · KR4c0015 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-a455b865c4c78921d3e5",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "峨眉山月歌"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "峨眉山月歌 · KR4c0012 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-a82505fe516e60dbde72",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "喜雨亭记"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "喜雨亭记 · KR4d0076 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-aea554a15e87afc4f3e6",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "六月二十日夜渡海"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "六月二十日夜渡海 · KR4d0076 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-af2e890afb0220f38cc4",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "上安州裴长史书"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "上安州裴长史书 · KR4c0012 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-bb46f0ea416586bddb0e",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "卖炭翁"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "卖炭翁 · KR4c0069 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-c5c27744805dfb27186e",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "琵琶行"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "琵琶行 · KR4c0069 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    },
+    {
+      "id": "witness-d0083bafa5bf4d6768ac",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "食荔枝"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "食荔枝（惠州一绝） · KR4d0076 版本见证",
+      "provenance": {
+        "origin": "machine",
+        "method": "去编排符号匹配后逐字提取原始片段"
+      }
+    }
+  ]
+}

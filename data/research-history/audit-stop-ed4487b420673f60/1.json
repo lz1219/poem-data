@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-ed4487b420673f60",
+  "subject": {
+    "type": "stop",
+    "key": "zhugeliang:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "诸葛亮出山北伐行迹 · 第4站 · 成都",
+  "claim": "刘备入蜀受阻于雒城，诸葛亮与张飞、赵云自荆州率军溯长江西上，分定江州、江阳、犍为诸郡，与刘备合围成都；刘璋出降，亮署左将军府事，修订《蜀科》，宽严相济治理巴蜀。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.427769+00:00",
+  "sha256": "2d97e996bfb107c0a7ed9f2ab0e11f16b55c8b80af720a4a2a145f37e0592565"
+}

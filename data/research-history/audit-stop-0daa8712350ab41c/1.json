@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-0daa8712350ab41c",
+  "subject": {
+    "type": "stop",
+    "key": "wangyangming:7"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "王阳明知行悟道行迹 · 第7站 · 赣州",
+  "claim": "受兵部尚书王琼力荐，以左佥都御史巡抚南赣汀漳。自编选练民兵，严明赏罚，两年内连破詹师富、大帽山、横水、桶冈、浰头诸巢，荡平盘踞赣闽粤湘边界数十年之巨寇；继而颁《南赣乡约》、设崇义县，兴立社学教化百姓。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.181843+00:00",
+  "sha256": "997729d79a8b4991a68a61fe53351a4049e94b322002b9d0cc10765cb3e746e6"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-379431fe4bbcf055",
+  "subject": {
+    "type": "stop",
+    "key": "weiyingwu:2"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "韦应物：从京兆到江州 · 第2站 · 京兆府",
+  "claim": "任京兆府功曹参军。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 32822（功曹參軍，京兆府，774）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.207672+00:00",
+  "sha256": "e2a256f64e60945e44c332f098a4dd9eb89b9c376a3e7889ee11ef89d1a95aaa"
+}

@@ -8,6 +8,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { checkSchema } from './schema-check.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url)) + '/..';
 const errors = [];
@@ -17,6 +18,12 @@ const readJSON = (p) => JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8'));
 const listDir = (p) => (fs.existsSync(path.join(ROOT, p)) ? fs.readdirSync(path.join(ROOT, p)).filter((f) => f.endsWith('.json')) : []);
 const err = (m) => errors.push(m);
 const warn = (m) => warns.push(m);
+const editions = readJSON('shared/editions.json');
+for (const [group, name] of [['works', 'work'], ['persons', 'person'], ['journeys', 'journey']]) {
+  const schema = readJSON(`schema/${name}.schema.json`);
+  for (const f of listDir(`data/${group}`)) checkSchema(readJSON(`data/${group}/${f}`), schema, `${group}/${f}`, err);
+}
+for (const f of listDir('data/research')) checkSchema(readJSON(`data/research/${f}`), readJSON('schema/research.schema.json'), `research/${f}`, err);
 
 // ── 1. 作品 ──
 const workFiles = listDir('data/works');
@@ -38,7 +45,9 @@ for (const f of workFiles) {
   const p = w.text?.paragraphs || [];
   const ps = w.text?.paragraphsSimplified || [];
   if (!p.length) err(`${at}: 正文为空`);
-  if (ps.length && ps.length !== p.length) err(`${at}: 繁简段数不一致（${p.length} vs ${ps.length}）`);
+  if (ps.length !== p.length) err(`${at}: 繁简段数不一致（${p.length} vs ${ps.length}）`);
+  if (!(w.citation || '').trim()) err(`${at}: 缺 citation`);
+  if (!editions[w.text?.sourceEdition]) err(`${at}: sourceEdition 不存在`);
   if (w.text?.traditionalDerived && !w.text?.simplifiedBy) err(`${at}: 繁体为反推但未标 simplifiedBy`);
 
   // 赏析：必须自撰 + 许可；推测必须有据
@@ -64,14 +73,15 @@ for (const f of workFiles) {
       const cd = readJSON(cp);
       if (cd.workKey !== w.key) err(`${at}: 评点文件 workKey 不匹配`);
       for (const item of cd.items || []) {
-        if (!item.critic || !item.source) err(`${at}: 评点 ${item.id} 缺评者或出处`);
-        if (item.status !== 'verified') warn(`${at}: 评点 ${item.id} 未核原文（status=${item.status}）`);
+        if (![item.critic, item.dynasty, item.text, item.source].every(x => typeof x === 'string' && x.trim())) err(`${at}: 评点 ${item.id} 缺四要素`);
+        if (item.status !== 'verified') err(`${at}: 未核评点不得发布（${item.id}）`);
       }
     }
   }
 
   // 系年：adopted 至多一条，且与 composed.year 一致
   const adopted = (w.dating || []).filter((d) => d.stance === 'adopted');
+  for (const d of adopted) if (!(d.evidence || []).length || d.evidence.every(e => /^-?\d+$/.test((e.quote || '').trim()))) err(`${at}: 采信系年缺真实史料引文（年份不能充当引文）`);
   if (adopted.length > 1) err(`${at}: 系年 adopted 多于一条`);
   if (adopted.length === 1 && w.composed?.year != null && String(w.composed.year) !== adopted[0].claim) {
     err(`${at}: 采信系年 ${adopted[0].claim} 与 composed.year ${w.composed.year} 不一致`);
@@ -93,25 +103,38 @@ for (const f of personFiles) {
 
 // 作品的 authorKey 必须存在
 for (const [k, w] of works) {
-  if (!persons.has(w.authorKey)) warn(`works/${k}: authorKey ${w.authorKey} 没有对应人物文件`);
+  if (!persons.has(w.authorKey)) err(`works/${k}: authorKey ${w.authorKey} 没有对应人物文件`);
 }
 
 // ── 3. 行迹 ──
+const journeyKeys = new Set();
 for (const f of listDir('data/journeys')) {
   const j = readJSON(path.join('data/journeys', f));
   const at = `journeys/${f}`;
+  if (journeyKeys.has(j.key)) err(`${at}: key 重复`);
+  journeyKeys.add(j.key);
+  if (j.intro && ![j.intro.text, j.intro.source].every(x => typeof x === 'string' && x.trim())) err(`${at}: 导语缺正文或出处`);
   if (!persons.has(j.personKey)) err(`${at}: personKey ${j.personKey} 不存在`);
   if (!(j.stops || []).length) err(`${at}: 无站点`);
   (j.stops || []).forEach((s, i) => {
     if (s.seq !== i + 1) err(`${at}: 站序不连续（第 ${i + 1} 个 seq=${s.seq}）`);
     if (!s.source) err(`${at}: 第 ${i + 1} 站缺出处`);
     if (!s.descZh) err(`${at}: 第 ${i + 1} 站缺叙述`);
+    if (!(s.source || '').trim()) err(`${at}: 第 ${i + 1} 站出处为空白`);
+    const c = s.place?.coord;
+    if (!Array.isArray(c) || c.length !== 2 || !c.every(Number.isFinite) || Math.abs(c[0]) > 180 || Math.abs(c[1]) > 90) err(`${at}: 第 ${i + 1} 站坐标非法`);
+    if (s.year === 0) err(`${at}: 年份0无效，未知用null`);
   });
   for (const [k, v] of Object.entries(j.links || {})) {
     const n = Number(k);
-    if (!(n >= 1 && n <= (j.stops || []).length)) err(`${at}: 承接语站号 ${k} 越界`);
+    if (!/^\d+$/.test(k) || !(n >= 1 && n <= (j.stops || []).length)) err(`${at}: 承接语站号 ${k} 越界`);
     if (!v.source) err(`${at}: 承接语 ${k} 缺出处`);
   }
+}
+for (const f of personFiles) {
+  const p = readJSON(`data/persons/${f}`);
+  if (p.journeyKey && !journeyKeys.has(p.journeyKey)) err(`persons/${f}: journeyKey 不存在`);
+  if ((p.span || []).some(x => x === 0)) err(`persons/${f}: 生卒0无效，未知用null`);
 }
 
 // ── 4. 共享文件 ──

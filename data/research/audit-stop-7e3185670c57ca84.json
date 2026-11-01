@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-7e3185670c57ca84",
+  "subject": {
+    "type": "stop",
+    "key": "ouyangxiu:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "欧阳修：从绵州到颍州 · 第8站 · 亳州",
+  "claim": "罢政出知亳州，带观文殿学士、刑部尚书衔。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 1384（知某州軍州事，亳州，1067—1068；觀文殿學士、刑部尚書亦系此年）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.043826+00:00",
+  "sha256": "634e1a4d5a1afa02d78fac587106df9fbe06d3c9697b9e99e8c3aae5559ee3bd"
+}

@@ -15,7 +15,7 @@ from django.core.management.base import BaseCommand
 from django.db import transaction
 
 from corpus.models import (
-    Apparatus, Commentary, Dating, Edition, Journey, JourneyLink, Person, Stop, Work,
+    Apparatus, Commentary, Dating, Edition, Journey, JourneyLink, Person, Stop, Work, SourceRecord, ResearchRevision, ResearchArtifact,
 )
 
 
@@ -42,6 +42,27 @@ class Command(BaseCommand):
             persons = self._load_persons(data_dir)
             n_works = self._load_works(data_dir, persons, editions)
             n_j = self._load_journeys(data_dir, persons)
+            source_file = data_dir.parent / 'shared/sources.json'
+            if not source_file.exists(): source_file = data_dir / 'shared/sources.json'
+            if source_file.exists():
+                registry = json.loads(source_file.read_text('utf-8'))
+                SourceRecord.objects.update_or_create(key='__registry__', defaults={'payload': registry})
+                for s in registry['sources']:
+                    SourceRecord.objects.update_or_create(key=s['id'], defaults={'payload': s})
+            for f in sorted((data_dir / 'witnesses').glob('*.txt')):
+                existing_artifact = ResearchArtifact.objects.filter(sha256=f.stem).first()
+                content = f.read_text('utf-8')
+                if existing_artifact and existing_artifact.text != content:
+                    raise ValueError('证据原件冲突：' + f.stem)
+                if not existing_artifact: ResearchArtifact.objects.create(sha256=f.stem, text=content)
+            history_files = list((data_dir / 'research-history').glob('*/*.json')) + list((settings.PRIVATE_RESEARCH_DIR / 'research-history').glob('*/*.json'))
+            for f in sorted(history_files):
+                doc = json.loads(f.read_text('utf-8'))
+                existing = ResearchRevision.objects.filter(record_id=doc['id'], revision=doc['revision']).first()
+                if existing and existing.payload != doc:
+                    raise ValueError('研究旧修订冲突：' + doc['id'])
+                if not existing:
+                    ResearchRevision.objects.create(record_id=doc['id'], revision=doc['revision'], payload=doc)
 
         self.stdout.write(self.style.SUCCESS(
             f"导入完成：版本 {Edition.objects.count()} / 人物 {Person.objects.count()} / "
@@ -51,6 +72,7 @@ class Command(BaseCommand):
     # ── 版本 ──
     def _load_editions(self, data_dir: Path) -> dict:
         f = data_dir.parent / "shared" / "editions.json"
+        if not f.exists(): f = data_dir / 'shared' / 'editions.json'
         out = {}
         if not f.exists():
             return out
@@ -69,6 +91,12 @@ class Command(BaseCommand):
                 },
             )
             out[key] = obj
+        for key, e in blob.items():
+            parent = e.get('parent')
+            if parent and parent not in out:
+                raise ValueError('版本 parent 不存在：' + parent)
+            out[key].parent = out.get(parent)
+            out[key].save(update_fields=['parent'])
         self.stdout.write(f"版本 {len(out)}")
         return out
 
@@ -124,6 +152,7 @@ class Command(BaseCommand):
                     "year": comp.get("year"),
                     "year_kind": comp.get("yearKind") or "composition",
                     "place_zh": comp.get("placeZh") or "",
+                    "place_key": comp.get("placeKey") or "",
                     "source_edition": edition,
                     "paragraphs": text.get("paragraphs") or [],
                     "paragraphs_simplified": text.get("paragraphsSimplified") or [],
@@ -144,6 +173,7 @@ class Command(BaseCommand):
             for a in w.get("apparatus") or []:
                 Apparatus.objects.create(
                     work=obj,
+                    stable_id=a.get('id') or '',
                     locator=a.get("locator") or {},
                     base_edition=a.get("baseEdition") or "",
                     base_text=a.get("baseText") or "",
@@ -171,6 +201,7 @@ class Command(BaseCommand):
                     for c in blob.get("items") or []:
                         Commentary.objects.create(
                             work=obj,
+                            stable_id=c.get('id') or '',
                             critic=c.get("critic") or "",
                             dynasty=c.get("dynasty") or "",
                             text=c.get("text") or "",

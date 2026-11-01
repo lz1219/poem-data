@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "id": "witness-a82505fe516e60dbde72",
+  "subject": {
+    "type": "work",
+    "key": "喜雨亭记"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "喜雨亭记 · KR4d0076 版本见证",
+  "claim": "在固定提交的独立原典文件中发现正文片段；不能据此确定作年或地点。",
+  "provenance": {
+    "origin": "machine",
+    "method": "去编排符号匹配后逐字提取原始片段"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4d0076",
+      "quote": "使天而雨珠寒者不得以為襦使天¶\n而雨玉飢者不得以為粟",
+      "locator": "KR4d0076_035.txt",
+      "url": "https://github.com/kanripo/KR4d0076/blob/45dbdf286472e7903757a064bb37c514c999617a/KR4d0076_035.txt",
+      "commit": "45dbdf286472e7903757a064bb37c514c999617a",
+      "sha256": "718fb919f44a6ccb257da7191ecddd3a43f0358c8ac5328262b79618a125939d",
+      "originalFileSha256": "86531efa334e8088c8853f8c6c5ee1a5ee00dbb8e9cd229111b58bdc77ce8e30",
+      "textFile": "data/witnesses/718fb919f44a6ccb257da7191ecddd3a43f0358c8ac5328262b79618a125939d.txt",
+      "verifiedQuote": true,
+      "verification": "原始版本逐字摘引；匹配时仅去编排符号",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "1个可比片段中命中1个；尚待人工核对篇题、底本及上下文。"
+  ],
+  "reasoning": "",
+  "counterEvidence": "尚未系统检索其他版本；未作异文裁决。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4d0076",
+      "query": "喜雨亭记",
+      "mode": "正文片段比对"
+    }
+  ],
+  "nextAction": "人工核对卷首版本、篇题与上下文，再决定全文替换、校记或系年证据。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:37:40.025483+00:00",
+  "sha256": "2bbe571bf27bc9f4d1a099a69ad95cda1ce246bb796b741a4807441ee071b757"
+}

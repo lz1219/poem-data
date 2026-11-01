@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-2f4e218d9cf5321b",
+  "subject": {
+    "type": "stop",
+    "key": "zhangqian:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "张骞凿空西域行迹 · 第3站 · 姑臧",
+  "claim": "途经河西走廊为匈奴骑兵截获，押送单于王庭。单于予妻生子，然张骞始终“持汉节不失”，羁留十余载待机西奔。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.388033+00:00",
+  "sha256": "1c073f98bee9e513a701bb2079c1dd1db5df8315dfcf15a74ecbc371beb34b8e"
+}

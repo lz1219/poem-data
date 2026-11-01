@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-b0821e1d079f7443",
+  "subject": {
+    "type": "stop",
+    "key": "liuyuxi:3"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "刘禹锡：二十三年弃置身 · 第3站 · 渭南",
+  "claim": "调渭南县主簿，次年入朝为监察御史。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：CBDB 33606（縣主簿，渭南，802—803）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:54.991415+00:00",
+  "sha256": "05999bbce5ba47e5f879f7bc8bc769aaac509c7f8b408737b53b694576d5bfee"
+}

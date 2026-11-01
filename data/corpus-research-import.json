@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-11-01T04:57:05.794523+00:00",
+  "table": "research_note",
+  "existingBefore": 342,
+  "inserted": 1,
+  "factsChanged": false,
+  "originalTextsChanged": false,
+  "backup": "仓库外本地备份，含目标表前态与本批新增ID，不包含凭据"
+}

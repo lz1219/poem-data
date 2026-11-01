@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-5161b0f3d872bc8a",
+  "subject": {
+    "type": "stop",
+    "key": "zhugeliang:8"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "诸葛亮出山北伐行迹 · 第8站 · 汉中",
+  "claim": "南中既定，诸葛亮率诸军北驻汉中沔阳，临发向后主刘禅奏呈千古名篇《出师表》，勉以亲贤臣远小人、兴复汉室还于旧都，以汉中为北伐大本营经略关陇。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.436763+00:00",
+  "sha256": "324dde784404c0822d217905ebf982648971a4c267025f3f2c1e5f7b619cceae"
+}

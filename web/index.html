@@ -725,7 +725,7 @@ body{background:#fff;}.container{max-width:none;padding:0;}
 <body>
 <div class="container">
   <header class="masthead">
-    <a class="brand" href="#" id="brand"><h1>江山行止 · 文献</h1></a>
+    <a class="brand" href="#" id="brand"><h1>江山行止 · 文献</h1></a><a href="research.html">考据笺 · 来源与研究</a>
     <p class="subtitle" id="sub">作品 · 人物 · 行迹</p>
   </header>
 
@@ -791,9 +791,15 @@ const PAGE = 120;
 let IDX = null, MODE = 'home', CUR = null, KEYWORD = '', shown = 0, filtered = [], cache = new Map();
 let CORPUS = { poems: null, juan: null, authors: null };
 
+async function loadData(api, fallback) {
+  const get = async u => { const r = await fetch(u); if (!r.ok) throw new Error('资料暂不可用'); return r.json(); };
+  if (!STATIC_ONLY) { try { return await get(api); } catch (_) {} }
+  return get(fallback);
+}
+function researchLink(type, key) { return 'research.html?type=' + encodeURIComponent(type) + '&key=' + encodeURIComponent(key); }
 /* ── 启动 ── */
 (async function boot() {
-  IDX = await fetch('data/index.json').then(r => r.json());
+  IDX = await loadData('/api/index', 'data/index.json');
   $('#sub').textContent = `作品 ${IDX.works.length} · 人物 ${IDX.persons.length} · 行迹 ${IDX.journeys.length} · 每条叙述带出处`;
   if (STATIC_ONLY) applyStaticMode();
   buildFilters();
@@ -1335,7 +1341,7 @@ async function open(mode, key) {
   const id = mode + ':' + key;
   let data = cache.get(id);
   if (!data) {
-    data = await fetch(meta.file).then(r => r.json());
+    data = await loadData('/api/' + mode + '/' + encodeURIComponent(key), 'data/' + mode + '/' + encodeURIComponent(key) + '.json');
     cache.set(id, data);
   }
   CUR = { key, mode };
@@ -1354,11 +1360,11 @@ function renderWork(w) {
     w.level === 'academic' ? '<span class="tag acc">学术级</span>' : '<span class="tag">通俗级</span>',
     w.excerpt ? '<span class="tag warn" title="正文为长文中的一段，非全篇">摘录</span>' : '',
     `<span class="tag">${GENRE[w.genre] || w.genre}</span>`,
-    `<span class="tag">系年 ${w.certainty}</span>`,
+    `<span class="tag">系年 ${{confirmed:'确考',probable:'近是',disputed:'有争议',unknown:'待核'}[w.certainty] || '待核'}</span>`,
     w.text?.traditionalDerived ? '<span class="tag warn">繁体为反推</span>' : '<span class="tag">繁体取自底本</span>',
   ].join('');
   return `
-    <h2 class="rt">${esc(w.titleZh)}</h2>
+    <h2 class="rt">${esc(w.titleZh)}</h2><p class="src">资料核查待完成 · <a href="${researchLink('work', w.key)}">查看版本、证据与核查记录 ↗</a></p>
     <div class="ra">${[w.titleEn, w.aliases?.length > 1 ? '又作 ' + w.aliases.slice(1).join('、') : null, author?.zh].filter(Boolean).map(esc).join(' · ')}</div>
     <div class="badges">${badges}${author?.journeyKey ? `<a class="tag maplink" href="${atlasLink({ person: author.journeyKey, year: w.composed?.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</div>
     <div class="rc${w.genre === 'shi' || w.genre === 'ci' ? '' : ' left'}">${esc((w.text?.paragraphs || []).join('\n'))}</div>
@@ -1373,7 +1379,7 @@ function renderWork(w) {
     ${w.notes?.length ? `<div class="bh">注释</div><table>${w.notes.map(n => `<tr><th style="width:120px">${esc(n.term)}</th><td>${esc(n.explain)}</td></tr>`).join('')}</table>` : ''}
     ${w.background ? `<div class="bh">写作背景</div><p>${esc(w.background)}</p>` : ''}
     ${w.appreciation?.text ? `<div class="bh">赏析</div><p>${esc(w.appreciation.text)}</p>
-      ${w.appreciation.inference ? `<div class="note"><div class="k">推测</div>${esc(w.appreciation.inference.text)}
+      ${w.appreciation.inference ? `<div class="note"><div class="k">历史推测 · 生成方式未记录 · 未经人工审校</div>${esc(w.appreciation.inference.text)}
         <div class="src">依据：${esc(w.appreciation.inference.basis)}</div></div>` : ''}
       <div class="src">${esc(w.appreciation.by)} · ${esc(w.appreciation.license)}</div>` : ''}
     ${w.apparatus?.length ? `<div class="bh">校记</div>${w.apparatus.map(a => `<div class="note">
@@ -1395,7 +1401,7 @@ function renderPerson(p) {
   // 仕历是异步的，先占位，回来再填
   setTimeout(() => loadCareer(p.key), 0);
   return `
-    <h2 class="rt">${esc(p.zh)}</h2>
+    <h2 class="rt">${esc(p.zh)}</h2><p class="src"><a href="${researchLink('person', p.key)}">查看身份、生卒与来源核查 ↗</a></p>
     <div class="ra">${esc(p.courtesyZh || '')} · ${p.span?.[0] ?? '?'}—${p.span?.[1] ?? '?'}${p.spanNote ? ` （${esc(p.spanNote)}）` : ''}</div>
     <div class="badges">
       ${p.journeyKey ? '<span class="tag acc">有行迹</span>' : ''}
@@ -1464,7 +1470,7 @@ function renderJourney(j) {
   }).join('');
 
   return `
-    <h2 class="rt">${esc(j.titleZh)}</h2>
+    <h2 class="rt">${esc(j.titleZh)}</h2><p class="src"><a href="${researchLink('journey', j.key)}">查看行迹证据与待核事项 ↗</a></p>
     <div class="ra">${esc(j.spanZh || '')} · ${j.stops.length} 站 · ${j.origin === 'overlay' ? '本仓库补录' : '上游数据'}</div>
     ${j.intro ? `<div class="bh">读本</div><p>${esc(j.intro.text)}</p><div class="src">据 ${esc(j.intro.source)}</div>` : ''}
     <div class="bh">站点</div><table>${rows}</table>`;

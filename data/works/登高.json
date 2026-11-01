@@ -9,7 +9,7 @@
   "authorKey": "dufu",
   "genre": "shi",
   "level": "popular",
-  "certainty": "confirmed",
+  "certainty": "unknown",
   "composed": {
     "year": 767,
     "yearKind": "composition",
@@ -60,8 +60,8 @@
   "dating": [
     {
       "claim": "767",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 confirmed",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "767",

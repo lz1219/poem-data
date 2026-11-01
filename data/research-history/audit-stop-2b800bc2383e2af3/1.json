@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-2b800bc2383e2af3",
+  "subject": {
+    "type": "stop",
+    "key": "xuanzang:1"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "玄奘西行求法行迹 · 第1站 · 长安",
+  "claim": "为求《瑜伽师地论》梵本真义以释诸家纷歧，年二十八的玄奘大师自长安混迹灾民西出秦陇，立誓“不至天竺，终不东归一步”。",
+  "provenance": {
+    "origin": "unknown",
+    "method": "历史叙述生成方式未记录"
+  },
+  "issues": [
+    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+  ],
+  "evidence": [],
+  "reasoning": "",
+  "counterEvidence": "尚未完成系统反证检索。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [],
+  "nextAction": "按原出处查卷篇：（上游数据）；结合年代消歧地名，缺证时缩减叙述。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T04:33:55.268525+00:00",
+  "sha256": "ba5abc50b35cebe399aa064b5d6b609efaf58931439f943d7b6fcd41a1199145"
+}

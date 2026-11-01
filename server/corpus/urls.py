@@ -1,8 +1,12 @@
 from django.urls import path
 
-from . import views, views_corpus
+from . import views, views_corpus, views_research
 
 urlpatterns = [
+    path('research', views_research.research_index),
+    path('research/<str:record_id>', views_research.research_detail),
+    path('research/<str:record_id>/<int:revision>', views_research.research_detail),
+    path('sources', views_research.sources),
     path("health", views.health),
     path("meta", views.meta),
     path("index", views.index),

@@ -77,6 +77,9 @@ for (const w of works) {
     excerpt: !!w.excerpt,
     apparatus: w.apparatus || [],
     dating: w.dating || [],
+    sourceEdition: w.text?.sourceEdition || '',
+    traditionalDerived: !!w.text?.traditionalDerived,
+    researchStatus: '待核：结构检查不等于史实审校',
   };
 }
 
@@ -101,7 +104,7 @@ for (const j of journeys) {
       titleEn: j.titleEn || '',
       spanZh: j.spanZh || '',
       spanEn: '',
-      stops: (j.stops || []).map((s) => ({
+      stops: (j.stops || []).filter(s => Number.isInteger(s.year)).map((s) => ({
         year: s.year,
         eraZh: s.eraZh || '',
         coord: s.place?.coord || null,
@@ -123,14 +126,14 @@ for (const j of journeys) {
     });
   } else {
     // 上游已有 → 只补上游没有的站（按「年 + 古地名」判定）
-    const seen = new Set((upJ.stops || []).map((s) => s.year + '|' + s.ancientZh));
     const add = (j.stops || [])
-      .filter((s) => !seen.has(s.year + '|' + (s.place?.ancient || '')))
+      .filter(s => Number.isInteger(s.year))
       .map((s) => ({
         year: s.year,
         eraZh: s.eraZh || '',
         coord: s.place?.coord || null,
         labelPos: 'top',
+        kind: s.kind || 'office',
         ancientZh: s.place?.ancient || '',
         modernZh: s.place?.modern || '',
         ancientEn: '',
@@ -156,14 +159,15 @@ for (const j of journeys) {
   const rec = {
     key: p.key,
     zh: p.zh,
-    en: p.en || '',
+    en: p.en || up?.en || '',
     courtesyZh: p.courtesyZh || '',
-    courtesyEn: '',
+    courtesyEn: up?.courtesyEn || '',
+    spanNote: p.spanNote || '',
     dynastyKey: p.dynastyKey || '',
     span: [p.span?.[0] ?? null, p.span?.[1] ?? null],
     journeyKey: j.key,
-    aliases: p.aliases || [],
-    tokens: [p.zh, ...(p.aliases || [])].filter(Boolean),
+    aliases: [...new Set([...(up?.aliases || []), ...(p.aliases || [])])],
+    tokens: [...new Set([p.zh, ...(up?.tokens || []), ...(up?.aliases || []), ...(p.aliases || [])].filter(Boolean))],
   };
   if (!up) personOut.push(rec);
   else personOut.push({ ...rec, __mergeInto: p.key });
@@ -183,7 +187,8 @@ for (const j of journeys) {
   }
   readOut[j.key] = {
     intro: j.intro ? { text: j.intro.text, source: j.intro.source } : undefined,
-    links: j.links || {},
+    links: Object.fromEntries(Object.entries(j.links || {}).filter(([seq]) => Number.isInteger(j.stops[Number(seq) - 1]?.year)).map(([seq, link]) => [j.stops.slice(0, Number(seq)).filter(s => Number.isInteger(s.year)).length, link])),
+    undatedStops: (j.stops || []).filter(s => !Number.isInteger(s.year)),
     stopKinds: Object.keys(kinds).length ? kinds : undefined,
   };
 }
@@ -245,17 +250,21 @@ files['js/atlas_overlay.js'] =
     else D.HISTORICAL_JOURNEYS.push(j);
   }
 
-  // 上游已有该行迹：只补它缺的站，不覆盖上游
+  // 仅在运行时修订；上游文件保持原样。同年同地存在多站时拒绝歧义覆盖。
   function addStops(key, stops) {
     var j = D.HISTORICAL_JOURNEYS.find(function (x) { return x.key === key; });
     if (!j) return;
-    var seen = {};
-    (j.stops || []).forEach(function (s) { seen[s.year + '|' + s.ancientZh] = 1; });
     var merged = (j.stops || []).slice();
     stops.forEach(function (s) {
-      if (!seen[s.year + '|' + s.ancientZh]) { merged.push(s); seen[s.year + '|' + s.ancientZh] = 1; }
+      var matches = merged.filter(function (x) { return x.year === s.year && x.ancientZh === s.ancientZh; });
+      if (matches.length > 1) throw new Error('行迹修订有歧义：' + key + ' ' + s.ancientZh);
+      if (!matches.length) merged.push(s);
+      else for (var prop in s) {
+        if (/En$/.test(prop) && !s[prop]) continue;
+        matches[0][prop] = s[prop];
+      }
     });
-    merged.sort(function (a, b) { return (a.year || 0) - (b.year || 0); });
+    merged.sort(function (a, b) { return a.year - b.year; });
     j.stops = merged;
   }
 

@@ -10,7 +10,7 @@
   "authorKey": "baijuyi",
   "genre": "ci",
   "level": "popular",
-  "certainty": "probable",
+  "certainty": "unknown",
   "composed": {
     "year": 838,
     "yearKind": "composition",
@@ -18,7 +18,7 @@
     "placeKey": null
   },
   "text": {
-    "sourceEdition": "quanshi-cp-2026",
+    "sourceEdition": "upstream-quote-baseline",
     "paragraphs": [
       "江南好，風景舊曾諳。",
       "日出江花紅勝火，春來江水綠如藍，能不憶江南。",
@@ -69,8 +69,8 @@
   "dating": [
     {
       "claim": "838",
-      "stance": "adopted",
-      "note": "与 composed.year 一致；系年可信度 probable",
+      "stance": "pending",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
       "evidence": [
         {
           "quote": "838",

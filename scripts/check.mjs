@@ -17,7 +17,7 @@ const isWin = process.platform === 'win32';
 
 const steps = [];
 const run = (name, cmd, args, opts = {}) => {
-  const r = spawnSync(cmd, args, { cwd: opts.cwd || ROOT, encoding: 'utf8', shell: isWin });
+  const r = spawnSync(cmd, args, { cwd: opts.cwd || ROOT, env: opts.env || process.env, encoding: 'utf8', shell: isWin });
   const ok = r.status === 0;
   steps.push({ name, ok, out: ((r.stdout || '') + (r.stderr || '')).trim() });
   return ok;
@@ -42,6 +42,7 @@ const py = isWin
   ? path.join(ROOT, 'server/.venv/Scripts/python.exe')
   : path.join(ROOT, 'server/.venv/bin/python');
 const django = path.join(ROOT, 'server');
+if (existsSync(py)) run('research', py, ['scripts/check-research.py']);
 if (existsSync(py) && existsSync(path.join(django, 'db.sqlite3'))) {
   run('db', py, ['manage.py', 'export_json', '--check'], {
     cwd: django,
