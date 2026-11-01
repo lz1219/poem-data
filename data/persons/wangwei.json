@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0",
+  "key": "wangwei",
+  "zh": "王维",
+  "en": "Wang Wei",
+  "courtesyZh": "字摩诘 · 世称王右丞",
+  "dynastyKey": "tang",
+  "span": [
+    701,
+    761
+  ],
+  "spanNote": null,
+  "aliases": [
+    "摩诘",
+    "王右丞",
+    "诗佛"
+  ],
+  "externalIds": {
+    "cbdb": "32174",
+    "wikidata": null
+  },
+  "journeyKey": "wangwei"
+}

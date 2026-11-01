@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T03:38:44.195Z",
+  "generatedAt": "2026-11-01T03:43:11.212Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -1062,6 +1062,16 @@
       "file": "data/persons/sushi.json"
     },
     {
+      "key": "wangwei",
+      "zh": "王维",
+      "span": [
+        701,
+        761
+      ],
+      "hasJourney": true,
+      "file": "data/persons/wangwei.json"
+    },
+    {
       "key": "wangyangming",
       "zh": "王阳明",
       "span": [
@@ -1249,6 +1259,13 @@
       "stops": 11,
       "origin": "upstream",
       "file": "data/journeys/sushi.json"
+    },
+    {
+      "key": "wangwei",
+      "titleZh": "王维：从蒲州到长安",
+      "stops": 8,
+      "origin": "overlay",
+      "file": "data/journeys/wangwei.json"
     },
     {
       "key": "wangyangming",

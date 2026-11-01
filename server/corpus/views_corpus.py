@@ -320,6 +320,14 @@ def person_relations(request, key):
             LIMIT 30""",
         (pid,),
     )
+    # 关系里的人若也在本站人物表（按 CBDB id 对），给出可点击的 key
+    from .models import Person as _P
+
+    ids = {str(r["pid"]) for r in (kin + assoc) if r.get("pid")}
+    mapping = {x.cbdb_id: x.key for x in _P.objects.filter(cbdb_id__in=ids).only("key", "cbdb_id")}
+    for r in kin + assoc:
+        r["key"] = mapping.get(str(r.get("pid") or ""), "")
+
     return Response({
         "cbdb": p.cbdb_id,
         "kinship": kin,

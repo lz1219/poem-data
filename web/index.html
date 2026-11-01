@@ -1196,6 +1196,13 @@ async function openJuan(id) {
 document.addEventListener('click', async (e) => {
   if (e.target.closest('[data-print]')) { window.print(); return; }
 
+  const gp = e.target.closest('[data-goperson]');
+  if (gp) {
+    e.preventDefault();
+    location.hash = '#/person/' + encodeURIComponent(gp.getAttribute('data-goperson'));
+    return;
+  }
+
   const relBtn = e.target.closest('[data-relations]');
   if (relBtn) {
     const key = relBtn.getAttribute('data-relations');
@@ -1209,10 +1216,13 @@ document.addEventListener('click', async (e) => {
         slot.innerHTML = '<p class="empty">' + (r.note || 'CBDB 无关系数据') + '</p>';
         return;
       }
+      const nm = (x) => x.key
+        ? '<a href="#" data-goperson="' + x.key + '" style="border-bottom:1px dotted var(--line-2)">' + x.name + '</a>'
+        : x.name;
       const kin = (r.kinship || []).map((k) =>
-        '<li><span>' + k.name + '</span><span class="r">' + (k.relation || '') + '</span></li>').join('');
+        '<li><span>' + nm(k) + '</span><span class="r">' + (k.relation || '') + '</span></li>').join('');
       const asso = (r.assoc || []).map((a) =>
-        '<li><span>' + a.name + '</span><span class="r">' +
+        '<li><span>' + nm(a) + '</span><span class="r">' +
         (a.times > 1 ? a.times + ' 次' : '') + (a.first_year ? ' ' + a.first_year : '') + '</span></li>').join('');
       slot.innerHTML = '<div class="rel">' +
         '<div><h4>亲属 · ' + r.total.kinship + '</h4><ul>' + (kin || '<li class="muted">无</li>') + '</ul></div>' +
