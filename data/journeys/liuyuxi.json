@@ -1,0 +1,229 @@
+{
+  "schemaVersion": "1.0",
+  "key": "liuyuxi",
+  "personKey": "liuyuxi",
+  "titleZh": "刘禹锡：二十三年弃置身",
+  "titleEn": "Liu Yuxi: Twenty-three Years in Exile",
+  "spanZh": "772年 — 842年",
+  "origin": "overlay",
+  "intro": {
+    "text": "刘禹锡（772—842）因永贞革新被贬，此后二十余年转徙朗州、连州、夔州、和州。他自己写「二十三年弃置身」，说的就是这段。晚年才回到洛阳，以太子宾客分司东都终老。这条行迹按 CBDB 有年份的任职排。",
+    "source": "CBDB 33606（POSTED_TO_OFFICE_DATA，26 段任职）"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 795,
+      "eraZh": "贞元十一年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "太子校书郎",
+      "descZh": "登进士第后为太子校书郎，在长安。",
+      "quote": null,
+      "source": "CBDB 33606（太子校書郎，長安，795—796）"
+    },
+    {
+      "seq": 2,
+      "year": 800,
+      "eraZh": "贞元十六年",
+      "place": {
+        "ancient": "扬州",
+        "modern": "江苏扬州",
+        "coord": [
+          119.411,
+          32.391
+        ]
+      },
+      "titleZh": "淮南节度掌书记",
+      "descZh": "入淮南节度使杜佑幕为掌书记，居扬州。",
+      "quote": null,
+      "source": "CBDB 33606（節度使掌書記，淮南道，800—802）"
+    },
+    {
+      "seq": 3,
+      "year": 802,
+      "eraZh": "贞元十八年",
+      "place": {
+        "ancient": "渭南",
+        "modern": "陕西渭南",
+        "coord": [
+          109.511,
+          34.501
+        ]
+      },
+      "titleZh": "渭南县主簿",
+      "descZh": "调渭南县主簿，次年入朝为监察御史。",
+      "quote": null,
+      "source": "CBDB 33606（縣主簿，渭南，802—803）"
+    },
+    {
+      "seq": 4,
+      "year": 805,
+      "eraZh": "永贞元年",
+      "place": {
+        "ancient": "朗州",
+        "modern": "湖南常德",
+        "coord": [
+          111.698,
+          29.032
+        ]
+      },
+      "titleZh": "贬朗州司马",
+      "descZh": "永贞革新失败，贬朗州司马，在朗州近十年。",
+      "quote": null,
+      "source": "CBDB 33606（司馬，朗州，805—814）"
+    },
+    {
+      "seq": 5,
+      "year": 815,
+      "eraZh": "元和十年",
+      "place": {
+        "ancient": "连州",
+        "modern": "广东连州",
+        "coord": [
+          112.38,
+          24.78
+        ]
+      },
+      "titleZh": "连州刺史",
+      "descZh": "出为连州刺史（初授播州，因母老改连州），在连州五年。",
+      "quote": null,
+      "source": "CBDB 33606（州刺史，連州，815—819；播州 815 未赴）"
+    },
+    {
+      "seq": 6,
+      "year": 822,
+      "eraZh": "长庆二年",
+      "place": {
+        "ancient": "夔州",
+        "modern": "重庆奉节",
+        "coord": [
+          109.5712,
+          31.0415
+        ]
+      },
+      "titleZh": "夔州刺史",
+      "descZh": "转夔州刺史，在巴东。",
+      "quote": null,
+      "source": "CBDB 33606（州刺史，夔州，822—824）"
+    },
+    {
+      "seq": 7,
+      "year": 824,
+      "eraZh": "长庆四年",
+      "place": {
+        "ancient": "和州",
+        "modern": "安徽和县",
+        "coord": [
+          118.36,
+          31.72
+        ]
+      },
+      "titleZh": "和州刺史",
+      "descZh": "转和州刺史，在淮南。",
+      "quote": null,
+      "source": "CBDB 33606（州刺史，和州，824—828）"
+    },
+    {
+      "seq": 8,
+      "year": 828,
+      "eraZh": "大和二年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.451,
+          34.621
+        ]
+      },
+      "titleZh": "主客郎中分司东都",
+      "descZh": "回朝为主客郎中，分司东都洛阳；同年入长安为集贤殿直学士。",
+      "quote": null,
+      "source": "CBDB 33606（主客郎中分司東都，洛陽，828；集賢殿直學士，長安，828—829）"
+    },
+    {
+      "seq": 9,
+      "year": 831,
+      "eraZh": "大和五年",
+      "place": {
+        "ancient": "苏州",
+        "modern": "江苏苏州",
+        "coord": [
+          120.581,
+          31.301
+        ]
+      },
+      "titleZh": "苏州刺史",
+      "descZh": "出为苏州刺史，有政声。",
+      "quote": null,
+      "source": "CBDB 33606（州刺史，蘇州，831—834）"
+    },
+    {
+      "seq": 10,
+      "year": 834,
+      "eraZh": "大和八年",
+      "place": {
+        "ancient": "汝州",
+        "modern": "河南汝州",
+        "coord": [
+          112.8769,
+          34.1653
+        ]
+      },
+      "titleZh": "汝州刺史",
+      "descZh": "转汝州刺史，后又为同州刺史。",
+      "quote": null,
+      "source": "CBDB 33606（州刺史，汝州 834—835；同州 835—836）"
+    },
+    {
+      "seq": 11,
+      "year": 836,
+      "eraZh": "开成元年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.451,
+          34.621
+        ]
+      },
+      "titleZh": "太子宾客分司东都",
+      "descZh": "以太子宾客分司东都，此后长居洛阳，官至礼部尚书。",
+      "quote": null,
+      "source": "CBDB 33606（太子賓客分司東都，洛陽，836—842）"
+    },
+    {
+      "seq": 12,
+      "year": 842,
+      "eraZh": "会昌二年",
+      "place": {
+        "ancient": "洛阳",
+        "modern": "河南洛阳",
+        "coord": [
+          112.451,
+          34.621
+        ]
+      },
+      "titleZh": "卒于洛阳",
+      "descZh": "会昌二年卒于洛阳，年七十一。",
+      "quote": null,
+      "source": "CBDB 33606（c_deathyear=842）"
+    }
+  ],
+  "links": {
+    "4": {
+      "text": "从长安到朗州，是永贞革新失败后的第一贬；此后二十余年，他一直在外。",
+      "source": "CBDB 33606（長安 805 → 朗州 805—814）"
+    },
+    "8": {
+      "text": "连州、夔州、和州三任，前后十四年，都在长江以南；大和二年才回到东都。",
+      "source": "CBDB 33606（連州 815 → 夔州 822 → 和州 824 → 洛陽 828）"
+    }
+  }
+}

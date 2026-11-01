@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T03:14:35.571Z",
+  "generatedAt": "2026-11-01T03:18:46.020Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -1012,6 +1012,16 @@
       "file": "data/persons/liubei.json"
     },
     {
+      "key": "liuyuxi",
+      "zh": "刘禹锡",
+      "span": [
+        772,
+        842
+      ],
+      "hasJourney": true,
+      "file": "data/persons/liuyuxi.json"
+    },
+    {
       "key": "ouyangxiu",
       "zh": "欧阳修",
       "span": [
@@ -1062,6 +1072,16 @@
       "file": "data/persons/wangyangming.json"
     },
     {
+      "key": "weiyingwu",
+      "zh": "韦应物",
+      "span": [
+        737,
+        792
+      ],
+      "hasJourney": true,
+      "file": "data/persons/weiyingwu.json"
+    },
+    {
       "key": "xizaochi",
       "zh": "习凿齿",
       "span": [
@@ -1080,6 +1100,16 @@
       ],
       "hasJourney": true,
       "file": "data/persons/xuanzang.json"
+    },
+    {
+      "key": "yuanzhen",
+      "zh": "元稹",
+      "span": [
+        779,
+        831
+      ],
+      "hasJourney": true,
+      "file": "data/persons/yuanzhen.json"
     },
     {
       "key": "zhangfei",
@@ -1173,6 +1203,13 @@
       "file": "data/journeys/libai.json"
     },
     {
+      "key": "liuyuxi",
+      "titleZh": "刘禹锡：二十三年弃置身",
+      "stops": 12,
+      "origin": "overlay",
+      "file": "data/journeys/liuyuxi.json"
+    },
+    {
       "key": "ouyangxiu",
       "titleZh": "欧阳修：从绵州到颍州",
       "stops": 9,
@@ -1201,11 +1238,25 @@
       "file": "data/journeys/wangyangming.json"
     },
     {
+      "key": "weiyingwu",
+      "titleZh": "韦应物：从京兆到江州",
+      "stops": 6,
+      "origin": "overlay",
+      "file": "data/journeys/weiyingwu.json"
+    },
+    {
       "key": "xuanzang",
       "titleZh": "玄奘西行求法行迹",
       "stops": 12,
       "origin": "upstream",
       "file": "data/journeys/xuanzang.json"
+    },
+    {
+      "key": "yuanzhen",
+      "titleZh": "元稹：从通州到越州",
+      "stops": 10,
+      "origin": "overlay",
+      "file": "data/journeys/yuanzhen.json"
     },
     {
       "key": "zhangqian",

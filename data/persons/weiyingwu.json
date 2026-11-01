@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "weiyingwu",
+  "zh": "韦应物",
+  "en": "Wei Yingwu",
+  "courtesyZh": "京兆韦氏",
+  "dynastyKey": "tang",
+  "span": [
+    737,
+    792
+  ],
+  "spanNote": "卒年史无确载，约 792 前后",
+  "aliases": [
+    "韦苏州",
+    "韦江州"
+  ],
+  "externalIds": {
+    "cbdb": "32822",
+    "wikidata": null
+  },
+  "journeyKey": "weiyingwu"
+}

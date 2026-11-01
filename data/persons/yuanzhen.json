@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "yuanzhen",
+  "zh": "元稹",
+  "en": "Yuan Zhen",
+  "courtesyZh": "字微之 · 与白居易并称元白",
+  "dynastyKey": "tang",
+  "span": [
+    779,
+    831
+  ],
+  "spanNote": null,
+  "aliases": [
+    "微之",
+    "元微之"
+  ],
+  "externalIds": {
+    "cbdb": "32248",
+    "wikidata": null
+  },
+  "journeyKey": "yuanzhen"
+}

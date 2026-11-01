@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "1.0",
+  "key": "yuanzhen",
+  "personKey": "yuanzhen",
+  "titleZh": "元稹：从通州到越州",
+  "titleEn": "Yuan Zhen: From Tongzhou to Yuezhou",
+  "spanZh": "779年 — 831年",
+  "origin": "overlay",
+  "intro": {
+    "text": "元稹（779—831）与白居易并称「元白」。他的仕历在 CBDB 里有三十段记录，有年份的十余段把路线勾了出来：通州司马、同州刺史、越州刺史兼浙东观察使，最后武昌军节度使，卒于任上。",
+    "source": "CBDB 32248（POSTED_TO_OFFICE_DATA，30 段任职）"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 779,
+      "eraZh": "大历十四年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "生于长安",
+      "descZh": "元稹生于京兆长安，北魏宗室后裔。",
+      "quote": null,
+      "source": "CBDB 32248（c_birthyear=779）"
+    },
+    {
+      "seq": 2,
+      "year": 809,
+      "eraZh": "元和四年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "监察御史",
+      "descZh": "拜监察御史，分司东都，弹劾不避权贵。",
+      "quote": null,
+      "source": "CBDB 32248（監察御史，809）"
+    },
+    {
+      "seq": 3,
+      "year": 815,
+      "eraZh": "元和十年",
+      "place": {
+        "ancient": "通州",
+        "modern": "四川达州",
+        "coord": [
+          107.5,
+          31.21
+        ]
+      },
+      "titleZh": "通州司马",
+      "descZh": "贬通州司马。白居易同时贬江州，两人有通江唱和。",
+      "quote": null,
+      "source": "CBDB 32248（司馬，通州，815）"
+    },
+    {
+      "seq": 4,
+      "year": 819,
+      "eraZh": "元和十四年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "膳部员外郎",
+      "descZh": "量移回朝，为膳部员外郎，次年转祠部郎中。",
+      "quote": null,
+      "source": "CBDB 32248（膳部員外郎 819；祠部郎中 820）"
+    },
+    {
+      "seq": 5,
+      "year": 821,
+      "eraZh": "长庆元年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "翰林承旨学士、中书舍人",
+      "descZh": "入翰林为承旨学士，兼中书舍人，掌内外制。",
+      "quote": null,
+      "source": "CBDB 32248（翰林承旨學士、中書舍人，821）"
+    },
+    {
+      "seq": 6,
+      "year": 822,
+      "eraZh": "长庆二年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "拜相",
+      "descZh": "以工部侍郎同中书门下平章事，居相位。",
+      "quote": null,
+      "source": "CBDB 32248（宰相，822）"
+    },
+    {
+      "seq": 7,
+      "year": 822,
+      "eraZh": "长庆二年",
+      "place": {
+        "ancient": "同州",
+        "modern": "陕西大荔",
+        "coord": [
+          109.9393,
+          34.7972
+        ]
+      },
+      "titleZh": "同州刺史",
+      "descZh": "罢相，出为同州刺史。",
+      "quote": null,
+      "source": "CBDB 32248（州刺史，馮翊／同州，822—823）"
+    },
+    {
+      "seq": 8,
+      "year": 823,
+      "eraZh": "长庆三年",
+      "place": {
+        "ancient": "越州",
+        "modern": "浙江绍兴",
+        "coord": [
+          120.581,
+          30.001
+        ]
+      },
+      "titleZh": "越州刺史、浙东观察使",
+      "descZh": "转越州刺史，兼浙东观察使，在越州六年。",
+      "quote": null,
+      "source": "CBDB 32248（州刺史，越州／會稽，823—829）"
+    },
+    {
+      "seq": 9,
+      "year": 829,
+      "eraZh": "大和三年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "尚书左丞",
+      "descZh": "入朝为尚书左丞。",
+      "quote": null,
+      "source": "CBDB 32248（尚書左丞相，829）"
+    },
+    {
+      "seq": 10,
+      "year": 830,
+      "eraZh": "大和四年",
+      "place": {
+        "ancient": "鄂州",
+        "modern": "湖北武汉",
+        "coord": [
+          114.311,
+          30.591
+        ]
+      },
+      "titleZh": "武昌军节度使",
+      "descZh": "出为武昌军节度使，驻鄂州，次年卒于任。",
+      "quote": null,
+      "source": "CBDB 32248（節度使，武昌軍節度，830—831）"
+    }
+  ],
+  "links": {
+    "3": {
+      "text": "从长安到通州，是元稹第一次远贬；通州在巴东，与白居易的江州隔江相望，两人此期唱和最多。",
+      "source": "CBDB 32248（長安 809 → 通州 815）"
+    }
+  }
+}

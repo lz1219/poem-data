@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "key": "liuyuxi",
+  "zh": "刘禹锡",
+  "en": "Liu Yuxi",
+  "courtesyZh": "字梦得",
+  "dynastyKey": "tang",
+  "span": [
+    772,
+    842
+  ],
+  "spanNote": null,
+  "aliases": [
+    "梦得",
+    "刘梦得"
+  ],
+  "externalIds": {
+    "cbdb": "33606",
+    "wikidata": null
+  },
+  "journeyKey": "liuyuxi"
+}

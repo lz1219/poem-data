@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "1.0",
+  "key": "weiyingwu",
+  "personKey": "weiyingwu",
+  "titleZh": "韦应物：从京兆到江州",
+  "titleEn": "Wei Yingwu: From Chang'an to Jiangzhou",
+  "spanZh": "737年 — 约792年",
+  "origin": "overlay",
+  "intro": {
+    "text": "韦应物（737—约792）出身京兆韦氏，少年为玄宗近侍，中年折节读书，此后历任鄠县、栎阳县令，滁州、江州刺史。他的行迹不长，但每一站都有可考的任职年份。卒年史无确载，只写「约」。",
+    "source": "CBDB 32822（POSTED_TO_OFFICE_DATA）；卒年不详，据 CBDB 记至 787 年任江州"
+  },
+  "stops": [
+    {
+      "seq": 1,
+      "year": 737,
+      "eraZh": "开元二十五年",
+      "place": {
+        "ancient": "长安",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "生于京兆",
+      "descZh": "韦应物生于京兆长安，出身关中望族京兆韦氏。",
+      "quote": null,
+      "source": "CBDB 32822（c_birthyear=737）"
+    },
+    {
+      "seq": 2,
+      "year": 774,
+      "eraZh": "大历九年",
+      "place": {
+        "ancient": "京兆府",
+        "modern": "陕西西安",
+        "coord": [
+          108.941,
+          34.341
+        ]
+      },
+      "titleZh": "京兆府功曹参军",
+      "descZh": "任京兆府功曹参军。",
+      "quote": null,
+      "source": "CBDB 32822（功曹參軍，京兆府，774）"
+    },
+    {
+      "seq": 3,
+      "year": 778,
+      "eraZh": "大历十三年",
+      "place": {
+        "ancient": "鄠县",
+        "modern": "陕西户县",
+        "coord": [
+          108.6039,
+          34.1118
+        ]
+      },
+      "titleZh": "鄠县令",
+      "descZh": "出为鄠县令。",
+      "quote": null,
+      "source": "CBDB 32822（縣令，鄠縣，778）"
+    },
+    {
+      "seq": 4,
+      "year": 779,
+      "eraZh": "大历十四年",
+      "place": {
+        "ancient": "栎阳",
+        "modern": "陕西西安临潼栎阳",
+        "coord": [
+          109.25,
+          34.66
+        ]
+      },
+      "titleZh": "栎阳县令",
+      "descZh": "转栎阳县令，次年入朝为比部员外郎。",
+      "quote": null,
+      "source": "CBDB 32822（縣令，櫟陽，779；比部員外郎 781）"
+    },
+    {
+      "seq": 5,
+      "year": 783,
+      "eraZh": "建中四年",
+      "place": {
+        "ancient": "滁州",
+        "modern": "安徽滁州",
+        "coord": [
+          118.317,
+          32.301
+        ]
+      },
+      "titleZh": "滁州刺史",
+      "descZh": "出为滁州刺史，在滁州两年。",
+      "quote": null,
+      "source": "CBDB 32822（州刺史，滁州／永陽，783—784）"
+    },
+    {
+      "seq": 6,
+      "year": 785,
+      "eraZh": "贞元元年",
+      "place": {
+        "ancient": "江州",
+        "modern": "江西九江",
+        "coord": [
+          115.99,
+          29.71
+        ]
+      },
+      "titleZh": "江州刺史",
+      "descZh": "转江州刺史，在任三年。此后事迹史载渐略。",
+      "quote": null,
+      "source": "CBDB 32822（州刺史，江州／潯陽，785—787）"
+    }
+  ],
+  "links": {
+    "5": {
+      "text": "从京畿到滁州，是他第一次出为州郡；两年后转江州，仍在长江一线。",
+      "source": "CBDB 32822（櫟陽 779 → 滁州 783 → 江州 785）"
+    }
+  }
+}
