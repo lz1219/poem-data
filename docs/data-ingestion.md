@@ -10,6 +10,14 @@
 
 `record_snapshot` 保存现有数据及每一研究修订；`record_link` 建立作者、人物、所属行迹和研究对象关系；`quote_match` 把已有摘引定位到原文件字节。历史 AI 参与、待核状态、反证和内部可见性均保留在快照中。报告仅公开汇总数。
 
+### 显式原卷题定位
+
+`scripts/index-original-volumes.py` 从两个固定提交的王阳明原件逐字提取行首卷题，生成 `data/original-volume-locators.json`。每个位置保留仓库、提交、文件、包/文件/片段哈希、字节范围和近前页标；重复卷题及跨文件卷31不合并。两个提交都检出1–38卷号，122处位置仅表示卷题候选，不证明卷文无缺或版本相同。NDL机构书目原始响应随来源说明保存，仅作38卷著录线索。
+
+定位清单作为 `volume_heading` 研究快照入库。整理时重扫全部目标原件，对比完整多重集合；漏项、重复、错误原卷号、错误包归属、字节或页标均阻止最终验证。声明了字节位置的研究摘引必须与该位置原态一致，不能悄悄改用文件内另一处。已有Git/Wiki单元和原页标识不变，总批次解析版本为v5。
+
+`scripts/audit-wangyangming-works.py` 默认只读预览，`--apply` 保存六作品的篇题/原态见证与AI辅助说明，保留旧引名和基线正文。四句教无据默认年1521撤出，旧系年仍待核；不自动另定作年，不把去排版或异体字检索当逐字校勘。
+
 ## 维基修订与影像续补
 
 `scripts/acquire-wikisource-gaps.py` 先发现页面修订，再按固定修订号重新取得原始API响应与维基文本；`scripts/check-wikisource-coverage.py` 核目录、实际卷题、页面ID/修订/时间和双重哈希，支持同名 `--cache` 参数。`data/wikisource-acquisition.json` 保存每页原态出处，`data/wikisource-coverage.json` 保存蜀15、吴20及目录的对应核查。

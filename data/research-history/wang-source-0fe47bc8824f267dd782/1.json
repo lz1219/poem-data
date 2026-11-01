@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "wang-source-0fe47bc8824f267dd782",
+  "subject": {
+    "type": "work",
+    "key": "告谕庐陵父老"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "告谕庐陵父老 · 原典出处/字形候选核查",
+  "claim": "取得原篇题和正文片段，尚未在所选篇段确认本站摘句；未判该句不存在或伪造。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T11:38:12.348076+00:00",
+    "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "告諭廬陵父老子弟¶\n廬陵文獻之地而以徤訟稱甚為吾民羞之縣令¶\n不明不䏻聽斷且氣弱多疾今與吾民約自今非¶\n有迫扵軀命大不得已事不得輙興詞興詞但訴¶\n一",
+      "locator": "KR4e0157_011.txt，KR4e0157_SBCK_011-17b，近前原卷题候选王文成公全書卷之二十八",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_011.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "16e31c70bffabfe0d3f421cd45dcebd3607e68c930ac31d69600f537f5ffe065",
+      "sha256": "f2f04bb6936dc4acc8d0a5d965edcff4863035a407d70bdb91c8f2ec553e5579",
+      "textFile": "data/witnesses/f2f04bb6936dc4acc8d0a5d965edcff4863035a407d70bdb91c8f2ec553e5579.txt",
+      "startByte": 92189,
+      "endByte": 92399,
+      "verifiedQuote": true,
+      "verification": "保存片段与原文件逐字节对应；不代表本站摘句已核",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "原篇已定位，但未在所选篇段确认本站吉神/厉鬼摘句；不以未命中判伪造，须查别本与影像。",
+    "旧基线与电子转录分别保留；去排版检索不裁定古本异文，版刻和模板字需对影像。"
+  ],
+  "reasoning": "原片段和明确篇题提供继续考证的依据；检索相同、相近或未命中均不自动形成核定结论。",
+  "counterEvidence": "本次仅检索所取SBCK电子转录；其他版本、转录缺字或异体字可能改变结果，尚未完成反证与影像核验。",
+  "alternatives": [
+    "可能涉及回推字形、转录异体或不同版本；原句未确证者也可能是旧引范围或引名有误，均待核。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "legacyCitation": "《王阳明全集·知行录》",
+      "file": "KR4e0157_011.txt",
+      "scopeStartByte": 92189,
+      "scopeEndByte": 98989,
+      "hanOnlyMatch": false,
+      "mode": "原篇段检索，不是全文学术校勘"
+    }
+  ],
+  "nextAction": "对原影像核篇题、卷次和字形；未确证摘句继续寻别本/上游引文，不编造原文或系年。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T11:38:12.348901+00:00",
+  "sha256": "afebe19e1ef720a11df48ce4a0bc56f6e46692170c33054446759cfbfaf87175"
+}

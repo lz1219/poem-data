@@ -42,6 +42,10 @@ def render_register(doc):
         for p in doc['wikiRevisions']:
             lines.append('| ' + p['title'] + ' | [' + str(p['revisionId']) + '](' + p['permalink'] + ') | ' + p['textSha256'] + ' |')
         lines += ['', '另取得CADAL蜀志卷五至八影像及平台版本元数据（完整原件仅隔离保存），登记NDL机构书目及NCL欧阳修宋残本线索；后者存目录及居士集41–44卷，不替代卷149摘句或全本。尚未据此认定影像已对校或底本一致。', '']
+    if doc.get('volumeHeadingCoverage'):
+        lines += ['## 王阳明原卷定位与作品出处核查', '',
+                  '两个固定提交分别检出1至38原卷题，合计122处位置；重复卷题和跨文件卷31全部保留。卷题覆盖不等于卷文完整或影像已核。', '',
+                  '机构书目著录38卷，仅作为版本检索线索，不自动与电子转录认作同版。六作品已有逐项核查记录：四条原句候选有字形/卷次等待核差异，两条只确认篇章而未确认旧摘句。原文及反推标记保留；四句教无据默认1521撤出，旧系年记录保留待核，不自动另定作年。', '']
     return '\n'.join(lines)
 
 
@@ -117,6 +121,8 @@ def organize(credentials=None):
     wiki_coverage=read(coverage_path).get('collections',{}) if coverage_path.exists() else {}
     doc = {'checkedAt': now(), 'inventoryCheckedAt': inventory['checkedAt'], 'legacyBooks': books, 'wikiRevisions': wiki_pages,
            'wikiCoverage':wiki_coverage,
+           'volumeHeadingCoverage':read(ROOT/'data/original-volume-locators.json')['coverage'] if (ROOT/'data/original-volume-locators.json').exists() else [],
+           'workSourceAudit':read(ROOT/'data/wangyangming-work-audit.json') if (ROOT/'data/wangyangming-work-audit.json').exists() else None,
            'titleRelationshipsPendingReview': title_groups, 'acquiredEditions': acquired, 'coverageObservations': observations,
            'blockedCandidates': blocked, 'remainingResearchNeeds': plan['remaining'],
            'counts': {'legacyBookRows': len(books), 'citationOnly': sum(b['status'] == 'citation-only' for b in books),

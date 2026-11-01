@@ -1,0 +1,15 @@
+{
+  "institutionCatalog": {
+    "probe": {
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000136-I1970586434827492047",
+      "checkedAt": "2026-11-01T10:59:59.217755+00:00",
+      "status": "reachable",
+      "sha256": "28ae579e65645a5b2e809e96da1c8d096501ee57a5bc829b915ca0172b7bb395",
+      "bytes": 213256
+    },
+    "catalogTitle": "王文成公全書, 38卷",
+    "scope": "机构书目线索，不能仅凭同名认定与SBCK或维基转录同本"
+  },
+  "extentMethod": "机构著录38卷与原件显式卷题分别保留，不把同名书目直接当同版",
+  "academicReview": "pending"
+}

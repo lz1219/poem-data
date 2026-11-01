@@ -12,7 +12,7 @@
   "certainty": "unknown",
   "excerpt": true,
   "composed": {
-    "year": 1521,
+    "year": null,
     "yearKind": "composition",
     "placeZh": "绍兴",
     "placeKey": null
@@ -55,7 +55,7 @@
     {
       "claim": "1521",
       "stance": "pending",
-      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。",
+      "note": "历史系年保留，所附年份仅为占位，不是史料原句；待取得可定位证据后重新采信。 当前默认作年撤出无据数字；旧占位1521与背景所载嘉靖六年不一致；原录另见丁亥九月论学线索，口授与录文时间须另核，不自动改采另一公历年。",
       "evidence": [
         {
           "quote": "1521",

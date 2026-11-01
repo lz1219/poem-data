@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "id": "wang-source-3941eb33f89d30e13f3d",
+  "subject": {
+    "type": "work",
+    "key": "与杨仕德薛尚谦书"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "与杨仕德薛尚谦书 · 原典出处/字形候选核查",
+  "claim": "取得相关原篇及原态片段，存在字形/篇题/卷次等待核差异；不直接取代本站基线。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T11:38:12.309970+00:00",
+    "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "誠(丁丑)¶\n即日巳抵龍南明日入巢四路兵皆已如期並進¶\n賊有必破之勢某向在横水嘗寄書仕徳云破山¶\n中賊易破心中賊難區區翦除䑕竊何足為異若¶\n諸賢掃蕩心腹之冦以收廓清",
+      "locator": "KR4e0157_004.txt，KR4e0157_SBCK_004-34b，近前原卷题候选王文成公全書卷之四",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_004.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "9b461dc97f4db9645e586d39742b23b4ebc3880e59542cce48a8abc284251a20",
+      "sha256": "08178d287a76963e1a2bea67f84230fee84cc7a4122bd27cb29cd6df86c5da89",
+      "textFile": "data/witnesses/08178d287a76963e1a2bea67f84230fee84cc7a4122bd27cb29cd6df86c5da89.txt",
+      "startByte": 109916,
+      "endByte": 110146,
+      "verifiedQuote": true,
+      "verification": "保存片段与原文件逐字节对应；不代表本站摘句已核",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "篇题所载尚誠与本站尚谦不同；不据转录自动统一收信人姓名。",
+    "旧基线与电子转录分别保留；去排版检索不裁定古本异文，版刻和模板字需对影像。"
+  ],
+  "reasoning": "原片段和明确篇题提供继续考证的依据；检索相同、相近或未命中均不自动形成核定结论。",
+  "counterEvidence": "本次仅检索所取SBCK电子转录；其他版本、转录缺字或异体字可能改变结果，尚未完成反证与影像核验。",
+  "alternatives": [
+    "可能涉及回推字形、转录异体或不同版本；原句未确证者也可能是旧引范围或引名有误，均待核。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "legacyCitation": "《王阳明全集·静心录》",
+      "file": "KR4e0157_004.txt",
+      "scopeStartByte": 109898,
+      "scopeEndByte": 110431,
+      "hanOnlyMatch": true,
+      "mode": "原篇段检索，不是全文学术校勘"
+    }
+  ],
+  "nextAction": "对原影像核篇题、卷次和字形；未确证摘句继续寻别本/上游引文，不编造原文或系年。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T11:38:12.310972+00:00",
+  "sha256": "ac83e14ca53792bc65103cd4b44c132276307cb688e2dda19be5be395c0be32c"
+}

@@ -16,7 +16,7 @@ from research import ROOT, connect, dump, now, read, cached_response
 
 GIT_PARSER = 'kanripo-source-pages-v3'
 WIKI_PARSER = 'wikisource-revision-v1'
-PARSER = 'research-source-pages-v4'
+PARSER = 'research-source-pages-v5'
 SUPPORTED_PARSERS = [GIT_PARSER, WIKI_PARSER]
 PUBLIC_TABLES = ['book', 'text_unit', 'paragraph', 'corpus_poem', 'person', 'work',
                  'journey', 'stop', 'claim', 'evidence', 'research_note', 'place']
@@ -113,6 +113,19 @@ def input_bundle(root=ROOT, cache=None):
                 'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json', 'data/gap-search.json', 'data/wikisource-coverage.json', 'data/source-discovery.json', 'data/ouyang-source-directory.json','data/ouyang-front-matter-findings.json']:
         if not (root / rel).exists(): continue
         asset(rel, (root / rel).read_bytes(), 'manifest')
+    for rel in ['data/original-volume-locators.json', 'data/wangyangming-source-notes.json', 'data/wangyangming-work-audit.json']:
+        path = root / rel
+        if not path.exists(): continue
+        digest = asset(rel, path.read_bytes(), 'manifest')
+        doc = read(path)
+        if rel.endswith('original-volume-locators.json'):
+            for item in doc['items']:
+                record('volume_heading', item['id'], 0, item, rel + '#/items/' + item['id'], digest)
+        elif rel.endswith('wangyangming-source-notes.json'):
+            probe = doc['institutionCatalog']['probe']
+            if probe['status'] == 'reachable':
+                raw = cached_response(cache, probe['url'], probe['sha256'])
+                asset('catalog/wangyangming-institution', raw, 'source-response')
     discovery = root / 'data/source-discovery.json'
     if discovery.exists():
         for item in read(discovery)['items']:
@@ -403,6 +416,29 @@ def derive(bundle, bid):
         if meta['kind'] == 'unclassified': issue(uid, 'unclassified-unit', {'path': path, 'juan': meta['juan']})
     records = bundle['records']
     objects = {(r[1], r[2]): r[0] for r in records if r[1] != 'research_revision'}
+    volume_records = [r for r in records if r[1] == 'volume_heading']
+    if volume_records or any(repo == 'kanripo/KR4e0157' for repo, _, _ in paths):
+        from original_volume_locators import scan_headings, validate_locator
+        # 重扫全部目标原件而非只检查清单已有行；缺一条、重复一条都不能通过。
+        expected_headings = sorted(canonical([repo, commit, path, h])
+            for (repo, commit, path), (_, raw) in paths.items() if repo == 'kanripo/KR4e0157'
+            for h in scan_headings(raw))
+        observed_headings = []
+        fields = ['volume','header','startByte','endByte','headerSha256','fileSha256','sourcePageMarker','parser','status','scope']
+        for rid, _, key, _, doc, _, _ in volume_records:
+            try:
+                repo, commit, path = doc['repository'], doc['commit'], doc['path']
+                _, raw = paths[repo, commit, path]
+                validate_locator(doc, raw)
+                wanted_id = sha(json.dumps([repo, commit, path, doc['startByte']], ensure_ascii=False).encode())
+                if key != doc['id'] or key != wanted_id: raise ValueError('卷题稳定标识不符')
+                snapshot = next(s for s in bundle['snapshots'] if (s[1],s[2]) == (repo,commit))
+                if doc['archiveSha256'] != snapshot[3]: raise ValueError('卷题归属原始包不符')
+                observed_headings.append(canonical([repo,commit,path,{k:doc[k] for k in fields}]))
+            except (ValueError, KeyError, StopIteration, UnicodeError) as exc:
+                issue(rid, 'invalid-volume-heading', {'reason': str(exc)})
+        if sorted(observed_headings) != expected_headings:
+            issue('volume-headings', 'volume-heading-set-mismatch', {'expected':len(expected_headings),'actual':len(observed_headings)})
     for rid, kind, key, revision, doc, name, digest in records:
         targets = []
         if kind == 'work':
@@ -435,6 +471,11 @@ def derive(bundle, bid):
                 uid, raw = found
                 quote = evidence.get('quote', '').encode('utf-8')
                 start = raw.find(quote) if quote else -1
+                if 'startByte' in evidence or 'endByte' in evidence:
+                    a, b = evidence.get('startByte'), evidence.get('endByte')
+                    if type(a) is not int or type(b) is not int or not 0 <= a < b <= len(raw) or raw[a:b] != quote:
+                        issue(rid, 'evidence-byte-range-mismatch', {'index':index})
+                    else: start = a
                 if start < 0:
                     issue(rid, 'quote-not-exact', {'index': index, 'unit': uid}); continue
                 expected = evidence.get('originalFileSha256')
@@ -442,7 +483,7 @@ def derive(bundle, bid):
                     issue(rid, 'evidence-file-hash-mismatch', {'index': index})
                 if evidence.get('sha256') and evidence['sha256'] != sha(quote):
                     issue(rid, 'quote-hash-mismatch', {'index': index})
-                if raw.find(quote, start + 1) >= 0: issue(rid, 'quote-occurs-multiple-times', {'index': index, 'action': '暂存首处定位，需人工判篇'})
+                if 'startByte' not in evidence and raw.find(quote, start + 1) >= 0: issue(rid, 'quote-occurs-multiple-times', {'index': index, 'action': '暂存首处定位，需人工判篇'})
                 matches.append((bid, rid, index, uid, start, start + len(quote), sha(quote)))
         for target_kind, target_key, relation in targets:
             target = objects.get((target_kind, target_key))
@@ -543,6 +584,7 @@ def verify(args):
             require(sorted(cur.fetchall()) == sorted(expected['assets']), 'all-source-assets')
             derived = derive(bundle, bid)
             blocking = {'quote-not-exact', 'quote-hash-mismatch', 'evidence-file-hash-mismatch',
+                        'invalid-volume-heading', 'volume-heading-set-mismatch', 'evidence-byte-range-mismatch',
                         'evidence-file-not-landed', 'unresolved-object', 'invalid-evidence-url', 'evidence-revision-mismatch'}
             require(not any(row[3] in blocking for row in derived['issue']), 'no-broken-evidence-or-object-links')
             expected_evidence = {(r[0], i) for r in bundle['records'] if r[1] == 'research_revision'
@@ -604,6 +646,7 @@ def verify(args):
                       'sourceSnapshotCounts': {'github': len(bundle['snapshots']) - len(wiki), 'wikisource': len(wiki)},
                       'wikiCollectionCoverage':wiki_coverage,
                       'textUnitCounts': {'gitFiles': sum(e[2]=='text' for e in bundle['entries']), 'wikiPages': len(wiki), 'wikiBodyVolumes': sum(p['kind']=='body' for p in wiki)},
+                      'volumeHeadingCandidates':sum(r[1]=='volume_heading' for r in bundle['records']),
                       'textFiles': len(derived['unit']), 'archiveEntries': len(expected['entries']),
                       'recordCounts': expected['manifest']['recordCounts'], 'derivedCounts': {k: len(v) for k, v in derived.items()},
                       'unitKinds': {kind: sum(u[6] == kind for u in derived['unit']) for kind in ['front_matter', 'body', 'back_matter', 'unclassified']},

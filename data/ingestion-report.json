@@ -1,13 +1,13 @@
 {
-  "batchId": "dd3b32c40efeca5c7e0c1c76e04b2a36944c256e555a0394a1a5ed3c4de4037f",
+  "batchId": "ec8b79dcfe9f3a851396609138bc12b8e352f93df246ad7bf8763bd03be856b4",
   "phase": "verified",
-  "verifiedAt": "2026-11-01T11:01:05.782947+00:00",
+  "verifiedAt": "2026-11-01T11:52:10.765406+00:00",
   "integrityPassed": true,
   "academicReview": "pending",
   "publicExposure": false,
   "repeatImportChecked": true,
-  "originalBlobs": 2909,
-  "originalBytes": 102309704,
+  "originalBlobs": 2925,
+  "originalBytes": 102676184,
   "sourceSnapshotCounts": {
     "github": 29,
     "wikisource": 190
@@ -36,9 +36,11 @@
     "wikiPages": 190,
     "wikiBodyVolumes": 188
   },
+  "volumeHeadingCandidates": 122,
   "textFiles": 2158,
   "archiveEntries": 2209,
   "recordCounts": {
+    "volume_heading": 122,
     "corpus_book": 38,
     "work": 69,
     "person": 35,
@@ -46,14 +48,14 @@
     "stop": 201,
     "source": 47,
     "edition": 3,
-    "research_revision": 358
+    "research_revision": 364
   },
   "derivedCounts": {
     "edition": 219,
     "unit": 2158,
     "page": 101998,
-    "record_link": 648,
-    "quote_match": 22,
+    "record_link": 654,
+    "quote_match": 28,
     "issue": 900
   },
   "unitKinds": {
@@ -68,7 +70,7 @@
     "traditional-derived": 49,
     "stop-fact-review-pending": 201
   },
-  "checksPassed": 104220,
+  "checksPassed": 104232,
   "publicTableCounts": {
     "book": 38,
     "stop": 105,
@@ -84,8 +86,8 @@
     "research_note": 348
   },
   "evidenceLocations": {
-    "total": 22,
-    "exact": 22,
+    "total": 28,
+    "exact": 28,
     "unresolved": 0
   },
   "scope": "原件及快照全量存储回读验证；不等于学术内容已核，不等于原典全本无缺卷。"

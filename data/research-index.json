@@ -4895,6 +4895,114 @@
       }
     },
     {
+      "id": "wang-source-036cb9f0f64a32d836cd",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "传习录"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "传习录 · 原典出处/字形候选核查",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T11:38:12.319653+00:00",
+        "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+      }
+    },
+    {
+      "id": "wang-source-0fe47bc8824f267dd782",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "告谕庐陵父老"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "告谕庐陵父老 · 原典出处/字形候选核查",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T11:38:12.348076+00:00",
+        "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+      }
+    },
+    {
+      "id": "wang-source-356405b9810ed282dac2",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "泛海"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "泛海 · 原典出处/字形候选核查",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T11:38:12.337590+00:00",
+        "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+      }
+    },
+    {
+      "id": "wang-source-3941eb33f89d30e13f3d",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "与杨仕德薛尚谦书"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "与杨仕德薛尚谦书 · 原典出处/字形候选核查",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T11:38:12.309970+00:00",
+        "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+      }
+    },
+    {
+      "id": "wang-source-bd856b4cb0684b032be2",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "擒获宸濠捷音疏"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "擒获宸濠捷音疏 · 原典出处/字形候选核查",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T11:38:12.358869+00:00",
+        "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+      }
+    },
+    {
+      "id": "wang-source-e9904c89170bb70dac58",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "天泉证道·四句教"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "天泉证道·四句教 · 原典出处/字形候选核查",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T11:38:12.327151+00:00",
+        "method": "程序按原篇题截取真实字节；AI辅助说明检索边界与差异，未经人工学术审校"
+      }
+    },
+    {
       "id": "wiki-ouyang-witness-1f3890ddd5f2ecedb5b7",
       "revision": 1,
       "subject": {

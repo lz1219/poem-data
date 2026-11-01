@@ -1,0 +1,128 @@
+{
+  "checkedAt": "2026-11-01T11:38:12.362589+00:00",
+  "repository": "kanripo/KR4e0157",
+  "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+  "items": [
+    {
+      "workKey": "与杨仕德薛尚谦书",
+      "legacyCitation": "《王阳明全集·静心录》",
+      "file": "KR4e0157_004.txt",
+      "quote": "誠(丁丑)¶\n即日巳抵龍南明日入巢四路兵皆已如期並進¶\n賊有必破之勢某向在横水嘗寄書仕徳云破山¶\n中賊易破心中賊難區區翦除䑕竊何足為異若¶\n諸賢掃蕩心腹之冦以收廓清",
+      "focusOriginal": "破山¶\n中賊易破心中賊難",
+      "startByte": 109916,
+      "endByte": 110146,
+      "scopeStartByte": 109898,
+      "scopeEndByte": 110431,
+      "nearestOriginalVolumeHeading": "王文成公全書卷之四",
+      "sourcePageMarker": "KR4e0157_SBCK_004-34b",
+      "canonicalHanOnlyMatch": true,
+      "matchLimitation": "只作去非汉字检索；不等于原字符/标点或版本已核",
+      "result": "text-correspondence-candidate",
+      "issues": [
+        "篇题所载尚誠与本站尚谦不同；不据转录自动统一收信人姓名。"
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "workKey": "传习录",
+      "legacyCitation": "《传习录》上",
+      "file": "KR4e0157_003.txt",
+      "quote": "先生曰衆人只說格物要依晦翁何曾把他的說¶\n<pb:KR4e0157_SBCK_003-51a>¶\n　去用我着實曾用来",
+      "focusOriginal": "衆人只說格物要依晦翁何曾把他的說¶\n<pb:KR4e0157_SBCK_003-51a>¶\n　去用我着實曾用来",
+      "startByte": 53891,
+      "endByte": 54007,
+      "scopeStartByte": 53891,
+      "scopeEndByte": 54007,
+      "nearestOriginalVolumeHeading": "王文成公全書卷之三",
+      "sourcePageMarker": "KR4e0157_SBCK_003-50b",
+      "canonicalHanOnlyMatch": false,
+      "matchLimitation": "只作去非汉字检索；不等于原字符/标点或版本已核",
+      "result": "text-correspondence-candidate",
+      "issues": [
+        "本站旧引上录，所取片段在原卷三；字形及卷次待核。"
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "workKey": "天泉证道·四句教",
+      "legacyCitation": "《传习录》下",
+      "file": "KR4e0157_003.txt",
+      "quote": "丁亥年九月先生起復征思田將命行時徳洪與¶\n　汝中論學汝中舉先生敎言曰無善無惡是心¶\n　之體有善有惡是意之動知善知惡是良知爲¶\n　善去惡是格物",
+      "focusOriginal": "無善無惡是心¶\n　之體有善有惡是意之動知善知惡是良知爲¶\n　善去惡是格物",
+      "startByte": 48207,
+      "endByte": 48408,
+      "scopeStartByte": 48207,
+      "scopeEndByte": 48408,
+      "nearestOriginalVolumeHeading": "王文成公全書卷之三",
+      "sourcePageMarker": "KR4e0157_SBCK_003-45b",
+      "canonicalHanOnlyMatch": false,
+      "matchLimitation": "只作去非汉字检索；不等于原字符/标点或版本已核",
+      "result": "text-correspondence-candidate",
+      "issues": [
+        "本站有噁/惡、是字等差异；不得由回推文本代替原录。原1521缺可靠依据，丁亥九月是论学线索，录文写定年另核。"
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "workKey": "泛海",
+      "legacyCitation": "《王阳明全集·静心录》",
+      "file": "KR4e0157_014.txt",
+      "quote": "泛海¶\n險夷原不滯胸中何異浮雲過太空夜静海濤三¶\n萬里月明飛錫下天風¶\n<pb:KR4e0157_SBCK_014-3",
+      "focusOriginal": "險夷原不滯胸中何異浮雲過太空夜静海濤三¶\n萬里月明飛錫下天風",
+      "startByte": 30520,
+      "endByte": 30642,
+      "scopeStartByte": 30520,
+      "scopeEndByte": 30654,
+      "nearestOriginalVolumeHeading": "王文成公全書卷之十九",
+      "sourcePageMarker": "KR4e0157_SBCK_014-32b",
+      "canonicalHanOnlyMatch": false,
+      "matchLimitation": "只作去非汉字检索；不等于原字符/标点或版本已核",
+      "result": "text-correspondence-candidate",
+      "issues": [
+        "所取转录用静、里；本站回推为靜、裡。保留字形差异，不先定为古籍实质异文。"
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "workKey": "告谕庐陵父老",
+      "legacyCitation": "《王阳明全集·知行录》",
+      "file": "KR4e0157_011.txt",
+      "quote": "告諭廬陵父老子弟¶\n廬陵文獻之地而以徤訟稱甚為吾民羞之縣令¶\n不明不䏻聽斷且氣弱多疾今與吾民約自今非¶\n有迫扵軀命大不得已事不得輙興詞興詞但訴¶\n一",
+      "focusOriginal": "",
+      "startByte": 92189,
+      "endByte": 92399,
+      "scopeStartByte": 92189,
+      "scopeEndByte": 98989,
+      "nearestOriginalVolumeHeading": "王文成公全書卷之二十八",
+      "sourcePageMarker": "KR4e0157_SBCK_011-17b",
+      "canonicalHanOnlyMatch": false,
+      "matchLimitation": "只作去非汉字检索；不等于原字符/标点或版本已核",
+      "result": "document-located-quote-unconfirmed",
+      "issues": [
+        "原篇已定位，但未在所选篇段确认本站吉神/厉鬼摘句；不以未命中判伪造，须查别本与影像。"
+      ],
+      "reviewStatus": "pending"
+    },
+    {
+      "workKey": "擒获宸濠捷音疏",
+      "legacyCitation": "《王阳明全集·顺生录》",
+      "file": "KR4e0157_007.txt",
+      "quote": "擒獲宸濠捷音䟽(十四年七/月三十日)¶\n照得先因寧王圗危　宗社興兵作亂巳經具奏¶\n<pb:KR4e0157_SBCK_007-13b>¶\n請兵征勦外隨㸔得寜王虐熖張熾臣以百數疲¶\n弱之卒未敢輕舉驟進乃退保吉安",
+      "focusOriginal": "",
+      "startByte": 14157,
+      "endByte": 14399,
+      "scopeStartByte": 14157,
+      "scopeEndByte": 26492,
+      "nearestOriginalVolumeHeading": "王文成公全書卷之十二",
+      "sourcePageMarker": "KR4e0157_SBCK_007-13a",
+      "canonicalHanOnlyMatch": false,
+      "matchLimitation": "只作去非汉字检索；不等于原字符/标点或版本已核",
+      "result": "document-located-quote-unconfirmed",
+      "issues": [
+        "原篇已定位，但未确认本站一鼓而克其巢穴等摘句；不以相关军报通用词充当逐字佐证。"
+      ],
+      "reviewStatus": "pending"
+    }
+  ],
+  "academicReview": "pending"
+}
