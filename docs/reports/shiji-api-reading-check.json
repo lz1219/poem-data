@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "bookCatalog": true,
+    "selectedRange": true,
+    "sourcePageMetadata": true,
+    "sourceSpanReconstruction": true,
+    "emptyPageWarning": true,
+    "legacyBookReading": true,
+    "literalOriginalTextSearch": true,
+    "wildcardIsLiteral": true,
+    "invalidParameterRejected": true,
+    "missingBook404": true,
+    "desktopReading": true,
+    "fullTextCopyPreserved": true,
+    "mobileNoOverflow": true,
+    "noBrowserErrors": true
+  },
+  "bookId": 7,
+  "unitCount": 122,
+  "reviewStatus": "transcription-unreviewed"
+}

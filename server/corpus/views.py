@@ -239,7 +239,12 @@ def comments(request, work_key):
 def search(request):
     q = (request.query_params.get("q") or "").strip()
     scope = request.query_params.get("scope", "works")
-    limit = min(int(request.query_params.get("limit", 20)), 100)
+    try:
+        limit = max(1, min(int(request.query_params.get("limit", 20)), 100))
+        book_id = request.query_params.get('book_id')
+        book_id = int(book_id) if book_id is not None else None
+    except (ValueError, TypeError):
+        return Response({'detail': 'limit和book_id须为整数'}, status=400)
     if not q:
         return Response({"detail": "缺少 q"}, status=400)
 
@@ -284,5 +289,12 @@ def search(request):
 
     if scope in ("corpus", "all"):
         out["corpus"] = _matching_corpus(q, limit) or []
+
+    if scope in ('text', 'all'):
+        from .views_corpus import matching_text
+        hits = matching_text(q, limit, book_id)
+        if hits is None and scope == 'text':
+            return Response({'detail': '语料库暂未连接'}, status=503)
+        out['text'] = hits or []
 
     return Response(out)

@@ -988,20 +988,21 @@
       "url": "https://github.com/kanripo/KR2a0002/tree/73c4d2ba067d99a6de924ac952fd6921a958c7e7",
       "kind": "github",
       "coverage": [
-        "已取得完整仓库；实际卷篇及缺卷待核"
+        "原件131文件含130卷及卷首提要、序；首批入原库范围与最终状态见docs/reports/shiji-backfill-result.json",
+        "十表卷十三至二十二存在大量空电子页，本批暂不导入；其他卷仍为转录待校"
       ],
       "sourceFamily": "KR2a0002",
       "upstream": [
         "kanripo"
       ],
-      "baseEdition": "以原文件卷首版本标记为准",
+      "baseEdition": "史记集解·文渊阁四库全书本；固定档案逐文件标记BASEEDITION WYG，影像对校未完成",
       "permissions": {
         "read": true,
         "download": "public-repository",
-        "ingest": "research-copy",
-        "redistribute": "not-cleared"
+        "ingest": "CC-BY-SA-4.0",
+        "redistribute": "CC-BY-SA-4.0-with-attribution"
       },
-      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "usageNote": "依提供方馆藏CC BY-SA 4.0声明，保留Kanripo署名、固定提交、完整档案及逐文件哈希，公开派生转录沿用同许可并说明转换；不将同源转载计作独立佐证。电子页与古注结构仍待核，不能宣称全文完整或已完成人工学术校勘。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR2a0002/zip/73c4d2ba067d99a6de924ac952fd6921a958c7e7",
         "checkedAt": "2026-11-01T05:56:45.290803+00:00",
@@ -1010,7 +1011,17 @@
         "bytes": 1109408
       },
       "repository": "kanripo/KR2a0002",
-      "commit": "73c4d2ba067d99a6de924ac952fd6921a958c7e7"
+      "commit": "73c4d2ba067d99a6de924ac952fd6921a958c7e7",
+      "permissionBasis": {
+        "url": "https://github.com/kanripo",
+        "sha256": "d7fab5b09c01aa509d2c66812a5f64a71d51d0323f7eaafced68e259896cfb1c",
+        "statement": "Comprehensive collection of premodern Chinese texts. Licensed as CC BY SA 4.0.",
+        "scope": "provider-collection-declaration; not per-file notice",
+        "archiveNoticeFiles": [
+          "Readme.org"
+        ],
+        "humanRightsReview": "not-recorded"
+      }
     },
     {
       "id": "kanripo-kr2a0007",

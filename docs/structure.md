@@ -2,6 +2,8 @@
 
 项目目标和取舍见 [project-charter.md](project-charter.md)，内容质量见 [editorial-policy.md](editorial-policy.md)；本文只说明文件职责与实际数据流。
 
+完整古籍库补全按[corpus-data-plan.md](corpus-data-plan.md)实施。原PostgreSQL的book/text_unit/paragraph通过语料API提供整书阅读；与下述精选作品JSON编辑/发布流分工不同，不将整部语料重复放入works目录。
+
 ## 一、顶层一览
 
 ```
@@ -25,6 +27,7 @@ poem-data/
 | `schema/` | JSON Schema：work / comment / person / journey / research | ✅ | **必须**，前后端与校验器共用 |
 | `shared/` | `editions.json`（版本表） | ✅ | **必须**，作品用 id 引用 |
 | `research/ingest.sql` | 完整原件与整理数据的隔离库结构，不属于公开正文 | ✅ | 配合 `scripts/raw_ingest.py`；操作见 [data-ingestion.md](data-ingestion.md) |
+| `scripts/backfill_shiji.py` / `server/corpus/sql/0001_corpus_origins.sql` | 固定《史记集解》版本的原库增量导入与来源关联；默认预览 | ✅ | 复用book/edition/text_unit/paragraph；实际范围与验收见 [首批补库报告](reports/corpus-backfill-0002.md) |
 | `web/` | 前端单页与资源 | ✅ | **必须** |
 | `server/` | Django 工程（`atlas/` 配置、`corpus/` 应用） | ✅ | **必须** |
 | `server/.venv/` | Python 虚拟环境 | ❌ | 本地生成，可随时重建 |

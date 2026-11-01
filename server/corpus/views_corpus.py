@@ -131,6 +131,8 @@ def book_detail(request, book_id: int):
            FROM text_unit WHERE book_id = %s ORDER BY id""",
         (book_id,),
     )
+    from .corpus_origins import attach_book
+    attach_book(book, rows)
     return Response({"book": book, "total": len(rows), "juan": rows})
 
 
@@ -146,9 +148,28 @@ def juan_detail(request, unit_id: int):
     )
     if not unit:
         return Response({"detail": "未找到该卷"}, status=404)
-    paras = db.query("SELECT seq, body FROM paragraph WHERE unit_id = %s ORDER BY seq", (unit_id,))
+    paras = db.query("SELECT id, seq, body FROM paragraph WHERE unit_id = %s ORDER BY seq", (unit_id,))
+    from .corpus_origins import attach_unit
+    attach_unit(unit, paras)
     unit["paragraphs"] = paras
     return Response(unit)
+
+
+def matching_text(q, limit, book_id=None):
+    """Literal original/available simplified text search; snippets retain their source form."""
+    if not db.available():
+        return None
+    return db.query("""WITH matches AS (
+        SELECT t.id,t.book_id,b.title AS book,t.title,t.juan,t.edition,t.source_url,
+            CASE WHEN strpos(lower(t.body),lower(%s))>0 THEN t.body ELSE t.body_simplified END AS matched_body,
+            CASE WHEN strpos(lower(t.body),lower(%s))>0 THEN 'original' ELSE 'simplified' END AS matched_field
+        FROM public.text_unit t JOIN public.book b ON b.id=t.book_id
+        WHERE (%s::integer IS NULL OR t.book_id=%s)
+          AND (strpos(lower(t.body),lower(%s))>0 OR strpos(lower(t.body_simplified),lower(%s))>0)
+        ORDER BY t.id LIMIT %s
+    ) SELECT id,book_id,book,title,juan,edition,source_url,matched_field,
+        substring(matched_body FROM greatest(1,strpos(lower(matched_body),lower(%s))-24) FOR 100) AS snippet
+      FROM matches ORDER BY id""", (q, q, book_id, book_id, q, q, limit, q))
 
 CAREER_SQL = """
 SELECT p.c_firstyear AS first_year,
