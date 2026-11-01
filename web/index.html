@@ -633,6 +633,22 @@ border-radius:999px;cursor:pointer;transition:color .18s,border-color .18s,backg
 @media print{.masthead,.modes,.panel,#home,.reader-tools,.rprog,.static-note,.list{display:none!important;}
 body{background:#fff;}.container{max-width:none;padding:0;}
 .reader{max-height:none;overflow:visible;border:0;box-shadow:none;padding:0;}.rc{font-size:15px;}}
+.compare {
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.compare-head {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 14px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: var(--accent);
+  background: var(--accent-soft);
+}
+.compare-head button { border: 0; background: transparent; color: var(--muted); cursor: pointer; font-size: 12px; }
+.compare-body { padding: 14px 16px; font-family: var(--serif); font-size: 16px; line-height: 2.05; white-space: pre-line; max-height: 340px; overflow: auto; }
+.compare-meta { padding: 0 14px 10px; font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -1126,6 +1142,40 @@ async function openJuan(id) {
 document.addEventListener('click', async (e) => {
   if (e.target.closest('[data-print]')) { window.print(); return; }
 
+  const cmpBtn = e.target.closest('[data-compare]');
+  if (cmpBtn) {
+    const key = cmpBtn.getAttribute('data-compare');
+    const slot = document.getElementById('compare-slot');
+    if (!slot) return;
+    if (slot.dataset.open === key) { slot.innerHTML = ''; slot.dataset.open = ''; return; }
+    slot.innerHTML = '<p class="empty">正在取语料库原文…</p>';
+    try {
+      const r = await fetch('/api/works/' + encodeURIComponent(key) + '/corpus').then((x) => x.json());
+      if (!r.matches || !r.matches.length) {
+        slot.innerHTML = '<p class="empty">语料库中未找到同题文本。</p>';
+        return;
+      }
+      const m = r.matches[0];
+      const body = (m.body_simplified || m.body || '').trim();
+      slot.innerHTML =
+        '<div class="compare">' +
+        '<div class="compare-head"><span>语料库原文 · 对照</span><button data-close-compare="1">收起</button></div>' +
+        '<div class="compare-meta">' + (m.author || '') + '《' + (m.title_raw || m.title || '') + '》</div>' +
+        '<div class="compare-body">' + body.replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c])) + '</div>' +
+        '</div>';
+      slot.dataset.open = key;
+    } catch (err) {
+      slot.innerHTML = '<p class="empty">对照接口不可用。</p>';
+    }
+    return;
+  }
+
+  if (e.target.closest('[data-close-compare]')) {
+    const slot = document.getElementById('compare-slot');
+    if (slot) { slot.innerHTML = ''; slot.dataset.open = ''; }
+    return;
+  }
+
   if (e.target.closest('[data-copy]')) {
     const btn = e.target.closest('[data-copy]');
     const text = [...document.querySelectorAll('.reader .rc')].map((n) => n.innerText).join('\n');
@@ -1190,8 +1240,10 @@ function renderWork(w) {
     <div class="rc${w.genre === 'shi' || w.genre === 'ci' ? '' : ' left'}">${esc((w.text?.paragraphs || []).join('\n'))}</div>
     <div class="reader-tools">
       <button data-copy="1">复制正文</button>
+      <button data-compare="${esc(w.key)}">语料对照</button>
       <button data-print="1">打印</button>
     </div>
+    <div id="compare-slot"></div>
     <div class="src" style="text-align:center">${w.composed?.placeZh ? '作于 ' + esc(w.composed.placeZh) + ' · ' : ''}${esc(w.citation || '')}</div>
     ${w.meaning ? `<div class="bh">大意</div><p>${esc(w.meaning)}</p>` : ''}
     ${w.notes?.length ? `<div class="bh">注释</div><table>${w.notes.map(n => `<tr><th style="width:120px">${esc(n.term)}</th><td>${esc(n.explain)}</td></tr>`).join('')}</table>` : ''}

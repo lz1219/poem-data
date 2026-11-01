@@ -204,3 +204,33 @@ def person_career(request, key):
             "items": rows,
         }
     )
+
+@api_view(["GET"])
+def work_corpus_text(request, key):
+    """返回该作品在语料库中的同题文本，用于对照阅读。"""
+    from .models import Work
+
+    if not db.available():
+        return _unavailable()
+    w = Work.objects.select_related("author").filter(key=key).first()
+    if not w:
+        return Response({"detail": f"未找到作品：{key}"}, status=404)
+
+    author = (w.author.zh if w.author else "") or ""
+    title = (w.title_zh or "").replace(" ", "")
+    # 题名与别名都转成简体后比对（语料题名是繁体，如「出師表」对「出师表」）
+    cands = {title}
+    for a in (w.aliases or []):
+        if a:
+            cands.add(str(a).replace(" ", ""))
+    rows = db.query(
+        """SELECT coalesce(nullif(title_display, ''), title) AS title,
+                  title AS title_raw, author, body, coalesce(body_simplified, body) AS body_simplified
+             FROM corpus_poem
+            WHERE coalesce(author_simplified, author) = %s
+              AND replace(replace(coalesce(title_simp, title), ' ', ''), '　', '') = ANY(%s)
+            ORDER BY length(body) DESC
+            LIMIT 3""",
+        (author, list(cands)),
+    )
+    return Response({"work": key, "author": author, "title": w.title_zh, "matches": rows})
