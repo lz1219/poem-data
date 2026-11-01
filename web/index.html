@@ -624,6 +624,15 @@ a.tag.maplink { margin-top: 0; padding: 2px 9px; border: 1px dashed var(--line-2
 }
 .static-note a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted currentColor; margin-left: 6px; }
 
+.reader-tools{display:flex;gap:8px;justify-content:flex-end;margin:14px 0 6px;}
+.reader-tools button{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 12px;
+font-family:var(--sans);font-size:12px;color:var(--muted);background:transparent;border:1px solid var(--line-2);
+border-radius:999px;cursor:pointer;transition:color .18s,border-color .18s,background .18s;}
+.reader-tools button:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);}
+.reader-tools button.copied{color:#2e7d32;border-color:#2e7d32;}
+@media print{.masthead,.modes,.panel,#home,.reader-tools,.rprog,.static-note,.list{display:none!important;}
+body{background:#fff;}.container{max-width:none;padding:0;}
+.reader{max-height:none;overflow:visible;border:0;box-shadow:none;padding:0;}.rc{font-size:15px;}}
 /* ══ 阅读进度 ══ */
 .rprog {
   position: sticky;
@@ -1105,12 +1114,40 @@ async function openJuan(id) {
   el.innerHTML = `<h2 class="rt">${esc(j.book || '')} · ${esc(j.title || '')}</h2>
     <div class="ra">共 ${(j.paragraphs || []).length} 段${j.punctuated === false ? ' · 无标点' : ''}</div>
     ${punctNote}
-    <div class="rc" style="text-align:left;font-size:17px">${body}</div>`;
+    <div class="rc" style="text-align:left;font-size:17px">${body}</div>
+    <div class="reader-tools">
+      <button data-copyraw="1">复制全文</button>
+      <button data-print="1">打印</button>
+    </div>`;
   el.scrollTop = 0;
 }
 
 // 详情里的诗/卷跳转
-document.addEventListener('click', (e) => {
+document.addEventListener('click', async (e) => {
+  if (e.target.closest('[data-print]')) { window.print(); return; }
+
+  if (e.target.closest('[data-copy]')) {
+    const btn = e.target.closest('[data-copy]');
+    const text = [...document.querySelectorAll('.reader .rc')].map((n) => n.innerText).join('\n');
+    try { await navigator.clipboard.writeText(text); } catch (_) {
+      const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta);
+      ta.select(); document.execCommand('copy'); ta.remove();
+    }
+    btn.textContent = '已复制'; btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '复制正文'; btn.classList.remove('copied'); }, 1600);
+    return;
+  }
+
+  if (e.target.closest('[data-copyraw]')) {
+    const btn = e.target.closest('[data-copyraw]');
+    const node = document.querySelector('.reader .rc');
+    const text = node ? node.innerText : '';
+    try { await navigator.clipboard.writeText(text); } catch (_) {}
+    btn.textContent = '已复制';
+    setTimeout(() => { btn.textContent = '复制全文'; }, 1600);
+    return;
+  }
+
   const pa = e.target.closest('[data-poem]');
   const ja = e.target.closest('[data-juan]');
   if (pa) { e.preventDefault(); openPoem(pa.dataset.poem); }
@@ -1151,6 +1188,10 @@ function renderWork(w) {
     <div class="ra">${[w.titleEn, w.aliases?.length > 1 ? '又作 ' + w.aliases.slice(1).join('、') : null, author?.zh].filter(Boolean).map(esc).join(' · ')}</div>
     <div class="badges">${badges}${author?.journeyKey ? `<a class="tag maplink" href="${atlasLink({ person: author.journeyKey, year: w.composed?.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</div>
     <div class="rc${w.genre === 'shi' || w.genre === 'ci' ? '' : ' left'}">${esc((w.text?.paragraphs || []).join('\n'))}</div>
+    <div class="reader-tools">
+      <button data-copy="1">复制正文</button>
+      <button data-print="1">打印</button>
+    </div>
     <div class="src" style="text-align:center">${w.composed?.placeZh ? '作于 ' + esc(w.composed.placeZh) + ' · ' : ''}${esc(w.citation || '')}</div>
     ${w.meaning ? `<div class="bh">大意</div><p>${esc(w.meaning)}</p>` : ''}
     ${w.notes?.length ? `<div class="bh">注释</div><table>${w.notes.map(n => `<tr><th style="width:120px">${esc(n.term)}</th><td>${esc(n.explain)}</td></tr>`).join('')}</table>` : ''}

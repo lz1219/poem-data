@@ -184,8 +184,15 @@ class Command(BaseCommand):
                 )
                 uid = row["id"]
                 db.execute("DELETE FROM paragraph WHERE unit_id=%s", (uid,))
-                for i, p in enumerate(paras, start=1):
-                    db.execute("INSERT INTO paragraph (unit_id, seq, body) VALUES (%s,%s,%s)", (uid, i, p))
+                # 批量插入：每段一次往返在公网下要几十毫秒，400 段一批可省两个数量级
+                CH = 400
+                for i in range(0, len(paras), CH):
+                    part = paras[i : i + CH]
+                    vals = ",".join(["(%s,%s,%s)"] * len(part))
+                    params = []
+                    for k, txt in enumerate(part, start=i + 1):
+                        params.extend([uid, k, txt])
+                    db.execute(f"INSERT INTO paragraph (unit_id, seq, body) VALUES {vals}", tuple(params))
                 if done % 20 == 0:
                     self.stdout.write(f"  …已入库 {done}/{len(links)}")
 
