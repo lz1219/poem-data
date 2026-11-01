@@ -5,7 +5,7 @@
 
 ## 0. 先读什么
 
-动手前依次读：`docs/structure.md`（放哪）→ `schema/*.json`（契约）→ 本文件（怎么做）。
+动手前依次读：`docs/project-charter.md`（为何做、服务谁）→ `docs/editorial-policy.md`（内容标准）→ `docs/structure.md`（放哪）→ `schema/*.json`（实际契约）→ 本文件（怎么做）。目标规范与当前实现有差距时记录迁移任务，不宣称已经达标。
 不清楚就停下来问，**尤其涉及删除、改契约、改部署**。
 
 ## 1. 五条不可妥协
@@ -29,7 +29,7 @@
 ## 3. 提交前必须
 
 ```bash
-node scripts/check.mjs     # 三道闸门：数据契约 / 索引同步 / 数据库往返
+node scripts/check.mjs     # 数据 / 索引 / 地图生成物 / 研究记录 / 数据库往返
 ```
 
 - 全绿才提交；`pre-commit` 会自动拦。

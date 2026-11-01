@@ -1,5 +1,7 @@
 # 项目结构 · 江山行止 · 文献
 
+项目目标和取舍见 [project-charter.md](project-charter.md)，内容质量见 [editorial-policy.md](editorial-policy.md)；本文只说明文件职责与实际数据流。
+
 ## 一、顶层一览
 
 ```
@@ -20,7 +22,7 @@ poem-data/
 |---|---|---|---|
 | `data/` | 作品/人物/行迹/评点，一文件一条 | ✅ | **必须**，这是发布物 |
 | `data/index.json` | 列表索引，由 `scripts/build-index.mjs` 生成 | ✅ | **必须**，前端与 API 都要 |
-| `schema/` | 四个 JSON Schema：work / comment / person / journey | ✅ | **必须**，前后端与校验器共用 |
+| `schema/` | JSON Schema：work / comment / person / journey / research | ✅ | **必须**，前后端与校验器共用 |
 | `shared/` | `editions.json`（版本表） | ✅ | **必须**，作品用 id 引用 |
 | `web/` | 前端单页与资源 | ✅ | **必须** |
 | `server/` | Django 工程（`atlas/` 配置、`corpus/` 应用） | ✅ | **必须** |
