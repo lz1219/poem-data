@@ -106,6 +106,7 @@ for (const j of journeys) {
         eraZh: s.eraZh || '',
         coord: s.place?.coord || null,
         labelPos: 'top',
+        kind: s.kind && s.kind !== 'office' ? s.kind : undefined,
         ancientZh: s.place?.ancient || '',
         modernZh: s.place?.modern || '',
         ancientEn: '',
@@ -171,10 +172,19 @@ for (const j of journeys) {
 /* ══════════ 3. 行迹读本（导语 + 承接语） ══════════ */
 const readOut = {};
 for (const j of journeys) {
-  if (!j.intro && !(j.links && Object.keys(j.links).length)) continue;
+  const hasKind = (j.stops || []).some((st) => st.kind && st.kind !== 'office');
+  if (!j.intro && !(j.links && Object.keys(j.links).length) && !hasKind) continue;
+  // 非任所站点（residence/travel/life）单独列出，供读本渲染加标记
+  const kinds = {};
+  for (const st of j.stops || []) {
+    if (st.kind && st.kind !== 'office' && st.place && st.place.ancient) {
+      kinds[st.place.ancient] = { kind: st.kind, era: st.eraZh || null };
+    }
+  }
   readOut[j.key] = {
     intro: j.intro ? { text: j.intro.text, source: j.intro.source } : undefined,
     links: j.links || {},
+    stopKinds: Object.keys(kinds).length ? kinds : undefined,
   };
 }
 

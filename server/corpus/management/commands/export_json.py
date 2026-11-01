@@ -193,6 +193,7 @@ class Command(BaseCommand):
                     {
                         "seq": s.seq,
                         "year": s.year,
+                        **({"kind": s.kind} if s.kind and s.kind != "office" else {}),
                         "eraZh": s.era_zh or None,
                         "place": {
                             "ancient": s.place_ancient,

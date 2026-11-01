@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T03:43:11.212Z",
+  "generatedAt": "2026-11-01T03:47:17.243Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -1263,7 +1263,7 @@
     {
       "key": "wangwei",
       "titleZh": "王维：从蒲州到长安",
-      "stops": 8,
+      "stops": 9,
       "origin": "overlay",
       "file": "data/journeys/wangwei.json"
     },

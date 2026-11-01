@@ -209,6 +209,7 @@ class Command(BaseCommand):
                     journey=obj,
                     seq=s.get("seq") or i,
                     year=s.get("year"),
+                    kind=s.get("kind") or "office",
                     era_zh=s.get("eraZh") or "",
                     place_ancient=place.get("ancient") or "",
                     place_modern=place.get("modern") or "",

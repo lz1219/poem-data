@@ -207,6 +207,12 @@ class Stop(models.Model):
     place_modern = models.CharField("今地名", max_length=120, blank=True)
     lng = models.FloatField(null=True, blank=True)
     lat = models.FloatField(null=True, blank=True)
+    kind = models.CharField(
+        "站点性质",
+        max_length=20,
+        choices=[("office", "任所"), ("residence", "居住"), ("travel", "行旅"), ("life", "生卒")],
+        default="office",
+    )
     title_zh = models.CharField("事由", max_length=200)
     desc_zh = models.TextField("叙述")
     quote_zh = models.TextField("引文", blank=True)
