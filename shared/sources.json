@@ -431,7 +431,7 @@
         "ingest": "research-copy",
         "redistribute": "excerpt-only"
       },
-      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR4c0012/zip/0320bec76946f08e3cc25aa9501fafa97d6f51ac",
         "checkedAt": "2026-11-01T04:36:30.528547+00:00",
@@ -461,7 +461,7 @@
         "ingest": "research-copy",
         "redistribute": "excerpt-only"
       },
-      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR4c0015/zip/592e76dc91714e57f0a16beb3403c87873c89f12",
         "checkedAt": "2026-11-01T04:36:45.481054+00:00",
@@ -491,7 +491,7 @@
         "ingest": "research-copy",
         "redistribute": "excerpt-only"
       },
-      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR4c0069/zip/a9aabe3ae87777b7ba765c4193ff551dafbdee3e",
         "checkedAt": "2026-11-01T04:37:22.192245+00:00",
@@ -521,7 +521,7 @@
         "ingest": "research-copy",
         "redistribute": "excerpt-only"
       },
-      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR4d0076/zip/45dbdf286472e7903757a064bb37c514c999617a",
         "checkedAt": "2026-11-01T04:37:39.801969+00:00",
@@ -551,7 +551,7 @@
         "ingest": "research-copy",
         "redistribute": "excerpt-only"
       },
-      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR4j0005/zip/f08a2c9e20ca90ea7f84330a912249823eaaac54",
         "checkedAt": "2026-11-01T04:37:47.345095+00:00",
@@ -581,7 +581,7 @@
         "ingest": "research-copy",
         "redistribute": "excerpt-only"
       },
-      "usageNote": "完整原件仅存研究缓存；公开定位摘引，版权与版本说明保留。",
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR4j0053/zip/9c1a7a8a15650beddb528027314f30833d383ac4",
         "checkedAt": "2026-11-01T04:37:54.688977+00:00",
@@ -591,6 +591,698 @@
       },
       "repository": "kanripo/KR4j0053",
       "commit": "9c1a7a8a15650beddb528027314f30833d383ac4"
+    },
+    {
+      "id": "kanripo-kr4c0022",
+      "name": "王右丞集箋注 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0022/tree/6fb50af470c32c360504a0eb71c60f19e3d8ee6f",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0022",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0022/zip/6fb50af470c32c360504a0eb71c60f19e3d8ee6f",
+        "checkedAt": "2026-11-01T05:53:34.507151+00:00",
+        "status": "reachable",
+        "sha256": "29b66225a551f16804aa5a254b616417162bdd8b2d3ef63bf91d780acbaa0901",
+        "bytes": 606478
+      },
+      "repository": "kanripo/KR4c0022",
+      "commit": "6fb50af470c32c360504a0eb71c60f19e3d8ee6f"
+    },
+    {
+      "id": "kanripo-kr4c0029",
+      "name": "岑嘉州詩 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0029/tree/d0ee6103bd04c863bed5a1df5ac7f99d2632b54b",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0029",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0029/zip/d0ee6103bd04c863bed5a1df5ac7f99d2632b54b",
+        "checkedAt": "2026-11-01T05:53:46.697623+00:00",
+        "status": "reachable",
+        "sha256": "3f0163012fa939f520a1a55740a6946d810b86721a374e2e4b48114c5fa0ed3f",
+        "bytes": 63732
+      },
+      "repository": "kanripo/KR4c0029",
+      "commit": "d0ee6103bd04c863bed5a1df5ac7f99d2632b54b"
+    },
+    {
+      "id": "kanripo-kr4c0033",
+      "name": "韋蘇州集 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0033/tree/817d9b03d1c877cfd7016eabee5373b96defde6a",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0033",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0033/zip/817d9b03d1c877cfd7016eabee5373b96defde6a",
+        "checkedAt": "2026-11-01T05:54:03.559389+00:00",
+        "status": "reachable",
+        "sha256": "705fb8831864e6126e383850c03380f97d6e98e2302a273ffeb89b6076c7fe96",
+        "bytes": 99582
+      },
+      "repository": "kanripo/KR4c0033",
+      "commit": "817d9b03d1c877cfd7016eabee5373b96defde6a"
+    },
+    {
+      "id": "kanripo-kr4c0046",
+      "name": "東雅堂昌黎集註 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0046/tree/92b4067e5cadd42a70ed86808efe194e8e725bba",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0046",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0046/zip/92b4067e5cadd42a70ed86808efe194e8e725bba",
+        "checkedAt": "2026-11-01T05:54:16.408859+00:00",
+        "status": "reachable",
+        "sha256": "51688f304ad85e4599e896ee1c69febd472e32122a106c757c8e40958b401afd",
+        "bytes": 782521
+      },
+      "repository": "kanripo/KR4c0046",
+      "commit": "92b4067e5cadd42a70ed86808efe194e8e725bba"
+    },
+    {
+      "id": "kanripo-kr4c0051",
+      "name": "劉賓客文集 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0051/tree/26064975d6bfd4cb95fff64d54ccf0095617790c",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0051",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0051/zip/26064975d6bfd4cb95fff64d54ccf0095617790c",
+        "checkedAt": "2026-11-01T05:54:25.409676+00:00",
+        "status": "reachable",
+        "sha256": "2f9a6ea074e425bc4ca768edb0723c3743a248f8fbb9d75fbe918bd0c879dfcc",
+        "bytes": 316684
+      },
+      "repository": "kanripo/KR4c0051",
+      "commit": "26064975d6bfd4cb95fff64d54ccf0095617790c"
+    },
+    {
+      "id": "kanripo-kr4c0068",
+      "name": "元氏長慶集 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0068/tree/47bab67a963f54a384bca68995c04f445d3ee8aa",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0068",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0068/zip/47bab67a963f54a384bca68995c04f445d3ee8aa",
+        "checkedAt": "2026-11-01T05:54:34.245693+00:00",
+        "status": "reachable",
+        "sha256": "73d8c501e8091d6ef4d59a49ef6a73ff2299219271f2dde5d706dfe9accaf59d",
+        "bytes": 340204
+      },
+      "repository": "kanripo/KR4c0068",
+      "commit": "47bab67a963f54a384bca68995c04f445d3ee8aa"
+    },
+    {
+      "id": "kanripo-kr4c0072",
+      "name": "樊川集 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0072/tree/998fe41aae080f0b7892754bc11b8f42933b89d7",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0072",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0072/zip/998fe41aae080f0b7892754bc11b8f42933b89d7",
+        "checkedAt": "2026-11-01T05:54:47.115693+00:00",
+        "status": "reachable",
+        "sha256": "016dc4288b9ae8a4170cdce9282e8891752fdfec12f4bf289eacd5b60a02a828",
+        "bytes": 223744
+      },
+      "repository": "kanripo/KR4c0072",
+      "commit": "998fe41aae080f0b7892754bc11b8f42933b89d7"
+    },
+    {
+      "id": "kanripo-kr4c0111",
+      "name": "浣花集 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4c0111/tree/d9fdd9f4231dfaa034a7c8c3254b934d88d257d9",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4c0111",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4c0111/zip/d9fdd9f4231dfaa034a7c8c3254b934d88d257d9",
+        "checkedAt": "2026-11-01T05:54:54.320556+00:00",
+        "status": "reachable",
+        "sha256": "60f356e6f1f497d48a545c570d12068904865ad1121c7522e44e7733da773397",
+        "bytes": 50445
+      },
+      "repository": "kanripo/KR4c0111",
+      "commit": "d9fdd9f4231dfaa034a7c8c3254b934d88d257d9"
+    },
+    {
+      "id": "kanripo-kr4j0002",
+      "name": "六一詞 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4j0002/tree/9c786d92866c5e0ac2aaf0a63368b49770695b44",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4j0002",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4j0002/zip/9c786d92866c5e0ac2aaf0a63368b49770695b44",
+        "checkedAt": "2026-11-01T05:55:05.716603+00:00",
+        "status": "reachable",
+        "sha256": "536aef216023010a17412dcb057b6650c04127c91f03f38c6316d3f06d1fcdc9",
+        "bytes": 20781
+      },
+      "repository": "kanripo/KR4j0002",
+      "commit": "9c786d92866c5e0ac2aaf0a63368b49770695b44"
+    },
+    {
+      "id": "kanripo-kr2g0007",
+      "name": "杜工部年譜 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2g0007/tree/c5bdb391e82298514d20d679e23feebdf309a4d9",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2g0007",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2g0007/zip/c5bdb391e82298514d20d679e23feebdf309a4d9",
+        "checkedAt": "2026-11-01T05:55:17.388161+00:00",
+        "status": "reachable",
+        "sha256": "e2f9daa13d53ee53b339d8a665260a976fdddc881e0ac51e0c61a3cb9284a14b",
+        "bytes": 6844
+      },
+      "repository": "kanripo/KR2g0007",
+      "commit": "c5bdb391e82298514d20d679e23feebdf309a4d9"
+    },
+    {
+      "id": "kanripo-kr2g0008",
+      "name": "杜工部詩年譜 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2g0008/tree/b98f848e646b2733735ca483d9c4e195118799f4",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2g0008",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2g0008/zip/b98f848e646b2733735ca483d9c4e195118799f4",
+        "checkedAt": "2026-11-01T05:55:26.456320+00:00",
+        "status": "reachable",
+        "sha256": "cc5e1564d65fa632e68a5b0099e6d0d6c9468c850f1cb29ef68b7d324c3b41cf",
+        "bytes": 15399
+      },
+      "repository": "kanripo/KR2g0008",
+      "commit": "b98f848e646b2733735ca483d9c4e195118799f4"
+    },
+    {
+      "id": "kanripo-kr2g0032",
+      "name": "唐才子傳 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2g0032/tree/a174e1fbb3e6b2ead44863719d7e46eade5bb7d8",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2g0032",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2g0032/zip/a174e1fbb3e6b2ead44863719d7e46eade5bb7d8",
+        "checkedAt": "2026-11-01T05:55:33.678405+00:00",
+        "status": "reachable",
+        "sha256": "17e4ae3c0fb4b52fa4f951ea335d7198be21d5c27ded025ad3772f3f744bda76",
+        "bytes": 104127
+      },
+      "repository": "kanripo/KR2g0032",
+      "commit": "a174e1fbb3e6b2ead44863719d7e46eade5bb7d8"
+    },
+    {
+      "id": "kanripo-kr4d0069",
+      "name": "歐陽文粹 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4d0069/tree/a249feefa5791aae60ca683a4643926e5f978e79",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4d0069",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4d0069/zip/a249feefa5791aae60ca683a4643926e5f978e79",
+        "checkedAt": "2026-11-01T05:56:30.849229+00:00",
+        "status": "reachable",
+        "sha256": "d13990f85c1c1e57f50829941be4b58627cc75f2a357a5623b901b185b45b99d",
+        "bytes": 1551917
+      },
+      "repository": "kanripo/KR4d0069",
+      "commit": "a249feefa5791aae60ca683a4643926e5f978e79"
+    },
+    {
+      "id": "kanripo-kr2a0002",
+      "name": "史記集解 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2a0002/tree/73c4d2ba067d99a6de924ac952fd6921a958c7e7",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2a0002",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2a0002/zip/73c4d2ba067d99a6de924ac952fd6921a958c7e7",
+        "checkedAt": "2026-11-01T05:56:45.290803+00:00",
+        "status": "reachable",
+        "sha256": "aa79474501442604f707177d2f56e739b27fabf591132e7fc841b8632b561b0e",
+        "bytes": 1109408
+      },
+      "repository": "kanripo/KR2a0002",
+      "commit": "73c4d2ba067d99a6de924ac952fd6921a958c7e7"
+    },
+    {
+      "id": "kanripo-kr2a0007",
+      "name": "前漢書 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2a0007/tree/683113d4baf6febecaf2ccb7913df87c4d68d454",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2a0007",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2a0007/zip/683113d4baf6febecaf2ccb7913df87c4d68d454",
+        "checkedAt": "2026-11-01T05:56:56.815500+00:00",
+        "status": "reachable",
+        "sha256": "1bb47d3cada5dc434048256bb19ffaed62fbc2dcd1f3cc264bb906c5dcf2cd17",
+        "bytes": 2282565
+      },
+      "repository": "kanripo/KR2a0007",
+      "commit": "683113d4baf6febecaf2ccb7913df87c4d68d454"
+    },
+    {
+      "id": "kanripo-kr2a0012",
+      "name": "三國志 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2a0012/tree/214fcafa79894355909c9d8c2c1533089e7791c6",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2a0012",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2a0012/zip/214fcafa79894355909c9d8c2c1533089e7791c6",
+        "checkedAt": "2026-11-01T05:57:12.440695+00:00",
+        "status": "reachable",
+        "sha256": "96814d1f08fc0171d60bdd834c03fd1e3079ab2c1c604c4c2fe3b0957c4b8da8",
+        "bytes": 780101
+      },
+      "repository": "kanripo/KR2a0012",
+      "commit": "214fcafa79894355909c9d8c2c1533089e7791c6"
+    },
+    {
+      "id": "kanripo-kr2a0032",
+      "name": "宋史 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2a0032/tree/144d5640186b8e519673e5603a18667e55b1f449",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2a0032",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2a0032/zip/144d5640186b8e519673e5603a18667e55b1f449",
+        "checkedAt": "2026-11-01T05:57:27.223928+00:00",
+        "status": "reachable",
+        "sha256": "6b0f55ec710e13118e06de85d4b0d2777fffd9af5352dd6f6488785eb6a34e97",
+        "bytes": 6869831
+      },
+      "repository": "kanripo/KR2a0032",
+      "commit": "144d5640186b8e519673e5603a18667e55b1f449"
+    },
+    {
+      "id": "kanripo-kr2a0038",
+      "name": "明史 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2a0038/tree/eccd6fe93126bde61b837240e6142e1343c22639",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2a0038",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2a0038/zip/eccd6fe93126bde61b837240e6142e1343c22639",
+        "checkedAt": "2026-11-01T05:57:42.204635+00:00",
+        "status": "reachable",
+        "sha256": "91ea7ff1b669ac8af7ca26ab4b48bd646950886fd90b033bf7d44d01f92ddf41",
+        "bytes": 5216983
+      },
+      "repository": "kanripo/KR2a0038",
+      "commit": "eccd6fe93126bde61b837240e6142e1343c22639"
+    },
+    {
+      "id": "kanripo-kr4e0157",
+      "name": "王文成全書 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR4e0157/tree/a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR4e0157",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4e0157/zip/a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+        "checkedAt": "2026-11-01T05:57:57.561025+00:00",
+        "status": "reachable",
+        "sha256": "fe3717afd1403d147c119b37f2718c4e48bc48167d71fb672b24fdc137639d65",
+        "bytes": 1183154
+      },
+      "repository": "kanripo/KR4e0157",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1"
+    },
+    {
+      "id": "kanripo-kr6r0043",
+      "name": "大唐大慈恩寺三藏法師傳 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR6r0043/tree/a6f730e319ed6f5ec7c1ba5433ea1c0eb2eb0aed",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR6r0043",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR6r0043/zip/a6f730e319ed6f5ec7c1ba5433ea1c0eb2eb0aed",
+        "checkedAt": "2026-11-01T05:58:09.851155+00:00",
+        "status": "reachable",
+        "sha256": "591bf49ccda684af20c4102d53bc09e0f5fc6676b44bd6c5a46abfe72f2d1bbb",
+        "bytes": 168587
+      },
+      "repository": "kanripo/KR6r0043",
+      "commit": "a6f730e319ed6f5ec7c1ba5433ea1c0eb2eb0aed"
+    },
+    {
+      "id": "kanripo-kr6r0121",
+      "name": "大唐西域記 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR6r0121/tree/190caf330cd850ce5cd3c7dc0af95628c422a2a9",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR6r0121",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR6r0121/zip/190caf330cd850ce5cd3c7dc0af95628c422a2a9",
+        "checkedAt": "2026-11-01T05:58:19.113573+00:00",
+        "status": "reachable",
+        "sha256": "8bfb62d17923b9b42dbc024300a8289338afe70e272dfa7478b68695e85f839e",
+        "bytes": 206890
+      },
+      "repository": "kanripo/KR6r0121",
+      "commit": "190caf330cd850ce5cd3c7dc0af95628c422a2a9"
+    },
+    {
+      "id": "kanripo-kr2a0012-wyg",
+      "name": "KR2a0012 · WYG 固定版本分支",
+      "url": "https://github.com/kanripo/KR2a0012/tree/3091efa84f2e555536999fad18203a7e474ffe48",
+      "kind": "github",
+      "coverage": [
+        "固定版本分支的全部文件；原书覆盖待核"
+      ],
+      "sourceFamily": "KR2a0012",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2a0012/zip/3091efa84f2e555536999fad18203a7e474ffe48",
+        "checkedAt": "2026-11-01T06:10:25.915915+00:00",
+        "status": "reachable",
+        "sha256": "71dc8c52821f4602c182b28d568020ca7df4e24cee0bc903a95dbdba67ff3bac",
+        "bytes": 781026
+      },
+      "repository": "kanripo/KR2a0012",
+      "commit": "3091efa84f2e555536999fad18203a7e474ffe48",
+      "branch": "WYG"
+    },
+    {
+      "id": "kanripo-kr4e0157-sbck",
+      "name": "KR4e0157 · SBCK 固定版本分支",
+      "url": "https://github.com/kanripo/KR4e0157/tree/27e8f3a6207522f559c90db4d027aa4be1b71a3a",
+      "kind": "github",
+      "coverage": [
+        "固定版本分支的全部文件；原书覆盖待核"
+      ],
+      "sourceFamily": "KR4e0157",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR4e0157/zip/27e8f3a6207522f559c90db4d027aa4be1b71a3a",
+        "checkedAt": "2026-11-01T06:10:31.561698+00:00",
+        "status": "reachable",
+        "sha256": "5345b06873909cc5839e5ce481b665b986d9cb1dcfb3bb62c901d0c41fc5fa52",
+        "bytes": 1198491
+      },
+      "repository": "kanripo/KR4e0157",
+      "commit": "27e8f3a6207522f559c90db4d027aa4be1b71a3a",
+      "branch": "SBCK"
     }
   ],
   "catalogs": [

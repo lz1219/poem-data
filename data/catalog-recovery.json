@@ -1,0 +1,40 @@
+{
+  "catalogs": [
+    {
+      "path": "KR2a",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR-Catalog/contents/KR/KR2a.txt?ref=781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+        "checkedAt": "2026-11-01T05:54:56.276555+00:00",
+        "status": "reachable",
+        "sha256": "f428b2f0863af0f8bb3569489f03e5f939e6833a48dc808d4bd4bc43b0048750",
+        "bytes": 32722
+      },
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "gitBlobSha": "93d029256f1992997215a86b54fb57b61de96114"
+    },
+    {
+      "path": "KR4e",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR-Catalog/contents/KR/KR4e.txt?ref=781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+        "checkedAt": "2026-11-01T05:55:00.057467+00:00",
+        "status": "reachable",
+        "sha256": "48113f14bb2be2822be1dd3045f7f8083b5d14789f414f89bdd8c66d834bb95c",
+        "bytes": 140913
+      },
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "gitBlobSha": "933451f51fbb3f753f1c8dd3095c1b2fb3f984a3"
+    },
+    {
+      "path": "KR6r",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR-Catalog/contents/KR/KR6r.txt?ref=781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+        "checkedAt": "2026-11-01T05:55:03.828385+00:00",
+        "status": "reachable",
+        "sha256": "b1f61936277af6c160c10f3143f2b814a47f17255307348e01b5920e94425592",
+        "bytes": 124390
+      },
+      "commit": "781711923e2ce6f82f6dacfb8576cd80774b7ec0",
+      "gitBlobSha": "562907c0fdfacd937d7d6fb927722f1fef1a598d"
+    }
+  ]
+}

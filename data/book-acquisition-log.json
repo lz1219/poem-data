@@ -1,0 +1,162 @@
+{
+  "checkedAt": "2026-11-01T05:58:19.117223+00:00",
+  "items": [
+    {
+      "repository": "KR4c0022",
+      "title": "王右丞集箋注",
+      "purpose": "王维作品底本与古注候选",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0029",
+      "title": "岑嘉州詩",
+      "purpose": "岑参作品与行迹题名核查",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0033",
+      "title": "韋蘇州集",
+      "purpose": "韦应物作品与任所相关篇题",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0046",
+      "title": "東雅堂昌黎集註",
+      "purpose": "韩愈作品及碑志原句候选",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0051",
+      "title": "劉賓客文集",
+      "purpose": "刘禹锡作品与相关史事材料",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0068",
+      "title": "元氏長慶集",
+      "purpose": "元稹作品与白居易交往材料",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0072",
+      "title": "樊川集",
+      "purpose": "杜牧作品底本，区别原库樊川文集题名",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4c0111",
+      "title": "浣花集",
+      "purpose": "韦庄作品与行迹题名核查",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4d0068",
+      "title": "文忠集",
+      "purpose": "欧阳修诗文及附载史料候选",
+      "status": "commit-unavailable",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR4d0068/commits/master",
+        "checkedAt": "2026-11-01T05:54:58.691035+00:00",
+        "status": "unavailable",
+        "error": "OSError",
+        "attempts": 2
+      }
+    },
+    {
+      "repository": "KR4j0002",
+      "title": "六一詞",
+      "purpose": "欧阳修词作独立版本候选",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR2g0007",
+      "title": "杜工部年譜",
+      "purpose": "杜甫系年依据，保留与其他年谱异说",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR2g0008",
+      "title": "杜工部詩年譜",
+      "purpose": "杜甫系年独立著作候选，不预判与另一年谱证据独立",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR2g0032",
+      "title": "唐才子傳",
+      "purpose": "唐代人物传记参核，不能替代唐代本传与墓志",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR4d0069",
+      "title": "歐陽文粹",
+      "purpose": "文忠集入口受阻后的欧阳修原作补充；选本不能代替全集",
+      "status": "acquired",
+      "commit": "a249feefa5791aae60ca683a4643926e5f978e79",
+      "textFiles": 51
+    },
+    {
+      "repository": "KR2a0002",
+      "title": "史記集解",
+      "purpose": "现有史记摘篇的正文及古注候选；按集解版本独立保存",
+      "status": "acquired",
+      "commit": "73c4d2ba067d99a6de924ac952fd6921a958c7e7",
+      "textFiles": 131
+    },
+    {
+      "repository": "KR2a0007",
+      "title": "前漢書",
+      "purpose": "汉书现有出处占位的完整原件候选",
+      "status": "acquired",
+      "commit": "683113d4baf6febecaf2ccb7913df87c4d68d454",
+      "textFiles": 102
+    },
+    {
+      "repository": "KR2a0012",
+      "title": "三國志",
+      "purpose": "蜀书诸葛亮传及相关人物原典",
+      "status": "acquired",
+      "commit": "214fcafa79894355909c9d8c2c1533089e7791c6",
+      "textFiles": 31
+    },
+    {
+      "repository": "KR2a0032",
+      "title": "宋史",
+      "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录",
+      "status": "acquired",
+      "commit": "144d5640186b8e519673e5603a18667e55b1f449",
+      "textFiles": 497
+    },
+    {
+      "repository": "KR2a0038",
+      "title": "明史",
+      "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录",
+      "status": "acquired",
+      "commit": "eccd6fe93126bde61b837240e6142e1343c22639",
+      "textFiles": 548
+    },
+    {
+      "repository": "KR4e0157",
+      "title": "王文成全書",
+      "purpose": "核对王阳明文集、传习录与年谱的编次关系",
+      "status": "acquired",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "textFiles": 24
+    },
+    {
+      "repository": "KR6r0043",
+      "title": "大唐大慈恩寺三藏法師傳",
+      "purpose": "玄奘传记与行迹出处核查；与西域记分立",
+      "status": "acquired",
+      "commit": "a6f730e319ed6f5ec7c1ba5433ea1c0eb2eb0aed",
+      "textFiles": 10
+    },
+    {
+      "repository": "KR6r0121",
+      "title": "大唐西域記",
+      "purpose": "玄奘行迹与历史地名核查；诗歌别集之外的文献类型",
+      "status": "acquired",
+      "commit": "190caf330cd850ce5cd3c7dc0af95628c422a2a9",
+      "textFiles": 12
+    }
+  ]
+}

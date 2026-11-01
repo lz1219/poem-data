@@ -6,6 +6,8 @@
 
 定位与长期取舍见[项目总纲](docs/project-charter.md)，内容准入与审校见[编纂规范](docs/editorial-policy.md)。这些规范是建设目标，实际完成情况见[资料状态](docs/data-status.md)和项目看板。
 
+典籍库存、实际取得版本及尚缺材料见[典籍台账](docs/book-register.md)；完整原件与数据快照的入库、整理、验证见[操作说明](docs/data-ingestion.md)。隔离研究区不自动成为公开核定正文。
+
 ## 这是什么
 
 本仓库包含文献站、数据源与研究工作台。原始语料、经过编纂的作品和候选研究记录分开管理：

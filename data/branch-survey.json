@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "repository": "KR2a0012",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR2a0012/branches",
+        "checkedAt": "2026-11-01T06:07:45.702954+00:00",
+        "status": "reachable",
+        "sha256": "99231f3f75ef9aa7d0b7ff5c4d120739198411c38e2aa746560eed77b885f0b1",
+        "bytes": 594
+      },
+      "branches": [
+        {
+          "name": "WYG",
+          "commit": {
+            "sha": "3091efa84f2e555536999fad18203a7e474ffe48",
+            "url": "https://api.github.com/repos/kanripo/KR2a0012/commits/3091efa84f2e555536999fad18203a7e474ffe48"
+          },
+          "protected": false
+        },
+        {
+          "name": "_data",
+          "commit": {
+            "sha": "799e7fc0f38896a103e0a7482313bb4354d2e8b0",
+            "url": "https://api.github.com/repos/kanripo/KR2a0012/commits/799e7fc0f38896a103e0a7482313bb4354d2e8b0"
+          },
+          "protected": false
+        },
+        {
+          "name": "master",
+          "commit": {
+            "sha": "214fcafa79894355909c9d8c2c1533089e7791c6",
+            "url": "https://api.github.com/repos/kanripo/KR2a0012/commits/214fcafa79894355909c9d8c2c1533089e7791c6"
+          },
+          "protected": false
+        }
+      ]
+    },
+    {
+      "repository": "KR4e0157",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR4e0157/branches",
+        "checkedAt": "2026-11-01T06:07:49.144138+00:00",
+        "status": "reachable",
+        "sha256": "7c3a54aa53b19df6560af781565cc2569dd3ec102d86371cbce1d83e41f1c373",
+        "bytes": 397
+      },
+      "branches": [
+        {
+          "name": "SBCK",
+          "commit": {
+            "sha": "27e8f3a6207522f559c90db4d027aa4be1b71a3a",
+            "url": "https://api.github.com/repos/kanripo/KR4e0157/commits/27e8f3a6207522f559c90db4d027aa4be1b71a3a"
+          },
+          "protected": false
+        },
+        {
+          "name": "master",
+          "commit": {
+            "sha": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+            "url": "https://api.github.com/repos/kanripo/KR4e0157/commits/a02a2a96a83747082e5833f61dce6ef243ecbcf1"
+          },
+          "protected": false
+        }
+      ]
+    },
+    {
+      "repository": "KR4d0068",
+      "probe": {
+        "url": "https://api.github.com/repos/kanripo/KR4d0068/branches",
+        "checkedAt": "2026-11-01T06:07:57.208858+00:00",
+        "status": "unavailable",
+        "error": "OSError",
+        "attempts": 2
+      },
+      "branches": []
+    }
+  ]
+}

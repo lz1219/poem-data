@@ -24,6 +24,7 @@ poem-data/
 | `data/index.json` | 列表索引，由 `scripts/build-index.mjs` 生成 | ✅ | **必须**，前端与 API 都要 |
 | `schema/` | JSON Schema：work / comment / person / journey / research | ✅ | **必须**，前后端与校验器共用 |
 | `shared/` | `editions.json`（版本表） | ✅ | **必须**，作品用 id 引用 |
+| `research/ingest.sql` | 完整原件与整理数据的隔离库结构，不属于公开正文 | ✅ | 配合 `scripts/raw_ingest.py`；操作见 [data-ingestion.md](data-ingestion.md) |
 | `web/` | 前端单页与资源 | ✅ | **必须** |
 | `server/` | Django 工程（`atlas/` 配置、`corpus/` 应用） | ✅ | **必须** |
 | `server/.venv/` | Python 虚拟环境 | ❌ | 本地生成，可随时重建 |
@@ -71,4 +72,6 @@ data/*.json ──import_json──▶ 数据库（SQLite 本地 / PostgreSQL �
 
 ## 学术资料增补
 
-来源在 shared/sources.json；公开研究记录、修订与摘引在 data/research、data/research-history、data/witnesses。完整采集原件、备份和内部研究线索在仓库外 .local，不进入静态发布包。research-index.json 由研究脚本或数据库导出生成。
+来源在 shared/sources.json；公开研究记录、修订与摘引在 data/research、data/research-history、data/witnesses。完整采集原件在仓库外 .local 及语料库 research_ingest 隔离区，备份和内部研究线索留仓库外；完整原件与内部正文不进入静态发布包。research-index.json 由研究脚本或数据库导出生成。
+
+典籍库存与缺口见 [book-register.md](book-register.md)，入库命令与校验边界见 [data-ingestion.md](data-ingestion.md)。data/book-register.json 为书目和版本覆盖快照，data/ingestion-report.json 为最终处理报告；存储通过和学术待核分别报告。
