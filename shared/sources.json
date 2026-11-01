@@ -1349,6 +1349,119 @@
         "redistribute": "not-cleared"
       },
       "usageNote": "同底本转载不自动计独立佐证。API失败历史与XML导出并存，原字符不扩模板、不补字，不自动成为核定正文。"
+    },
+    {
+      "id": "kanripo-kr2k0056",
+      "name": "貴州通志 · Kanripo原典",
+      "url": "https://github.com/kanripo/KR2k0056/tree/2b42056baba7e67dd70a039dad61843a9b30a2d7",
+      "kind": "github",
+      "coverage": [
+        "已取得完整仓库；实际卷篇及缺卷待核"
+      ],
+      "sourceFamily": "KR2k0056",
+      "upstream": [
+        "kanripo"
+      ],
+      "baseEdition": "以原文件卷首版本标记为准",
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "仅用于隔离研究区保存；待核材料不进入公开正文，未确认完整文本再分发条件。",
+      "probe": {
+        "url": "https://codeload.github.com/kanripo/KR2k0056/zip/2b42056baba7e67dd70a039dad61843a9b30a2d7",
+        "checkedAt": "2026-11-01T11:55:57.783276+00:00",
+        "status": "reachable",
+        "sha256": "46c44ae86211dc56ce8c7185638c229e5e15789afaef9edaa56e502392a213d8",
+        "bytes": 1100642
+      },
+      "repository": "kanripo/KR2k0056",
+      "commit": "2b42056baba7e67dd70a039dad61843a9b30a2d7"
+    },
+    {
+      "id": "cinii-guizhou-1741",
+      "name": "贵州通志乾隆序刊本 · CiNii馆藏目录",
+      "url": "https://ci.nii.ac.jp/ncid/BB26929655",
+      "kind": "institution-catalog",
+      "coverage": [
+        "46卷首1卷，24册，特定馆藏缺叶另记"
+      ],
+      "sourceFamily": "cinii",
+      "upstream": [],
+      "baseEdition": "以各自机构/平台元数据为线索，未据同名认同版",
+      "permissions": {
+        "read": true,
+        "download": "metadata-capture",
+        "ingest": "research-metadata",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "1741序刊本书目线索；藏本缺叶不可迁移到其他四库转录或同名影像",
+      "probe": {
+        "url": "https://ci.nii.ac.jp/ncid/BB26929655",
+        "checkedAt": "2026-11-01T11:57:41.157494+00:00",
+        "status": "reachable",
+        "sha256": "8bcc7236cb14086ca68dd07c1d77acf5a07316ad98366b076097dfcb42694e1f",
+        "bytes": 59498
+      }
+    },
+    {
+      "id": "commons-guizhou-siku",
+      "name": "贵州通志四库影像候选 · CADAL/Commons",
+      "url": "https://commons.wikimedia.org/wiki/Category:貴州通志",
+      "kind": "image",
+      "coverage": [
+        "已取卷4–5、8–9、19–20三份原件；版刻关系待核"
+      ],
+      "sourceFamily": "cadal",
+      "upstream": [
+        "CADAL",
+        "Wikimedia Commons"
+      ],
+      "baseEdition": "以各自机构/平台元数据为线索，未据同名认同版",
+      "permissions": {
+        "read": true,
+        "download": "public-original",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      },
+      "usageNote": "平台标四库本、CADAL来源；与WYG转录同本关系尚待逐叶核验，不计独立佐证",
+      "probe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06044352+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%9B%9B~%E5%8D%B7%E4%BA%94.djvu&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T11:58:19.604790+00:00",
+        "status": "reachable",
+        "sha256": "e957a909f9bd2e0c5749cfc866512173082df937f21ed0a4185a95423c68cc44",
+        "bytes": 2344
+      }
+    },
+    {
+      "id": "nar-guizhou-kangxi",
+      "name": "贵州通志康熙版 · 日本国立公文书馆",
+      "url": "https://www.digital.archives.go.jp/file/en/1067791",
+      "kind": "institution-catalog",
+      "coverage": [
+        "37卷18册的异版机构书目；该馆影像未取"
+      ],
+      "sourceFamily": "national-archives-japan",
+      "upstream": [],
+      "baseEdition": "以各自机构/平台元数据为线索，未据同名认同版",
+      "permissions": {
+        "read": true,
+        "download": "catalog-capture-only",
+        "ingest": "research-metadata",
+        "redistribute": "catalog-CC0;images-not-cleared"
+      },
+      "usageNote": "康熙37卷版，不能替代乾隆46卷WYG转录；影像入口待后续核查",
+      "probe": {
+        "url": "https://www.digital.archives.go.jp/file/en/1067791",
+        "checkedAt": "2026-11-01T11:59:33.678817+00:00",
+        "previousObservation": "web工具打开返回403；本次仅再连通一次",
+        "attempts": 2,
+        "status": "reachable",
+        "sha256": "6b1dff254eb9282f7b8ed95b37e38d6acae72aceff36a9caf6ea632c48b925fb",
+        "bytes": 199155
+      }
     }
   ],
   "catalogs": [

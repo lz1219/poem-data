@@ -7,7 +7,7 @@
     "schemaVersion": {"const": "1.0"},
     "id": {"type": "string", "minLength": 1},
     "revision": {"type": "integer"},
-    "subject": {"type": "object", "required": ["type", "key"], "properties": {"type": {"enum": ["work", "person", "journey", "stop"]}, "key": {"type": "string"}}},
+    "subject": {"type": "object", "required": ["type", "key"], "properties": {"type": {"enum": ["work", "person", "journey", "stop", "source"]}, "key": {"type": "string", "minLength": 1}}},
     "kind": {"enum": ["audit", "witness", "inference"]},
     "status": {"enum": ["pending", "partial", "verified", "restricted", "rejected"]},
     "visibility": {"enum": ["public", "internal"]},

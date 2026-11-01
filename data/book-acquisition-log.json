@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-01T05:58:19.117223+00:00",
+  "checkedAt": "2026-11-01T11:55:57.793400+00:00",
   "items": [
     {
       "repository": "KR4c0022",
@@ -90,73 +90,63 @@
       "repository": "KR4d0069",
       "title": "歐陽文粹",
       "purpose": "文忠集入口受阻后的欧阳修原作补充；选本不能代替全集",
-      "status": "acquired",
-      "commit": "a249feefa5791aae60ca683a4643926e5f978e79",
-      "textFiles": 51
+      "status": "already-acquired"
     },
     {
       "repository": "KR2a0002",
       "title": "史記集解",
       "purpose": "现有史记摘篇的正文及古注候选；按集解版本独立保存",
-      "status": "acquired",
-      "commit": "73c4d2ba067d99a6de924ac952fd6921a958c7e7",
-      "textFiles": 131
+      "status": "already-acquired"
     },
     {
       "repository": "KR2a0007",
       "title": "前漢書",
       "purpose": "汉书现有出处占位的完整原件候选",
-      "status": "acquired",
-      "commit": "683113d4baf6febecaf2ccb7913df87c4d68d454",
-      "textFiles": 102
+      "status": "already-acquired"
     },
     {
       "repository": "KR2a0012",
       "title": "三國志",
       "purpose": "蜀书诸葛亮传及相关人物原典",
-      "status": "acquired",
-      "commit": "214fcafa79894355909c9d8c2c1533089e7791c6",
-      "textFiles": 31
+      "status": "already-acquired"
     },
     {
       "repository": "KR2a0032",
       "title": "宋史",
       "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录",
-      "status": "acquired",
-      "commit": "144d5640186b8e519673e5603a18667e55b1f449",
-      "textFiles": 497
+      "status": "already-acquired"
     },
     {
       "repository": "KR2a0038",
       "title": "明史",
       "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录",
-      "status": "acquired",
-      "commit": "eccd6fe93126bde61b837240e6142e1343c22639",
-      "textFiles": 548
+      "status": "already-acquired"
     },
     {
       "repository": "KR4e0157",
       "title": "王文成全書",
       "purpose": "核对王阳明文集、传习录与年谱的编次关系",
-      "status": "acquired",
-      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
-      "textFiles": 24
+      "status": "already-acquired"
     },
     {
       "repository": "KR6r0043",
       "title": "大唐大慈恩寺三藏法師傳",
       "purpose": "玄奘传记与行迹出处核查；与西域记分立",
-      "status": "acquired",
-      "commit": "a6f730e319ed6f5ec7c1ba5433ea1c0eb2eb0aed",
-      "textFiles": 10
+      "status": "already-acquired"
     },
     {
       "repository": "KR6r0121",
       "title": "大唐西域記",
       "purpose": "玄奘行迹与历史地名核查；诗歌别集之外的文献类型",
+      "status": "already-acquired"
+    },
+    {
+      "repository": "KR2k0056",
+      "title": "貴州通志",
+      "purpose": "王阳明龙场/贵阳站的历史地名、驿站与纪念设施证据；清代后出地方志不得倒证明代现场与现代精确坐标",
       "status": "acquired",
-      "commit": "190caf330cd850ce5cd3c7dc0af95628c422a2a9",
-      "textFiles": 12
+      "commit": "2b42056baba7e67dd70a039dad61843a9b30a2d7",
+      "textFiles": 47
     }
   ]
 }

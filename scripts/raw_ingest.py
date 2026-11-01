@@ -110,7 +110,7 @@ def input_bundle(root=ROOT, cache=None):
             entries.append((sid, 'page.wiki', 'wikitext', blob(content)))
 
     for rel in ['data/acquisition-manifest.json', 'data/corpus-inventory.json', 'shared/sources.json', 'shared/editions.json',
-                'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json', 'data/gap-search.json', 'data/wikisource-coverage.json', 'data/source-discovery.json', 'data/ouyang-source-directory.json','data/ouyang-front-matter-findings.json']:
+                'data/book-acquisition-plan.json', 'data/book-acquisition-log.json', 'data/catalog-recovery.json', 'data/book-register.json', 'data/branch-survey.json', 'data/gap-search.json', 'data/wikisource-coverage.json', 'data/source-discovery.json', 'data/ouyang-source-directory.json','data/ouyang-front-matter-findings.json','data/guizhou-gazetteer.json']:
         if not (root / rel).exists(): continue
         asset(rel, (root / rel).read_bytes(), 'manifest')
     for rel in ['data/original-volume-locators.json', 'data/wangyangming-source-notes.json', 'data/wangyangming-work-audit.json']:

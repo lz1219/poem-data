@@ -93,6 +93,20 @@ class ResearchContractTests(TestCase):
         row = ResearchRevision.objects.create(record_id=d['id'], revision=1, payload=d)
         self.assertEqual(self.client.get('/api/research/test-record/1').status_code, 200)
 
+    def test_source_subject_requires_registered_source_and_is_readable(self):
+        SourceRecord.objects.create(key='edition-quality', payload={'id':'edition-quality'})
+        d = self.record()
+        d['subject'] = {'type':'source','key':'edition-quality'}
+        ResearchRevision.objects.create(record_id=d['id'], revision=1, payload=d)
+        self.assertEqual(self.client.get('/api/research/test-record/1').json()['subject'], d['subject'])
+        self.assertEqual(self.client.get('/api/research').json()['records'][0]['subject'], d['subject'])
+        d = self.record(2)
+        d['subject'] = {'type':'source','key':'missing-source'}
+        with self.assertRaises(ValidationError):
+            ResearchRevision.objects.create(record_id=d['id'], revision=2, payload=d)
+        d['subject'] = {'type':'unsupported','key':'edition-quality'}
+        self.assertIn('研究对象类型非法', validate_record(d, source_ids={'edition-quality'}, artifacts={}))
+
     def test_internal_to_public_script_keeps_one_revision_sequence(self):
         sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
         from research_records import save_record

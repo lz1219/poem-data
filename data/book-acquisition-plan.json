@@ -2,34 +2,165 @@
   "schemaVersion": "1.0",
   "scope": "按现有作品、人物及系年需求补充原典；不以文件数宣称全文校核完成",
   "candidates": [
-    {"repository": "KR4c0022", "title": "王右丞集箋注", "purpose": "王维作品底本与古注候选"},
-    {"repository": "KR4c0029", "title": "岑嘉州詩", "purpose": "岑参作品与行迹题名核查"},
-    {"repository": "KR4c0033", "title": "韋蘇州集", "purpose": "韦应物作品与任所相关篇题"},
-    {"repository": "KR4c0046", "title": "東雅堂昌黎集註", "purpose": "韩愈作品及碑志原句候选"},
-    {"repository": "KR4c0051", "title": "劉賓客文集", "purpose": "刘禹锡作品与相关史事材料"},
-    {"repository": "KR4c0068", "title": "元氏長慶集", "purpose": "元稹作品与白居易交往材料"},
-    {"repository": "KR4c0072", "title": "樊川集", "purpose": "杜牧作品底本，区别原库樊川文集题名"},
-    {"repository": "KR4c0111", "title": "浣花集", "purpose": "韦庄作品与行迹题名核查"},
-    {"repository": "KR4d0068", "title": "文忠集", "purpose": "欧阳修诗文及附载史料候选"},
-    {"repository": "KR4j0002", "title": "六一詞", "purpose": "欧阳修词作独立版本候选"},
-    {"repository": "KR2g0007", "title": "杜工部年譜", "purpose": "杜甫系年依据，保留与其他年谱异说"},
-    {"repository": "KR2g0008", "title": "杜工部詩年譜", "purpose": "杜甫系年独立著作候选，不预判与另一年谱证据独立"},
-    {"repository": "KR2g0032", "title": "唐才子傳", "purpose": "唐代人物传记参核，不能替代唐代本传与墓志"},
-    {"repository": "KR4d0069", "title": "歐陽文粹", "purpose": "文忠集入口受阻后的欧阳修原作补充；选本不能代替全集"},
-    {"repository": "KR2a0002", "title": "史記集解", "purpose": "现有史记摘篇的正文及古注候选；按集解版本独立保存"},
-    {"repository": "KR2a0007", "title": "前漢書", "purpose": "汉书现有出处占位的完整原件候选"},
-    {"repository": "KR2a0012", "title": "三國志", "purpose": "蜀书诸葛亮传及相关人物原典"},
-    {"repository": "KR2a0032", "title": "宋史", "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录"},
-    {"repository": "KR2a0038", "title": "明史", "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录"},
-    {"repository": "KR4e0157", "title": "王文成全書", "purpose": "核对王阳明文集、传习录与年谱的编次关系"},
-    {"repository": "KR6r0043", "title": "大唐大慈恩寺三藏法師傳", "purpose": "玄奘传记与行迹出处核查；与西域记分立"},
-    {"repository": "KR6r0121", "title": "大唐西域記", "purpose": "玄奘行迹与历史地名核查；诗歌别集之外的文献类型"}
+    {
+      "repository": "KR4c0022",
+      "title": "王右丞集箋注",
+      "purpose": "王维作品底本与古注候选"
+    },
+    {
+      "repository": "KR4c0029",
+      "title": "岑嘉州詩",
+      "purpose": "岑参作品与行迹题名核查"
+    },
+    {
+      "repository": "KR4c0033",
+      "title": "韋蘇州集",
+      "purpose": "韦应物作品与任所相关篇题"
+    },
+    {
+      "repository": "KR4c0046",
+      "title": "東雅堂昌黎集註",
+      "purpose": "韩愈作品及碑志原句候选"
+    },
+    {
+      "repository": "KR4c0051",
+      "title": "劉賓客文集",
+      "purpose": "刘禹锡作品与相关史事材料"
+    },
+    {
+      "repository": "KR4c0068",
+      "title": "元氏長慶集",
+      "purpose": "元稹作品与白居易交往材料"
+    },
+    {
+      "repository": "KR4c0072",
+      "title": "樊川集",
+      "purpose": "杜牧作品底本，区别原库樊川文集题名"
+    },
+    {
+      "repository": "KR4c0111",
+      "title": "浣花集",
+      "purpose": "韦庄作品与行迹题名核查"
+    },
+    {
+      "repository": "KR4d0068",
+      "title": "文忠集",
+      "purpose": "欧阳修诗文及附载史料候选"
+    },
+    {
+      "repository": "KR4j0002",
+      "title": "六一詞",
+      "purpose": "欧阳修词作独立版本候选"
+    },
+    {
+      "repository": "KR2g0007",
+      "title": "杜工部年譜",
+      "purpose": "杜甫系年依据，保留与其他年谱异说"
+    },
+    {
+      "repository": "KR2g0008",
+      "title": "杜工部詩年譜",
+      "purpose": "杜甫系年独立著作候选，不预判与另一年谱证据独立"
+    },
+    {
+      "repository": "KR2g0032",
+      "title": "唐才子傳",
+      "purpose": "唐代人物传记参核，不能替代唐代本传与墓志"
+    },
+    {
+      "repository": "KR4d0069",
+      "title": "歐陽文粹",
+      "purpose": "文忠集入口受阻后的欧阳修原作补充；选本不能代替全集"
+    },
+    {
+      "repository": "KR2a0002",
+      "title": "史記集解",
+      "purpose": "现有史记摘篇的正文及古注候选；按集解版本独立保存"
+    },
+    {
+      "repository": "KR2a0007",
+      "title": "前漢書",
+      "purpose": "汉书现有出处占位的完整原件候选"
+    },
+    {
+      "repository": "KR2a0012",
+      "title": "三國志",
+      "purpose": "蜀书诸葛亮传及相关人物原典"
+    },
+    {
+      "repository": "KR2a0032",
+      "title": "宋史",
+      "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录"
+    },
+    {
+      "repository": "KR2a0038",
+      "title": "明史",
+      "purpose": "现有单篇以外的完整仓库原件，另核缺卷及附录"
+    },
+    {
+      "repository": "KR4e0157",
+      "title": "王文成全書",
+      "purpose": "核对王阳明文集、传习录与年谱的编次关系"
+    },
+    {
+      "repository": "KR6r0043",
+      "title": "大唐大慈恩寺三藏法師傳",
+      "purpose": "玄奘传记与行迹出处核查；与西域记分立"
+    },
+    {
+      "repository": "KR6r0121",
+      "title": "大唐西域記",
+      "purpose": "玄奘行迹与历史地名核查；诗歌别集之外的文献类型"
+    },
+    {
+      "repository": "KR2k0056",
+      "title": "貴州通志",
+      "purpose": "王阳明龙场/贵阳站的历史地名、驿站与纪念设施证据；清代后出地方志不得倒证明代现场与现代精确坐标"
+    }
   ],
   "remaining": [
-    {"category": "正史", "titles": ["史記", "漢書", "三國志", "舊唐書", "新唐書", "宋史", "明史", "清史稿"], "action": "先按现有版本和实际卷目核缺，不能把异名或另一版本误判为缺卷；补可追溯独立版本"},
-    {"category": "王阳明", "titles": ["王文成全書", "傳習錄", "王陽明年譜"], "action": "核对全书与选篇/现代栏目名关系，勿按现有静心录等题名直接认作古籍原书"},
-    {"category": "玄奘", "titles": ["大唐西域記", "大慈恩寺三藏法師傳"], "action": "寻找可定位版本，区分旅行实录与后出传记"},
-    {"category": "地方志与碑志", "titles": [], "action": "按201站的具体年地争议逐站选书，不批量混入同名地域材料"},
-    {"category": "其他别集", "titles": ["薛能集"], "action": "先核存佚与辑佚来源，不以未命中目录判不存在"}
+    {
+      "category": "正史",
+      "titles": [
+        "史記",
+        "漢書",
+        "三國志",
+        "舊唐書",
+        "新唐書",
+        "宋史",
+        "明史",
+        "清史稿"
+      ],
+      "action": "先按现有版本和实际卷目核缺，不能把异名或另一版本误判为缺卷；补可追溯独立版本"
+    },
+    {
+      "category": "王阳明",
+      "titles": [
+        "王文成全書",
+        "傳習錄",
+        "王陽明年譜"
+      ],
+      "action": "核对全书与选篇/现代栏目名关系，勿按现有静心录等题名直接认作古籍原书"
+    },
+    {
+      "category": "玄奘",
+      "titles": [
+        "大唐西域記",
+        "大慈恩寺三藏法師傳"
+      ],
+      "action": "寻找可定位版本，区分旅行实录与后出传记"
+    },
+    {
+      "category": "地方志与碑志",
+      "titles": [],
+      "action": "按201站的具体年地争议逐站选书，不批量混入同名地域材料"
+    },
+    {
+      "category": "其他别集",
+      "titles": [
+        "薛能集"
+      ],
+      "action": "先核存佚与辑佚来源，不以未命中目录判不存在"
+    }
   ]
 }

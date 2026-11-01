@@ -23,7 +23,12 @@ for (const [group, name] of [['works', 'work'], ['persons', 'person'], ['journey
   const schema = readJSON(`schema/${name}.schema.json`);
   for (const f of listDir(`data/${group}`)) checkSchema(readJSON(`data/${group}/${f}`), schema, `${group}/${f}`, err);
 }
-for (const f of listDir('data/research')) checkSchema(readJSON(`data/research/${f}`), readJSON('schema/research.schema.json'), `research/${f}`, err);
+const sourceIds = new Set(readJSON('shared/sources.json').sources.map(s => s.id));
+for (const f of listDir('data/research')) {
+  const doc = readJSON(`data/research/${f}`);
+  checkSchema(doc, readJSON('schema/research.schema.json'), `research/${f}`, err);
+  if (doc.subject?.type === 'source' && !sourceIds.has(doc.subject.key)) err(`research/${f}: 研究对象来源不存在`);
+}
 
 // ── 1. 作品 ──
 const workFiles = listDir('data/works');

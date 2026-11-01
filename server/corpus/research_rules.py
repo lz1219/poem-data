@@ -20,6 +20,12 @@ def validate_record(doc, root=None, artifacts=None, source_ids=None):
         errors.append('公开状态非法')
     for key in ['title', 'claim', 'subject', 'provenance', 'reviewHistory', 'counterEvidence']:
         if key not in doc: errors.append('缺字段：' + key)
+    subject = doc.get('subject', {})
+    if not isinstance(subject, dict) or subject.get('type') not in ['work', 'person', 'journey', 'stop', 'source']:
+        errors.append('研究对象类型非法')
+        subject = {}
+    if not isinstance(subject.get('key'), str) or not subject.get('key', '').strip():
+        errors.append('研究对象标识为空')
     origin = doc.get('provenance', {}).get('origin')
     if origin not in ['human', 'ai', 'mixed', 'unknown', 'machine']:
         errors.append('生成方式非法')
@@ -46,6 +52,8 @@ def validate_record(doc, root=None, artifacts=None, source_ids=None):
         source_file = root / 'shared/sources.json'
         if source_ids is None:
             source_ids = {s['id'] for s in json.loads(source_file.read_text('utf-8'))['sources']} if source_file.exists() else set()
+        if subject.get('type') == 'source' and subject.get('key') not in source_ids:
+            errors.append('研究对象来源不存在')
         for e in doc.get('evidence', []):
             if e.get('sourceId') not in source_ids: errors.append('来源标识不存在')
             rel = e.get('textFile', '')

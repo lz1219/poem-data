@@ -1,0 +1,1093 @@
+{
+  "repository": "kanripo/KR2k0056",
+  "commit": "2b42056baba7e67dd70a039dad61843a9b30a2d7",
+  "archiveSha256": "46c44ae86211dc56ce8c7185638c229e5e15789afaef9edaa56e502392a213d8",
+  "checkedAt": "2026-11-01T12:03:54.811492+00:00",
+  "units": [
+    {
+      "path": "KR2k0056_000.txt",
+      "sha256": "5197a9708e14970f8487cf2a0bdd840bd87daebdb4dc625304cc0fa7f7c985af",
+      "juanHeader": "進貴州通志表",
+      "explicitHeadings": [],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_001.txt",
+      "sha256": "93aaff6afddfad84a4ac625a96bdf137a2ad85e0088c6281db5c085a56c8494e",
+      "juanHeader": "卷一",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷一",
+          "volume": 1,
+          "startByte": 224,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_001-1a"
+        },
+        {
+          "header": "貴州通志卷一",
+          "volume": 1,
+          "startByte": 1046,
+          "endByte": 1064,
+          "sourcePageMarker": "KR2k0056_WYG_001-2a"
+        },
+        {
+          "header": "貴州通志卷一",
+          "volume": 1,
+          "startByte": 21876,
+          "endByte": 21894,
+          "sourcePageMarker": "KR2k0056_WYG_001-24b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_002.txt",
+      "sha256": "df8df91793b2952d62178fa074a9410a317e6ae7c9940c95c85f7a0aa296c4cb",
+      "juanHeader": "卷二",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二",
+          "volume": 2,
+          "startByte": 224,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_002-1a"
+        },
+        {
+          "header": "貴州通志卷二",
+          "volume": 2,
+          "startByte": 1123,
+          "endByte": 1141,
+          "sourcePageMarker": "KR2k0056_WYG_002-2a"
+        },
+        {
+          "header": "貴州通志卷二",
+          "volume": 2,
+          "startByte": 16378,
+          "endByte": 16396,
+          "sourcePageMarker": "KR2k0056_WYG_002-34b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_003.txt",
+      "sha256": "14a4e2eadb30caee876f2060d9eeab7f1a1c2293266b05c9dbfb0a25f008916d",
+      "juanHeader": "卷三",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三",
+          "volume": 3,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_003-1a"
+        },
+        {
+          "header": "貴州通志卷三",
+          "volume": 3,
+          "startByte": 69921,
+          "endByte": 69939,
+          "sourcePageMarker": "KR2k0056_WYG_003-70b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_004.txt",
+      "sha256": "9c4b58e5be26240f93f06dbea2a524435e95b63240cbeb747b51df4e3079a60a",
+      "juanHeader": "卷四",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四",
+          "volume": 4,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_004-1a"
+        },
+        {
+          "header": "貴州通志卷四",
+          "volume": 4,
+          "startByte": 36374,
+          "endByte": 36392,
+          "sourcePageMarker": "KR2k0056_WYG_004-27b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_005.txt",
+      "sha256": "afdba97308f25b4ece1ac98a8cff4b4fc9e33162f60d0d13232806154db9f285",
+      "juanHeader": "卷五",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷五",
+          "volume": 5,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_005-1a"
+        },
+        {
+          "header": "貴州通志卷五",
+          "volume": 5,
+          "startByte": 140479,
+          "endByte": 140497,
+          "sourcePageMarker": "KR2k0056_WYG_005-80b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_006.txt",
+      "sha256": "84c3f60d7b1f3669037f123cd0d828fd61ddb57693e332a04be57dfae928b39c",
+      "juanHeader": "卷六",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷六",
+          "volume": 6,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_006-1a"
+        },
+        {
+          "header": "貴州通志卷六",
+          "volume": 6,
+          "startByte": 55304,
+          "endByte": 55322,
+          "sourcePageMarker": "KR2k0056_WYG_006-36b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_007.txt",
+      "sha256": "892dfd71183278f79705ff725e4ab18ca94daa86dda0e62bfe703a16d32574d4",
+      "juanHeader": "卷七",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷七",
+          "volume": 7,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_007-1a"
+        },
+        {
+          "header": "貴州通志卷七",
+          "volume": 7,
+          "startByte": 60052,
+          "endByte": 60070,
+          "sourcePageMarker": "KR2k0056_WYG_007-48b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_008.txt",
+      "sha256": "97feed3a57b9421282c6e6f61513828851978224c55f631d452dfc7d48a1e131",
+      "juanHeader": "卷八",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷八",
+          "volume": 8,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_008-1a"
+        },
+        {
+          "header": "貴州通志卷八",
+          "volume": 8,
+          "startByte": 51534,
+          "endByte": 51552,
+          "sourcePageMarker": "KR2k0056_WYG_008-46b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_009.txt",
+      "sha256": "f48f80300eab97632610cf4960d5b417c5d2294240000a1e399b1a812435a6cd",
+      "juanHeader": "卷九",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷九",
+          "volume": 9,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_009-1a"
+        },
+        {
+          "header": "貴州通志卷九",
+          "volume": 9,
+          "startByte": 29129,
+          "endByte": 29147,
+          "sourcePageMarker": "KR2k0056_WYG_009-24b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_010.txt",
+      "sha256": "5a377af888bb485d757cb2122a775167a39eafd734704df2a53ecbdb332b61d2",
+      "juanHeader": "卷十",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十",
+          "volume": 10,
+          "startByte": 218,
+          "endByte": 236,
+          "sourcePageMarker": "KR2k0056_WYG_010-1a"
+        },
+        {
+          "header": "貴州通志卷十",
+          "volume": 10,
+          "startByte": 37963,
+          "endByte": 37981,
+          "sourcePageMarker": "KR2k0056_WYG_010-37b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_011.txt",
+      "sha256": "8b12200a801d7ed5c0e72462cf530d176af856f8725ef97806de28d543ea8f40",
+      "juanHeader": "卷十一",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十一",
+          "volume": 11,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_011-1a"
+        },
+        {
+          "header": "貴州通志卷十一",
+          "volume": 11,
+          "startByte": 71471,
+          "endByte": 71492,
+          "sourcePageMarker": "KR2k0056_WYG_011-74b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_012.txt",
+      "sha256": "889b26499ee9cfe97585238773b29d1982f8c6fcfa0c8542b2302e457ea690fd",
+      "juanHeader": "卷十二",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十二",
+          "volume": 12,
+          "startByte": 222,
+          "endByte": 243,
+          "sourcePageMarker": "KR2k0056_WYG_012-1a"
+        },
+        {
+          "header": "貴州通志卷十二",
+          "volume": 12,
+          "startByte": 59712,
+          "endByte": 59733,
+          "sourcePageMarker": "KR2k0056_WYG_012-60b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_013.txt",
+      "sha256": "8752d3eab929655ffd4bc563fa07f8b03357c2d31160423af2358491a1d8c9ed",
+      "juanHeader": "卷十三",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十三",
+          "volume": 13,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_013-1a"
+        },
+        {
+          "header": "貴州通志卷十三",
+          "volume": 13,
+          "startByte": 62363,
+          "endByte": 62384,
+          "sourcePageMarker": "KR2k0056_WYG_013-63b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_014.txt",
+      "sha256": "54763f626ec6f28d3d52e8d36b2f50575d1300575fecec7db5b8052d58ce44b1",
+      "juanHeader": "卷十四",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十四",
+          "volume": 14,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_014-1a"
+        },
+        {
+          "header": "貴州通志卷十四",
+          "volume": 14,
+          "startByte": 46101,
+          "endByte": 46122,
+          "sourcePageMarker": "KR2k0056_WYG_014-52b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_015.txt",
+      "sha256": "12590028f3c1566ce067c07f1aacf0aa7652c1c42933bd09e9e41f67a47eb0e9",
+      "juanHeader": "卷十五",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十五",
+          "volume": 15,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_015-1a"
+        },
+        {
+          "header": "貴州通志卷十五",
+          "volume": 15,
+          "startByte": 53719,
+          "endByte": 53740,
+          "sourcePageMarker": "KR2k0056_WYG_015-61b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_016.txt",
+      "sha256": "272fb673d29c90eb4650a42164616feee6d7664598e5aac4c34cde998ce7d914",
+      "juanHeader": "卷十六",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十六",
+          "volume": 16,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_016-1a"
+        },
+        {
+          "header": "貴州通志卷十六",
+          "volume": 16,
+          "startByte": 25827,
+          "endByte": 25848,
+          "sourcePageMarker": "KR2k0056_WYG_016-40b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_017.txt",
+      "sha256": "25074f02394ff17b158a71cf5153929c908223efc0c73f7d230766f1c778550c",
+      "juanHeader": "卷十七",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十七",
+          "volume": 17,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_017-1a"
+        },
+        {
+          "header": "貴州通志卷十七",
+          "volume": 17,
+          "startByte": 111994,
+          "endByte": 112015,
+          "sourcePageMarker": "KR2k0056_WYG_017-97b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_018.txt",
+      "sha256": "914138c76c7dc9ed272b9473a7e996e5f86dd9a04d99c7ca824f952c7f765b34",
+      "juanHeader": "卷十八",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十八",
+          "volume": 18,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_018-1a"
+        },
+        {
+          "header": "貴州通志卷十八",
+          "volume": 18,
+          "startByte": 74461,
+          "endByte": 74482,
+          "sourcePageMarker": "KR2k0056_WYG_018-68b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_019.txt",
+      "sha256": "f7f401358b1237160fba21efbd1e4a239253b1baa29ce7ec308584901abb0338",
+      "juanHeader": "卷十九",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷十九",
+          "volume": 19,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_019-1a"
+        },
+        {
+          "header": "貴州通志卷十九",
+          "volume": 19,
+          "startByte": 77854,
+          "endByte": 77875,
+          "sourcePageMarker": "KR2k0056_WYG_019-49b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_020.txt",
+      "sha256": "2496e4ebf349882975b6fb961f6366bce6baabe7bf0228a714cb2c80382468b4",
+      "juanHeader": "卷二十",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十",
+          "volume": 20,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_020-1a"
+        },
+        {
+          "header": "貴州通志卷二十",
+          "volume": 20,
+          "startByte": 56100,
+          "endByte": 56121,
+          "sourcePageMarker": "KR2k0056_WYG_020-41b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_021.txt",
+      "sha256": "84a724d10c2343ea0f6d5608e87de6682c6dde5f5e203fc40f791589ef2cd982",
+      "juanHeader": "卷二十一",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十一",
+          "volume": 21,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_021-1a"
+        },
+        {
+          "header": "貴州通志卷二十一",
+          "volume": 21,
+          "startByte": 79608,
+          "endByte": 79632,
+          "sourcePageMarker": "KR2k0056_WYG_021-66b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_022.txt",
+      "sha256": "0881b4451e58a606fdc7ac88d113b9e38b55b3c883f11cfdda80d1d72895a5e9",
+      "juanHeader": "卷二十二",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十二",
+          "volume": 22,
+          "startByte": 230,
+          "endByte": 254,
+          "sourcePageMarker": "KR2k0056_WYG_022-1a"
+        },
+        {
+          "header": "貴州通志卷二十二",
+          "volume": 22,
+          "startByte": 38874,
+          "endByte": 38898,
+          "sourcePageMarker": "KR2k0056_WYG_022-46b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_023.txt",
+      "sha256": "40ad68eede1832050bfaddcbb3115e5d1967e28a072d81b31b70897cc18b014c",
+      "juanHeader": "卷二十三",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十三",
+          "volume": 23,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_023-1a"
+        },
+        {
+          "header": "貴州通志卷二十三",
+          "volume": 23,
+          "startByte": 90864,
+          "endByte": 90888,
+          "sourcePageMarker": "KR2k0056_WYG_023-85b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_024.txt",
+      "sha256": "490f6a8ee423e95fe8c83b7d67a7ec6c69391ecf99e89fe41452d84dfd43df9f",
+      "juanHeader": "卷二十四",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十四",
+          "volume": 24,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_024-1a"
+        },
+        {
+          "header": "貴州通志卷二十四",
+          "volume": 24,
+          "startByte": 50759,
+          "endByte": 50783,
+          "sourcePageMarker": "KR2k0056_WYG_024-48b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_025.txt",
+      "sha256": "99ab3e07a8a05f69412fc275d5cbfbdd1d82fda2e809dc2a0ad267f05ff0b911",
+      "juanHeader": "卷二十五",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十五",
+          "volume": 25,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_025-1a"
+        },
+        {
+          "header": "貴州通志卷二十五",
+          "volume": 25,
+          "startByte": 28800,
+          "endByte": 28824,
+          "sourcePageMarker": "KR2k0056_WYG_025-27b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_026.txt",
+      "sha256": "b5ca82df9bc84dc1aafe3547d6a547bcb47b0d3121455ffa364455e6216dabba",
+      "juanHeader": "卷二十六",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十六",
+          "volume": 26,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_026-1a"
+        },
+        {
+          "header": "貴州通志卷二十六",
+          "volume": 26,
+          "startByte": 89171,
+          "endByte": 89195,
+          "sourcePageMarker": "KR2k0056_WYG_026-78b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_027.txt",
+      "sha256": "df367b06f732f3f21219f6c9f83aeb027e9d25afc8afb1518be3016c41a45958",
+      "juanHeader": "卷二十七",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十七",
+          "volume": 27,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_027-1a"
+        },
+        {
+          "header": "貴州通志卷二十七",
+          "volume": 27,
+          "startByte": 56789,
+          "endByte": 56813,
+          "sourcePageMarker": "KR2k0056_WYG_027-54b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_028.txt",
+      "sha256": "626342a7cee5777d89afa4a668101f5ad1b98b68e5704a1c096034055cbb23a2",
+      "juanHeader": "卷二十八",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十八",
+          "volume": 38,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_028-1a"
+        },
+        {
+          "header": "貴州通志卷二十八",
+          "volume": 28,
+          "startByte": 55211,
+          "endByte": 55235,
+          "sourcePageMarker": "KR2k0056_WYG_028-36b"
+        }
+      ],
+      "headingConflict": true
+    },
+    {
+      "path": "KR2k0056_029.txt",
+      "sha256": "9907f22215712c12426af42a4e0e31b5917fe0576bc7026af69d9a2a4b976f94",
+      "juanHeader": "卷二十九",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷二十九",
+          "volume": 29,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_029-1a"
+        },
+        {
+          "header": "貴州通志卷二十九",
+          "volume": 29,
+          "startByte": 35162,
+          "endByte": 35186,
+          "sourcePageMarker": "KR2k0056_WYG_029-26b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_030.txt",
+      "sha256": "9ecbeb777080ffd7635b1f9de9db58696035ca01df8e933a0de626a51ca61d44",
+      "juanHeader": "卷三十",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十",
+          "volume": 30,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_030-1a"
+        },
+        {
+          "header": "貴州通志卷三十",
+          "volume": 30,
+          "startByte": 29594,
+          "endByte": 29615,
+          "sourcePageMarker": "KR2k0056_WYG_030-24b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_031.txt",
+      "sha256": "f04015bd8ae069ef74222d21027357b6b98f9979232ad8e3406a8311d6fdb0f6",
+      "juanHeader": "卷三十一",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十一",
+          "volume": 31,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_031-1a"
+        },
+        {
+          "header": "貴州通志卷三十一",
+          "volume": 31,
+          "startByte": 113690,
+          "endByte": 113714,
+          "sourcePageMarker": "KR2k0056_WYG_031-84b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_032.txt",
+      "sha256": "4c4e8ffd4214d67b7b0829ddbd8a9573a400119c4dfc5526626580de0f2f27b4",
+      "juanHeader": "卷三十二",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十二",
+          "volume": 32,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_032-1a"
+        },
+        {
+          "header": "貴州通志卷三十二",
+          "volume": 32,
+          "startByte": 31888,
+          "endByte": 31912,
+          "sourcePageMarker": "KR2k0056_WYG_032-24b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_033.txt",
+      "sha256": "5a7867faa2fb8c0da6ec1ebe9de0177c3482fda9da2205cd6a51eb84864e4629",
+      "juanHeader": "卷三十三",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十三",
+          "volume": 33,
+          "startByte": 230,
+          "endByte": 254,
+          "sourcePageMarker": "KR2k0056_WYG_033-1a"
+        },
+        {
+          "header": "貴州通志卷三十三",
+          "volume": 33,
+          "startByte": 41055,
+          "endByte": 41079,
+          "sourcePageMarker": "KR2k0056_WYG_033-40b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_034.txt",
+      "sha256": "b23c7f7bd13e77c5b4f731294424a4020ac08a7bfeb2ae543eba0063feaedc3f",
+      "juanHeader": "卷三十四",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十四",
+          "volume": 34,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_034-1a"
+        },
+        {
+          "header": "貴州通志卷三十四",
+          "volume": 34,
+          "startByte": 52629,
+          "endByte": 52653,
+          "sourcePageMarker": "KR2k0056_WYG_034-48b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_035.txt",
+      "sha256": "167b2b7dc0942694540e773f0ec668a66c7de705cdb11c811ee24a2fc3fcd246",
+      "juanHeader": "卷三十五",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十五",
+          "volume": 35,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_035-1a"
+        },
+        {
+          "header": "貴州通志卷三十五",
+          "volume": 35,
+          "startByte": 95267,
+          "endByte": 95291,
+          "sourcePageMarker": "KR2k0056_WYG_035-95b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_036.txt",
+      "sha256": "f12ce6aed91f83859bf0a6e80ae2ccad041af25438ffc30b319d3f2a9526916b",
+      "juanHeader": "卷三十六",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十六",
+          "volume": 36,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_036-1a"
+        },
+        {
+          "header": "貴州通志卷三十六",
+          "volume": 36,
+          "startByte": 45046,
+          "endByte": 45070,
+          "sourcePageMarker": "KR2k0056_WYG_036-42b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_037.txt",
+      "sha256": "e0963f917a30feb4c56f00733c9dda89032002274863eb899d9ee9dc95621c3d",
+      "juanHeader": "卷三十七",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十七",
+          "volume": 37,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_037-1a"
+        },
+        {
+          "header": "貴州通志卷三十七",
+          "volume": 37,
+          "startByte": 82494,
+          "endByte": 82518,
+          "sourcePageMarker": "KR2k0056_WYG_037-77b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_038.txt",
+      "sha256": "517e10dcbbcec5a9c7fed706a72484cacbf28321c7dcbc9a83a7f606b6225344",
+      "juanHeader": "卷三十八",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十八",
+          "volume": 38,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_038-1a"
+        },
+        {
+          "header": "貴州通志卷三十八",
+          "volume": 38,
+          "startByte": 55875,
+          "endByte": 55899,
+          "sourcePageMarker": "KR2k0056_WYG_038-52b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_039.txt",
+      "sha256": "013bea0b9d650d9b24d40893b513cb261669b91a5aa9b5cc715bf2a18bfbadbc",
+      "juanHeader": "卷三十九",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷三十九",
+          "volume": 39,
+          "startByte": 225,
+          "endByte": 249,
+          "sourcePageMarker": "KR2k0056_WYG_039-1a"
+        },
+        {
+          "header": "貴州通志卷三十九",
+          "volume": 39,
+          "startByte": 64805,
+          "endByte": 64829,
+          "sourcePageMarker": "KR2k0056_WYG_039-60b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_040.txt",
+      "sha256": "7106411a231ff37a3cfb6b1e78ad61c9175b6c1c09d9aa700b8134133d07e7dc",
+      "juanHeader": "卷四十",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十",
+          "volume": 40,
+          "startByte": 221,
+          "endByte": 242,
+          "sourcePageMarker": "KR2k0056_WYG_040-1a"
+        },
+        {
+          "header": "貴州通志卷四十",
+          "volume": 40,
+          "startByte": 70088,
+          "endByte": 70109,
+          "sourcePageMarker": "KR2k0056_WYG_040-65b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_041.txt",
+      "sha256": "9b60aecac4c9f079e711064756256d7f9566eeff3b217260db175aa42a6abb4f",
+      "juanHeader": "卷四十一",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十一",
+          "volume": 41,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_041-1a"
+        },
+        {
+          "header": "貴州通志卷四十一",
+          "volume": 41,
+          "startByte": 79216,
+          "endByte": 79240,
+          "sourcePageMarker": "KR2k0056_WYG_041-73b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_042.txt",
+      "sha256": "98c5fe09f812a16cd2e03ae2953cca142924aa0a69fbbcb471997f520c4c6518",
+      "juanHeader": "卷四十二",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十二",
+          "volume": 42,
+          "startByte": 225,
+          "endByte": 249,
+          "sourcePageMarker": "KR2k0056_WYG_042-1a"
+        },
+        {
+          "header": "貴州通志巻四十二",
+          "volume": 42,
+          "startByte": 30963,
+          "endByte": 30987,
+          "sourcePageMarker": "KR2k0056_WYG_042-29b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_043.txt",
+      "sha256": "6c4639e4ab7158548de0622ea2f1636e5afea22b75a193d870c201da4c4e4060",
+      "juanHeader": "卷四十三",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十三",
+          "volume": 43,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_043-1a"
+        },
+        {
+          "header": "貴州通志卷四十三",
+          "volume": 43,
+          "startByte": 50153,
+          "endByte": 50177,
+          "sourcePageMarker": "KR2k0056_WYG_043-47b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_044.txt",
+      "sha256": "1d566e1c9610b4b845638632315a78db88e50d3437cee14fd4818ab006552a44",
+      "juanHeader": "卷四十四",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十四",
+          "volume": 44,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_044-1a"
+        },
+        {
+          "header": "貴州通志卷四十四",
+          "volume": 44,
+          "startByte": 66151,
+          "endByte": 66175,
+          "sourcePageMarker": "KR2k0056_WYG_044-64b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_045.txt",
+      "sha256": "4d2450610de67f3c490db8ac02ead797b6398268913d6af47ba44a9858d8819e",
+      "juanHeader": "卷四十五",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十五",
+          "volume": 45,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_045-1a"
+        },
+        {
+          "header": "貴州通志卷四十五",
+          "volume": 45,
+          "startByte": 72707,
+          "endByte": 72731,
+          "sourcePageMarker": "KR2k0056_WYG_045-76b"
+        }
+      ],
+      "headingConflict": false
+    },
+    {
+      "path": "KR2k0056_046.txt",
+      "sha256": "08ed248990ebdca00e33c8edd3aff2580823e7cad0423fca82583b766cdb9ee4",
+      "juanHeader": "卷四十六",
+      "explicitHeadings": [
+        {
+          "header": "貴州通志卷四十六",
+          "volume": 46,
+          "startByte": 224,
+          "endByte": 248,
+          "sourcePageMarker": "KR2k0056_WYG_046-1a"
+        },
+        {
+          "header": "貴州通志卷四十六",
+          "volume": 46,
+          "startByte": 19385,
+          "endByte": 19409,
+          "sourcePageMarker": "KR2k0056_WYG_046-18b"
+        }
+      ],
+      "headingConflict": false
+    }
+  ],
+  "observedHeadingNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "expectedCatalogVolumes": 46,
+  "missingHeadingNumbers": [],
+  "limitation": "卷题检索与目录候选，不证明卷内无缺叶；卷首文件另列，卷28首末冲突未改。",
+  "academicReview": "pending"
+}

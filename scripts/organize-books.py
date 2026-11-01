@@ -10,7 +10,7 @@ from raw_ingest import sha, source_unit
 def render_register(doc):
     lines = ['# 典籍库存与补书台账', '',
              '原件入库服务公共阅读、文学历史研读和专业考据；以下是库存与编目状态，不是学术核定结论。', '',
-             '27个原典仓库，29个固定版本快照；同源分支不算独立典籍或佐证。最终处理状态见 `data/ingestion-report.json`。', '',
+             str(doc['counts']['acquiredRepositories'])+'个原典仓库，'+str(doc['counts']['sourceSnapshots'])+'个固定版本快照；同源分支不算独立典籍或佐证。最终处理状态见 `data/ingestion-report.json`。', '',
              '## 已取得的原典', '', '| 实际文件题名 | 底本标记 | 仓库与提交 | 文件单元 |', '|---|---|---|---|']
     for e in doc['acquiredEditions']:
         repo, commit = e['repository'], e['commit']
@@ -21,7 +21,7 @@ def render_register(doc):
               '- 《文忠集》入口受阻。另一个目录题《欧阳文粹》的仓库实际文件题《欧阳文忠公集》，须按SBCK组件和原卷编目，不能直接称选本或全集。',
               '- 《王文成公全书》的数字JUAN是重排编号候选，原FILE含不同卷号；主文、年谱、附录分别核目录，保留对应关系。',
               '- 《白氏文集》《韦刺史诗集》《刘梦得文集》等实际题名与目录存在异名，保留实际文件题名，不自动合并版本。',
-              '- 地方志尚按具体站点争议选书；正史其余版本、独立年谱和影像继续寻源，不以现有单元数反推缺卷数。', '',
+              '- 地方志按具体站点争议选书；已取贵州通志供龙场复核，其他地域、正史其余版本、独立年谱和影像继续寻源，不以现有单元数反推缺卷数。', '',
               '## 现有38条书目', '',
               '9条已有卷篇，2条仅有诗歌库记录，27条目前仅出处占位。零卷篇不等于全项目没有相关材料；新增原件仍在隔离研究区，不自动覆盖旧书目。', '',
               '| ID | 原登记题名 | 卷篇单元 | 诗曲记录 | 库存类别 |', '|---|---|---|---|---|']
@@ -46,6 +46,10 @@ def render_register(doc):
         lines += ['## 王阳明原卷定位与作品出处核查', '',
                   '两个固定提交分别检出1至38原卷题，合计122处位置；重复卷题和跨文件卷31全部保留。卷题覆盖不等于卷文完整或影像已核。', '',
                   '机构书目著录38卷，仅作为版本检索线索，不自动与电子转录认作同版。六作品已有逐项核查记录：四条原句候选有字形/卷次等待核差异，两条只确认篇章而未确认旧摘句。原文及反推标记保留；四句教无据默认1521撤出，旧系年记录保留待核，不自动另定作年。', '']
+    if doc.get('guizhouGazetteer'):
+        lines += ['## 贵州通志与龙场站', '',
+                  '取得WYG标记的固定仓库：47文件含卷首及1–46卷题候选，不声称卷内无缺。028文件卷首题三十八、卷末及元数据题二十八，原样保留待核。', '',
+                  '阳明洞、龙冈书院、席书传文明书院各有原态条目候选；清代后出记载不直接证明明代现场、精确日期或现代坐标。影像取得卷4–5、8–9、19–20三份CADAL原件；平台标四库，尚待逐叶对校。CiNii所著录乾隆46卷藏本缺叶只属于该藏本；日本国立公文书馆康熙37卷另列异版线索。', '']
     return '\n'.join(lines)
 
 
@@ -123,6 +127,7 @@ def organize(credentials=None):
            'wikiCoverage':wiki_coverage,
            'volumeHeadingCoverage':read(ROOT/'data/original-volume-locators.json')['coverage'] if (ROOT/'data/original-volume-locators.json').exists() else [],
            'workSourceAudit':read(ROOT/'data/wangyangming-work-audit.json') if (ROOT/'data/wangyangming-work-audit.json').exists() else None,
+           'guizhouGazetteer':read(ROOT/'data/guizhou-gazetteer.json') if (ROOT/'data/guizhou-gazetteer.json').exists() else None,
            'titleRelationshipsPendingReview': title_groups, 'acquiredEditions': acquired, 'coverageObservations': observations,
            'blockedCandidates': blocked, 'remainingResearchNeeds': plan['remaining'],
            'counts': {'legacyBookRows': len(books), 'citationOnly': sum(b['status'] == 'citation-only' for b in books),

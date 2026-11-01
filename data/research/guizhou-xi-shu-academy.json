@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "guizhou-xi-shu-academy",
+  "subject": {
+    "type": "journey",
+    "key": "wangyangming"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "席书传中的文明书院论学线索",
+  "claim": "AI辅助资料解释·未经人工审校。取得《贵州通志》相关原条，供龙场及相关行程复核；不改默认地图事实。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T12:03:54.825308+00:00",
+    "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr2k0056",
+      "quote": "席　書(字文同遂寜人𢎞治庚戌進士正徳四年/以副使提學貴州性嗜静養學問根本周)¶\n　　(程課士先徳行後文藝時王守仁謫龍塲驛丞書/乃敦請入文明書院公餘則就見論學或至夜分)¶\n<pb:KR2k0056_WYG_019-31a>¶\n　　(諸生環而觀聼者以數百自是貴人士始知有心/性之學書後以議大禮稱㫖加武英殿大學士贈)¶\n　　(太傅諡/文襄)¶",
+      "locator": "KR2k0056_019.txt，KR2k0056_WYG_019-30b",
+      "url": "https://github.com/kanripo/KR2k0056/blob/2b42056baba7e67dd70a039dad61843a9b30a2d7/KR2k0056_019.txt",
+      "commit": "2b42056baba7e67dd70a039dad61843a9b30a2d7",
+      "originalFileSha256": "f7f401358b1237160fba21efbd1e4a239253b1baa29ce7ec308584901abb0338",
+      "sha256": "2e6f1eefb24d2ed4cacc95749f2cdb1d9f8ff18990a41fffb9b6f92a80004328",
+      "textFile": "data/witnesses/2e6f1eefb24d2ed4cacc95749f2cdb1d9f8ff18990a41fffb9b6f92a80004328.txt",
+      "startByte": 48430,
+      "endByte": 48848,
+      "verifiedQuote": true,
+      "verification": "只核片段与固定电子文件逐字节对应；未对影像或人工学术审校",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "正德四年是席书任职的叙述纪年，不能直接当王守仁讲学的确切日期；文明书院所在及行程另核，不自动新增路线站点。"
+  ],
+  "reasoning": "原态记载只提供继续核查的出处，不自动证明明代事件、亲历、因果或现代精确位置。",
+  "counterEvidence": "清代后出编纂与明代事件有时间距离；所取四库转录尚未完成影像对校。暂无足够依据裁定版本差异或现有站点叙述。",
+  "alternatives": [
+    "同名志书有康熙37卷及乾隆46卷等不同版本，不能按书名混用。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr2k0056",
+      "mode": "明确条题边界逐字截取",
+      "relatedStop": "wangyangming:5"
+    }
+  ],
+  "nextAction": "核原影像、版本及明代同时资料；卷题冲突先存疑，地点和系年不自动采信。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T12:03:54.826063+00:00",
+  "sha256": "361f6b07844790d1e2b984eb7fd299f329266db156f23fa1729357390ddf9c65"
+}

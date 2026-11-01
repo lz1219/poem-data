@@ -4895,6 +4895,78 @@
       }
     },
     {
+      "id": "guizhou-longgang-academy",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "wangyangming"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "龙冈书院：后出地方志与现存设施",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T12:03:54.820026+00:00",
+        "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+      }
+    },
+    {
+      "id": "guizhou-volume28-conflict",
+      "revision": 1,
+      "subject": {
+        "type": "source",
+        "key": "kanripo-kr2k0056"
+      },
+      "kind": "audit",
+      "status": "pending",
+      "title": "贵州通志：028文件卷首与卷末题名冲突",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T12:03:54.832699+00:00",
+        "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+      }
+    },
+    {
+      "id": "guizhou-xi-shu-academy",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "wangyangming"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "席书传中的文明书院论学线索",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T12:03:54.825308+00:00",
+        "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+      }
+    },
+    {
+      "id": "guizhou-yangming-cave",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "wangyangming"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "阳明洞：游息与居所的证据边界",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T12:03:54.814882+00:00",
+        "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+      }
+    },
+    {
       "id": "wang-source-036cb9f0f64a32d836cd",
       "revision": 1,
       "subject": {

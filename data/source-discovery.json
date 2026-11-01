@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-11-01T09:55:53.805659+00:00",
-  "gap": "三国志蜀吴",
+  "checkedAt": "2026-11-01T12:04:45.768239+00:00",
+  "gap": "三国志蜀吴、欧阳修及王阳明地方志缺口",
   "items": [
     {
       "id": "sanguozhi-image-shu5-8",
@@ -140,6 +140,203 @@
       ],
       "finding": "全览6引用卷151-153后再次引用卷001-005，未见附录页引用；不能把重复正文计为附录5卷",
       "status": "captured-structure-only"
+    },
+    {
+      "id": "guizhou-institution-cinii",
+      "channel": "institution-catalog",
+      "probe": {
+        "url": "https://ci.nii.ac.jp/ncid/BB26929655",
+        "checkedAt": "2026-11-01T11:57:41.157494+00:00",
+        "status": "reachable",
+        "sha256": "8bcc7236cb14086ca68dd07c1d77acf5a07316ad98366b076097dfcb42694e1f",
+        "bytes": 59498
+      },
+      "collection": "guizhou-tongzhi-research",
+      "relatedStop": "wangyangming:5",
+      "title": "貴州通志46卷首1卷 · CiNii BB26929655",
+      "status": "catalog-captured",
+      "catalogExtent": "46卷首1卷，24册；乾隆6年序，东京大学东洋文化研究所藏本",
+      "physicalCopyNotes": "该藏本著录缺叶：卷23第38叶、卷42第3叶、卷45第55叶；另有重叶及插入物。只记录馆藏元数据，实物未核。",
+      "relationship": "1741序刊本书目线索；藏本缺叶不可迁移到其他四库转录或同名影像",
+      "permissions": {
+        "read": true,
+        "download": "metadata-capture",
+        "ingest": "research-metadata",
+        "redistribute": "not-cleared"
+      }
+    },
+    {
+      "id": "guizhou-image-directory",
+      "channel": "image-directory",
+      "probe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3A%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97&cmnamespace=6&cmlimit=500&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T11:57:44.864885+00:00",
+        "status": "reachable",
+        "sha256": "20d957f414c168b0ff2823ecdcaa50b6f0ad9963e875083699c518ddd6d2625b",
+        "bytes": 53894
+      },
+      "collection": "guizhou-tongzhi-research",
+      "relatedStop": "wangyangming:5",
+      "status": "partial-directory-captured",
+      "relationship": "分类首500项中有多个年代同名书，未取全部707项，不作为完整版本目录",
+      "permissions": {
+        "read": true,
+        "download": "public-api",
+        "ingest": "research-metadata",
+        "redistribute": "not-cleared"
+      }
+    },
+    {
+      "id": "guizhou-image-CADAL06044352",
+      "channel": "image",
+      "title": "File:CADAL06044352 貴州通志·卷四~卷五.djvu",
+      "metadataProbe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06044352+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%9B%9B~%E5%8D%B7%E4%BA%94.djvu&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T11:58:19.604790+00:00",
+        "status": "reachable",
+        "sha256": "e957a909f9bd2e0c5749cfc866512173082df937f21ed0a4185a95423c68cc44",
+        "bytes": 2344
+      },
+      "revisionId": 1104138085,
+      "image": {
+        "size": 7289560,
+        "width": 957,
+        "height": 1359,
+        "pagecount": 216,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/CADAL06044352_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%9B%9B~%E5%8D%B7%E4%BA%94.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:CADAL06044352_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%9B%9B~%E5%8D%B7%E4%BA%94.djvu",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85309598",
+        "sha1": "dc3d6b70237e22b76ce141d8eb6eb04d2da8acc7"
+      },
+      "platformLicenseLabel": "Public domain",
+      "artifactProbe": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/88/CADAL06044352_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%9B%9B~%E5%8D%B7%E4%BA%94.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "checkedAt": "2026-11-01T11:59:29.489553+00:00",
+        "status": "reachable",
+        "sha256": "301bd711ebefcf548e27b874ff6487a84ae3a22213a0d7cf60131626a9304427",
+        "bytes": 7289560
+      },
+      "status": "image-captured-research-only",
+      "collection": "guizhou-tongzhi-research",
+      "relatedStop": "wangyangming:5",
+      "relationship": "平台标四库本、CADAL来源；与WYG转录同本关系尚待逐叶核验，不计独立佐证",
+      "metadataNote": "完整元数据及影像原件仅隔离保存；平台Public domain标签不替代项目分发审查",
+      "permissions": {
+        "read": true,
+        "download": "public-original",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      }
+    },
+    {
+      "id": "guizhou-image-CADAL06044354",
+      "channel": "image",
+      "title": "File:CADAL06044354 貴州通志·卷八~卷九.djvu",
+      "metadataProbe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06044354+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%85%AB~%E5%8D%B7%E4%B9%9D.djvu&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T11:58:23.378436+00:00",
+        "status": "reachable",
+        "sha256": "5e9727c93b2c1fb7bde3579eee2390f4c922235ce68bc2f7e957d1d400b3deae",
+        "bytes": 2344
+      },
+      "revisionId": 1104138099,
+      "image": {
+        "size": 3970119,
+        "width": 957,
+        "height": 1359,
+        "pagecount": 143,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/CADAL06044354_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%85%AB~%E5%8D%B7%E4%B9%9D.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:CADAL06044354_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%85%AB~%E5%8D%B7%E4%B9%9D.djvu",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85309600",
+        "sha1": "5b108f7a552a2081f84fe75806c845c0223228ed"
+      },
+      "platformLicenseLabel": "Public domain",
+      "artifactProbe": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/CADAL06044354_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%85%AB~%E5%8D%B7%E4%B9%9D.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "checkedAt": "2026-11-01T11:59:34.969351+00:00",
+        "status": "reachable",
+        "sha256": "314bd598ea680ac0f6865045e2890f0dec555cd8407a4e877bc53c0a3458bf7c",
+        "bytes": 3970119
+      },
+      "status": "image-captured-research-only",
+      "collection": "guizhou-tongzhi-research",
+      "relatedStop": "wangyangming:5",
+      "relationship": "平台标四库本、CADAL来源；与WYG转录同本关系尚待逐叶核验，不计独立佐证",
+      "metadataNote": "完整元数据及影像原件仅隔离保存；平台Public domain标签不替代项目分发审查",
+      "permissions": {
+        "read": true,
+        "download": "public-original",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      }
+    },
+    {
+      "id": "guizhou-image-CADAL06044363",
+      "channel": "image",
+      "title": "File:CADAL06044363 貴州通志·卷十九~卷二十.djvu",
+      "metadataProbe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06044363+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%8D%81%E4%B9%9D~%E5%8D%B7%E4%BA%8C%E5%8D%81.djvu&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T11:58:27.279643+00:00",
+        "status": "reachable",
+        "sha256": "a971afb10c9e17f354b85d2e5cfbc6d8bef81dbafcbf00a1f4feaaf3d638979f",
+        "bytes": 2392
+      },
+      "revisionId": 1104138150,
+      "image": {
+        "size": 5617925,
+        "width": 957,
+        "height": 1359,
+        "pagecount": 182,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/CADAL06044363_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%8D%81%E4%B9%9D~%E5%8D%B7%E4%BA%8C%E5%8D%81.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:CADAL06044363_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%8D%81%E4%B9%9D~%E5%8D%B7%E4%BA%8C%E5%8D%81.djvu",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85309634",
+        "sha1": "95fb5861592bf8f6c71f60f01ca7b3f28b090956"
+      },
+      "platformLicenseLabel": "Public domain",
+      "artifactProbe": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/CADAL06044363_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E5%8D%81%E4%B9%9D~%E5%8D%B7%E4%BA%8C%E5%8D%81.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "checkedAt": "2026-11-01T11:59:46.781005+00:00",
+        "status": "reachable",
+        "sha256": "979ed1d65429b38e64673923cc68d5239bd59e6ad7141e431b97ae54abeb2da0",
+        "bytes": 5617925
+      },
+      "status": "image-captured-research-only",
+      "collection": "guizhou-tongzhi-research",
+      "relatedStop": "wangyangming:5",
+      "relationship": "平台标四库本、CADAL来源；与WYG转录同本关系尚待逐叶核验，不计独立佐证",
+      "metadataNote": "完整元数据及影像原件仅隔离保存；平台Public domain标签不替代项目分发审查",
+      "permissions": {
+        "read": true,
+        "download": "public-original",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
+      }
+    },
+    {
+      "id": "guizhou-kangxi-nar",
+      "channel": "institution-image",
+      "probe": {
+        "url": "https://www.digital.archives.go.jp/file/en/1067791",
+        "checkedAt": "2026-11-01T11:59:33.678817+00:00",
+        "previousObservation": "web工具打开返回403；本次仅再连通一次",
+        "attempts": 2,
+        "status": "reachable",
+        "sha256": "6b1dff254eb9282f7b8ed95b37e38d6acae72aceff36a9caf6ea632c48b925fb",
+        "bytes": 199155
+      },
+      "catalogHint": "机构原始页面已取得，异版元数据线索；未取得该馆影像原件",
+      "status": "different-edition-catalog-captured",
+      "nextAction": "本轮两次连通后已得书目；仅在具体版本争议需要时查该馆影像，不据册次代卷次",
+      "collection": "guizhou-tongzhi-research",
+      "title": "貴州通志 · 日本国立公文书馆 史138-0001",
+      "catalogExtent": "康熙间序刊，丹达礼修，37卷18册",
+      "relationship": "康熙37卷版，不能替代乾隆46卷WYG转录；影像入口待后续核查",
+      "permissions": {
+        "read": true,
+        "download": "catalog-capture-only",
+        "ingest": "research-metadata",
+        "redistribute": "catalog-CC0;images-not-cleared"
+      }
     }
   ]
 }

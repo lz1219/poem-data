@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "id": "guizhou-yangming-cave",
+  "subject": {
+    "type": "journey",
+    "key": "wangyangming"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "阳明洞：游息与居所的证据边界",
+  "claim": "AI辅助资料解释·未经人工审校。取得《贵州通志》相关原条，供龙场及相关行程复核；不改默认地图事实。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T12:03:54.814882+00:00",
+    "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr2k0056",
+      "quote": "陽明洞(在龍岡山半巖下髙敞深廣各二三丈頂/石如鑿舊名東洞明王守仁謫居龍場游)¶\n　　(息其中更名陽明小洞天書於石嵌洞中/洞上有僧舍二左巔有文昌閣甚峻麗)",
+      "locator": "KR2k0056_005.txt，KR2k0056_WYG_005-12b",
+      "url": "https://github.com/kanripo/KR2k0056/blob/2b42056baba7e67dd70a039dad61843a9b30a2d7/KR2k0056_005.txt",
+      "commit": "2b42056baba7e67dd70a039dad61843a9b30a2d7",
+      "originalFileSha256": "afdba97308f25b4ece1ac98a8cff4b4fc9e33162f60d0d13232806154db9f285",
+      "sha256": "10dcf692a6f72250e10d522949bfec990d4513e1c5611ce3e3882cc7ed74df53",
+      "textFile": "data/witnesses/10dcf692a6f72250e10d522949bfec990d4513e1c5611ce3e3882cc7ed74df53.txt",
+      "startByte": 20796,
+      "endByte": 21009,
+      "verifiedQuote": true,
+      "verification": "只核片段与固定电子文件逐字节对应；未对影像或人工学术审校",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "原条记旧名东洞及王守仁游息；“游息”不能单独证明以洞为住所，更不能证明石棺细节或现代精确坐标。"
+  ],
+  "reasoning": "原态记载只提供继续核查的出处，不自动证明明代事件、亲历、因果或现代精确位置。",
+  "counterEvidence": "清代后出编纂与明代事件有时间距离；所取四库转录尚未完成影像对校。暂无足够依据裁定版本差异或现有站点叙述。",
+  "alternatives": [
+    "同名志书有康熙37卷及乾隆46卷等不同版本，不能按书名混用。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr2k0056",
+      "mode": "明确条题边界逐字截取",
+      "relatedStop": "wangyangming:5"
+    }
+  ],
+  "nextAction": "核原影像、版本及明代同时资料；卷题冲突先存疑，地点和系年不自动采信。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T12:03:54.815801+00:00",
+  "sha256": "306c16a12a73750fbd6b79ec50e3da57f18b84ede904e1c0b6574abf472df045"
+}

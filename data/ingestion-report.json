@@ -1,15 +1,15 @@
 {
-  "batchId": "ec8b79dcfe9f3a851396609138bc12b8e352f93df246ad7bf8763bd03be856b4",
+  "batchId": "5ca8d65390452359c6ccabae156e51e42c5ea083cd80f02158ea5f1a9cd9c3d5",
   "phase": "verified",
-  "verifiedAt": "2026-11-01T11:52:10.765406+00:00",
+  "verifiedAt": "2026-11-01T12:21:41.922440+00:00",
   "integrityPassed": true,
   "academicReview": "pending",
   "publicExposure": false,
   "repeatImportChecked": true,
-  "originalBlobs": 2925,
-  "originalBytes": 102676184,
+  "originalBlobs": 2993,
+  "originalBytes": 123810499,
   "sourceSnapshotCounts": {
-    "github": 29,
+    "github": 30,
     "wikisource": 190
   },
   "wikiCollectionCoverage": {
@@ -32,13 +32,13 @@
     }
   },
   "textUnitCounts": {
-    "gitFiles": 1968,
+    "gitFiles": 2015,
     "wikiPages": 190,
     "wikiBodyVolumes": 188
   },
   "volumeHeadingCandidates": 122,
-  "textFiles": 2158,
-  "archiveEntries": 2209,
+  "textFiles": 2205,
+  "archiveEntries": 2258,
   "recordCounts": {
     "volume_heading": 122,
     "corpus_book": 38,
@@ -46,21 +46,21 @@
     "person": 35,
     "journey": 20,
     "stop": 201,
-    "source": 47,
+    "source": 51,
     "edition": 3,
-    "research_revision": 364
+    "research_revision": 368
   },
   "derivedCounts": {
-    "edition": 219,
-    "unit": 2158,
-    "page": 101998,
-    "record_link": 654,
-    "quote_match": 28,
+    "edition": 220,
+    "unit": 2205,
+    "page": 106905,
+    "record_link": 658,
+    "quote_match": 33,
     "issue": 900
   },
   "unitKinds": {
-    "front_matter": 29,
-    "body": 1533,
+    "front_matter": 30,
+    "body": 1579,
     "back_matter": 15,
     "unclassified": 581
   },
@@ -70,7 +70,7 @@
     "traditional-derived": 49,
     "stop-fact-review-pending": 201
   },
-  "checksPassed": 104232,
+  "checksPassed": 109196,
   "publicTableCounts": {
     "book": 38,
     "stop": 105,
@@ -86,8 +86,8 @@
     "research_note": 348
   },
   "evidenceLocations": {
-    "total": 28,
-    "exact": 28,
+    "total": 33,
+    "exact": 33,
     "unresolved": 0
   },
   "scope": "原件及快照全量存储回读验证；不等于学术内容已核，不等于原典全本无缺卷。"
