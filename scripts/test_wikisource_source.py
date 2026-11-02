@@ -86,4 +86,42 @@ class WikiSourcesTests(unittest.TestCase):
         self.assertEqual(result['markerCandidates'][0]['marker'],'cq=161')
 
 
+class WikiReadingTests(unittest.TestCase):
+    def wrapped(self, body):
+        return '{{header\n| title = 原书\n}}\n\n' + body + '\n\n==註釋==\n{{reflist}}'
+
+    def test_heading_reference_and_main_references_keep_utf8_locations(self):
+        from wikisource_source import reading_paragraphs
+        raw = self.wrapped('==題<ref>題注</ref>==\n𠮷<u>原</u><ref>注[[卷|名]]</ref>文。')
+        heading, paragraph = reading_paragraphs(raw)
+        self.assertEqual(heading['body'], '題')
+        self.assertEqual(heading['origin']['kind'], 'heading')
+        self.assertEqual(paragraph['body'], '𠮷原文。')
+        self.assertEqual(paragraph['origin']['annotations'][0]['anchor'], 2)
+        for p in (heading, paragraph):
+            note = p['origin']['annotations'][0]
+            captured = raw.encode()[note['sourceByteStart']:note['sourceByteEnd']].decode()
+            self.assertTrue(captured.startswith('<ref>') and captured.endswith('</ref>'))
+
+    def test_notes_are_not_silently_discarded_or_reattributed(self):
+        from wikisource_source import reading_paragraphs
+        p, = reading_paragraphs(self.wrapped('原<ref>注\n</br>保留注的後行</ref>文。'))
+        self.assertEqual(p['body'], '原文。')
+        note, = p['origin']['annotations']
+        self.assertIn('保留注的後行', note['body'])
+        self.assertEqual(note['attribution'], '维基编者注·注者待核')
+
+    def test_unknown_markup_and_unclosed_note_refuse_import(self):
+        from wikisource_source import reading_paragraphs
+        for body in ('原{{未知模板}}文', '原<ref>未闭合', '原<span>未支持标签</span>'):
+            with self.assertRaises(ValueError):
+                reading_paragraphs(self.wrapped(body))
+
+    def test_literal_source_error_is_preserved_and_heading_marks_removed(self):
+        from wikisource_source import reading_paragraphs
+        title, body = reading_paragraphs(self.wrapped('===201===\n<<u>有苗</u>來格，-{云}-。'))
+        self.assertEqual(title['body'], '201')
+        self.assertEqual(body['body'], '<有苗來格，云。')
+
+
 if __name__ == '__main__': unittest.main()

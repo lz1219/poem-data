@@ -1,0 +1,40 @@
+{
+  "bookId": 20,
+  "bookTitle": "《传习录》",
+  "editionName": "传习录·维基有标点电子转录（纸本底本及编者注归属待核）",
+  "baseEdition": "原页未注明可核纸本版本，不追认为王文成公全书或某现代点校本",
+  "capture": {
+    "url": "https://zh.wikisource.org/w/index.php?title=Special%3AExport&pages=%E5%82%B3%E7%BF%92%E9%8C%84%0A%E5%82%B3%E7%BF%92%E9%8C%84%2F%E5%8D%B7%E4%B8%8A%0A%E5%82%B3%E7%BF%92%E9%8C%84%2F%E5%8D%B7%E4%B8%AD%0A%E5%82%B3%E7%BF%92%E9%8C%84%2F%E5%8D%B7%E4%B8%8B&curonly=1",
+    "checkedAt": "2026-11-02T04:45:12.852820+00:00",
+    "status": "reachable",
+    "sha256": "33e87ea703c2bdc7742807814bda6cc31707040c008cd6dcb9d7481acefaf4da",
+    "bytes": 288904
+  },
+  "permissionCapture": {
+    "url": "https://zh.wikisource.org/wiki/%E5%82%B3%E7%BF%92%E9%8C%84",
+    "checkedAt": "2026-11-02T04:45:12.210260+00:00",
+    "status": "reachable",
+    "sha256": "5be3b6acb2b5441a3703aa94940bd4aee89c7af49aaee8df50701ad5015f5429",
+    "bytes": 53016
+  },
+  "volumes": [
+    {
+      "title": "傳習錄/卷上",
+      "juan": "卷上",
+      "revisionId": 2603592,
+      "textSha256": "18c034c52b8edad8235527050fa0f172e3898a963425a8f5b097fe46583087c4"
+    },
+    {
+      "title": "傳習錄/卷中",
+      "juan": "卷中",
+      "revisionId": 2509125,
+      "textSha256": "0a7e74566a2a0792e9d7b22ffd6fee9318683d4892122c28ba7ef2e0fb0c3ca9"
+    },
+    {
+      "title": "傳習錄/卷下",
+      "juan": "卷下",
+      "revisionId": 2063633,
+      "textSha256": "a33e45c31fc038640119cc7735da191a7cac39ff3307ec1504c1d801491bcb95"
+    }
+  ]
+}

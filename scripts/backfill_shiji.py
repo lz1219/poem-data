@@ -264,8 +264,13 @@ def apply(conn, plan, backup_dir, *, backup_fn=backup):
                  (plan['batchId'], book_id, edition_id, Jsonb(plan['manifest']), Jsonb(result)))
     unit_rows = []
     for identity, unit in zip(ids, plan['units']):
-        url = 'https://github.com/' + plan['manifest']['source']['repository'] + '/blob/' + plan['manifest']['source']['commit'] + '/' + unit['origin']['sourcePath']
-        unit_rows.append((identity, book_id, unit['juan'], unit['juan'], unit['body'], unit['sha256'], edition, url, False))
+        url = unit.get('sourceUrl')
+        if url is None:
+            url = 'https://github.com/' + plan['manifest']['source']['repository'] + '/blob/' + plan['manifest']['source']['commit'] + '/' + unit['origin']['sourcePath']
+        else:
+            from urllib.parse import urlparse
+            require(urlparse(url).scheme == 'https' and bool(urlparse(url).netloc), 'Invalid fixed source URL')
+        unit_rows.append((identity, book_id, unit['juan'], unit['juan'], unit['body'], unit['sha256'], edition, url, unit.get('punctuated', False)))
     copy_rows(conn, 'COPY public.text_unit(id,book_id,juan,title,body,sha256,edition,source_url,punctuated) FROM STDIN', unit_rows)
     copy_rows(conn, 'COPY public.corpus_unit_origin(unit_id,batch_id,edition_id,ordinal,metadata) FROM STDIN',
               ((identity, plan['batchId'], edition_id, ordinal, Jsonb(unit['origin']))

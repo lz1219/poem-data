@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-02T05:03:09.861883+00:00",
+  "method": "Read-only original corpus counts after Chuanxilu import; records are not verified original-book volumes or academic certification",
+  "counts": {
+    "book": 38,
+    "edition": 5,
+    "text_unit": 2628,
+    "paragraph": 144212,
+    "corpus_poem": 66968
+  }
+}

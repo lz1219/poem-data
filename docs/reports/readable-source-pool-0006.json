@@ -1,0 +1,1427 @@
+{
+  "checkedAt": "2026-11-02T04:57:43.115164+00:00",
+  "scope": "R-15/R-16 public readable corpus source pool; candidate title matches are not verified edition mappings",
+  "existingBooksChecked": 38,
+  "channels": [
+    {
+      "id": "kanripo",
+      "purpose": "古籍别集/史传注本；既有27仓库可复用",
+      "permissions": {
+        "read": true,
+        "download": true,
+        "ingest": "按固定馆藏声明及单书审查",
+        "redistribute": "CC-BY-SA4.0声明范围；佛典不套用"
+      },
+      "status": "已采固定文本；多数未标点，优先用于校核与缺卷",
+      "upstream": "同底本转载归同来源链"
+    },
+    {
+      "id": "daizhige",
+      "repository": "garychowcmu/daizhigev20",
+      "commit": "4a6d6f2088825f132521d848c2ea86cf9c9a7620",
+      "treeCapture": {
+        "url": "https://api.github.com/repos/garychowcmu/daizhigev20/git/trees/4a6d6f2088825f132521d848c2ea86cf9c9a7620?recursive=1",
+        "checkedAt": "2026-11-02T01:00:11.736669+00:00",
+        "status": "reachable",
+        "sha256": "8fd947174f7cb104cd859137e3d6f4e22dac43569908573c9b504b2570fdebee",
+        "bytes": 4184371
+      },
+      "textFiles": 15694,
+      "permissionCapture": {
+        "url": "https://raw.githubusercontent.com/garychowcmu/daizhigev20/4a6d6f2088825f132521d848c2ea86cf9c9a7620/%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5.md",
+        "checkedAt": "2026-11-02T01:00:47.836151+00:00",
+        "status": "reachable",
+        "sha256": "b7eb7753da28526189736216f908578b41fd4e57b0f867fea91b0b5bc5b38d9a",
+        "bytes": 597
+      },
+      "permissions": {
+        "read": true,
+        "download": "public-repository",
+        "ingest": "not-cleared",
+        "redistribute": "not-cleared"
+      },
+      "status": "广泛TXT书目候选；当前说明未明再分发条件，不批量发布",
+      "upstream": "须逐书核；已见史记表略与占位，不把文件存在视为齐全"
+    },
+    {
+      "id": "chinese-poetry",
+      "repository": "chinese-poetry/chinese-poetry",
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "treeCapture": {
+        "url": "https://api.github.com/repos/chinese-poetry/chinese-poetry/git/trees/b8594f81a89752241442f2ce267d6f66f96704ee?recursive=1",
+        "checkedAt": "2026-11-02T04:45:38.790412+00:00",
+        "status": "reachable",
+        "sha256": "ea8eaed870d6cf1e7f74e0ff3d9c1e03022217b9266cbaf2aa170543d28f6d7b",
+        "bytes": 585893
+      },
+      "licenseCapture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/LICENSE",
+        "checkedAt": "2026-11-02T04:45:37.368792+00:00",
+        "status": "reachable",
+        "sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+        "bytes": 1076
+      },
+      "readmeCapture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/README.md",
+        "checkedAt": "2026-11-02T04:45:37.059760+00:00",
+        "status": "reachable",
+        "sha256": "2c5dff386efd9eaa08a1b64489538fc96637b9e530e9815a1563e6ee7f880020",
+        "bytes": 7947
+      },
+      "songci": {
+        "repository": "chinese-poetry/chinese-poetry",
+        "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+        "files": [
+          {
+            "path": "宋词/ci.song.0.json",
+            "gitBlobSha": "9d5e71dbc818385ac90fc4e5a73bb1947aeab839",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.0.json",
+              "checkedAt": "2026-11-02T04:47:00.531668+00:00",
+              "status": "reachable",
+              "sha256": "7761bc5ef50305753ea3dcea9e1ef3164e153e3ee366169e9c5a9a7d85b21b22",
+              "bytes": 406936
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.1000.json",
+            "gitBlobSha": "c9723ff21a3ea7b2049733d2c5c674a852a9ca5c",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.1000.json",
+              "checkedAt": "2026-11-02T04:47:57.159496+00:00",
+              "status": "reachable",
+              "sha256": "5f79a2d9011e6d414f04e51176c5d4f4c762fd784dce98b035968367b6f2ef4e",
+              "bytes": 368986
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.10000.json",
+            "gitBlobSha": "c9499fe09d986b1973aa6704c1636383960a6143",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.10000.json",
+              "checkedAt": "2026-11-02T04:47:56.298512+00:00",
+              "status": "reachable",
+              "sha256": "8d37b015132bf9776fb41c44d445572d2cd9bf5e250dde213596c480e5962545",
+              "bytes": 401864
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.11000.json",
+            "gitBlobSha": "af91c5dc4b90d698bf489f98f9e918748d581359",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.11000.json",
+              "checkedAt": "2026-11-02T04:47:56.369588+00:00",
+              "status": "reachable",
+              "sha256": "9a4f5082638f82339afbde99f1af7bae1719207f77d5516cb8f6d370c9c1d0c9",
+              "bytes": 414634
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.12000.json",
+            "gitBlobSha": "370a3d6f7a5b764d6ad3e08645d23c2c2bb8375d",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.12000.json",
+              "checkedAt": "2026-11-02T04:47:56.814584+00:00",
+              "status": "reachable",
+              "sha256": "a89094fed6b3003c171a9036052ff6a289367b4dd68d97c000b5f5e90ea2df2f",
+              "bytes": 417329
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.13000.json",
+            "gitBlobSha": "22c81567b756a827485b99903e9d317a3c14a957",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.13000.json",
+              "checkedAt": "2026-11-02T04:48:02.215234+00:00",
+              "status": "reachable",
+              "sha256": "dd51b268dec508d44a18e2d4a84edd109ff8c532b6eace4160ea88674f62515c",
+              "bytes": 435352
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.14000.json",
+            "gitBlobSha": "39eb7488f2371d8804bd7841cc862129035a67e3",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.14000.json",
+              "checkedAt": "2026-11-02T04:48:01.229823+00:00",
+              "status": "reachable",
+              "sha256": "9d7410bcaebc31685e3d999c6af218a3583fd8e9f57cacf640c66607121e2dbf",
+              "bytes": 498986
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.15000.json",
+            "gitBlobSha": "ea7f9c29a0d6555cb61f2713f8dce51069e0fc54",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.15000.json",
+              "checkedAt": "2026-11-02T04:48:02.499401+00:00",
+              "status": "reachable",
+              "sha256": "5e441c85494955290138ed8561decb3f302d3628fe390cea3477e1d446039525",
+              "bytes": 502382
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.16000.json",
+            "gitBlobSha": "2f6cd18f0a0c931594c7d54d49809525526d3d48",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.16000.json",
+              "checkedAt": "2026-11-02T04:48:03.161098+00:00",
+              "status": "reachable",
+              "sha256": "d003d66c58e40fab1d2a40f17f6149eef53a126c7e54b035153ceae4fe707742",
+              "bytes": 478885
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.17000.json",
+            "gitBlobSha": "d5a986bce25ad77b6899b4f7ca84e6ce47e65d15",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.17000.json",
+              "checkedAt": "2026-11-02T04:48:06.597218+00:00",
+              "status": "reachable",
+              "sha256": "b46b9f908b5bb0a3b4dd18f268c233a50b8b794d6ab1ec79afcb3612792f0574",
+              "bytes": 472066
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.18000.json",
+            "gitBlobSha": "bde09664afbbf0de97777c2f0b43212b472803ce",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.18000.json",
+              "checkedAt": "2026-11-02T04:48:07.907420+00:00",
+              "status": "reachable",
+              "sha256": "751cf8ee2a925f4957d010e6f4bf46cc9e0a90a176cfb731185ba43ecb72b14b",
+              "bytes": 481281
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.19000.json",
+            "gitBlobSha": "665612fdda604d77e16499ae106238e7c6c74ebe",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.19000.json",
+              "checkedAt": "2026-11-02T04:48:11.816000+00:00",
+              "status": "reachable",
+              "sha256": "c6becb6a81cc04e25564f501ff768482b6c328d976c48e2003c8b8bd94ef4612",
+              "bytes": 341771
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.2000.json",
+            "gitBlobSha": "ebc2ef35a9d1d9ddb0e4e25acb64831ef9695704",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.2000.json",
+              "checkedAt": "2026-11-02T04:48:10.207472+00:00",
+              "status": "reachable",
+              "sha256": "f700d8e14df62d371dfba7ce18bf1641c304540907b26b68d356c4b6b256fe8d",
+              "bytes": 389037
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.20000.json",
+            "gitBlobSha": "91930556c81a5bca977f50daf3333a7456075263",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.20000.json",
+              "checkedAt": "2026-11-02T04:48:12.278622+00:00",
+              "status": "reachable",
+              "sha256": "1dfc08051969ab2ecdfa3eea8b29bf79d3dfe9ad1133127f25f622c2b14348c2",
+              "bytes": 434930
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.21000.json",
+            "gitBlobSha": "1b5acde750de6dc2801263944009f8dc1811cb55",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.21000.json",
+              "checkedAt": "2026-11-02T04:48:11.963053+00:00",
+              "status": "reachable",
+              "sha256": "3344ba453ae7840339944ce29e4295b5b668d79f79210a99e6e1a58ee874dbc5",
+              "bytes": 18904
+            },
+            "records": 50
+          },
+          {
+            "path": "宋词/ci.song.3000.json",
+            "gitBlobSha": "81294df318b4ac5dc0e9c43a8c28e1b956ab9aee",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.3000.json",
+              "checkedAt": "2026-11-02T04:48:16.239334+00:00",
+              "status": "reachable",
+              "sha256": "1791391a8a2ca855e133f7ea48bf0c104b3890d628ae2929f9378960a66c1427",
+              "bytes": 417829
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.4000.json",
+            "gitBlobSha": "232e7aa1a1c5e5de3d43d8fa3cd6c6a14720508b",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.4000.json",
+              "checkedAt": "2026-11-02T04:48:18.861479+00:00",
+              "status": "reachable",
+              "sha256": "48c3e33bab920e17929ea08300c4c5ca72b246669ed5767e5cb985d894514150",
+              "bytes": 395848
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.5000.json",
+            "gitBlobSha": "57a4c25205301dc7bc0cded24d75e7c3799f2bda",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.5000.json",
+              "checkedAt": "2026-11-02T04:48:16.934691+00:00",
+              "status": "reachable",
+              "sha256": "1e10ee4be18e225c2efa0bb8d58691ebb6d40cd83588f308d9635a37392bdadd",
+              "bytes": 388016
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.6000.json",
+            "gitBlobSha": "b62ee03b0f4eed639f1b47c50255f1d5e277a6c4",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.6000.json",
+              "checkedAt": "2026-11-02T04:48:18.050888+00:00",
+              "status": "reachable",
+              "sha256": "8ff2b21b4e92a435f72da04fcb935a6a3498e839cde5c837ea418871f133c248",
+              "bytes": 390822
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.7000.json",
+            "gitBlobSha": "0cc3566bfc912124a43bf25b68ba33d9397ca96d",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.7000.json",
+              "checkedAt": "2026-11-02T04:48:21.659478+00:00",
+              "status": "reachable",
+              "sha256": "8fe3f7ac40ab7d6c80cdd42305e848c1dc51cff26bc42b335ddfdfaccd48d1ba",
+              "bytes": 415095
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.8000.json",
+            "gitBlobSha": "6a3bd767d1c922bdfefd5b68a35046dcdb26d5e5",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.8000.json",
+              "checkedAt": "2026-11-02T04:48:21.776889+00:00",
+              "status": "reachable",
+              "sha256": "8d9c26a4aa62264d2eea853944e47a1420dd94e7465bee7c3e52cec2cf8bd653",
+              "bytes": 390756
+            },
+            "records": 1000
+          },
+          {
+            "path": "宋词/ci.song.9000.json",
+            "gitBlobSha": "b149fd79cad8d67620a5fbccd1265e06616de438",
+            "capture": {
+              "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.9000.json",
+              "checkedAt": "2026-11-02T04:48:23.897768+00:00",
+              "status": "reachable",
+              "sha256": "bd6a4d90b17ef195f32e38dfa483b0d39d671db3cdd5b462b292aac6916f26a6",
+              "bytes": 397207
+            },
+            "records": 1000
+          }
+        ],
+        "stats": {
+          "filesExpected": 22,
+          "filesAcquired": 22,
+          "records": 21050,
+          "authorLabels": 1490,
+          "exactDuplicateRecordExtras": 4,
+          "missingText": 0,
+          "replacementCharacters": 13,
+          "unexpectedKeys": [
+            "prologue",
+            "tags"
+          ]
+        },
+        "qualityFindings": {
+          "exactDuplicates": [
+            {
+              "record": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 575,
+                "author": "吕胜己",
+                "rhythmic": "谒金门"
+              },
+              "sameAs": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 572,
+                "author": "吕胜己",
+                "rhythmic": "谒金门"
+              },
+              "recordSha256": "cd3fe6190b52acae975848bd1bf08fb3cc51f3de1250d55c05d059c28ba939ca"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 576,
+                "author": "吕胜己",
+                "rhythmic": "谒金门"
+              },
+              "sameAs": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 573,
+                "author": "吕胜己",
+                "rhythmic": "谒金门"
+              },
+              "recordSha256": "9168bcb6b2ba1174962d59c675bb599c8b0ce14eed4e391594587aef3f9fe6a4"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 577,
+                "author": "吕胜己",
+                "rhythmic": "谒金门"
+              },
+              "sameAs": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 574,
+                "author": "吕胜己",
+                "rhythmic": "谒金门"
+              },
+              "recordSha256": "9c08462d23033f1d926082b207ad7478595ed1defb253db3eefb3798c8373d2d"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.19000.json",
+                "jsonArrayIndex": 790,
+                "author": "无名氏",
+                "rhythmic": "失调名"
+              },
+              "sameAs": {
+                "path": "宋词/ci.song.19000.json",
+                "jsonArrayIndex": 736,
+                "author": "无名氏",
+                "rhythmic": "失调名"
+              },
+              "recordSha256": "e2ad41e57c02ef005aae66580540e1aeb9268f19af6cf7f91a55b4640c7fd363"
+            }
+          ],
+          "replacementCharacters": [
+            {
+              "record": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 122,
+                "author": "王质",
+                "rhythmic": "别素质・忆瑶姬"
+              },
+              "paragraphIndex": 3,
+              "replacementOffsets": [
+                5,
+                8
+              ],
+              "paragraphSha256": "e276b7e68e042ada0c0ad7648454e9ee8c1aedc4dcdb221aeaf4578f07a914e1",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 150,
+                "author": "沈瀛",
+                "rhythmic": "行香子"
+              },
+              "paragraphIndex": 5,
+              "replacementOffsets": [
+                1,
+                5
+              ],
+              "paragraphSha256": "fb8a9c58b40f75e36cfd914b8c2ff960296c5fa516e5f12f12ae4ccd734795b5",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.10000.json",
+                "jsonArrayIndex": 882,
+                "author": "赵长卿",
+                "rhythmic": "水龙吟"
+              },
+              "paragraphIndex": 0,
+              "replacementOffsets": [
+                0,
+                2
+              ],
+              "paragraphSha256": "10a23fe2ae4f896dc99dcce9e7ce632f41ae79410eddceef76f8e559dbd0b07d",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.11000.json",
+                "jsonArrayIndex": 772,
+                "author": "程垓",
+                "rhythmic": "清平乐"
+              },
+              "paragraphIndex": 4,
+              "replacementOffsets": [
+                3,
+                7
+              ],
+              "paragraphSha256": "bf27625d41cdfd13a4c4de66707676f8d0b0c810aab4617ab9d4dd2e1e8681f3",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.14000.json",
+                "jsonArrayIndex": 184,
+                "author": "黄机",
+                "rhythmic": "沁园春"
+              },
+              "paragraphIndex": 6,
+              "replacementOffsets": [
+                12,
+                16
+              ],
+              "paragraphSha256": "e5212ad09966c0636e4ee1747a52ece783fa8706198b3947bbbdb0f898a97e14",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.15000.json",
+                "jsonArrayIndex": 330,
+                "author": "吴潜",
+                "rhythmic": "满江红"
+              },
+              "paragraphIndex": 8,
+              "replacementOffsets": [
+                7,
+                10
+              ],
+              "paragraphSha256": "f7b45d19f70b7b7ac575e0e3d383d98afaa1feba5a3c12211dcc3621337f048e",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.19000.json",
+                "jsonArrayIndex": 623,
+                "author": "无名氏",
+                "rhythmic": "多丽"
+              },
+              "paragraphIndex": 6,
+              "replacementOffsets": [
+                5,
+                9
+              ],
+              "paragraphSha256": "e3b533c3ce1faf6ead016284ad7bce354fa7b0b96920d64312b965760aa2780d",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.2000.json",
+                "jsonArrayIndex": 205,
+                "author": "向滈",
+                "rhythmic": "摊破丑奴儿・采桑子"
+              },
+              "paragraphIndex": 1,
+              "replacementOffsets": [
+                5,
+                7
+              ],
+              "paragraphSha256": "7d5ca4171be570e74bd7c5d47d31944cfe3e0431a8a38a47ff14987f61f54906",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.2000.json",
+                "jsonArrayIndex": 441,
+                "author": "韩淲",
+                "rhythmic": "贺新郎"
+              },
+              "paragraphIndex": 11,
+              "replacementOffsets": [
+                6,
+                8
+              ],
+              "paragraphSha256": "895deca59767ac56b2a0a72bdd398bced5fdcdcbc7a12ab882318728100dbbed",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.2000.json",
+                "jsonArrayIndex": 783,
+                "author": "黄庭坚",
+                "rhythmic": "鼓笛令"
+              },
+              "paragraphIndex": 3,
+              "replacementOffsets": [
+                6,
+                9
+              ],
+              "paragraphSha256": "fe090ea9440c486385e70ea1d9280d2cd252bd62d501a8350d4b7eef06dab3cf",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.20000.json",
+                "jsonArrayIndex": 606,
+                "author": "无名氏",
+                "rhythmic": "鹧鸪天"
+              },
+              "paragraphIndex": 2,
+              "replacementOffsets": [
+                3,
+                8
+              ],
+              "paragraphSha256": "14bb62b4ed2c9f54b4a6709a90b24ce5b0fc4723d904df374fb80622219499db",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.21000.json",
+                "jsonArrayIndex": 40,
+                "author": "吴文若",
+                "rhythmic": "蝶恋花"
+              },
+              "paragraphIndex": 2,
+              "replacementOffsets": [
+                5,
+                8
+              ],
+              "paragraphSha256": "8a8c3c992c442d1b8fef14e516823c468ead9e95472baa1bd19e57b466cb4051",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            },
+            {
+              "record": {
+                "path": "宋词/ci.song.9000.json",
+                "jsonArrayIndex": 294,
+                "author": "王千秋",
+                "rhythmic": "水调歌头"
+              },
+              "paragraphIndex": 7,
+              "replacementOffsets": [
+                6,
+                7
+              ],
+              "paragraphSha256": "0d5c2c1fe5e9dd45a7af382fa8a9990926e8f2aea3ef797d05ba0e1bc48c0530",
+              "action": "保留原件，待可靠异版核字；不自动猜补"
+            }
+          ],
+          "fieldCoverage": {
+            "author": 21050,
+            "paragraphs": 21050,
+            "rhythmic": 21050,
+            "tags": 931,
+            "prologue": 6
+          },
+          "deduplication": "未删除或合并；同文异题和异体尚未全量学术核对"
+        }
+      },
+      "permissions": {
+        "read": true,
+        "download": true,
+        "ingest": "仓库MIT声明；原典底本与上游权利范围待核",
+        "redistribute": "保留MIT声明，不能据此认定现代整理成果的权利已核"
+      },
+      "status": "22宋词文件全量已取得；疑错/重复列候选，不自动填成全宋词核定本",
+      "upstream": "README称来自互联网并链接采集过程；唐诗/元曲须与既有诗库查重"
+    },
+    {
+      "id": "wikisource",
+      "selection": "chuanxilu-reading-selection.json",
+      "permissionCapture": {
+        "url": "https://zh.wikisource.org/wiki/%E5%82%B3%E7%BF%92%E9%8C%84",
+        "checkedAt": "2026-11-02T04:45:12.210260+00:00",
+        "status": "reachable",
+        "sha256": "5be3b6acb2b5441a3703aa94940bd4aee89c7af49aaee8df50701ad5015f5429",
+        "bytes": 53016
+      },
+      "permissions": {
+        "read": true,
+        "download": true,
+        "ingest": "提供方CC-BY-SA4.0声明并保留署名/固定修订",
+        "redistribute": "同许可，未代替逐项权利审校"
+      },
+      "status": "传习录三卷有标点，180编者注独立；纸本与注者待核",
+      "upstream": "同页不同修订不是独立佐证"
+    },
+    {
+      "id": "cbeta",
+      "repository": "cbeta-org/xml-p5",
+      "commit": "8ebac86d00719479db5777dc6cd77ba111c3067a",
+      "treeCapture": {
+        "url": "https://api.github.com/repos/cbeta-org/xml-p5/git/trees/8ebac86d00719479db5777dc6cd77ba111c3067a?recursive=1",
+        "checkedAt": "2026-11-02T04:45:43.163810+00:00",
+        "status": "reachable",
+        "sha256": "8c7d5ec310e216fce446ff1b0cf4c087744baa1563a0689da35f29401a6c65db",
+        "bytes": 1273532
+      },
+      "readmeCapture": {
+        "url": "https://raw.githubusercontent.com/cbeta-org/xml-p5/8ebac86d00719479db5777dc6cd77ba111c3067a/README.md",
+        "checkedAt": "2026-11-02T04:45:41.195851+00:00",
+        "status": "reachable",
+        "sha256": "31c33ba2a5e3c83d28660807673c4a4181e2930740c149220e7dfd6334955780",
+        "bytes": 269
+      },
+      "permissionCapture": {
+        "url": "https://www.cbeta.org/copyright",
+        "checkedAt": "2026-11-02T04:55:36.434506+00:00",
+        "status": "reachable",
+        "sha256": "d43dbec40202a0e9052b007221802de41a1105ac507eb6c8cb83a281d9486664",
+        "bytes": 193013
+      },
+      "permissions": {
+        "read": true,
+        "download": true,
+        "ingest": "按非营利范围、具体藏经与版权分类核验",
+        "redistribute": "CC-BY-NC-SA4.0核心授权及例外；须附版本/说明，非通用CC-BY-SA"
+      },
+      "status": "正式TEI可服务大唐西域记/慈恩传；先核具体T编号和底本，不自动导入"
+    },
+    {
+      "id": "commons",
+      "purpose": "传习录影像核版",
+      "capture": {
+        "url": "https://commons.wikimedia.org/wiki/Category:%E5%82%B3%E7%BF%92%E9%8C%84",
+        "checkedAt": "2026-11-02T04:55:30.428881+00:00",
+        "status": "reachable",
+        "sha256": "74000aecaa28a381d9dbf3a60081f707b313585740ac8164ac56d4ba1b2f399b",
+        "bytes": 79811
+      },
+      "status": "目录有影像候选；未确认与维基文本同版、未逐页对校",
+      "permissions": {
+        "read": true,
+        "download": "按文件具体条件",
+        "ingest": "本批仅目录",
+        "redistribute": "未判断"
+      }
+    },
+    {
+      "id": "ndl",
+      "purpose": "传习录规范题名/异版机构目录",
+      "captures": [
+        {
+          "url": "https://id.ndl.go.jp/auth/ndlna/00627579",
+          "checkedAt": "2026-11-02T04:55:29.854048+00:00",
+          "status": "reachable",
+          "sha256": "bb9a336f819de1ff27c4de735dc7e7771a42d5ee2753d996b87aeca821fa0822",
+          "bytes": 14384
+        },
+        {
+          "url": "https://ndlsearch.ndl.go.jp/books/R100000039-I1184422",
+          "checkedAt": "2026-11-02T04:55:29.511758+00:00",
+          "status": "reachable",
+          "sha256": "79dcd63ef93d700013374d27cffc04340fba9e1cc6cf1b1d2042b9e6beb775a8",
+          "bytes": 472731
+        }
+      ],
+      "status": "机构书目可达；1936岩波本是另一整理本，不当维基纸本来源",
+      "permissions": {
+        "read": true,
+        "download": "本批仅目录响应",
+        "ingest": "本批仅目录",
+        "redistribute": "未判断"
+      }
+    },
+    {
+      "id": "open-guji-index",
+      "capture": {
+        "url": "https://api.github.com/repos/open-guji/guji-resource-index/commits/main",
+        "checkedAt": "2026-11-02T04:45:15.291497+00:00",
+        "status": "reachable",
+        "sha256": "4ef1dc461d00b40633ec48b3ca3aa8975a5cf219e404ee9929a7675106bbdcea",
+        "bytes": 14084
+      },
+      "purpose": "来源导航，非正文来源",
+      "status": "资源索引可发现更多渠道；索引、镜像和fork不计独立文献证据",
+      "permissions": {
+        "read": true,
+        "download": "目录",
+        "ingest": "只作导航",
+        "redistribute": "正文逐来源核验"
+      }
+    }
+  ],
+  "bookMatrix": [
+    {
+      "bookId": 1,
+      "title": "《苏轼诗集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "苏轼诗集",
+        "东坡全集"
+      ],
+      "daizhigeExactNamePaths": [
+        "集藏/四库别集/东坡全集.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4d0076",
+          "name": "東坡全集 / WYG",
+          "url": "https://github.com/kanripo/KR4d0076/tree/45dbdf286472e7903757a064bb37c514c999617a"
+        }
+      ],
+      "nextAction": "仅书目；作者作品可能位于总集诗库，不能据本ID零行断言无苏诗。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 2,
+      "title": "《东坡乐府》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "东坡乐府",
+        "东坡词"
+      ],
+      "daizhigeExactNamePaths": [
+        "诗藏/词集/东坡词.txt",
+        "集藏/四库别集/东坡乐府.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4j0005",
+          "name": "東坡詞 / WYG",
+          "url": "https://github.com/kanripo/KR4j0005/tree/f08a2c9e20ca90ea7f84330a912249823eaaac54"
+        }
+      ],
+      "nextAction": "仅书目；东坡詞为候选注本，须先核与乐府的版本范围。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 3,
+      "title": "《李太白全集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "李太白全集",
+        "李太白文集"
+      ],
+      "daizhigeExactNamePaths": [
+        "集藏/四库别集/李太白文集.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4c0012",
+          "name": "李太白文集 / WYG",
+          "url": "https://github.com/kanripo/KR4c0012/tree/0320bec76946f08e3cc25aa9501fafa97d6f51ac"
+        }
+      ],
+      "nextAction": "仅书目；已采李太白文集为候选独立版本，不能径改称全集。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 4,
+      "title": "《杜诗详注》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "杜诗详注"
+      ],
+      "daizhigeExactNamePaths": [
+        "集藏/四库别集/杜诗详注.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "杜诗详注与已采九家集注杜诗不是同注本，不自动合并。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 5,
+      "title": "《三国志·蜀书·诸葛亮传》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "三国志"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/三国志.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr2a0012",
+          "name": "三國志 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR2a0012/tree/214fcafa79894355909c9d8c2c1533089e7791c6"
+        }
+      ],
+      "nextAction": "篇章级引书；已采三国志魏志与蜀志原件，先核篇卷/版本映射。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 6,
+      "title": "《汉晋春秋》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《汉晋春秋》"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/志存记录/汉晋春秋.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "佚书/辑佚范围须核，不按现代同名拼本认定完整。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 7,
+      "title": "《史记》",
+      "existingTextUnits": 122,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《史记》"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/史记.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr2a0002",
+          "name": "史記集解 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR2a0002/tree/73c4d2ba067d99a6de924ac952fd6921a958c7e7"
+        }
+      ],
+      "nextAction": "已入非表120卷及提要/序；十表缺、5空电子页待核。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 8,
+      "title": "《汉书》",
+      "existingTextUnits": 234,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《汉书》"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/汉书.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr2a0007",
+          "name": "前漢書 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR2a0007/tree/683113d4baf6febecaf2ccb7913df87c4d68d454"
+        }
+      ],
+      "nextAction": "已收本版非表92卷号/110正文分卷、111独立考證、12卷首及1卷末，共234组件/6854来源页；八表13–20未入。现转录11空页/495处缺字标记、提要边界和影像对校待核；表格寻源先比对四库影印249册。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 9,
+      "title": "《战国策·赵策》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "战国策"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/志存记录/战国策.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "篇级书目，与燕策三共用战国策母书的映射待核。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 10,
+      "title": "《战国策·燕策三》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "战国策"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/志存记录/战国策.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "篇级书目，不把赵策或整本直接覆写此ID。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 11,
+      "title": "《樊川文集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《樊川文集》"
+      ],
+      "daizhigeExactNamePaths": [
+        "集藏/四库别集/樊川文集.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "已采樊川文集原件，卷篇/版本预览后入原库。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 12,
+      "title": "《大慈恩寺三藏法师传》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "大唐大慈恩寺三藏法师传"
+      ],
+      "daizhigeExactNamePaths": [
+        "佛藏/大藏经/杂藏/史传部/大唐大慈恩寺三藏法师传.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr6r0043",
+          "name": "大唐大慈恩寺三藏法師傳 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR6r0043/tree/a6f730e319ed6f5ec7c1ba5433ea1c0eb2eb0aed"
+        }
+      ],
+      "nextAction": "已采大唐大慈恩寺三藏法师传；佛典具体来源/权利另核，不能套Kanripo全库声明。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 13,
+      "title": "《大唐西域记》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《大唐西域记》"
+      ],
+      "daizhigeExactNamePaths": [
+        "佛藏/乾隆藏/此土著述/大唐西域记.txt",
+        "佛藏/大藏经/杂藏/史传部/大唐西域记.txt",
+        "史藏/地理/大唐西域记.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr6r0121",
+          "name": "大唐西域記 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR6r0121/tree/190caf330cd850ce5cd3c7dc0af95628c422a2a9"
+        }
+      ],
+      "nextAction": "已采大唐西域记；佛典具体来源/权利另核。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 14,
+      "title": "《旧唐书》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "旧唐书"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/旧唐书.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "与81/161为书目映射候选；先核已有两版卷目，不删旧ID。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 15,
+      "title": "《唐左拾遗翰林学士李公新墓碑》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《唐左拾遗翰林学士李公新墓碑》"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "单篇碑文引书，不假定独立整书；追上游别集/总集定位。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 16,
+      "title": "《欧阳文忠公集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "欧阳文忠公集",
+        "文忠集"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "已采欧阳原件及维基卷篇，原正文尚未补入本ID。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 17,
+      "title": "《苏轼文集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "苏轼文集",
+        "东坡全集"
+      ],
+      "daizhigeExactNamePaths": [
+        "集藏/四库别集/东坡全集.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4d0076",
+          "name": "東坡全集 / WYG",
+          "url": "https://github.com/kanripo/KR4d0076/tree/45dbdf286472e7903757a064bb37c514c999617a"
+        }
+      ],
+      "nextAction": "东坡全集为候选版本，范围含诗文，不能静默当苏轼文集同版。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 18,
+      "title": "《王阳明全集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "王阳明全集",
+        "王文成公全书"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "已采王文成公全书不同快照，卷题跨文件/重排须保留。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 19,
+      "title": "《明史》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《明史》"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/明史.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr2a0038",
+          "name": "明史 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR2a0038/tree/eccd6fe93126bde61b837240e6142e1343c22639"
+        }
+      ],
+      "nextAction": "与28为候选同书不同登记，先核卷目。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 20,
+      "title": "《传习录》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "传习录"
+      ],
+      "daizhigeExactNamePaths": [
+        "儒藏/语录/传习录.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "传习录与王文成公全书篇卷关系待核，不造完整卷数。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 21,
+      "title": "《王阳明全集·静心录》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《王阳明全集·静心录》"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "旧引名出处待核，不凭静心录名建立古代原典版本。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 22,
+      "title": "《王阳明全集·知行录》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《王阳明全集·知行录》"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "旧引名出处待核，不凭知行录名建立古代原典版本。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 23,
+      "title": "《王阳明全集·顺生录》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《王阳明全集·顺生录》"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "旧引名出处待核，不凭顺生录名建立古代原典版本。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 24,
+      "title": "《竹山词》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《竹山词》"
+      ],
+      "daizhigeExactNamePaths": [
+        "诗藏/词集/竹山词.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4j0053",
+          "name": "竹山詞 / WYG",
+          "url": "https://github.com/kanripo/KR4j0053/tree/9c1a7a8a15650beddb528027314f30833d383ac4"
+        }
+      ],
+      "nextAction": "与26为候选同书登记，旧ID保留。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 25,
+      "title": "宋史",
+      "existingTextUnits": 1,
+      "existingPoems": 0,
+      "candidateNames": [
+        "宋史"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/宋史.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr2a0032",
+          "name": "宋史 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR2a0032/tree/144d5640186b8e519673e5603a18667e55b1f449"
+        }
+      ],
+      "nextAction": "仅1个现有卷篇单元；已采宋史仓库不等于原库已有全书。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 26,
+      "title": "竹山詞",
+      "existingTextUnits": 1,
+      "existingPoems": 0,
+      "candidateNames": [
+        "竹山詞"
+      ],
+      "daizhigeExactNamePaths": [
+        "诗藏/词集/竹山词.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4j0053",
+          "name": "竹山詞 / WYG",
+          "url": "https://github.com/kanripo/KR4j0053/tree/9c1a7a8a15650beddb528027314f30833d383ac4"
+        }
+      ],
+      "nextAction": "仅1个现有单元；须核与24对应及两卷词集范围。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 28,
+      "title": "明史",
+      "existingTextUnits": 1,
+      "existingPoems": 0,
+      "candidateNames": [
+        "明史"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/明史.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr2a0038",
+          "name": "明史 · Kanripo原典",
+          "url": "https://github.com/kanripo/KR2a0038/tree/eccd6fe93126bde61b837240e6142e1343c22639"
+        }
+      ],
+      "nextAction": "仅1个现有单元；已采明史仓库不等于原库已有全书。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 53,
+      "title": "全宋词",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "全宋词"
+      ],
+      "daizhigeExactNamePaths": [
+        "诗藏/词集/全宋词.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "此书目ID当前诗库也为0；全宋词需单独核来源/实际覆盖。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 78,
+      "title": "全唐诗",
+      "existingTextUnits": 0,
+      "existingPoems": 57607,
+      "candidateNames": [
+        "全唐诗"
+      ],
+      "daizhigeExactNamePaths": [
+        "诗藏/诗集/全唐诗.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "诗歌库独立库存，不以零text_unit判缺诗；底本、卷次和全唐诗完整性另核。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 79,
+      "title": "元曲",
+      "existingTextUnits": 0,
+      "existingPoems": 9361,
+      "candidateNames": [
+        "元曲"
+      ],
+      "daizhigeExactNamePaths": [],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "曲库独立库存，不以零text_unit判空书。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 80,
+      "title": "資治通鑑",
+      "existingTextUnits": 589,
+      "existingPoems": 0,
+      "candidateNames": [
+        "資治通鑑"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/编年/资治通鉴.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "589单元不是589原书卷；目录层级、附加单元和版本重复待核。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 81,
+      "title": "舊唐書（四庫本）",
+      "existingTextUnits": 188,
+      "existingPoems": 0,
+      "candidateNames": [
+        "舊唐書（四庫本）"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/旧唐书.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "188单元不直接推为缺12卷；与14/161分版本核查。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 82,
+      "title": "新唐書",
+      "existingTextUnits": 325,
+      "existingPoems": 0,
+      "candidateNames": [
+        "新唐書"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/新唐书.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "325单元须核本卷/分卷/附加和重复，不按卷数直接认定完整。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 83,
+      "title": "元史",
+      "existingTextUnits": 422,
+      "existingPoems": 0,
+      "candidateNames": [
+        "元史"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/元史.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "422单元须核目录与重复，不能当422原书卷。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 84,
+      "title": "清史稿",
+      "existingTextUnits": 528,
+      "existingPoems": 0,
+      "candidateNames": [
+        "清史稿"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/清史稿.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "528现有单元；清史稿标点缺口沿具体卷目复核，不沿旧缺口数字。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 109,
+      "title": "《全唐诗》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "《全唐诗》"
+      ],
+      "daizhigeExactNamePaths": [
+        "诗藏/诗集/全唐诗.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "与78候选同书登记，保留诗库FK和旧引用，先建映射。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 160,
+      "title": "《白氏长庆集》",
+      "existingTextUnits": 0,
+      "existingPoems": 0,
+      "candidateNames": [
+        "白氏长庆集",
+        "白氏文集"
+      ],
+      "daizhigeExactNamePaths": [
+        "集藏/四库别集/白氏长庆集.txt"
+      ],
+      "previousFixedKanripoCandidates": [
+        {
+          "id": "kanripo-kr4c0069",
+          "name": "白氏文集 / SBCK",
+          "url": "https://github.com/kanripo/KR4c0069/tree/a9aabe3ae87777b7ba765c4193ff551dafbdee3e"
+        }
+      ],
+      "nextAction": "白氏文集已采；与白氏长庆集版本/卷次范围核验后并列入库。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    },
+    {
+      "bookId": 161,
+      "title": "舊唐書",
+      "existingTextUnits": 214,
+      "existingPoems": 0,
+      "candidateNames": [
+        "舊唐書"
+      ],
+      "daizhigeExactNamePaths": [
+        "史藏/正史/旧唐书.txt"
+      ],
+      "previousFixedKanripoCandidates": [],
+      "nextAction": "维基舊唐書214单元，与81WYG版并列；先核卷目，保留ID。",
+      "mappingStatus": "name candidates only; no edition equivalence or completeness inferred"
+    }
+  ],
+  "priorities": [
+    {
+      "priority": 1,
+      "work": "传习录",
+      "targetBookId": 20,
+      "action": "三卷已固定修订，白名单解析并保留180编者注，增量入原库验证",
+      "reviewStatus": "纸本底本/注者及学术人工审校待核"
+    },
+    {
+      "priority": 2,
+      "work": "全宋词",
+      "targetBookId": 53,
+      "action": "22文件21050条已固定，全量扫描4重复/13替换字符；追采集说明与纸本范围，不能仅凭MIT或数量认定学术齐全"
+    },
+    {
+      "priority": 3,
+      "work": "38书目中的别集及已有未标点卷",
+      "action": "根据本矩阵命中的TXT和既采原件核版本、标点及正文范围；同名不覆写，未知权限只留目录"
+    }
+  ],
+  "inventoryBasis": "corpus-inventory-after-0005.json: 38 existing books before this batch; counts after import in corpus-inventory-after-0006.json"
+}

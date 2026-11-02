@@ -66,6 +66,25 @@ def attach_reading(unit, paragraphs):
         segments = [{'kind': 'parenthetical' if k == 'source-parenthetical' else 'text',
                      'original': original, 'simplified': simplified}
                     for k, original, simplified in _page(body, _spans(body, origin), source_page)]
+        annotations = origin.get('annotations') or []
+        if annotations:
+            # Wiki editorial notes are stored outside the main text and have
+            # anchors in that main text, never in converted reading characters.
+            position, segments = 0, []
+            for note in annotations:
+                anchor = note['anchor']
+                if not isinstance(anchor, int) or not position <= anchor <= len(body):
+                    raise ValueError('Invalid editorial-note anchor')
+                before = body[position:anchor]
+                segments.append({'kind': 'text', 'original': before,
+                                 'simplified': cc.convert(before) if cc else None})
+                value = '〔维基编者注·注者待核：' + note['body'] + '〕'
+                segments.append({'kind': 'parenthetical', 'noteKind': 'wiki-editorial-note',
+                                 'original': value, 'simplified': cc.convert(value) if cc else None})
+                position = anchor
+            after = body[position:]
+            segments.append({'kind': 'text', 'original': after,
+                             'simplified': cc.convert(after) if cc else None})
         pages.append({'seq': paragraph.get('seq', index), 'paragraphId': paragraph.get('id'),
                       'pageLabel': origin.get('pageLabel'), 'sourcePage': source_page, 'segments': segments})
     unit['reading'] = {
@@ -74,6 +93,8 @@ def attach_reading(unit, paragraphs):
                        'status': 'machine-converted; not a translation or verified source text'},
         'originalSha256': hashlib.sha256(raw.encode()).hexdigest(),
         'layout': 'Source-page hard wraps joined and layout whitespace normalized; parenthetical slash layout markers hidden. Other paragraph line breaks retained.',
-        'noteGrouping': '原录括号分组，仅供阅读，非注者归属核定',
+        'noteGrouping': ('维基编者注单独保存，锚点指向正文原字；注者及底本待核'
+                         if any((p.get('origin') or {}).get('annotations') for p in paragraphs)
+                         else '原录括号分组，仅供阅读，非注者归属核定'),
         'pages': pages,
     }

@@ -156,4 +156,140 @@ def main(cache=None):
     print(json.dumps(coverage,ensure_ascii=False))
 
 
-if __name__ == '__main__': main()
+def plain_inline(text):
+    """Only the explicitly audited inline subset; unknown markup stops import."""
+    import html
+    text = re.sub(r'\[\[([^\[\]]+)\]\]', lambda m: m[1].split('|')[-1], text)
+    text = re.sub(r'-\{([^{};|:]+)\}-', r'\1', text)
+    text = re.sub(r'</?u>', '', text)
+    text = re.sub(r'</?br\s*/?>', '\n', text)
+    if re.search(r'\{\{|\}\}|\[\[|\]\]|<[A-Za-z!/]|-\{|\}-', text):
+        raise ValueError('Unsupported wiki markup; preserve capture and revise parser explicitly')
+    return html.unescape(text)
+
+
+def reading_paragraphs(text):
+    """Keep wiki editorial notes separate, with anchors in rendered main text."""
+    header = re.match(r'\{\{header\n.*?\}\}\s*', text, re.S)
+    tail = re.search(r'\n==註釋==\s*\{\{reflist\}\}\s*$', text)
+    if not header or not tail:
+        raise ValueError('Expected audited header and reference-list boundary')
+    result = []
+    blocks = r'(?m)^={2,3}[^=\n]+={2,3}[ \t]*(?=\n|$)|\S[\s\S]*?(?=\n\s*\n|\n={2,3}[^=\n]+={2,3}(?:\n|$)|\Z)'
+    for match in re.finditer(blocks, text[header.end():tail.start()]):
+        start, end = header.end() + match.start(), header.end() + match.end()
+        chunk = text[start:end].rstrip()
+        end = start + len(chunk)
+        heading = re.fullmatch(r'(={2,3})([^=\n]+)\1', chunk)
+        inline_start = start
+        if heading:
+            inline_start += len(heading[1])
+            chunk = heading[2]
+        pieces, annotations, pos = [], [], 0
+        for note in re.finditer(r'<ref>(.*?)</ref>', chunk, re.S):
+            pieces.append(plain_inline(chunk[pos:note.start()]))
+            value = plain_inline(note[1])
+            if not value.strip():
+                raise ValueError('Empty editorial note')
+            annotations.append({'anchor': sum(len(p) for p in pieces), 'body': value,
+                                'kind': 'wiki-editorial-note', 'attribution': '维基编者注·注者待核',
+                                'sourceByteStart': len(text[:inline_start + note.start()].encode()),
+                                'sourceByteEnd': len(text[:inline_start + note.end()].encode())})
+            pos = note.end()
+        pieces.append(plain_inline(chunk[pos:]))
+        body = ''.join(pieces)
+        if not body:
+            raise ValueError('Empty paragraph after explicit markup conversion')
+        result.append({'body': body, 'origin': {
+            'segmentation': 'source-paragraph', 'offsetUnit': 'unicode-code-point',
+            'sourceByteStart': len(text[:start].encode()), 'sourceByteEnd': len(text[:end].encode()),
+            'kind': 'heading' if heading else 'paragraph', 'annotations': annotations,
+            'spans': [{'kind': 'source-text', 'start': 0, 'end': len(body)}]}})
+    if sum(len(p['origin']['annotations']) for p in result) != text.count('<ref>'):
+        raise ValueError('Editorial-note count changed during parsing')
+    return result
+
+
+def reading_plan(cache, selection):
+    """Build an immutable plan from fixed captures, never live page content."""
+    from backfill_shiji import digest, require
+    permission = selection['permissionCapture']
+    declaration = cached_response(cache, permission['url'], permission['sha256']).decode('utf-8')
+    require('creativecommons.org/licenses/by-sa/4.0' in declaration,
+            'Fixed provider permission declaration not found')
+    capture = selection['capture']
+    raw = cached_response(cache, capture['url'], capture['sha256'])
+    units, revisions = [], []
+    for spec in selection['volumes']:
+        decoded = decode_capture({'title': spec['title'], 'captureFormat': 'mediawiki-export-xml'}, raw)
+        require(decoded['revid'] == spec['revisionId'], 'Fixed revision differs from selection')
+        require(sha(decoded['text'].encode()) == spec['textSha256'], 'Fixed wikitext differs')
+        paragraphs = reading_paragraphs(decoded['text'])
+        text_offset = 0
+        for paragraph in paragraphs:
+            paragraph['origin']['textStart'] = text_offset
+            text_offset += len(paragraph['body'])
+            paragraph['origin']['textEnd'] = text_offset
+            text_offset += 2
+        body = '\n\n'.join(p['body'] for p in paragraphs)
+        url = 'https://zh.wikisource.org/w/index.php?oldid=' + str(decoded['revid'])
+        origin = {'sourcePath': decoded['title'], 'sourceSha256': spec['textSha256'],
+                  'sourceOrder': len(units) + 1,
+                  'sourceByteStart': 0, 'sourceByteEnd': len(decoded['text'].encode()),
+                  'kind': 'body-volume', 'parser': 'wikisource-explicit-inline-and-notes-v1',
+                  'revisionId': decoded['revid'], 'revisionTimestamp': decoded['timestamp'],
+                  'reviewStatus': 'transcription-unreviewed', 'sourceUrl': url,
+                  'noteAttribution': '维基编者注·注者待核；不视为古人评点',
+                  'baseEdition': selection['baseEdition']}
+        units.append({'juan': spec['juan'], 'body': body, 'sha256': sha(body.encode()),
+                      'sourceUrl': url, 'punctuated': True, 'origin': origin, 'paragraphs': paragraphs})
+        revisions.append({k: decoded[k] for k in ('pageid', 'title', 'revid', 'timestamp')})
+    require(len(units) == 3 and [u['juan'] for u in units] == ['卷上', '卷中', '卷下'],
+            'This audited selection must contain exactly three Chuanxilu volumes')
+    info = {'parser': 'wikisource-explicit-inline-and-notes-v1', 'bookId': selection['bookId'],
+            'bookTitle': selection['bookTitle'], 'edition': selection['editionName'],
+            'editionName': selection['editionName'], 'source': {
+                'provider': 'Wikisource', 'url': capture['url'], 'sha256': capture['sha256'],
+                'revisions': revisions, 'baseEdition': selection['baseEdition']},
+            'permissionBasis': permission, 'license': 'CC-BY-SA-4.0 (provider declaration)',
+            'attribution': '中文维基文库贡献者；逐卷固定修订及编辑历史见来源链接。保留原标点；移除显示标记，编者注独立存储。',
+            'reviewStatus': '转录待校；纸本底本与编者注归属待核，非具名人工审校',
+            'coverage': {'included': '维基传习录卷上、卷中、卷下及原页编者注',
+                         'reason': '仅该电子修订范围，不声称影像对校、异版附录、拾遗或现代译注已齐'},
+            'counts': {'units': len(units), 'bodyVolumes': len(units),
+                       'sourcePageBlocks': sum(len(u['paragraphs']) for u in units),
+                       'sourceParagraphBlocks': sum(len(u['paragraphs']) for u in units),
+                       'editorialNotes': sum(len(p['origin']['annotations']) for u in units for p in u['paragraphs'])},
+            'unitDigests': [digest(u) for u in units]}
+    return {'batchId': digest(info), 'manifest': info, 'units': units}
+
+
+if __name__ == '__main__':
+    import argparse
+    from pathlib import Path
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--reading-selection', type=Path)
+    parser.add_argument('--cache', type=Path, default=ROOT.parent / '.local/research-cache')
+    parser.add_argument('--operation', choices=('preview', 'apply', 'verify', 'rollback'), default='preview')
+    parser.add_argument('--credentials', type=Path)
+    parser.add_argument('--backup-dir', type=Path)
+    parser.add_argument('--output', type=Path)
+    args = parser.parse_args()
+    if not args.reading_selection:
+        if args.operation != 'preview':
+            parser.error('A fixed reading selection is required for corpus operations')
+        main(args.cache)
+    else:
+        from backfill_shiji import apply, verify, rollback, require
+        from research import connect
+        plan = reading_plan(args.cache, read(args.reading_selection))
+        result = {k: plan[k] for k in ('batchId', 'manifest')}
+        if args.operation != 'preview':
+            require(args.credentials is not None, 'Credentials required; never echoed')
+            require(args.operation != 'apply' or args.backup_dir is not None, 'Backup directory required')
+            with connect(args.credentials, readonly=args.operation == 'verify') as conn:
+                result = apply(conn, plan, args.backup_dir) if args.operation == 'apply' else (
+                    verify(conn, plan) if args.operation == 'verify' else rollback(conn, plan))
+        if args.output:
+            dump(args.output, result)
+        print(json.dumps({k: v for k, v in result.items() if k != 'manifest'}, ensure_ascii=False))

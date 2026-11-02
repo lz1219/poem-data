@@ -1,0 +1,62 @@
+{
+  "batchId": "c1cff0f8e632b89ab0a2e923be8ce6f58f5fa0d53cf98ebf9965ed4d474a0f5c",
+  "manifest": {
+    "parser": "wikisource-explicit-inline-and-notes-v1",
+    "bookId": 20,
+    "bookTitle": "《传习录》",
+    "edition": "传习录·维基有标点电子转录（纸本底本及编者注归属待核）",
+    "editionName": "传习录·维基有标点电子转录（纸本底本及编者注归属待核）",
+    "source": {
+      "provider": "Wikisource",
+      "url": "https://zh.wikisource.org/w/index.php?title=Special%3AExport&pages=%E5%82%B3%E7%BF%92%E9%8C%84%0A%E5%82%B3%E7%BF%92%E9%8C%84%2F%E5%8D%B7%E4%B8%8A%0A%E5%82%B3%E7%BF%92%E9%8C%84%2F%E5%8D%B7%E4%B8%AD%0A%E5%82%B3%E7%BF%92%E9%8C%84%2F%E5%8D%B7%E4%B8%8B&curonly=1",
+      "sha256": "33e87ea703c2bdc7742807814bda6cc31707040c008cd6dcb9d7481acefaf4da",
+      "revisions": [
+        {
+          "pageid": 888115,
+          "title": "傳習錄/卷上",
+          "revid": 2603592,
+          "timestamp": "2025-10-05T05:47:40Z"
+        },
+        {
+          "pageid": 888118,
+          "title": "傳習錄/卷中",
+          "revid": 2509125,
+          "timestamp": "2024-12-22T14:22:25Z"
+        },
+        {
+          "pageid": 888119,
+          "title": "傳習錄/卷下",
+          "revid": 2063633,
+          "timestamp": "2021-08-07T15:05:10Z"
+        }
+      ],
+      "baseEdition": "原页未注明可核纸本版本，不追认为王文成公全书或某现代点校本"
+    },
+    "permissionBasis": {
+      "url": "https://zh.wikisource.org/wiki/%E5%82%B3%E7%BF%92%E9%8C%84",
+      "checkedAt": "2026-11-02T04:45:12.210260+00:00",
+      "status": "reachable",
+      "sha256": "5be3b6acb2b5441a3703aa94940bd4aee89c7af49aaee8df50701ad5015f5429",
+      "bytes": 53016
+    },
+    "license": "CC-BY-SA-4.0 (provider declaration)",
+    "attribution": "中文维基文库贡献者；逐卷固定修订及编辑历史见来源链接。保留原标点；移除显示标记，编者注独立存储。",
+    "reviewStatus": "转录待校；纸本底本与编者注归属待核，非具名人工审校",
+    "coverage": {
+      "included": "维基传习录卷上、卷中、卷下及原页编者注",
+      "reason": "仅该电子修订范围，不声称影像对校、异版附录、拾遗或现代译注已齐"
+    },
+    "counts": {
+      "units": 3,
+      "bodyVolumes": 3,
+      "sourcePageBlocks": 1318,
+      "sourceParagraphBlocks": 1318,
+      "editorialNotes": 180
+    },
+    "unitDigests": [
+      "6c101490cfae5d0870667ed45b01dae3e5d94afdc59eaa1798988ab1ec53edcf",
+      "77232397ea2210d910a0c5bc9b16f786b933b2663b870aa1fc582e427d37eb50",
+      "32be14cf110f63649153be7bb53b870d5728fe5aada62630fe4cdba9d8a820ff"
+    ]
+  }
+}

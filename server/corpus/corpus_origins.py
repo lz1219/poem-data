@@ -31,7 +31,9 @@ def attach_book(book, units):
             unit['origin'] = by_id[unit['id']]
     # Appended front matter and earlier-numbered volumes keep source order,
     # rather than acquisition/sequence-ID order. Leave legacy mixed data alone.
-    if units and all(u.get('origin', {}).get('metadata', {}).get('sourcePath') and
+    if units and all(isinstance(u.get('origin', {}).get('metadata', {}).get('sourceOrder'), int) for u in units):
+        units.sort(key=lambda u: (u['origin']['edition_id'], u['origin']['metadata']['sourceOrder'], u['id']))
+    elif units and all(u.get('origin', {}).get('metadata', {}).get('sourcePath') and
                      isinstance(u['origin']['metadata'].get('sourceByteStart'), int) for u in units):
         units.sort(key=lambda u: (u['origin']['edition_id'], u['origin']['metadata']['sourcePath'],
                                   u['origin']['metadata']['sourceByteStart'], u['id']))

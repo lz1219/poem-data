@@ -477,6 +477,10 @@ a { color: inherit; }
 
 /* ══ 目录页 ══ */
 .masthead { margin-bottom: 34px; }
+.masthead-top { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px; }
+.research-entry { display:inline-flex; align-items:center; gap:10px; padding:6px 12px; border:1px solid var(--line); border-radius:4px; color:var(--accent); background:var(--surface); font-size:12px; white-space:nowrap; text-decoration:none; }
+.research-entry:hover { border-color:var(--accent); background:var(--accent-soft); }
+.research-entry:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
 .brand { display: inline-block; text-decoration: none; color: inherit; }
 .brand:hover h1 { color: var(--accent); }
 h1 { transition: color .25s; }
@@ -748,7 +752,7 @@ body{background:#fff;}.container{max-width:none;padding:0;}
 <body>
 <div class="container">
   <header class="masthead">
-    <a class="brand" href="#" id="brand"><h1>江山行止 · 文献</h1></a><a href="research.html">考据笺 · 来源与研究</a>
+    <div class="masthead-top"><a class="brand" href="#" id="brand"><h1>江山行止 · 文献</h1></a><a class="research-entry" href="research.html">考据笺 · 来源与研究 <span aria-hidden="true">→</span></a></div>
     <p class="subtitle" id="sub">作品 · 人物 · 行迹</p>
   </header>
 
@@ -1225,12 +1229,15 @@ function corpusSourceNote(provenance) {
   const source = provenance.source || {};
   const valid = /^[\w-]+\/[\w.-]+$/.test(source.repository || '') && /^[a-f0-9]{40}$/.test(source.commit || '');
   const link = valid ? `<a class="tag acc" href="https://github.com/${esc(source.repository)}/tree/${esc(source.commit)}" target="_blank" rel="noopener noreferrer">查看固定来源 ↗</a>` : '';
+  const revisions = (source.revisions || []).filter(r => Number.isSafeInteger(r.revid) && r.revid > 0);
   return `<div class="note"><div class="k">转录待校 · 收录范围</div>
     ${esc(provenance.reviewStatus || '')}
     <div class="src">本批收录：${esc(provenance.coverage?.included || '')}。${esc(provenance.coverage?.reason || '')}</div>
     ${provenance.counts?.emptySourcePages ? `<div class="src">本批有 ${esc(provenance.counts.emptySourcePages)} 个电子页标未附转录文字，是否原书空白待核。</div>` : ''}
     ${provenance.counts?.unresolvedGlyphTokenOccurrences ? `<div class="src">本批保留 ${esc(provenance.counts.unresolvedGlyphTokenOccurrences)} 处原录缺字标记（&amp;KR…;），尚未释读。</div>` : ''}
-    <div class="src">${esc(provenance.attribution || '')} · ${esc(provenance.license || '')}</div>${link}</div>`;
+    <div class="src">${esc(provenance.attribution || '')} · ${esc(provenance.license || '')}</div>
+    ${source.baseEdition ? `<div class="src">底本：${esc(source.baseEdition)}</div>` : ''}
+    ${revisions.map(r => `<a class="tag acc" href="https://zh.wikisource.org/w/index.php?oldid=${r.revid}" target="_blank" rel="noopener noreferrer">${esc(r.title)} · 修订 ${r.revid} ↗</a>`).join(' ')}${link}</div>`;
 }
 
 async function openJuan(id) {
@@ -1257,6 +1264,8 @@ function renderCorpusReading(j) {
   const script = corpusReadingPrefs.script === 'simplified' && !simplified ? 'original' : corpusReadingPrefs.script;
   const readingPages = j.reading?.pages || [{seq:1,segments:[{kind:'text',original:j.body || '',simplified:null}]}];
   const hasNotes = readingPages.some(p => p.segments.some(s => s.kind === 'parenthetical'));
+  const wikiNotes = readingPages.some(p => p.segments.some(s => s.noteKind === 'wiki-editorial-note'));
+  const sourcePages = pages.some(p => p.origin?.segmentation === 'source-page');
   const value = s => (script === 'simplified' ? (s.simplified ?? s.original) : s.original).replace(/&KR[0-9A-Za-z]+;/g, '□');
   const segmentHtml = s => esc(script === 'simplified' ? (s.simplified ?? s.original) : s.original).replace(/&amp;KR[0-9A-Za-z]+;/g, marker => `<span class="corpus-missing" title="原录未释字标记：${marker}">□</span>`);
   const plain = script === 'raw' ? (j.body || '') : readingPages.map(p => p.segments.filter(s => corpusReadingPrefs.notes || s.kind !== 'parenthetical').map(value).join('')).join('\n\n');
@@ -1277,19 +1286,19 @@ function renderCorpusReading(j) {
     ${j.origin?.metadata?.boundaryNote ? '<div class="corpus-status">原录组件边界待核，详见下方出处说明。</div>' : ''}
     <div class="corpus-controls" role="group" aria-label="阅读方式">
       ${[['simplified','简体阅读'],['original','原字阅读'],['raw','原录']].map(([v,l]) => `<button data-corpus-script="${v}" aria-pressed="${script === v}"${v === 'simplified' && !simplified ? ' disabled' : ''}>${l}</button>`).join('')}
-      <button data-corpus-notes aria-pressed="${corpusReadingPrefs.notes}"${!hasNotes || script === 'raw' ? ' disabled' : ''}>${corpusReadingPrefs.notes ? '收起夹注' : '显示夹注'}</button>
+      <button data-corpus-notes aria-pressed="${corpusReadingPrefs.notes}"${!hasNotes || script === 'raw' ? ' disabled' : ''}>${corpusReadingPrefs.notes ? '收起' : '显示'}${wikiNotes ? '编者注' : '夹注'}</button>
       <span class="size-control"><button data-corpus-size="-2" aria-label="缩小字号">A−</button><button data-corpus-size="2" aria-label="增大字号">A＋</button></span>
     </div>
-    ${hasNotes && !corpusReadingPrefs.notes && script !== 'raw' ? '<div class="corpus-status">已收起原录括号内文字，可随时展开。</div>' : ''}
+    ${hasNotes && !corpusReadingPrefs.notes && script !== 'raw' ? `<div class="corpus-status">${wikiNotes ? '维基编者注独立保存，注者待核；可展开阅读，不视为古人评点。' : '已收起原录括号内文字，可随时展开。'}</div>` : ''}
     <div class="corpus-prose${corpusReadingPrefs.notes ? '' : ' hide-notes'}" style="font-size:${corpusReadingPrefs.size}px">${body}</div>
     <div class="reader-tools"><button data-copy-reading>复制当前文字</button><button data-copyraw="1" data-copy-label="复制原录">复制原录</button><button data-print="1">打印</button></div>
     <details class="corpus-provenance"><summary>版本、出处与原录说明</summary>
-      <p>${esc(j.edition || '版本信息待核')}。${pages.length} ${located ? '个来源页单元，非原书自然段' : '段'}。${j.punctuated ? '沿用来源已有标点。' : '来源没有标点，当前未代加断句。'}</p>
+      <p>${esc(j.edition || '版本信息待核')}。${pages.length} ${sourcePages ? '个来源页单元，非原书自然段' : '个来源段落/标题单元'}。${j.punctuated ? '沿用来源已有标点。' : '来源没有标点，当前未代加断句。'}</p>
       ${/^https?:\/\//.test(j.source_url || '') ? `<a class="tag" href="${esc(j.source_url)}" target="_blank" rel="noopener noreferrer">查看来源 ↗</a>` : ''}
       ${corpusSourceNote(j.origin?.provenance)}
       ${j.origin?.metadata?.boundaryNote ? `<p>${esc(j.origin.metadata.boundaryNote)}</p>` : ''}
-      <p>简体使用 ${esc(j.reading?.conversion?.engine || '未配置')} ${esc(j.reading?.conversion?.version || '')} 转换，供阅读；引用请核对原录。阅读排版接续来源页硬换行，夹注中的双行斜线标记不在阅读版显示。括号分组不代表注者归属已经核定。</p>
-      ${located ? `<details><summary>来源页定位与空页状态</summary>
+      <p>简体使用 ${esc(j.reading?.conversion?.engine || '未配置')} ${esc(j.reading?.conversion?.version || '')} 转换，供阅读；引用请核对原录。${wikiNotes ? '原录为保留来源标点的正文纯文本；维基编者注单独保存并标注，原始维基标记与编辑历史可由固定修订复查。' : '阅读排版接续来源页硬换行，夹注中的双行斜线标记不在阅读版显示。括号分组不代表注者归属已经核定。'}</p>
+      ${sourcePages ? `<details><summary>来源页定位与空页状态</summary>
       <p class="src">以下为电子文本页标，尚未逐页核对影像叶码。括号及其中原录文字保留，古注归属尚待核。</p>
       <ol>${pages.map(p => `<li><a href="#corpus-page-${p.seq}">${esc(p.origin?.pageLabel || String(p.seq))}</a>${p.origin?.emptyTranscription ? ' · 此页未转录文字，是否原书空白待核' : ''}</li>`).join('')}</ol></details>` : ''}
     </details>`;

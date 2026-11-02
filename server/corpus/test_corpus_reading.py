@@ -68,6 +68,16 @@ class CorpusReadingCompatibilityTests(SimpleTestCase):
             corpus_origins.attach_book({'id': 8}, units)
         self.assertEqual([u['id'] for u in units], [10, 9, 2, 1])
 
+    def test_explicit_upper_middle_lower_order_precedes_title_collation(self):
+        units = [{'id': i} for i in (1, 3, 2)]
+        origins = [{'unit_id': i, 'edition_id': 10, 'metadata': {'sourcePath': '傳習錄/' + title,
+                    'sourceByteStart': 0, 'sourceOrder': order}}
+                   for i, title, order in [(1, '卷上', 1), (2, '卷中', 2), (3, '卷下', 3)]]
+        with patch.object(corpus_origins, 'available', return_value=True), \
+             patch.object(corpus_origins.db, 'query', side_effect=[[], origins]):
+            corpus_origins.attach_book({'id': 20}, units)
+        self.assertEqual([u['id'] for u in units], [1, 2, 3])
+
 
 class CorpusReadingViewTests(SimpleTestCase):
     def setUp(self):
@@ -121,3 +131,22 @@ class CorpusReadingViewTests(SimpleTestCase):
     def test_search_queries_keep_literal_input_and_both_character_forms(self):
         self.assertEqual(reading.query_forms('%'), ['%'])
         self.assertEqual(set(reading.query_forms('陈胜')), {'陈胜', '陳勝'})
+
+    def test_editorial_notes_keep_main_text_and_unicode_anchors_separate(self):
+        unit = {'body': '𠮷原文'}
+        paragraph = {'body': unit['body'], 'origin': {'segmentation': 'source-paragraph',
+            'annotations': [{'anchor': 1, 'body': '注中繁體'}, {'anchor': 3, 'body': '末注'}]}}
+        before = copy.deepcopy(paragraph)
+        reading.attach_reading(unit, [paragraph])
+        parts = unit['reading']['pages'][0]['segments']
+        self.assertEqual(''.join(s['original'] for s in parts if s['kind'] == 'text'), unit['body'])
+        notes = [s for s in parts if s['kind'] == 'parenthetical']
+        self.assertEqual(len(notes), 2)
+        self.assertIn('维基编者注·注者待核', notes[0]['original'])
+        self.assertIn('注中繁体', notes[0]['simplified'])
+        self.assertEqual(paragraph, before)
+
+    def test_editorial_note_outside_main_text_is_rejected(self):
+        with self.assertRaises(ValueError):
+            reading.attach_reading({'body': '原文'}, [{'body': '原文', 'origin': {
+                'annotations': [{'anchor': 3, 'body': '注'}]}}])

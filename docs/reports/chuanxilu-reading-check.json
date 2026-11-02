@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "threeVolumesInSourceOrder": true,
+    "mainTextMatchesFixedSource": true,
+    "all180NotesPreserved": true,
+    "notesSeparateAndLabelled": true,
+    "paperBaseEditionPendingVisible": true,
+    "sourceParagraphsNotImagePages": true,
+    "fixedRevisionLinks": true,
+    "rawCopyExact": true,
+    "clipboardNewlineComparison": "Windows CRLF normalized to LF; in-app raw string exact",
+    "chapterNavigation": true,
+    "textSearch": true,
+    "mobileWithoutOverflow": true,
+    "noBrowserErrors": true
+  }
+}
