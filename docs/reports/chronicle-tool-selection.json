@@ -1,0 +1,35 @@
+{
+  "profile": "zztj-first-two",
+  "bookId": 80,
+  "bookTitle": "資治通鑑",
+  "editionName": "通鉴·维基固定修订结构样板（转录待校）",
+  "baseEdition": "电子页纸本底本未核；保留原页校记，不追认某现代点校本",
+  "capture": {
+    "url": "https://zh.wikisource.org/w/index.php?title=Special%3AExport&pages=%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91%2F%E5%8D%B7001%0A%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91%2F%E5%8D%B7002&curonly=1",
+    "checkedAt": "2026-11-02T08:38:03.829400+00:00",
+    "status": "reachable",
+    "sha256": "eafae1328dada418388d1bc9da47b26a46d44a77288d0233f005ca75b44fb2cd",
+    "bytes": 75919
+  },
+  "permissionCapture": {
+    "url": "https://zh.wikisource.org/wiki/%E5%82%B3%E7%BF%92%E9%8C%84",
+    "checkedAt": "2026-11-02T04:45:12.210260+00:00",
+    "status": "reachable",
+    "sha256": "5be3b6acb2b5441a3703aa94940bd4aee89c7af49aaee8df50701ad5015f5429",
+    "bytes": 53016
+  },
+  "volumes": [
+    {
+      "title": "資治通鑑/卷001",
+      "juan": "卷001",
+      "revisionId": 2489405,
+      "textSha256": "72976e1f04098ccedcc706415ff44569421222f1f0f1ab99f5beb7788b9e9675"
+    },
+    {
+      "title": "資治通鑑/卷002",
+      "juan": "卷002",
+      "revisionId": 2638853,
+      "textSha256": "8dafad73429a1f06709ab167434c081b9d34779c433abea343ba1e0712ef03e1"
+    }
+  ]
+}

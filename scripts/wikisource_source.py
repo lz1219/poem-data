@@ -210,9 +210,107 @@ def reading_paragraphs(text):
     return result
 
 
+def chronicle_inline(text):
+    """Audited Zizhi Tongjian display syntax; never evaluate arbitrary templates."""
+    if re.search(r'(?m)^\s*(?:\{\||\|\}|\|)', text):
+        raise ValueError('Wiki tables need a separate audited table adapter')
+    text = re.sub(r'-\{([^{};|:]+)\}-', r'\1', text)
+    text = re.sub(r'\{\{\*\|([^{}|]+)\}\}', r'（\1）', text)
+    text = text.replace("'''", '')
+    text = re.sub(r'(?m)^:{1,2}[ \t]?', '', text)
+    return plain_inline(text)
+
+
+def chronicle_paragraphs(text):
+    """Keep source headings and within-year event numbers, without guessing dates.
+
+    Limited to the header2 / 校刊記 profile in the audited first two volumes.
+    All visible source blocks have byte ranges; reference text is stored apart.
+    """
+    header = re.match(r'\{\{header2\n[^{}]*\}\}\s*', text)
+    tails = list(re.finditer(r'(?m)^(={1,6})[ \t]*校刊記[ \t]*\1[ \t]*$', text))
+    if not header or len(tails) != 1:
+        raise ValueError('Expected one audited header2 and 校刊記 boundary')
+    tail = tails[0]
+    trailer = text[tail.end():]
+    trailer = re.sub(r'<div class="references-small">\s*<references\s*/>\s*</div>', '', trailer)
+    trailer = re.sub(r'\[\[category:資治通鑑\|[^\[\]\n]+\]\]', '', trailer)
+    trailer = re.sub(r'\{\{footer\n[^{}]*\}\}|\{\{北宋作品\}\}', '', trailer)
+    if trailer.strip():
+        raise ValueError('Unsupported material after the reference-list boundary')
+    source = text[header.end():tail.start()]
+    # Legacy paragraphs were line-based. Keep those boundaries while allowing
+    # a single editorial reference to contain newlines; do not merge IDs merely
+    # because several consecutive commentary lines share no blank line.
+    pattern = r'(?m)^(?:<ref>[\s\S]*?</ref>|[^\n<]|<(?!ref>))+'
+    result, path, cursor = [], [], 0
+    for match in re.finditer(pattern, source):
+        if source[cursor:match.start()].strip():
+            raise ValueError('Unparsed source between blocks')
+        cursor = match.end()
+        start = header.end() + match.start()
+        chunk = match[0].rstrip()
+        if not chunk.strip():
+            continue
+        end = start + len(chunk)
+        heading = re.fullmatch(r'(={1,6})([^\n]+?)\1[ \t]*', chunk)
+        inline_start = start
+        if heading:
+            inline_start += len(heading[1])
+            chunk = heading[2]
+        pieces, annotations, position = [], [], 0
+        for note in re.finditer(r'<ref>(.*?)</ref>', chunk, re.S):
+            pieces.append(chronicle_inline(chunk[position:note.start()]))
+            value = chronicle_inline(note[1])
+            if not value.strip():
+                raise ValueError('Empty editorial note')
+            annotations.append({'anchor': sum(map(len, pieces)), 'body': value,
+                'kind': 'wiki-editorial-note', 'attribution': '维基编者注·注者待核',
+                'sourceByteStart': len(text[:inline_start + note.start()].encode()),
+                'sourceByteEnd': len(text[:inline_start + note.end()].encode())})
+            position = note.end()
+        pieces.append(chronicle_inline(chunk[position:]))
+        body = ''.join(pieces)
+        if heading:
+            # Source heading whitespace has no bibliographic meaning; retain it
+            # in the capture/range, while exposing a readable heading string.
+            leading = len(body) - len(body.lstrip())
+            body = body.strip()
+            for note in annotations:
+                note['anchor'] -= leading
+        if not body:
+            raise ValueError('Empty source block')
+        origin = {'segmentation': 'source-paragraph', 'offsetUnit': 'unicode-code-point',
+            'sourceByteStart': len(text[:start].encode()), 'sourceByteEnd': len(text[:end].encode()),
+            'kind': 'heading' if heading else 'paragraph', 'annotations': annotations,
+            'spans': [{'kind': 'source-text', 'start': 0, 'end': len(body)}]}
+        if heading:
+            level = len(heading[1])
+            path = [p for p in path if p['level'] < level] + [{'level': level, 'title': body}]
+            origin['headingLevel'] = level
+        else:
+            event = re.match(r'^(\d+)\u3000', body)
+            if event:
+                origin['eventNumber'] = event[1]
+                origin['numberMeaning'] = 'source within-year event label; not a year or verified original author numbering'
+        origin['headingPath'] = [dict(p) for p in path]
+        result.append({'body': body, 'origin': origin})
+    if source[cursor:].strip() or not result:
+        raise ValueError('Unparsed or empty source body')
+    if sum(len(p['origin']['annotations']) for p in result) != text.count('<ref>'):
+        raise ValueError('Editorial-note count changed during parsing')
+    if sum(p['origin']['kind'] == 'heading' for p in result) != len(re.findall(r'(?m)^=+[^\n]+?=+[ \t]*$', source)):
+        raise ValueError('Source heading count changed during parsing')
+    return result
+
+
 def reading_plan(cache, selection):
     """Build an immutable plan from fixed captures, never live page content."""
     from backfill_shiji import digest, require
+    profile = selection.get('profile', 'chuanxilu')
+    require(profile in ('chuanxilu', 'zztj-first-two'), 'Unreviewed reading profile')
+    parser_name = ('wikisource-chronicle-headings-notes-v1' if profile == 'zztj-first-two'
+                   else 'wikisource-explicit-inline-and-notes-v1')
     permission = selection['permissionCapture']
     declaration = cached_response(cache, permission['url'], permission['sha256']).decode('utf-8')
     require('creativecommons.org/licenses/by-sa/4.0' in declaration,
@@ -224,7 +322,7 @@ def reading_plan(cache, selection):
         decoded = decode_capture({'title': spec['title'], 'captureFormat': 'mediawiki-export-xml'}, raw)
         require(decoded['revid'] == spec['revisionId'], 'Fixed revision differs from selection')
         require(sha(decoded['text'].encode()) == spec['textSha256'], 'Fixed wikitext differs')
-        paragraphs = reading_paragraphs(decoded['text'])
+        paragraphs = (chronicle_paragraphs if profile == 'zztj-first-two' else reading_paragraphs)(decoded['text'])
         text_offset = 0
         for paragraph in paragraphs:
             paragraph['origin']['textStart'] = text_offset
@@ -236,7 +334,7 @@ def reading_plan(cache, selection):
         origin = {'sourcePath': decoded['title'], 'sourceSha256': spec['textSha256'],
                   'sourceOrder': len(units) + 1,
                   'sourceByteStart': 0, 'sourceByteEnd': len(decoded['text'].encode()),
-                  'kind': 'body-volume', 'parser': 'wikisource-explicit-inline-and-notes-v1',
+                  'kind': 'body-volume', 'parser': parser_name,
                   'revisionId': decoded['revid'], 'revisionTimestamp': decoded['timestamp'],
                   'reviewStatus': 'transcription-unreviewed', 'sourceUrl': url,
                   'noteAttribution': '维基编者注·注者待核；不视为古人评点',
@@ -244,9 +342,16 @@ def reading_plan(cache, selection):
         units.append({'juan': spec['juan'], 'body': body, 'sha256': sha(body.encode()),
                       'sourceUrl': url, 'punctuated': True, 'origin': origin, 'paragraphs': paragraphs})
         revisions.append({k: decoded[k] for k in ('pageid', 'title', 'revid', 'timestamp')})
-    require(len(units) == 3 and [u['juan'] for u in units] == ['卷上', '卷中', '卷下'],
-            'This audited selection must contain exactly three Chuanxilu volumes')
-    info = {'parser': 'wikisource-explicit-inline-and-notes-v1', 'bookId': selection['bookId'],
+    if profile == 'chuanxilu':
+        require(selection['bookId'] == 20 and len(units) == 3 and
+                [u['juan'] for u in units] == ['卷上', '卷中', '卷下'],
+                'This audited selection must contain exactly three Chuanxilu volumes')
+    else:
+        require(selection['bookId'] == 80 and selection['bookTitle'] == '資治通鑑' and
+                [s['title'] for s in selection['volumes']] == ['資治通鑑/卷001', '資治通鑑/卷002'] and
+                [u['juan'] for u in units] == ['卷001', '卷002'],
+                'Chronicle specimen is restricted to the audited first two Zizhi Tongjian volumes')
+    info = {'parser': parser_name, 'bookId': selection['bookId'],
             'bookTitle': selection['bookTitle'], 'edition': selection['editionName'],
             'editionName': selection['editionName'], 'source': {
                 'provider': 'Wikisource', 'url': capture['url'], 'sha256': capture['sha256'],
@@ -254,7 +359,8 @@ def reading_plan(cache, selection):
             'permissionBasis': permission, 'license': 'CC-BY-SA-4.0 (provider declaration)',
             'attribution': '中文维基文库贡献者；逐卷固定修订及编辑历史见来源链接。保留原标点；移除显示标记，编者注独立存储。',
             'reviewStatus': '转录待校；纸本底本与编者注归属待核，非具名人工审校',
-            'coverage': {'included': '维基传习录卷上、卷中、卷下及原页编者注',
+            'coverage': {'included': ('维基通鉴卷001、002及原页纪年标题和编者注；仅样板预览'
+                                      if profile == 'zztj-first-two' else '维基传习录卷上、卷中、卷下及原页编者注'),
                          'reason': '仅该电子修订范围，不声称影像对校、异版附录、拾遗或现代译注已齐'},
             'counts': {'units': len(units), 'bodyVolumes': len(units),
                        'sourcePageBlocks': sum(len(u['paragraphs']) for u in units),
@@ -283,6 +389,8 @@ if __name__ == '__main__':
         from backfill_shiji import apply, verify, rollback, require
         from research import connect
         plan = reading_plan(args.cache, read(args.reading_selection))
+        if plan['manifest']['parser'] == 'wikisource-chronicle-headings-notes-v1' and args.operation != 'preview':
+            parser.error('Chronicle specimen is preview-only; existing-book repair must preserve IDs and audit references first')
         result = {k: plan[k] for k in ('batchId', 'manifest')}
         if args.operation != 'preview':
             require(args.credentials is not None, 'Credentials required; never echoed')

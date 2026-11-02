@@ -1,0 +1,10 @@
+{
+  "operation": "repair-preview",
+  "unitId": 2080,
+  "retainedMainTextIds": 91,
+  "restoredHeadings": 34,
+  "restoredEditorialNotes": 33,
+  "backupSha256": "0b62da305f7231185a996e5f27b71e98658b37c74b6ad6eb335aacfe44287996",
+  "backupBytes": 57457,
+  "backupPath": "/opt/corpus-data-jobs/tool-readiness/zztj-volume001-before-repair.json.gz"
+}

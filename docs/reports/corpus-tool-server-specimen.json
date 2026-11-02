@@ -1,0 +1,103 @@
+{
+  "scope": "temporary indexed PostgreSQL staging; no original corpus writes",
+  "volumes": [
+    {
+      "id": 2080,
+      "juan": "卷001",
+      "fixedRevisionId": 2489405,
+      "serverParseSeconds": 0.01562,
+      "oldParagraphs": 92,
+      "newBlocks": 125,
+      "legacyBodyMatchesDatabase": true,
+      "legacyParagraphJoinMatchesDatabase": true,
+      "headings": 34,
+      "notes": 33,
+      "paragraphMapping": {
+        "matchedOldIds": 91,
+        "displayMarkupChanged": 0,
+        "unmatchedOldTail": [
+          {
+            "id": 129722,
+            "body": "周"
+          }
+        ],
+        "newHeadingRows": 34
+      },
+      "indexedStagingTransactionSeconds": 0.0585,
+      "indexedStagingRoundtripPassed": true
+    },
+    {
+      "id": 2081,
+      "juan": "卷002",
+      "fixedRevisionId": 2638853,
+      "serverParseSeconds": 0.01433,
+      "oldParagraphs": 123,
+      "newBlocks": 163,
+      "legacyBodyMatchesDatabase": true,
+      "legacyParagraphJoinMatchesDatabase": true,
+      "headings": 43,
+      "notes": 53,
+      "paragraphMapping": {
+        "matchedOldIds": 121,
+        "displayMarkupChanged": 71,
+        "unmatchedOldTail": [
+          {
+            "id": 129844,
+            "body": "=校刊記="
+          },
+          {
+            "id": 129845,
+            "body": "周"
+          }
+        ],
+        "newHeadingRows": 42
+      },
+      "indexedStagingTransactionSeconds": 0.02017,
+      "indexedStagingRoundtripPassed": true
+    }
+  ],
+  "originalUnitFingerprints": [
+    [
+      2080,
+      "97fd03bcb4e16f5e154b54336a0694aa"
+    ],
+    [
+      2081,
+      "6100cd20967f8a5d09f0860f9c3aa2d4"
+    ]
+  ],
+  "references": [
+    [
+      "corpus_paragraph_origin",
+      "FOREIGN KEY (paragraph_id) REFERENCES paragraph(id) ON DELETE RESTRICT"
+    ],
+    [
+      "corpus_unit_origin",
+      "FOREIGN KEY (unit_id) REFERENCES text_unit(id) ON DELETE RESTRICT"
+    ],
+    [
+      "evidence",
+      "FOREIGN KEY (unit_id) REFERENCES text_unit(id) ON DELETE SET NULL"
+    ],
+    [
+      "evidence",
+      "FOREIGN KEY (paragraph_id) REFERENCES paragraph(id) ON DELETE SET NULL"
+    ],
+    [
+      "paragraph",
+      "FOREIGN KEY (unit_id) REFERENCES text_unit(id) ON DELETE CASCADE"
+    ],
+    [
+      "person_source",
+      "FOREIGN KEY (unit_id) REFERENCES text_unit(id) ON DELETE CASCADE"
+    ],
+    [
+      "text_variant",
+      "FOREIGN KEY (unit_id) REFERENCES text_unit(id) ON DELETE CASCADE"
+    ]
+  ],
+  "sampleEvidenceCounts": {
+    "unit": 0,
+    "paragraph": 0
+  }
+}

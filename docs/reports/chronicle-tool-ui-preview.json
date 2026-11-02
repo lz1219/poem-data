@@ -1,0 +1,11 @@
+{
+  "scope": "Local fixed-source parsing preview; API payload intercepted for specimen; original corpus remains unchanged",
+  "checks": {
+    "sourceHeadings34": true,
+    "sourceYearHeadingVisible": true,
+    "editorialNotes33Toggle": true,
+    "previewStatusVisible": true,
+    "mobileWithoutOverflow": true,
+    "browserErrors": []
+  }
+}

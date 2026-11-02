@@ -651,6 +651,8 @@ border-radius:999px;cursor:pointer;transition:color .18s,border-color .18s,backg
 .corpus-parenthetical { font-size:.82em; color:var(--muted); }
 .corpus-missing { color:var(--muted); border-bottom:1px dotted var(--line); cursor:help; }
 .corpus-prose.hide-notes .corpus-parenthetical { display:none; }
+.corpus-heading { font-family:var(--serif); line-height:1.6; margin:1.8em 0 .7em; font-size:1.12em; }
+.corpus-heading[data-source-level="3"] { font-size:1em; color:var(--ink-2); }
 .corpus-original { white-space:pre-wrap; font-size:inherit; line-height:1.9; }
 .corpus-provenance { margin-top:32px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-2); }
 .corpus-provenance > summary { cursor:pointer; color:var(--muted); padding:8px 0; }
@@ -1283,9 +1285,13 @@ function renderCorpusReading(j) {
   const value = s => (script === 'simplified' ? (s.simplified ?? s.original) : s.original).replace(/&KR[0-9A-Za-z]+;/g, '□');
   const segmentHtml = s => esc(script === 'simplified' ? (s.simplified ?? s.original) : s.original).replace(/&amp;KR[0-9A-Za-z]+;/g, marker => `<span class="corpus-missing" title="原录未释字标记：${marker}">□</span>`);
   const plain = script === 'raw' ? (j.body || '') : readingPages.map(p => p.segments.filter(s => corpusReadingPrefs.notes || s.kind !== 'parenthetical').map(value).join('')).join('\n\n');
-  const body = script === 'raw' ? `<div class="corpus-original">${esc(j.body || '')}</div>` : readingPages.map(p =>
-    `<div class="corpus-page" id="corpus-page-${p.seq}">${p.segments.length ? p.segments.map(s => `<span${s.kind === 'parenthetical' ? ' class="corpus-parenthetical"' : ''}>${segmentHtml(s)}</span>`).join('') : '<span class="corpus-empty-page">此电子页暂无转录文字，待核。</span>'}</div>`).join('');
+  const body = script === 'raw' ? `<div class="corpus-original">${esc(j.body || '')}</div>` : readingPages.map(p => {
+    const content = p.segments.length ? p.segments.map(s => `<span${s.kind === 'parenthetical' ? ' class="corpus-parenthetical"' : ''}>${segmentHtml(s)}</span>`).join('') : '<span class="corpus-empty-page">此电子页暂无转录文字，待核。</span>';
+    const tag = p.headingLevel >= 3 ? 'h4' : 'h3';
+    return p.kind === 'heading' ? `<${tag} class="corpus-heading" data-source-level="${esc(p.headingLevel || '')}" id="corpus-page-${p.seq}">${content}</${tag}>` : `<div class="corpus-page" id="corpus-page-${p.seq}">${content}</div>`;
+  }).join('');
   const status = [located ? '转录待校' : '来源转录', j.punctuated ? '已有标点' : '未标点', script === 'simplified' ? '简体为机器转换' : script === 'raw' ? '原录字形与换行' : '原字阅读排版'];
+  if (j.preview === true) status.unshift('解析预览·未写入正式库');
   if (j.origin?.metadata?.emptySourcePageLabels?.length) status.push(`${j.origin.metadata.emptySourcePageLabels.length}个空电子页待核`);
   if (j.origin?.metadata?.unresolvedGlyphTokens?.length) status.push(script === 'raw' ? '含未释字标记' : '未释字以□显示');
   if (j.origin?.metadata?.kind === 'edition-examination') status.push('本版考证');

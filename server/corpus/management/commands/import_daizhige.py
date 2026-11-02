@@ -8,15 +8,14 @@
   行首为 U+3000，且去掉空白后以 本纪/志/表/列传/卷 开头 → 视为新的一卷。
 
 用法：
-  manage.py import_daizhige --file <txt> --book 舊唐書 --edition "殆知阁 史藏·正史（简体标点本）"
+  manage.py import_daizhige --file <txt> --book 舊唐書 --dry-run
+
+旧写入器已移除；本命令仅预览候选切分，不能证明全文或卷界完整。
 """
-import hashlib
 import re
 from pathlib import Path
 
 from django.core.management.base import BaseCommand
-
-from corpus import db
 
 HEAD_PREFIX = ("本纪", "本紀", "志", "表", "列传", "列傳", "卷")
 PUNCT = re.compile(r"[，。！？；：]")
@@ -49,7 +48,7 @@ def split_sections(raw: str):
 
 
 class Command(BaseCommand):
-    help = "导入殆知阁纯文本，按节标题切卷"
+    help = "只读预览殆知阁TXT候选卷界，不写数据库"
 
     def add_arguments(self, parser):
         parser.add_argument("--file", required=True)
@@ -65,39 +64,4 @@ class Command(BaseCommand):
         self.stdout.write(f"切出 {len(units)} 卷，共 {total} 字")
         for juan, paras in units[:3]:
             self.stdout.write(f"  {juan}（{len(paras)} 段）")
-        if opts["dry_run"]:
-            return
-        if not units:
-            self.stderr.write("没有切出任何卷，放弃导入")
-            return
-
-        db.execute(
-            """INSERT INTO book (title, edition, source_url) VALUES (%s,%s,%s)
-               ON CONFLICT (title) DO UPDATE SET edition=EXCLUDED.edition, source_url=EXCLUDED.source_url""",
-            (opts["book"], opts["edition"], opts["url"]),
-        )
-        book_id = db.one("SELECT id FROM book WHERE title=%s", (opts["book"],))["id"]
-
-        done = 0
-        for juan, paras in units:
-            body = "\n".join(paras)
-            row = db.one(
-                """INSERT INTO text_unit (book_id, juan, title, body, body_simplified, sha256, edition, source_url, punctuated)
-                   VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)
-                   ON CONFLICT (book_id, juan, edition) DO UPDATE SET
-                     body=EXCLUDED.body, body_simplified=EXCLUDED.body_simplified,
-                     sha256=EXCLUDED.sha256, punctuated=EXCLUDED.punctuated
-                   RETURNING id""",
-                (book_id, juan, opts["book"], body, body,
-                 hashlib.sha256(body.encode()).hexdigest(), opts["edition"], opts["url"],
-                 bool(PUNCT.search(body))),
-            )
-            unit_id = row["id"]
-            db.execute("DELETE FROM paragraph WHERE unit_id=%s", (unit_id,))
-            for i, p in enumerate(paras, start=1):
-                db.execute("INSERT INTO paragraph (unit_id, seq, body) VALUES (%s,%s,%s)", (unit_id, i, p))
-            done += 1
-            if done % 20 == 0:
-                self.stdout.write(f"  …已入库 {done}")
-
-        self.stdout.write(f"入库 {done} 卷")
+        self.stdout.write("仅预览，未写入数据库。TXT卷界须核实；不得直接用候选切分覆盖现存正文。")

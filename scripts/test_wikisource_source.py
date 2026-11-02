@@ -124,4 +124,33 @@ class WikiReadingTests(unittest.TestCase):
         self.assertEqual(body['body'], '<有苗來格，云。')
 
 
+class ChronicleReadingTests(unittest.TestCase):
+    def wrapped(self, body):
+        return '{{header2\n|title=資治通鑑\n}}\n\n' + body + '\n\n==校刊記==\n<div class="references-small"><references /></div>\n[[category:資治通鑑|周]]\n{{北宋作品}}'
+
+    def test_year_headings_event_reset_and_editorial_note_all_survive(self):
+        from wikisource_source import chronicle_paragraphs
+        raw = self.wrapped('== 安王 ==\n\n=== 安王元年 ===\n\n\'\'\'1\'\'\'　𠮷原<ref>增補[[史記|據文]]</ref>文。\n\n=== 安王二年 ===\n\n\'\'\'1\'\'\'　次年事。')
+        blocks = chronicle_paragraphs(raw)
+        self.assertEqual([b['body'] for b in blocks], ['安王','安王元年','1　𠮷原文。','安王二年','1　次年事。'])
+        self.assertEqual(blocks[-1]['origin']['headingPath'][-1]['title'],'安王二年')
+        self.assertEqual(blocks[-1]['origin']['eventNumber'],'1')
+        note = blocks[2]['origin']['annotations'][0]
+        self.assertEqual(note['anchor'],4)
+        self.assertEqual(raw.encode()[note['sourceByteStart']:note['sourceByteEnd']].decode(),'<ref>增補[[史記|據文]]</ref>')
+
+    def test_year_template_is_displayed_without_dating_inference(self):
+        from wikisource_source import chronicle_paragraphs
+        p, = chronicle_paragraphs(self.wrapped('==顯王元年{{*|癸-{丑}-，西元前三六八年}}=='))
+        self.assertEqual(p['body'],'顯王元年（癸丑，西元前三六八年）')
+        self.assertNotIn('year',p['origin'])
+        self.assertEqual(p['origin']['headingLevel'],2)
+
+    def test_unknown_table_template_and_trailer_are_not_silently_removed(self):
+        from wikisource_source import chronicle_paragraphs
+        for body in ['原{{不明|字}}文','{|\n| 年 || 事\n|}', '原<ref>未閉合']:
+            with self.assertRaises(ValueError): chronicle_paragraphs(self.wrapped(body))
+        with self.assertRaises(ValueError): chronicle_paragraphs(self.wrapped('正文。')+'\n失落的附記')
+
+
 if __name__ == '__main__': unittest.main()

@@ -108,6 +108,20 @@ class CorpusReadingViewTests(SimpleTestCase):
         self.assertEqual(unit['reading']['pages'][0]['segments'][0]['original'], raw)
         self.assertFalse(unit['reading']['pages'][0]['sourcePage'])
 
+    def test_source_heading_and_event_context_are_exposed_without_guessing_years(self):
+        paragraphs = [{'id': 1, 'body': '安王元年', 'origin': {'kind': 'heading', 'headingLevel': 3}},
+                      {'id': 2, 'body': '1　原文。', 'origin': {'eventNumber': '1',
+                       'headingPath': [{'level': 3, 'title': '安王元年'}]}}]
+        unit = {'body': '安王元年\n\n1　原文。'}
+        before = copy.deepcopy(paragraphs)
+        reading.attach_reading(unit, paragraphs)
+        heading, event = unit['reading']['pages']
+        self.assertEqual((heading['kind'], heading['headingLevel']), ('heading', 3))
+        self.assertEqual(event['eventNumber'], '1')
+        self.assertEqual(event['headingPath'][0]['title'], '安王元年')
+        self.assertNotIn('year', event)
+        self.assertEqual(paragraphs, before)
+
     def test_invalid_spans_fall_back_to_complete_text(self):
         unit = {'body': '𠮷原文'}
         reading.attach_reading(unit, [{'body': unit['body'], 'origin': {'spans': [
@@ -150,3 +164,25 @@ class CorpusReadingViewTests(SimpleTestCase):
         with self.assertRaises(ValueError):
             reading.attach_reading({'body': '原文'}, [{'body': '原文', 'origin': {
                 'annotations': [{'anchor': 3, 'body': '注'}]}}])
+
+class RetiredImporterTests(SimpleTestCase):
+    def test_legacy_wiki_command_cannot_write_even_without_dry_run(self):
+        from django.core.management import call_command, CommandError
+        with patch.object(views_corpus.db, 'execute') as execute:
+            with self.assertRaisesMessage(CommandError, '旧维基导入器已停用'):
+                call_command('import_wikisource', page='資治通鑑', book='資治通鑑')
+            execute.assert_not_called()
+
+    def test_txt_command_defaults_to_preview(self):
+        import io
+        import tempfile
+        from pathlib import Path
+        from django.core.management import call_command
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / 'source.txt'
+            source.write_text('\u3000卷一\n原文。\n', encoding='utf-8')
+            output = io.StringIO()
+            with patch.object(views_corpus.db, 'execute') as execute:
+                call_command('import_daizhige', file=str(source), book='原书', stdout=output)
+                execute.assert_not_called()
+            self.assertIn('仅预览，未写入数据库', output.getvalue())

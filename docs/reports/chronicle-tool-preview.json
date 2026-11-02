@@ -1,0 +1,303 @@
+{
+  "batchId": "80109157bc0f72f0e94ff9ae65e4fa5feeae70090a781746eca04465f742ac9f",
+  "manifest": {
+    "parser": "wikisource-chronicle-headings-notes-v1",
+    "bookId": 80,
+    "bookTitle": "資治通鑑",
+    "edition": "通鉴·维基固定修订结构样板（转录待校）",
+    "editionName": "通鉴·维基固定修订结构样板（转录待校）",
+    "source": {
+      "provider": "Wikisource",
+      "url": "https://zh.wikisource.org/w/index.php?title=Special%3AExport&pages=%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91%2F%E5%8D%B7001%0A%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91%2F%E5%8D%B7002&curonly=1",
+      "sha256": "eafae1328dada418388d1bc9da47b26a46d44a77288d0233f005ca75b44fb2cd",
+      "revisions": [
+        {
+          "pageid": 8690,
+          "title": "資治通鑑/卷001",
+          "revid": 2489405,
+          "timestamp": "2024-11-10T15:33:51Z"
+        },
+        {
+          "pageid": 8688,
+          "title": "資治通鑑/卷002",
+          "revid": 2638853,
+          "timestamp": "2026-01-03T08:13:45Z"
+        }
+      ],
+      "baseEdition": "电子页纸本底本未核；保留原页校记，不追认某现代点校本"
+    },
+    "permissionBasis": {
+      "url": "https://zh.wikisource.org/wiki/%E5%82%B3%E7%BF%92%E9%8C%84",
+      "checkedAt": "2026-11-02T04:45:12.210260+00:00",
+      "status": "reachable",
+      "sha256": "5be3b6acb2b5441a3703aa94940bd4aee89c7af49aaee8df50701ad5015f5429",
+      "bytes": 53016
+    },
+    "license": "CC-BY-SA-4.0 (provider declaration)",
+    "attribution": "中文维基文库贡献者；逐卷固定修订及编辑历史见来源链接。保留原标点；移除显示标记，编者注独立存储。",
+    "reviewStatus": "转录待校；纸本底本与编者注归属待核，非具名人工审校",
+    "coverage": {
+      "included": "维基通鉴卷001、002及原页纪年标题和编者注；仅样板预览",
+      "reason": "仅该电子修订范围，不声称影像对校、异版附录、拾遗或现代译注已齐"
+    },
+    "counts": {
+      "units": 2,
+      "bodyVolumes": 2,
+      "sourcePageBlocks": 288,
+      "sourceParagraphBlocks": 288,
+      "editorialNotes": 86
+    },
+    "unitDigests": [
+      "ec69cf51df76310ee070f28f46cfe6edd66716d66a1d0a625ffbd23475a62a77",
+      "2b5bb2d25887ce8023824978454c3c016b48bf0b509c2a0c36bcf9747eebc1f6"
+    ]
+  },
+  "examples": [
+    {
+      "juan": "卷001",
+      "paragraphs": [
+        {
+          "body": "起著雍攝提格，盡玄黓困敦，凡三十五年。",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 143,
+            "sourceByteEnd": 206,
+            "kind": "paragraph",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 19
+              }
+            ],
+            "headingPath": [],
+            "textStart": 0,
+            "textEnd": 19
+          }
+        },
+        {
+          "body": "威烈王",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 208,
+            "sourceByteEnd": 223,
+            "kind": "heading",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 3
+              }
+            ],
+            "headingLevel": 2,
+            "headingPath": [
+              {
+                "level": 2,
+                "title": "威烈王"
+              }
+            ],
+            "textStart": 21,
+            "textEnd": 24
+          }
+        },
+        {
+          "body": "威烈王二十三年（戊寅，西元前四〇三年）",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 225,
+            "sourceByteEnd": 290,
+            "kind": "heading",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 19
+              }
+            ],
+            "headingLevel": 3,
+            "headingPath": [
+              {
+                "level": 2,
+                "title": "威烈王"
+              },
+              {
+                "level": 3,
+                "title": "威烈王二十三年（戊寅，西元前四〇三年）"
+              }
+            ],
+            "textStart": 26,
+            "textEnd": 45
+          }
+        },
+        {
+          "body": "1　〔九鼎震〕，初命晉大夫魏斯、趙籍、韓虔為諸侯。",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 292,
+            "sourceByteEnd": 456,
+            "kind": "paragraph",
+            "annotations": [
+              {
+                "anchor": 7,
+                "body": "〔九鼎震〕　據《史記·周本紀》及《六國年表》增補。",
+                "kind": "wiki-editorial-note",
+                "attribution": "维基编者注·注者待核",
+                "sourceByteStart": 317,
+                "sourceByteEnd": 402
+              }
+            ],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 25
+              }
+            ],
+            "eventNumber": "1",
+            "numberMeaning": "source within-year event label; not a year or verified original author numbering",
+            "headingPath": [
+              {
+                "level": 2,
+                "title": "威烈王"
+              },
+              {
+                "level": 3,
+                "title": "威烈王二十三年（戊寅，西元前四〇三年）"
+              }
+            ],
+            "textStart": 47,
+            "textEnd": 72
+          }
+        }
+      ]
+    },
+    {
+      "juan": "卷002",
+      "paragraphs": [
+        {
+          "body": "周紀二",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 176,
+            "sourceByteEnd": 187,
+            "kind": "heading",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 3
+              }
+            ],
+            "headingLevel": 1,
+            "headingPath": [
+              {
+                "level": 1,
+                "title": "周紀二"
+              }
+            ],
+            "textStart": 0,
+            "textEnd": 3
+          }
+        },
+        {
+          "body": "起昭陽赤奮若，盡上章困敦，凡四十八年。",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 188,
+            "sourceByteEnd": 251,
+            "kind": "paragraph",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 19
+              }
+            ],
+            "headingPath": [
+              {
+                "level": 1,
+                "title": "周紀二"
+              }
+            ],
+            "textStart": 5,
+            "textEnd": 24
+          }
+        },
+        {
+          "body": "顯王元年（癸丑，西元前三六八年）",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 253,
+            "sourceByteEnd": 309,
+            "kind": "heading",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 16
+              }
+            ],
+            "headingLevel": 2,
+            "headingPath": [
+              {
+                "level": 1,
+                "title": "周紀二"
+              },
+              {
+                "level": 2,
+                "title": "顯王元年（癸丑，西元前三六八年）"
+              }
+            ],
+            "textStart": 26,
+            "textEnd": 42
+          }
+        },
+        {
+          "body": "1　齊伐魏，取觀津。",
+          "origin": {
+            "segmentation": "source-paragraph",
+            "offsetUnit": "unicode-code-point",
+            "sourceByteStart": 311,
+            "sourceByteEnd": 345,
+            "kind": "paragraph",
+            "annotations": [],
+            "spans": [
+              {
+                "kind": "source-text",
+                "start": 0,
+                "end": 10
+              }
+            ],
+            "eventNumber": "1",
+            "numberMeaning": "source within-year event label; not a year or verified original author numbering",
+            "headingPath": [
+              {
+                "level": 1,
+                "title": "周紀二"
+              },
+              {
+                "level": 2,
+                "title": "顯王元年（癸丑，西元前三六八年）"
+              }
+            ],
+            "textStart": 44,
+            "textEnd": 54
+          }
+        }
+      ]
+    }
+  ]
+}

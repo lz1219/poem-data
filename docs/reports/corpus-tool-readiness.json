@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-02T08:38:03.829400+00:00",
+  "mcp": [
+    {
+      "project": "poem-data",
+      "status": "unavailable",
+      "error": "URLError"
+    },
+    {
+      "project": "jiangshan-xingzhi",
+      "status": "unavailable",
+      "error": "URLError"
+    }
+  ],
+  "execution": {
+    "localEndpoint": "http://127.0.0.1:64542/stream",
+    "serverPython": "poem-web Python 3.12; host Python 3.6 is unsuitable for current jobs",
+    "originalCorpusWritesThisBatch": false,
+    "diagnosticExtensionAdded": "pgstattuple 1.5; no application tables changed"
+  },
+  "failedRepair": {
+    "statement": "UPDATE text_unit SET body=?,body_simplified=NULL,sha256=?,source_url=? WHERE id=2080",
+    "outcome": "8-second statement timeout; entire transaction rolled back",
+    "originalUnitMd5": "97fd03bcb4e16f5e154b54336a0694aa",
+    "originalParagraphCount": 92,
+    "repairBatches": 0,
+    "activeRepairSessions": 0,
+    "standaloneRollbackProbesSeconds": {
+      "indexedNull": 0.012,
+      "unchangedTitle": 0.0104
+    },
+    "rootCause": "Not proven; do not infer an index cause from index size or timeout alone",
+    "disposition": "Abandoned book-specific repair branch removed from normalize_corpus; generic repair writer requires a separate design"
+  },
+  "ginPendingMeasuredAfterFailure": {
+    "paragraph_trgm": {
+      "pages": 463,
+      "tuples": 2852
+    },
+    "text_unit_simp_trgm": {
+      "pages": 393,
+      "tuples": 23
+    }
+  },
+  "next": "Complete a general repair writer with source-backed row mapping, targeted fingerprints, backup outside transaction, durable error logging, and separate read-only verification; then run one original-corpus sample and actual reading."
+}
