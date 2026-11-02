@@ -14,8 +14,14 @@ def attach_book(book, units):
         return
     rows = db.query("""SELECT b.batch_id,e.id AS edition_id,e.name,b.manifest - 'unitDigests' AS provenance
         FROM public.corpus_ingest_batch b JOIN public.edition e ON e.id=b.edition_id
-        WHERE b.book_id=%s AND b.state='applied' ORDER BY e.id""", (book['id'],))
-    book['corpusEditions'] = rows
+        WHERE b.book_id=%s AND b.state='applied' ORDER BY e.id,b.created_at,b.batch_id""", (book['id'],))
+    book['corpusBatches'] = rows
+    editions = {}
+    for row in rows:
+        if row['edition_id'] not in editions:
+            editions[row['edition_id']] = {**row, 'batches': []}
+        editions[row['edition_id']]['batches'].append(row)
+    book['corpusEditions'] = list(editions.values())
     origins = db.query("""SELECT o.unit_id,o.edition_id,o.ordinal,o.metadata
         FROM public.corpus_unit_origin o JOIN public.text_unit t ON t.id=o.unit_id
         WHERE t.book_id=%s""", (book['id'],))

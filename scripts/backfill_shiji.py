@@ -234,7 +234,7 @@ def copy_rows(conn, statement, rows):
         flush()
 
 
-def apply(conn, plan, backup_dir):
+def apply(conn, plan, backup_dir, *, backup_fn=backup):
     from psycopg.types.json import Jsonb
     book_id = plan['manifest']['bookId']
     edition = plan['manifest']['edition']
@@ -245,13 +245,20 @@ def apply(conn, plan, backup_dir):
             result = verify(conn, plan)
             result['operation'] = 'already-applied; no writes'
             return result
-    before, backup_sha = backup(conn, backup_dir, plan)
+    before, backup_sha = backup_fn(conn, backup_dir, plan)
     conn.execute((ROOT / 'server/corpus/sql/0001_corpus_origins.sql').read_text('utf-8'))
-    edition_id = conn.execute('INSERT INTO public.edition(book_id,name,kind,note) VALUES(%s,%s,%s,%s) RETURNING id',
-                              (book_id, plan['manifest'].get('editionName', '史记集解·文渊阁四库本（Kanripo电子转录）'), '电子转录', edition)).fetchone()[0]
+    edition_id = plan['manifest'].get('reuseEditionId')
+    if edition_id is not None:
+        row = conn.execute('SELECT book_id,name FROM public.edition WHERE id=%s FOR UPDATE', (edition_id,)).fetchone()
+        require(row == (book_id, plan['manifest']['editionName']), 'Reused edition identity mismatch')
+        edition_ids = []
+    else:
+        edition_id = conn.execute('INSERT INTO public.edition(book_id,name,kind,note) VALUES(%s,%s,%s,%s) RETURNING id',
+                                  (book_id, plan['manifest'].get('editionName', '史记集解·文渊阁四库本（Kanripo电子转录）'), '电子转录', edition)).fetchone()[0]
+        edition_ids = [edition_id]
     ids = allocate(conn, 'text_unit', len(plan['units']))
     paragraph_ids = allocate(conn, 'paragraph', plan['manifest']['counts']['sourcePageBlocks'])
-    result = {'unitIds': ids, 'paragraphIds': paragraph_ids, 'editionIds': [edition_id],
+    result = {'unitIds': ids, 'paragraphIds': paragraph_ids, 'editionIds': edition_ids,
               'backupSha256': backup_sha, 'publicBefore': before['publicBefore']}
     conn.execute("INSERT INTO public.corpus_ingest_batch(batch_id,book_id,edition_id,state,manifest,result) VALUES(%s,%s,%s,'applied',%s,%s) ON CONFLICT(batch_id) DO UPDATE SET state='applied',edition_id=EXCLUDED.edition_id,result=EXCLUDED.result",
                  (plan['batchId'], book_id, edition_id, Jsonb(plan['manifest']), Jsonb(result)))

@@ -1151,7 +1151,8 @@ async function openApi(mode, key) {
       const edition = (b.corpusEditions || [])[0];
       el.innerHTML = `<h2 class="rt">${esc(b.title || '')}</h2>
         <div class="ra">${esc(b.edition || edition?.name || '')} · ${r.total} 个卷篇单元</div>
-        ${corpusSourceNote(edition?.provenance)}
+        ${(b.corpusBatches || []).length > 1 ? '<div class="src">以下范围按各批导入时记录；本书当前已收内容见卷目。</div>' : ''}
+        ${(b.corpusBatches || (edition ? [edition] : [])).map(batch => corpusSourceNote(batch.provenance)).join('')}
         <div class="bh">卷目</div>
         <table>${(r.juan || []).map(j => `<tr>
           <td style="width:180px" class="muted">${j.origin ? ({'front-matter': '卷首', 'edition-examination': '本版考证'}[j.origin.metadata.kind] || '正文') : esc(j.title || '')}</td>

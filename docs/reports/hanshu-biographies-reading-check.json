@@ -1,0 +1,19 @@
+{
+  "bookId": 8,
+  "units": 66,
+  "editions": 1,
+  "batches": 2,
+  "checks": {
+    "actualAPI": true,
+    "sharedEditionGrouped": true,
+    "bothHistoricalScopesDisplayed": true,
+    "separateExaminations": true,
+    "sourceSpans": true,
+    "emptyPageWarning": true,
+    "bodySearch": true,
+    "fullTextCopy": true,
+    "desktopAndMobile": true,
+    "noBrowserErrors": true,
+    "previousShijiCatalogIntact": true
+  }
+}

@@ -4,7 +4,7 @@ from unittest.mock import patch
 from django.test import SimpleTestCase
 from rest_framework.test import APIRequestFactory
 
-from . import views, views_corpus
+from . import views, views_corpus, corpus_origins
 
 
 class CorpusReadingCompatibilityTests(SimpleTestCase):
@@ -42,3 +42,15 @@ class CorpusReadingCompatibilityTests(SimpleTestCase):
         for params in ({'limit': 'bad'}, {'book_id': 'bad'}):
             result = views.search(self.factory.get('/api/search', {'scope': 'text', 'q': '史记', **params}))
             self.assertEqual(result.status_code, 400)
+
+    def test_same_edition_keeps_two_distinct_batch_scopes(self):
+        book = {'id': 8}
+        batches = [{'batch_id': 'a', 'edition_id': 9, 'name': '颜注本', 'provenance': {'coverage': '本纪'}},
+                   {'batch_id': 'b', 'edition_id': 9, 'name': '颜注本', 'provenance': {'coverage': '列传'}}]
+        with patch.object(corpus_origins, 'available', return_value=True), \
+             patch.object(corpus_origins.db, 'query', side_effect=[batches, []]):
+            corpus_origins.attach_book(book, [])
+        self.assertEqual(len(book['corpusEditions']), 1)
+        self.assertEqual(book['corpusBatches'], batches)
+        self.assertEqual(book['corpusEditions'][0]['batches'], batches)
+        self.assertEqual(book['corpusEditions'][0]['provenance'], {'coverage': '本纪'})

@@ -21,7 +21,7 @@ ARCHIVE_SHA = '1bb47d3cada5dc434048256bb19ffaed62fbc2dcd1f3cc264bb906c5dcf2cd17'
 PARSER = 'hanshu-wyg-annals-source-pages-v1'
 
 
-def parse_file(path, raw):
+def parse_file(path, raw, *, allowed_volumes=range(1, 13), parser=PARSER):
     """Use explicit JUAN boundaries, preserving upper/lower and 考證 identities."""
     text = raw.decode('utf-8', errors='strict')
     require(re.search(r'^#\+PROPERTY: BASEEDITION WYG\s*$', text, re.M), 'Source is not marked WYG')
@@ -34,7 +34,7 @@ def parse_file(path, raw):
         title_match = re.fullmatch(r'卷([一二三四五六七八九十百]+)(上|下)?(考證)?', title)
         require(bool(title_match), 'Unsupported title in annals batch')
         volume = chinese_number(title_match.group(1))
-        require(1 <= volume <= 12, 'Volume outside first-batch annals')
+        require(volume in allowed_volumes, 'Volume outside selected batch')
         chunk = text[mark.end():end]
         pages = list(PAGE.finditer(chunk))
         require(bool(pages) and not visible_text(chunk[:pages[0].start()]), 'Unlocated source text')
@@ -64,7 +64,7 @@ def parse_file(path, raw):
                   'sourcePages': len(blocks),
                   'emptySourcePageLabels': [p['origin']['pageLabel'] for p in blocks if not p['body']],
                   'unresolvedGlyphTokens': sorted(set(re.findall(r'&KR[0-9A-Za-z]+;', body))),
-                  'parser': PARSER, 'textStatus': 'transcription-unreviewed',
+                  'parser': parser, 'textStatus': 'transcription-unreviewed',
                   'noteAttribution': 'unreviewed; spans describe parentheses only; 考證 is a separate edition component'}
         units.append({'juan': title, 'body': body, 'sha256': hashlib.sha256(body.encode()).hexdigest(),
                       'origin': origin, 'paragraphs': blocks})
