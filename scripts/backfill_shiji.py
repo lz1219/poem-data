@@ -207,14 +207,16 @@ def allocate(conn, table, count):
     return [r[0] for r in conn.execute('SELECT nextval(pg_get_serial_sequence(%s,\'id\')) FROM generate_series(1,%s)', ('public.' + table, count))]
 
 
-def copy_rows(conn, statement, rows):
+def copy_rows(conn, statement, rows, *, max_rows=512, max_bytes=1024 * 1024):
     """Bound each COPY statement; paragraph's existing trigram GIN index is costly.
 
-    All chunks remain in the ONE surrounding transaction. Do not raise or disable
-    the database's statement timeout to force a large write through.
+    Row and byte limits bound each statement without hundreds of tiny round trips.
+    The caller owns transaction boundaries; a single oversized row stays intact.
     """
     chunk = []
     size = 0
+    require(isinstance(max_rows, int) and max_rows > 0 and isinstance(max_bytes, int) and max_bytes > 0,
+            'COPY batch limits must be positive integers')
 
     def flush():
         with conn.cursor() as cur, cur.copy(statement) as copying:
@@ -224,7 +226,7 @@ def copy_rows(conn, statement, rows):
     for row in rows:
         length = sum(len(canonical(value.obj)) if hasattr(value, 'obj') else
                      len(str(value).encode('utf-8')) for value in row) + 32
-        if chunk and (len(chunk) >= 32 or size + length > 128 * 1024):
+        if chunk and (len(chunk) >= max_rows or size + length > max_bytes):
             flush()
             chunk = []
             size = 0

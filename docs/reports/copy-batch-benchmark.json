@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-02T06:39:03.523502+00:00",
+  "scope": "1000 actual source poems and origins in connection-local temporary tables with PK/unique/FK/trigram GIN; no business rows, production indexes or global settings changed",
+  "results": [
+    {
+      "maxRows": 32,
+      "maxBytes": 131072,
+      "masterSeconds": 6.659,
+      "originSeconds": 8.489,
+      "copySeconds": 15.148,
+      "countsVerified": [
+        1000,
+        1000
+      ]
+    },
+    {
+      "maxRows": 512,
+      "maxBytes": 1048576,
+      "masterSeconds": 1.421,
+      "originSeconds": 2.156,
+      "copySeconds": 3.577,
+      "countsVerified": [
+        1000,
+        1000
+      ]
+    },
+    {
+      "maxRows": 2048,
+      "maxBytes": 4194304,
+      "masterSeconds": 1.632,
+      "originSeconds": 1.801,
+      "copySeconds": 3.433,
+      "countsVerified": [
+        1000,
+        1000
+      ]
+    }
+  ],
+  "limitations": "Temporary-table microbenchmark, not production end-to-end throughput or WAL/replication performance guarantee",
+  "defaultChosen": {
+    "maxRows": 512,
+    "maxBytes": 1048576
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-02T06:58:18.083889+00:00",
+  "transport": "Existing poem-web container; database via existing 127.0.0.1 connection",
+  "businessRowsModified": 0,
+  "benchmark": {
+    "sampleRowsPerTable": 1000,
+    "results": [
+      {
+        "masterSeconds": 0.073,
+        "originSeconds": 0.0451,
+        "maxRows": 32,
+        "copySeconds": 0.1181
+      },
+      {
+        "masterSeconds": 0.0629,
+        "originSeconds": 0.0341,
+        "maxRows": 512,
+        "copySeconds": 0.097
+      }
+    ],
+    "scope": "Temporary tables with PK/unique/FK/trigram GIN; not full production throughput"
+  },
+  "sourceProbes": {
+    "github-readme": {
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/README.md",
+      "status": "unavailable",
+      "error": "URLError",
+      "seconds": 0.14
+    },
+    "wiki-reading-samples": {
+      "url": "https://zh.wikisource.org/w/index.php?title=Special%3AExport&pages=%E4%BA%94%E5%B8%9D%E6%9C%AC%E7%B4%80%0A%E6%BC%A2%E6%9B%B8%2F%E5%8D%B7001%0A%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91%2F%E5%8D%B7001&curonly=1",
+      "status": "unavailable",
+      "error": "URLError",
+      "seconds": 15.266
+    }
+  },
+  "hostRetry": {
+    "github": "SSL_ERROR_SYSCALL after 0.121 seconds",
+    "wikisource": "Connection timeout after 5.001 seconds",
+    "sourceTestsPerEntry": 2
+  },
+  "persistentServerReport": "/opt/corpus-data-jobs/server-local-execution-check.json"
+}
