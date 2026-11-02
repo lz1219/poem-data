@@ -1,0 +1,128 @@
+{
+  "counts": [
+    294,
+    294,
+    0
+  ],
+  "otherBooks": [
+    [
+      7,
+      122
+    ],
+    [
+      8,
+      234
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      81,
+      188
+    ],
+    [
+      82,
+      325
+    ],
+    [
+      83,
+      422
+    ],
+    [
+      84,
+      528
+    ],
+    [
+      161,
+      214
+    ]
+  ],
+  "api": {
+    "port": 8081,
+    "total": 294,
+    "book": {
+      "id": 80,
+      "title": "資治通鑑",
+      "edition": "维基文库标点转录（原导入修订未记录，待校）",
+      "source_url": "https://zh.wikisource.org/wiki/資治通鑑"
+    },
+    "firstVolumes": [
+      {
+        "id": 2080,
+        "juan": "卷001",
+        "title": "資治通鑑卷001",
+        "chars": 7699,
+        "punctuated": true
+      },
+      {
+        "id": 2081,
+        "juan": "卷002",
+        "title": "資治通鑑卷002",
+        "chars": 10804,
+        "punctuated": true
+      },
+      {
+        "id": 2082,
+        "juan": "卷003",
+        "title": "資治通鑑卷003",
+        "chars": 8210,
+        "punctuated": true
+      }
+    ]
+  },
+  "transactionResult": {
+    "retiredUnits": 295,
+    "retainedUnitsUpdated": 0,
+    "transactionSeconds": 2.0639,
+    "retainedUnits": 294,
+    "retainedParagraphs": 31303,
+    "originalBodyAndIdsPreserved": true,
+    "names": [
+      {
+        "id": 2080,
+        "juan": "卷001",
+        "title": "資治通鑑卷001"
+      },
+      {
+        "id": 2081,
+        "juan": "卷002",
+        "title": "資治通鑑卷002"
+      },
+      {
+        "id": 2082,
+        "juan": "卷003",
+        "title": "資治通鑑卷003"
+      }
+    ],
+    "readerTitleSuggestions": [
+      {
+        "id": 2080,
+        "oldJuan": "卷001",
+        "newJuan": "1",
+        "oldTitle": "資治通鑑卷001",
+        "newTitle": "卷一 · 周紀一"
+      },
+      {
+        "id": 2081,
+        "oldJuan": "卷002",
+        "newJuan": "2",
+        "oldTitle": "資治通鑑卷002",
+        "newTitle": "卷二 · 周紀二"
+      },
+      {
+        "id": 2082,
+        "oldJuan": "卷003",
+        "newJuan": "3",
+        "oldTitle": "資治通鑑卷003",
+        "newTitle": "卷三 · 周紀三"
+      }
+    ]
+  },
+  "backup": {
+    "path": "/opt/corpus-data-jobs/backups/zztj-reading-20261102T074526Z.json.gz",
+    "sha256": "bc1993e667a0b93d3fb2dddca2ebd2af577b16af8b0365f2978408b7c3ea14ba",
+    "bytes": 38048999
+  },
+  "scope": "Production original corpus data updated; frontend label patch local only"
+}

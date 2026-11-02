@@ -1193,7 +1193,7 @@ async function openApi(mode, key) {
         <div class="bh">卷目</div>
         <table>${(r.juan || []).map(j => `<tr>
           <td style="width:180px" class="muted">${j.origin ? ({'front-matter': '卷首', 'back-matter': '卷末附记', 'edition-examination': '本版考证'}[j.origin.metadata.kind] || '正文') : esc(j.title || '')}</td>
-          <td><a href="#" data-juan="${j.id}" style="border-bottom:1px dotted var(--line)">${esc(j.origin ? j.juan : (/^[0-9]+$/.test(String(j.juan)) ? '第 ' + j.juan + ' 卷' : j.juan || j.title || '阅读'))}</a></td>
+          <td><a href="#" data-juan="${j.id}" style="border-bottom:1px dotted var(--line)">${esc(corpusVolumeLabel(j))}</a></td>
           <td class="muted">${(j.chars || 0).toLocaleString()} 字</td></tr>`).join('')}</table>`;
     }
   } catch (e) {
@@ -1216,6 +1216,20 @@ async function openPoem(id) {
 
 const corpusCopyText = new WeakMap();
 const corpusCatalogs = new Map();
+function corpusVolumeLabel(unit) {
+  const name = String(unit.juan ?? '');
+  if (/^KR[0-9A-Za-z]+_\d+(?:\.txt)?$/.test(name)) return '卷次待核';
+  const match = /^(?:卷|巻)?0*(\d+)([上下中之一二三四五六七八九十]*)$/.exec(name);
+  if (match) return Number(match[1]) > 0 ? `卷${Number(match[1])}${match[2]}` : '卷次待核';
+  return name || unit.title || '卷次待核';
+}
+function corpusReadingHeading(unit) {
+  const label = corpusVolumeLabel(unit);
+  let title = String(unit.title || '').trim();
+  const book = String(unit.book || '').trim();
+  if (book && title.startsWith(book)) title = title.slice(book.length).replace(/^[\s·：:]+/, '');
+  return !title || corpusVolumeLabel({juan:title}) === label ? label : `${label} · ${title}`;
+}
 const corpusReadingPrefs = { script:'simplified', notes:false, size:20 };
 let currentCorpusUnit = null;
 try {
@@ -1278,10 +1292,10 @@ function renderCorpusReading(j) {
   if (script !== 'raw') status.push('阅读排版');
   el.innerHTML = `<div class="corpus-navigation">
       <button data-corpus-book="${esc(j.book_id || '')}">返回卷目</button>
-      ${prev ? `<button data-juan="${prev.id}" title="${esc(prev.juan)}">上一篇</button>` : ''}
-      ${catalog.length ? `<select data-corpus-select aria-label="切换卷篇">${catalog.map(u => `<option value="${u.id}"${u.id === j.id ? ' selected' : ''}>${esc(u.juan || u.title)}</option>`).join('')}</select>` : ''}
-      ${next ? `<button data-juan="${next.id}" title="${esc(next.juan)}">下一篇</button>` : ''}
-    </div><h2 class="rt">${esc(j.book || '')} · ${esc(j.title || '')}</h2>
+      ${prev ? `<button data-juan="${prev.id}" title="${esc(corpusVolumeLabel(prev))}">上一篇</button>` : ''}
+      ${catalog.length ? `<select data-corpus-select aria-label="切换卷篇">${catalog.map(u => `<option value="${u.id}"${u.id === j.id ? ' selected' : ''}>${esc(corpusVolumeLabel(u))}</option>`).join('')}</select>` : ''}
+      ${next ? `<button data-juan="${next.id}" title="${esc(corpusVolumeLabel(next))}">下一篇</button>` : ''}
+    </div><h2 class="rt">${esc(j.book || '')} · ${esc(corpusReadingHeading(j))}</h2>
     <div class="corpus-status">${status.map(esc).join(' · ')}</div>
     ${j.origin?.metadata?.boundaryNote ? '<div class="corpus-status">原录组件边界待核，详见下方出处说明。</div>' : ''}
     <div class="corpus-controls" role="group" aria-label="阅读方式">
@@ -1293,6 +1307,7 @@ function renderCorpusReading(j) {
     <div class="corpus-prose${corpusReadingPrefs.notes ? '' : ' hide-notes'}" style="font-size:${corpusReadingPrefs.size}px">${body}</div>
     <div class="reader-tools"><button data-copy-reading>复制当前文字</button><button data-copyraw="1" data-copy-label="复制原录">复制原录</button><button data-print="1">打印</button></div>
     <details class="corpus-provenance"><summary>版本、出处与原录说明</summary>
+      <p class="src">原目录标识：${esc(j.juan || '未记录')}</p>
       <p>${esc(j.edition || '版本信息待核')}。${pages.length} ${sourcePages ? '个来源页单元，非原书自然段' : '个来源段落/标题单元'}。${j.punctuated ? '沿用来源已有标点。' : '来源没有标点，当前未代加断句。'}</p>
       ${/^https?:\/\//.test(j.source_url || '') ? `<a class="tag" href="${esc(j.source_url)}" target="_blank" rel="noopener noreferrer">查看来源 ↗</a>` : ''}
       ${corpusSourceNote(j.origin?.provenance)}

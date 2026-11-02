@@ -1,0 +1,12 @@
+{
+  "scope": "Local display patch against updated original database; production frontend not deployed",
+  "checks": {
+    "retained294Volumes": true,
+    "labelsReadable": true,
+    "noSourceFilenameLabels": true,
+    "noDoubleVolumeWrapper": true,
+    "chapterNavigation": true,
+    "mobileWithoutOverflow": true,
+    "noBrowserErrors": true
+  }
+}
