@@ -258,6 +258,11 @@ select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-s
   align-items: start;
   margin-top: 20px;
 }
+.main.reading-active { grid-template-columns:minmax(0,1fr); }
+.main.reading-active > .list { display:none; }
+.corpus-navigation { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:20px; }
+.corpus-navigation button, .corpus-navigation select { border:1px solid var(--line); border-radius:5px; background:var(--surface); color:var(--ink-2); padding:7px 10px; font:inherit; font-size:12px; }
+.corpus-navigation select { max-width:100%; flex:1; min-width:130px; }
 
 @media (max-width: 900px) {
   .main { grid-template-columns: 1fr; }
@@ -630,9 +635,27 @@ font-family:var(--sans);font-size:12px;color:var(--muted);background:transparent
 border-radius:999px;cursor:pointer;transition:color .18s,border-color .18s,background .18s;}
 .reader-tools button:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft);}
 .reader-tools button.copied{color:#2e7d32;border-color:#2e7d32;}
-@media print{.masthead,.modes,.panel,#home,.reader-tools,.rprog,.static-note,.list{display:none!important;}
+.corpus-controls { display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:20px 0 24px; padding:10px 0; border-block:1px solid var(--line); }
+.corpus-controls button { border:0; border-radius:5px; padding:7px 11px; background:transparent; color:var(--ink-2); font:inherit; font-size:13px; cursor:pointer; }
+.corpus-controls button[aria-pressed="true"] { background:var(--accent-soft); color:var(--accent); }
+.corpus-controls button:disabled { opacity:.4; cursor:default; }
+.corpus-controls button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.corpus-controls .size-control { margin-left:auto; display:flex; gap:2px; }
+.corpus-status { color:var(--muted); font-size:12px; line-height:1.8; margin:10px 0; }
+.corpus-prose { max-width:34em; margin:0 auto; font-family:var(--serif); font-size:20px; line-height:2.1; overflow-wrap:anywhere; }
+.corpus-page { margin:0 0 1.25em; white-space:pre-wrap; }
+.corpus-parenthetical { font-size:.82em; color:var(--muted); }
+.corpus-missing { color:var(--muted); border-bottom:1px dotted var(--line); cursor:help; }
+.corpus-prose.hide-notes .corpus-parenthetical { display:none; }
+.corpus-original { white-space:pre-wrap; font-size:inherit; line-height:1.9; }
+.corpus-provenance { margin-top:32px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-2); }
+.corpus-provenance > summary { cursor:pointer; color:var(--muted); padding:8px 0; }
+.corpus-provenance p { line-height:1.8; }
+.corpus-empty-page { font:12px var(--sans); color:var(--muted); border-left:1px solid var(--line); padding-left:12px; }
+@media (max-width:900px) { .corpus-prose { font-size:19px; } .corpus-controls { gap:2px; } .corpus-controls button { padding:8px; } }
+@media print{.masthead,.modes,.panel,#home,.reader-tools,.corpus-controls,.rprog,.static-note,.list{display:none!important;}
 body{background:#fff;}.container{max-width:none;padding:0;}
-.reader{max-height:none;overflow:visible;border:0;box-shadow:none;padding:0;}.rc{font-size:15px;}}
+.reader{display:block!important;max-height:none;overflow:visible;border:0;box-shadow:none;padding:0;}.rc{font-size:15px;}}
 .compare {
   margin: 16px 0;
   border: 1px solid var(--line);
@@ -845,7 +868,7 @@ function applyStaticMode() {
     bar.className = 'static-note';
     bar.innerHTML =
       '静态版：仅含策展作品 / 人物 / 行迹。' +
-      '<a href="' + FULL_SITE + '" target="_blank" rel="noopener">完整版（含 6.7 万首诗与 1,301 卷原典）↗</a>';
+      '<a href="' + FULL_SITE + '" target="_blank" rel="noopener">完整版：诗词与典籍阅读 ↗</a>';
     const home = document.getElementById('home');
     if (home && home.parentNode) home.parentNode.insertBefore(bar, home);
   }
@@ -863,6 +886,7 @@ function goHome() {
 
 function showTool(mode) {
   MODE = mode;
+  $('.main').classList.remove('reading-active');
   $('#home').hidden = true;
   $('#tool').hidden = false;
   document.querySelectorAll('.modes button').forEach(b => b.classList.toggle('on', b.dataset.mode === mode));
@@ -889,8 +913,8 @@ function renderHome() {
     ['02', '人物', '生卒、字号、CBDB 仕历与语录', IDX.persons.length, 'persons'],
     ['03', '行迹', '按年编排的站点，每站带引文与出处', IDX.journeys.length, 'journeys'],
   ].concat(STATIC_ONLY ? [] : [
-    ['04', '作者', '语料库中的 3,879 位作者，点开即读其全部诗作', CORPUS.authors || 0, 'authors'],
-    ['05', '典籍', '史部原典 1,301 卷，按卷阅读', CORPUS.juan || 0, 'texts'],
+    ['04', '作者', '按作者查找馆藏诗词，进入作品阅读', CORPUS.authors || 0, 'authors'],
+    ['05', '典籍', '按书、按卷阅读，可切换简体与原录', CORPUS.juan || 0, 'texts'],
   ]);
   $('#home').innerHTML = `
     <p class="lede">在行迹停下的地方，把一句摘引展开成可读的文献。每条叙述都带出处；没有出处的，宁可不写。</p>
@@ -916,7 +940,7 @@ function renderHome() {
           <span class="a">${esc(p?.zh || '')}</span></a>`;
       }).join('')}
     </div>
-    ${academic.length ? `<div class="picks"><h2>学术级条目</h2>
+    ${academic.length ? `<div class="picks"><h2>研读条目</h2>
       ${academic.map(w => `<a class="pick-row" href="#" data-open-work="${esc(w.key)}">
         <span class="y">${w.year ?? '?'}</span>
         <span class="t">${esc(w.titleZh)}</span>
@@ -977,13 +1001,13 @@ function buildFilters() {
     const dyn = {}; IDX.persons.forEach(p => { /* 朝代由人物推断，简化为按文体 */ });
     f1.innerHTML = '<option value="all">全部文体</option>' +
       Object.entries(GENRE).map(([k, v]) => `<option value="${k}">${v}</option>`).join('');
-    f2.innerHTML = '<option value="all">全部级别</option><option value="academic">学术级</option><option value="popular">通俗级</option>';
+    f2.innerHTML = '<option value="all">全部内容</option><option value="academic">研读资料</option><option value="popular">通俗阅读</option>';
   } else if (MODE === 'authors') {
     f1.innerHTML = '<option value="all">全部作者</option>';
     f2.innerHTML = '<option value="all">按作品数排序</option>';
   } else if (MODE === 'texts') {
-    f1.innerHTML = '<option value="all">全部典籍</option>';
-    f2.innerHTML = '<option value="all">按卷数排序</option>';
+    f1.innerHTML = '<option value="all">全部典籍</option><option value="punctuated">已有标点</option>';
+    f2.innerHTML = '<option value="readable">有标点优先</option><option value="all">按卷数排序</option>';
   } else if (MODE === 'persons') {
     f1.innerHTML = '<option value="all">全部人物</option><option value="journey">有行迹</option><option value="nojourney">无行迹</option>';
     f2.innerHTML = '<option value="all">全部</option>';
@@ -1110,10 +1134,15 @@ async function renderApiList() {
       $('#count').textContent = `作者 ${r.total ?? rows.length} 位`;
     } else {
       const r = await fetch('/api/texts').then(x => x.json());
-      rows = (r.items || []).map(b => {
+      let books = r.items || [];
+      if ($('#f1').value === 'punctuated') books = books.filter(b => b.punctuated_juan > 0);
+      if ($('#f2').value === 'readable') books = [...books].sort((a,b) => ((b.punctuated_juan || 0) / b.juan) - ((a.punctuated_juan || 0) / a.juan));
+      else books = [...books].sort((a,b) => b.juan - a.juan);
+      if (KEYWORD) books = books.filter(b => [b.title, b.title_simplified].some(t => (t || '').toLowerCase().includes(KEYWORD.toLowerCase())));
+      rows = books.map(b => {
         const pj = b.punctuated_juan || 0;
         const note = pj === 0 ? ' · 无标点' : (pj >= b.juan ? ' · 标点本' : ` · 标点 ${pj}/${b.juan}`);
-        return { key: String(b.id), t: b.title, m: `${b.juan} 卷篇单元 · ${Math.round((b.chars || 0) / 10000)} 万字${note}` };
+        return { key: String(b.id), t: b.title_simplified || b.title, m: `${b.juan} 卷篇单元 · ${Math.round((b.chars || 0) / 10000)} 万字${note}` };
       });
       $('#count').textContent = `典籍 ${r.total ?? rows.length} 部`;
     }
@@ -1132,6 +1161,7 @@ async function renderApiList() {
 }
 
 async function openApi(mode, key) {
+  $('.main').classList.remove('reading-active');
   const el = $('#reader');
   el.innerHTML = '<p class="empty">载入中…</p>';
   try {
@@ -1148,14 +1178,17 @@ async function openApi(mode, key) {
     } else {
       const r = await fetch(`/api/texts/${key}`).then(x => x.json());
       const b = r.book || {};
+      corpusCatalogs.set(String(key), r.juan || []);
       const edition = (b.corpusEditions || [])[0];
       el.innerHTML = `<h2 class="rt">${esc(b.title || '')}</h2>
         <div class="ra">${esc(b.edition || edition?.name || '')} · ${r.total} 个卷篇单元</div>
-        ${(b.corpusBatches || []).length > 1 ? '<div class="src">以下范围按各批导入时记录；本书当前已收内容见卷目。</div>' : ''}
-        ${(b.corpusBatches || (edition ? [edition] : [])).map(batch => corpusSourceNote(batch.provenance)).join('')}
+        <details class="corpus-provenance"><summary>版本、收录范围与来源</summary>
+          ${(b.corpusBatches || []).length > 1 ? '<div class="src">以下范围按各批导入时记录；本书当前已收内容见卷目。</div>' : ''}
+          ${(b.corpusBatches || (edition ? [edition] : [])).map(batch => corpusSourceNote(batch.provenance)).join('')}
+        </details>
         <div class="bh">卷目</div>
         <table>${(r.juan || []).map(j => `<tr>
-          <td style="width:180px" class="muted">${j.origin ? ({'front-matter': '卷首', 'edition-examination': '本版考证'}[j.origin.metadata.kind] || '正文') : esc(j.title || '')}</td>
+          <td style="width:180px" class="muted">${j.origin ? ({'front-matter': '卷首', 'back-matter': '卷末附记', 'edition-examination': '本版考证'}[j.origin.metadata.kind] || '正文') : esc(j.title || '')}</td>
           <td><a href="#" data-juan="${j.id}" style="border-bottom:1px dotted var(--line)">${esc(j.origin ? j.juan : (/^[0-9]+$/.test(String(j.juan)) ? '第 ' + j.juan + ' 卷' : j.juan || j.title || '阅读'))}</a></td>
           <td class="muted">${(j.chars || 0).toLocaleString()} 字</td></tr>`).join('')}</table>`;
     }
@@ -1178,6 +1211,15 @@ async function openPoem(id) {
 }
 
 const corpusCopyText = new WeakMap();
+const corpusCatalogs = new Map();
+const corpusReadingPrefs = { script:'simplified', notes:false, size:20 };
+let currentCorpusUnit = null;
+try {
+  const saved = JSON.parse(localStorage.getItem('corpus-reading') || '{}');
+  if (['simplified','original','raw'].includes(saved.script)) corpusReadingPrefs.script = saved.script;
+  if (typeof saved.notes === 'boolean') corpusReadingPrefs.notes = saved.notes;
+  if ([18,20,22,24,26].includes(saved.size)) corpusReadingPrefs.size = saved.size;
+} catch (_) { /* Storage is optional. */ }
 function corpusSourceNote(provenance) {
   if (!provenance) return '';
   const source = provenance.source || {};
@@ -1194,33 +1236,93 @@ function corpusSourceNote(provenance) {
 async function openJuan(id) {
   const el = $('#reader');
   el.innerHTML = '<p class="empty">载入中…</p>';
-  const j = await fetch(`/api/texts/juan/${id}`).then(x => x.json());
+  const response = await fetch(`/api/texts/juan/${id}`);
+  if (!response.ok) { $('.main').classList.remove('reading-active'); el.innerHTML = '<p class="empty">这卷暂时无法读取，请稍后重试。</p>'; return; }
+  const j = await response.json();
+  currentCorpusUnit = j;
+  $('.main').classList.add('reading-active');
+  renderCorpusReading(j);
+  el.scrollTop = 0;
+  if (matchMedia('(max-width:900px)').matches) el.scrollIntoView({block:'start'});
+}
+
+function renderCorpusReading(j) {
+  const el = $('#reader');
   const pages = j.paragraphs || [];
+  const catalog = corpusCatalogs.get(String(j.book_id)) || [];
+  const currentIndex = catalog.findIndex(u => u.id === j.id);
+  const prev = catalog[currentIndex - 1], next = currentIndex >= 0 ? catalog[currentIndex + 1] : null;
   const located = !!j.origin;
-  const paras = pages.map(p => located ? `<span id="corpus-page-${p.seq}">${esc(p.body)}</span>` : esc(p.body)).join(located ? '\n\n' : '\n');
-  const body = paras || esc(j.body_simplified || j.body || '');
-  // 无标点卷：说明来源，但**不改动原文**（标点是校勘成果，不能由程序代加）
-  const punctNote = j.punctuated === false
-    ? '<div class="note"><div class="k">原文无标点</div>' +
-      '此处依来源呈现，未代加标点。' +
-      (j.edition ? '<div class="src">版本：' + esc(j.edition) + '</div>' : '') +
-      '</div>'
-    : '';
-  el.innerHTML = `<h2 class="rt">${esc(j.book || '')} · ${esc(j.title || '')}</h2>
-    <div class="ra">${pages.length} ${located ? '个来源页单元，非原书自然段' : '段'}${j.punctuated === false ? ' · 无标点' : ''}</div>
-    ${corpusSourceNote(j.origin?.provenance)}
-    ${located ? `<details class="note"><summary>来源页定位与空页状态</summary>
+  const simplified = !!j.reading?.simplifiedAvailable;
+  const script = corpusReadingPrefs.script === 'simplified' && !simplified ? 'original' : corpusReadingPrefs.script;
+  const readingPages = j.reading?.pages || [{seq:1,segments:[{kind:'text',original:j.body || '',simplified:null}]}];
+  const hasNotes = readingPages.some(p => p.segments.some(s => s.kind === 'parenthetical'));
+  const value = s => (script === 'simplified' ? (s.simplified ?? s.original) : s.original).replace(/&KR[0-9A-Za-z]+;/g, '□');
+  const segmentHtml = s => esc(script === 'simplified' ? (s.simplified ?? s.original) : s.original).replace(/&amp;KR[0-9A-Za-z]+;/g, marker => `<span class="corpus-missing" title="原录未释字标记：${marker}">□</span>`);
+  const plain = script === 'raw' ? (j.body || '') : readingPages.map(p => p.segments.filter(s => corpusReadingPrefs.notes || s.kind !== 'parenthetical').map(value).join('')).join('\n\n');
+  const body = script === 'raw' ? `<div class="corpus-original">${esc(j.body || '')}</div>` : readingPages.map(p =>
+    `<div class="corpus-page" id="corpus-page-${p.seq}">${p.segments.length ? p.segments.map(s => `<span${s.kind === 'parenthetical' ? ' class="corpus-parenthetical"' : ''}>${segmentHtml(s)}</span>`).join('') : '<span class="corpus-empty-page">此电子页暂无转录文字，待核。</span>'}</div>`).join('');
+  const status = [located ? '转录待校' : '来源转录', j.punctuated ? '已有标点' : '未标点', script === 'simplified' ? '简体为机器转换' : script === 'raw' ? '原录字形与换行' : '原字阅读排版'];
+  if (j.origin?.metadata?.emptySourcePageLabels?.length) status.push(`${j.origin.metadata.emptySourcePageLabels.length}个空电子页待核`);
+  if (j.origin?.metadata?.unresolvedGlyphTokens?.length) status.push(script === 'raw' ? '含未释字标记' : '未释字以□显示');
+  if (j.origin?.metadata?.kind === 'edition-examination') status.push('本版考证');
+  if (script !== 'raw') status.push('阅读排版');
+  el.innerHTML = `<div class="corpus-navigation">
+      <button data-corpus-book="${esc(j.book_id || '')}">返回卷目</button>
+      ${prev ? `<button data-juan="${prev.id}" title="${esc(prev.juan)}">上一篇</button>` : ''}
+      ${catalog.length ? `<select data-corpus-select aria-label="切换卷篇">${catalog.map(u => `<option value="${u.id}"${u.id === j.id ? ' selected' : ''}>${esc(u.juan || u.title)}</option>`).join('')}</select>` : ''}
+      ${next ? `<button data-juan="${next.id}" title="${esc(next.juan)}">下一篇</button>` : ''}
+    </div><h2 class="rt">${esc(j.book || '')} · ${esc(j.title || '')}</h2>
+    <div class="corpus-status">${status.map(esc).join(' · ')}</div>
+    ${j.origin?.metadata?.boundaryNote ? '<div class="corpus-status">原录组件边界待核，详见下方出处说明。</div>' : ''}
+    <div class="corpus-controls" role="group" aria-label="阅读方式">
+      ${[['simplified','简体阅读'],['original','原字阅读'],['raw','原录']].map(([v,l]) => `<button data-corpus-script="${v}" aria-pressed="${script === v}"${v === 'simplified' && !simplified ? ' disabled' : ''}>${l}</button>`).join('')}
+      <button data-corpus-notes aria-pressed="${corpusReadingPrefs.notes}"${!hasNotes || script === 'raw' ? ' disabled' : ''}>${corpusReadingPrefs.notes ? '收起夹注' : '显示夹注'}</button>
+      <span class="size-control"><button data-corpus-size="-2" aria-label="缩小字号">A−</button><button data-corpus-size="2" aria-label="增大字号">A＋</button></span>
+    </div>
+    ${hasNotes && !corpusReadingPrefs.notes && script !== 'raw' ? '<div class="corpus-status">已收起原录括号内文字，可随时展开。</div>' : ''}
+    <div class="corpus-prose${corpusReadingPrefs.notes ? '' : ' hide-notes'}" style="font-size:${corpusReadingPrefs.size}px">${body}</div>
+    <div class="reader-tools"><button data-copy-reading>复制当前文字</button><button data-copyraw="1" data-copy-label="复制原录">复制原录</button><button data-print="1">打印</button></div>
+    <details class="corpus-provenance"><summary>版本、出处与原录说明</summary>
+      <p>${esc(j.edition || '版本信息待核')}。${pages.length} ${located ? '个来源页单元，非原书自然段' : '段'}。${j.punctuated ? '沿用来源已有标点。' : '来源没有标点，当前未代加断句。'}</p>
+      ${/^https?:\/\//.test(j.source_url || '') ? `<a class="tag" href="${esc(j.source_url)}" target="_blank" rel="noopener noreferrer">查看来源 ↗</a>` : ''}
+      ${corpusSourceNote(j.origin?.provenance)}
+      ${j.origin?.metadata?.boundaryNote ? `<p>${esc(j.origin.metadata.boundaryNote)}</p>` : ''}
+      <p>简体使用 ${esc(j.reading?.conversion?.engine || '未配置')} ${esc(j.reading?.conversion?.version || '')} 转换，供阅读；引用请核对原录。阅读排版接续来源页硬换行，夹注中的双行斜线标记不在阅读版显示。括号分组不代表注者归属已经核定。</p>
+      ${located ? `<details><summary>来源页定位与空页状态</summary>
       <p class="src">以下为电子文本页标，尚未逐页核对影像叶码。括号及其中原录文字保留，古注归属尚待核。</p>
       <ol>${pages.map(p => `<li><a href="#corpus-page-${p.seq}">${esc(p.origin?.pageLabel || String(p.seq))}</a>${p.origin?.emptyTranscription ? ' · 此页未转录文字，是否原书空白待核' : ''}</li>`).join('')}</ol></details>` : ''}
-    ${punctNote}
-    <div class="rc" style="text-align:left;font-size:17px">${body}</div>
-    <div class="reader-tools">
-      <button data-copyraw="1">复制全文</button>
-      <button data-print="1">打印</button>
-    </div>`;
+    </details>`;
   corpusCopyText.set(el.querySelector('[data-copyraw]'), j.body ?? pages.map(p => p.body).join('\n'));
-  el.scrollTop = 0;
+  corpusCopyText.set(el.querySelector('[data-copy-reading]'), plain);
 }
+
+document.addEventListener('click', async e => {
+  const book = e.target.closest('[data-corpus-book]');
+  if (book) { openApi('texts', book.dataset.corpusBook); return; }
+  const script = e.target.closest('[data-corpus-script]'), notes = e.target.closest('[data-corpus-notes]'), size = e.target.closest('[data-corpus-size]');
+  if (currentCorpusUnit && (script || notes || size)) {
+    const el = $('#reader'), ratio = el.scrollTop / Math.max(1, el.scrollHeight - el.clientHeight);
+    const focusSelector = script ? `[data-corpus-script="${script.dataset.corpusScript}"]` : notes ? '[data-corpus-notes]' : `[data-corpus-size="${size.dataset.corpusSize}"]`;
+    if (script) corpusReadingPrefs.script = script.dataset.corpusScript;
+    if (notes) corpusReadingPrefs.notes = !corpusReadingPrefs.notes;
+    if (size) corpusReadingPrefs.size = Math.max(18, Math.min(26, corpusReadingPrefs.size + Number(size.dataset.corpusSize)));
+    try { localStorage.setItem('corpus-reading', JSON.stringify(corpusReadingPrefs)); } catch (_) { /* Optional. */ }
+    renderCorpusReading(currentCorpusUnit);
+    el.querySelector(focusSelector)?.focus({preventScroll:true});
+    el.scrollTop = ratio * Math.max(0, el.scrollHeight - el.clientHeight);
+    return;
+  }
+  const copy = e.target.closest('[data-copy-reading]');
+  if (copy) {
+    try { await navigator.clipboard.writeText(corpusCopyText.get(copy) || ''); copy.textContent = '已复制'; }
+    catch (_) { copy.textContent = '复制失败，请手动选择'; }
+    setTimeout(() => { copy.textContent = '复制当前文字'; }, 1600);
+  }
+});
+document.addEventListener('change', e => {
+  if (e.target.matches('[data-corpus-select]')) openJuan(e.target.value);
+});
 
 // 详情里的诗/卷跳转
 document.addEventListener('click', async (e) => {
@@ -1350,7 +1452,7 @@ document.addEventListener('click', async (e) => {
       await navigator.clipboard.writeText(text);
       btn.textContent = '已复制';
     } catch (_) { btn.textContent = '复制失败，请手动选择'; }
-    setTimeout(() => { btn.textContent = '复制全文'; }, 1600);
+    setTimeout(() => { btn.textContent = btn.dataset.copyLabel || '复制全文'; }, 1600);
     return;
   }
 

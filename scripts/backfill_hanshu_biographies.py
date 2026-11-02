@@ -20,6 +20,10 @@ PARSER = 'hanshu-wyg-biographies-31-50-source-pages-v1'
 VOLUMES = range(31, 51)
 
 
+def predecessors(plan):
+    return plan['previousPlans'] if 'previousPlans' in plan else [plan['previousPlan']]
+
+
 def make_plan(cache, permission_sha):
     prior = annals_plan(cache, permission_sha)
     info = copy.deepcopy(prior['manifest'])
@@ -71,10 +75,18 @@ def backup_existing(conn, folder, plan):
             sql.Identifier(table), sql.Identifier(field), sql.Identifier(key)), (values,)).fetchall()
         snapshot[table] = [r[0] for r in rows]
     require(snapshot['book'][0]['title'] == '《汉书》', 'Wrong existing book')
-    verify(conn, plan['previousPlan'])
-    _, previous, state = batch(conn, plan['manifest']['previousBatchId'])
-    require(state == 'applied' and previous['editionIds'] == [9], 'Unexpected predecessor edition')
-    require(set(unit_ids) == set(previous['unitIds']), 'Unrecognized existing units; refuse merge')
+    known_units = set()
+    owned_editions = []
+    for prior in predecessors(plan):
+        verify(conn, prior)
+        _, previous, state = batch(conn, prior['batchId'])
+        require(state == 'applied' and prior['manifest']['bookId'] == book_id and
+                prior['manifest']['source'] == plan['manifest']['source'], 'Unexpected predecessor source')
+        require(not known_units.intersection(previous['unitIds']), 'Overlapping predecessor units')
+        known_units.update(previous['unitIds'])
+        owned_editions.extend(previous['editionIds'])
+    require(owned_editions == [9], 'Unexpected predecessor edition')
+    require(set(unit_ids) == known_units, 'Unrecognized existing units; refuse merge')
     require(len(snapshot['edition']) == 1 and snapshot['edition'][0]['id'] == 9, 'Unexpected book editions')
     snapshot.update({'batchId': plan['batchId'], 'createdAt': now(), 'publicBefore': fingerprints(conn)})
     path = folder / ('corpus-before-' + plan['batchId'][:12] + '-' + now().replace(':', '-') + '.json')
@@ -84,7 +96,8 @@ def backup_existing(conn, folder, plan):
 
 
 def verify_chain(conn, plan):
-    verify(conn, plan['previousPlan'])
+    for prior in predecessors(plan):
+        verify(conn, prior)
     return {**verify(conn, plan), 'previousBatchVerified': True}
 
 

@@ -1,0 +1,31 @@
+{
+  "conversion": {
+    "engine": "OpenCC",
+    "version": "1.4.2",
+    "config": "t2s.json",
+    "status": "machine-converted; not a translation or verified source text"
+  },
+  "checks": {
+    "originalMatchesFixedSource": true,
+    "sourceOrder": true,
+    "frontBoundaryWarning": true,
+    "simplifiedQueryMatchesTraditional": true,
+    "percentIsLiteral": true,
+    "punctuatedBooksFirst": true,
+    "simplifiedCatalogSearch": true,
+    "legacyPunctuatedReading": true,
+    "defaultSimplified": true,
+    "sourceDetailsCollapsed": true,
+    "notesToggle": true,
+    "readingCopy": true,
+    "rawCopyExact": true,
+    "rawFontSizeControl": true,
+    "keyboardFocusRetained": true,
+    "originalScriptView": true,
+    "chapterNavigation": true,
+    "mobileReadingWithoutOverflow": true,
+    "printReaderVisible": true,
+    "returnToCatalog": true,
+    "noBrowserErrors": true
+  }
+}

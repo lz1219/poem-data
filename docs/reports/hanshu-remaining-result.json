@@ -1,0 +1,352 @@
+{
+  "batchId": "7e002731d951400f1418c90cef7a62f7c6d54de20c95098fe280b8c7ba6b4377",
+  "counts": {
+    "units": 168,
+    "bodyVolumes": 60,
+    "bodyComponents": 77,
+    "editionExaminations": 78,
+    "frontMatter": 12,
+    "backMatter": 1,
+    "sourcePageBlocks": 5230,
+    "emptySourcePages": 7,
+    "unresolvedGlyphTokenOccurrences": 396,
+    "unreviewedComponentBoundaries": 1
+  },
+  "copyMetrics": [
+    {
+      "target": "COPY public.text_unit",
+      "rows": 168,
+      "seconds": 10.988
+    },
+    {
+      "target": "COPY public.corpus_unit_origin",
+      "rows": 168,
+      "seconds": 0.937
+    },
+    {
+      "target": "COPY public.paragraph",
+      "rows": 5230,
+      "seconds": 77.19
+    },
+    {
+      "target": "COPY public.corpus_paragraph_origin",
+      "rows": 5230,
+      "seconds": 27.86
+    },
+    {
+      "target": "COPY public.text_unit",
+      "rows": 168,
+      "seconds": 7.161
+    },
+    {
+      "target": "COPY public.corpus_unit_origin",
+      "rows": 168,
+      "seconds": 0.949
+    },
+    {
+      "target": "COPY public.paragraph",
+      "rows": 5230,
+      "seconds": 65.208
+    },
+    {
+      "target": "COPY public.corpus_paragraph_origin",
+      "rows": 5230,
+      "seconds": 24.824
+    }
+  ],
+  "checks": {
+    "changedPredecessorRefused": true,
+    "unknownExistingUnitRefused": true,
+    "repeatImportNoWrites": true,
+    "changed-unit-refused": true,
+    "changed-origin-refused": true,
+    "later-reference-refused": true,
+    "annals-rollback-refused": true,
+    "biographies-rollback-refused": true,
+    "actualRollbackRetainedSharedEditionAndAllPriorData": true,
+    "independentReadOnlyAllFourBatchVerification": true
+  },
+  "before": {
+    "book": {
+      "rows": 38,
+      "md5": "84eb4973588ebe99575fe2df2901b1d0"
+    },
+    "edition": {
+      "rows": 4,
+      "md5": "817d80ed026237a30e35495d28cb4ff4"
+    },
+    "text_unit": {
+      "rows": 2457,
+      "md5": "725f8ed5caec17bc3f3db425cb63c8d6"
+    },
+    "paragraph": {
+      "rows": 137664,
+      "md5": "025ece9f706878bc98b0e428d6eef132"
+    },
+    "corpus_poem": {
+      "rows": 66968,
+      "md5": "aa48e97d6c00310715f61f2a36a60bfc"
+    },
+    "person": {
+      "rows": 125,
+      "md5": "25cea802d69d7fff06524108dfe696fc"
+    },
+    "work": {
+      "rows": 65,
+      "md5": "6f2da400c791e04ab4fb17e030a9c5b3"
+    },
+    "journey": {
+      "rows": 10,
+      "md5": "0b66b3df5bf07ee181ae1d78231a6b0a"
+    },
+    "stop": {
+      "rows": 105,
+      "md5": "46b99e5c57990b0966ba1fbdacf7cb97"
+    },
+    "claim": {
+      "rows": 17,
+      "md5": "24731fcf6004a18438f42a8dc1738f4d"
+    },
+    "evidence": {
+      "rows": 24,
+      "md5": "171dda1dd20465a4243c0f6074a19211"
+    },
+    "research_note": {
+      "rows": 348,
+      "md5": "765bc0b771e70ccf9f411e845e4131cf"
+    },
+    "place": {
+      "rows": 38489,
+      "md5": "24a21f3b947067b236b231b80d094525"
+    }
+  },
+  "after": {
+    "book": {
+      "rows": 38,
+      "md5": "84eb4973588ebe99575fe2df2901b1d0"
+    },
+    "edition": {
+      "rows": 4,
+      "md5": "817d80ed026237a30e35495d28cb4ff4"
+    },
+    "text_unit": {
+      "rows": 2625,
+      "md5": "6564894bded41967e863a6ab286f184e"
+    },
+    "paragraph": {
+      "rows": 142894,
+      "md5": "84d1e6a815f4feca1bb5f0fbb5b4d723"
+    },
+    "corpus_poem": {
+      "rows": 66968,
+      "md5": "aa48e97d6c00310715f61f2a36a60bfc"
+    },
+    "person": {
+      "rows": 125,
+      "md5": "25cea802d69d7fff06524108dfe696fc"
+    },
+    "work": {
+      "rows": 65,
+      "md5": "6f2da400c791e04ab4fb17e030a9c5b3"
+    },
+    "journey": {
+      "rows": 10,
+      "md5": "0b66b3df5bf07ee181ae1d78231a6b0a"
+    },
+    "stop": {
+      "rows": 105,
+      "md5": "46b99e5c57990b0966ba1fbdacf7cb97"
+    },
+    "claim": {
+      "rows": 17,
+      "md5": "24731fcf6004a18438f42a8dc1738f4d"
+    },
+    "evidence": {
+      "rows": 24,
+      "md5": "171dda1dd20465a4243c0f6074a19211"
+    },
+    "research_note": {
+      "rows": 348,
+      "md5": "765bc0b771e70ccf9f411e845e4131cf"
+    },
+    "place": {
+      "rows": 38489,
+      "md5": "24a21f3b947067b236b231b80d094525"
+    }
+  },
+  "unitIds": [
+    3093,
+    3094,
+    3095,
+    3096,
+    3097,
+    3098,
+    3099,
+    3100,
+    3101,
+    3102,
+    3103,
+    3104,
+    3105,
+    3106,
+    3107,
+    3108,
+    3109,
+    3110,
+    3111,
+    3112,
+    3113,
+    3114,
+    3115,
+    3116,
+    3117,
+    3118,
+    3119,
+    3120,
+    3121,
+    3122,
+    3123,
+    3124,
+    3125,
+    3126,
+    3127,
+    3128,
+    3129,
+    3130,
+    3131,
+    3132,
+    3133,
+    3134,
+    3135,
+    3136,
+    3137,
+    3138,
+    3139,
+    3140,
+    3141,
+    3142,
+    3143,
+    3144,
+    3145,
+    3146,
+    3147,
+    3148,
+    3149,
+    3150,
+    3151,
+    3152,
+    3153,
+    3154,
+    3155,
+    3156,
+    3157,
+    3158,
+    3159,
+    3160,
+    3161,
+    3162,
+    3163,
+    3164,
+    3165,
+    3166,
+    3167,
+    3168,
+    3169,
+    3170,
+    3171,
+    3172,
+    3173,
+    3174,
+    3175,
+    3176,
+    3177,
+    3178,
+    3179,
+    3180,
+    3181,
+    3182,
+    3183,
+    3184,
+    3185,
+    3186,
+    3187,
+    3188,
+    3189,
+    3190,
+    3191,
+    3192,
+    3193,
+    3194,
+    3195,
+    3196,
+    3197,
+    3198,
+    3199,
+    3200,
+    3201,
+    3202,
+    3203,
+    3204,
+    3205,
+    3206,
+    3207,
+    3208,
+    3209,
+    3210,
+    3211,
+    3212,
+    3213,
+    3214,
+    3215,
+    3216,
+    3217,
+    3218,
+    3219,
+    3220,
+    3221,
+    3222,
+    3223,
+    3224,
+    3225,
+    3226,
+    3227,
+    3228,
+    3229,
+    3230,
+    3231,
+    3232,
+    3233,
+    3234,
+    3235,
+    3236,
+    3237,
+    3238,
+    3239,
+    3240,
+    3241,
+    3242,
+    3243,
+    3244,
+    3245,
+    3246,
+    3247,
+    3248,
+    3249,
+    3250,
+    3251,
+    3252,
+    3253,
+    3254,
+    3255,
+    3256,
+    3257,
+    3258,
+    3259,
+    3260
+  ],
+  "reusedEditionId": 9,
+  "newEditionIds": [],
+  "backupSha256": "f5b0a512906e7fbd7dd8b768b8c6b890049eb79d708e28dfc17e263624cf6f1b",
+  "priorSourceRowsSha256": "e43abf5704d484ec3bfb46c1a218b1418fd330e9dc4c74767895620376b01b64",
+  "reviewStatus": "转录待校；未逐叶影像校勘；古注、清代考證、御製篇及附记依原录分组件，缺字和目录/提要边界待核"
+}

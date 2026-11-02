@@ -292,6 +292,15 @@ def apply(conn, plan, backup_dir, *, backup_fn=backup):
 
 def guard_references(conn, plan, result):
     from psycopg import sql
+    # A batch can depend on another batch without pointing to its text rows
+    # (e.g. several additions sharing an edition owned by the first batch).
+    # apply/rollback hold the same per-book advisory lock; the batch row is
+    # already locked by rollback before inspecting this immutable manifest.
+    dependent = conn.execute("""SELECT batch_id FROM public.corpus_ingest_batch
+        WHERE state='applied' AND batch_id<>%s AND
+        (manifest->>'previousBatchId'=%s OR coalesce(manifest->'previousBatchIds','[]'::jsonb) ? %s)
+        LIMIT 1""", (plan['batchId'], plan['batchId'], plan['batchId'])).fetchone()
+    require(dependent is None, 'Later reference prevents rollback: corpus_ingest_batch predecessor dependency')
     allowed = {'paragraph': ('id', result['paragraphIds']),
                'corpus_unit_origin': ('batch_id', [plan['batchId']]),
                'corpus_paragraph_origin': ('batch_id', [plan['batchId']]),

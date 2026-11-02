@@ -21,7 +21,7 @@ ARCHIVE_SHA = '1bb47d3cada5dc434048256bb19ffaed62fbc2dcd1f3cc264bb906c5dcf2cd17'
 PARSER = 'hanshu-wyg-annals-source-pages-v1'
 
 
-def parse_file(path, raw, *, allowed_volumes=range(1, 13), parser=PARSER):
+def parse_file(path, raw, *, allowed_volumes=range(1, 13), parser=PARSER, named_components=()):
     """Use explicit JUAN boundaries, preserving upper/lower and 考證 identities."""
     text = raw.decode('utf-8', errors='strict')
     require(re.search(r'^#\+PROPERTY: BASEEDITION WYG\s*$', text, re.M), 'Source is not marked WYG')
@@ -31,10 +31,13 @@ def parse_file(path, raw, *, allowed_volumes=range(1, 13), parser=PARSER):
     for index, mark in enumerate(marks):
         end = marks[index + 1].start() if index + 1 < len(marks) else len(text)
         title = mark.group(1).strip()
-        title_match = re.fullmatch(r'卷([一二三四五六七八九十百]+)(上|下)?(考證)?', title)
-        require(bool(title_match), 'Unsupported title in annals batch')
-        volume = chinese_number(title_match.group(1))
-        require(volume in allowed_volumes, 'Volume outside selected batch')
+        title_match = re.fullmatch(r'卷([一二三四五六七八九十百]+)(上|中|下|中之上|中之下|下之上|下之下)?(考證)?', title)
+        require(bool(title_match) or title in named_components, 'Unsupported title in selected batch')
+        volume = chinese_number(title_match.group(1)) if title_match else None
+        require(volume in allowed_volumes if volume is not None else title in named_components, 'Volume outside selected batch')
+        kind = ('edition-examination' if title.endswith('考證') else
+                'body-volume' if volume is not None else
+                'back-matter' if title == '[考證跋語]' else 'front-matter')
         chunk = text[mark.end():end]
         pages = list(PAGE.finditer(chunk))
         require(bool(pages) and not visible_text(chunk[:pages[0].start()]), 'Unlocated source text')
@@ -60,12 +63,14 @@ def parse_file(path, raw, *, allowed_volumes=range(1, 13), parser=PARSER):
         origin = {'sourcePath': path, 'sourceSha256': hashlib.sha256(raw).hexdigest(),
                   'sourceByteStart': len(text[:mark.start()].encode()),
                   'sourceByteEnd': len(text[:end].encode()), 'volumeNumber': volume,
-                  'kind': 'edition-examination' if title_match.group(3) else 'body-volume',
+                  'kind': kind,
                   'sourcePages': len(blocks),
                   'emptySourcePageLabels': [p['origin']['pageLabel'] for p in blocks if not p['body']],
                   'unresolvedGlyphTokens': sorted(set(re.findall(r'&KR[0-9A-Za-z]+;', body))),
                   'parser': parser, 'textStatus': 'transcription-unreviewed',
                   'noteAttribution': 'unreviewed; spans describe parentheses only; 考證 is a separate edition component'}
+        if title == '[提要]':
+            origin['boundaryNote'] = '原录[提要]标记下首段含目录尾文；页内目录与提要边界待核，原字及标记位置保留。'
         units.append({'juan': title, 'body': body, 'sha256': hashlib.sha256(body.encode()).hexdigest(),
                       'origin': origin, 'paragraphs': blocks})
     return units

@@ -1,0 +1,419 @@
+{
+  "checkedAt": "2026-11-02T02:26:32.750607+00:00",
+  "method": "Read-only original PostgreSQL inventory; descriptive candidate notes, not academic certification",
+  "counts": {
+    "book": 38,
+    "edition": 4,
+    "text_unit": 2625,
+    "paragraph": 142894,
+    "corpus_poem": 66968
+  },
+  "caveats": [
+    "Source pages and existing natural/unknown paragraphs are separate types; totals are database record counts.",
+    "Poem counts attach to existing book_id only, not author-wide completeness.",
+    "Similar titles are candidates; no book or foreign key has been merged.",
+    "Every book has an action note; full volume-by-volume coverage and all-source surveys remain ongoing."
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "《苏轼诗集》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "仅书目；作者作品可能位于总集诗库，不能据本ID零行断言无苏诗。"
+    },
+    {
+      "id": 2,
+      "title": "《东坡乐府》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "仅书目；东坡詞为候选注本，须先核与乐府的版本范围。"
+    },
+    {
+      "id": 3,
+      "title": "《李太白全集》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "仅书目；已采李太白文集为候选独立版本，不能径改称全集。"
+    },
+    {
+      "id": 4,
+      "title": "《杜诗详注》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "杜诗详注与已采九家集注杜诗不是同注本，不自动合并。"
+    },
+    {
+      "id": 5,
+      "title": "《三国志·蜀书·诸葛亮传》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "篇章级引书；已采三国志魏志与蜀志原件，先核篇卷/版本映射。"
+    },
+    {
+      "id": 6,
+      "title": "《汉晋春秋》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "佚书/辑佚范围须核，不按现代同名拼本认定完整。"
+    },
+    {
+      "id": 7,
+      "title": "《史记》",
+      "legacyEdition": null,
+      "textUnits": 122,
+      "sourcePageOrParagraphRecords": 3544,
+      "poems": 0,
+      "editions": [
+        {
+          "id": 5,
+          "name": "史记集解·文渊阁四库本（Kanripo电子转录）"
+        }
+      ],
+      "nextAction": "已入非表120卷及提要/序；十表缺、5空电子页待核。"
+    },
+    {
+      "id": 8,
+      "title": "《汉书》",
+      "legacyEdition": null,
+      "textUnits": 234,
+      "sourcePageOrParagraphRecords": 6854,
+      "poems": 0,
+      "editions": [
+        {
+          "id": 9,
+          "name": "前汉书·颜师古注·文渊阁四库本（Kanripo电子转录）"
+        }
+      ],
+      "nextAction": "已收本版非表92卷号/110正文分卷、111独立考證、12卷首及1卷末，共234组件/6854来源页；八表13–20未入。现转录11空页/495处缺字标记、提要边界和影像对校待核；表格寻源先比对四库影印249册。"
+    },
+    {
+      "id": 9,
+      "title": "《战国策·赵策》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "篇级书目，与燕策三共用战国策母书的映射待核。"
+    },
+    {
+      "id": 10,
+      "title": "《战国策·燕策三》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "篇级书目，不把赵策或整本直接覆写此ID。"
+    },
+    {
+      "id": 11,
+      "title": "《樊川文集》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "已采樊川文集原件，卷篇/版本预览后入原库。"
+    },
+    {
+      "id": 12,
+      "title": "《大慈恩寺三藏法师传》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "已采大唐大慈恩寺三藏法师传；佛典具体来源/权利另核，不能套Kanripo全库声明。"
+    },
+    {
+      "id": 13,
+      "title": "《大唐西域记》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "已采大唐西域记；佛典具体来源/权利另核。"
+    },
+    {
+      "id": 14,
+      "title": "《旧唐书》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "与81/161为书目映射候选；先核已有两版卷目，不删旧ID。"
+    },
+    {
+      "id": 15,
+      "title": "《唐左拾遗翰林学士李公新墓碑》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "单篇碑文引书，不假定独立整书；追上游别集/总集定位。"
+    },
+    {
+      "id": 16,
+      "title": "《欧阳文忠公集》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "已采欧阳原件及维基卷篇，原正文尚未补入本ID。"
+    },
+    {
+      "id": 17,
+      "title": "《苏轼文集》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "东坡全集为候选版本，范围含诗文，不能静默当苏轼文集同版。"
+    },
+    {
+      "id": 18,
+      "title": "《王阳明全集》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "已采王文成公全书不同快照，卷题跨文件/重排须保留。"
+    },
+    {
+      "id": 19,
+      "title": "《明史》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "与28为候选同书不同登记，先核卷目。"
+    },
+    {
+      "id": 20,
+      "title": "《传习录》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "传习录与王文成公全书篇卷关系待核，不造完整卷数。"
+    },
+    {
+      "id": 21,
+      "title": "《王阳明全集·静心录》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "旧引名出处待核，不凭静心录名建立古代原典版本。"
+    },
+    {
+      "id": 22,
+      "title": "《王阳明全集·知行录》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "旧引名出处待核，不凭知行录名建立古代原典版本。"
+    },
+    {
+      "id": 23,
+      "title": "《王阳明全集·顺生录》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "旧引名出处待核，不凭顺生录名建立古代原典版本。"
+    },
+    {
+      "id": 24,
+      "title": "《竹山词》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "与26为候选同书登记，旧ID保留。"
+    },
+    {
+      "id": 25,
+      "title": "宋史",
+      "legacyEdition": "Kanripo KR2a0032 / 四庫全書文淵閣本",
+      "textUnits": 1,
+      "sourcePageOrParagraphRecords": 380,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "仅1个现有卷篇单元；已采宋史仓库不等于原库已有全书。"
+    },
+    {
+      "id": 26,
+      "title": "竹山詞",
+      "legacyEdition": "Kanripo KR4j0053 / 四庫全書文淵閣本",
+      "textUnits": 1,
+      "sourcePageOrParagraphRecords": 87,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "仅1个现有单元；须核与24对应及两卷词集范围。"
+    },
+    {
+      "id": 28,
+      "title": "明史",
+      "legacyEdition": "Kanripo KR2a0038 / 四庫全書文淵閣本",
+      "textUnits": 1,
+      "sourcePageOrParagraphRecords": 8,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "仅1个现有单元；已采明史仓库不等于原库已有全书。"
+    },
+    {
+      "id": 53,
+      "title": "全宋词",
+      "legacyEdition": "chinese-poetry 语料库",
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "此书目ID当前诗库也为0；全宋词需单独核来源/实际覆盖。"
+    },
+    {
+      "id": 78,
+      "title": "全唐诗",
+      "legacyEdition": "chinese-poetry 语料库",
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 57607,
+      "editions": [
+        {
+          "id": 1,
+          "name": "全唐詩（chinese-poetry 電子本）"
+        }
+      ],
+      "nextAction": "诗歌库独立库存，不以零text_unit判缺诗；底本、卷次和全唐诗完整性另核。"
+    },
+    {
+      "id": 79,
+      "title": "元曲",
+      "legacyEdition": "chinese-poetry 语料库",
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 9361,
+      "editions": null,
+      "nextAction": "曲库独立库存，不以零text_unit判空书。"
+    },
+    {
+      "id": 80,
+      "title": "資治通鑑",
+      "legacyEdition": "維基文庫 標點本",
+      "textUnits": 589,
+      "sourcePageOrParagraphRecords": 33856,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "589单元不是589原书卷；目录层级、附加单元和版本重复待核。"
+    },
+    {
+      "id": 81,
+      "title": "舊唐書（四庫本）",
+      "legacyEdition": "Kanripo KR2a0026 / 四庫全書文淵閣本",
+      "textUnits": 188,
+      "sourcePageOrParagraphRecords": 3540,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "188单元不直接推为缺12卷；与14/161分版本核查。"
+    },
+    {
+      "id": 82,
+      "title": "新唐書",
+      "legacyEdition": "維基文庫 標點本",
+      "textUnits": 325,
+      "sourcePageOrParagraphRecords": 28684,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "325单元须核本卷/分卷/附加和重复，不按卷数直接认定完整。"
+    },
+    {
+      "id": 83,
+      "title": "元史",
+      "legacyEdition": "維基文庫 標點本",
+      "textUnits": 422,
+      "sourcePageOrParagraphRecords": 22359,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "422单元须核目录与重复，不能当422原书卷。"
+    },
+    {
+      "id": 84,
+      "title": "清史稿",
+      "legacyEdition": "殆知阁古代文献 史藏·正史（未校勘）",
+      "textUnits": 528,
+      "sourcePageOrParagraphRecords": 28004,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "528现有单元；清史稿标点缺口沿具体卷目复核，不沿旧缺口数字。"
+    },
+    {
+      "id": 109,
+      "title": "《全唐诗》",
+      "legacyEdition": null,
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "与78候选同书登记，保留诗库FK和旧引用，先建映射。"
+    },
+    {
+      "id": 160,
+      "title": "《白氏长庆集》",
+      "legacyEdition": "传统底本",
+      "textUnits": 0,
+      "sourcePageOrParagraphRecords": 0,
+      "poems": 0,
+      "editions": [
+        {
+          "id": 2,
+          "name": "白氏長慶集（傳統底本，未入庫）"
+        }
+      ],
+      "nextAction": "白氏文集已采；与白氏长庆集版本/卷次范围核验后并列入库。"
+    },
+    {
+      "id": 161,
+      "title": "舊唐書",
+      "legacyEdition": "維基文庫 標點本",
+      "textUnits": 214,
+      "sourcePageOrParagraphRecords": 15578,
+      "poems": 0,
+      "editions": null,
+      "nextAction": "维基舊唐書214单元，与81WYG版并列；先核卷目，保留ID。"
+    }
+  ]
+}

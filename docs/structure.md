@@ -13,7 +13,7 @@ poem-data/
 ├── shared/         共享表（版本、书目）
 ├── web/            前端（零构建，单页）
 ├── server/  Django 后端（admin + API）
-├── scripts/        校验、索引、闸门、本地服务
+├── scripts/        采集、导入/回滚、校验、索引与闸门
 ├── docs/           文档
 ├── README.md  LICENSE  .gitignore  .env.example
 ```
@@ -34,7 +34,7 @@ poem-data/
 | `server/staticfiles/` | `collectstatic` 产物 | ❌ | 部署时生成 |
 | `server/db.sqlite3` | 本地开发库 | ❌ | 本地生成，可随时 `import_json` 重建 |
 | `__pycache__/`、`*.pyc` | Python 字节码 | ❌ | 自动生成 |
-| `scripts/` | 校验器、索引生成、提交闸门、本地静态服务 | ✅ | **必须** |
+| `scripts/` | 来源采集、原库导入/回滚、校验器、索引生成与提交闸门（本地服务统一Django） | ✅ | **必须** |
 | `docs/` | 结构与 AI 编码规范 | ✅ | **必须** |
 | `.env` | 真实凭据 | ❌ | 本地私有，**永不入库** |
 | `.env.example` | 键名与占位值 | ✅ | 必须，给人看怎么配 |

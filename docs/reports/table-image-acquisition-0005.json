@@ -1,0 +1,229 @@
+{
+  "checkedOn": "2026-11-02",
+  "resources": [
+    {
+      "kind": "original",
+      "fileTitle": "File:文淵閣四庫全書 0245冊.djvu",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0245%E5%86%8A.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "expectedSha1": "5847539a2b3a2847cdd00fe80c6e9d1e4b895f81",
+      "expectedBytes": 87641291,
+      "catalogRevision": 649641635,
+      "catalogCapture": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0245%E5%86%8A.djvu&prop=imageinfo%7Crevisions&iiprop=url%7Cextmetadata%7Csize%7Csha1&rvprop=ids&format=json&formatversion=2",
+        "checkedAt": "2026-11-02T02:22:11.433721+00:00",
+        "status": "reachable",
+        "sha256": "eeab4ba819b98e8857fb5e3ce893b2eb8ad983dca6bd79697bdf53e007dce832",
+        "bytes": 2095
+      },
+      "capture": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0245%E5%86%8A.djvu",
+        "checkedAt": "2026-11-02T02:25:32.029673+00:00",
+        "status": "reachable",
+        "sha256": "b9b4c4c5187200e91a3328bc016c53acd4963ef5096df35b26313391474cf694",
+        "bytes": 87641291
+      },
+      "sha1": "5847539a2b3a2847cdd00fe80c6e9d1e4b895f81",
+      "fileMatchesProvider": true,
+      "rights": {
+        "providerLabel": "Public domain",
+        "providerCopyrighted": "False",
+        "basisCaptureSha256": "eeab4ba819b98e8857fb5e3ce893b2eb8ad983dca6bd79697bdf53e007dce832",
+        "humanRightsReview": "not-recorded"
+      },
+      "status": "downloaded-hash-verified; edition/page correspondence pending"
+    },
+    {
+      "kind": "original",
+      "fileTitle": "File:文淵閣四庫全書 0249冊.djvu",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0249%E5%86%8A.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "expectedSha1": "0d1c2dca3da431e5fde3f45fb09b9dd654fe5244",
+      "expectedBytes": 115687472,
+      "catalogRevision": 1271811105,
+      "catalogCapture": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0249%E5%86%8A.djvu&prop=imageinfo%7Crevisions&iiprop=url%7Cextmetadata%7Csize%7Csha1&rvprop=ids&format=json&formatversion=2",
+        "checkedAt": "2026-11-02T02:22:11.506354+00:00",
+        "status": "reachable",
+        "sha256": "d94e2a35fa35d727d004ff93b939aceb53b046610c2c103fe542b02ff9564fea",
+        "bytes": 2091
+      },
+      "capture": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0249%E5%86%8A.djvu",
+        "checkedAt": "2026-11-02T02:25:38.093918+00:00",
+        "status": "reachable",
+        "sha256": "47ce425ef9359bf69eac5b85eb7c0cae4e2b08a78cd91ae294cdfcaea9d91d5a",
+        "bytes": 115687472
+      },
+      "sha1": "0d1c2dca3da431e5fde3f45fb09b9dd654fe5244",
+      "fileMatchesProvider": true,
+      "rights": {
+        "providerLabel": "Public domain",
+        "providerCopyrighted": "False",
+        "basisCaptureSha256": "d94e2a35fa35d727d004ff93b939aceb53b046610c2c103fe542b02ff9564fea",
+        "humanRightsReview": "not-recorded"
+      },
+      "status": "downloaded-hash-verified; edition/page correspondence pending"
+    },
+    {
+      "kind": "contents-image",
+      "fileTitle": "File:文淵閣四庫全書 0245冊.djvu",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0245%E5%86%8A.djvu/page5-1920px-%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0245%E5%86%8A.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "parentSha1": "5847539a2b3a2847cdd00fe80c6e9d1e4b895f81",
+      "parentTimestamp": "2018-06-06T14:24:40Z",
+      "pageNumber": 5,
+      "catalogCapture": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0245%E5%86%8A.djvu%7CFile%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0249%E5%86%8A.djvu&prop=imageinfo&iiprop=url%7Csha1%7Ctimestamp&iiurlwidth=1600&iiurlparam=page5-1600px&format=json&formatversion=2",
+        "checkedAt": "2026-11-02T02:24:25.315570+00:00",
+        "status": "reachable",
+        "sha256": "7e520337efd02f43ed1e3a0e4892ace5dd21284407d445103a26ad6a05cf103f",
+        "bytes": 4234
+      },
+      "capture": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0245%E5%86%8A.djvu/page5-1920px-%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0245%E5%86%8A.djvu.jpg",
+        "checkedAt": "2026-11-02T02:25:39.648396+00:00",
+        "status": "reachable",
+        "sha256": "1a949e77045816beab991646814cc491550fc22bdf9636cabe0d2c5b85154650",
+        "bytes": 44599
+      },
+      "inspection": "AI visual inspection of contents page only; not human scholarly collation"
+    },
+    {
+      "kind": "contents-image",
+      "fileTitle": "File:文淵閣四庫全書 0249冊.djvu",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0249%E5%86%8A.djvu/page5-1920px-%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0249%E5%86%8A.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "parentSha1": "0d1c2dca3da431e5fde3f45fb09b9dd654fe5244",
+      "parentTimestamp": "2018-06-06T14:56:36Z",
+      "pageNumber": 5,
+      "catalogCapture": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0245%E5%86%8A.djvu%7CFile%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0249%E5%86%8A.djvu&prop=imageinfo&iiprop=url%7Csha1%7Ctimestamp&iiurlwidth=1600&iiurlparam=page5-1600px&format=json&formatversion=2",
+        "checkedAt": "2026-11-02T02:24:25.315570+00:00",
+        "status": "reachable",
+        "sha256": "7e520337efd02f43ed1e3a0e4892ace5dd21284407d445103a26ad6a05cf103f",
+        "bytes": 4234
+      },
+      "capture": {
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0249%E5%86%8A.djvu/page5-1920px-%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8_0249%E5%86%8A.djvu.jpg",
+        "checkedAt": "2026-11-02T02:25:24.571534+00:00",
+        "status": "reachable",
+        "sha256": "be044caf1ede126fe4d0af3d5a01d5f8f59a607601d5bd9bdd3b97d9d373e490",
+        "bytes": 56423
+      },
+      "inspection": "AI visual inspection of contents page only; not human scholarly collation"
+    }
+  ],
+  "indexCaptures": [
+    {
+      "id": "shiji-index",
+      "capture": {
+        "url": "https://zh.wikisource.org/w/api.php?action=query&titles=Index%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0245%E5%86%8A.djvu&prop=revisions&rvprop=ids%7Ccontent&rvslots=main&format=json&formatversion=2",
+        "checkedAt": "2026-11-02T02:22:11.415536+00:00",
+        "status": "reachable",
+        "sha256": "fdf6beb376408990662132f0900a8415e1ba6cb894bf2f12b671d78d1a0d4906",
+        "bytes": 1171
+      },
+      "response": {
+        "batchcomplete": true,
+        "query": {
+          "pages": [
+            {
+              "pageid": 6589844,
+              "ns": 106,
+              "title": "Index:文淵閣四庫全書 0245冊.djvu",
+              "revisions": [
+                {
+                  "revid": 8957244,
+                  "parentid": 8883504,
+                  "slots": {
+                    "main": {
+                      "contentmodel": "proofread-index",
+                      "contentformat": "text/x-wiki",
+                      "content": "{{:MediaWiki:Proofreadpage_index_template\n|Type=book\n|Title=[[景印文淵閣四庫全書書名目錄|景印文淵閣四庫全書]]\n|Language=zh-hant\n|Volume=第0245冊　史部 正史類\n|Author=\n|Translator=\n|Editor=\n|Illustrator=\n|School=\n|Publisher=\n|Address=\n|Year=\n|Key=\n|ISBN=\n|OCLC=\n|LCCN=\n|BNF_ARK=\n|ARC=\n|DOI=\n|Source=djvu\n|Image=1\n|Progress=OCR\n|Transclusion=no\n|Validation_date=\n|Pages=<pagelist 1=\"封面\" 2=\"-\" 3=\"文淵閣寶\" 4=\"書名頁\" 5=\"本冊目次\" from=1 to=5 />\n\n==史記集解{{small|（一）}}==\n【宋】裴駰撰\n<pagelist from=6 to=592 6=1 />\n|Volumes=[[Index:文淵閣四庫全書 0244冊.djvu|← 第0244冊]]　[[景印文淵閣四庫全書書名目錄|書名目錄]]　[[Index:文淵閣四庫全書 0246冊.djvu|第0246冊 →]]\n|Remarks={{Page:文淵閣四庫全書 0245冊.djvu/5}}\n|Width=\n|Header=\n|Footer=\n|tmplver=\n}}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "table-index-pages",
+      "capture": {
+        "url": "https://zh.wikisource.org/w/api.php?action=query&titles=Page%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0245%E5%86%8A.djvu%2F5%7CIndex%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0249%E5%86%8A.djvu%7CPage%3A%E6%96%87%E6%B7%B5%E9%96%A3%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8+0249%E5%86%8A.djvu%2F5&prop=revisions&rvprop=ids%7Ccontent&rvslots=main&format=json&formatversion=2",
+        "checkedAt": "2026-11-02T02:24:25.334420+00:00",
+        "status": "reachable",
+        "sha256": "04c3b6d6ee469c725abaad11a52942ff2e225587ff5a20154fa6efe295b2c5f5",
+        "bytes": 2197
+      },
+      "response": {
+        "batchcomplete": true,
+        "query": {
+          "pages": [
+            {
+              "pageid": 6589848,
+              "ns": 106,
+              "title": "Index:文淵閣四庫全書 0249冊.djvu",
+              "revisions": [
+                {
+                  "revid": 8957292,
+                  "parentid": 8883535,
+                  "slots": {
+                    "main": {
+                      "contentmodel": "proofread-index",
+                      "contentformat": "text/x-wiki",
+                      "content": "{{:MediaWiki:Proofreadpage_index_template\n|Type=book\n|Title=[[景印文淵閣四庫全書書名目錄|景印文淵閣四庫全書]]\n|Language=zh-hant\n|Volume=第0249冊　史部 正史類\n|Author=\n|Translator=\n|Editor=\n|Illustrator=\n|School=\n|Publisher=\n|Address=\n|Year=\n|Key=\n|ISBN=\n|OCLC=\n|LCCN=\n|BNF_ARK=\n|ARC=\n|DOI=\n|Source=djvu\n|Image=1\n|Progress=OCR\n|Transclusion=no\n|Validation_date=\n|Pages=<pagelist 1=\"封面\" 2=\"-\" 3=\"文淵閣寶\" 4=\"書名頁\" 5=\"本冊目次\" from=1 to=5 />\n\n==前漢書（一）{{small|（附考證）}}==\n【漢】班固撰　【唐】顏師古注　【清】齊召南等撰\n<pagelist from=6 to=840 6=1 />\n|Volumes=[[Index:文淵閣四庫全書 0248冊.djvu|← 第0248冊]]　[[景印文淵閣四庫全書書名目錄|書名目錄]]　[[Index:文淵閣四庫全書 0250冊.djvu|第0250冊 →]]\n|Remarks={{Page:文淵閣四庫全書 0249冊.djvu/5}}\n|Width=\n|Header=\n|Footer=\n|tmplver=\n}}"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "pageid": 6593164,
+              "ns": 104,
+              "title": "Page:文淵閣四庫全書 0245冊.djvu/5",
+              "revisions": [
+                {
+                  "revid": 8744885,
+                  "parentid": 0,
+                  "slots": {
+                    "main": {
+                      "contentmodel": "proofread-page",
+                      "contentformat": "text/x-wiki",
+                      "content": "<noinclude><pagequality level=\"1\" user=\"CollationBot\" /></noinclude>{{c|本冊目次}}\n\n{| style=\"margin:0 auto\"\n| 史記集解（一） || 【宋】裴駰撰 || style=\"text-align:right\" | 一 \n|}<noinclude></noinclude>"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "pageid": 6593168,
+              "ns": 104,
+              "title": "Page:文淵閣四庫全書 0249冊.djvu/5",
+              "revisions": [
+                {
+                  "revid": 8744889,
+                  "parentid": 0,
+                  "slots": {
+                    "main": {
+                      "contentmodel": "proofread-page",
+                      "contentformat": "text/x-wiki",
+                      "content": "<noinclude><pagequality level=\"1\" user=\"CollationBot\" /></noinclude>{{c|本冊目次}}\n\n{| style=\"margin:0 auto\"\n| 前漢書（一）（附考證） || 【漢】班固撰　【唐】顏師古注　【清】齊召南等撰 || style=\"text-align:right\" | 一 \n|}<noinclude></noinclude>"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Fixed catalog revisions and original SHA-1/size match; originals also have local SHA-256.",
+    "File0245 contents identifies 史記集解（一）裴駰; file0249 identifies 前漢書（一）附考證. Contents images inspected by AI only.",
+    "Same WYG edition candidates; page-by-page text correspondence and table coverage not yet established.",
+    "Do not count facsimile and transcription as independent textual corroboration.",
+    "No table transcription, original character repair, confirmed fact or route was added from these images.",
+    "Original media bytes remain outside repository in content-hash cache."
+  ]
+}

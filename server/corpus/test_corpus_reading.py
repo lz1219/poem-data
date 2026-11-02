@@ -1,10 +1,13 @@
 """Reading compatibility does not require a configured PostgreSQL corpus."""
 from unittest.mock import patch
+import copy
+import hashlib
 
 from django.test import SimpleTestCase
 from rest_framework.test import APIRequestFactory
 
 from . import views, views_corpus, corpus_origins
+from . import reading
 
 
 class CorpusReadingCompatibilityTests(SimpleTestCase):
@@ -54,3 +57,67 @@ class CorpusReadingCompatibilityTests(SimpleTestCase):
         self.assertEqual(book['corpusBatches'], batches)
         self.assertEqual(book['corpusEditions'][0]['batches'], batches)
         self.assertEqual(book['corpusEditions'][0]['provenance'], {'coverage': '本纪'})
+
+    def test_appended_front_matter_and_split_components_follow_source_order(self):
+        units = [{'id': i} for i in (1, 2, 9, 10)]
+        origins = [{'unit_id': i, 'edition_id': 9, 'metadata': {'sourcePath': path, 'sourceByteStart': start}}
+                   for i, path, start in [(1, 'KR_002.txt', 0), (2, 'KR_001.txt', 0),
+                                           (9, 'KR_000.txt', 100), (10, 'KR_000.txt', 0)]]
+        with patch.object(corpus_origins, 'available', return_value=True), \
+             patch.object(corpus_origins.db, 'query', side_effect=[[], origins]):
+            corpus_origins.attach_book({'id': 8}, units)
+        self.assertEqual([u['id'] for u in units], [10, 9, 2, 1])
+
+
+class CorpusReadingViewTests(SimpleTestCase):
+    def setUp(self):
+        reading._page.cache_clear()
+
+    def test_conversion_and_page_reflow_leave_original_and_offsets_unchanged(self):
+        raw = '陳勝\n(古/注)𠮷&KR0912;'
+        spans = [{'kind': 'source-text', 'start': 0, 'end': 3},
+                 {'kind': 'source-parenthetical', 'start': 3, 'end': 8},
+                 {'kind': 'source-text', 'start': 8, 'end': len(raw)}]
+        pages = [{'id': 3, 'seq': 1, 'body': raw,
+                  'origin': {'segmentation': 'source-page', 'pageLabel': 'source-1a', 'spans': spans}}]
+        before = copy.deepcopy(pages)
+        unit = {'body': raw}
+        reading.attach_reading(unit, pages)
+        self.assertEqual(pages, before)
+        self.assertEqual(unit['body'], raw)
+        self.assertEqual(unit['reading']['originalSha256'], hashlib.sha256(raw.encode()).hexdigest())
+        segments = unit['reading']['pages'][0]['segments']
+        self.assertEqual(segments[0]['simplified'], '陈胜')
+        self.assertEqual(segments[1], {'kind': 'parenthetical', 'original': '(古注)', 'simplified': '(古注)'})
+        self.assertIn('&KR0912;', segments[2]['simplified'])
+
+    def test_legacy_paragraphs_keep_line_breaks_and_slashes(self):
+        raw = '原文\n次行/正文'
+        unit = {'body': raw}
+        reading.attach_reading(unit, [{'body': raw, 'seq': 1}])
+        self.assertEqual(unit['reading']['pages'][0]['segments'][0]['original'], raw)
+        self.assertFalse(unit['reading']['pages'][0]['sourcePage'])
+
+    def test_invalid_spans_fall_back_to_complete_text(self):
+        unit = {'body': '𠮷原文'}
+        reading.attach_reading(unit, [{'body': unit['body'], 'origin': {'spans': [
+            {'kind': 'source-text', 'start': 1, 'end': 3}]}}])
+        self.assertEqual(unit['reading']['pages'][0]['segments'][0]['original'], '𠮷原文')
+
+    def test_empty_page_does_not_invent_reading_text(self):
+        unit = {'body': ''}
+        reading.attach_reading(unit, [{'body': '', 'seq': 4, 'origin': {'segmentation': 'source-page'}}])
+        self.assertEqual(unit['reading']['pages'][0]['segments'], [])
+        self.assertEqual(unit['reading']['pages'][0]['seq'], 4)
+
+    def test_optional_converter_unavailable_is_explicit(self):
+        with patch.object(reading, 'converter', return_value=(None, None)):
+            unit = {'body': '未配置的原字'}
+            reading.attach_reading(unit, [])
+        self.assertFalse(unit['reading']['simplifiedAvailable'])
+        self.assertEqual(unit['reading']['pages'][0]['segments'][0]['original'], unit['body'])
+        self.assertIsNone(unit['reading']['pages'][0]['segments'][0]['simplified'])
+
+    def test_search_queries_keep_literal_input_and_both_character_forms(self):
+        self.assertEqual(reading.query_forms('%'), ['%'])
+        self.assertEqual(set(reading.query_forms('陈胜')), {'陈胜', '陳勝'})

@@ -1,0 +1,6 @@
+{
+  "onlyOwnedProbeConnectionsTerminated": true,
+  "storedRowsModified": 0,
+  "withoutHealthCheckFailure": "OperationalError",
+  "configuredApplicationPoolRecoveredBeforeQuery": true
+}

@@ -116,6 +116,10 @@ def texts(request):
            HAVING count(t.id) > 0
            ORDER BY sum(length(t.body)) DESC"""
     )
+    from .reading import converter
+    cc, _ = converter()
+    for book in rows:
+        book['title_simplified'] = cc.convert(book['title']) if cc else book['title']
     return Response({"total": len(rows), "items": rows})
 
 
@@ -152,6 +156,8 @@ def juan_detail(request, unit_id: int):
     from .corpus_origins import attach_unit
     attach_unit(unit, paras)
     unit["paragraphs"] = paras
+    from .reading import attach_reading
+    attach_reading(unit, paras)
     return Response(unit)
 
 
@@ -159,17 +165,23 @@ def matching_text(q, limit, book_id=None):
     """Literal original/available simplified text search; snippets retain their source form."""
     if not db.available():
         return None
+    from .reading import query_forms
     return db.query("""WITH matches AS (
         SELECT t.id,t.book_id,b.title AS book,t.title,t.juan,t.edition,t.source_url,
-            CASE WHEN strpos(lower(t.body),lower(%s))>0 THEN t.body ELSE t.body_simplified END AS matched_body,
-            CASE WHEN strpos(lower(t.body),lower(%s))>0 THEN 'original' ELSE 'simplified' END AS matched_field
+            needle.form AS matched_query,
+            CASE WHEN strpos(lower(t.body),lower(needle.form))>0 THEN t.body ELSE t.body_simplified END AS matched_body,
+            CASE WHEN strpos(lower(t.body),lower(needle.form))>0 THEN 'original' ELSE 'simplified' END AS matched_field
         FROM public.text_unit t JOIN public.book b ON b.id=t.book_id
+        CROSS JOIN LATERAL (
+            SELECT form FROM unnest(%s::text[]) WITH ORDINALITY AS f(form,n)
+            WHERE strpos(lower(t.body),lower(form))>0 OR strpos(lower(t.body_simplified),lower(form))>0
+            ORDER BY n LIMIT 1
+        ) needle
         WHERE (%s::integer IS NULL OR t.book_id=%s)
-          AND (strpos(lower(t.body),lower(%s))>0 OR strpos(lower(t.body_simplified),lower(%s))>0)
         ORDER BY t.id LIMIT %s
-    ) SELECT id,book_id,book,title,juan,edition,source_url,matched_field,
-        substring(matched_body FROM greatest(1,strpos(lower(matched_body),lower(%s))-24) FOR 100) AS snippet
-      FROM matches ORDER BY id""", (q, q, book_id, book_id, q, q, limit, q))
+    ) SELECT id,book_id,book,title,juan,edition,source_url,matched_field,matched_query,
+        substring(matched_body FROM greatest(1,strpos(lower(matched_body),lower(matched_query))-24) FOR 100) AS snippet
+      FROM matches ORDER BY id""", (query_forms(q), book_id, book_id, limit))
 
 CAREER_SQL = """
 SELECT p.c_firstyear AS first_year,

@@ -32,7 +32,8 @@ def init_pool() -> None:
     try:
         from psycopg_pool import ConnectionPool
 
-        _pool = ConnectionPool(d, min_size=1, max_size=4, timeout=5, open=True)
+        _pool = ConnectionPool(d, min_size=1, max_size=4, timeout=5, open=True,
+                               check=ConnectionPool.check_connection)
         import atexit
 
         atexit.register(_pool.close)  # 退出时优雅关闭，避免线程警告淹没输出
