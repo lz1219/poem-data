@@ -1029,20 +1029,21 @@
       "url": "https://github.com/kanripo/KR2a0007/tree/683113d4baf6febecaf2ccb7913df87c4d68d454",
       "kind": "github",
       "coverage": [
-        "已取得完整仓库；实际卷篇及缺卷待核"
+        "已取得102原文件；本批入原库十二本纪13分卷及对应考證13单元，其他卷段和卷首未收",
+        "转录待校；1空电子页、45处原录缺字标记未释读"
       ],
       "sourceFamily": "KR2a0007",
       "upstream": [
         "kanripo"
       ],
-      "baseEdition": "以原文件卷首版本标记为准",
+      "baseEdition": "前漢書·顏師古注·文淵閣四庫本（WYG）；清代考證另列",
       "permissions": {
         "read": true,
         "download": "public-repository",
-        "ingest": "research-copy",
-        "redistribute": "not-cleared"
+        "ingest": "CC-BY-SA-4.0",
+        "redistribute": "CC-BY-SA-4.0; attribution and share-alike"
       },
-      "usageNote": "完整原件保存于仓库外固定哈希缓存及隔离研究库；公开仅使用经审查定位材料，完整文本再分发条件另核。与同仓库分支保持同来源链。",
+      "usageNote": "使用提供方馆藏CC BY-SA 4.0声明；不是逐文件许可或人工权利审查。固定提交和原件哈希保留，正文/古注原字符、考證组件及缺字标记保留；本批不认定全书完整，影像未逐叶对校。",
       "probe": {
         "url": "https://codeload.github.com/kanripo/KR2a0007/zip/683113d4baf6febecaf2ccb7913df87c4d68d454",
         "checkedAt": "2026-11-01T05:56:56.815500+00:00",
@@ -1051,7 +1052,16 @@
         "bytes": 2282565
       },
       "repository": "kanripo/KR2a0007",
-      "commit": "683113d4baf6febecaf2ccb7913df87c4d68d454"
+      "commit": "683113d4baf6febecaf2ccb7913df87c4d68d454",
+      "permissionBasis": {
+        "url": "https://github.com/kanripo",
+        "sha256": "d7fab5b09c01aa509d2c66812a5f64a71d51d0323f7eaafced68e259896cfb1c",
+        "scope": "provider collection declaration; not a per-file license notice",
+        "archiveNoticeFiles": [
+          "Readme.org"
+        ],
+        "humanRightsReview": "not-recorded"
+      }
     },
     {
       "id": "kanripo-kr2a0012",

@@ -1,0 +1,294 @@
+{
+  "batchId": "c08f892abe714eff54624c9e7cf5a9029fbbe3a380e76d0c54ec95cef437ea62",
+  "counts": {
+    "units": 26,
+    "bodyVolumes": 12,
+    "bodyComponents": 13,
+    "editionExaminations": 13,
+    "frontMatter": 0,
+    "sourcePageBlocks": 616,
+    "emptySourcePages": 1,
+    "unresolvedGlyphTokenOccurrences": 45
+  },
+  "checks": {
+    "repeatImportNoWrites": true,
+    "changed-unit-refused": true,
+    "changed-origin-refused": true,
+    "later-reference-refused": true,
+    "actualRollbackRestoredOriginalCorpus": true,
+    "reapplicationAndFullSourceReadback": true,
+    "independentReadOnlyReadback": true
+  },
+  "copyMetrics": [
+    {
+      "table": "COPY public.text_unit",
+      "rows": 26,
+      "seconds": 0.762
+    },
+    {
+      "table": "COPY public.corpus_unit_origin",
+      "rows": 26,
+      "seconds": 0.11
+    },
+    {
+      "table": "COPY public.paragraph",
+      "rows": 616,
+      "seconds": 18.409
+    },
+    {
+      "table": "COPY public.corpus_paragraph_origin",
+      "rows": 616,
+      "seconds": 3.094
+    },
+    {
+      "table": "COPY public.text_unit",
+      "rows": 26,
+      "seconds": 0.874
+    },
+    {
+      "table": "COPY public.corpus_unit_origin",
+      "rows": 26,
+      "seconds": 0.1
+    },
+    {
+      "table": "COPY public.paragraph",
+      "rows": 616,
+      "seconds": 6.925
+    },
+    {
+      "table": "COPY public.corpus_paragraph_origin",
+      "rows": 616,
+      "seconds": 2.696
+    }
+  ],
+  "before": {
+    "book": {
+      "rows": 38,
+      "md5": "84eb4973588ebe99575fe2df2901b1d0"
+    },
+    "edition": {
+      "rows": 3,
+      "md5": "5493f719e229a2b120a7bfb7ca58dc35"
+    },
+    "text_unit": {
+      "rows": 2391,
+      "md5": "348489db29d87cd0135f7464064ce97b"
+    },
+    "paragraph": {
+      "rows": 136040,
+      "md5": "f97c6c7a152302fd12cab514c6668506"
+    },
+    "corpus_poem": {
+      "rows": 66968,
+      "md5": "aa48e97d6c00310715f61f2a36a60bfc"
+    },
+    "person": {
+      "rows": 125,
+      "md5": "25cea802d69d7fff06524108dfe696fc"
+    },
+    "work": {
+      "rows": 65,
+      "md5": "6f2da400c791e04ab4fb17e030a9c5b3"
+    },
+    "journey": {
+      "rows": 10,
+      "md5": "0b66b3df5bf07ee181ae1d78231a6b0a"
+    },
+    "stop": {
+      "rows": 105,
+      "md5": "46b99e5c57990b0966ba1fbdacf7cb97"
+    },
+    "claim": {
+      "rows": 17,
+      "md5": "24731fcf6004a18438f42a8dc1738f4d"
+    },
+    "evidence": {
+      "rows": 24,
+      "md5": "171dda1dd20465a4243c0f6074a19211"
+    },
+    "research_note": {
+      "rows": 348,
+      "md5": "765bc0b771e70ccf9f411e845e4131cf"
+    },
+    "place": {
+      "rows": 38489,
+      "md5": "24a21f3b947067b236b231b80d094525"
+    }
+  },
+  "after": {
+    "book": {
+      "rows": 38,
+      "md5": "84eb4973588ebe99575fe2df2901b1d0"
+    },
+    "edition": {
+      "rows": 4,
+      "md5": "817d80ed026237a30e35495d28cb4ff4"
+    },
+    "text_unit": {
+      "rows": 2417,
+      "md5": "66b7fd482b2f6872dac5c8fab1eb47f3"
+    },
+    "paragraph": {
+      "rows": 136656,
+      "md5": "4ef62e9364ad20e2d31684f86b098724"
+    },
+    "corpus_poem": {
+      "rows": 66968,
+      "md5": "aa48e97d6c00310715f61f2a36a60bfc"
+    },
+    "person": {
+      "rows": 125,
+      "md5": "25cea802d69d7fff06524108dfe696fc"
+    },
+    "work": {
+      "rows": 65,
+      "md5": "6f2da400c791e04ab4fb17e030a9c5b3"
+    },
+    "journey": {
+      "rows": 10,
+      "md5": "0b66b3df5bf07ee181ae1d78231a6b0a"
+    },
+    "stop": {
+      "rows": 105,
+      "md5": "46b99e5c57990b0966ba1fbdacf7cb97"
+    },
+    "claim": {
+      "rows": 17,
+      "md5": "24731fcf6004a18438f42a8dc1738f4d"
+    },
+    "evidence": {
+      "rows": 24,
+      "md5": "171dda1dd20465a4243c0f6074a19211"
+    },
+    "research_note": {
+      "rows": 348,
+      "md5": "765bc0b771e70ccf9f411e845e4131cf"
+    },
+    "place": {
+      "rows": 38489,
+      "md5": "24a21f3b947067b236b231b80d094525"
+    }
+  },
+  "unitIds": [
+    2818,
+    2819,
+    2820,
+    2821,
+    2822,
+    2823,
+    2824,
+    2825,
+    2826,
+    2827,
+    2828,
+    2829,
+    2830,
+    2831,
+    2832,
+    2833,
+    2834,
+    2835,
+    2836,
+    2837,
+    2838,
+    2839,
+    2840,
+    2841,
+    2842,
+    2843
+  ],
+  "editionId": 9,
+  "backupSha256": "135bb6e2102555ec1ec8893e275bcf9570d48669388be42c432f8ea654ab6d2a",
+  "reviewStatus": "转录待校；未逐叶影像校勘；考證独立于班固正文；&KR…;原录缺字标记未释读",
+  "excludedVolumes": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "note": "All mutation probes and the first application were rolled back inside the same transaction; only final reapplication is committed."
+}

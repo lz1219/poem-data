@@ -1,0 +1,20 @@
+{
+  "bookId": 8,
+  "unitCount": 26,
+  "checks": {
+    "actualAPI": true,
+    "separateExaminations": true,
+    "selectedRange": true,
+    "pageByteRanges": true,
+    "sourceSpanReconstruction": true,
+    "missingGlyphMarkersPreserved": true,
+    "emptyPageWarning": true,
+    "previousShijiCatalogIntact": true,
+    "bodySearch": true,
+    "desktopReading": true,
+    "originalCopy": true,
+    "mobileNoOverflow": true,
+    "noBrowserErrors": true
+  },
+  "reviewStatus": "transcription-unreviewed"
+}

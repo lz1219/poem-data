@@ -187,13 +187,15 @@ def verify(conn, plan):
 
 
 def backup(conn, folder, plan):
-    # First batch is deliberately restricted to an empty legacy book entry.
-    require(conn.execute('SELECT count(*) FROM public.text_unit WHERE book_id=%s', (BOOK,)).fetchone()[0] == 0,
+    # Each supported book's first batch requires an empty legacy entry.
+    book_id = plan['manifest']['bookId']
+    conn.execute('SELECT id FROM public.book WHERE id=%s FOR UPDATE', (book_id,)).fetchall()
+    require(conn.execute('SELECT count(*) FROM public.text_unit WHERE book_id=%s', (book_id,)).fetchone()[0] == 0,
             'Target book already has untracked text; refuse automatic merge')
-    book = conn.execute('SELECT to_jsonb(b) FROM public.book b WHERE id=%s', (BOOK,)).fetchone()
-    require(book is not None and book[0]['title'] == '《史记》', 'Wrong book mapping')
+    book = conn.execute('SELECT to_jsonb(b) FROM public.book b WHERE id=%s', (book_id,)).fetchone()
+    require(book is not None and book[0]['title'] == plan['manifest'].get('bookTitle', '《史记》'), 'Wrong book mapping')
     snapshot = {'batchId': plan['batchId'], 'book': book[0],
-                'editions': [r[0] for r in conn.execute('SELECT to_jsonb(e) FROM public.edition e WHERE book_id=%s ORDER BY id', (BOOK,))],
+                'editions': [r[0] for r in conn.execute('SELECT to_jsonb(e) FROM public.edition e WHERE book_id=%s ORDER BY id', (book_id,))],
                 'units': [], 'paragraphs': [], 'publicBefore': fingerprints(conn), 'createdAt': now()}
     path = folder / ('corpus-before-' + plan['batchId'][:12] + '-' + now().replace(':', '-') + '.json')
     dump(path, snapshot)
@@ -234,7 +236,9 @@ def copy_rows(conn, statement, rows):
 
 def apply(conn, plan, backup_dir):
     from psycopg.types.json import Jsonb
-    conn.execute('SELECT pg_advisory_xact_lock(730015,%s)', (BOOK,))
+    book_id = plan['manifest']['bookId']
+    edition = plan['manifest']['edition']
+    conn.execute('SELECT pg_advisory_xact_lock(730015,%s)', (book_id,))
     if has_schema(conn):
         row = conn.execute('SELECT state FROM public.corpus_ingest_batch WHERE batch_id=%s', (plan['batchId'],)).fetchone()
         if row and row[0] == 'applied':
@@ -244,17 +248,17 @@ def apply(conn, plan, backup_dir):
     before, backup_sha = backup(conn, backup_dir, plan)
     conn.execute((ROOT / 'server/corpus/sql/0001_corpus_origins.sql').read_text('utf-8'))
     edition_id = conn.execute('INSERT INTO public.edition(book_id,name,kind,note) VALUES(%s,%s,%s,%s) RETURNING id',
-                              (BOOK, '史记集解·文渊阁四库本（Kanripo电子转录）', '电子转录', EDITION)).fetchone()[0]
+                              (book_id, plan['manifest'].get('editionName', '史记集解·文渊阁四库本（Kanripo电子转录）'), '电子转录', edition)).fetchone()[0]
     ids = allocate(conn, 'text_unit', len(plan['units']))
     paragraph_ids = allocate(conn, 'paragraph', plan['manifest']['counts']['sourcePageBlocks'])
     result = {'unitIds': ids, 'paragraphIds': paragraph_ids, 'editionIds': [edition_id],
               'backupSha256': backup_sha, 'publicBefore': before['publicBefore']}
     conn.execute("INSERT INTO public.corpus_ingest_batch(batch_id,book_id,edition_id,state,manifest,result) VALUES(%s,%s,%s,'applied',%s,%s) ON CONFLICT(batch_id) DO UPDATE SET state='applied',edition_id=EXCLUDED.edition_id,result=EXCLUDED.result",
-                 (plan['batchId'], BOOK, edition_id, Jsonb(plan['manifest']), Jsonb(result)))
+                 (plan['batchId'], book_id, edition_id, Jsonb(plan['manifest']), Jsonb(result)))
     unit_rows = []
     for identity, unit in zip(ids, plan['units']):
         url = 'https://github.com/' + plan['manifest']['source']['repository'] + '/blob/' + plan['manifest']['source']['commit'] + '/' + unit['origin']['sourcePath']
-        unit_rows.append((identity, BOOK, unit['juan'], unit['juan'], unit['body'], unit['sha256'], EDITION, url, False))
+        unit_rows.append((identity, book_id, unit['juan'], unit['juan'], unit['body'], unit['sha256'], edition, url, False))
     copy_rows(conn, 'COPY public.text_unit(id,book_id,juan,title,body,sha256,edition,source_url,punctuated) FROM STDIN', unit_rows)
     copy_rows(conn, 'COPY public.corpus_unit_origin(unit_id,batch_id,edition_id,ordinal,metadata) FROM STDIN',
               ((identity, plan['batchId'], edition_id, ordinal, Jsonb(unit['origin']))
@@ -307,7 +311,7 @@ def guard_references(conn, plan, result):
 def rollback(conn, plan):
     from psycopg import sql
     from psycopg.types.json import Jsonb
-    conn.execute('SELECT pg_advisory_xact_lock(730015,%s)', (BOOK,))
+    conn.execute('SELECT pg_advisory_xact_lock(730015,%s)', (plan['manifest']['bookId'],))
     row = conn.execute('SELECT result,state FROM public.corpus_ingest_batch WHERE batch_id=%s FOR UPDATE', (plan['batchId'],)).fetchone()
     require(row is not None and row[1] == 'applied', 'Batch is not applied')
     locked_result = row[0]
