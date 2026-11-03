@@ -1,0 +1,10 @@
+{
+  "operation": "preview",
+  "unitId": 2080,
+  "newHeadings": 34,
+  "retainedParagraphs": 91,
+  "retiredParagraphs": 1,
+  "backupSha256": "73ee57d1ea070e229cde20a00a112ffa3f028f482e5602fdd29ec9f2965aa4b9",
+  "backupBytes": 89367,
+  "serverJobDirectory": "/opt/corpus-data-jobs/corpus-repair-v1"
+}

@@ -152,5 +152,14 @@ class ChronicleReadingTests(unittest.TestCase):
             with self.assertRaises(ValueError): chronicle_paragraphs(self.wrapped(body))
         with self.assertRaises(ValueError): chronicle_paragraphs(self.wrapped('正文。')+'\n失落的附記')
 
+    def test_legacy_mapping_accounts_for_source_trailer_and_keeps_old_boundaries(self):
+        from wikisource_source import chronicle_paragraphs, attach_legacy_mapping, legacy_projection
+        raw = self.wrapped('==安王元年==\n\n\'\'\'1\'\'\'　原<ref>編者校記</ref>文。\n:: 臣光曰：論。')
+        unit = {'paragraphs': chronicle_paragraphs(raw)}
+        attach_legacy_mapping(unit,raw)
+        self.assertEqual([p['legacyText'] for p in unit['paragraphs']], [None,'1　原文。','臣光曰：論。'])
+        self.assertEqual(unit['legacyProjection']['trailer'],['周'])
+        self.assertEqual(legacy_projection(raw),['1　原文。','臣光曰：論。','周'])
+
 
 if __name__ == '__main__': unittest.main()

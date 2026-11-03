@@ -1,0 +1,15 @@
+{
+  "scope": "Actual local Django API against repaired original PostgreSQL, no response interception; application code not deployed",
+  "checks": {
+    "actualParagraphs125": true,
+    "restoredHeadings34": true,
+    "editorialNotes33Toggle": true,
+    "sourceRevision2489405": true,
+    "originalHashMatches": true,
+    "copyRawExact": true,
+    "originalMode": true,
+    "yearHeadingSearch": true,
+    "mobileWithoutOverflow": true,
+    "browserErrors": []
+  }
+}

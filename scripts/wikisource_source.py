@@ -304,6 +304,45 @@ def chronicle_paragraphs(text):
     return result
 
 
+def legacy_projection(text):
+    """Reproduce the retired parser solely to map old IDs to fixed source text."""
+    value = re.sub(r'<!--.*?-->', '', text, flags=re.S)
+    value = re.sub(r'<ref[^>]*>.*?</ref>', '', value, flags=re.S)
+    value = re.sub(r'\{\{[^{}]*\}\}', '', value)
+    value = re.sub(r'<[^>]+>', '', value)
+    value = re.sub(r'\[\[[^\]|]*\|([^\]]*)\]\]', r'\1', value)
+    value = re.sub(r'\[\[([^\]]*)\]\]', r'\1', value)
+    value = re.sub(r"'{2,}", '', value)
+    result = []
+    for line in value.split('\n'):
+        line = line.strip('\u3000 \t\r')
+        if not line or line.startswith(('==', '|', '{{')):
+            continue
+        line = re.sub(r'^[*#:]+', '', line).strip()
+        if line:
+            result.append(line)
+    return result
+
+
+def attach_legacy_mapping(unit, source):
+    """Every retained/retired old row must be explained by an actual source range."""
+    projected = []
+    raw = source.encode()
+    for block in unit['paragraphs']:
+        origin = block['origin']
+        old = legacy_projection(raw[origin['sourceByteStart']:origin['sourceByteEnd']].decode())
+        if len(old) > 1:
+            raise ValueError('New block merges existing paragraph boundaries')
+        block['legacyText'] = old[0] if old else None
+        projected.extend(old)
+    trailer = legacy_projection(raw[unit['paragraphs'][-1]['origin']['sourceByteEnd']:].decode())
+    complete = legacy_projection(source)
+    if projected + trailer != complete:
+        raise ValueError('Source mapping does not account for every legacy paragraph')
+    unit['legacyProjection'] = {'parser': 'legacy-wikisource-clean-v1',
+        'bodySha256': sha('\n'.join(complete).encode()), 'trailer': trailer}
+
+
 def reading_plan(cache, selection):
     """Build an immutable plan from fixed captures, never live page content."""
     from backfill_shiji import digest, require
@@ -341,6 +380,16 @@ def reading_plan(cache, selection):
                   'baseEdition': selection['baseEdition']}
         units.append({'juan': spec['juan'], 'body': body, 'sha256': sha(body.encode()),
                       'sourceUrl': url, 'punctuated': True, 'origin': origin, 'paragraphs': paragraphs})
+        if profile == 'zztj-first-two':
+            attach_legacy_mapping(units[-1], decoded['text'])
+            from importlib.metadata import version
+            try:
+                from opencc import OpenCC
+                units[-1]['bodySimplified'] = OpenCC('t2s.json').convert(body)
+                origin['readingConversion'] = {'engine': 'OpenCC', 'version': version('opencc'),
+                    'config': 't2s.json', 'status': 'machine-converted; not a verified source or translation'}
+            except ImportError:
+                units[-1]['bodySimplified'] = None
         revisions.append({k: decoded[k] for k in ('pageid', 'title', 'revid', 'timestamp')})
     if profile == 'chuanxilu':
         require(selection['bookId'] == 20 and len(units) == 3 and
@@ -380,6 +429,7 @@ if __name__ == '__main__':
     parser.add_argument('--credentials', type=Path)
     parser.add_argument('--backup-dir', type=Path)
     parser.add_argument('--output', type=Path)
+    parser.add_argument('--export-plan', type=Path, help='Export the full immutable candidate plan, preview only')
     args = parser.parse_args()
     if not args.reading_selection:
         if args.operation != 'preview':
@@ -389,6 +439,10 @@ if __name__ == '__main__':
         from backfill_shiji import apply, verify, rollback, require
         from research import connect
         plan = reading_plan(args.cache, read(args.reading_selection))
+        if args.export_plan:
+            if args.operation != 'preview':
+                parser.error('Plan export is preview-only')
+            dump(args.export_plan, plan)
         if plan['manifest']['parser'] == 'wikisource-chronicle-headings-notes-v1' and args.operation != 'preview':
             parser.error('Chronicle specimen is preview-only; existing-book repair must preserve IDs and audit references first')
         result = {k: plan[k] for k in ('batchId', 'manifest')}

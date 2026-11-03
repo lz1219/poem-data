@@ -1,0 +1,219 @@
+{
+  "scope": "production database and production API; application code not deployed",
+  "totals": {
+    "book": 38,
+    "edition": 7,
+    "text_unit": 2333,
+    "paragraph": 141692,
+    "corpus_poem": 88014
+  },
+  "volume001": [
+    2080,
+    "卷001",
+    "https://zh.wikisource.org/w/index.php?oldid=2489405",
+    8384,
+    8384
+  ],
+  "volume002Md5": "6100cd20967f8a5d09f0860f9c3aa2d4",
+  "originCounts": [
+    125,
+    34,
+    33
+  ],
+  "otherBooks": [
+    [
+      7,
+      122
+    ],
+    [
+      8,
+      234
+    ],
+    [
+      20,
+      3
+    ],
+    [
+      80,
+      294
+    ],
+    [
+      81,
+      188
+    ],
+    [
+      82,
+      325
+    ],
+    [
+      83,
+      422
+    ],
+    [
+      84,
+      528
+    ],
+    [
+      161,
+      214
+    ]
+  ],
+  "retained91MainBodiesAndIdsUnchanged": true,
+  "apiCatalog": {
+    "total": 294,
+    "volume001": {
+      "id": 2080,
+      "juan": "卷001",
+      "title": "資治通鑑卷001",
+      "chars": 8384,
+      "punctuated": true
+    }
+  },
+  "apiDetail": {
+    "id": 2080,
+    "sourceUrl": "https://zh.wikisource.org/w/index.php?oldid=2489405",
+    "paragraphs": 125,
+    "yearHeadingInBody": true,
+    "originAvailable": false,
+    "readingAvailable": false
+  },
+  "steps": [
+    {
+      "at": 1793611661.3773122,
+      "operation": "start",
+      "step": "lock-book"
+    },
+    {
+      "at": 1793611661.378268,
+      "operation": "finish",
+      "step": "lock-book",
+      "seconds": 0.001
+    },
+    {
+      "at": 1793611661.3783362,
+      "operation": "start",
+      "step": "lock-unit"
+    },
+    {
+      "at": 1793611661.3795884,
+      "operation": "finish",
+      "step": "lock-unit",
+      "seconds": 0.00123
+    },
+    {
+      "at": 1793611661.3796663,
+      "operation": "start",
+      "step": "lock-paragraphs"
+    },
+    {
+      "at": 1793611661.3804502,
+      "operation": "finish",
+      "step": "lock-paragraphs",
+      "seconds": 0.00077
+    },
+    {
+      "at": 1793611661.3885846,
+      "operation": "start",
+      "step": "update-unit"
+    },
+    {
+      "at": 1793611661.4195616,
+      "operation": "finish",
+      "step": "update-unit",
+      "seconds": 0.03097
+    },
+    {
+      "at": 1793611661.424261,
+      "operation": "start",
+      "step": "create-edition"
+    },
+    {
+      "at": 1793611661.4288592,
+      "operation": "finish",
+      "step": "create-edition",
+      "seconds": 0.00459
+    },
+    {
+      "at": 1793611661.4289339,
+      "operation": "start",
+      "step": "create-batch"
+    },
+    {
+      "at": 1793611661.433638,
+      "operation": "finish",
+      "step": "create-batch",
+      "seconds": 0.00467
+    },
+    {
+      "at": 1793611661.4337256,
+      "operation": "start",
+      "step": "retire-source-trailer"
+    },
+    {
+      "at": 1793611661.4357522,
+      "operation": "finish",
+      "step": "retire-source-trailer",
+      "seconds": 0.00201
+    },
+    {
+      "at": 1793611661.4358273,
+      "operation": "start",
+      "step": "move-sequence-keys"
+    },
+    {
+      "at": 1793611661.448913,
+      "operation": "finish",
+      "step": "move-sequence-keys",
+      "seconds": 0.01306
+    },
+    {
+      "at": 1793611661.4510188,
+      "operation": "start",
+      "step": "restore-sequence-keys"
+    },
+    {
+      "at": 1793611661.4582896,
+      "operation": "finish",
+      "step": "restore-sequence-keys",
+      "seconds": 0.00727
+    },
+    {
+      "at": 1793611661.458373,
+      "operation": "start",
+      "step": "copy-headings-and-origins"
+    },
+    {
+      "at": 1793611661.4713166,
+      "operation": "finish",
+      "step": "copy-headings-and-origins",
+      "seconds": 0.01293
+    },
+    {
+      "at": 1793611661.4713757,
+      "operation": "start",
+      "step": "create-unit-origin"
+    },
+    {
+      "at": 1793611661.4759736,
+      "operation": "finish",
+      "step": "create-unit-origin",
+      "seconds": 0.00457
+    },
+    {
+      "at": 1793611661.476118,
+      "operation": "start",
+      "step": "record-result"
+    },
+    {
+      "at": 1793611661.4769096,
+      "operation": "finish",
+      "step": "record-result",
+      "seconds": 0.00078
+    },
+    {
+      "at": 1793611661.4820647,
+      "operation": "committed",
+      "transactionSeconds": 0.10741
+    }
+  ]
+}
