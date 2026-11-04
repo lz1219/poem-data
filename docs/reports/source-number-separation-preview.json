@@ -1,0 +1,33 @@
+{
+  "operation": "preview",
+  "backupSha256": "4012af8a955c9b3696399a1cfd88623aa5e9864b0dd27f366a29784a92f0529b",
+  "backupBytes": 86320,
+  "separated": 75,
+  "notesMoved": 26,
+  "gaps": [
+    {
+      "sourceHeadingPath": [
+        {
+          "level": 2,
+          "title": "烈王"
+        },
+        {
+          "level": 3,
+          "title": "烈王三年（戊申，西元前三七三年）"
+        }
+      ],
+      "observed": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "missing": [
+        5
+      ],
+      "status": "source-number-gap-unresolved"
+    }
+  ],
+  "backupHostPath": "/opt/corpus-data-jobs/corpus-repair-v1/source-numbers-before.json.gz"
+}

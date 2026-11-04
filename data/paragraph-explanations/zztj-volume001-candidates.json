@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "unitId": 2080,
   "sourceRevision": 2489405,
-  "unitSha256": "20f46011514722a81b1d1e15ef234c1a7a8543444b96fecbb09a9357bce884b6",
+  "unitSha256": "5f724f677d0c3862348824c862f6f09cbf4e7e9ac5cdba1b802abb74d1578246",
   "status": "candidate-not-imported",
   "generation": {
     "method": "ai-batch",
@@ -16,10 +16,10 @@
   "items": [
     {
       "id": "paragraph-129632-explanation",
-      "revision": 1,
+      "revision": 2,
       "paragraphId": 129632,
-      "sourceSha256": "27235e5ae22f6756b2bbefaed9fadbd3ead43fe945edf4c6f3bee96e3ea66b4b",
-      "sourceText": "1　〔九鼎震〕，初命晉大夫魏斯、趙籍、韓虔為諸侯。",
+      "sourceSha256": "59cb45ce67f112ac5d8407de4c7eb6a095d271d5fdd62aee4ebc94e50f67d2e1",
+      "sourceText": "〔九鼎震〕，初命晉大夫魏斯、趙籍、韓虔為諸侯。",
       "translation": "九鼎发生震动。周王首次册命晋国大夫魏斯、赵籍、韩虔为诸侯。",
       "reviewStatus": "unreviewed",
       "aiLabel": "AI生成·未经人工审校",
@@ -30,8 +30,8 @@
       "notes": [
         {
           "quote": "初命",
-          "start": 8,
-          "end": 10,
+          "start": 6,
+          "end": 8,
           "explanation": "这里指首次正式册命；所册命的身份是后文的“诸侯”。",
           "attribution": "本站AI拟释",
           "basis": {
@@ -41,8 +41,8 @@
         },
         {
           "quote": "諸侯",
-          "start": 22,
-          "end": 24,
+          "start": 20,
+          "end": 22,
           "explanation": "在本句中指获周王册命的政治身份，与册命前的“晋大夫”相区别。",
           "attribution": "本站AI拟释",
           "basis": {
@@ -52,8 +52,8 @@
         },
         {
           "quote": "〔九鼎震〕",
-          "start": 2,
-          "end": 7,
+          "start": 0,
+          "end": 5,
           "explanation": "方括号随所据电子本保留；这部分另有来源编者校记，须与本站拟释分开阅读。",
           "attribution": "本站AI拟释",
           "basis": {
@@ -65,7 +65,7 @@
     },
     {
       "id": "paragraph-129633-explanation",
-      "revision": 1,
+      "revision": 2,
       "paragraphId": 129633,
       "sourceSha256": "d8b08e700d41d7063b322a1e179206ee15ac3ee9052ed02b968c8bff0e9d3927",
       "sourceText": "臣光曰：臣聞天子之職莫大於禮，禮莫大於分，分莫大於名。何謂禮？紀綱是也；何謂分？君臣是也；何謂名？公、侯、卿、大夫是也。",
