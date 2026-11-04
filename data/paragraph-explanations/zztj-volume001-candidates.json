@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "unitId": 2080,
+  "sourceRevision": 2489405,
+  "unitSha256": "20f46011514722a81b1d1e15ef234c1a7a8543444b96fecbb09a9357bce884b6",
+  "status": "candidate-not-imported",
+  "generation": {
+    "method": "ai-batch",
+    "model": "GPT-6 (session family)",
+    "modelSnapshot": null,
+    "snapshotAvailability": "Exact model snapshot not exposed in this session",
+    "generatedAt": "2026-11-04T03:39:30.984980+00:00",
+    "promptVersion": "paragraph-translation-v1",
+    "methodDescription": "当前Codex整理会话根据固定来源原句起草；没有调用网站实时AI或外部付费模型API。"
+  },
+  "items": [
+    {
+      "id": "paragraph-129632-explanation",
+      "revision": 1,
+      "paragraphId": 129632,
+      "sourceSha256": "27235e5ae22f6756b2bbefaed9fadbd3ead43fe945edf4c6f3bee96e3ea66b4b",
+      "sourceText": "1　〔九鼎震〕，初命晉大夫魏斯、趙籍、韓虔為諸侯。",
+      "translation": "九鼎发生震动。周王首次册命晋国大夫魏斯、赵籍、韩虔为诸侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129632
+      },
+      "notes": [
+        {
+          "quote": "初命",
+          "start": 8,
+          "end": 10,
+          "explanation": "这里指首次正式册命；所册命的身份是后文的“诸侯”。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129632
+          }
+        },
+        {
+          "quote": "諸侯",
+          "start": 22,
+          "end": 24,
+          "explanation": "在本句中指获周王册命的政治身份，与册命前的“晋大夫”相区别。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129632
+          }
+        },
+        {
+          "quote": "〔九鼎震〕",
+          "start": 2,
+          "end": 7,
+          "explanation": "方括号随所据电子本保留；这部分另有来源编者校记，须与本站拟释分开阅读。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129632
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129633-explanation",
+      "revision": 1,
+      "paragraphId": 129633,
+      "sourceSha256": "d8b08e700d41d7063b322a1e179206ee15ac3ee9052ed02b968c8bff0e9d3927",
+      "sourceText": "臣光曰：臣聞天子之職莫大於禮，禮莫大於分，分莫大於名。何謂禮？紀綱是也；何謂分？君臣是也；何謂名？公、侯、卿、大夫是也。",
+      "translation": "臣司马光说：我听说，天子的职责，没有比维护礼更重要的；礼的内容，没有比确立名分更重要的；名分之中，没有比确定名号更重要的。什么叫礼？就是纲纪。什么叫名分？就是君主与臣属的身份分别。什么叫名号？就是公、侯、卿、大夫这些称号。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129633
+      },
+      "notes": [
+        {
+          "quote": "臣光曰",
+          "start": 0,
+          "end": 3,
+          "explanation": "司马光以臣子的身份引出自己的议论，应与前面的编年记事区分。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129633
+          }
+        },
+        {
+          "quote": "分",
+          "start": 19,
+          "end": 20,
+          "explanation": "在这段话中读作“名分”的“分”，指君臣身份及其分别；译法依据下文“君臣是也”。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129633
+          }
+        },
+        {
+          "quote": "名",
+          "start": 25,
+          "end": 26,
+          "explanation": "这里不是人的姓名，指体现政治身份的名号；依据下文列举的“公、侯、卿、大夫”。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129633
+          }
+        },
+        {
+          "quote": "紀綱",
+          "start": 31,
+          "end": 33,
+          "explanation": "这里解释“礼”所维系的秩序与准则，译为“纲纪”；不在译文中扩写成一套原句未逐项列出的制度。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129633
+          }
+        }
+      ]
+    }
+  ]
+}

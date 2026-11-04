@@ -1,0 +1,1141 @@
+{
+  "scope": "read-only original PostgreSQL snapshot; source paragraph boundaries, not human-certified natural paragraphs",
+  "unitId": 2080,
+  "sourceRevision": 2489405,
+  "unitSha256": "20f46011514722a81b1d1e15ef234c1a7a8543444b96fecbb09a9357bce884b6",
+  "editionId": 16,
+  "counts": {
+    "heading": 34,
+    "paragraph": 91,
+    "unknown": 0
+  },
+  "sourceEditorialNotes": 33,
+  "existingExplanationTables": [],
+  "paragraphs": [
+    {
+      "paragraphId": 129631,
+      "seq": 1,
+      "kind": "paragraph",
+      "chars": 19,
+      "sourceSha256": "6236331d3a2920612300b4c330037a585774efdb0f323e21b780fc5a3c5e48f6",
+      "head": "起著雍攝提格，盡玄黓困敦，凡三十五年。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189176,
+      "seq": 2,
+      "kind": "heading",
+      "chars": 3,
+      "sourceSha256": "a41f490017ca8b3cbfcffefcf8afda6d0d6ed560f2f32621af10233c22ad6553",
+      "head": "威烈王",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189177,
+      "seq": 3,
+      "kind": "heading",
+      "chars": 19,
+      "sourceSha256": "6704bf64fe0e6db19d3621b3347b731be95e492b3ebe30e5d0f7678c80d9856b",
+      "head": "威烈王二十三年（戊寅，西元前四〇三年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129632,
+      "seq": 4,
+      "kind": "paragraph",
+      "chars": 25,
+      "sourceSha256": "27235e5ae22f6756b2bbefaed9fadbd3ead43fe945edf4c6f3bee96e3ea66b4b",
+      "head": "1　〔九鼎震〕，初命晉大夫魏斯、趙籍、韓虔為諸侯。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129633,
+      "seq": 5,
+      "kind": "paragraph",
+      "chars": 60,
+      "sourceSha256": "d8b08e700d41d7063b322a1e179206ee15ac3ee9052ed02b968c8bff0e9d3927",
+      "head": "臣光曰：臣聞天子之職莫大於禮，禮莫大於分，分莫大於名。何謂禮？紀綱是也；何謂分？君臣是也；何謂名？公、侯、卿、",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129634,
+      "seq": 6,
+      "kind": "paragraph",
+      "chars": 160,
+      "sourceSha256": "14c07180ab2f68d88bcdd5715bc69f9f9f3c1173b7eb69094bdafa99734327dc",
+      "head": "夫以四海之廣，兆民之眾，受制於一人，雖有絕倫之力，高世之智，莫敢不奔走而服役者，豈非以禮為之〔紀〕綱(紀)哉！",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129635,
+      "seq": 7,
+      "kind": "paragraph",
+      "chars": 201,
+      "sourceSha256": "0a9330cb71926903888eeaa0e4060690c52cdfaf3577cfc114db4231dcefed60",
+      "head": "文王序《易》，以乾坤為首。孔子繫之曰：「天尊地卑，乾坤定矣，卑高以陳，貴賤位矣。」言君臣之位，猶天地之不可易也",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129636,
+      "seq": 8,
+      "kind": "paragraph",
+      "chars": 307,
+      "sourceSha256": "19267c8b96a5652736b55f9a4b3cc5f3b85eeb0c2b32c16685f1a113470cd3c4",
+      "head": "夫禮，辨貴賤，序親疏，裁群物，制庶事。非名不著，非器不形。名以命之，器以別之，然後上下粲然有倫，此禮之大經也。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129637,
+      "seq": 9,
+      "kind": "paragraph",
+      "chars": 500,
+      "sourceSha256": "50356493f319ebf9801f4e23a0af42504e162f809fe784c5ca0b8c1110b65984",
+      "head": "嗚呼！幽、厲失德，周道日衰，綱紀散壞，下陵上替，諸侯專征，大夫擅政。禮之大體，什喪七八矣。然文、武之祀猶綿綿相",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129638,
+      "seq": 10,
+      "kind": "paragraph",
+      "chars": 53,
+      "sourceSha256": "e5d3cb41f10858d9c209277f30b92eaacb8cdd8b53ea420c787c71021c1b7692",
+      "head": "嗚呼！君臣之禮既壞矣，則天下以智力相雄長，遂使聖賢之後為諸侯者，社稷無不泯絕，生民之害糜滅幾盡，豈不哀哉！",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129639,
+      "seq": 11,
+      "kind": "paragraph",
+      "chars": 480,
+      "sourceSha256": "e264f0b4133b8cd35ee878dd952befe97fb11f4243c928ba1b8d5e713b83447c",
+      "head": "2　初，智宣子將以瑤為後。智果曰：「不如宵也。瑤之賢於人者五，其不逮者一也。美鬢長大則賢，射御足力則賢，伎藝畢",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129640,
+      "seq": 12,
+      "kind": "paragraph",
+      "chars": 440,
+      "sourceSha256": "e4da214d323747385afedfd70267c61caf23936205040debf1b54e3e305ef524",
+      "head": "智伯請地於韓康子，康子欲弗與。段規曰：「智伯好利而愎，不與，將伐我；不如與之。彼狃於得地，必請於他人；他人不與",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129641,
+      "seq": 13,
+      "kind": "paragraph",
+      "chars": 342,
+      "sourceSha256": "5f0bbcb1ee17728bc253d6fddec4cb5176095bf1994c88fc74ab3c775523b1be",
+      "head": "三家以國人圍而灌之，城不浸者三版。沈竈產鼃，民無叛意。智伯行水，魏桓子御，韓康子驂乘。智伯曰：「吾乃今知水可以",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129642,
+      "seq": 14,
+      "kind": "paragraph",
+      "chars": 182,
+      "sourceSha256": "47323976f91be06616dc686e73b124d5ad8578014a24fa2ae81d6a36dc8cd233",
+      "head": "趙襄子使張孟談潛出見二子，曰：「臣聞脣亡則齒寒。今智伯帥韓、魏而攻趙，趙亡則韓、魏為之次矣。」二子曰：「我心知",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129643,
+      "seq": 15,
+      "kind": "paragraph",
+      "chars": 413,
+      "sourceSha256": "6c98952841bf206fb2672384ed29a7855b0a136c891179724ca40ebf04c6c836",
+      "head": "臣光曰：智伯之亡也，才勝德也。夫才與德異，而世俗莫之能辨，通謂之賢，此其所以失人也。夫聰察強毅之謂才，正直中和",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129644,
+      "seq": 16,
+      "kind": "paragraph",
+      "chars": 433,
+      "sourceSha256": "c5dd497369074ae511903be7b87804f2198253b003cf29926e0702ebfcda3b1a",
+      "head": "3　三家分智氏之田。趙襄子漆智伯之頭，以為飲器。智伯之臣豫讓欲為之報仇，乃詐為刑人，挾匕首，入襄子宮中塗廁。襄",
+      "editorialNotes": 4
+    },
+    {
+      "paragraphId": 129645,
+      "seq": 17,
+      "kind": "paragraph",
+      "chars": 997,
+      "sourceSha256": "4cd30d34de1235e38f9d7a43a15768e43735d4aa85022fa44b70bb1d76d4dc36",
+      "head": "魏文侯以卜子夏、田子方為師，每過段干木之廬必式。四方賢士多歸之。文侯與群臣飲酒，樂，而天雨，命駕將適野。左右曰",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129646,
+      "seq": 18,
+      "kind": "paragraph",
+      "chars": 305,
+      "sourceSha256": "e7aa7e3a1698b21a39289398cabfe256a0a42dbb59371f353eb72dc652bc7f52",
+      "head": "吳起者，衛人，仕於魯。齊人伐魯，魯人欲以為將，起取齊女為妻，魯人疑之，起殺妻以求將，大破齊師。或譖之魯侯曰：「",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129647,
+      "seq": 19,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "472ca6cf267e73d76f12472e19ebe5f61c8b51df8c030b437efa6dfeb3711e51",
+      "head": "4　燕湣公薨，子僖公立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189178,
+      "seq": 20,
+      "kind": "heading",
+      "chars": 19,
+      "sourceSha256": "38d1ee254892966b89ca3fe04e998848611341ee345882252321adb6c556d4ae",
+      "head": "威烈王二十四年（己卯，西元前四〇二年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129648,
+      "seq": 21,
+      "kind": "paragraph",
+      "chars": 11,
+      "sourceSha256": "46cbb53a28eb821a20df71b944810c43b91f6240732bda25e42cc4126dd36120",
+      "head": "1　王崩，子安王驕立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129649,
+      "seq": 22,
+      "kind": "paragraph",
+      "chars": 22,
+      "sourceSha256": "663f2311490cbf0f2a035667493607d9af8ce06b784e36ae1c9245a6994badde",
+      "head": "2　盜殺楚聲王，國人立其子〔疑，是為〕悼王。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189179,
+      "seq": 23,
+      "kind": "heading",
+      "chars": 2,
+      "sourceSha256": "1bc55666b935a9b57bd20cfe0fa030126183e3cd1cd854c484c1944ba114fa0d",
+      "head": "安王",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189180,
+      "seq": 24,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "ccda5a059dbcc0c449ef8ed5de9d1a2d58ab7d56d5b4d2c89f8579e9c9a54693",
+      "head": "安王元年（庚辰，西元前四〇一年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129650,
+      "seq": 25,
+      "kind": "paragraph",
+      "chars": 15,
+      "sourceSha256": "02766b87e845c51d62eba1109fab2a8593363dcabab66fe46ed71bbc7521db20",
+      "head": "1　秦伐魏，至陽〔狐〕(孤)。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189181,
+      "seq": 26,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "055543ee2df7e3c5423111dcdcab4b3cc55c9e34e7f77f0ba50585871eaa5f55",
+      "head": "安王二年（辛巳，西元前四〇〇年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129651,
+      "seq": 27,
+      "kind": "paragraph",
+      "chars": 19,
+      "sourceSha256": "d3971d1ff24409086fe186aba4bab8d9d5948bc610ef6b024ac3b03c8d4cc5fe",
+      "head": "1　魏、韓、趙伐楚，至〔乘〕(桑)丘。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129652,
+      "seq": 28,
+      "kind": "paragraph",
+      "chars": 8,
+      "sourceSha256": "598ca8655943023b80e264e4b31c2de2ec50fb3ad3b9e1c25dbcf1286659dd96",
+      "head": "2　鄭圍韓陽翟。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129653,
+      "seq": 29,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "d3ad5390b10b1366bb5a3d105e19321e1afebe30a34f1bc2333afa2da66ba19e",
+      "head": "3　韓景侯薨，子烈侯取立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129654,
+      "seq": 30,
+      "kind": "paragraph",
+      "chars": 15,
+      "sourceSha256": "1ca2b36a0caa9a4b69e97e19ee718ebf12594cc65cb0f2152bbdd4ce8232b10e",
+      "head": "4　趙烈侯薨，國人立其弟武侯。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129655,
+      "seq": 31,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "788506769a83b34b438cadd5427fc305bf0ec4c05dd6eea289392bf6eca75eff",
+      "head": "5　秦簡公薨，子惠公立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189182,
+      "seq": 32,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "3c9f15ff2113113709a20a59e396e80a172f1aa73bb7d93ccb82d0efd69bcadc",
+      "head": "安王三年（壬午，西元前三九九年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129656,
+      "seq": 33,
+      "kind": "paragraph",
+      "chars": 8,
+      "sourceSha256": "8d35d29b5c92e3ac6039605d1137af79a8cfb637b5bd85378266a41e51e4885f",
+      "head": "1　王子定奔晉。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129657,
+      "seq": 34,
+      "kind": "paragraph",
+      "chars": 9,
+      "sourceSha256": "901ddc55118edd7ed4e98b8be0d504f57d13394c5ae01d0a96e0f8b237a4a329",
+      "head": "2　虢山崩，壅河。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189183,
+      "seq": 35,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "2fea7eabcbf2c3a8ed1c718a7fcbf0db3f6a4beb6dbf6710a9d6bb706c529cb9",
+      "head": "安王四年（癸未，西元前三九八年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129658,
+      "seq": 36,
+      "kind": "paragraph",
+      "chars": 21,
+      "sourceSha256": "f2c4146f01045c60c60be274b484b3f75d292e948cee5801d8b38e1d31c308f9",
+      "head": "1　楚〔敗鄭師〕，圍鄭。鄭人殺其相駟子陽。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189184,
+      "seq": 37,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "6baa84ab5cfb2aa3d6b1929cdc8b85650e10b251dd83bd8b718ccf0e92b8d750",
+      "head": "安王五年（甲申，西元前三九七年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129659,
+      "seq": 38,
+      "kind": "paragraph",
+      "chars": 7,
+      "sourceSha256": "9e4b6ac2a5bc9e33dbba271b1ec7d1b602c40548bfe405bf6b35b63c9d850652",
+      "head": "1　日有食之。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129660,
+      "seq": 39,
+      "kind": "paragraph",
+      "chars": 202,
+      "sourceSha256": "411048667ec47bb123c43cd8904b2dc1fdeeb4715eccaecda522370f03618d8a",
+      "head": "2　〔春〕，三月，盜殺韓相俠累。俠累與濮陽嚴仲子有惡。仲子聞軹人聶政之勇，以黃金百鎰為政母壽，欲因以報仇。政不",
+      "editorialNotes": 2
+    },
+    {
+      "paragraphId": 189185,
+      "seq": 40,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "3e777417688e60de7ad84725c13c15ea1731a312561bcb8f7780f37843750e5a",
+      "head": "安王六年（乙酉，西元前三九六年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129661,
+      "seq": 41,
+      "kind": "paragraph",
+      "chars": 23,
+      "sourceSha256": "c7e3bf1fe89c198340055653513cd43ab4e0c7c90e70f1a6a6b334a1290ca578",
+      "head": "1　鄭駟子陽之黨弒繻公，而立其弟乙，是為康公。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189186,
+      "seq": 42,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "8f0fe7e9a0821052941282c51031acacc11a7687f5dece0177a4d2c2634c80b1",
+      "head": "安王八年（丁亥，西元前三九四年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129662,
+      "seq": 43,
+      "kind": "paragraph",
+      "chars": 15,
+      "sourceSha256": "72704c2d67d63b00c554a2292af9748c4d14735bc9f4b08878e1c88a2ee095ad",
+      "head": "1　齊伐魯，取最。〔韓救魯〕。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129663,
+      "seq": 44,
+      "kind": "paragraph",
+      "chars": 11,
+      "sourceSha256": "aad12f7fb78fb87ca70c7a9b74a54fb9aa168f7004097412ce6c6c866d6efa6e",
+      "head": "2　鄭負黍叛，復歸韓。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189187,
+      "seq": 45,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "03769f54c10c8d727fdd1fdcc1391408cacbf1755c8b0c3348e6baab6a5639c4",
+      "head": "安王九年（戊子，西元前三九三年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129664,
+      "seq": 46,
+      "kind": "paragraph",
+      "chars": 6,
+      "sourceSha256": "03bd2efa65d533dfeae25805a4c3c53d49eb8798359c574912bf1a6edff48b98",
+      "head": "1　魏伐鄭。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129665,
+      "seq": 47,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "6a36f09a4530ed2d5b4a32cb4c61df07aae0cf4ac402f328ed056ff4bb38aec9",
+      "head": "2　晉烈公薨，子孝公傾立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189188,
+      "seq": 48,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "44b43e70cc7e73b916a46d452f55db2c9b7d20b027b98a87b260866f987a2f32",
+      "head": "安王十一年（庚寅，西元前三九一年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129666,
+      "seq": 49,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "d6da158f5eeb5825c2c25d46068beb7e44eed12223ef34bbbdff71527394c386",
+      "head": "1　秦伐韓宜陽，取六邑。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129667,
+      "seq": 50,
+      "kind": "paragraph",
+      "chars": 52,
+      "sourceSha256": "4f1c63a8890396ecc2423bbc0248c99318449caa23b2fcdefa11010577115e55",
+      "head": "2　初，田〔恆〕(常)生襄子盤，盤生莊子白，白生太公和。是歲，田和遷齊康公於海上，使食一城，以奉其先祀。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189189,
+      "seq": 51,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "7405d63f5b3301109d598889b27ca6b287bee67e7daaf622e89589713881878c",
+      "head": "安王十二年（辛卯，西元前三九〇年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129668,
+      "seq": 52,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "7918f823c85a87d45a0fa8181fab266ff2900e1b85bc5cb48a4c52283ec22806",
+      "head": "1　秦、晉戰於武城。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129669,
+      "seq": 53,
+      "kind": "paragraph",
+      "chars": 15,
+      "sourceSha256": "66ed202dc6d87032833fd211a6f743a2f4374ced23e7d1a70270e9993d0b152e",
+      "head": "2　齊伐魏，取襄〔陵〕(陽)。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129670,
+      "seq": 54,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "194d96d3c315e60eb09562238ecd256c06b9f289e179411008826b18b8b4b97a",
+      "head": "3　魯敗齊師于平陸。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189190,
+      "seq": 55,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "3fac0085791b2657e7488eaa1852ddda90dd091622fed7e1ff1d6ec55147fde9",
+      "head": "安王十三年（壬辰，西元前三八九年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129671,
+      "seq": 56,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "b4c2d68b99a611aa00dfeb09e9c004cfe45cf6a5e25e63e4f89f86a043e4064d",
+      "head": "1　秦侵〔魏陰〕晉。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129672,
+      "seq": 57,
+      "kind": "paragraph",
+      "chars": 40,
+      "sourceSha256": "8012f681f221052dcddec24eefa515e12fe9ea26deb3303a3fd57cc78e0adb36",
+      "head": "2　齊田和會魏文侯、楚人、衛人于濁澤，求為諸侯。魏文侯為之請於王及諸侯，王許之。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189191,
+      "seq": 58,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "89c0b77b805fe5f3a7b4031e98b1ca673e02c1c3394a9c6fd35d0690572e1b78",
+      "head": "安王十五年（甲午，西元前三八七年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129673,
+      "seq": 59,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "189161703cb919c2dd2a8433a2709c08a924ba212e88d8aac2eac7cf2e490ddb",
+      "head": "1　秦伐蜀，取南鄭。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129674,
+      "seq": 60,
+      "kind": "paragraph",
+      "chars": 17,
+      "sourceSha256": "ecc41667a0914f5a23079a0caf4852a5a1d63177485f83a1642cdc2d45bf5b1c",
+      "head": "2　魏文侯薨，太子擊立，是為武侯。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129675,
+      "seq": 61,
+      "kind": "paragraph",
+      "chars": 173,
+      "sourceSha256": "f3db86ce2a7800893fc9cfe257693d10f0c0644931fe49ffadd42216312aa738",
+      "head": "武侯浮西河而下，中流顧謂吳起曰：「美哉山河之固，此魏國之寶也！」對曰：「在德不在險。昔三苗氏，左洞庭，右彭蠡，",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129676,
+      "seq": 62,
+      "kind": "paragraph",
+      "chars": 493,
+      "sourceSha256": "c5fd07562375445f7dce5ff058652ff55c9f8d81ce3b23a46e9c86e466826c78",
+      "head": "魏置相，相田文。吳起不悅，謂田文曰：「請與子論功，可乎？」田文曰：「可。」起曰：「將三軍，使士卒樂死，敵國不敢",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129677,
+      "seq": 63,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "e0bb5b01083da488ebe79ebb95ca4ab0ccb2e0c63a906d23f95ca92b293874ad",
+      "head": "3　秦惠公薨，子出公立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129678,
+      "seq": 64,
+      "kind": "paragraph",
+      "chars": 23,
+      "sourceSha256": "c9aec59e10acd5fd0da85270d24b765e50006f0bd15c2af6e6dc0bbaee0df30a",
+      "head": "4　趙武侯薨，國人復立烈侯之太子章，是為敬侯。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129679,
+      "seq": 65,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "02af6b38c158a336bcede89f5906e4bae0674b2d41ab8c6dc26d330c3aaecae6",
+      "head": "5　韓烈侯薨，子文侯立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189192,
+      "seq": 66,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "f522c18ec5aa853f6c2298605c82d913f9027f1d9000ac2ba82cdcd5d85cddc4",
+      "head": "安王十六年（乙未，西元前三八六年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129680,
+      "seq": 67,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "1291d777637287763ce9578b95069bcaf16767fea5542b8dc8c827f2da9382b0",
+      "head": "1　初命齊大夫田和為諸侯。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129681,
+      "seq": 68,
+      "kind": "paragraph",
+      "chars": 22,
+      "sourceSha256": "c5378bf165353a26f245ba44ca73c819d00a9c9a435577009c51793723f9e81b",
+      "head": "2　趙公子朝作亂，出奔魏，與魏襲邯鄲，不克。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189193,
+      "seq": 69,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "63565de934008e3301c31f3f112d3530104c086c79d150d6fff3143d8d44ec33",
+      "head": "安王十七年（丙申，西元前三八五年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129682,
+      "seq": 70,
+      "kind": "paragraph",
+      "chars": 33,
+      "sourceSha256": "9944749a2ad6f2e7a6ad3da4eb14095577eb14b002ae21375d52d536283188f5",
+      "head": "1　秦庶長改〔迎〕(逆)獻公于河西而立之；殺出子及其母，沉之淵旁。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129683,
+      "seq": 71,
+      "kind": "paragraph",
+      "chars": 6,
+      "sourceSha256": "c02e70a4fccca76e7932a16d7f57717ec9f7a1d01f083d6f32eefcca270600d5",
+      "head": "2　齊伐魯。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129684,
+      "seq": 72,
+      "kind": "paragraph",
+      "chars": 30,
+      "sourceSha256": "7ec031d47c687940ae1031d16f365c0401b9d7c2c0fd2d6152a934430df06c81",
+      "head": "3　韓伐鄭，取陽城；伐宋，執宋〔悼〕公，〔國人立子休公田〕。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129685,
+      "seq": 73,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "e04cd239671f3770a3693d988435e06a0156255b9d778730ea5ea3f8ea5ef22a",
+      "head": "4　齊太公薨，子桓公午立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189194,
+      "seq": 74,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "427a62da69468d525f70d7b7ca4187035d35e7bf0576ef1941df15a3fface421",
+      "head": "安王十九年（戊戌，西元前三八三年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129686,
+      "seq": 75,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "4b9a5cf9568cef8c901a4ff09915c03a3b5262b13bf91a07e950bae1c0c0645f",
+      "head": "1　魏敗趙師於兔臺。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129687,
+      "seq": 76,
+      "kind": "paragraph",
+      "chars": 15,
+      "sourceSha256": "bfeeac714b34e0312dd66233932ce7d90d4a73e8228ce7322f278ec8f8f9d0fb",
+      "head": "2　〔魯穆公薨，子共公奮立〕。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189195,
+      "seq": 77,
+      "kind": "heading",
+      "chars": 17,
+      "sourceSha256": "9786398de294463538a4b268cf98a2d49d2e42c4bd16bd9d70d7c50421b69316",
+      "head": "安王二十年（己亥，西元前三八二年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129688,
+      "seq": 78,
+      "kind": "paragraph",
+      "chars": 9,
+      "sourceSha256": "3f23a402bd9875aa12a73e67631f66a554f9f59273af29ade684d300881867c9",
+      "head": "1　日有食之，既。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189196,
+      "seq": 79,
+      "kind": "heading",
+      "chars": 18,
+      "sourceSha256": "d6fc1bacd5afe8f7e7c0de2197fc74e16b66de316a226fab02b40fbec9f36dfa",
+      "head": "安王二十一年（庚子，西元前三八一年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129689,
+      "seq": 80,
+      "kind": "paragraph",
+      "chars": 75,
+      "sourceSha256": "7b1ae6fa6be629a821a3732ec53d69210d469b4776fa9cf593edd4bfa67de52a",
+      "head": "1　楚悼王薨，貴戚大臣作亂，攻吳起，起走之王尸而伏之。擊起之徒因射刺起，並中王尸。既葬，〔太子〕肅王〔臧〕即位",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189197,
+      "seq": 81,
+      "kind": "heading",
+      "chars": 18,
+      "sourceSha256": "cb85777f54990da0f502bf2df19ebd74e80b04db93ba5703dfa1d9f57dcc3ebb",
+      "head": "安王二十二年（辛丑，西元前三八〇年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129690,
+      "seq": 82,
+      "kind": "paragraph",
+      "chars": 22,
+      "sourceSha256": "8561d5a86fbe38ac454d56196a4b057e1246d24f1c45b3b1f53116e2d0d2c39c",
+      "head": "1　齊伐燕，取桑丘。魏、韓、趙伐齊，至桑丘。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189198,
+      "seq": 83,
+      "kind": "heading",
+      "chars": 18,
+      "sourceSha256": "d142fc6468543c48bbdd934b4623ca7ce226c4f88be65cf9b286a25a09eeb7fc",
+      "head": "安王二十三年（壬寅，西元前三七九年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129691,
+      "seq": 84,
+      "kind": "paragraph",
+      "chars": 9,
+      "sourceSha256": "3b1ea406d135b8b1992ef4a594cd141b1a8a002f0f65d9c305afc1936159095e",
+      "head": "1　趙襲衛，不克。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129692,
+      "seq": 85,
+      "kind": "paragraph",
+      "chars": 19,
+      "sourceSha256": "2b814accfb5b0a3b158b552a7277691ebe6ca87d2d547b256df9568f410558d6",
+      "head": "2　齊康公薨，無子，田氏遂並齊而有之。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189199,
+      "seq": 86,
+      "kind": "heading",
+      "chars": 18,
+      "sourceSha256": "d224e05cc2c150981360338d1fcabed81dc105b030fbaf652d0dfc4d01706e91",
+      "head": "安王二十四年（癸卯，西元前三七八年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129693,
+      "seq": 87,
+      "kind": "paragraph",
+      "chars": 9,
+      "sourceSha256": "83a6153d292e36c48386c65eeee9a88f97d98c9a98b5eb00628c4cbcd1905d56",
+      "head": "1　狄敗魏師于澮。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129694,
+      "seq": 88,
+      "kind": "paragraph",
+      "chars": 14,
+      "sourceSha256": "7d19731ee2530d166b82a3266d12528e8b9643c44dd9bc463c340fac027e9903",
+      "head": "2　魏、韓、趙伐齊，至靈丘。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129695,
+      "seq": 89,
+      "kind": "paragraph",
+      "chars": 14,
+      "sourceSha256": "5f95e5cd05f1ffd57801ffbc7b1c5cc54810f137721d8917ee6178f256f0ec35",
+      "head": "3　晉孝公薨，子靖公俱酒立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189200,
+      "seq": 90,
+      "kind": "heading",
+      "chars": 18,
+      "sourceSha256": "eb7d49aed27b1d98362bad1546f7f9114b52afd31f82eba981eeeaea46b76936",
+      "head": "安王二十五年（甲辰，西元前三七七年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129696,
+      "seq": 91,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "e109e119659205d7ded460ebaf4e0746bebcb3402c421fbf9eaca9baaac046bf",
+      "head": "1　蜀伐楚，取茲方。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129697,
+      "seq": 92,
+      "kind": "paragraph",
+      "chars": 444,
+      "sourceSha256": "dfb3802e397ac3c93966508443d503adcb057158db7a25ef8e63a63f744629a5",
+      "head": "2　子思言苟變於衛侯曰：「其材可將五百乘。」公曰：「吾知其可將。然變也嘗為吏，賦於民而食人二雞子，故弗用也。」",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129698,
+      "seq": 93,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "063a93ef3809d587050584e439b16b466a1ccd35efd27dc3ee36fbb6bd47be2e",
+      "head": "3　韓文侯薨，子哀侯立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189201,
+      "seq": 94,
+      "kind": "heading",
+      "chars": 18,
+      "sourceSha256": "a76f840dfc4e09f4971fc230d3bc0495ad680dbb976ad2372ba9b73802e77336",
+      "head": "安王二十六年（乙巳，西元前三七六年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129699,
+      "seq": 95,
+      "kind": "paragraph",
+      "chars": 11,
+      "sourceSha256": "43173c3c022a1928563c4174687593c2ea658e90b3a8a876c2dbb99c0b0688dd",
+      "head": "1　王崩，子烈王喜立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129700,
+      "seq": 96,
+      "kind": "paragraph",
+      "chars": 20,
+      "sourceSha256": "ff0149ca037dd4cf64021a3b945fe6cc6113daf9ddcd22a93a0dcb49a787ed53",
+      "head": "2　魏、韓、趙共廢晉靖公為家人而分其地。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189202,
+      "seq": 97,
+      "kind": "heading",
+      "chars": 2,
+      "sourceSha256": "bee5e68545af4062848d8afccd2b669414c34a1103330b266b34528be2dcc00e",
+      "head": "烈王",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189203,
+      "seq": 98,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "f8037308f78cf6b4ab6937cfe1dc80bad86cd664c0a04b8982141afcd18caf50",
+      "head": "烈王元年（丙午，西元前三七五年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129701,
+      "seq": 99,
+      "kind": "paragraph",
+      "chars": 7,
+      "sourceSha256": "9e4b6ac2a5bc9e33dbba271b1ec7d1b602c40548bfe405bf6b35b63c9d850652",
+      "head": "1　日有食之。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129702,
+      "seq": 100,
+      "kind": "paragraph",
+      "chars": 11,
+      "sourceSha256": "c2220919285d88f51e367be2c5b1b55419c4e60b9436ffca95e2b1f0e9811eec",
+      "head": "2　韓滅鄭，因徒都之。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129703,
+      "seq": 101,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "ad42f43c5eb86e25fa45bb74c58611bd880c0bf9bf3fe8f4bff092518e6094df",
+      "head": "3　趙敬侯薨，子成侯種立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189204,
+      "seq": 102,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "53f7b887d90fac7b82ae3b82467aeb1ccdf54de04eb4978459f433499c8ea3e2",
+      "head": "烈王二年（丁未，西元前三七四年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129704,
+      "seq": 103,
+      "kind": "paragraph",
+      "chars": 72,
+      "sourceSha256": "261a1193a031d142e75a5d250c234d21bfa3a84ee1f6a8dfa6540ab475b5c592",
+      "head": "1　〔韓嚴遂弒哀侯，國人立其子懿侯若山。初，哀侯以韓廆為相而愛嚴遂，二人甚相害也。嚴遂令人刺韓廆於朝，廆走哀侯",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189205,
+      "seq": 104,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "1ac25646d6ed2bdda9e1f99d78f1ea91fd45fa3eaeb1f258fe53657a6855ec84",
+      "head": "烈王三年（戊申，西元前三七三年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129705,
+      "seq": 105,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "0a92bcf3f4b01f0383c0584dec1095f9389643b3ec781b790b7e560231f4a14d",
+      "head": "1　燕敗齊師於林狐。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129706,
+      "seq": 106,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "96b246a860229e4fac20251ae2981f5f6fbb19d0ba3c8c2da9171d5c99d93be2",
+      "head": "2　魯伐齊，入陽關。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129707,
+      "seq": 107,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "7b88d53ddbe210251a0794cafdfc34d1cfab660a270d49101618fc86a41a457d",
+      "head": "3　魏伐齊，至博陵。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129708,
+      "seq": 108,
+      "kind": "paragraph",
+      "chars": 12,
+      "sourceSha256": "590709199286f3b63655561a5331d1d507a7d5169475bd93f0c81c1778e42e70",
+      "head": "4　燕僖侯薨，子桓侯立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129709,
+      "seq": 109,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "f37b2e6fc8530a288f25424a07476e7e0dfef0bb00ce71a5bf452e82183a6e22",
+      "head": "6　衛慎侯薨，子聲侯訓立。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189206,
+      "seq": 110,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "0542f382df9b0f645114f2fa7373ab4249f287f2a134985f1be2c68c16ffc6b1",
+      "head": "烈王四年（己酉，西元前三七二年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129710,
+      "seq": 111,
+      "kind": "paragraph",
+      "chars": 13,
+      "sourceSha256": "e3dc085bf6afba99a606c15ccf6de69240ceb62ac717e6b4f2ba4aaef0e6e30f",
+      "head": "1　趙伐衛，取都鄙七十三。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129711,
+      "seq": 112,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "8393445564ebd8dd65e9a712f217eb2435593e4fae98cf6f6de45fcc749697d0",
+      "head": "2　魏敗趙師于北藺。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189207,
+      "seq": 113,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "456d7fb4af4d3121cc0f05244640a39bd7926dd1b357d636fa1b30d42855072b",
+      "head": "烈王五年（庚戌，西元前三七一年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129712,
+      "seq": 114,
+      "kind": "paragraph",
+      "chars": 10,
+      "sourceSha256": "2e728e7d57bfa8213ffa0681ade15dc55ee4880b62116dae44f16a0a51514aca",
+      "head": "1　魏伐楚，取魯陽。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 189208,
+      "seq": 115,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "8b88656412e3dbbe78b635ce0c917baa7bbb1d05b6051b9c28ee7bbd49f3166f",
+      "head": "烈王六年（辛亥，西元前三七〇年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129713,
+      "seq": 116,
+      "kind": "paragraph",
+      "chars": 47,
+      "sourceSha256": "3f7cc38e9e82fa14c5a429449aab9d769414a4dc3414ef9d149e2707f2a0760c",
+      "head": "1　齊〔桓公〕(威王)來朝。是時周室微弱，諸侯莫朝，而齊獨朝之，天下以此益賢〔桓公〕(威王)。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129714,
+      "seq": 117,
+      "kind": "paragraph",
+      "chars": 9,
+      "sourceSha256": "8043982ee6692bae1695c60afdcb83acb0f1932c7684393757b75628c8349236",
+      "head": "2　趙伐齊，至鄄。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129715,
+      "seq": 118,
+      "kind": "paragraph",
+      "chars": 9,
+      "sourceSha256": "658cb74e1c030967f6bad7083d5a6a07abd039367640579eb5bcfcf7ae818258",
+      "head": "3　魏敗趙師于懷。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129716,
+      "seq": 119,
+      "kind": "paragraph",
+      "chars": 21,
+      "sourceSha256": "797460873e2050b0c5f457c49034edaefc318e04d243d4007a05f6c822c05327",
+      "head": "4　楚肅王薨，無子，立其弟良夫，是為宣王。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129717,
+      "seq": 120,
+      "kind": "paragraph",
+      "chars": 27,
+      "sourceSha256": "4cc71eb6c78dd6548da7ca039897d8b9e019e0d9c673c60d730864afca3c111e",
+      "head": "5　〔魏武侯薨，不立太子，子罃與公中緩爭立，國內亂〕。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 189209,
+      "seq": 121,
+      "kind": "heading",
+      "chars": 16,
+      "sourceSha256": "337b9f7c0695f71e286801f072c60cf07f764851be6ae9f737321dceddc1e32a",
+      "head": "烈王七年（壬子，西元前三六九年）",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129718,
+      "seq": 122,
+      "kind": "paragraph",
+      "chars": 7,
+      "sourceSha256": "9e4b6ac2a5bc9e33dbba271b1ec7d1b602c40548bfe405bf6b35b63c9d850652",
+      "head": "1　日有食之。",
+      "editorialNotes": 1
+    },
+    {
+      "paragraphId": 129719,
+      "seq": 123,
+      "kind": "paragraph",
+      "chars": 14,
+      "sourceSha256": "8696c3e20540cbfbc53158ab7b2dd70e38d21a82e5e2d8c787e11ef9c3d4f219",
+      "head": "2　王崩，弟扁立，是為顯王。",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129720,
+      "seq": 124,
+      "kind": "paragraph",
+      "chars": 166,
+      "sourceSha256": "6b57d4c6a014af2519d032bca4652293452c2fa22458f1cedc8e90494ace7803",
+      "head": "3　魏大夫王錯出奔韓。公孫頎謂韓懿侯曰：「魏亂，可取也。」懿侯乃與趙成侯合兵伐魏，戰于濁澤，大破之，遂圍魏。成",
+      "editorialNotes": 0
+    },
+    {
+      "paragraphId": 129721,
+      "seq": 125,
+      "kind": "paragraph",
+      "chars": 58,
+      "sourceSha256": "fa681853b18a7ed19955759d240739327c77ce7bc906b77fc9560642ebd5ef5b",
+      "head": "太史公曰：魏惠王之所以身不死，國不分者，二國之謀不和也。若從一家之謀，魏必分矣。故曰：「君終，無適子，其國可破",
+      "editorialNotes": 0
+    }
+  ]
+}
