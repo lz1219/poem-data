@@ -1,0 +1,10 @@
+{
+  "operation": "preview",
+  "unitId": 2081,
+  "newHeadings": 42,
+  "retainedParagraphs": 121,
+  "retiredParagraphs": 2,
+  "backupSha256": "55a4ba0703881ab4a9d9bd5efbcbad1b6cb7f1277303fccbff87514d47b8f9c7",
+  "backupBytes": 122368,
+  "backupHostPath": "/opt/corpus-data-jobs/corpus-repair-volume2/volume002-before.json.gz"
+}

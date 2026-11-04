@@ -146,6 +146,27 @@ class ChronicleReadingTests(unittest.TestCase):
         self.assertNotIn('year',p['origin'])
         self.assertEqual(p['origin']['headingLevel'],2)
 
+    def test_batch_profile_accepts_known_quality_header_and_reference_free_footer(self):
+        from wikisource_source import chronicle_paragraphs
+        raw='{{TextQuality|25%}}\n{{header2\n|title=原書\n}}\n\n==甲年==\n\n\'\'\'1\'\'\'　原文。\n\n[[Category:資治通鑑]]\n{{footer\n|next=下一卷\n}}\n{{北宋作品}}'
+        blocks=chronicle_paragraphs(raw,allow_batch_shapes=True)
+        self.assertEqual([b['body'] for b in blocks],['甲年','1　原文。'])
+        with self.assertRaises(ValueError):chronicle_paragraphs(raw)
+        with self.assertRaises(ValueError):chronicle_paragraphs(raw.replace('原文。','原<ref>注</ref>文。'),allow_batch_shapes=True)
+
+    def test_batch_profile_omits_divider_instead_of_turning_it_into_prose(self):
+        from wikisource_source import chronicle_paragraphs
+        blocks=chronicle_paragraphs(self.wrapped('原文。\n----\n次行。'),allow_batch_shapes=True)
+        self.assertEqual([b['body'] for b in blocks], ['原文。','次行。'])
+
+    def test_batch_inline_annotation_restores_source_character(self):
+        from wikisource_source import chronicle_paragraphs
+        blocks=chronicle_paragraphs(self.wrapped('其{{参|適|同嫡}}嗣。'),allow_batch_shapes=True)
+        self.assertEqual(blocks[0]['body'],'其適嗣。')
+        self.assertEqual(blocks[0]['origin']['sourceInlineRestorations'][0]['anchor'],1)
+        self.assertEqual(blocks[0]['origin']['annotations'][0]['body'],'同嫡')
+        self.assertEqual(blocks[0]['origin']['annotations'][0]['anchor'],2)
+
     def test_unknown_table_template_and_trailer_are_not_silently_removed(self):
         from wikisource_source import chronicle_paragraphs
         for body in ['原{{不明|字}}文','{|\n| 年 || 事\n|}', '原<ref>未閉合']:

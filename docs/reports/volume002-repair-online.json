@@ -1,0 +1,20 @@
+{
+  "scope": "production database and existing production API",
+  "totals": {
+    "book": 38,
+    "edition": 8,
+    "text_unit": 2333,
+    "paragraph": 141732,
+    "corpus_poem": 88014
+  },
+  "unitSha256": "cbda8d8976d5899d16d4aafb40d240cc795eef28fe1784e7722f4abe2225df78",
+  "volume001ShaUnchanged": true,
+  "blocks": 163,
+  "sourceNumbers": 96,
+  "sourceEditorialNotes": 53,
+  "editionId": 18,
+  "sourceRevision": 2638853,
+  "sourceNumberGaps": [],
+  "productionApiBlocks": 163,
+  "productionApiHasStructuredReading": false
+}

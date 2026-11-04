@@ -221,24 +221,33 @@ def chronicle_inline(text):
     return plain_inline(text)
 
 
-def chronicle_paragraphs(text):
+def chronicle_paragraphs(text, *, allow_batch_shapes=False):
     """Keep source headings and within-year event numbers, without guessing dates.
 
     Limited to the header2 / 校刊記 profile in the audited first two volumes.
     All visible source blocks have byte ranges; reference text is stored apart.
     """
-    header = re.match(r'\{\{header2\n[^{}]*\}\}\s*', text)
-    tails = list(re.finditer(r'(?m)^(={1,6})[ \t]*校刊記[ \t]*\1[ \t]*$', text))
-    if not header or len(tails) != 1:
-        raise ValueError('Expected one audited header2 and 校刊記 boundary')
-    tail = tails[0]
-    trailer = text[tail.end():]
+    quality = r'(?:\{\{textquality\|(?:25|50|75)%\}\}\s*)?' if allow_batch_shapes else ''
+    header = re.match(quality+r'\{\{header2\n[^{}]*\}\}\s*', text, re.I if allow_batch_shapes else 0)
+    tail_names = r'(?:校刊記|校改記|校記)' if allow_batch_shapes else '校刊記'
+    tails = list(re.finditer(r'(?m)^(={1,6})[ \t]*'+tail_names+r'[ \t]*\1[ \t]*$', text))
+    if not header or len(tails)>1:
+        raise ValueError('Expected audited header and at most one reference boundary')
+    if tails:
+        tail_start,tail_end=tails[0].start(),tails[0].end()
+    else:
+        if not allow_batch_shapes or re.search(r'<ref\b|<references\b',text):
+            raise ValueError('Missing audited reference boundary')
+        trailer_start=re.search(r'(?im)^(?:\[\[category:資治通鑑(?:\|[^\[\]\n]*)?\]\]|\{\{\s*footer(?:\s*\n|\|))',text[header.end():])
+        if not trailer_start:raise ValueError('Missing audited source footer')
+        tail_start=tail_end=header.end()+trailer_start.start()
+    trailer = text[tail_end:]
     trailer = re.sub(r'<div class="references-small">\s*<references\s*/>\s*</div>', '', trailer)
-    trailer = re.sub(r'\[\[category:資治通鑑\|[^\[\]\n]+\]\]', '', trailer)
-    trailer = re.sub(r'\{\{footer\n[^{}]*\}\}|\{\{北宋作品\}\}', '', trailer)
+    trailer = re.sub(r'\[\[category:資治通鑑(?:\|[^\[\]\n]+)?\]\]', '', trailer, flags=re.I)
+    trailer = re.sub(r'\{\{\s*footer(?:\s*\n|\|)[^{}]*\}\}|\{\{北宋作品\}\}', '', trailer)
     if trailer.strip():
         raise ValueError('Unsupported material after the reference-list boundary')
-    source = text[header.end():tail.start()]
+    source = text[header.end():tail_start]
     # Legacy paragraphs were line-based. Keep those boundaries while allowing
     # a single editorial reference to contain newlines; do not merge IDs merely
     # because several consecutive commentary lines share no blank line.
@@ -252,15 +261,30 @@ def chronicle_paragraphs(text):
         chunk = match[0].rstrip()
         if not chunk.strip():
             continue
+        if re.fullmatch(r'\s*-{4,}\s*',chunk):
+            if allow_batch_shapes:
+                continue
+            raise ValueError('Source divider requires explicit paragraph migration')
         end = start + len(chunk)
         heading = re.fullmatch(r'(={1,6})([^\n]+?)\1[ \t]*', chunk)
         inline_start = start
         if heading:
             inline_start += len(heading[1])
             chunk = heading[2]
-        pieces, annotations, position = [], [], 0
-        for note in re.finditer(r'<ref>(.*?)</ref>', chunk, re.S):
+        pieces, annotations, restorations, position = [], [], [], 0
+        inline_pattern = r'<ref>(.*?)</ref>|\{\{参\|適\|同嫡\}\}' if allow_batch_shapes else r'<ref>(.*?)</ref>'
+        for note in re.finditer(inline_pattern, chunk, re.S):
             pieces.append(chronicle_inline(chunk[position:note.start()]))
+            if note[0].startswith('{{'):
+                anchor = sum(map(len, pieces))
+                pieces.append('適')
+                restorations.append({'anchor': anchor, 'text': '適', 'reason': 'source-template-first-argument'})
+                annotations.append({'anchor': anchor + 1, 'body': '同嫡', 'kind': 'wiki-editorial-note',
+                    'attribution': '维基编者注·注者待核',
+                    'sourceByteStart': len(text[:inline_start + note.start()].encode()),
+                    'sourceByteEnd': len(text[:inline_start + note.end()].encode())})
+                position = note.end()
+                continue
             value = chronicle_inline(note[1])
             if not value.strip():
                 raise ValueError('Empty editorial note')
@@ -278,12 +302,24 @@ def chronicle_paragraphs(text):
             body = body.strip()
             for note in annotations:
                 note['anchor'] -= leading
+        elif allow_batch_shapes:
+            leading = len(body) - len(body.lstrip())
+            if leading:
+                body = body[leading:]
+                for note in annotations:
+                    if note['anchor'] < leading:
+                        raise ValueError('Note anchored in leading source whitespace')
+                    note['anchor'] -= leading
+                for restoration in restorations:
+                    restoration['anchor'] -= leading
         if not body:
             raise ValueError('Empty source block')
         origin = {'segmentation': 'source-paragraph', 'offsetUnit': 'unicode-code-point',
             'sourceByteStart': len(text[:start].encode()), 'sourceByteEnd': len(text[:end].encode()),
             'kind': 'heading' if heading else 'paragraph', 'annotations': annotations,
             'spans': [{'kind': 'source-text', 'start': 0, 'end': len(body)}]}
+        if restorations:
+            origin['sourceInlineRestorations'] = restorations
         if heading:
             level = len(heading[1])
             path = [p for p in path if p['level'] < level] + [{'level': level, 'title': body}]
@@ -297,7 +333,7 @@ def chronicle_paragraphs(text):
         result.append({'body': body, 'origin': origin})
     if source[cursor:].strip() or not result:
         raise ValueError('Unparsed or empty source body')
-    if sum(len(p['origin']['annotations']) for p in result) != text.count('<ref>'):
+    if sum(len(p['origin']['annotations']) for p in result) != text.count('<ref>') + (text.count('{{参|適|同嫡}}') if allow_batch_shapes else 0):
         raise ValueError('Editorial-note count changed during parsing')
     if sum(p['origin']['kind'] == 'heading' for p in result) != len(re.findall(r'(?m)^=+[^\n]+?=+[ \t]*$', source)):
         raise ValueError('Source heading count changed during parsing')
@@ -328,13 +364,20 @@ def attach_legacy_mapping(unit, source):
     """Every retained/retired old row must be explained by an actual source range."""
     projected = []
     raw = source.encode()
+    previous = 0
     for block in unit['paragraphs']:
         origin = block['origin']
+        between = legacy_projection(raw[previous:origin['sourceByteStart']].decode())
+        if any(not re.fullmatch(r'-{4,}', line) for line in between):
+            raise ValueError('Unexpected legacy material between source blocks')
+        block['legacyRetiredBefore'] = between
+        projected.extend(between)
         old = legacy_projection(raw[origin['sourceByteStart']:origin['sourceByteEnd']].decode())
         if len(old) > 1:
             raise ValueError('New block merges existing paragraph boundaries')
         block['legacyText'] = old[0] if old else None
         projected.extend(old)
+        previous = origin['sourceByteEnd']
     trailer = legacy_projection(raw[unit['paragraphs'][-1]['origin']['sourceByteEnd']:].decode())
     complete = legacy_projection(source)
     if projected + trailer != complete:
@@ -347,8 +390,10 @@ def reading_plan(cache, selection):
     """Build an immutable plan from fixed captures, never live page content."""
     from backfill_shiji import digest, require
     profile = selection.get('profile', 'chuanxilu')
-    require(profile in ('chuanxilu', 'zztj-first-two'), 'Unreviewed reading profile')
-    parser_name = ('wikisource-chronicle-headings-notes-v1' if profile == 'zztj-first-two'
+    require(profile in ('chuanxilu', 'zztj-first-two', 'zztj-batch'), 'Unreviewed reading profile')
+    chronicle = profile in ('zztj-first-two', 'zztj-batch')
+    parser_name = ('wikisource-chronicle-batch-v1' if profile == 'zztj-batch' else
+                   'wikisource-chronicle-headings-notes-v1' if chronicle
                    else 'wikisource-explicit-inline-and-notes-v1')
     permission = selection['permissionCapture']
     declaration = cached_response(cache, permission['url'], permission['sha256']).decode('utf-8')
@@ -361,7 +406,8 @@ def reading_plan(cache, selection):
         decoded = decode_capture({'title': spec['title'], 'captureFormat': 'mediawiki-export-xml'}, raw)
         require(decoded['revid'] == spec['revisionId'], 'Fixed revision differs from selection')
         require(sha(decoded['text'].encode()) == spec['textSha256'], 'Fixed wikitext differs')
-        paragraphs = (chronicle_paragraphs if profile == 'zztj-first-two' else reading_paragraphs)(decoded['text'])
+        paragraphs = (chronicle_paragraphs(decoded['text'], allow_batch_shapes=profile == 'zztj-batch')
+                      if chronicle else reading_paragraphs(decoded['text']))
         text_offset = 0
         for paragraph in paragraphs:
             paragraph['origin']['textStart'] = text_offset
@@ -378,9 +424,14 @@ def reading_plan(cache, selection):
                   'reviewStatus': 'transcription-unreviewed', 'sourceUrl': url,
                   'noteAttribution': '维基编者注·注者待核；不视为古人评点',
                   'baseEdition': selection['baseEdition']}
+        if profile == 'zztj-batch':
+            quality = re.match(r'\{\{textquality\|((?:25|50|75)%)\}\}', decoded['text'], re.I)
+            if quality:
+                origin['sourceTextQualityIndicator'] = {'value': quality.group(1),
+                    'status': 'source indicator; not a human review by this project'}
         units.append({'juan': spec['juan'], 'body': body, 'sha256': sha(body.encode()),
                       'sourceUrl': url, 'punctuated': True, 'origin': origin, 'paragraphs': paragraphs})
-        if profile == 'zztj-first-two':
+        if chronicle:
             attach_legacy_mapping(units[-1], decoded['text'])
             from importlib.metadata import version
             try:
@@ -395,11 +446,16 @@ def reading_plan(cache, selection):
         require(selection['bookId'] == 20 and len(units) == 3 and
                 [u['juan'] for u in units] == ['卷上', '卷中', '卷下'],
                 'This audited selection must contain exactly three Chuanxilu volumes')
-    else:
+    elif profile == 'zztj-first-two':
         require(selection['bookId'] == 80 and selection['bookTitle'] == '資治通鑑' and
                 [s['title'] for s in selection['volumes']] == ['資治通鑑/卷001', '資治通鑑/卷002'] and
                 [u['juan'] for u in units] == ['卷001', '卷002'],
                 'Chronicle specimen is restricted to the audited first two Zizhi Tongjian volumes')
+    else:
+        require(selection['bookId'] == 80 and selection['bookTitle'] == '資治通鑑' and units and
+                len({u['juan'] for u in units}) == len(units) and
+                all(re.fullmatch(r'卷\d{3}', u['juan']) and s['title'] == '資治通鑑/' + u['juan']
+                    for u, s in zip(units, selection['volumes'])), 'Invalid batch volume selection')
     info = {'parser': parser_name, 'bookId': selection['bookId'],
             'bookTitle': selection['bookTitle'], 'edition': selection['editionName'],
             'editionName': selection['editionName'], 'source': {
@@ -408,8 +464,8 @@ def reading_plan(cache, selection):
             'permissionBasis': permission, 'license': 'CC-BY-SA-4.0 (provider declaration)',
             'attribution': '中文维基文库贡献者；逐卷固定修订及编辑历史见来源链接。保留原标点；移除显示标记，编者注独立存储。',
             'reviewStatus': '转录待校；纸本底本与编者注归属待核，非具名人工审校',
-            'coverage': {'included': ('维基通鉴卷001、002及原页纪年标题和编者注；仅样板预览'
-                                      if profile == 'zztj-first-two' else '维基传习录卷上、卷中、卷下及原页编者注'),
+            'coverage': {'included': ('维基通鉴固定修订及原页纪年标题和编者注；仅已选择卷'
+                                      if chronicle else '维基传习录卷上、卷中、卷下及原页编者注'),
                          'reason': '仅该电子修订范围，不声称影像对校、异版附录、拾遗或现代译注已齐'},
             'counts': {'units': len(units), 'bodyVolumes': len(units),
                        'sourcePageBlocks': sum(len(u['paragraphs']) for u in units),

@@ -42,6 +42,17 @@ class RepairMappingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Only explicit'):
             map_rows([{'id':91,'body':'1　原文。'},{'id':92,'body':'周'}],source)
 
+    def test_source_divider_retires_only_its_explicit_old_row(self):
+        source=self.source()
+        source['paragraphs'][1]['legacyRetiredBefore']=['----']
+        source['legacyProjection']['bodySha256']=hashlib.sha256('----\n1　原文。\n周'.encode()).hexdigest()
+        old=[{'id':90,'body':'----'},{'id':91,'body':'1　原文。'},{'id':92,'body':'周'}]
+        mapped,retired=map_rows(old,source)
+        self.assertEqual([x['id'] for x in mapped],[None,91])
+        self.assertEqual(retired,[90,92])
+        source['paragraphs'][1]['legacyRetiredBefore']=['正文']
+        with self.assertRaisesRegex(ValueError,'divider'):map_rows(old,source)
+
     def test_modified_source_unit_invalidates_the_manifest(self):
         unit={'juan':'卷001','body':'原文'}
         manifest={'unitDigests':[digest(unit)]}
@@ -49,6 +60,34 @@ class RepairMappingTests(unittest.TestCase):
         tampered=copy.deepcopy(plan);tampered['units'][0]['body']='改文'
         with self.assertRaisesRegex(ValueError,'unit checksums'):
             validate_source(tampered,'卷001')
+
+    def test_audited_markup_and_number_profile_rejects_real_character_changes(self):
+        source=self.source();source['normalizationProfile']='zztj-volume002-wiki-events-v1'
+        source['paragraphs'][1]['legacyText']='1　原-{文}-。'
+        source['paragraphs'][1]['body']='原文。'
+        source['paragraphs'][1]['origin']['sourceEventPrefix']='1　'
+        source['legacyProjection']['bodySha256']=hashlib.sha256('1　原-{文}-。\n周'.encode()).hexdigest()
+        old=[{'id':91,'body':'1　原-{文}-。'},{'id':92,'body':'周'}]
+        self.assertEqual(map_rows(old,source)[0][1]['id'],91)
+        source['paragraphs'][1]['body']='改文。'
+        with self.assertRaisesRegex(ValueError,'Unsupported character change'):
+            map_rows(old,source)
+
+    def test_batch_profile_moves_number_and_note_anchor_without_changing_original(self):
+        body='1　原文。'
+        block={'body':body,'origin':{'kind':'paragraph','eventNumber':'1',
+            'spans':[{'kind':'source-text','start':0,'end':len(body)}],
+            'annotations':[{'anchor':4,'body':'校记'}]}}
+        source={'juan':'卷003','body':body,'bodySimplified':body,
+            'origin':{'parser':'wikisource-chronicle-batch-v1','revisionId':7},'paragraphs':[block]}
+        result=corpus_repair.prepare_wiki_events(source)
+        self.assertEqual(result['paragraphs'][0]['body'],'原文。')
+        self.assertEqual(result['paragraphs'][0]['origin']['annotations'][0]['anchor'],2)
+        self.assertEqual(result['paragraphs'][0]['origin']['sourceEventPrefix'],'1　')
+        self.assertEqual(source['paragraphs'][0]['body'],body)
+        source['paragraphs'][0]['origin']['eventNumber']='2'
+        with self.assertRaisesRegex(ValueError,'Invalid source number'):
+            corpus_repair.prepare_wiki_events(source)
 
 
 @unittest.skipUnless(os.environ.get('CORPUS_REPAIR_TEST_DSN'), 'Explicit isolated PostgreSQL fixture connection required')
@@ -107,6 +146,68 @@ class RepairTransactionTests(unittest.TestCase):
             self.assertEqual(fingerprints(),after)
             c.execute("INSERT INTO paragraph(unit_id,seq,body) VALUES(-2080,3,'未映射额外段落')")
             with self.assertRaisesRegex(ValueError,'scope or sequence'):verify(c,data)
+
+    @unittest.skipUnless(os.environ.get('CORPUS_REPAIR_VOLUME2_BACKUP'),'Fixed volume-002 backup required')
+    def test_fixed_volume002_transaction_rolls_back_and_keeps_source_numbers(self):
+        import gzip
+        import psycopg
+        from psycopg.types.json import Jsonb
+        data=json.loads(gzip.decompress(Path(os.environ['CORPUS_REPAIR_VOLUME2_BACKUP']).read_bytes()))
+        tables=('book','text_unit','paragraph','edition','corpus_ingest_batch','corpus_unit_origin','corpus_paragraph_origin')
+        with psycopg.connect(os.environ['CORPUS_REPAIR_TEST_DSN'],autocommit=True) as c, tempfile.TemporaryDirectory() as directory:
+            for name in tables:
+                c.execute('CREATE TEMP TABLE '+name+' (LIKE public.'+name+' INCLUDING ALL)')
+                self.assertTrue(c.execute('SELECT relnamespace=pg_my_temp_schema() FROM pg_class WHERE oid=%s::regclass',(name,)).fetchone()[0])
+            for name in ('paragraph','edition'):
+                c.execute('CREATE TEMP SEQUENCE fixture_'+name+'_seq START 2000000000')
+                c.execute('ALTER SEQUENCE fixture_'+name+'_seq OWNED BY '+name+'.id')
+                c.execute("ALTER TABLE "+name+" ALTER COLUMN id SET DEFAULT nextval('fixture_"+name+"_seq')")
+            fixtures={'book':[data['book']],'text_unit':[data['unit']],
+                      'paragraph':[r[0] for r in data['paragraphs']]}
+            for name,rows in fixtures.items():
+                c.execute('INSERT INTO '+name+' SELECT * FROM jsonb_populate_recordset(NULL::'+name+',%s)',(Jsonb(rows),))
+            def fingerprints():
+                return [c.execute("SELECT coalesce(jsonb_agg(to_jsonb(t) ORDER BY to_jsonb(t)::text),'[]') FROM "+name+' t').fetchone()[0] for name in tables]
+            before=fingerprints();step=corpus_repair.step
+            def fail_last(conn,events,name,statement,params=()):
+                if name=='record-result':raise RuntimeError('injected before commit')
+                return step(conn,events,name,statement,params)
+            # This historical fixture reuses production IDs, whose real origins now exist.
+            # The separate negative-ID transaction test exercises the unpatched guard.
+            with patch.object(corpus_repair,'guard_references'):
+                with patch.object(corpus_repair,'step',side_effect=fail_last):
+                    with self.assertRaisesRegex(RuntimeError,'injected'):apply(c,data,'fixture',Path(directory)/'events.jsonl')
+                self.assertEqual(fingerprints(),before)
+                result=apply(c,data,'fixture',Path(directory)/'events.jsonl')
+            check=verify(c,data)
+            self.assertEqual((result['operation'],check['verifiedBlocks'],check['retainedMainTextIds'],check['editorialNotes']),('applied',163,121,53))
+            self.assertEqual(data['source']['origin']['sourceNumberSeparation']['count'],96)
+            after=fingerprints()
+            self.assertEqual(apply(c,data,'fixture',Path(directory)/'events.jsonl')['operation'],'already-applied; no writes')
+            self.assertEqual(fingerprints(),after)
+
+    @unittest.skipUnless(os.environ.get('CORPUS_REPAIR_VOLUME2_BACKUP'),'Fixed volume-002 backup required')
+    def test_all_volume002_source_note_anchors_survive_number_removal(self):
+        import gzip
+        backup=Path(os.environ['CORPUS_REPAIR_VOLUME2_BACKUP'])
+        data=json.loads(gzip.decompress(backup.read_bytes()))
+        plan=json.loads(backup.with_name('source-plan.json').read_text('utf-8'))
+        original=next(u for u in plan['units'] if u['juan']=='卷002')
+        restored=data['source'];self.assertEqual(len(original['paragraphs']),len(restored['paragraphs']))
+        total=0
+        for before,after in zip(original['paragraphs'],restored['paragraphs']):
+            shift=len(before['body'])-len(after['body'])
+            self.assertIn(shift,(0,2,3))
+            self.assertEqual(before['body'][shift:],after['body'])
+            notes_before=before['origin']['annotations'];notes_after=after['origin']['annotations']
+            self.assertEqual(len(notes_before),len(notes_after))
+            for old,new in zip(notes_before,notes_after):
+                self.assertEqual(old['anchor']-shift,new['anchor'])
+                self.assertEqual(before['body'][old['anchor']:],after['body'][new['anchor']:])
+                self.assertEqual((old['sourceByteStart'],old['sourceByteEnd'],old['body']),
+                                 (new['sourceByteStart'],new['sourceByteEnd'],new['body']))
+                total+=1
+        self.assertEqual(total,53)
 
 
 if __name__ == '__main__': unittest.main()
