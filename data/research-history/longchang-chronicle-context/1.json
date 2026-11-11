@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0",
+  "id": "longchang-chronicle-context",
+  "subject": {
+    "type": "work",
+    "key": "王阳明年谱"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "龙场年谱：到达、石墎自誓与悟学分段",
+  "claim": "AI辅助资料解释·未经人工审校。《年谱》分别记春至龙场、石墎自誓及格物致知之悟；没有把这三个片段改写成居东洞石棺。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T12:43:35.990651+00:00",
+    "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "三年戊辰先生三十七歲在貴陽¶\n春至龍場¶\n　　先生始悟格物致知",
+      "locator": "KR4e0157_021.txt，KR4e0157_SBCK_021-13b",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_021.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "f68e3b4b59be2a9f80a83732fe6aa21af48a935ef1fe035f4c1052c9c98d792e",
+      "sha256": "7fd7ff7f39c279a3588ff41799f5c128f4783524aac43ef5e6026cee8f9c95ba",
+      "textFile": "data/witnesses/7fd7ff7f39c279a3588ff41799f5c128f4783524aac43ef5e6026cee8f9c95ba.txt",
+      "startByte": 13264,
+      "endByte": 13351,
+      "verifiedQuote": true,
+      "verification": "固定电子文件逐字节对应，不等于核定原影像、作年或现代地点",
+      "stance": "context",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "乃為石墎¶\n<pb:KR4e0157_SBCK_021-14a>¶\n　　自誓曰吾惟俟命而已日夜端居澄黙以求¶\n　　静一",
+      "locator": "KR4e0157_021.txt，KR4e0157_SBCK_021-13b",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_021.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "f68e3b4b59be2a9f80a83732fe6aa21af48a935ef1fe035f4c1052c9c98d792e",
+      "sha256": "ef47fa85b71c2f332835c4cb5ffddccbf4245e40828e5b1601603b1d8a3e9525",
+      "textFile": "data/witnesses/ef47fa85b71c2f332835c4cb5ffddccbf4245e40828e5b1601603b1d8a3e9525.txt",
+      "startByte": 13594,
+      "endByte": 13710,
+      "verifiedQuote": true,
+      "verification": "固定电子文件逐字节对应，不等于核定原影像、作年或现代地点",
+      "stance": "context",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "始知聖人之道吾性自¶\n　　足向之求理扵事物者誤也",
+      "locator": "KR4e0157_021.txt，KR4e0157_SBCK_021-14a",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_021.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "f68e3b4b59be2a9f80a83732fe6aa21af48a935ef1fe035f4c1052c9c98d792e",
+      "sha256": "c8e412b251dc32a0e04c8ff74881c7bfdc65547c3f31ed82f0d4e6aed9ac8750",
+      "textFile": "data/witnesses/c8e412b251dc32a0e04c8ff74881c7bfdc65547c3f31ed82f0d4e6aed9ac8750.txt",
+      "startByte": 14028,
+      "endByte": 14097,
+      "verifiedQuote": true,
+      "verification": "固定电子文件逐字节对应，不等于核定原影像、作年或现代地点",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "年谱为后编叙述，诗文为所收作品，文献性质分别保留；原卷/字形与影像尚待核。",
+    "旧基线引文和反推繁体不因相关片段而自动核定。"
+  ],
+  "reasoning": "只按所取原态材料拆分叙述依据，不以同书片段数充当独立佐证。",
+  "counterEvidence": "尚未完成独立版本和影像核查；未据这些文本确证居址、全部细节或默认纪年。",
+  "alternatives": [
+    "不同材料可能记不同居处或阶段，不自动连成同一场景。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "relatedStop": "wangyangming:5",
+      "legacyStop": {
+        "titleZh": "龙场大悟·创立心学",
+        "descZh": "抵达贵州万山丛棘、瘴疠横行之龙场驿。居东洞石棺之中，日夜端居澄默，自问“圣人处此更有何道”。正德三年中夜忽然大悟格物致知之旨，彻见“圣人之道，吾性自足，向之求理于事物者误也”，继而倡“知行合一”，开五百年阳明心学。",
+        "source": "（上游数据）"
+      }
+    }
+  ],
+  "nextAction": "核各篇原卷及独立版本，分别确认居住、悟学、石墎叙事，不以现代纪念建筑代证。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T12:43:35.991431+00:00",
+  "sha256": "18e77dcc571d27caf9d227ccb1a7ed99f2a2595066ecbef5d3a67ab3b9995bcc"
+}

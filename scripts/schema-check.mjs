@@ -10,6 +10,10 @@ export function checkSchema(value, schema, at, fail) {
   if ('const' in schema && value !== schema.const) fail(`${at}: const 不匹配`);
   if (schema.enum && !schema.enum.includes(value)) fail(`${at}: 枚举非法 ${value}`);
   if (typeof value === 'string' && schema.minLength != null && value.trim().length < schema.minLength) fail(`${at}: 字符串过短`);
+  if (typeof value === 'number') {
+    if (schema.minimum != null && value < schema.minimum) fail(`${at}: 小于 minimum ${schema.minimum}`);
+    if (schema.maximum != null && value > schema.maximum) fail(`${at}: 大于 maximum ${schema.maximum}`);
+  }
   if (Array.isArray(value)) {
     if (schema.minItems != null && value.length < schema.minItems) fail(`${at}: 数组过短`);
     if (schema.maxItems != null && value.length > schema.maxItems) fail(`${at}: 数组过长`);
@@ -24,7 +28,7 @@ export function checkSchema(value, schema, at, fail) {
       else if (typeof schema.additionalProperties === 'object') checkSchema(val, schema.additionalProperties, `${at}.${key}`, fail);
     }
   }
-  for (const key of ['$ref', 'oneOf', 'anyOf', 'allOf', 'pattern', 'minimum', 'maximum']) {
+  for (const key of ['$ref', 'oneOf', 'anyOf', 'allOf', 'pattern']) {
     if (key in schema) fail(`${at}: 校验器尚未实现 ${key}`);
   }
 }

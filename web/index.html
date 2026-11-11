@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>江山行止 · 文献</title>
 <meta name="description" content="中国古典诗文的笺注本：作品、人物、行迹。">
+<script src="web/motion-preferences.js?v=20261106-1"></script>
 <style>
 /* ══════════════════════════════════════════════════════════
    江山行止 · 文献 —— 现代编辑体
@@ -207,6 +208,7 @@ h1::after {
   transition: background .18s, border-color .18s, color .18s, transform .18s;
 }
 .btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.6; opacity: .8; }
+.toolbar .btn[hidden] { display:none; }
 .btn:hover { color: var(--ink); background: var(--bg-soft); border-color: var(--muted); }
 .btn:active { transform: translateY(1px); }
 
@@ -648,13 +650,29 @@ border-radius:999px;cursor:pointer;transition:color .18s,border-color .18s,backg
 .corpus-status { color:var(--muted); font-size:12px; line-height:1.8; margin:10px 0; }
 .corpus-prose { max-width:34em; margin:0 auto; font-family:var(--serif); font-size:20px; line-height:2.1; overflow-wrap:anywhere; }
 .corpus-page { margin:0 0 1.25em; white-space:pre-wrap; }
+.corpus-reading-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(230px, .48fr); gap:clamp(22px,4vw,54px); align-items:start; }
+.corpus-reading-layout .corpus-prose { min-width:0; }
+.corpus-page.is-current { background:var(--accent-soft); outline:8px solid var(--accent-soft); border-radius:2px; }
+.corpus-paragraph-button { display:inline-block; border:0; background:none; color:var(--accent); cursor:pointer; font:12px var(--sans); padding:4px 8px; opacity:.72; }
+.corpus-paragraph-button:hover,.corpus-paragraph-button:focus-visible { opacity:1; text-decoration:underline; }
+.corpus-study { position:sticky; top:0; border-left:1px solid var(--line); padding:5px 0 20px 20px; color:var(--ink-2); font:14px/1.8 var(--sans); }
+.corpus-study-kicker { color:var(--accent); font-size:11px; letter-spacing:.14em; }
+.corpus-study h3 { margin:4px 0 14px; color:var(--ink); font:600 21px var(--serif); }
+.corpus-study h4 { margin:20px 0 6px; color:var(--ink); font-size:13px; }
+.corpus-study p { margin:0 0 12px; }
+.corpus-study ol { list-style:none; margin:0; padding:0; }
+.corpus-study li { margin:0 0 12px; padding-left:10px; border-left:2px solid var(--line); }
+.corpus-study li.is-related { border-color:var(--accent); }
+.corpus-study small { color:var(--muted); }
+.corpus-study-close { float:right; border:0; background:none; color:var(--muted); font:inherit; cursor:pointer; }
+@media (max-width:900px) { .corpus-reading-layout { display:block; } .corpus-study { display:none; } .corpus-study.is-open { display:block; position:fixed; z-index:50; left:0; right:0; bottom:0; max-height:48vh; overflow:auto; background:var(--surface); border:1px solid var(--line); border-radius:14px 14px 0 0; padding:20px 24px max(20px,env(safe-area-inset-bottom)); box-shadow:0 -8px 35px #0002; } }
 .corpus-parenthetical { font-size:.82em; color:var(--muted); }
 .corpus-missing { color:var(--muted); border-bottom:1px dotted var(--line); cursor:help; }
 .corpus-prose.hide-notes .corpus-parenthetical { display:none; }
 .corpus-heading { font-family:var(--serif); line-height:1.6; margin:1.8em 0 .7em; font-size:1.12em; }
 .corpus-heading[data-source-level="3"] { font-size:1em; color:var(--ink-2); }
 .corpus-original { white-space:pre-wrap; font-size:inherit; line-height:1.9; }
-.corpus-provenance { margin-top:32px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-2); }
+.corpus-provenance { margin-top:32px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-2); overflow-wrap:anywhere; }
 .corpus-provenance > summary { cursor:pointer; color:var(--muted); padding:8px 0; }
 .corpus-provenance p { line-height:1.8; }
 .corpus-empty-page { font:12px var(--sans); color:var(--muted); border-left:1px solid var(--line); padding-left:12px; }
@@ -746,36 +764,310 @@ body{background:#fff;}.container{max-width:none;padding:0;}
 ::-webkit-scrollbar-thumb:hover { background: var(--muted); }
 ::-webkit-scrollbar-track { background: transparent; }
 
+/* 作品阅读：以留白、行间节奏与按需展开的笺注为主。 */
+.work-heading { text-align:center; padding:12px 0 26px; border-bottom:1px solid var(--line); }
+.work-heading .rt { margin:12px 0; letter-spacing:.14em; }
+.work-eyebrow { color:var(--accent); font-size:11px; letter-spacing:.28em; }
+.work-heading .ra { margin:0 0 15px; }
+.work-heading .badges { justify-content:center; margin:0; }
+.work-body { padding:30px 0 12px; }
+.work-body .rc { margin:0; }
+.work-reading { margin:22px auto; max-width:680px; padding:20px 22px; background:#faf7f0; border-left:2px solid var(--accent); }
+.work-reading-head { display:flex; align-items:baseline; justify-content:space-between; gap:12px; border-bottom:1px solid var(--line); padding-bottom:10px; }
+.work-reading-head h3 { margin:0; font-family:var(--serif); font-size:17px; font-weight:500; letter-spacing:.12em; }
+.work-reading-head small,.work-reading small { color:var(--muted); line-height:1.6; }
+.work-reading-nav { display:flex; flex-wrap:wrap; gap:6px; padding:15px 0 4px; }
+.work-reading-nav button { border:1px solid var(--line); background:transparent; border-radius:3px; padding:6px 10px; color:var(--ink-2); font:inherit; font-size:12px; cursor:pointer; }
+.work-reading-nav button[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); background:#fff; }
+.work-reading blockquote { margin:14px 0 9px; color:var(--muted); font-family:var(--serif); line-height:1.9; }
+.work-reading p { margin:8px 0; line-height:1.95; }
+.work-reading details { margin-top:14px; border-top:1px solid var(--line); padding-top:12px; }
+.work-reading summary { cursor:pointer; color:var(--ink-2); }
+.work-reading dl { margin:12px 0; }
+.work-reading dt { color:var(--accent); font-weight:600; }
+.work-reading dd { margin:2px 0 12px; line-height:1.8; }
+.work-lines { display:flex; flex-direction:column; align-items:center; gap:.35em; }
+.work-line { appearance:none; border:0; background:transparent; color:inherit; font:inherit; line-height:inherit; text-align:center; cursor:pointer; padding:0 .2em; border-radius:4px; }
+.work-line:hover,.work-line:focus-visible { background:var(--accent-soft); outline:none; }
+.work-reading-hint { text-align:center; color:var(--muted); font-size:12px; margin:12px 0 0; }
+.work-reading-close { display:none; }
+.work-meta { margin:16px 0 8px; border-top:1px solid var(--line); padding-top:14px; }
+.work-meta summary { color:var(--ink-2); cursor:pointer; font-size:13px; }
+.work-meta .src { text-align:left; margin:12px 0; }
+.person-intro { padding:4px 0 23px; border-bottom:1px solid var(--line); }
+.person-intro .rt { margin:12px 0; }
+.person-paths { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:20px 0; }
+.person-path { display:block; padding:15px 16px; border:1px solid var(--line); background:#faf7f0; color:var(--ink); text-decoration:none; border-radius:4px; }
+.person-path strong { display:block; font-family:var(--serif); font-size:16px; font-weight:500; }
+.person-path span { display:block; color:var(--muted); font-size:12px; margin-top:5px; line-height:1.6; }
+.person-featured { display:grid; gap:0; border-top:1px solid var(--line); }
+.person-featured a { display:flex; justify-content:space-between; gap:12px; color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); padding:13px 2px; }
+.person-featured a:hover,.person-path:hover { color:var(--accent); }
+.person-featured small { color:var(--muted); white-space:nowrap; }
+.journey-work-link { display:inline-block; margin-top:8px; font-size:12px; color:var(--accent); }
+.journey-stop-work-wrap { margin-top:8px; }
+.journey-work-toggle-btn {
+  display:inline-flex; align-items:center; gap:6px;
+  background:rgba(168,56,36,.06); border:1px solid rgba(168,56,36,.25);
+  border-radius:4px; padding:4px 10px; font-size:12px; color:var(--accent);
+  cursor:pointer; font-family:inherit; transition:background .15s, border-color .15s;
+}
+.journey-work-toggle-btn:hover { background:rgba(168,56,36,.12); border-color:var(--accent); }
+.journey-work-toggle-btn .work-arrow { font-size:11px; color:var(--muted); margin-left:4px; }
+.journey-work-inline-body {
+  margin-top:10px; padding:14px 16px; background:var(--paper, #fff);
+  border:1px solid var(--line-2, #ddd); border-left:3px solid var(--accent);
+  border-radius:4px; font-size:13.5px; line-height:1.85; color:var(--ink);
+}
+.journey-work-inline-body .work-para { margin-bottom:8px; font-family:var(--serif); }
+.journey-work-inline-body .work-meaning { margin-top:10px; font-size:12.5px; color:var(--ink-2); background:var(--bg-soft, #f7f4ec); padding:8px 10px; border-radius:3px; }
+.journey-work-inline-body .work-actions { margin-top:10px; display:flex; gap:10px; }
+.person-topic-header { display:grid; grid-template-columns:minmax(0,1fr) minmax(160px,.36fr); gap:30px; padding:12px 0 28px; border-bottom:1px solid var(--line); }
+.person-topic-header h2 { margin:16px 0 12px; font:500 clamp(36px,5vw,56px)/1.2 var(--serif); letter-spacing:.16em; }
+.person-topic-header .person-subtitle { margin:0; font:14px/1.9 var(--serif); color:var(--ink-2); }
+.person-topic-side { border-left:1px solid var(--line); padding:4px 0 4px 24px; color:var(--muted); font-size:12px; line-height:1.9; }
+.person-topic-side strong { display:block; color:var(--ink); font:500 19px var(--serif); margin:4px 0 8px; }
+.person-story-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin:36px 0 16px; border-bottom:1px solid var(--line); padding-bottom:12px; }
+.person-story-head h3 { margin:0; font:500 21px var(--serif); letter-spacing:.1em; }.person-story-head a { color:var(--accent); font-size:12px; text-decoration:none; }
+.person-story-intro { color:var(--muted); font-size:12px; line-height:1.8; margin:0 0 16px; }
+.person-stop { display:grid; grid-template-columns:76px minmax(0,1fr); gap:16px; padding:18px 0; border-bottom:1px solid var(--line); }
+.person-stop-year { color:var(--muted); font-size:12px; padding-top:3px; }.person-stop-year strong { display:block; color:var(--ink); font:500 18px var(--serif); }
+.person-stop-title { display:flex; align-items:baseline; justify-content:space-between; gap:8px; }.person-stop-title h4 { margin:0; font:500 19px var(--serif); }.person-stop-title a { color:var(--accent); text-decoration:none; font-size:12px; white-space:nowrap; }
+.person-stop-quote { margin:12px 0 8px; color:var(--ink-2); font:15px/1.8 var(--serif); }.person-stop-source { color:var(--muted); font-size:11px; line-height:1.7; }
+.person-stop-source a { color:var(--accent); text-decoration:none; margin-left:8px; }
+/* 人物专题：以一条细线串联地点与文句，日期始终属于站点。 */
+.person-topic-header { position:relative; overflow:hidden; background:var(--paper); padding:30px 32px; border:1px solid var(--line); }
+.person-topic-header::after { content:'行止'; position:absolute; right:30px; bottom:-24px; font:500 100px/1 var(--serif); letter-spacing:.08em; color:var(--ink); opacity:.035; pointer-events:none; }
+.person-topic-header>div { position:relative; z-index:1; }
+.person-topic-header h2 { margin:18px 0 14px; }
+.person-topic-side { align-self:center; }
+.person-paths { margin:0; gap:0; border-bottom:1px solid var(--line); }
+.person-path { background:transparent; border:0; border-radius:0; padding:19px 4px; }
+.person-path+.person-path { border-left:1px solid var(--line); padding-left:24px; }
+.person-path:hover { background:transparent; }
+.person-story-head { margin-top:42px; }
+.person-stop { position:relative; grid-template-columns:90px minmax(0,1fr); gap:22px; padding:24px 0; }
+.person-stop::before { content:''; position:absolute; left:102px; top:0; bottom:0; width:1px; background:var(--line-2); }
+.person-stop::after { content:''; position:absolute; left:99px; top:31px; width:7px; height:7px; border-radius:50%; background:var(--accent); }
+.person-stop-year { text-align:right; padding-right:8px; }
+.person-stop-title h4 { font-size:23px; letter-spacing:.12em; }
+.person-stop-quote { margin:16px 0 12px; padding:12px 16px; border-left:2px solid var(--line-2); background:var(--paper); font-size:16px; }
+.person-stop-source { display:flex; flex-wrap:wrap; align-items:center; gap:4px 12px; }
+.person-stop-source a { margin-left:0; }
+@media(max-width:600px) {
+  .person-topic-header { padding:24px 20px; }.person-topic-header::after { font-size:72px; right:16px; bottom:-15px; }
+  .person-path+.person-path { padding-left:16px; }.person-stop { grid-template-columns:58px minmax(0,1fr); gap:18px; }
+  .person-stop::before { left:65px; }.person-stop::after { left:62px; }.person-stop-year { padding-right:6px; }
+  .person-stop-title h4 { font-size:20px; }.person-stop-quote { padding:10px 12px; font-size:15px; }
+}
+@media(max-width:600px) {
+  .main:not(.reading-active) > .list { max-height:260px; overflow:auto; }
+  .reader-tools { flex-wrap:wrap; } .work-heading { padding-top:4px; }
+  .work-reading { display:none; position:fixed; z-index:30; left:0; right:0; bottom:0; max-height:70dvh; overflow-y:auto; overscroll-behavior:contain; margin:0; padding:20px 20px calc(20px + env(safe-area-inset-bottom)); border:1px solid var(--line); border-bottom:0; border-radius:16px 16px 0 0; background:#faf7f0; box-shadow:0 -10px 35px rgba(45,35,25,.18); }
+  #poetry-reading-slot.is-open .work-reading { display:block; }
+  .work-reading-head { align-items:flex-start; flex-direction:column; gap:3px; padding-right:48px; }
+  .work-reading-close { display:block; position:absolute; top:16px; right:18px; background:transparent; border:0; color:var(--ink-2); font:inherit; cursor:pointer; padding:8px; }
+}
+
+/* 文献馆：以篇章、目录和留白组织整个阅读体验。 */
+:root { --paper:#f4f0e7; --paper-deep:#eae3d6; --study:#f7f2e9; --accent:#9e3627; --accent-soft:rgba(158,54,39,.09); --shadow:0 2px 16px rgba(57,43,29,.045); }
+@media (prefers-color-scheme:dark) { :root { --paper:#201e1a; --paper-deep:#29251f; --study:#29251f; --accent:#e08069; --accent-soft:rgba(224,128,105,.12); } }
+.container { max-width:1320px; padding-top:32px; }
+.masthead { margin-bottom:24px; padding-bottom:19px; border-bottom:1px solid var(--line); }
+.masthead-top { align-items:center; }
+.brand h1 { font-family:var(--serif); font-size:clamp(25px,3vw,35px); font-weight:600; letter-spacing:.12em; }
+.brand h1::after { display:none; }
+.subtitle { margin:8px 0 0; letter-spacing:.08em; }
+.research-entry { padding:7px 0; background:transparent; border:0; border-radius:0; }
+.research-entry:hover { background:transparent; }
+.home-hero { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(250px,.75fr); background:var(--paper); border:1px solid var(--line); min-height:300px; }
+.home-intro { padding:clamp(28px,4.8vw,64px); display:flex; flex-direction:column; justify-content:center; }
+.home-kicker,.home-section-label { color:var(--accent); font-size:11px; letter-spacing:.22em; }
+.home-intro h2 { margin:18px 0; font:500 clamp(28px,4vw,48px)/1.45 var(--serif); letter-spacing:.08em; }
+.home-intro p { color:var(--ink-2); max-width:35em; margin:0; line-height:2; }
+.home-topic { display:flex; flex-direction:column; justify-content:space-between; padding:32px; color:var(--ink); text-decoration:none; border-left:1px solid var(--line); background:var(--paper-deep); }
+.home-topic:hover { color:var(--accent); }
+.home-topic .topic-name { margin:24px 0 10px; font:500 clamp(26px,3.3vw,38px)/1.5 var(--serif); letter-spacing:.12em; }
+.home-topic p { margin:0; color:var(--ink-2); font-size:13px; line-height:1.9; }
+.home-topic .topic-link { margin-top:30px; font-size:13px; color:var(--accent); }
+.home-topic { position:relative; isolation:isolate; overflow:hidden; }
+.home-topic > div,.home-topic .topic-link { position:relative; z-index:1; }
+.home-topic-art { position:absolute!important; z-index:0!important; width:105%; height:73%; right:-9%; bottom:-2%; color:var(--muted); opacity:.25; pointer-events:none; }
+.home-topic-art path { fill:none; stroke:currentColor; stroke-width:1; vector-effect:non-scaling-stroke; }
+.home-topic-art .river { stroke:var(--accent); opacity:.65; }
+.home-topic .topic-link { display:inline-flex; align-items:center; gap:8px; width:max-content; border-bottom:1px solid var(--accent); padding-bottom:4px; }
+.home-intro h2 { text-wrap:balance; }
+/* 将首页组织为导读与馆藏索引，而非同权重的功能面板。 */
+.home-hero { grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr); min-height:390px; border:0; background:transparent; }
+.home-intro { position:relative; padding:clamp(32px,5vw,70px) clamp(28px,5vw,68px); background:var(--paper); }
+.home-intro::before { content:'卷  /  01'; position:absolute; top:24px; right:28px; color:var(--muted); font:11px var(--mono); letter-spacing:.16em; }
+.home-intro h2 { font-size:clamp(34px,4.5vw,56px); line-height:1.48; }
+.home-intro p { max-width:28em; }
+.home-topic { margin:22px 0 -22px -1px; padding:38px; border:0; background:var(--paper-deep); }
+.home-topic .topic-name { font-size:clamp(34px,4vw,52px); }
+.home-topic p { max-width:21em; }
+.home-section { margin-top:80px; }
+.home-section-heading { padding-bottom:16px; }
+.catalog { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.cat-card .idx { display:block; margin-bottom:25px; }
+.cat-card .desc { max-width:12em; }
+@media(max-width:600px) {
+ .home-hero { grid-template-columns:1fr; min-height:0; }.home-intro { padding:35px 24px 30px; }.home-intro::before { top:18px; right:18px; }
+ .home-intro h2 { font-size:32px; }.home-topic { margin:0 0 0 20px; padding:24px; min-height:210px; }.home-topic .topic-name { font-size:31px; }
+ .home-section { margin-top:45px; }.catalog { grid-template-columns:repeat(2,minmax(0,1fr)); }.cat-card .idx { margin-bottom:10px; }
+}
+.home-section { margin-top:46px; }
+.home-section-heading { display:flex; align-items:baseline; justify-content:space-between; gap:20px; border-bottom:1px solid var(--line-2); padding-bottom:13px; }
+.home-section-heading h2 { font:500 23px var(--serif); margin:0; letter-spacing:.12em; }
+.home-section-heading p { margin:0; font-size:12px; color:var(--muted); }
+.catalog { grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; margin:0; border-bottom:1px solid var(--line); }
+.cat-card { min-width:0; min-height:165px; background:transparent; border:0; border-right:1px solid var(--line); border-radius:0; box-shadow:none; padding:23px 18px 20px; }
+.cat-card:first-child { padding-left:0; }.cat-card:last-child { border-right:0; }
+.cat-card:hover { transform:none; background:var(--paper); }
+.cat-card::before { display:none; }
+.cat-card .name { font-family:var(--serif); font-size:22px; padding-right:0; }
+.cat-card .num { font-size:11px; top:23px; }
+.home-bottom { display:grid; grid-template-columns:1fr 1fr; gap:54px; }
+.picks { margin-top:40px; }.picks h2 { font-family:var(--serif); font-size:19px; color:var(--ink); letter-spacing:.08em; }
+.home-note { margin-top:40px; padding:22px; background:var(--paper); color:var(--ink-2); }
+.home-note h2 { font:500 19px var(--serif); margin:0 0 12px; }.home-note p { font-size:13px; line-height:2; margin:0; }
+.modes { gap:30px; margin-bottom:16px; }.modes button { font-size:15px; }
+.toolbar { padding:10px 12px; }.toolbar input[type=text] { border-radius:3px; }
+.panel { border-radius:4px; box-shadow:var(--shadow); }.main { grid-template-columns:310px minmax(0,1fr); gap:16px; margin-top:16px; }
+.main.reading-active { grid-template-columns:minmax(0,1fr); }
+.list { padding:8px 10px; }.item { border-radius:2px; border-bottom:1px solid var(--line); padding:12px 10px; }.item.on { box-shadow:inset 2px 0 0 var(--accent); }
+.reader { padding:40px clamp(25px,4vw,60px) 50px; }.work-reading,.person-path { background:var(--study); }
+.work-heading { padding-bottom:30px; }.work-body { padding:36px 0 18px; }.work-body .rc { max-width:36em; margin:auto; }
+.person-intro { padding:14px 0 28px; }.person-intro .rt { font-size:38px; }.person-path { padding:22px; }.person-featured a { padding:17px 2px; }
+.reader-tools button { border-radius:3px; }.work-reading-nav button { min-height:36px; }
+.corpus-title { padding:16px 0 23px; border-bottom:1px solid var(--line); }
+.corpus-title .work-eyebrow { margin-bottom:12px; }
+.corpus-title .rt { font-family:var(--serif); letter-spacing:.08em; font-weight:500; font-size:clamp(25px,3vw,34px); }
+.corpus-title .corpus-status { margin:10px 0 0; }
+.corpus-navigation { gap:7px; margin-bottom:12px; }
+.corpus-navigation button,.corpus-navigation select { border-radius:3px; min-height:36px; }
+.corpus-controls { margin:18px 0 34px; padding:9px 0; border-top:0; }
+.corpus-controls button { border-radius:3px; }
+.corpus-reading-layout { grid-template-columns:minmax(0,1fr) minmax(250px,.44fr); gap:clamp(30px,5vw,68px); }
+.corpus-prose { max-width:35em; color:var(--ink); line-height:2.15; }
+.corpus-page { margin-bottom:1.45em; }
+.corpus-paragraph-button { font-size:11px; padding:4px 7px; border-bottom:1px solid var(--line-2); }
+.corpus-study { padding:20px 22px; background:var(--study); border-left:2px solid var(--accent); }
+.corpus-study h3 { font-family:var(--serif); font-weight:500; }
+.corpus-provenance { border-top:1px solid var(--line); margin-top:25px; padding-top:16px; }
+@media(max-width:900px) { .main { grid-template-columns:1fr; } .catalog { grid-template-columns:repeat(3,minmax(0,1fr)); } .cat-card:nth-child(3) { border-right:0; } .reader { padding:28px 22px 38px; } }
+@media(max-width:600px) {
+  .container { padding:22px 16px 48px; }.masthead { margin-bottom:20px; }.brand h1 { font-size:25px; }
+  .research-entry { font-size:11px; }.subtitle { font-size:10px; }.masthead-top { gap:8px; }
+  .home-hero { grid-template-columns:1fr; }.home-intro { padding:30px 24px; }.home-intro h2 { font-size:30px; margin:13px 0; }
+  .home-topic { border-left:0; border-top:1px solid var(--line); padding:23px 24px; }.home-topic .topic-name { margin:10px 0 4px; font-size:25px; }.home-topic .topic-link { margin-top:13px; }
+  .home-section { margin-top:32px; }.home-section-heading { align-items:flex-start; flex-direction:column; gap:4px; }.catalog { grid-template-columns:repeat(2,minmax(0,1fr)); }.cat-card { min-height:140px; padding:18px 12px!important; border-bottom:1px solid var(--line); }.cat-card:nth-child(3) { border-right:1px solid var(--line); }.cat-card:nth-child(even) { border-right:0; }.cat-card .num { top:19px; font-size:11px; }
+  .home-bottom { grid-template-columns:1fr; gap:0; }.modes { gap:20px; overflow-x:auto; }.modes button { flex:none; }.toolbar { gap:7px; }.toolbar input[type=text] { flex-basis:100%; }.main { gap:12px; }.main:not(.reading-active) > .list { max-height:180px; }.reader { padding:24px 19px 34px; }.person-intro .rt { font-size:32px; }.person-path { padding:14px; }.work-body { padding:27px 0 13px; }.work-reading { background:var(--study); }
+  .corpus-title { padding:12px 0 18px; }.corpus-controls { margin-bottom:26px; }.corpus-reading-layout { display:block; }.corpus-study.is-open { max-height:65dvh; background:var(--study); padding:20px 20px max(20px,env(safe-area-inset-bottom)); }
+  .person-topic-header { grid-template-columns:1fr; gap:16px; }.person-topic-header h2 { font-size:40px; }.person-topic-side { border-left:0; border-top:1px solid var(--line); padding:12px 0 0; }.person-topic-side strong { display:inline; font-size:16px; margin-right:8px; }.person-stop { grid-template-columns:60px minmax(0,1fr); gap:10px; }.person-stop-title { align-items:flex-start; }.person-stop-title h4 { font-size:18px; }
+}
+
 /* 选中 */
+.modes { display:flex; gap:28px; align-items:center; overflow-x:auto; border-bottom:1px solid var(--line); margin:0 0 14px; padding:0 0 8px; scrollbar-width:thin; }
+.mode-group { display:flex; align-items:center; gap:5px; flex:none; }
+.mode-group + .mode-group { padding-left:24px; border-left:1px solid var(--line); }
+.mode-label { padding-right:9px; color:var(--muted); font-size:11px; white-space:nowrap; letter-spacing:.08em; }
+.modes button { padding:7px 12px; border-radius:3px; font-family:var(--sans); font-size:13px; letter-spacing:.05em; white-space:nowrap; }
+.modes button::after { display:none; }
+.modes button.on { background:var(--accent-soft); color:var(--accent); }
+/* 浮层使用克制的磨砂质感；不支持 backdrop-filter 时保留不透明底色。 */
+.modes { background:var(--surface); border:1px solid var(--line); border-radius:9px; padding:7px 10px; box-shadow:0 5px 18px rgba(45,35,25,.04); }
+.modes button.on { box-shadow:inset 0 1px 0 rgba(255,255,255,.32); }
+.reader-tools button { background:var(--paper); border-color:var(--line); box-shadow:3px 3px 7px rgba(64,48,29,.08),-2px -2px 6px rgba(255,255,255,.65); }
+.reader-tools button:active { box-shadow:inset 2px 2px 5px rgba(64,48,29,.12); }
+@media(prefers-color-scheme:dark) { .reader-tools button { box-shadow:3px 3px 7px rgba(0,0,0,.25),-2px -2px 6px rgba(255,255,255,.025); } }
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .modes { background:rgba(255,253,249,.74); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); }
+  @media(max-width:600px) { #poetry-reading-slot.is-open .work-reading { background:rgba(250,247,240,.94); -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); } }
+  @media(prefers-color-scheme:dark) {
+    .modes { background:rgba(30,27,23,.82); }
+    @media(max-width:600px) { #poetry-reading-slot.is-open .work-reading { background:rgba(35,31,26,.96); } }
+  }
+}
+#tool > .panel { border:0; background:transparent; box-shadow:none; }
+.toolbar { padding:0; gap:8px; }
+.toolbar input[type=text] { min-height:40px; background:var(--surface); border:1px solid var(--line); }
+@media(max-width:600px) { .modes { gap:16px; }.mode-group+.mode-group { padding-left:16px; }.mode-label { font-size:10px; }.modes button { padding:7px 9px; } }
+/* 中等屏幕仍保留目录与阅读区并列，避免目录占满整屏。 */
+@media (min-width:601px) and (max-width:900px) {
+  .main:not(.reading-active) { grid-template-columns:minmax(190px, .36fr) minmax(0, 1fr); align-items:start; }
+  .main:not(.reading-active) > .list { max-height:calc(100vh - 250px); overflow:auto; }
+  .list .item { display:flex; flex-direction:column; align-items:flex-start; gap:2px; }
+  .list .item .m { white-space:normal; line-height:1.5; }
+  .toolbar input[type=text] { flex:1 1 250px; min-width:0; }
+  .reader { min-width:0; }
+}
+#reader .person-path { background:transparent; border:0; border-radius:0; padding:19px 4px; }
+#reader .person-path+.person-path { border-left:1px solid var(--line); padding-left:24px; }
+.work-heading { position:relative; padding:20px 0 32px; }
+.work-heading .rt { font-family:var(--serif); font-weight:500; line-height:1.5; }
+.work-heading .ra a { text-decoration:none; border-bottom:1px solid var(--line-2); }
+.work-body { padding:42px 0 20px; }
+.work-lines { gap:.12em; }
+.work-line { transition:background .18s,color .18s; }
+.work-line[aria-pressed="true"] { background:var(--accent-soft); color:var(--accent); }
+.work-reading { position:relative; margin:30px auto; padding:24px 28px 28px; border-left:0; border-top:2px solid var(--accent); }
+.work-reading-head h3 { font-size:19px; letter-spacing:.1em; }
+.work-reading-nav { gap:0; padding:16px 0 5px; }
+.work-reading-nav button { border:0; border-bottom:1px solid var(--line-2); border-radius:0; background:transparent; }
+.work-reading-nav button[aria-pressed="true"] { background:transparent; border-bottom:2px solid var(--accent); color:var(--accent); }
+.work-reading blockquote { border-left:1px solid var(--line-2); padding-left:14px; }
+.work-reading p { font-size:15px; line-height:2; }
+.work-meta { max-width:680px; margin:18px auto; }
+.mobile-list-return { display:none; }
+/* 正文按阅读列左对齐，避免长句折行后留下居中的短尾。 */
+.work-heading { padding:8px 0 22px; }
+.work-heading .rt { margin:8px 0; }
+.work-body { padding:28px 0 12px; }
+.work-body .rc.work-lines { max-width:30em; width:fit-content; align-items:stretch; }
+.work-body .rc.work-verse { width:fit-content; max-width:min(100%,30em); margin-inline:auto; text-align:left; }
+.work-line { display:block; text-align:left; max-width:100%; padding:.04em .35em; }
+.work-phrase { display:inline-block; max-width:100%; vertical-align:top; }
+.work-reading { margin-top:20px; }
+@media(max-width:600px) {
+ .main.mobile-detail:not(.reading-active) > .list { display:none; }
+ .mobile-list-return { display:inline-flex; align-items:center; min-height:40px; padding:0 4px; margin:0 0 16px; border:0; background:transparent; color:var(--accent); font:13px var(--sans); cursor:pointer; }
+ .work-heading { padding:8px 0 20px; }.work-body { padding:24px 0 12px; }
+ .work-reading { position:fixed; margin:0; padding:22px 20px calc(22px + env(safe-area-inset-bottom)); border-top:1px solid var(--line); }
+ .work-reading::before { content:''; display:block; width:34px; height:3px; margin:-12px auto 16px; border-radius:4px; background:var(--line-2); }
+}
+@media(max-width:600px) { #reader .person-path+.person-path { padding-left:16px; } }
 ::selection { background: var(--accent-soft); color: var(--ink); }
 
 </style>
+<link rel="stylesheet" href="web/library-theme.css?v=20261106-3">
 </head>
 <body>
 <div class="container">
   <header class="masthead">
-    <div class="masthead-top"><a class="brand" href="#" id="brand"><h1>江山行止 · 文献</h1></a><a class="research-entry" href="research.html">考据笺 · 来源与研究 <span aria-hidden="true">→</span></a></div>
+    <div class="masthead-top"><a class="brand" href="#" id="brand"><h1>江山行止 · 文献</h1></a><div class="visual-controls"><label>视觉效果 <select data-motion-setting aria-label="选择视觉效果"><option value="full">完整</option><option value="gentle">柔和</option><option value="still">静态</option></select></label><a class="research-entry" href="research.html">考据笺 · 来源与研究 <span aria-hidden="true">→</span></a></div></div>
     <p class="subtitle" id="sub">作品 · 人物 · 行迹</p>
   </header>
 
   <section id="home"></section>
 
   <div id="tool" hidden>
-  <div class="modes">
-    <button data-mode="works" class="on">作品</button>
-    <button data-mode="persons">人物</button>
-    <button data-mode="journeys">行迹</button>
-    <button data-mode="authors">作者</button>
-    <button data-mode="texts">典籍</button>
-  </div>
+  <nav class="modes" aria-label="文献导航">
+    <div class="mode-group">
+      <button data-mode="works" class="on">作品</button>
+      <button data-mode="persons">人物</button>
+      <button data-mode="texts">典籍</button>
+      <button data-mode="journeys">行迹</button>
+    </div>
+  </nav>
 
   <div class="panel">
     <div class="toolbar">
       <input id="q" type="text" placeholder="搜索标题 / 作者 / 诗句，如：明月、苏轼、大江东去">
       <select id="f1"></select>
       <select id="f2"></select>
-      <button class="btn btn-primary" id="rand"><svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg>随机一首</button>
-      <button class="btn" id="daily"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>今日一首</button>
+      <button class="btn btn-primary" id="rand"><svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/></svg><span>随机一篇</span></button>
+      <button class="btn" id="daily"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>今日一篇</button>
       <span class="count" id="count"></span>
     </div>
   </div>
@@ -829,7 +1121,7 @@ function researchLink(type, key) { return 'research.html?type=' + encodeURICompo
 /* ── 启动 ── */
 (async function boot() {
   IDX = await loadData('/api/index', 'data/index.json');
-  $('#sub').textContent = `作品 ${IDX.works.length} · 人物 ${IDX.persons.length} · 行迹 ${IDX.journeys.length} · 每条叙述带出处`;
+  $('#sub').textContent = `作品 ${IDX.works.length} · 人物 ${IDX.persons.length} · 行迹 ${IDX.journeys.length} · 来源持续核查`;
   if (STATIC_ONLY) applyStaticMode();
   buildFilters();
   if (!STATIC_ONLY) loadCorpusStats();
@@ -858,7 +1150,7 @@ async function loadCorpusStats() {
     ]);
     CORPUS.juan = (t.items || []).reduce((n, b) => n + (b.juan || 0), 0);
     CORPUS.authors = a.total ?? null;
-    CORPUS.poems = 66968;
+    CORPUS.poems = (t.items || []).every(b => typeof b.poems === 'number') ? t.items.reduce((n,b) => n + b.poems, 0) : null;
     if (MODE === 'home') goHome();
   } catch (e) { /* 语料接口不可用时目录页仍显示策展数据 */ }
 }
@@ -869,6 +1161,7 @@ function applyStaticMode() {
     const b = document.querySelector('.modes button[data-mode="' + m + '"]');
     if (b) b.remove();
   });
+  document.querySelectorAll('.mode-group').forEach(group => { if (!group.querySelector('button')) group.remove(); });
   if (FULL_SITE) {
     const bar = document.createElement('div');
     bar.className = 'static-note';
@@ -881,6 +1174,7 @@ function applyStaticMode() {
 }
 
 function goHome() {
+  document.body.dataset.reading = 'false';
   MODE = 'home';
   CUR = null;
   $('#tool').hidden = true;
@@ -891,8 +1185,9 @@ function goHome() {
 }
 
 function showTool(mode) {
+  document.body.dataset.reading = 'true';
   MODE = mode;
-  $('.main').classList.remove('reading-active');
+  $('.main').classList.remove('reading-active', 'mobile-detail');
   $('#home').hidden = true;
   $('#tool').hidden = false;
   document.querySelectorAll('.modes button').forEach(b => b.classList.toggle('on', b.dataset.mode === mode));
@@ -903,30 +1198,20 @@ function showTool(mode) {
 }
 
 function renderHome() {
-  const academic = IDX.works.filter(w => w.level === 'academic');
-  const picks = [...IDX.works].sort((a, b) => (a.year || 0) - (b.year || 0)).slice(0, 6);
-  const stats = [
-    ['作品', IDX.works.length],
-    ['人物', IDX.persons.length],
-    ['行迹', IDX.journeys.length],
-  ].concat(STATIC_ONLY ? [] : [
-    ['语料·诗', CORPUS.poems ? CORPUS.poems.toLocaleString() : '—'],
-    ['语料·卷', CORPUS.juan ? CORPUS.juan.toLocaleString() : '—'],
-    ['作者', CORPUS.authors ? CORPUS.authors.toLocaleString() : '—'],
-  ]);
+  const picks = ['定风波', '春望', '水调歌头', '登高', '念奴娇', '饮湖上初晴后雨']
+    .map(key => IDX.works.find(w => w.key === key)).filter(Boolean);
   const cards = [
-    ['01', '作品', '有注疏的策展条目：正文、大意、注释、赏析、校记、系年', IDX.works.length, 'works'],
-    ['02', '人物', '生卒、字号、CBDB 仕历与语录', IDX.persons.length, 'persons'],
-    ['03', '行迹', '按年编排的站点，每站带引文与出处', IDX.journeys.length, 'journeys'],
-  ].concat(STATIC_ONLY ? [] : [
-    ['04', '作者', '按作者查找馆藏诗词，进入作品阅读', CORPUS.authors || 0, 'authors'],
-    ['05', '典籍', '按书、按卷阅读，可切换简体与原录', CORPUS.juan || 0, 'texts'],
-  ]);
+    ['01', '作品', '读诗文原文、译注与见证', `${IDX.works.length} 篇精选${STATIC_ONLY ? '' : ' · 7.8万首语料'}`, 'works'],
+    ['02', '人物', '生平仕历与馆藏作者', `${IDX.persons.length} 位人物${STATIC_ONLY ? '' : ' · 3,895位作者'}`, 'persons'],
+    ['03', '典籍', '按卷篇阅读通鉴、史记与古籍', CORPUS.juan ? `${CORPUS.juan.toLocaleString()} 卷篇` : '典籍原卷', 'texts'],
+    ['04', '行迹', '循时空行止阅读记述与地图', `${IDX.journeys.length} 条行迹`, 'journeys'],
+  ];
   $('#home').innerHTML = `
-    <p class="lede">在行迹停下的地方，把一句摘引展开成可读的文献。每条叙述都带出处；没有出处的，宁可不写。</p>
-    <div class="stats">
-      ${stats.map(([l, n]) => `<div class="stat"><span class="n">${n}</span><span class="l">${l}</span></div>`).join('')}
-    </div>
+    <section class="home-hero"><div class="home-intro"><div class="home-kicker">文 献 · 阅 读 · 行 迹</div>
+      <h2>读一首诗，<br>走进它的来处。</h2>
+      <p>从人物、作品与典籍出发，在文字里读见人生，也沿着行迹回到作品与史料。</p></div>
+      ${IDX.persons.some(p => p.key === 'sushi') ? `<a href="#/person/sushi" class="home-topic" data-open-person="sushi"><svg class="home-topic-art" viewBox="0 0 420 250" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path d="M-25 188 C30 160 60 174 104 142 S164 123 207 151 277 173 321 126 389 105 452 132"/><path d="M-25 204 C25 175 69 191 113 159 S170 142 213 169 278 191 326 144 390 124 452 151"/><path d="M-25 222 C30 194 78 207 121 177 S178 160 220 187 284 208 330 163 392 142 452 169"/><path class="river" d="M-20 240 C54 213 99 229 156 210 S250 181 311 209 388 229 449 200"/><path d="M265 90 C278 65 287 64 299 90 M279 90 V108"/></svg><div><div class="home-kicker">人物专题 · 阅读样板</div><div class="topic-name">苏轼</div><p>走近东坡的一生，循行迹读作品；来源与待核之处在阅读中展开。</p></div><span class="topic-link">进入人物专题 ↗</span></a>` : ''}</section>
+    <section class="home-section"><div class="home-section-heading"><h2>从这里开始</h2><p>依你喜欢的方式，进入文献</p></div>
     <div class="catalog">
       ${cards.map(([idx, name, desc, num, mode]) => `
         <a class="cat-card" href="#" data-enter="${mode}">
@@ -935,31 +1220,27 @@ function renderHome() {
           <div class="desc">${desc}</div>
           <div class="num">${num}</div>
         </a>`).join('')}
-    </div>
-    <div class="picks">
-      <h2>按年代读起</h2>
+    </div></section>
+    <div class="home-bottom"><div class="picks">
+      <h2>从馆藏中读起</h2>
       ${picks.map(w => {
         const p = IDX.persons.find(x => x.key === w.authorKey);
         return `<a class="pick-row" href="#" data-open-work="${esc(w.key)}">
-          <span class="y">${w.year ?? '?'}</span>
+          <span class="y">${esc(GENRE[w.genre] || w.genre)}</span>
           <span class="t">${esc(w.titleZh)}</span>
           <span class="a">${esc(p?.zh || '')}</span></a>`;
       }).join('')}
-    </div>
-    ${academic.length ? `<div class="picks"><h2>研读条目</h2>
-      ${academic.map(w => `<a class="pick-row" href="#" data-open-work="${esc(w.key)}">
-        <span class="y">${w.year ?? '?'}</span>
-        <span class="t">${esc(w.titleZh)}</span>
-        <span class="a">校记 ${w.apparatus || 0}</span></a>`).join('')}
-    </div>` : ''}`;
+    </div><aside class="home-note"><h2>关于这里的资料</h2><p>原文、译注和考证各有来源与状态。AI 生成的内容会标明尚未经人工审校；版本、系年和行迹中的疑问，保留待核。</p><p><a href="research.html">查看来源与研究 →</a></p></aside></div>`;
 }
 
 /* 目录页点击 */
 document.addEventListener('click', (e) => {
   const enter = e.target.closest('[data-enter]');
   const openW = e.target.closest('[data-open-work]');
+  const openP = e.target.closest('[data-open-person]');
   if (enter) { e.preventDefault(); showTool(enter.dataset.enter); }
   if (openW) { e.preventDefault(); showTool('works'); open('works', openW.dataset.openWork); }
+  if (openP) { e.preventDefault(); showTool('persons'); open('persons', openP.dataset.openPerson); }
 });
 
 /* ── 阅读进度 ── */
@@ -1002,6 +1283,12 @@ $('#daily').addEventListener('click', () => showDaily());
 /* ── 筛选器 ── */
 function buildFilters() {
   const f1 = $('#f1'), f2 = $('#f2');
+  const labels = {works:'随机一篇', persons:'随机人物', journeys:'随机行迹'};
+  const placeholders = {works:'搜索作品、作者或诗句', persons:'搜索人物', journeys:'搜索行迹', authors:'搜索作者', texts:'搜索典籍'};
+  $('#rand').hidden = !labels[MODE];
+  $('#daily').hidden = MODE !== 'works';
+  if (labels[MODE]) $('#rand span').textContent = labels[MODE];
+  $('#q').placeholder = placeholders[MODE] || '搜索';
   f1.innerHTML = ''; f2.innerHTML = '';
   if (MODE === 'works') {
     const dyn = {}; IDX.persons.forEach(p => { /* 朝代由人物推断，简化为按文体 */ });
@@ -1015,7 +1302,7 @@ function buildFilters() {
     f1.innerHTML = '<option value="all">全部典籍</option><option value="punctuated">已有标点</option>';
     f2.innerHTML = '<option value="readable">有标点优先</option><option value="all">按卷数排序</option>';
   } else if (MODE === 'persons') {
-    f1.innerHTML = '<option value="all">全部人物</option><option value="journey">有行迹</option><option value="nojourney">无行迹</option>';
+    f1.innerHTML = '<option value="all">精选人物（39位）</option><option value="journey">有行迹人物</option><option value="nojourney">无行迹人物</option>' + (STATIC_ONLY ? '' : '<option value="corpus">馆藏全部作者（3,895位）</option>');
     f2.innerHTML = '<option value="all">全部</option>';
   } else {
     f1.innerHTML = '<option value="all">全部行迹</option><option value="overlay">本仓库补录</option><option value="upstream">上游数据</option>';
@@ -1030,7 +1317,7 @@ function renderList() {
   const kw = KEYWORD.toLowerCase();
 
   // 语料模式走 API（数据在 PostgreSQL，不在静态 JSON 里）
-  if (MODE === 'authors' || MODE === 'texts') { renderApiList(); return; }
+  if (MODE === 'authors' || MODE === 'texts' || (MODE === 'persons' && a === 'corpus')) { renderApiList(); return; }
 
   if (MODE === 'works') {
     filtered = IDX.works.filter(w => {
@@ -1059,6 +1346,37 @@ function renderList() {
   // 正文检索：标题/作者没命中时，再到服务器查正文、注释、大意（静态版不支持）
   if (MODE === 'works' && KEYWORD && !STATIC_ONLY && filtered.length < 5) {
     searchBody(KEYWORD);
+  }
+  // 人物检索：精选人物未命中时，自动检索馆藏作者库
+  if (MODE === 'persons' && KEYWORD && !STATIC_ONLY && filtered.length === 0) {
+    searchCorpusAuthors(KEYWORD);
+  }
+}
+
+let AUTHOR_SEARCH_T = 0;
+async function searchCorpusAuthors(kw) {
+  const seq = ++AUTHOR_SEARCH_T;
+  const list = document.getElementById("list");
+  if (!list) return;
+  list.innerHTML = '<div class="empty">精选人物中未收录；正在馆藏作者库中查找…</div>';
+  try {
+    const r = await fetch('/api/corpus/authors?limit=50&q=' + encodeURIComponent(kw)).then(x => x.json());
+    if (seq !== AUTHOR_SEARCH_T || MODE !== 'persons') return;
+    const items = r.items || [];
+    if (!items.length) {
+      list.innerHTML = '<div class="empty">精选人物与馆藏作者库中均未找到匹配人物。</div>';
+      return;
+    }
+    $('#count').textContent = `馆藏作者 ${r.total ?? items.length} 位`;
+    list.innerHTML = items.map(a => `<div class="item" data-author-key="${esc(a.name)}">
+      <span class="t">${hi(a.name)}</span><span class="m">${a.poems} 首诗词 · 馆藏作者</span></div>`).join('');
+    list.querySelectorAll('.item').forEach(el => el.addEventListener('click', () => {
+      list.querySelectorAll('.item').forEach(x => x.classList.remove('on'));
+      el.classList.add('on');
+      openApi('authors', el.dataset.authorKey);
+    }));
+  } catch (_) {
+    if (seq === AUTHOR_SEARCH_T) list.innerHTML = '<div class="empty">语料库检索暂时不可用。</div>';
   }
 }
 
@@ -1134,21 +1452,23 @@ async function renderApiList() {
   list.innerHTML = '<div class="empty">载入中…</div>';
   try {
     let rows;
-    if (MODE === 'authors') {
+    const isAuthorList = MODE === 'authors' || (MODE === 'persons' && $('#f1').value === 'corpus');
+    if (isAuthorList) {
       const r = await fetch(`/api/corpus/authors?limit=300${kw ? '&q=' + kw : ''}`).then(x => x.json());
       rows = (r.items || []).map(a => ({ key: a.name, t: a.name, m: `${a.poems} 首` }));
-      $('#count').textContent = `作者 ${r.total ?? rows.length} 位`;
+      $('#count').textContent = `馆藏作者 ${r.total ?? rows.length} 位`;
     } else {
       const r = await fetch('/api/texts').then(x => x.json());
       let books = r.items || [];
-      if ($('#f1').value === 'punctuated') books = books.filter(b => b.punctuated_juan > 0);
-      if ($('#f2').value === 'readable') books = [...books].sort((a,b) => ((b.punctuated_juan || 0) / b.juan) - ((a.punctuated_juan || 0) / a.juan));
+      const readable = b => b.juan ? (b.punctuated_juan || 0) / b.juan : (b.punctuated_poems || 0) / Math.max(1,b.poems || 0);
+      if ($('#f1').value === 'punctuated') books = books.filter(b => b.punctuated_juan > 0 || b.punctuated_poems > 0);
+      if ($('#f2').value === 'readable') books = [...books].sort((a,b) => readable(b) - readable(a));
       else books = [...books].sort((a,b) => b.juan - a.juan);
       if (KEYWORD) books = books.filter(b => [b.title, b.title_simplified].some(t => (t || '').toLowerCase().includes(KEYWORD.toLowerCase())));
       rows = books.map(b => {
         const pj = b.punctuated_juan || 0;
         const note = pj === 0 ? ' · 无标点' : (pj >= b.juan ? ' · 标点本' : ` · 标点 ${pj}/${b.juan}`);
-        return { key: String(b.id), t: b.title_simplified || b.title, m: `${b.juan} 卷篇单元 · ${Math.round((b.chars || 0) / 10000)} 万字${note}` };
+        return { key: String(b.id), t: b.title_simplified || b.title, m: b.juan ? `${b.juan} 卷篇单元 · ${Math.round((b.chars || 0) / 10000)} 万字${note}` : `${(b.poems || 0).toLocaleString()} 条诗词记录 · 来源与覆盖待核` };
       });
       $('#count').textContent = `典籍 ${r.total ?? rows.length} 部`;
     }
@@ -1158,7 +1478,7 @@ async function renderApiList() {
     list.querySelectorAll('.item').forEach(el => el.addEventListener('click', () => {
       list.querySelectorAll('.item').forEach(x => x.classList.remove('on'));
       el.classList.add('on');
-      openApi(MODE, el.dataset.key);
+      openApi(isAuthorList ? 'authors' : MODE, el.dataset.key);
     }));
   } catch (e) {
     list.innerHTML = '<div class="empty">接口不可用：语料库未连接</div>';
@@ -1166,7 +1486,7 @@ async function renderApiList() {
   }
 }
 
-async function openApi(mode, key) {
+async function openApi(mode, key, poemOffset = 0, poemQuery = '') {
   $('.main').classList.remove('reading-active');
   const el = $('#reader');
   el.innerHTML = '<p class="empty">载入中…</p>';
@@ -1182,10 +1502,25 @@ async function openApi(mode, key) {
             <div class="src">${esc((p.head || '').replace(/\n/g, ' '))}</div></td></tr>`).join('')}</table>
         ${r.total > (r.items || []).length ? `<p class="src">另有 ${r.total - r.items.length} 首未列出</p>` : ''}`;
     } else {
-      const r = await fetch(`/api/texts/${key}`).then(x => x.json());
+      const response = await fetch(`/api/texts/${key}?offset=${poemOffset}&q=${encodeURIComponent(poemQuery)}`);
+      if (!response.ok) throw new Error('书目读取失败');
+      const r = await response.json();
       const b = r.book || {};
       corpusCatalogs.set(String(key), r.juan || []);
       const edition = (b.corpusEditions || [])[0];
+      if (r.poems) {
+        corpusPoetryPages.set(String(key), {offset:r.poemOffset, query:r.poemQuery});
+        el.innerHTML = `<h2 class="rt">${esc(b.title || '')}</h2>
+          <div class="ra">${esc(edition?.name || b.edition || '来源待补')} · ${r.poemTotal.toLocaleString()} 条匹配记录</div>
+          <div class="corpus-status">电子汇编，底本、文字及归属待核；记录数不代表独立作品数或全书完整。</div>
+          <form class="corpus-navigation" data-poem-search-book="${esc(key)}"><input name="q" aria-label="在本书检索作者、词牌或正文" placeholder="作者、词牌或正文" value="${esc(r.poemQuery || '')}" style="flex:1;min-width:100px;padding:8px"><button type="submit">查找</button></form>
+          <table>${r.poems.map(p => `<tr><td class="muted">${esc(p.author)}</td><td><a href="#" data-poem="${p.id}">${esc(p.title)}</a><div class="src">${esc(p.head)}</div></td></tr>`).join('')}</table>
+          <div class="corpus-navigation">${r.poemOffset > 0 ? `<button data-poem-page="${esc(key)}" data-offset="${Math.max(0,r.poemOffset-r.poemLimit)}" data-query="${esc(r.poemQuery)}">上一页</button>` : ''}
+          <span class="src">${r.poemTotal ? r.poemOffset+1 : 0}–${r.poemOffset+r.poems.length} / ${r.poemTotal}</span>
+          ${r.poemOffset+r.poems.length < r.poemTotal ? `<button data-poem-page="${esc(key)}" data-offset="${r.poemOffset+r.poemLimit}" data-query="${esc(r.poemQuery)}">下一页</button>` : ''}</div>
+          <details class="corpus-provenance"><summary>版本、收录范围与来源</summary>${(b.corpusBatches || []).map(batch => corpusSourceNote(batch.provenance)).join('') || '<p>既有语料来源信息待补，不追认具体底本。</p>'}</details>`;
+        return;
+      }
       el.innerHTML = `<h2 class="rt">${esc(b.title || '')}</h2>
         <div class="ra">${esc(b.edition || edition?.name || '')} · ${r.total} 个卷篇单元</div>
         <details class="corpus-provenance"><summary>版本、收录范围与来源</summary>
@@ -1206,18 +1541,37 @@ async function openApi(mode, key) {
 async function openPoem(id) {
   const el = $('#reader');
   el.innerHTML = '<p class="empty">载入中…</p>';
-  const p = await fetch(`/api/corpus/poems/${id}`).then(x => x.json());
+  const response = await fetch(`/api/corpus/poems/${id}`);
+  if (!response.ok) { el.innerHTML = '<p class="empty">这首暂时无法读取。</p>'; return; }
+  const p = await response.json();
   const body = p.body_simplified || p.body || '';
-  el.innerHTML = `<h2 class="rt">${esc(p.title || '')}</h2>
+  const metadata = p.origin?.metadata || {};
+  const previousPage = corpusPoetryPages.get(String(p.book_id)) || {offset:0, query:''};
+  $('.main').classList.add('reading-active');
+  el.innerHTML = `<div class="corpus-navigation"><button data-poem-page="${p.book_id}" data-offset="${previousPage.offset}" data-query="${esc(previousPage.query)}">返回本书</button></div><h2 class="rt">${esc(p.title || '')}</h2>
     <div class="ra">${esc(p.author_simplified || p.author || '')}${p.book ? ' · 《' + esc(p.book) + '》' : ''}</div>
-    <div class="rc">${esc(body)}</div>
-    <div class="bh">繁体原文</div>
-    <div class="rc" style="font-size:16px">${esc(p.body || '')}</div>`;
+    <div class="corpus-status">${p.origin ? '转录待校 · 词牌据来源，篇题与归属待核 · 简体阅读为机器转换' : '既有语料 · 来源与转换方法待补'}${metadata.unresolvedReplacementOffsets?.length ? ' · 来源含未释替换字符，以□提示' : ''}${(p.body || '').includes('□') ? ' · 来源含方框字符，待核' : ''}</div>
+    <div class="rc">${esc(body).replace(/\uFFFD/g, '<span title="来源含替换字符，未猜补">□</span>')}</div>
+    <div class="reader-tools"><button data-copy-reading>复制阅读文字</button><button data-copyraw data-copy-label="复制原录">复制原录</button><button data-print>打印</button></div><div id="poem-links-slot"></div>
+    ${metadata.prologue || metadata.tags?.length ? `<details class="corpus-provenance"><summary>来源附带序文与标签（归属待核）</summary>${metadata.prologue ? `<div class="rc left">${esc(metadata.prologue)}</div>` : ''}${metadata.tags?.length ? `<p>${metadata.tags.map(esc).join(' · ')}</p>` : ''}<p class="src">原字段保留，不视为已核解释、古人评点或事实分类。</p></details>` : ''}
+    <details class="corpus-provenance"><summary>来源原文与版本</summary><div class="rc left">${esc(p.body || '')}</div>
+      ${p.origin ? corpusSourceNote(p.origin.provenance) : '<p>来源待补；原文未必为繁体。</p>'}
+      ${(metadata.locations || []).map(l => `<p class="src">${/^https:\/\//.test(l.url || '') ? `<a class="tag" href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${esc(l.path)} ↗</a>` : esc(l.path)} · JSON位置 ${esc(l.jsonPointer)} · SHA-256 ${esc(l.sourceSha256)}</p>`).join('')}
+      ${metadata.locations?.length > 1 ? '<p class="src">完全相同源记录的多个位置合并展示；不代表独立佐证。</p>' : ''}</details>`;
+  corpusCopyText.set(el.querySelector('[data-copyraw]'), p.body || '');
+  corpusCopyText.set(el.querySelector('[data-copy-reading]'), body.replace(/\uFFFD/g, '□'));
+  const linkSlot=el.querySelector('#poem-links-slot');
+  fetch(`/api/corpus/poems/${p.id}/links`).then(r => r.ok ? r.json() : null).then(data => {
+    if (!linkSlot.isConnected || !data?.items?.length) return;
+    linkSlot.innerHTML=data.items.map(x => `<div class="note"><div class="k">候选关联 · 未经人工审校</div><p>${esc(x.differences)}</p><a class="tag acc" href="#" data-work="${esc(x.workKey)}">查看作品译注与赏析 · ${esc(x.title)} →</a></div>`).join('');
+  }).catch(() => {});
   el.scrollTop = 0;
+  if (matchMedia('(max-width:900px)').matches) el.scrollIntoView({block:'start'});
 }
 
 const corpusCopyText = new WeakMap();
 const corpusCatalogs = new Map();
+const corpusPoetryPages = new Map();
 function corpusVolumeLabel(unit) {
   const name = String(unit.juan ?? '');
   if (/^KR[0-9A-Za-z]+_\d+(?:\.txt)?$/.test(name)) return '卷次待核';
@@ -1234,6 +1588,7 @@ function corpusReadingHeading(unit) {
 }
 const corpusReadingPrefs = { script:'simplified', notes:false, size:20 };
 let currentCorpusUnit = null;
+let currentStudyParagraph = null;
 try {
   const saved = JSON.parse(localStorage.getItem('corpus-reading') || '{}');
   if (['simplified','original','raw'].includes(saved.script)) corpusReadingPrefs.script = saved.script;
@@ -1263,6 +1618,7 @@ async function openJuan(id) {
   if (!response.ok) { $('.main').classList.remove('reading-active'); el.innerHTML = '<p class="empty">这卷暂时无法读取，请稍后重试。</p>'; return; }
   const j = await response.json();
   currentCorpusUnit = j;
+  currentStudyParagraph = null;
   $('.main').classList.add('reading-active');
   renderCorpusReading(j);
   el.scrollTop = 0;
@@ -1288,7 +1644,7 @@ function renderCorpusReading(j) {
   const body = script === 'raw' ? `<div class="corpus-original">${esc(j.body || '')}</div>` : readingPages.map(p => {
     const content = p.segments.length ? p.segments.map(s => `<span${s.kind === 'parenthetical' ? ' class="corpus-parenthetical"' : ''}>${segmentHtml(s)}</span>`).join('') : '<span class="corpus-empty-page">此电子页暂无转录文字，待核。</span>';
     const tag = p.headingLevel >= 3 ? 'h4' : 'h3';
-    return p.kind === 'heading' ? `<${tag} class="corpus-heading" data-source-level="${esc(p.headingLevel || '')}" id="corpus-page-${p.seq}">${content}</${tag}>` : `<div class="corpus-page" id="corpus-page-${p.seq}">${content}</div>`;
+    return p.kind === 'heading' ? `<${tag} class="corpus-heading" data-source-level="${esc(p.headingLevel || '')}" id="corpus-page-${p.seq}">${content}</${tag}>` : `<div class="corpus-page${currentStudyParagraph === p.paragraphId ? ' is-current' : ''}" id="corpus-page-${p.seq}" data-paragraph-id="${esc(p.paragraphId || '')}">${content}${p.paragraphId ? `<button class="corpus-paragraph-button" data-study-paragraph="${p.paragraphId}" aria-label="查看第 ${p.seq} 段译注">译注</button>` : ''}</div>`;
   }).join('');
   const status = [located ? '转录待校' : '来源转录', j.punctuated ? '已有标点' : '未标点', script === 'simplified' ? '简体为机器转换' : script === 'raw' ? '原录字形与换行' : '原字阅读排版'];
   if (j.preview === true) status.unshift('解析预览·未写入正式库');
@@ -1296,13 +1652,38 @@ function renderCorpusReading(j) {
   if (j.origin?.metadata?.unresolvedGlyphTokens?.length) status.push(script === 'raw' ? '含未释字标记' : '未释字以□显示');
   if (j.origin?.metadata?.kind === 'edition-examination') status.push('本版考证');
   if (script !== 'raw') status.push('阅读排版');
+  const heading = corpusReadingHeading(j) || '';
+  const bookName = j.book || '';
+  const relatedWorks = (IDX.works || []).filter(w => {
+    if (!bookName) return false;
+    const cleanTitle = w.titleZh.replace(/[\s·]/g, '');
+    const cleanBook = bookName.replace(/[\s·]/g, '');
+    const cleanHeading = heading.replace(/[\s·]/g, '');
+    const inTitle = cleanTitle.includes(cleanBook) && cleanHeading && cleanTitle.includes(cleanHeading);
+    const inAliases = (w.aliases || []).some(a => a.includes(cleanBook) && (!cleanHeading || a.includes(cleanHeading)));
+    const inCitation = w.citation && w.citation.includes(cleanBook) && cleanHeading && w.citation.includes(cleanHeading);
+    return inTitle || inAliases || inCitation;
+  });
+
   el.innerHTML = `<div class="corpus-navigation">
       <button data-corpus-book="${esc(j.book_id || '')}">返回卷目</button>
       ${prev ? `<button data-juan="${prev.id}" title="${esc(corpusVolumeLabel(prev))}">上一篇</button>` : ''}
       ${catalog.length ? `<select data-corpus-select aria-label="切换卷篇">${catalog.map(u => `<option value="${u.id}"${u.id === j.id ? ' selected' : ''}>${esc(corpusVolumeLabel(u))}</option>`).join('')}</select>` : ''}
       ${next ? `<button data-juan="${next.id}" title="${esc(corpusVolumeLabel(next))}">下一篇</button>` : ''}
-    </div><h2 class="rt">${esc(j.book || '')} · ${esc(corpusReadingHeading(j))}</h2>
-    <div class="corpus-status">${status.map(esc).join(' · ')}</div>
+    </div><header class="corpus-title"><div class="work-eyebrow">典籍 · 卷篇阅读</div><h2 class="rt">${esc(j.book || '')} · ${esc(heading)}</h2>
+    <div class="corpus-status">${status.map(esc).join(' · ')}</div></header>
+    ${relatedWorks.length ? `
+    <div class="note" style="margin:12px 0 16px;background:var(--bg-soft);border:1px solid var(--accent);border-radius:6px;padding:10px 14px">
+      <div style="font-weight:600;font-size:12.5px;color:var(--accent);display:flex;align-items:center;gap:6px">
+        <span>📌 本卷篇目已有精选研读与行迹考证</span>
+      </div>
+      <p style="margin:4px 0 8px;font-size:13px;line-height:1.6;color:var(--ink)">
+        当前卷篇在江山行止中已整理详细大意、注释、校记与地理行迹：
+      </p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        ${relatedWorks.map(rw => `<a class="tag acc" href="#/work/${encodeURIComponent(rw.key)}" data-work="${esc(rw.key)}">${esc(rw.titleZh)} · 研读与行迹 ↗</a>`).join('')}
+      </div>
+    </div>` : ''}
     ${j.origin?.metadata?.boundaryNote ? '<div class="corpus-status">原录组件边界待核，详见下方出处说明。</div>' : ''}
     <div class="corpus-controls" role="group" aria-label="阅读方式">
       ${[['simplified','简体阅读'],['original','原字阅读'],['raw','原录']].map(([v,l]) => `<button data-corpus-script="${v}" aria-pressed="${script === v}"${v === 'simplified' && !simplified ? ' disabled' : ''}>${l}</button>`).join('')}
@@ -1310,7 +1691,7 @@ function renderCorpusReading(j) {
       <span class="size-control"><button data-corpus-size="-2" aria-label="缩小字号">A−</button><button data-corpus-size="2" aria-label="增大字号">A＋</button></span>
     </div>
     ${hasNotes && !corpusReadingPrefs.notes && script !== 'raw' ? `<div class="corpus-status">${wikiNotes ? '维基编者注独立保存，注者待核；可展开阅读，不视为古人评点。' : '已收起原录括号内文字，可随时展开。'}</div>` : ''}
-    <div class="corpus-prose${corpusReadingPrefs.notes ? '' : ' hide-notes'}" style="font-size:${corpusReadingPrefs.size}px">${body}</div>
+    <div class="corpus-reading-layout"><div class="corpus-prose${corpusReadingPrefs.notes ? '' : ' hide-notes'}" style="font-size:${corpusReadingPrefs.size}px">${body}</div><aside class="corpus-study" aria-live="polite" aria-label="段落译注"><div class="corpus-study-kicker">研读 · 译注</div><h3>与原文同行</h3><p>选中一句或点击段旁“译注”，查看所在段落的译文与注释。</p><small>译注尚未整理的段落会显示“待补”。</small></aside></div>
     <div class="reader-tools"><button data-copy-reading>复制当前文字</button><button data-copyraw="1" data-copy-label="复制原录">复制原录</button><button data-print="1">打印</button></div>
     <details class="corpus-provenance"><summary>版本、出处与原录说明</summary>
       <p class="src">原目录标识：${esc(j.juan || '未记录')}</p>
@@ -1325,9 +1706,49 @@ function renderCorpusReading(j) {
     </details>`;
   corpusCopyText.set(el.querySelector('[data-copyraw]'), j.body ?? pages.map(p => p.body).join('\n'));
   corpusCopyText.set(el.querySelector('[data-copy-reading]'), plain);
+  if (currentStudyParagraph) showCorpusStudy(currentStudyParagraph);
 }
 
+function showCorpusStudy(id, selectedText = '') {
+  const el = $('#reader'), panel = el.querySelector('.corpus-study');
+  const page = currentCorpusUnit?.reading?.pages?.find(p => p.paragraphId === Number(id));
+  if (!panel || !page || page.kind === 'heading') return;
+  currentStudyParagraph = page.paragraphId;
+  panel.classList.add('is-open');
+  el.querySelectorAll('.corpus-page.is-current').forEach(node => node.classList.remove('is-current'));
+  el.querySelector(`[data-paragraph-id="${page.paragraphId}"]`)?.classList.add('is-current');
+  const item = page.explanation;
+  panel.innerHTML = `<button class="corpus-study-close" data-study-close aria-label="关闭译注">关闭 ×</button><div class="corpus-study-kicker">第 ${esc(page.seq)} 段 · 研读</div><h3>段落译注</h3>${item ?
+    `<small>${esc(item.aiLabel)}</small><h4>译文</h4><p>${esc(item.translation)}</p>${item.notes?.length ? `<h4>注释</h4><ol>${item.notes.map(n => `<li${selectedText && [n.quote,n.quoteSimplified].filter(Boolean).some(q => selectedText.includes(q) || q.includes(selectedText)) ? ' class="is-related"' : ''}><b>${esc(n.quote)}</b>　${esc(n.explanation)}</li>`).join('')}</ol>` : ''}<small>依据本段来源原字；译注未经过人工审校。</small>` : '<p>译注待补</p><small>正文可以继续阅读；本段尚无可展示的译注。</small>'}<p><a class="tag" href="https://github.com/lz1219/poem-data/issues/new?title=${encodeURIComponent('译注反馈 · '+(currentCorpusUnit.book || '')+' · '+corpusReadingHeading(currentCorpusUnit)+' · 段'+page.paragraphId)}" target="_blank" rel="noopener noreferrer">反馈这一段 ↗</a></p>`;
+}
+
+document.addEventListener('mouseup', () => {
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || !selection.toString().trim()) return;
+  const parent = node => (node?.nodeType === Node.ELEMENT_NODE ? node : node?.parentElement)?.closest('.corpus-page[data-paragraph-id]');
+  const start = parent(selection.anchorNode), end = parent(selection.focusNode);
+  if (start && start === end && start.dataset.paragraphId) showCorpusStudy(start.dataset.paragraphId, selection.toString().trim());
+});
+
 document.addEventListener('click', async e => {
+  if (e.target.closest('[data-study-close]')) { currentStudyParagraph = null; const panel = e.target.closest('.corpus-study'); panel.classList.remove('is-open'); panel.innerHTML = '<div class="corpus-study-kicker">研读 · 译注</div><h3>与原文同行</h3><p>选中一句或点击段旁“译注”，查看所在段落的译文与注释。</p>'; $('#reader .corpus-page.is-current')?.classList.remove('is-current'); return; }
+  const linked = e.target.closest('[data-linked-work]');
+  if (linked) {
+    const key=linked.dataset.linkedWork, slot=$('#linked-work-slot');
+    slot.textContent='正在查找关联…';
+    try {
+      const response=await fetch('/api/works/'+encodeURIComponent(key)+'/links');
+      if (!response.ok) throw new Error();
+      const result=await response.json();
+      if (CUR?.key !== key || CUR?.mode !== 'works') return;
+      slot.innerHTML=result.items?.length ? result.items.map(x => `<div class="note"><div class="k">候选关联 · 未经人工审校</div><p>${esc(x.differences)}</p><a class="tag acc" href="#" data-poem="${x.poemId}">阅读另一文本见证 →</a> ${x.stops.map(s => `<a class="tag" href="#" data-jump="${esc(s.journeyKey)}">查看引用此作的行迹 →</a>`).join('')}</div>`).join('') : '<p class="src">暂无可展示的关联，或关联所据文本已变化，待重新核查。</p>';
+    } catch (_) { if (CUR?.key===key) slot.textContent='关联暂时无法读取。'; }
+    return;
+  }
+  const study = e.target.closest('[data-study-paragraph]');
+  if (study) { showCorpusStudy(study.dataset.studyParagraph); return; }
+  const poemPage = e.target.closest('[data-poem-page]');
+  if (poemPage) { openApi('texts', poemPage.dataset.poemPage, Number(poemPage.dataset.offset), poemPage.dataset.query); return; }
   const book = e.target.closest('[data-corpus-book]');
   if (book) { openApi('texts', book.dataset.corpusBook); return; }
   const script = e.target.closest('[data-corpus-script]'), notes = e.target.closest('[data-corpus-notes]'), size = e.target.closest('[data-corpus-size]');
@@ -1349,6 +1770,11 @@ document.addEventListener('click', async e => {
     catch (_) { copy.textContent = '复制失败，请手动选择'; }
     setTimeout(() => { copy.textContent = '复制当前文字'; }, 1600);
   }
+});
+
+document.addEventListener('submit', e => {
+  const form = e.target.closest('[data-poem-search-book]');
+  if (form) { e.preventDefault(); openApi('texts', form.dataset.poemSearchBook, 0, new FormData(form).get('q') || ''); }
 });
 document.addEventListener('change', e => {
   if (e.target.matches('[data-corpus-select]')) openJuan(e.target.value);
@@ -1428,6 +1854,44 @@ document.addEventListener('click', async (e) => {
     return;
   }
 
+  const corpusAuthorBtn = e.target.closest('[data-author-corpus]');
+  if (corpusAuthorBtn) {
+    const author = corpusAuthorBtn.getAttribute('data-author-corpus');
+    const slot = document.getElementById('author-corpus-slot');
+    if (!slot) return;
+    if (slot.dataset.open === author) { slot.innerHTML = ''; slot.dataset.open = ''; return; }
+    if (STATIC_ONLY) {
+      slot.innerHTML = '<p class="empty">馆藏全部语料需在完整接口服务中查看。</p>';
+      return;
+    }
+    slot.innerHTML = '<p class="empty">正在获取语料库作品列表…</p>';
+    try {
+      const r = await fetch('/api/corpus/authors/' + encodeURIComponent(author) + '?limit=100').then(x => x.json());
+      if (!r.items || !r.items.length) {
+        slot.innerHTML = '<p class="empty">语料库中暂无该作者作品收录。</p>';
+        return;
+      }
+      slot.innerHTML =
+        '<div class="compare">' +
+        '<div class="compare-head"><span>语料库收录诗词 · 共 ' + r.total + ' 首（展示前 ' + r.items.length + ' 首）</span><button data-close-author-corpus="1">收起</button></div>' +
+        '<table>' +
+        r.items.map(p => '<tr><td style="width:140px"><a href="#" data-poem="' + p.id + '">' + esc(p.title) + '</a></td><td class="src">' + esc((p.head || '').replace(/\n/g, ' ')) + '</td></tr>').join('') +
+        '</table>' +
+        (r.total > r.items.length ? '<p class="src" style="margin-top:8px">另有 ' + (r.total - r.items.length) + ' 首，可通过馆藏检索-作者页查看完整目录。</p>' : '') +
+        '</div>';
+      slot.dataset.open = author;
+    } catch (_) {
+      slot.innerHTML = '<p class="empty">语料接口不可用。</p>';
+    }
+    return;
+  }
+
+  if (e.target.closest('[data-close-author-corpus]')) {
+    const slot = document.getElementById('author-corpus-slot');
+    if (slot) { slot.innerHTML = ''; slot.dataset.open = ''; }
+    return;
+  }
+
   const cmpBtn = e.target.closest('[data-compare]');
   if (cmpBtn) {
     const key = cmpBtn.getAttribute('data-compare');
@@ -1438,15 +1902,16 @@ document.addEventListener('click', async (e) => {
     try {
       const r = await fetch('/api/works/' + encodeURIComponent(key) + '/corpus').then((x) => x.json());
       if (!r.matches || !r.matches.length) {
-        slot.innerHTML = '<p class="empty">语料库中未找到同题文本。</p>';
+        slot.innerHTML = '<p class="empty">未找到首句对应的候选文本，可能存在异文或尚未收录。</p>';
         return;
       }
       const m = r.matches[0];
       const body = (m.body_simplified || m.body || '').trim();
       slot.innerHTML =
         '<div class="compare">' +
-        '<div class="compare-head"><span>语料库原文 · 对照</span><button data-close-compare="1">收起</button></div>' +
-        '<div class="compare-meta">' + (m.author || '') + '《' + (m.title_raw || m.title || '') + '》</div>' +
+        '<div class="compare-head"><span>语料库候选对照 · 未经人工审校</span><button data-close-compare="1">收起</button></div>' +
+        '<div class="compare-meta">' + (m.author || '') + '《' + (m.title_raw || m.title || '') + '》' +
+        (m.id ? ' &nbsp;·&nbsp; <a class="tag acc" href="#" data-poem="' + m.id + '">进入此版本见证详情与原卷 ↗</a>' : '') + '</div>' +
         '<div class="compare-body">' + body.replace(/[<>&]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c])) + '</div>' +
         '</div>';
       slot.dataset.open = key;
@@ -1486,6 +1951,50 @@ document.addEventListener('click', async (e) => {
     return;
   }
 
+  const tw = e.target.closest('[data-toggle-work]');
+  if (tw) {
+    e.preventDefault();
+    const workKey = tw.dataset.toggleWork;
+    const box = tw.closest('.journey-stop-work-wrap');
+    if (!box) return;
+    const body = box.querySelector('.journey-work-inline-body');
+    if (!body) return;
+    const isOpen = body.style.display !== 'none';
+    if (isOpen) {
+      body.style.display = 'none';
+      tw.setAttribute('aria-expanded', 'false');
+      const arrow = tw.querySelector('.work-arrow');
+      if (arrow) arrow.textContent = '▾ 展开研读';
+      return;
+    }
+    body.style.display = 'block';
+    tw.setAttribute('aria-expanded', 'true');
+    const arrow = tw.querySelector('.work-arrow');
+    if (arrow) arrow.textContent = '▴ 收起';
+    if (body.dataset.loaded !== '1') {
+      body.innerHTML = '<div style="font-size:12px;color:var(--muted)">正在加载作品《' + esc(workKey) + '》全文及笺注…</div>';
+      try {
+        const w = await loadData('/api/works/' + encodeURIComponent(workKey), 'data/works/' + encodeURIComponent(workKey) + '.json');
+        const paras = (w.text && (w.text.paragraphsSimplified || w.text.paragraphs)) || [];
+        const paraHtml = paras.map(p => '<div class="work-para">' + esc(p) + '</div>').join('');
+        const meaningHtml = w.meaning ? '<div class="work-meaning"><strong>大意：</strong>' + esc(w.meaning) + '</div>' : '';
+        const notesHtml = (w.notes && w.notes.length) ? '<div style="margin-top:8px;font-size:12px;color:var(--muted)"><strong>笺注：</strong>' + w.notes.slice(0, 3).map(n => esc(n.term) + '（' + esc(n.explain) + '）').join('； ') + '</div>' : '';
+        const citationHtml = w.citation ? '<div style="margin-top:6px;font-size:11px;color:var(--muted)">出处：' + esc(w.citation) + '</div>' : '';
+        body.innerHTML =
+          '<div style="font-weight:600;margin-bottom:8px;font-family:var(--serif);font-size:15px;color:var(--ink);">' + esc(w.titleZh || w.key) + '</div>' +
+          paraHtml +
+          meaningHtml +
+          notesHtml +
+          citationHtml +
+          '<div class="work-actions" style="margin-top:10px;"><a class="tag acc" href="#/work/' + encodeURIComponent(workKey) + '" data-work="' + esc(workKey) + '">在作品库中研读全篇与多版本见证 →</a></div>';
+        body.dataset.loaded = '1';
+      } catch (err) {
+        body.innerHTML = '<div style="color:var(--warn)">未能加载作品详情，请稍后重试。</div>';
+      }
+    }
+    return;
+  }
+
   const pa = e.target.closest('[data-poem]');
   const ja = e.target.closest('[data-juan]');
   if (pa) { e.preventDefault(); openPoem(pa.dataset.poem); }
@@ -1493,7 +2002,7 @@ document.addEventListener('click', async (e) => {
 });
 
 /* ── 打开详情 ── */
-async function open(mode, key) {
+async function open(mode, key, stopSeq = null) {
   const meta = IDX[mode].find(x => x.key === key);
   if (!meta) return;
   const id = mode + ':' + key;
@@ -1502,44 +2011,161 @@ async function open(mode, key) {
     data = await loadData('/api/' + mode + '/' + encodeURIComponent(key), 'data/' + mode + '/' + encodeURIComponent(key) + '.json');
     cache.set(id, data);
   }
+  if (mode === 'persons') data = {...data, courtesyZh:data.courtesyZh ?? data.courtesy_zh, spanNote:data.spanNote ?? data.span_note, journeyKey:data.journeyKey ?? data.journey_key, externalIds:data.externalIds ?? {cbdb:data.cbdb_id, wikidata:data.wikidata_id}};
   CUR = { key, mode };
   const el = $('#reader');
   if (mode === 'works') el.innerHTML = renderWork(data);
   else if (mode === 'persons') el.innerHTML = renderPerson(data);
   else el.innerHTML = renderJourney(data);
+  $('.main').classList.add('mobile-detail');
+  el.insertAdjacentHTML('afterbegin', '<button type="button" class="mobile-list-return" data-mobile-list-return>← 返回列表</button>');
   el.scrollTop = 0;
+  if (mode === 'works') { loadPoetryReading(data); loadWorkWitnesses(data.key); }
   history.replaceState(null, '', `#/${mode === 'works' ? 'work' : mode === 'persons' ? 'person' : 'journey'}/${encodeURIComponent(key)}`);
+  if (mode === 'journeys' && /^\d+$/.test(String(stopSeq || ''))) el.querySelector(`[data-journey-stop="${Number(stopSeq)}"]`)?.scrollIntoView({block:'start'});
 }
 
 /* ── 作品 ── */
+async function loadWorkWitnesses(key) {
+  const slot = document.getElementById('linked-work-slot');
+  if (!slot) return;
+  try {
+    const res = await fetch('/api/works/' + encodeURIComponent(key) + '/links');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (CUR?.key !== key || CUR?.mode !== 'works') return;
+    if (!data.items?.length) return;
+    slot.innerHTML = data.items.map(x => `
+      <div class="note variant-note" style="margin:12px 0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px">
+        <div class="k" style="font-weight:600;color:var(--ink)">版本见证与异文考证 · 未经人工审校</div>
+        <p style="margin:6px 0;line-height:1.6">${esc(x.differences)}</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <a class="tag acc" href="#" data-poem="${x.poemId}">查看语料库底本详情（Poem ID ${x.poemId}） ↗</a>
+          ${(x.stops || []).map(s => `<a class="tag" href="#/journey/${encodeURIComponent(s.journeyKey)}" data-jump="${esc(s.journeyKey)}" data-stop="${esc(s.stopSeq)}">驻足行迹：${esc(s.journeyKey)} 第 ${esc(s.stopSeq)} 站 ↗</a>`).join('')}
+        </div>
+      </div>
+    `).join('');
+  } catch (_) { /* 静默 */ }
+}
+
+let poetryReadingPromise;
+async function loadPoetryReading(work) {
+  if (!['shi', 'ci'].includes(work.genre)) return;
+  try {
+    poetryReadingPromise ||= fetch('data/poetry-reading/pilot-20261105.json').then(r => {
+      if (!r.ok) throw new Error('阅读资料不可用');
+      return r.json();
+    });
+    const collection = await poetryReadingPromise;
+    const entry = collection.works?.[work.key];
+    if (!entry || CUR?.mode !== 'works' || CUR.key !== work.key) return;
+    // 不将已有译注自动套用到正文或底本已变化的作品。
+    if (entry.sourceEdition !== work.text?.sourceEdition ||
+        JSON.stringify(entry.sourceOriginal) !== JSON.stringify(work.text?.paragraphs) ||
+        JSON.stringify(entry.sourceParagraphs) !== JSON.stringify(work.text?.paragraphsSimplified) ||
+        entry.segments?.length !== entry.sourceParagraphs.length ||
+        entry.segments.some((s, i) => s.source !== entry.sourceParagraphs[i])) return;
+    const slot = document.getElementById('poetry-reading-slot');
+    if (!slot) return;
+    const original = document.querySelector('#reader .work-body .rc');
+    const legacy = document.getElementById('work-legacy-notes');
+    if (legacy) legacy.open = false;
+    if (original) {
+      original.classList.add('work-lines');
+      original.innerHTML = entry.sourceOriginal.map((line, i) => `<button type="button" class="work-line" data-poetry-original="${i}" aria-pressed="false" aria-label="阅读第 ${i + 1} 段译注">${(line.match(/[^，。！？；：]+[，。！？；：]?|[，。！？；：]/g) || []).map(part => `<span class="work-phrase">${esc(part)}</span>`).join('')}</button>`).join('');
+      original.insertAdjacentHTML('afterend', '<p class="work-reading-hint">点击原文，查看对应译注</p>');
+    }
+    const render = index => {
+      const segment = entry.segments[index];
+      const related = entry.notes.filter(n => segment.source.includes(n.term));
+      slot.innerHTML = `<section class="work-reading" aria-label="作品译注">
+        <button type="button" class="work-reading-close" data-poetry-close aria-label="关闭译注">关闭</button>
+        <div class="work-reading-head"><h3>读这首作品</h3><small>${esc(collection.generation.label)}</small></div>
+        <div class="work-reading-nav" aria-label="选择原文段落">${entry.segments.map((_, i) => `<button type="button" data-poetry-segment="${i}" aria-pressed="${i === index}">${entry.segments.length === 1 ? '全文' : '第 ' + (i + 1) + ' 段'}</button>`).join('')}</div>
+        <div aria-live="polite"><blockquote>${esc(segment.source)}</blockquote><small>译文</small><p>${esc(segment.translation)}</p>
+        ${related.length ? `<details open><summary>本段注释</summary><dl>${related.map(n => `<dt>${esc(n.term)}</dt><dd>${esc(n.explanation)}</dd>`).join('')}</dl></details>` : ''}</div>
+        <details><summary>阅读赏析</summary><p>${esc(entry.appreciation)}</p></details>
+        <small>${esc(entry.sourceStatus)} · 解释与赏析未经人工审校。</small></section>`;
+    };
+    slot.addEventListener('click', e => {
+      if (e.target.closest('[data-poetry-close]')) {
+        slot.classList.remove('is-open');
+        document.querySelector('#reader [data-poetry-original][aria-pressed="true"]')?.focus();
+        return;
+      }
+      const button = e.target.closest('[data-poetry-segment]');
+      if (button) {
+        const index = Number(button.dataset.poetrySegment);
+        render(index);
+        original?.querySelectorAll('[data-poetry-original]').forEach((b, i) => b.setAttribute('aria-pressed', String(i === index)));
+        slot.querySelector(`[data-poetry-segment="${index}"]`)?.focus();
+      }
+    });
+    original?.addEventListener('click', e => {
+      const button = e.target.closest('[data-poetry-original]');
+      if (!button) return;
+      const index = Number(button.dataset.poetryOriginal);
+      original.querySelectorAll('[data-poetry-original]').forEach((b, i) => b.setAttribute('aria-pressed', String(i === index)));
+      render(index);
+      slot.classList.add('is-open');
+      if (window.matchMedia('(max-width: 600px)').matches) slot.querySelector('[data-poetry-close]')?.focus();
+      else slot.scrollIntoView({block:'nearest', behavior:'smooth'});
+    });
+    render(0);
+  } catch (_) { /* 未发布样例时，保留作品原有阅读内容。 */ }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Escape') return;
+  const slot = document.getElementById('poetry-reading-slot');
+  if (!slot?.classList.contains('is-open')) return;
+  slot.classList.remove('is-open');
+  document.querySelector('#reader [data-poetry-original][aria-pressed="true"]')?.focus();
+});
+
 function renderWork(w) {
   const author = IDX.persons.find(p => p.key === w.authorKey);
   const badges = [
-    w.level === 'academic' ? '<span class="tag acc">学术级</span>' : '<span class="tag">通俗级</span>',
     w.excerpt ? '<span class="tag warn" title="正文为长文中的一段，非全篇">摘录</span>' : '',
     `<span class="tag">${GENRE[w.genre] || w.genre}</span>`,
     `<span class="tag">系年 ${{confirmed:'确考',probable:'近是',disputed:'有争议',unknown:'待核'}[w.certainty] || '待核'}</span>`,
     w.text?.traditionalDerived ? '<span class="tag warn">繁体为反推</span>' : '<span class="tag">繁体取自底本</span>',
   ].join('');
+  const excerptNote = (w.notes || []).find(n => n.term === '摘录说明');
+  const excerptBanner = w.excerpt ? `
+    <div class="note excerpt-banner" style="margin:12px 0;background:var(--bg-soft);border:1px dashed var(--accent);border-radius:6px;padding:12px 14px">
+      <div style="font-weight:600;font-size:12.5px;color:var(--accent);display:flex;align-items:center;gap:6px">
+        <span>⚠ 长文摘录 · 非全篇连续正文</span>
+      </div>
+      <p style="margin:6px 0 0;font-size:13px;line-height:1.6;color:var(--ink)">
+        ${excerptNote ? esc(excerptNote.explain) : '本篇正文为原典长篇诗文中的节选摘录；若需查阅原卷全篇，可通过下方“相关文本与行迹”或“语料对照”查看完整底本。'}
+      </p>
+    </div>` : '';
   return `
-    <h2 class="rt">${esc(w.titleZh)}</h2><p class="src">资料核查待完成 · <a href="${researchLink('work', w.key)}">查看版本、证据与核查记录 ↗</a></p>
-    <div class="ra">${[w.titleEn, w.aliases?.length > 1 ? '又作 ' + w.aliases.slice(1).join('、') : null, author?.zh].filter(Boolean).map(esc).join(' · ')}</div>
-    <div class="badges">${badges}${author?.journeyKey ? `<a class="tag maplink" href="${atlasLink({ person: author.journeyKey, year: w.composed?.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</div>
-    <div class="rc${w.genre === 'shi' || w.genre === 'ci' ? '' : ' left'}">${esc((w.text?.paragraphs || []).join('\n'))}</div>
+    <header class="work-heading"><div class="work-eyebrow">江山行止 · 作品</div>
+    <h2 class="rt">${esc(w.titleZh)}</h2>
+    <div class="ra">${author ? `<a href="#/person/${encodeURIComponent(author.key)}" data-goperson="${esc(author.key)}">${esc(author.zh)}</a>` : ''}${author && w.titleEn ? ' · ' : ''}${esc(w.titleEn || '')}</div>
+    <div class="badges">${badges}${author?.journeyKey ? `<a class="tag maplink" href="${atlasLink({ person: author.journeyKey, year: w.composed?.year })}" target="_blank" rel="noopener">行迹地图 ↗</a>` : ''}</div></header>
+    <div class="work-body"><div class="rc${w.genre === 'shi' || w.genre === 'ci' ? ' work-verse' : ' left'}">${esc((w.text?.paragraphs || []).join('\n'))}</div></div>
+    ${excerptBanner}
+    <div id="poetry-reading-slot"></div>
     <div class="reader-tools">
       <button data-copy="1">复制正文</button>
       <button data-compare="${esc(w.key)}">语料对照</button>
+      <button data-linked-work="${esc(w.key)}">相关文本与行迹</button>
       <button data-print="1">打印</button>
     </div>
     <div id="compare-slot"></div>
-    <div class="src" style="text-align:center">${w.composed?.placeZh ? '作于 ' + esc(w.composed.placeZh) + ' · ' : ''}${esc(w.citation || '')}</div>
+    <div id="linked-work-slot"></div>
+    <details class="work-meta"><summary>版本与出处 · 资料待核</summary><p class="src">${w.composed?.placeZh ? '关联地点（待核）：' + esc(w.composed.placeZh) + ' · ' : ''}${esc(w.citation || '出处待补')}</p><p class="src"><a href="${researchLink('work', w.key)}">查看版本、证据与核查记录 ↗</a></p></details>
+    <details id="work-legacy-notes" class="work-meta" open><summary>原有整理内容 · 大意、注释与赏析</summary>
     ${w.meaning ? `<div class="bh">大意</div><p>${esc(w.meaning)}</p>` : ''}
     ${w.notes?.length ? `<div class="bh">注释</div><table>${w.notes.map(n => `<tr><th style="width:120px">${esc(n.term)}</th><td>${esc(n.explain)}</td></tr>`).join('')}</table>` : ''}
     ${w.background ? `<div class="bh">写作背景</div><p>${esc(w.background)}</p>` : ''}
     ${w.appreciation?.text ? `<div class="bh">赏析</div><p>${esc(w.appreciation.text)}</p>
       ${w.appreciation.inference ? `<div class="note"><div class="k">历史推测 · 生成方式未记录 · 未经人工审校</div>${esc(w.appreciation.inference.text)}
         <div class="src">依据：${esc(w.appreciation.inference.basis)}</div></div>` : ''}
-      <div class="src">${esc(w.appreciation.by)} · ${esc(w.appreciation.license)}</div>` : ''}
+      <div class="src">${esc(w.appreciation.by)} · ${esc(w.appreciation.license)}</div>` : ''}</details>
     ${w.apparatus?.length ? `<div class="bh">校记</div>${w.apparatus.map(a => `<div class="note">
         <div class="k">异文</div>
         <div><code>${esc(a.baseText)}</code> / <code>${esc(a.variantText)}</code>${a.locator?.label ? ' · ' + esc(a.locator.label) : ''} · 判定 <b>${esc(a.judgement)}</b></div>
@@ -1556,16 +2182,24 @@ function renderWork(w) {
 /* ── 人物 ── */
 function renderPerson(p) {
   const works = IDX.works.filter(w => w.authorKey === p.key);
+  const preferred = p.key === 'sushi' ? ['定风波', '水调歌头', '念奴娇'] : [];
+  const selected = preferred.map(key => works.find(w => w.key === key)).filter(Boolean);
+  const featured = selected.length ? selected : works.slice(0, 3);
+  const hasJourney = p.journeyKey && IDX.journeys.some(j => j.key === p.journeyKey);
   // 仕历是异步的，先占位，回来再填
   setTimeout(() => loadCareer(p.key), 0);
+  if (p.key === 'sushi' && hasJourney) setTimeout(() => loadPersonJourney(p), 0);
   return `
-    <h2 class="rt">${esc(p.zh)}</h2><p class="src"><a href="${researchLink('person', p.key)}">查看身份、生卒与来源核查 ↗</a></p>
-    <div class="ra">${esc(p.courtesyZh || '')} · ${p.span?.[0] ?? '?'}—${p.span?.[1] ?? '?'}${p.spanNote ? ` （${esc(p.spanNote)}）` : ''}</div>
-    <div class="badges">
-      ${p.journeyKey ? '<span class="tag acc">有行迹</span>' : ''}
-      ${p.externalIds?.cbdb ? `<span class="tag">CBDB ${esc(p.externalIds.cbdb)}</span>` : ''}
-      <span class="tag">${works.length} 篇</span>
-    </div>
+    <header class="person-intro person-topic-header"><div><div class="work-eyebrow">人物 · 文献与行迹</div><h2 class="rt">${esc(p.zh)}</h2>
+    <p class="person-subtitle">${esc(p.courtesyZh || '')}${p.spanNote ? ` · ${esc(p.spanNote)}` : ''}</p>
+    <p class="src"><a href="${researchLink('person', p.key)}">查看身份与来源核查 ↗</a></p></div>
+    <div class="person-topic-side">生卒 <strong>${p.span?.[0] ?? '?'}—${p.span?.[1] ?? '?'}</strong><span>馆藏精选作品 ${works.length} 篇${hasJourney ? ' · 已有行迹资料' : ''}</span><br><span>生平和作品关系继续核查</span></div></header>
+    <nav class="person-paths" aria-label="人物阅读入口">
+      ${hasJourney ? `<a class="person-path" href="#/journey/${encodeURIComponent(p.journeyKey)}" data-jump="${esc(p.journeyKey)}"><strong>循行迹阅读 →</strong><span>沿已有站点查看记述与引文</span></a>` : ''}
+      ${featured.length ? '<a class="person-path" href="#" data-person-works><strong>从作品入读 →</strong><span>阅读诗文、译注与来源</span></a>' : ''}
+    </nav>
+    ${p.key === 'sushi' && hasJourney ? '<section id="person-journey-preview" aria-label="行迹与作品"><p class="person-story-intro">正在读取行迹…</p></section>' : ''}
+    ${featured.length ? `<div class="bh" id="person-works">精选作品</div><div class="person-featured">${featured.map(w => `<a href="#/work/${encodeURIComponent(w.key)}" data-work="${esc(w.key)}"><span>${esc(w.titleZh)}</span><small>${esc(GENRE[w.genre] || w.genre)} · 阅读 →</small></a>`).join('')}</div>` : ''}
     <div class="reader-tools" style="justify-content:flex-start;margin:10px 0 2px">
       <button data-timeline="${esc(p.key)}">作者年表</button>
       <button data-relations="${esc(p.key)}">人物关系</button>
@@ -1578,11 +2212,53 @@ function renderPerson(p) {
       <p><a href="#" data-jump="${esc(p.journeyKey)}" style="border-bottom:1px dotted var(--line-2)">在本站读行迹 →</a>
          &nbsp;·&nbsp;
          <a class="maplink" href="${atlasLink({ person: p.journeyKey })}" target="_blank" rel="noopener">在地图上看 ↗</a></p>` : ''}
-    <div class="bh">作品</div>
+    <div class="bh">精选研读作品（${works.length} 篇）</div>
     <table>${works.map(w => `<tr>
       <td style="width:90px" class="muted">${w.year ?? '?'}</td>
       <td><a href="#" data-work="${esc(w.key)}" style="border-bottom:1px dotted var(--line)">${esc(w.titleZh)}</a></td>
-      <td class="muted">${GENRE[w.genre] || w.genre}</td></tr>`).join('')}</table>`;
+      <td class="muted">${GENRE[w.genre] || w.genre}</td></tr>`).join('')}</table>
+    <div class="reader-tools" style="justify-content:flex-start;margin:16px 0 6px">
+      <button data-author-corpus="${esc(p.zh)}">查看馆藏全部诗词（全文语料库）</button>
+    </div>
+    <div id="author-corpus-slot"></div>`;
+}
+
+function quotedWorkForStop(j, stop) {
+  const quote = stop.quote || stop.quote_zh || '';
+  if (!quote) return null;
+  const titles = [...quote.matchAll(/《([^》]+)》/g)].map(m => m[1]);
+  if (!titles.length) return null;
+  const authorKey = j.personKey || j.key;
+
+  // 1. 优先找作者本人且题名/别名/包含匹配的作品
+  const authorMatches = IDX.works.filter(w => {
+    if (w.authorKey !== authorKey) return false;
+    return titles.some(t => t === w.key || t.startsWith(w.key) || w.key.startsWith(t) || (w.titleZh && w.titleZh.includes(t)) || (w.aliases && w.aliases.includes(t)));
+  });
+  if (authorMatches.length >= 1) return authorMatches[0];
+
+  // 2. 次选：传记、史志、友人题赠等相关传世名篇（如《史记》《三国志》《年谱》《蜀相》等）
+  const allMatches = IDX.works.filter(w => {
+    return titles.some(t => t === w.key || t.startsWith(w.key) || w.key.startsWith(t) || (w.titleZh && w.titleZh.includes(t)) || (w.aliases && w.aliases.includes(t)));
+  });
+  return allMatches.length >= 1 ? allMatches[0] : null;
+}
+
+async function loadPersonJourney(person) {
+  const slot = document.getElementById('person-journey-preview');
+  if (!slot) return;
+  try {
+    const j = await loadData('/api/journeys/' + encodeURIComponent(person.journeyKey), 'data/journeys/' + encodeURIComponent(person.journeyKey) + '.json');
+    if (!slot.isConnected || CUR?.mode !== 'persons' || CUR.key !== person.key) return;
+    const stops = [4,5,8,9].map(seq => (j.stops || []).find(s => Number(s.seq) === seq)).filter(Boolean);
+    if (!stops.length) { slot.innerHTML = ''; return; }
+    slot.innerHTML = `<div class="person-story-head"><h3>沿着行迹读作品</h3><a href="#/journey/${encodeURIComponent(person.journeyKey)}" data-jump="${esc(person.journeyKey)}">查看全部行迹 →</a></div>
+      <p class="person-story-intro">节选现有行迹记录；站点年份、引文及出处均待核，站点引用不等于作品写作地点。</p>
+      ${stops.map(s => { const work = quotedWorkForStop(j,s); const place = s.place || {ancient:s.place_ancient}; const quote = s.quote || s.quote_zh || '';
+        return `<div class="person-stop"><div class="person-stop-year">站点年份<strong>${esc(s.year ?? '待核')}</strong></div><div><div class="person-stop-title"><h4>${esc(place.ancient || '地点待核')}</h4><a href="#/journey/${encodeURIComponent(person.journeyKey)}" data-jump="${esc(person.journeyKey)}" data-stop="${esc(s.seq)}">查看站点 →</a></div>
+          ${quote ? `<p class="person-stop-quote">${esc(quote)}</p>` : ''}<div class="person-stop-source">记录来源：${esc(s.source || '待补')} · 待核${work ? ` <a href="#/work/${encodeURIComponent(work.key)}" data-work="${esc(work.key)}">阅读所引作品 · 关联待核 →</a>` : ''}</div></div></div>`;
+      }).join('')}`;
+  } catch (_) { if (slot.isConnected) slot.innerHTML = '<p class="person-story-intro">行迹资料暂不可用，请稍后再试。</p>'; }
 }
 
 /* 仕历：CBDB 的任职记录，59 万条里属于这个人的那几十条 */
@@ -1616,29 +2292,44 @@ function renderJourney(j) {
   const links = j.links || {};
   const rows = j.stops.map((s, i) => {
     const link = links[String(i + 1)];
+    const place = s.place || {ancient:s.place_ancient, modern:s.place_modern};
+    const quote = s.quote || s.quote_zh || '';
+    const quotedWork = quotedWorkForStop(j,s);
     return `${link ? `<tr><td colspan="3"><div class="note"><div class="k">承接</div>${esc(link.text)}
         <div class="src">据 ${esc(link.source)}</div></div></td></tr>` : ''}
-      <tr><td style="width:96px;font-family:var(--serif);color:var(--gold)">${esc(s.eraZh || s.year || '')}</td>
-      <td style="width:132px"><b>${esc(s.place.ancient)}</b>
-        ${s.place.modern ? `<div class="src">${esc(s.place.modern)}</div>` : ''}
-        ${s.place.ancient ? `<a class="maplink" href="${atlasLink({ person: j.personKey || j.key, year: s.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</td>
-      <td>${esc(s.titleZh)}<div class="muted" style="font-size:12.5px">${esc(s.descZh)}</div>
-        ${s.quote ? `<div style="font-family:var(--serif);color:#5a4a34">${esc(s.quote)}</div>` : ''}
-        <div class="src">据 ${esc(s.source)}</div></td></tr>`;
+      <tr data-journey-stop="${esc(s.seq || i + 1)}"><td style="width:96px;font-family:var(--serif);color:var(--gold)">${esc(s.eraZh || s.year || '')}</td>
+      <td style="width:132px"><b>${esc(place.ancient || '')}</b>
+        ${place.modern ? `<div class="src">${esc(place.modern)}</div>` : ''}
+        ${place.ancient ? `<a class="maplink" href="${atlasLink({ person: j.personKey || j.key, year: s.year })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</td>
+      <td>${esc(s.titleZh || s.title_zh || '')}<div class="muted" style="font-size:12.5px">${esc(s.descZh || s.desc_zh || '')}</div>
+        ${quote ? `<div style="font-family:var(--serif);color:#5a4a34;margin:4px 0;">${esc(quote)}</div>` : ''}
+        ${quotedWork ? `
+          <div class="journey-stop-work-wrap">
+            <button type="button" class="journey-work-toggle-btn" data-toggle-work="${esc(quotedWork.key)}" aria-expanded="false">
+              <span>📖</span> 驻足名作：<b>《${esc(quotedWork.titleZh || quotedWork.key)}》</b> <span class="work-arrow">▾ 展开研读</span>
+            </button>
+            <div class="journey-work-inline-body" style="display:none;" data-loaded="0"></div>
+          </div>` : ''}
+        <div class="src" style="margin-top:4px;">据 ${esc(s.source)}</div></td></tr>`;
   }).join('');
 
   return `
-    <h2 class="rt">${esc(j.titleZh)}</h2><p class="src"><a href="${researchLink('journey', j.key)}">查看行迹证据与待核事项 ↗</a></p>
-    <div class="ra">${esc(j.spanZh || '')} · ${j.stops.length} 站 · ${j.origin === 'overlay' ? '本仓库补录' : '上游数据'}</div>
-    ${j.intro ? `<div class="bh">读本</div><p>${esc(j.intro.text)}</p><div class="src">据 ${esc(j.intro.source)}</div>` : ''}
-    <div class="bh">站点</div><table>${rows}</table>`;
+    <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+      <a class="tag acc" href="data/journeys/${encodeURIComponent(j.key)}.json" download="${esc(j.key)}.json" target="_blank">📥 导出行迹 JSON</a>
+      <a class="tag maplink" href="${atlasLink({ person: j.personKey || j.key })}" target="_blank" rel="noopener">🗺 在《江山行止》地图中漫游 ↗</a>
+      <a class="tag" href="${researchLink('journey', j.key)}">🔍 查看学术证据与待核事项 ↗</a>
+    </div>
+    <h2 class="rt">${esc(j.titleZh || j.title_zh || '')}</h2>
+    <div class="ra">${esc(j.spanZh || j.span_zh || '')} · ${j.stops.length} 站 · ${j.origin === 'overlay' ? '本仓库补录' : '上游数据'}</div>
+    ${j.intro ? `<div class="bh">读本导语</div><p>${esc(typeof j.intro === 'string' ? j.intro : j.intro.text)}</p><div class="src">据 ${esc(typeof j.intro === 'string' ? (j.intro_source || '') : j.intro.source)}</div>` : ''}
+    <div class="bh">站点纪事与驻足名篇</div><table>${rows}</table>`;
 }
 
 /* ── 随机 / 今日 ── */
 function dayOfYear(d) { return Math.floor((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(d.getFullYear(), 0, 1)) / 86400000) + 1; }
 
 function showRandom(animate) {
-  const pool = filtered.length ? filtered : IDX[MODE];
+  const pool = filtered;
   if (!pool.length) return;
   const r = pool[Math.floor(Math.random() * pool.length)];
   document.querySelectorAll('.item').forEach(x => x.classList.toggle('on', x.dataset.key === r.key));
@@ -1656,10 +2347,12 @@ function showDaily() {
 
 /* 详情里的跳转链接 */
 document.addEventListener('click', (e) => {
+  if (e.target.closest('[data-mobile-list-return]')) { $('.main').classList.remove('mobile-detail'); $('#list').scrollIntoView({block:'start'}); return; }
+  if (e.target.closest('[data-person-works]')) { e.preventDefault(); document.getElementById('person-works')?.scrollIntoView({block:'start', behavior:'smooth'}); return; }
   const aw = e.target.closest('[data-work]');
   const aj = e.target.closest('[data-jump]');
-  if (aw) { e.preventDefault(); open('works', aw.dataset.work); }
-  if (aj) { e.preventDefault(); MODE = 'journeys'; document.querySelectorAll('.modes button').forEach(b => b.classList.toggle('on', b.dataset.mode === 'journeys')); buildFilters(); renderList(); open('journeys', aj.dataset.jump); }
+  if (aw) { e.preventDefault(); showTool('works'); open('works', aw.dataset.work); }
+  if (aj) { e.preventDefault(); MODE = 'journeys'; document.querySelectorAll('.modes button').forEach(b => b.classList.toggle('on', b.dataset.mode === 'journeys')); buildFilters(); renderList(); open('journeys', aj.dataset.jump, aj.dataset.stop); }
 });
 
 /* 深链 */

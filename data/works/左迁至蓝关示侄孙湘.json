@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "key": "左迁至蓝关示侄孙湘",
+  "titleZh": "左迁至蓝关示侄孙湘",
+  "titleEn": "Demoted and Shown to Grand-Nephew Xiang at Blue Pass",
+  "aliases": [
+    "左迁至蓝关示侄孙湘",
+    "左遷至藍關示姪孫湘"
+  ],
+  "authorKey": "hanyu",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "unknown",
+  "composed": {
+    "year": 819,
+    "yearKind": "composition",
+    "placeZh": "蓝关",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "一封朝奏九重天，夕貶潮州路八千。",
+      "欲爲聖朝除弊事，肯將衰朽惜殘年。",
+      "雲橫秦嶺家何在，雪擁藍關馬不前。",
+      "知汝遠來應有意，好收吾骨瘴江邊。"
+    ],
+    "paragraphsSimplified": [
+      "一封朝奏九重天，夕贬潮州路八千。",
+      "欲为圣朝除弊事，肯将衰朽惜残年。",
+      "云横秦岭家何在，雪拥蓝关马不前。",
+      "知汝远来应有意，好收吾骨瘴江边。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "早晨向九重深宫呈上奏疏，傍晚就被贬往八千里外的荒远潮州。本想为圣明朝廷除去弊害，哪敢顾惜残老衰朽之躯。云彩横阻秦岭，我的家在何方？大雪深锁蓝关，坐下马踯躅不前。知道你远道赶来必是情意深重，正好在瘴气弥漫的江边为我收敛尸骨。",
+  "notes": [
+    {
+      "term": "朝奏",
+      "explain": "指元和十四年（819）正月韩愈向唐宪宗呈《论佛骨表》，极言其弊。"
+    },
+    {
+      "term": "夕贬",
+      "explain": "唐宪宗大怒，欲处死韩愈，经斐度等营救，贬为潮州刺史。"
+    },
+    {
+      "term": "蓝关",
+      "explain": "在今陕西蓝田县南，为秦岭古关隘隘口。"
+    },
+    {
+      "term": "侄孙湘",
+      "explain": "韩愈长兄韩会之孙韩湘。"
+    }
+  ],
+  "background": "唐宪宗元和十四年（819）正月，宪宗派使者往凤翔迎佛骨入宫供奉。刑部侍郎韩愈上《论佛骨表》谏阻，触怒宪宗，几遭诛杀，赖同列劝解，贬为潮州刺史。行至蓝关遇大雪，侄孙韩湘赶来送行，悲慨之中写下此诗。",
+  "appreciation": {
+    "text": "首联叙遭贬始末与行途遥远；颔联直陈心志，坦荡无悔；颈联以‘云横秦岭’‘雪拥蓝关’寓前路艰险与家国之念，雄浑沉郁；尾联以‘好收吾骨’将凄凉悲慨推向极致，却无纤弱之态，极具刚健风骨。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "citation": "《全唐诗》卷三三七·韩愈集卷三",
+  "dating": [
+    {
+      "claim": "819",
+      "stance": "pending",
+      "note": "元和十四年（819）正月韩愈谏迎佛骨贬潮州途中作。",
+      "evidence": [
+        {
+          "quote": "819",
+          "source": "《全唐诗》卷三三七",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "apparatus": []
+}

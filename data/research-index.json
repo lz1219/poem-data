@@ -4914,7 +4914,7 @@
     },
     {
       "id": "guizhou-volume28-conflict",
-      "revision": 1,
+      "revision": 2,
       "subject": {
         "type": "source",
         "key": "kanripo-kr2k0056"
@@ -4926,8 +4926,8 @@
         "origin": "mixed",
         "model": "Codex",
         "modelVersion": "运行环境未提供精确模型快照",
-        "generatedAt": "2026-11-01T12:03:54.832699+00:00",
-        "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+        "generatedAt": "2026-11-01T12:43:35.986119+00:00",
+        "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
       }
     },
     {
@@ -4950,7 +4950,7 @@
     },
     {
       "id": "guizhou-yangming-cave",
-      "revision": 1,
+      "revision": 2,
       "subject": {
         "type": "journey",
         "key": "wangyangming"
@@ -4962,8 +4962,44 @@
         "origin": "mixed",
         "model": "Codex",
         "modelVersion": "运行环境未提供精确模型快照",
-        "generatedAt": "2026-11-01T12:03:54.814882+00:00",
-        "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+        "generatedAt": "2026-11-01T12:43:35.996932+00:00",
+        "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
+      }
+    },
+    {
+      "id": "longchang-chronicle-context",
+      "revision": 1,
+      "subject": {
+        "type": "work",
+        "key": "王阳明年谱"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "龙场年谱：到达、石墎自誓与悟学分段",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T12:43:35.990651+00:00",
+        "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
+      }
+    },
+    {
+      "id": "longchang-self-writings",
+      "revision": 1,
+      "subject": {
+        "type": "journey",
+        "key": "wangyangming"
+      },
+      "kind": "witness",
+      "status": "partial",
+      "title": "东洞诗与何陋轩记：居处自述候选",
+      "provenance": {
+        "origin": "mixed",
+        "model": "Codex",
+        "modelVersion": "运行环境未提供精确模型快照",
+        "generatedAt": "2026-11-01T12:43:35.993977+00:00",
+        "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
       }
     },
     {

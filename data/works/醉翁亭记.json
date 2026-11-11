@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0",
+  "key": "醉翁亭记",
+  "titleZh": "醉翁亭记",
+  "titleEn": "The Old Drunkard Pavilion",
+  "aliases": [
+    "醉翁亭记",
+    "醉翁亭記"
+  ],
+  "authorKey": "ouyangxiu",
+  "genre": "wen",
+  "citation": "《欧阳文忠公集》卷三十九",
+  "excerpt": true,
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 1046,
+    "yearKind": "composition",
+    "placeZh": "滁州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "upstream-quote-baseline",
+    "paragraphs": [
+      "環滁皆山也。望之蔚然而深秀者，琅琊也。山行六七里，漸聞水聲潺潺，而瀉出於兩峰之間者，釀泉也。峰迴路轉，有亭翼然臨於泉上者，醉翁亭也。作亭者誰？山之僧智仙也。名之者誰？太守自謂也。太守與客來飲於此，飲少輒醉，而年又最高，故自號曰「醉翁」也。醉翁之意不在酒，在乎山水之間也。山水之樂，得之心而寓之酒也。"
+    ],
+    "paragraphsSimplified": [
+      "环滁皆山也。望之蔚然而深秀者，琅琊也。山行六七里，渐闻水声潺潺，而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄醉，而年又最高，故自号曰“醉翁”也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "滁州四周皆是青山。山僧智仙在酿泉之上建亭，太守欧阳修自号醉翁并名其亭：醉翁的心意并不在于饮酒，而在领略山水的美好。山水的乐趣，心领神会而寄托于杯酒之中。",
+  "notes": [
+    {
+      "term": "摘录说明",
+      "explain": "本站精选所录为《醉翁亭记》开首第一自然段；后文尚有四时之景、滁人游宴与太守之乐等段落。"
+    },
+    {
+      "term": "蔚然",
+      "explain": "草木茂盛的样子。"
+    },
+    {
+      "term": "翼然",
+      "explain": "像鸟张开翅膀一样，形容亭檐翘起凌空的样子。"
+    },
+    {
+      "term": "醉翁之意不在酒",
+      "explain": "醉翁的心意不在酒上，而在寄情山水。后常借指本意不在此而在别的方面。"
+    }
+  ],
+  "background": "宋仁宗庆历五年（1045年），欧阳修因直言进谏支持范仲淹“庆历新政”而遭贬滁州知州，在任期间寄情山水、与民同乐，作此名记。",
+  "appreciation": {
+    "text": "文章开篇层层推进：从滁州之山、琅琊山、酿泉到醉翁亭，如镜头层层拉近。自号醉翁并道出「醉翁之意不在酒，在乎山水之间也」的名句，融写景、叙事、抒情于一体，流丽从容。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "1046",
+      "stance": "adopted",
+      "note": "欧阳修庆历五年贬滁州，庆历六年作《醉翁亭记》并刻石。",
+      "evidence": [
+        {
+          "quote": "庆历六年",
+          "source": "欧文忠公集",
+          "grade": "A"
+        }
+      ]
+    }
+  ]
+}

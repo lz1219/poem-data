@@ -8,7 +8,7 @@ from raw_ingest import input_bundle
 def main(cache):
     bundle=input_bundle(cache=cache)
     keys={s[3] for s in bundle['snapshots']}
-    roles={'source-response','image-original','catalog','catalog-api-response','branch-api-response'}
+    roles={'source-response','image-original','image-preview','catalog','catalog-api-response','branch-api-response'}
     keys.update(a[2] for a in bundle['assets'] if a[1] in roles)
     for key in sorted(keys):
         if save_object(cache,bundle['blobs'][key])!=key: raise ValueError('原件身份不一致')

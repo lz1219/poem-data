@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "status": "candidate",
+  "person": {
+    "editorKey": "sushi",
+    "editorSha256": "3f9c73f96a6a1270a7a64e3cac3a86cdebf2ba405fa03a67f2bb1add2d0759b6",
+    "corpusPersonId": 58,
+    "basis": "两侧人物键、姓名及 CBDB 3767 一致；身份映射尚未经具名人工审校。"
+  },
+  "work": {
+    "editorKey": "水调歌头",
+    "editorSha256": "294ea5eb6576ee40ffd2fe19f029ba49959ec46789f9f541c45b4ff6b36ec4ba",
+    "corpusPoemId": 112216,
+    "corpusBodySha256": "ab4122ab6d7077f6186ceb62e5479b4140f3fca44787900fe4ad42fe2c3625f4",
+    "corpusEditionId": 14,
+    "corpusBatchId": "3daa0c49f104b2152d5a704d23583ab25b9101169e49107edb7d87913f47a943",
+    "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry/blob/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.1000.json",
+    "sourcePointer": "/459",
+    "matchingText": [
+      "明月几时有",
+      "人有悲欢离合",
+      "但愿人长久"
+    ],
+    "differences": "两份电子文本分行、标点有差异；语料无词前小序，底本和文字均待人工核查，不将匹配等同版本确证。",
+    "basis": "两份文本作者、词牌及多处词句对应；版本与作品身份仍待具名人工审校。"
+  },
+  "journey": {
+    "key": "sushi",
+    "stopSeq": 5,
+    "stopSha256": "4242d187ef448ac0a8d3e7e8da6c0fa2a0c1e1424d1f50c4004a305c477259bd",
+    "relation": "stop-quotes-work",
+    "matchingText": [
+      "人有悲欢离合",
+      "但愿人长久"
+    ],
+    "basis": "行迹第5站引用词句与此作品及语料相同；仅表示引用关系，不证明创作地点、年份或亲历。"
+  }
+}

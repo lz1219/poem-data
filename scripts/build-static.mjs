@@ -47,6 +47,9 @@ if (i < 0) {
 html = html.slice(0, i) + flag + html.slice(i);
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
 copy(path.join(ROOT, 'web/research.html'), path.join(OUT, 'research.html'));
+copy(path.join(ROOT, 'web/library-theme.css'), path.join(OUT, 'web/library-theme.css'));
+copy(path.join(ROOT, 'web/ink-landscape.svg'), path.join(OUT, 'web/ink-landscape.svg'));
+copy(path.join(ROOT, 'web/motion-preferences.js'), path.join(OUT, 'web/motion-preferences.js'));
 copy(path.join(ROOT, 'shared/sources.json'), path.join(OUT, 'shared/sources.json'));
 
 /* 2. 数据：只带策展内容 */

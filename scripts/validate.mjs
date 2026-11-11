@@ -23,11 +23,18 @@ for (const [group, name] of [['works', 'work'], ['persons', 'person'], ['journey
   const schema = readJSON(`schema/${name}.schema.json`);
   for (const f of listDir(`data/${group}`)) checkSchema(readJSON(`data/${group}/${f}`), schema, `${group}/${f}`, err);
 }
-const sourceIds = new Set(readJSON('shared/sources.json').sources.map(s => s.id));
+const sourceDocuments = new Map(readJSON('shared/sources.json').sources.map(s => [s.id, s]));
+const sourceIds = new Set(sourceDocuments.keys());
 for (const f of listDir('data/research')) {
   const doc = readJSON(`data/research/${f}`);
   checkSchema(doc, readJSON('schema/research.schema.json'), `research/${f}`, err);
   if (doc.subject?.type === 'source' && !sourceIds.has(doc.subject.key)) err(`research/${f}: 研究对象来源不存在`);
+  for (const image of doc.imageObservations || []) {
+    const source = sourceDocuments.get(image.sourceId);
+    const asset = source?.imageAssets?.find(a => ['fileTitle','originalSha256','originalMetadataSha256','metadataRevisionId','sourceUrl'].every(k => a[k] === image[k]));
+    if (!asset || !asset.previews?.some(p => ['page','previewSha256','previewMetadataSha256','previewUrl'].every(k => p[k] === image[k]))) err(`research/${f}: 影像原件或预览页未登记`);
+    if (image.status === 'verified' && !image.reviewHistory?.some(e => e.decision === 'verified' && e.reviewer && e.reviewedAt && e.scope)) err(`research/${f}: 影像已核缺逐项具名审校`);
+  }
 }
 
 // ── 1. 作品 ──

@@ -8,6 +8,7 @@
   ],
   "authorKey": "dufu",
   "genre": "shi",
+  "excerpt": true,
   "level": "popular",
   "certainty": "unknown",
   "composed": {
@@ -29,6 +30,10 @@
   },
   "meaning": "杜甫追述与李白同游：醉舞梁园之夜、行歌泗水之春，兼叙其才名与放归。",
   "notes": [
+    {
+      "term": "摘录说明",
+      "explain": "这两组诗句并非连续摘取：据本站《全唐诗》语料，‘遇我宿心亲’与‘醉舞梁园夜’之间另有四句。原典版本仍待核对。"
+    },
     {
       "term": "李十二",
       "explain": "李白在同族兄弟中排行十二，唐人常以行第称人。"

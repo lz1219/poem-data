@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T11:40:15.768Z",
+  "generatedAt": "2026-11-11T08:34:57.811Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -312,6 +312,18 @@
       "apparatus": 0,
       "hasComments": false,
       "file": "data/works/峨眉山月歌.json"
+    },
+    {
+      "key": "左迁至蓝关示侄孙湘",
+      "titleZh": "左迁至蓝关示侄孙湘",
+      "authorKey": "hanyu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 819,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/左迁至蓝关示侄孙湘.json"
     },
     {
       "key": "忆江南",
@@ -650,6 +662,18 @@
       "file": "data/works/登高.json"
     },
     {
+      "key": "白雪歌送武判官归京",
+      "titleZh": "白雪歌送武判官归京",
+      "authorKey": "censhen",
+      "genre": "shi",
+      "level": "popular",
+      "year": 754,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/白雪歌送武判官归京.json"
+    },
+    {
       "key": "秋浦歌",
       "titleZh": "秋浦歌（其十五）",
       "authorKey": "libai",
@@ -660,6 +684,18 @@
       "apparatus": 0,
       "hasComments": false,
       "file": "data/works/秋浦歌.json"
+    },
+    {
+      "key": "秦妇吟",
+      "titleZh": "秦妇吟",
+      "authorKey": "weizhuang",
+      "genre": "shi",
+      "level": "popular",
+      "year": 883,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/秦妇吟.json"
     },
     {
       "key": "答范淳甫",
@@ -770,6 +806,42 @@
       "file": "data/works/进西域记表.json"
     },
     {
+      "key": "遣怀",
+      "titleZh": "遣怀",
+      "authorKey": "dumu",
+      "genre": "shi",
+      "level": "popular",
+      "year": 835,
+      "traditionalDerived": false,
+      "apparatus": 1,
+      "hasComments": false,
+      "file": "data/works/遣怀.json"
+    },
+    {
+      "key": "酬乐天扬州初逢席上见赠",
+      "titleZh": "酬乐天扬州初逢席上见赠",
+      "authorKey": "liuyuxi",
+      "genre": "shi",
+      "level": "popular",
+      "year": 826,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/酬乐天扬州初逢席上见赠.json"
+    },
+    {
+      "key": "醉翁亭记",
+      "titleZh": "醉翁亭记",
+      "authorKey": "ouyangxiu",
+      "genre": "wen",
+      "level": "popular",
+      "year": 1046,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/醉翁亭记.json"
+    },
+    {
       "key": "钱塘湖春行",
       "titleZh": "钱塘湖春行",
       "authorKey": "baijuyi",
@@ -782,6 +854,18 @@
       "file": "data/works/钱塘湖春行.json"
     },
     {
+      "key": "闻乐天授江州司马",
+      "titleZh": "闻乐天授江州司马",
+      "authorKey": "yuanzhen",
+      "genre": "shi",
+      "level": "popular",
+      "year": 815,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/闻乐天授江州司马.json"
+    },
+    {
       "key": "阿房宫赋",
       "titleZh": "阿房宫赋",
       "authorKey": "dumu",
@@ -792,6 +876,18 @@
       "apparatus": 0,
       "hasComments": false,
       "file": "data/works/阿房宫赋.json"
+    },
+    {
+      "key": "陋室铭",
+      "titleZh": "陋室铭",
+      "authorKey": "liuyuxi",
+      "genre": "wen",
+      "level": "popular",
+      "year": 824,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/陋室铭.json"
     },
     {
       "key": "食荔枝",
@@ -816,6 +912,18 @@
       "apparatus": 0,
       "hasComments": false,
       "file": "data/works/饮湖上初晴后雨.json"
+    },
+    {
+      "key": "鹿柴",
+      "titleZh": "鹿柴",
+      "authorKey": "wangwei",
+      "genre": "shi",
+      "level": "popular",
+      "year": 745,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/鹿柴.json"
     },
     {
       "key": "黄鹤楼送孟浩然之广陵",

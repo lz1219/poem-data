@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0",
+  "id": "guizhou-yangming-cave",
+  "subject": {
+    "type": "journey",
+    "key": "wangyangming"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "阳明洞：游息与居所的证据边界",
+  "claim": "AI辅助资料解释·未经人工审校。方志的游息条不能单独证明居住；新取所收东洞诗确有移居、洞居之语。分别保留文献性质，居址及细节仍待核。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T12:43:35.996932+00:00",
+    "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr2k0056",
+      "quote": "陽明洞(在龍岡山半巖下髙敞深廣各二三丈頂/石如鑿舊名東洞明王守仁謫居龍場游)¶\n　　(息其中更名陽明小洞天書於石嵌洞中/洞上有僧舍二左巔有文昌閣甚峻麗)",
+      "locator": "KR2k0056_005.txt，KR2k0056_WYG_005-12b",
+      "url": "https://github.com/kanripo/KR2k0056/blob/2b42056baba7e67dd70a039dad61843a9b30a2d7/KR2k0056_005.txt",
+      "commit": "2b42056baba7e67dd70a039dad61843a9b30a2d7",
+      "originalFileSha256": "afdba97308f25b4ece1ac98a8cff4b4fc9e33162f60d0d13232806154db9f285",
+      "sha256": "10dcf692a6f72250e10d522949bfec990d4513e1c5611ce3e3882cc7ed74df53",
+      "textFile": "data/witnesses/10dcf692a6f72250e10d522949bfec990d4513e1c5611ce3e3882cc7ed74df53.txt",
+      "startByte": 20796,
+      "endByte": 21009,
+      "verifiedQuote": true,
+      "verification": "只核片段与固定电子文件逐字节对应；未对影像或人工学术审校",
+      "stance": "context",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "始得東洞遂改為陽明小洞天三首¶\n古泂閟荒僻虚設疑相待披莱歷風磴移居快幽¶\n塏營炊就巗竇放榻依石壘穹窒旋薫塞夷坎仍¶\n灑掃卷帙澷堆列樽壺動光彩夷居信何陋恬淡¶\n意方在豈不桑梓懐素位聊無悔¶\n童僕自相語洞居頗不惡人力免結搆天巧謝雕¶\n鑿清泉傍厨落翠霧還成幕我軰日嬉偃主人自¶\n愉樂雖無棨㦸榮且逺塵囂聒但恐霜雪凝雲深¶\n<pb:KR4e0157_SBCK_014-45a>¶\n衣絮薄¶\n我聞筦爾笑周慮愧爾言上古䖏巢窟杯飲皆汙¶\n樽沍極陽内伏石穴多冬暄豹隱文始澤龍蟄身¶\n乃存豈無數尺榱輕裘吾不温邈矣簞瓢子此心¶\n期與論¶",
+      "locator": "KR4e0157_014.txt，KR4e0157_SBCK_014-44b",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_014.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "8e3e52254c0ade9e3d8868648cc8f9f48a3b253ded2553bd235f5d9f25ecec89",
+      "sha256": "a9407ce8e8175d1e642b0908e3d5aaa64800dc5ffe406aae2238b4d855446c40",
+      "textFile": "data/witnesses/a9407ce8e8175d1e642b0908e3d5aaa64800dc5ffe406aae2238b4d855446c40.txt",
+      "startByte": 42182,
+      "endByte": 42861,
+      "verifiedQuote": true,
+      "verification": "固定电子文件逐字节对应，不等于核定原影像、作年或现代地点",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "原条记旧名东洞及王守仁游息；“游息”不能单独证明以洞为住所，更不能证明石棺细节或现代精确坐标。"
+  ],
+  "reasoning": "原态记载只提供继续核查的出处，不自动证明明代事件、亲历、因果或现代精确位置。",
+  "counterEvidence": "清代后出编纂与明代事件有时间距离；所取四库转录尚未完成影像对校。暂无足够依据裁定版本差异或现有站点叙述。",
+  "alternatives": [
+    "同名志书有康熙37卷及乾隆46卷等不同版本，不能按书名混用。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr2k0056",
+      "mode": "明确条题边界逐字截取",
+      "relatedStop": "wangyangming:5"
+    }
+  ],
+  "nextAction": "核原影像、版本及明代同时资料；卷题冲突先存疑，地点和系年不自动采信。",
+  "relatedResearch": [
+    "longchang-self-writings/1",
+    "longchang-chronicle-context/1"
+  ],
+  "revision": 2,
+  "updatedAt": "2026-11-01T12:43:35.998009+00:00",
+  "sha256": "7822289db96fd2c6ce31b600e41add0fbf44df76b12366c0cea41de1cc20f5c8"
+}

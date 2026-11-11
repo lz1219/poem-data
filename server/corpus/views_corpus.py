@@ -8,6 +8,7 @@
   /api/texts/juan/<unit_id>      某卷全文（分段落）
 """
 from functools import lru_cache
+import unicodedata
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -17,6 +18,22 @@ from . import db
 
 def _unavailable():
     return Response({"detail": "语料库未连接"}, status=503)
+
+
+@api_view(["GET"])
+def work_link_candidates(request, key):
+    if not db.available():
+        return _unavailable()
+    from .literary_links import work_candidates
+    return Response({'items':work_candidates(key), 'scope':'候选关联·未经人工审校'})
+
+
+@api_view(["GET"])
+def poem_link_candidates(request, poem_id):
+    if not db.available():
+        return _unavailable()
+    from .literary_links import poem_candidates
+    return Response({'items':poem_candidates(poem_id), 'scope':'候选关联·未经人工审校'})
 
 
 def _clip(text: str, n: int = 60) -> str:
@@ -99,6 +116,8 @@ def poem_detail(request, poem_id: int):
     )
     if not row:
         return Response({"detail": "未找到该诗"}, status=404)
+    from .corpus_origins import attach_poem
+    attach_poem(row)
     return Response(row)
 
 
@@ -107,14 +126,17 @@ def texts(request):
     if not db.available():
         return _unavailable()
     rows = db.query(
-        """SELECT b.id, b.title, count(t.id) AS juan,
-                  sum(length(t.body)) AS chars,
-                  max(t.edition) AS edition,
-                  count(*) FILTER (WHERE t.punctuated) AS punctuated_juan
-           FROM book b JOIN text_unit t ON t.book_id = b.id
-           GROUP BY b.id, b.title
-           HAVING count(t.id) > 0
-           ORDER BY sum(length(t.body)) DESC"""
+        """WITH units AS (
+            SELECT book_id,count(*) AS juan,sum(length(body)) AS chars,max(edition) AS edition,
+                count(*) FILTER (WHERE punctuated) AS punctuated_juan FROM text_unit GROUP BY book_id
+        ), poems AS (
+            SELECT book_id,count(*) AS poems,sum(length(body)) AS chars,
+                count(*) FILTER(WHERE body ~ '[，。！？；：]') AS punctuated_poems FROM corpus_poem GROUP BY book_id
+        ) SELECT b.id,b.title,coalesce(u.juan,0) AS juan,coalesce(p.poems,0) AS poems,
+            coalesce(u.chars,0)+coalesce(p.chars,0) AS chars,coalesce(u.edition,b.edition) AS edition,
+            coalesce(u.punctuated_juan,0) AS punctuated_juan,coalesce(p.punctuated_poems,0) AS punctuated_poems
+        FROM book b LEFT JOIN units u ON u.book_id=b.id LEFT JOIN poems p ON p.book_id=b.id
+        WHERE u.juan>0 OR p.poems>0 ORDER BY chars DESC"""
     )
     from .reading import converter
     cc, _ = converter()
@@ -137,7 +159,23 @@ def book_detail(request, book_id: int):
     )
     from .corpus_origins import attach_book
     attach_book(book, rows)
-    return Response({"book": book, "total": len(rows), "juan": rows})
+    result = {"book": book, "total": len(rows), "juan": rows}
+    if not rows:
+        try:
+            limit = max(1, min(int(request.query_params.get('limit', 50)), 200))
+            offset = max(0, int(request.query_params.get('offset', 0)))
+        except (ValueError, TypeError):
+            return Response({'detail': '分页参数必须是整数'}, status=400)
+        q = (request.query_params.get('q') or '').strip()
+        from .reading import query_forms
+        condition = '''book_id=%s AND (%s='' OR EXISTS(SELECT 1 FROM unnest(%s::text[]) f(form)
+            WHERE strpos(lower(coalesce(author,'') || E'\n' || coalesce(title,'') || E'\n' || coalesce(body,'')),lower(form))>0))'''
+        params = (book_id, q, query_forms(q))
+        total = db.one('SELECT count(*) AS c FROM corpus_poem WHERE ' + condition, params)
+        result.update({'poemTotal': total['c'], 'poemOffset': offset, 'poemLimit': limit,
+            'poemQuery': q, 'poems': db.query('''SELECT id,title,author,left(coalesce(body_simplified,body),80) AS head
+                FROM corpus_poem WHERE ''' + condition + ' ORDER BY id LIMIT %s OFFSET %s', params + (limit, offset))})
+    return Response(result)
 
 
 @api_view(["GET"])
@@ -155,6 +193,8 @@ def juan_detail(request, unit_id: int):
     paras = db.query("SELECT id, seq, body FROM paragraph WHERE unit_id = %s ORDER BY seq", (unit_id,))
     from .corpus_origins import attach_unit
     attach_unit(unit, paras)
+    from .paragraph_explanations import attach_explanations
+    attach_explanations(unit, paras)
     unit["paragraphs"] = paras
     from .reading import attach_reading
     attach_reading(unit, paras)
@@ -240,7 +280,7 @@ def person_career(request, key):
 
 @api_view(["GET"])
 def work_corpus_text(request, key):
-    """返回该作品在语料库中的同题文本，用于对照阅读。"""
+    """返回同作者、同题且首句对应的候选文本，仍需审校。"""
     from .models import Work
 
     if not db.available():
@@ -257,16 +297,67 @@ def work_corpus_text(request, key):
         if a:
             cands.add(str(a).replace(" ", ""))
     rows = db.query(
-        """SELECT coalesce(nullif(title_display, ''), title) AS title,
+        """SELECT id, coalesce(nullif(title_display, ''), title) AS title,
                   title AS title_raw, author, body, coalesce(body_simplified, body) AS body_simplified
              FROM corpus_poem
             WHERE coalesce(author_simplified, author) = %s
-              AND replace(replace(coalesce(title_simp, title), ' ', ''), '　', '') = ANY(%s)
-            ORDER BY length(body) DESC
-            LIMIT 3""",
-        (author, list(cands)),
+              AND (
+                replace(replace(coalesce(title_simp, title), ' ', ''), '　', '') = ANY(%s)
+                OR EXISTS (
+                  SELECT 1 FROM unnest(string_to_array(
+                    translate(replace(replace(coalesce(title_simp, title), ' ', ''), '　', ''),
+                              '・·', '··'), '·')) AS title_part
+                  WHERE title_part = ANY(%s)
+                )
+              )
+            ORDER BY id""",
+        (author, list(cands), list(cands)),
     )
-    return Response({"work": key, "author": author, "title": w.title_zh, "matches": rows})
+    matches = _matching_corpus_texts(w.paragraphs_simplified or w.paragraphs or [], rows)
+    # 组诗、异体字或词牌别名可能使题名检索漏掉同一篇；仍须作者及正文锚点对应。
+    if not matches:
+        paragraphs = w.paragraphs_simplified or w.paragraphs or []
+        prefix = _corpus_search_prefix(paragraphs)
+        if prefix:
+            fallback = db.query(
+                """SELECT id, coalesce(nullif(title_display, ''), title) AS title,
+                          title AS title_raw, author, body, coalesce(body_simplified, body) AS body_simplified
+                     FROM corpus_poem
+                    WHERE coalesce(author_simplified, author) = %s
+                      AND strpos(coalesce(body_simplified, body), %s) > 0
+                    ORDER BY id LIMIT 100""",
+                (author, prefix),
+            )
+            matches = _matching_corpus_texts(paragraphs, fallback)
+    return Response({"work": key, "author": author, "title": w.title_zh, "matches": matches,
+                     "scope": "候选对照·未经人工审校"})
+
+
+def _corpus_search_prefix(paragraphs):
+    for paragraph in paragraphs:
+        run = ''
+        for char in paragraph:
+            if char.isspace() or unicodedata.category(char).startswith(('P', 'Z')):
+                if len(run) >= 4:
+                    return run[:4]
+                run = ''
+            else:
+                run += char
+        if len(run) >= 4:
+            return run[:4]
+    return ''
+
+
+def _matching_corpus_texts(paragraphs, rows):
+    def plain(text):
+        return ''.join(c for c in text if not c.isspace() and not unicodedata.category(c).startswith(('P', 'Z')))
+
+    original = plain(''.join(paragraphs))
+    # 短于八字的摘录不足以区分同词牌作品，宁可不显示。
+    if len(original) < 8:
+        return []
+    anchor = original[:min(12, len(original))]
+    return [row for row in rows if anchor in plain(row.get('body_simplified') or row.get('body') or '')][:3]
 
 @api_view(["GET"])
 def person_timeline(request, key):

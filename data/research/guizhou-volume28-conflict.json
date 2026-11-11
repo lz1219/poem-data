@@ -9,13 +9,13 @@
   "status": "pending",
   "visibility": "public",
   "title": "贵州通志：028文件卷首与卷末题名冲突",
-  "claim": "AI辅助资料解释·未经人工审校。同一固定文件JUAN记卷二十八、卷首题三十八、卷末题二十八；不静默修正或认定原因。",
+  "claim": "AI辅助资料解释·未经人工审校。电子卷首三十八与卷末二十八有冲突；另取CADAL图112卷首、图113版心，AI目读均为二十八。原转录保留，未裁定差异原因。",
   "provenance": {
     "origin": "mixed",
     "model": "Codex",
     "modelVersion": "运行环境未提供精确模型快照",
-    "generatedAt": "2026-11-01T12:03:54.832699+00:00",
-    "method": "程序截取真实原件字节；AI辅助解释证据边界，不形成确定行迹或校定版本"
+    "generatedAt": "2026-11-01T12:43:35.986119+00:00",
+    "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
   },
   "evidence": [
     {
@@ -54,7 +54,7 @@
   "issues": [
     "可能涉及转录、底本或卷题刊误，须对照影像；文件编号与元数据不能裁决原题。"
   ],
-  "reasoning": "原态记载只提供继续核查的出处，不自动证明明代事件、亲历、因果或现代精确位置。",
+  "reasoning": "所取影像两处题名与电子卷末相合、与电子卷首不同；只能形成局部图文差异候选，不能由同名四库标签断定同一物理底本或直接判定原刻/转录错误。",
   "counterEvidence": "清代后出编纂与明代事件有时间距离；所取四库转录尚未完成影像对校。暂无足够依据裁定版本差异或现有站点叙述。",
   "alternatives": [
     "同名志书有康熙37卷及乾隆46卷等不同版本，不能按书名混用。"
@@ -66,8 +66,46 @@
       "mode": "明确条题边界逐字截取"
     }
   ],
-  "nextAction": "核原影像、版本及明代同时资料；卷题冲突先存疑，地点和系年不自动采信。",
-  "revision": 1,
-  "updatedAt": "2026-11-01T12:03:54.833415+00:00",
-  "sha256": "c96770bfa7ced377afe755311f02a61937742db6632cb09208fd91cc97a14afa"
+  "nextAction": "人工对图112卷首、图113版心和电子上下文核字形、版本关系；未裁定前不改原转录。",
+  "imageObservations": [
+    {
+      "sourceId": "commons-guizhou-siku",
+      "fileTitle": "File:CADAL06044369 貴州通志·卷二十七~卷二十八.djvu",
+      "originalSha256": "473822c734600e60cd515f2ebc490b54968c3ce033896b4585491bcd98e5f490",
+      "originalMetadataSha256": "a23c25fea989bef442ba8013a80abc3e7df6fb9228b7ea25e781610752e4e995",
+      "metadataRevisionId": 972709421,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=972709421",
+      "page": 112,
+      "previewSha256": "54415bc4a0a16cece299c6017d50b55a3519ec8c82a7965f29de8bc6b20f00fd",
+      "previewMetadataSha256": "dc449b523d048d991c10e7d15b2b2b78c5d69c7ed498e952cf5044441ef3590b",
+      "previewUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page112-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "reading": "貴州通志卷二十八",
+      "method": "AI目读平台渲染图；第112图读卷首，第113图读版心，字形及底本关系待人工复核",
+      "origin": "ai",
+      "generatedAt": "2026-11-01T12:43:35.858689+00:00",
+      "status": "pending",
+      "reviewHistory": []
+    },
+    {
+      "sourceId": "commons-guizhou-siku",
+      "fileTitle": "File:CADAL06044369 貴州通志·卷二十七~卷二十八.djvu",
+      "originalSha256": "473822c734600e60cd515f2ebc490b54968c3ce033896b4585491bcd98e5f490",
+      "originalMetadataSha256": "a23c25fea989bef442ba8013a80abc3e7df6fb9228b7ea25e781610752e4e995",
+      "metadataRevisionId": 972709421,
+      "sourceUrl": "https://commons.wikimedia.org/w/index.php?oldid=972709421",
+      "page": 113,
+      "previewSha256": "0161aeb91c651de87fbd0a9977ae9cf9b7e788caaa41e95ab371b02098169441",
+      "previewMetadataSha256": "71c0bd022def936853535f055ed36b1828b89db0ffd3c9078d3eb820f35206db",
+      "previewUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page113-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "reading": "卷二十八",
+      "method": "AI目读平台渲染图；第112图读卷首，第113图读版心，字形及底本关系待人工复核",
+      "origin": "ai",
+      "generatedAt": "2026-11-01T12:43:35.858709+00:00",
+      "status": "pending",
+      "reviewHistory": []
+    }
+  ],
+  "revision": 2,
+  "updatedAt": "2026-11-01T12:43:35.987403+00:00",
+  "sha256": "f6b66cfa347f6a0a0a8ba585dc8c7c76ea0fcfdb6a52263c8a76b59ba95fdaab"
 }

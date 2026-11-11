@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "key": "秦妇吟",
+  "titleZh": "秦妇吟",
+  "titleEn": "Lament of the Lady of Qin",
+  "aliases": [
+    "秦妇吟",
+    "秦婦吟"
+  ],
+  "authorKey": "weizhuang",
+  "genre": "shi",
+  "citation": "《全唐诗》卷六九九 · 敦煌写本斯五四七六等",
+  "excerpt": true,
+  "level": "popular",
+  "certainty": "confirmed",
+  "composed": {
+    "year": 883,
+    "yearKind": "composition",
+    "placeZh": "长安",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "upstream-quote-baseline",
+    "paragraphs": [
+      "長安寂寂今何有？廢市荒街麥苗秀。",
+      "採樵斫盡杏園花，修寨誅殘御溝柳。",
+      "華軒繡轂皆銷散，甲第朱門無一半。",
+      "含元殿上狐兔行，花萼樓前荊棘滿。",
+      "昔時繁盛皆埋沒，舉目淒涼無故物。",
+      "內庫燒為錦繡灰，天街踏盡公卿骨。"
+    ],
+    "paragraphsSimplified": [
+      "长安寂寂今何有？废市荒街麦苗秀。",
+      "采樵斫尽杏园花，修寨诛残御沟柳。",
+      "华轩绣毂皆销散，甲第朱门无一半。",
+      "含元殿上狐兔行，花萼楼前荆棘满。",
+      "昔时繁盛皆埋没，举目凄凉无故物。",
+      "内库烧为锦绣灰，天街踏尽公卿骨。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "长安城如今一片死寂，市街荒芜长满麦苗。昔日繁盛的高门大第荡然无存，含元殿上狐兔出没，花萼楼前长满荆棘。皇宫内库珍宝化作飞灰，繁华御街上踏遍公卿的枯骨。",
+  "notes": [
+    {
+      "term": "摘录说明",
+      "explain": "本篇为敦煌石室重见之长篇叙事诗（全篇1666字）精选摘录；节选其控诉黄巢入长安后京华沦覆的最著名段落。"
+    },
+    {
+      "term": "内库",
+      "explain": "皇宫内储藏珍宝物资的仓库。"
+    },
+    {
+      "term": "天街",
+      "explain": "指长安城内由承天门向南延伸的朱雀大街。"
+    },
+    {
+      "term": "含元殿",
+      "explain": "唐长安大明宫之正殿，皇帝举行重大朝会之所。"
+    }
+  ],
+  "background": "唐僖宗中和三年（883年），黄巢军占领长安后唐军反攻，长安城遭严重战火兵燹。韦庄当时困滞长安，目睹惨状，后脱身至婺源作此长篇叙事诗。",
+  "appreciation": {
+    "text": "本节为《秦妇吟》中最脍炙人口、震撼人心的段落。「内库烧为锦绣灰，天街踏尽公卿骨」以强烈的意象对仗，将盛唐两百年帝都的倾覆与贵胄的惨亡写得如在眼前，是晚唐乱世最沉痛的史诗见证。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "883",
+      "stance": "adopted",
+      "note": "诗首句‘中和癸卯春三月’即唐僖宗中和三年（883年）。",
+      "evidence": [
+        {
+          "quote": "中和癸卯春三月",
+          "source": "秦妇吟原作首句",
+          "grade": "A"
+        }
+      ]
+    }
+  ]
+}

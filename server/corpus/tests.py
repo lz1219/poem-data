@@ -107,6 +107,24 @@ class ResearchContractTests(TestCase):
         d['subject'] = {'type':'unsupported','key':'edition-quality'}
         self.assertIn('研究对象类型非法', validate_record(d, source_ids={'edition-quality'}, artifacts={}))
 
+    def test_image_observation_roundtrip_uses_database_registry_and_keeps_pending(self):
+        image={'sourceId':'image-test','fileTitle':'File:Test.djvu','page':2,'metadataRevisionId':7,
+            'originalSha256':'a'*64,'originalMetadataSha256':'b'*64,'previewSha256':'c'*64,'previewMetadataSha256':'d'*64,
+            'previewUrl':'https://example.org/page2.jpg','sourceUrl':'https://example.org/source',
+            'reading':'卷二十八','method':'AI目读','origin':'ai','generatedAt':'fixture-date','status':'pending','reviewHistory':[]}
+        asset={k:image[k] for k in ['fileTitle','originalSha256','originalMetadataSha256','metadataRevisionId','sourceUrl']}
+        asset['previews']=[{k:image[k] for k in ['page','previewSha256','previewMetadataSha256','previewUrl']}]
+        SourceRecord.objects.create(key='image-test',payload={'id':'image-test','imageAssets':[asset]})
+        d=self.record();d['imageObservations']=[image]
+        d['provenance']={'origin':'mixed','model':'fixture','modelVersion':'fixture','generatedAt':'fixture-date'}
+        ResearchRevision.objects.create(record_id=d['id'],revision=1,payload=d)
+        self.assertEqual(self.client.get('/api/research/test-record/1').json()['imageObservations'],[image])
+        d=self.record(2);d['provenance']={'origin':'mixed','model':'fixture','modelVersion':'fixture','generatedAt':'fixture-date'}
+        d['imageObservations']=[{**image,'page':1}]
+        with self.assertRaises(ValidationError):ResearchRevision.objects.create(record_id=d['id'],revision=2,payload=d)
+        d['imageObservations']=[image];d['status']='verified';d['reviewHistory']=[{'reviewer':'fixture','reviewedAt':'fixture','decision':'verified'}]
+        with self.assertRaises(ValidationError):ResearchRevision.objects.create(record_id=d['id'],revision=2,payload=d)
+
     def test_internal_to_public_script_keeps_one_revision_sequence(self):
         sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'scripts'))
         from research_records import save_record

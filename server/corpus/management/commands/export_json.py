@@ -19,7 +19,7 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from corpus.models import Commentary, Edition, Journey, Person, Work, SourceRecord, ResearchRevision, ResearchArtifact
+from corpus.models import Apparatus, Commentary, Edition, Journey, Person, Work, SourceRecord, ResearchRevision, ResearchArtifact
 from corpus.research_rules import publishable
 from corpus.research_storage import database_context
 
@@ -94,9 +94,39 @@ class Command(BaseCommand):
                 "journeyKey": p.journey_key or None,
             })
 
+        # ── 检查数据库实际列（向下兼容尚未应用 0007 迁移的线上旧库）──
+        from django.db import connection
+        from django.db.models import Prefetch
+        table_cols = {}
+        try:
+            with connection.cursor() as cur:
+                cur.execute("""
+                    SELECT table_name, column_name 
+                    FROM information_schema.columns 
+                    WHERE table_name IN ('corpus_work', 'corpus_apparatus', 'corpus_commentary')
+                """)
+                for t_name, c_name in cur.fetchall():
+                    table_cols.setdefault(t_name, set()).add(c_name)
+        except Exception:
+            pass
+
+        has_place_key = "place_key" in table_cols.get("corpus_work", {"place_key"})
+        has_app_stable_id = "stable_id" in table_cols.get("corpus_apparatus", {"stable_id"})
+        has_comm_stable_id = "stable_id" in table_cols.get("corpus_commentary", {"stable_id"})
+
+        app_qs = Apparatus.objects.all() if has_app_stable_id else Apparatus.objects.defer("stable_id")
+        work_qs = Work.objects.select_related("author", "source_edition").prefetch_related(
+            Prefetch("apparatus", queryset=app_qs), "dating"
+        )
+        if not has_place_key:
+            work_qs = work_qs.defer("place_key")
+
         # ── 作品 ──
-        for w in Work.objects.select_related("author", "source_edition").prefetch_related("apparatus", "dating").all():
-            comments = list(w.commentaries.filter(status='verified'))
+        for w in work_qs.all():
+            comm_qs = w.commentaries.filter(status='verified')
+            if not has_comm_stable_id:
+                comm_qs = comm_qs.defer("stable_id")
+            comments = list(comm_qs)
             commentary_file = None
             if comments:
                 commentary_file = f"comments/{w.key}.json"
@@ -105,7 +135,7 @@ class Command(BaseCommand):
                     "workKey": w.key,
                     "items": [
                         {
-                            "id": c.stable_id or f"c{i:03d}",
+                            "id": (c.stable_id if has_comm_stable_id else None) or f"c{i:03d}",
                             "critic": c.critic,
                             "dynasty": c.dynasty,
                             "text": c.text,
@@ -133,7 +163,7 @@ class Command(BaseCommand):
                     "year": w.year,
                     "yearKind": w.year_kind,
                     "placeZh": w.place_zh or None,
-                    "placeKey": w.place_key or None,
+                    "placeKey": (w.place_key if has_place_key else None) or None,
                 },
                 "text": {
                     "sourceEdition": w.source_edition.key if w.source_edition_id else None,
@@ -155,7 +185,7 @@ class Command(BaseCommand):
                 },
                 "apparatus": [
                     {
-                        "id": a.stable_id or f"a{i:03d}",
+                        "id": (a.stable_id if has_app_stable_id else None) or f"a{i:03d}",
                         "locator": a.locator or {},
                         "baseEdition": a.base_edition or None,
                         "baseText": a.base_text,

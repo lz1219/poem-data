@@ -10,6 +10,7 @@
  * 用法：
  *   node scripts/emit-atlas.mjs --target ../jiangshan-xingzhi
  *   node scripts/emit-atlas.mjs --target ../jiangshan-xingzhi --check   # 只比对
+ *   node scripts/emit-atlas.mjs --data-dir <数据库导出目录> --target <地图目录>
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,15 +23,21 @@ const arg = (name, def) => {
   return i >= 0 ? args[i + 1] : def;
 };
 const TARGET = path.resolve(ROOT, arg('--target', '../jiangshan-xingzhi'));
+const DATA_DIR = path.resolve(ROOT, arg('--data-dir', 'data'));
 const CHECK = args.includes('--check');
 
 const readJSON = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
-const list = (dir) => (fs.existsSync(path.join(ROOT, dir)) ? fs.readdirSync(path.join(ROOT, dir)).filter((f) => f.endsWith('.json')).sort() : []);
+const list = (dir) => {
+  const folder = path.join(DATA_DIR, dir);
+  if (!fs.existsSync(folder)) throw new Error(`缺少数据目录：${folder}`);
+  return fs.readdirSync(folder).filter((f) => f.endsWith('.json')).sort();
+};
 
 /* ── 读取 poem-data ── */
-const works = list('data/works').map((f) => readJSON(path.join(ROOT, 'data/works', f)));
-const persons = list('data/persons').map((f) => readJSON(path.join(ROOT, 'data/persons', f)));
-const journeys = list('data/journeys').map((f) => readJSON(path.join(ROOT, 'data/journeys', f)));
+const works = list('works').map((f) => readJSON(path.join(DATA_DIR, 'works', f)));
+const persons = list('persons').map((f) => readJSON(path.join(DATA_DIR, 'persons', f)));
+const journeys = list('journeys').map((f) => readJSON(path.join(DATA_DIR, 'journeys', f)));
+if (!works.length || !persons.length || !journeys.length) throw new Error('作品、人物和行迹导出均不能为空');
 const personByKey = new Map(persons.map((p) => [p.key, p]));
 
 /* ── 读取江山行止的上游数据（用于差量） ── */

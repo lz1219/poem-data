@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 1,
+  "unitId": 2080,
+  "sourceRevision": 2489405,
+  "unitSha256": "5f724f677d0c3862348824c862f6f09cbf4e7e9ac5cdba1b802abb74d1578246",
+  "status": "candidate-not-imported",
+  "generation": {
+    "method": "ai-batch",
+    "model": "GPT-6 (session family)",
+    "modelSnapshot": null,
+    "snapshotAvailability": "Exact model snapshot not exposed in this session",
+    "generatedAt": "2026-11-05T06:03:56.590481+00:00",
+    "promptVersion": "paragraph-translation-v1",
+    "methodDescription": "当前Codex整理会话按固定原文起草；来源校改与异文仍待人工核查。"
+  },
+  "items": [
+    {
+      "id": "paragraph-129631-explanation",
+      "revision": 1,
+      "paragraphId": 129631,
+      "sourceSha256": "6236331d3a2920612300b4c330037a585774efdb0f323e21b780fc5a3c5e48f6",
+      "sourceText": "起著雍攝提格，盡玄黓困敦，凡三十五年。",
+      "translation": "从著雍摄提格年起，到玄黓困敦年止，共三十五年。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129631
+      },
+      "notes": [
+        {
+          "quote": "著雍攝提格",
+          "start": 1,
+          "end": 6,
+          "explanation": "古代纪年名称；此处与下文的纪年名称一起界定本卷范围，具体换算须核对历法资料。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129631
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129649-explanation",
+      "revision": 1,
+      "paragraphId": 129649,
+      "sourceSha256": "12caa75d43f5bd138765e27eaf33e7b9e1da91009ba331124cf4385e173f3c48",
+      "sourceText": "盜殺楚聲王，國人立其子〔疑，是為〕悼王。",
+      "translation": "有人杀害楚声王，国人拥立他的儿子；所据电子本此处疑为楚悼王。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129649
+      },
+      "notes": [
+        {
+          "quote": "〔疑，是為〕",
+          "start": 11,
+          "end": 17,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129649
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129650-explanation",
+      "revision": 1,
+      "paragraphId": 129650,
+      "sourceSha256": "ef6352fe9c87e1f43b091af469f39e31fdbff159be9cad9f823e7845bac114a9",
+      "sourceText": "秦伐魏，至陽〔狐〕(孤)。",
+      "translation": "秦国攻打魏国，到达阳狐。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129650
+      },
+      "notes": [
+        {
+          "quote": "〔狐〕",
+          "start": 6,
+          "end": 9,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129650
+          }
+        },
+        {
+          "quote": "(孤)",
+          "start": 9,
+          "end": 12,
+          "explanation": "括号内文字为所据电子本保留的另一读法；本译暂采用前面的方括号文字，不据此裁决异文。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129650
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129651-explanation",
+      "revision": 1,
+      "paragraphId": 129651,
+      "sourceSha256": "f8bb18d4c6df45b4bb2f0df1de92daffd5008aa60e6a13d900f3ad83ea3665e6",
+      "sourceText": "魏、韓、趙伐楚，至〔乘〕(桑)丘。",
+      "translation": "魏、韩、赵三国攻打楚国，到达乘丘。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129651
+      },
+      "notes": [
+        {
+          "quote": "〔乘〕",
+          "start": 9,
+          "end": 12,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129651
+          }
+        },
+        {
+          "quote": "(桑)",
+          "start": 12,
+          "end": 15,
+          "explanation": "括号内文字为所据电子本保留的另一读法；本译暂采用前面的方括号文字，不据此裁决异文。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129651
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129658-explanation",
+      "revision": 1,
+      "paragraphId": 129658,
+      "sourceSha256": "1d548239ca43c6785d3d44b89b8007865a6c33b2c578ed8f818da329c603bc2d",
+      "sourceText": "楚〔敗鄭師〕，圍鄭。鄭人殺其相駟子陽。",
+      "translation": "楚军打败郑军，包围郑国。郑国人杀死了国相驷子阳。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129658
+      },
+      "notes": [
+        {
+          "quote": "〔敗鄭師〕",
+          "start": 1,
+          "end": 6,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129658
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129667-explanation",
+      "revision": 1,
+      "paragraphId": 129667,
+      "sourceSha256": "1aa65f21f07f898be0a808f005968946df17d80d3d9460a8424a3709a825bd2f",
+      "sourceText": "初，田〔恆〕(常)生襄子盤，盤生莊子白，白生太公和。是歲，田和遷齊康公於海上，使食一城，以奉其先祀。",
+      "translation": "起初，田恒生襄子田盘，田盘生庄子田白，田白生太公田和。这一年，田和把齐康公迁到海边，让他以一座城邑的收入奉养祖先的祭祀。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129667
+      },
+      "notes": [
+        {
+          "quote": "〔恆〕",
+          "start": 3,
+          "end": 6,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129667
+          }
+        },
+        {
+          "quote": "(常)",
+          "start": 6,
+          "end": 9,
+          "explanation": "括号内文字为所据电子本保留的另一读法；本译暂采用前面的方括号文字，不据此裁决异文。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129667
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129669-explanation",
+      "revision": 1,
+      "paragraphId": 129669,
+      "sourceSha256": "2bddcc73e46ef91119ac83ee065bce594beaa3fb3cd5f97760ce736b00644fc8",
+      "sourceText": "齊伐魏，取襄〔陵〕(陽)。",
+      "translation": "齐国攻打魏国，夺取襄陵。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129669
+      },
+      "notes": [
+        {
+          "quote": "〔陵〕",
+          "start": 6,
+          "end": 9,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129669
+          }
+        },
+        {
+          "quote": "(陽)",
+          "start": 9,
+          "end": 12,
+          "explanation": "括号内文字为所据电子本保留的另一读法；本译暂采用前面的方括号文字，不据此裁决异文。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129669
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129671-explanation",
+      "revision": 1,
+      "paragraphId": 129671,
+      "sourceSha256": "09471f50cfc20ba33fc0fff6b2b98a034a78f671cdae24fd53294300e2ea2e2d",
+      "sourceText": "秦侵〔魏陰〕晉。",
+      "translation": "秦国侵入魏国的阴晋。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129671
+      },
+      "notes": [
+        {
+          "quote": "〔魏陰〕",
+          "start": 2,
+          "end": 6,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129671
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129672-explanation",
+      "revision": 1,
+      "paragraphId": 129672,
+      "sourceSha256": "a449547455bf4c770ecdbda5cea7c36a18e7880cc1edbf9212f6b67dd22e43f8",
+      "sourceText": "齊田和會魏文侯、楚人、衛人于濁澤，求為諸侯。魏文侯為之請於王及諸侯，王許之。",
+      "translation": "齐国田和与魏文侯、楚国人、卫国人在浊泽会盟，请求成为诸侯。魏文侯替他向周王和诸侯请求，周王答应了。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129672
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129681-explanation",
+      "revision": 1,
+      "paragraphId": 129681,
+      "sourceSha256": "49edb2d163a49dde3a912dcb9a3e8b03923519d36c039683e63314b1ee5a1b2c",
+      "sourceText": "趙公子朝作亂，出奔魏，與魏襲邯鄲，不克。",
+      "translation": "赵国公子朝发动叛乱，逃到魏国，又与魏国一起袭击邯郸，没有攻克。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129681
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129684-explanation",
+      "revision": 1,
+      "paragraphId": 129684,
+      "sourceSha256": "7d9fe46e08d09ab8b4151d8c0616e83f782affb541df029068e59bee1c2e5c17",
+      "sourceText": "韓伐鄭，取陽城；伐宋，執宋〔悼〕公，〔國人立子休公田〕。",
+      "translation": "韩国攻打郑国，夺取阳城；又攻打宋国，俘虏宋悼公，宋国人拥立他的儿子休公田。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129684
+      },
+      "notes": [
+        {
+          "quote": "〔悼〕",
+          "start": 13,
+          "end": 16,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129684
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129687-explanation",
+      "revision": 1,
+      "paragraphId": 129687,
+      "sourceSha256": "8d08b98f737b4b84857dae6534e05cc5541eaaa0ab42f7fe90fc0c746de31f52",
+      "sourceText": "〔魯穆公薨，子共公奮立〕。",
+      "translation": "鲁穆公去世，他的儿子奋即位，是为鲁共公。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129687
+      },
+      "notes": [
+        {
+          "quote": "〔魯穆公薨，子共公奮立〕",
+          "start": 0,
+          "end": 12,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129687
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129690-explanation",
+      "revision": 1,
+      "paragraphId": 129690,
+      "sourceSha256": "cb8b4bd9a66cee23858f22d08531686d0d68483de1ca736e5f652c781b7f1902",
+      "sourceText": "齊伐燕，取桑丘。魏、韓、趙伐齊，至桑丘。",
+      "translation": "齐国攻打燕国，夺取桑丘。魏、韩、赵三国攻打齐国，到达桑丘。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129690
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129692-explanation",
+      "revision": 1,
+      "paragraphId": 129692,
+      "sourceSha256": "852f9fdca4f403a0597c19a5019ba3d33a67e2fc0276af19557b533bdd6432c1",
+      "sourceText": "齊康公薨，無子，田氏遂並齊而有之。",
+      "translation": "齐康公去世，没有儿子，田氏于是兼并齐国并占有其国。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129692
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129717-explanation",
+      "revision": 1,
+      "paragraphId": 129717,
+      "sourceSha256": "646492229945e29cbcb7010c4e9c016f13ffa05557221fddbc26355684742e3f",
+      "sourceText": "〔魏武侯薨，不立太子，子罃與公中緩爭立，國內亂〕。",
+      "translation": "魏武侯去世，没有立太子，他的儿子罃与公中缓争夺君位，国内发生动乱。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129717
+      },
+      "notes": [
+        {
+          "quote": "〔魏武侯薨，不立太子，子罃與公中緩爭立，國內亂〕",
+          "start": 0,
+          "end": 24,
+          "explanation": "方括号沿用所据电子本的校改标记；具体校改依据请查看来源编者注，本译暂依显示文字。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129717
+          }
+        }
+      ]
+    }
+  ]
+}

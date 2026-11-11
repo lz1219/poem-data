@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-01T12:04:45.768239+00:00",
+  "checkedAt": "2026-11-01T12:43:35.976621+00:00",
   "gap": "三国志蜀吴、欧阳修及王阳明地方志缺口",
   "items": [
     {
@@ -336,6 +336,113 @@
         "download": "catalog-capture-only",
         "ingest": "research-metadata",
         "redistribute": "catalog-CC0;images-not-cleared"
+      }
+    },
+    {
+      "id": "guizhou-image-CADAL06044369",
+      "channel": "image",
+      "collection": "guizhou-tongzhi-research",
+      "title": "File:CADAL06044369 貴州通志·卷二十七~卷二十八.djvu",
+      "metadataProbe": {
+        "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06044369+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu&iiurlwidth=1400&iiurlparam=page111-1400px&format=json&formatversion=2",
+        "checkedAt": "2026-11-01T12:25:39.963895+00:00",
+        "status": "reachable",
+        "sha256": "a23c25fea989bef442ba8013a80abc3e7df6fb9228b7ea25e781610752e4e995",
+        "bytes": 3425
+      },
+      "revisionId": 972709421,
+      "image": {
+        "size": 4531846,
+        "width": 957,
+        "height": 1359,
+        "pagecount": 183,
+        "thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page111-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "thumbwidth": 1400,
+        "thumbheight": 1389,
+        "thumbattribs": {
+          "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page111-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "decoding": "async",
+          "loading": "lazy",
+          "width": 1400,
+          "height": 1389
+        },
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "descriptionurl": "https://commons.wikimedia.org/wiki/File:CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu",
+        "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85309659",
+        "sha1": "72abc9dc8c27e97762e4124a1ce8d7766611c739"
+      },
+      "platformLicenseLabel": "Public domain",
+      "artifactProbe": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "checkedAt": "2026-11-01T12:25:46.588910+00:00",
+        "status": "reachable",
+        "sha256": "473822c734600e60cd515f2ebc490b54968c3ce033896b4585491bcd98e5f490",
+        "bytes": 4531846
+      },
+      "previews": [
+        {
+          "page": 111,
+          "probe": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page111-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "checkedAt": "2026-11-01T12:25:52.303851+00:00",
+            "status": "reachable",
+            "sha256": "9faae54876db1feb0bd91fbad2082d70129c15b1d8c3e184a244881c8ee17f9a",
+            "bytes": 172897
+          },
+          "kind": "platform-rendered-preview",
+          "metadataProbe": {
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo%7Crevisions&iiprop=url%7Csize%7Csha1%7Cextmetadata&rvprop=ids%7Ctimestamp&titles=File%3ACADAL06044369+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu&iiurlwidth=1400&iiurlparam=page111-1400px&format=json&formatversion=2",
+            "checkedAt": "2026-11-01T12:25:39.963895+00:00",
+            "status": "reachable",
+            "sha256": "a23c25fea989bef442ba8013a80abc3e7df6fb9228b7ea25e781610752e4e995",
+            "bytes": 3425
+          }
+        },
+        {
+          "page": 112,
+          "metadataProbe": {
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&iiprop=url%7Csha1&titles=File%3ACADAL06044369+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu&iiurlwidth=1600&iiurlparam=page112-1600px&format=json&formatversion=2",
+            "checkedAt": "2026-11-01T12:27:24.887855+00:00",
+            "status": "reachable",
+            "sha256": "dc449b523d048d991c10e7d15b2b2b78c5d69c7ed498e952cf5044441ef3590b",
+            "bytes": 1768
+          },
+          "probe": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page112-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "checkedAt": "2026-11-01T12:27:32.408799+00:00",
+            "status": "reachable",
+            "sha256": "54415bc4a0a16cece299c6017d50b55a3519ec8c82a7965f29de8bc6b20f00fd",
+            "bytes": 763401
+          },
+          "kind": "platform-rendered-preview"
+        },
+        {
+          "page": 113,
+          "metadataProbe": {
+            "url": "https://commons.wikimedia.org/w/api.php?action=query&prop=imageinfo&iiprop=url%7Csha1&titles=File%3ACADAL06044369+%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu&iiurlwidth=1600&iiurlparam=page113-1600px&format=json&formatversion=2",
+            "checkedAt": "2026-11-01T12:27:35.971508+00:00",
+            "status": "reachable",
+            "sha256": "71c0bd022def936853535f055ed36b1828b89db0ffd3c9078d3eb820f35206db",
+            "bytes": 1768
+          },
+          "probe": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu/page113-1920px-CADAL06044369_%E8%B2%B4%E5%B7%9E%E9%80%9A%E5%BF%97%C2%B7%E5%8D%B7%E4%BA%8C%E5%8D%81%E4%B8%83~%E5%8D%B7%E4%BA%8C%E5%8D%81%E5%85%AB.djvu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "checkedAt": "2026-11-01T12:27:41.492969+00:00",
+            "status": "reachable",
+            "sha256": "0161aeb91c651de87fbd0a9977ae9cf9b7e788caaa41e95ab371b02098169441",
+            "bytes": 479869
+          },
+          "kind": "platform-rendered-preview"
+        }
+      ],
+      "status": "image-captured-research-only",
+      "relationship": "平台标四库本；卷首及版心AI目读候选与Git有差异，底本同版关系及误差原因仍待核",
+      "metadataNote": "第111–113图为平台渲染预览，原DjVu另存；目读不冒充原始文本或人工校勘",
+      "permissions": {
+        "read": true,
+        "download": "public-original",
+        "ingest": "research-copy",
+        "redistribute": "not-cleared"
       }
     }
   ]

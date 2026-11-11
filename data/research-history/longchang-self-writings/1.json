@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0",
+  "id": "longchang-self-writings",
+  "subject": {
+    "type": "journey",
+    "key": "wangyangming"
+  },
+  "kind": "witness",
+  "status": "partial",
+  "visibility": "public",
+  "title": "东洞诗与何陋轩记：居处自述候选",
+  "claim": "AI辅助资料解释·未经人工审校。所收东洞诗有移居、洞居之语，何陋轩记有谪居龙场自述；不能仅凭文字认定现代精确居址或把不同记述合为一景。",
+  "provenance": {
+    "origin": "mixed",
+    "model": "Codex",
+    "modelVersion": "运行环境未提供精确模型快照",
+    "generatedAt": "2026-11-01T12:43:35.993977+00:00",
+    "method": "程序截取固定原文；AI目读平台预览并说明证据边界，未经人工学术审校"
+  },
+  "evidence": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "始得東洞遂改為陽明小洞天三首¶\n古泂閟荒僻虚設疑相待披莱歷風磴移居快幽¶\n塏營炊就巗竇放榻依石壘穹窒旋薫塞夷坎仍¶\n灑掃卷帙澷堆列樽壺動光彩夷居信何陋恬淡¶\n意方在豈不桑梓懐素位聊無悔¶\n童僕自相語洞居頗不惡人力免結搆天巧謝雕¶\n鑿清泉傍厨落翠霧還成幕我軰日嬉偃主人自¶\n愉樂雖無棨㦸榮且逺塵囂聒但恐霜雪凝雲深¶\n<pb:KR4e0157_SBCK_014-45a>¶\n衣絮薄¶\n我聞筦爾笑周慮愧爾言上古䖏巢窟杯飲皆汙¶\n樽沍極陽内伏石穴多冬暄豹隱文始澤龍蟄身¶\n乃存豈無數尺榱輕裘吾不温邈矣簞瓢子此心¶\n期與論¶",
+      "locator": "KR4e0157_014.txt，KR4e0157_SBCK_014-44b",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_014.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "8e3e52254c0ade9e3d8868648cc8f9f48a3b253ded2553bd235f5d9f25ecec89",
+      "sha256": "a9407ce8e8175d1e642b0908e3d5aaa64800dc5ffe406aae2238b4d855446c40",
+      "textFile": "data/witnesses/a9407ce8e8175d1e642b0908e3d5aaa64800dc5ffe406aae2238b4d855446c40.txt",
+      "startByte": 42182,
+      "endByte": 42861,
+      "verifiedQuote": true,
+      "verification": "固定电子文件逐字节对应，不等于核定原影像、作年或现代地点",
+      "stance": "context",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "quote": "昔孔子欲居九夷人以爲陋孔子曰君子居之何¶\n陋之有守仁以罪謪龍塲龍塲古夷蔡之外扵今¶\n爲要綏而習類尚因其故人皆以予自上國徃將¶\n陋其地弗能居也而予處之旬月安而樂之求其¶\n所謂甚陋者而莫得",
+      "locator": "KR4e0157_018.txt，KR4e0157_SBCK_018-8a",
+      "url": "https://github.com/kanripo/KR4e0157/blob/a02a2a96a83747082e5833f61dce6ef243ecbcf1/KR4e0157_018.txt",
+      "commit": "a02a2a96a83747082e5833f61dce6ef243ecbcf1",
+      "originalFileSha256": "f555bca66bda5eb9be7b4d43648f4a17f4c6efd4f0e266275f93ac2b744950f4",
+      "sha256": "6c414d74c07fd3507fc2b04065829e242b9e69d2fb5124f1aa10ee89781c3d08",
+      "textFile": "data/witnesses/6c414d74c07fd3507fc2b04065829e242b9e69d2fb5124f1aa10ee89781c3d08.txt",
+      "startByte": 7940,
+      "endByte": 8204,
+      "verifiedQuote": true,
+      "verification": "固定电子文件逐字节对应，不等于核定原影像、作年或现代地点",
+      "stance": "context",
+      "grade": "ungraded"
+    }
+  ],
+  "issues": [
+    "年谱为后编叙述，诗文为所收作品，文献性质分别保留；原卷/字形与影像尚待核。",
+    "旧基线引文和反推繁体不因相关片段而自动核定。"
+  ],
+  "reasoning": "只按所取原态材料拆分叙述依据，不以同书片段数充当独立佐证。",
+  "counterEvidence": "尚未完成独立版本和影像核查；未据这些文本确证居址、全部细节或默认纪年。",
+  "alternatives": [
+    "不同材料可能记不同居处或阶段，不自动连成同一场景。"
+  ],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "sourceId": "kanripo-kr4e0157",
+      "relatedStop": "wangyangming:5",
+      "legacyStop": {
+        "titleZh": "龙场大悟·创立心学",
+        "descZh": "抵达贵州万山丛棘、瘴疠横行之龙场驿。居东洞石棺之中，日夜端居澄默，自问“圣人处此更有何道”。正德三年中夜忽然大悟格物致知之旨，彻见“圣人之道，吾性自足，向之求理于事物者误也”，继而倡“知行合一”，开五百年阳明心学。",
+        "source": "（上游数据）"
+      }
+    }
+  ],
+  "nextAction": "核各篇原卷及独立版本，分别确认居住、悟学、石墎叙事，不以现代纪念建筑代证。",
+  "revision": 1,
+  "updatedAt": "2026-11-01T12:43:35.994502+00:00",
+  "sha256": "be18ad8454807d26f5d7c732726df7a17ed3e381ee986116ddcf11687d74fc06"
+}

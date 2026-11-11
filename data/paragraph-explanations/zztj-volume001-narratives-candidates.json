@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "unitId": 2080,
+  "sourceRevision": 2489405,
+  "unitSha256": "5f724f677d0c3862348824c862f6f09cbf4e7e9ac5cdba1b802abb74d1578246",
+  "status": "candidate-not-imported",
+  "generation": {
+    "method": "ai-batch",
+    "model": "GPT-6 (session family)",
+    "modelSnapshot": null,
+    "snapshotAvailability": "Exact model snapshot not exposed in this session",
+    "generatedAt": "2026-11-05T06:11:54.425555+00:00",
+    "promptVersion": "paragraph-translation-v1",
+    "methodDescription": "当前Codex整理会话根据固定原文起草；历史事实、异文和语义均未人工审校。"
+  },
+  "items": [
+    {
+      "id": "paragraph-129638-explanation",
+      "revision": 1,
+      "paragraphId": 129638,
+      "sourceSha256": "e5d3cb41f10858d9c209277f30b92eaacb8cdd8b53ea420c787c71021c1b7692",
+      "sourceText": "嗚呼！君臣之禮既壞矣，則天下以智力相雄長，遂使聖賢之後為諸侯者，社稷無不泯絕，生民之害糜滅幾盡，豈不哀哉！",
+      "translation": "唉！君臣之间的礼制既然败坏，天下便凭借智谋和力量互相争雄，结果使圣贤的后代中位为诸侯的人，国家没有不灭亡的，百姓也在灾祸中几乎丧尽，难道不可悲吗？",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129638
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129675-explanation",
+      "revision": 1,
+      "paragraphId": 129675,
+      "sourceSha256": "f3db86ce2a7800893fc9cfe257693d10f0c0644931fe49ffadd42216312aa738",
+      "sourceText": "武侯浮西河而下，中流顧謂吳起曰：「美哉山河之固，此魏國之寶也！」對曰：「在德不在險。昔三苗氏，左洞庭，右彭蠡，德義不修，禹滅之；夏桀之居，左河濟，右泰華，伊闕在其南，羊腸在其北，修政不仁，湯放之；商紂之國，左孟門，右太行，〔恆〕(常)山在其北，大河經其南，修政不德，武王殺之。由此觀之，在德不在險。若君不修德，舟中之人皆敵國也。」武侯曰：「善。」",
+      "translation": "魏武侯乘船顺西河而下，在河中央回头对吴起说：“山河形成的险固地势多么美好啊，这是魏国的宝贝！”吴起回答：“关键在德行，不在险要。过去三苗氏左有洞庭，右有彭蠡，却不修德义，被禹消灭；夏桀居住之地左有河、济，右有泰山、华山，南有伊阙，北有羊肠，施政不仁，被商汤放逐；商纣的国家左有孟门，右有太行，北有恒山，大河流经南面，施政无德，被周武王杀死。由此看来，关键在德行，不在险要。如果君王不修德，同船的人都会成为敌国。”魏武侯说：“说得好。”",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129675
+      },
+      "notes": [
+        {
+          "quote": "〔恆〕",
+          "start": 111,
+          "end": 114,
+          "explanation": "方括号是所据电子本的校改标记，译文暂取“恒山”；括号内保留另一读法，校改依据须核来源编者注。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129675
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129689-explanation",
+      "revision": 1,
+      "paragraphId": 129689,
+      "sourceSha256": "f45f54e8a152f5b50dac424f4bf26187f150c19ebe56d5a3f2d4ffa310c2a6af",
+      "sourceText": "楚悼王薨，貴戚大臣作亂，攻吳起，起走之王尸而伏之。擊起之徒因射刺起，並中王尸。既葬，〔太子〕肅王〔臧〕即位。使令尹盡誅為亂者，坐起夷宗者七十餘家。",
+      "translation": "楚悼王去世，王室贵戚和大臣作乱，攻击吴起。吴起跑到楚悼王的遗体旁，伏在遗体上。攻击吴起的人便向他射箭、刺杀，连楚悼王的遗体也被射中。安葬之后，太子臧即位，是为楚肃王。他命令令尹把作乱的人全部诛杀，因吴起一事被诛灭宗族的有七十多家。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129689
+      },
+      "notes": [
+        {
+          "quote": "〔太子〕",
+          "start": 42,
+          "end": 46,
+          "explanation": "方括号依所据电子本保留；其文字的具体校改依据须核来源编者注。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129689
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129704-explanation",
+      "revision": 1,
+      "paragraphId": 129704,
+      "sourceSha256": "664e7acf85ccf3aaee275d5736003fa5b19a8d350ea7c5db54a24b73e747bb9a",
+      "sourceText": "〔韓嚴遂弒哀侯，國人立其子懿侯若山。初，哀侯以韓廆為相而愛嚴遂，二人甚相害也。嚴遂令人刺韓廆於朝，廆走哀侯，哀侯抱之。人刺韓廆，兼及哀侯〕。",
+      "translation": "韩严遂杀害韩哀侯，韩国人拥立哀侯的儿子若山，是为韩懿侯。起初，韩哀侯任用韩廆为相，又宠爱严遂，两人互相憎恨很深。严遂派人在朝堂上刺杀韩廆，韩廆逃到哀侯身边，哀侯抱住他。刺客刺杀韩廆，也刺中了哀侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129704
+      },
+      "notes": [
+        {
+          "quote": "〔韓嚴遂弒哀侯",
+          "start": 0,
+          "end": 7,
+          "explanation": "本段位于所据电子本的方括号校改范围内，译文依显示文字，具体校改依据须核来源编者注。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129704
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129720-explanation",
+      "revision": 1,
+      "paragraphId": 129720,
+      "sourceSha256": "8aa9e3478a794545c9099ceb2a95842c64fe1a2131065b13585605c7486d0f02",
+      "sourceText": "魏大夫王錯出奔韓。公孫頎謂韓懿侯曰：「魏亂，可取也。」懿侯乃與趙成侯合兵伐魏，戰于濁澤，大破之，遂圍魏。成侯曰：「殺罃，立公中緩，割地而退，我二國之利也。」懿侯曰：「不可。殺魏君，暴也；割地而退，貪也。不如兩分之。魏分為兩，不強於宋、衛，則我終無魏患矣。」趙人不聽。懿侯不悅，以其兵夜去。趙成侯亦去。罃遂殺公中緩而立，是為惠王。",
+      "translation": "魏国大夫王错逃到韩国。公孙颀对韩懿侯说：“魏国内乱，可以夺取。”韩懿侯于是与赵成侯联合出兵攻魏，在浊泽作战，大败魏军，接着包围魏国。赵成侯说：“杀掉罃，拥立公中缓，割取土地后撤兵，对我们两国都有利。”韩懿侯说：“不行。杀魏国国君是残暴，割地后撤兵是贪婪。不如把魏国分成两国。魏国一分为二，便不会比宋国、卫国强，我们就再也没有魏国的祸患了。”赵国人不听。韩懿侯不高兴，率军在夜间离去。赵成侯也撤走了。罃于是杀死公中缓并即位，是为魏惠王。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129720
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129721-explanation",
+      "revision": 1,
+      "paragraphId": 129721,
+      "sourceSha256": "fa681853b18a7ed19955759d240739327c77ce7bc906b77fc9560642ebd5ef5b",
+      "sourceText": "太史公曰：魏惠王之所以身不死，國不分者，二國之謀不和也。若從一家之謀，魏必分矣。故曰：「君終，無適子，其國可破也。」",
+      "translation": "太史公说：魏惠王之所以自身没有被杀、国家没有被瓜分，是因为韩国和赵国的谋划不能一致。如果听从其中任何一家的方案，魏国一定会被瓜分。所以说：“国君去世，没有嫡子，国家就可能被攻破。”",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129721
+      },
+      "notes": [
+        {
+          "quote": "適子",
+          "start": 48,
+          "end": 50,
+          "explanation": "这里指嫡子；“適”是这一意义上的古字用法。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129721
+          }
+        }
+      ]
+    }
+  ]
+}

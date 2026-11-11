@@ -16,7 +16,7 @@ from research import ROOT, connect, dump, now, read, cached_response
 
 GIT_PARSER = 'kanripo-source-pages-v3'
 WIKI_PARSER = 'wikisource-revision-v1'
-PARSER = 'research-source-pages-v5'
+PARSER = 'research-source-pages-v6'
 SUPPORTED_PARSERS = [GIT_PARSER, WIKI_PARSER]
 PUBLIC_TABLES = ['book', 'text_unit', 'paragraph', 'corpus_poem', 'person', 'work',
                  'journey', 'stop', 'claim', 'evidence', 'research_note', 'place']
@@ -135,6 +135,12 @@ def input_bundle(root=ROOT, cache=None):
                 raw = cached_response(cache,probe['url'],probe['sha256'])
                 if sha(raw) != probe['sha256']: raise ValueError('寻源/影像原始响应哈希不符')
                 asset('source-discovery/' + item['id'] + '/' + key, raw, 'image-original' if key == 'artifactProbe' else 'source-response')
+            for preview in item.get('previews',[]):
+                for key in ['probe','metadataProbe']:
+                    probe=preview.get(key,{})
+                    if probe.get('status')!='reachable':continue
+                    raw=cached_response(cache,probe['url'],probe['sha256'])
+                    asset('source-discovery/'+item['id']+'/preview/'+str(preview['page'])+'/'+key,raw,'image-preview' if key=='probe' else 'source-response')
     gap_search = root / 'data/gap-search.json'
     if gap_search.exists():
         for item in read(gap_search)['items']:
@@ -415,6 +421,8 @@ def derive(bundle, bid):
         if not meta['base'] or not meta['title']: issue(uid, 'missing-header', meta)
         if meta['kind'] == 'unclassified': issue(uid, 'unclassified-unit', {'path': path, 'juan': meta['juan']})
     records = bundle['records']
+    source_docs={r[2]:r[4] for r in records if r[1]=='source'}
+    asset_hashes={a[2] for a in bundle.get('manifest',{}).get('assets',[])}
     objects = {(r[1], r[2]): r[0] for r in records if r[1] != 'research_revision'}
     volume_records = [r for r in records if r[1] == 'volume_heading']
     if volume_records or any(repo == 'kanripo/KR4e0157' for repo, _, _ in paths):
@@ -453,6 +461,15 @@ def derive(bundle, bid):
         elif kind == 'research_revision':
             subject = doc.get('subject', {})
             targets.append((subject.get('type'), subject.get('key'), 'research-subject'))
+            if doc.get('imageObservations'):
+                sys.path.insert(0,str(ROOT/'server'))
+                from corpus.image_evidence import validate_observation,observation_hashes
+                for index,item in enumerate(doc['imageObservations']):
+                    errors=validate_observation(item,source_docs)
+                    if not errors and not set(observation_hashes(item))<=asset_hashes:errors.append('影像资产尚未进入本批清单')
+                    if errors:issue(rid,'invalid-image-observation',{'index':index,'errors':errors})
+                    elif item['status']=='pending':issue(rid,'image-reading-unreviewed',{'index':index,'action':'AI目读不等于人工校勘'})
+                    if isinstance(item,dict):targets.append(('source',item.get('sourceId'),'image-source'))
             for index, evidence in enumerate(doc.get('evidence', [])):
                 url = evidence.get('url', '')
                 hit = re.fullmatch(r'https://github\.com/(kanripo/KR[0-9a-z]+)/blob/([a-f0-9]{40})/(.+)', url)
@@ -582,9 +599,18 @@ def verify(args):
             require(all(actual_blobs[key] == (raw, len(raw)) and sha(actual_blobs[key][0]) == key for key, raw in expected['blobs'].items()), 'all-original-bytes-and-sha256')
             cur.execute('SELECT path,role,blob_sha256 FROM research_ingest.batch_asset WHERE batch_id=%s', (bid,))
             require(sorted(cur.fetchall()) == sorted(expected['assets']), 'all-source-assets')
+            sys.path.insert(0,str(ROOT/'server'))
+            from corpus.image_evidence import verify_observation_assets,observation_hashes
+            image_count=0
+            for record in bundle['records']:
+                if record[1]!='research_revision':continue
+                for item in record[4].get('imageObservations',[]):
+                    verify_observation_assets(item,{k:actual_blobs[k][0] for k in observation_hashes(item)})
+                    image_count+=1
+            require(True,'image-file-preview-page-chains')
             derived = derive(bundle, bid)
             blocking = {'quote-not-exact', 'quote-hash-mismatch', 'evidence-file-hash-mismatch',
-                        'invalid-volume-heading', 'volume-heading-set-mismatch', 'evidence-byte-range-mismatch',
+                        'invalid-volume-heading', 'volume-heading-set-mismatch', 'evidence-byte-range-mismatch','invalid-image-observation',
                         'evidence-file-not-landed', 'unresolved-object', 'invalid-evidence-url', 'evidence-revision-mismatch'}
             require(not any(row[3] in blocking for row in derived['issue']), 'no-broken-evidence-or-object-links')
             expected_evidence = {(r[0], i) for r in bundle['records'] if r[1] == 'research_revision'
@@ -652,6 +678,7 @@ def verify(args):
                       'unitKinds': {kind: sum(u[6] == kind for u in derived['unit']) for kind in ['front_matter', 'body', 'back_matter', 'unclassified']},
                       'issues': issues, 'checksPassed': len(checks), 'publicTableCounts': {k: v['rows'] for k, v in bundle['public_before'].items()},
                       'evidenceLocations': {'total': len(expected_evidence), 'exact': len(located), 'unresolved': len(unresolved)},
+                      'imageObservationLocations':{'total':image_count,'assetChainsVerified':image_count,'academicReview':'pending'},
                       'scope': '原件及快照全量存储回读验证；不等于学术内容已核，不等于原典全本无缺卷。'}
             if args.apply:
                 dump(args.backup_dir / ('raw-verify-before-' + now().replace(':', '-') + '.json'),

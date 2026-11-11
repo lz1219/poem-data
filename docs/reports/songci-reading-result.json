@@ -1,0 +1,377 @@
+{
+  "batchId": "3daa0c49f104b2152d5a704d23583ab25b9101169e49107edb7d87913f47a943",
+  "counts": {
+    "poems": 21046,
+    "sourceRecords": 21050,
+    "exactDuplicateLocations": 4,
+    "replacementCharacterRecords": 13,
+    "recordsWithTags": 931,
+    "recordsWithPrologue": 6
+  },
+  "checks": {
+    "repeatImportNoWrites": true,
+    "changed-bodyRefused": true,
+    "changed-tagsRefused": true,
+    "later-referenceRefused": true,
+    "actualRollbackPreservedOriginalCorpus": true,
+    "old13TablesUnchanged": true,
+    "independentFullSourceRoundTrip": true,
+    "allLocationsAnd13ReplacementRecordsRetained": true,
+    "fivePreviousBatchesStillApplied": true
+  },
+  "before": {
+    "book": {
+      "rows": 38,
+      "md5": "84eb4973588ebe99575fe2df2901b1d0"
+    },
+    "edition": {
+      "rows": 5,
+      "md5": "87be71b64ee5ff9a47d784d38ff02904"
+    },
+    "text_unit": {
+      "rows": 2628,
+      "md5": "bc1b18cf7cca715fdb6ebb08398c02eb"
+    },
+    "paragraph": {
+      "rows": 144212,
+      "md5": "39f79dd550753bbf23b6d3fd2615edf5"
+    },
+    "corpus_poem": {
+      "rows": 66968,
+      "md5": "aa48e97d6c00310715f61f2a36a60bfc"
+    },
+    "person": {
+      "rows": 125,
+      "md5": "25cea802d69d7fff06524108dfe696fc"
+    },
+    "work": {
+      "rows": 65,
+      "md5": "6f2da400c791e04ab4fb17e030a9c5b3"
+    },
+    "journey": {
+      "rows": 10,
+      "md5": "0b66b3df5bf07ee181ae1d78231a6b0a"
+    },
+    "stop": {
+      "rows": 105,
+      "md5": "46b99e5c57990b0966ba1fbdacf7cb97"
+    },
+    "claim": {
+      "rows": 17,
+      "md5": "24731fcf6004a18438f42a8dc1738f4d"
+    },
+    "evidence": {
+      "rows": 24,
+      "md5": "171dda1dd20465a4243c0f6074a19211"
+    },
+    "research_note": {
+      "rows": 348,
+      "md5": "765bc0b771e70ccf9f411e845e4131cf"
+    },
+    "place": {
+      "rows": 38489,
+      "md5": "24a21f3b947067b236b231b80d094525"
+    }
+  },
+  "after": {
+    "book": {
+      "rows": 38,
+      "md5": "84eb4973588ebe99575fe2df2901b1d0"
+    },
+    "edition": {
+      "rows": 6,
+      "md5": "c1f0148493ef9530a2aa1e430fe4638e"
+    },
+    "text_unit": {
+      "rows": 2628,
+      "md5": "bc1b18cf7cca715fdb6ebb08398c02eb"
+    },
+    "paragraph": {
+      "rows": 144212,
+      "md5": "39f79dd550753bbf23b6d3fd2615edf5"
+    },
+    "corpus_poem": {
+      "rows": 88014,
+      "md5": "b99e6db6d938be79b1ab050166c4e6de"
+    },
+    "person": {
+      "rows": 125,
+      "md5": "25cea802d69d7fff06524108dfe696fc"
+    },
+    "work": {
+      "rows": 65,
+      "md5": "6f2da400c791e04ab4fb17e030a9c5b3"
+    },
+    "journey": {
+      "rows": 10,
+      "md5": "0b66b3df5bf07ee181ae1d78231a6b0a"
+    },
+    "stop": {
+      "rows": 105,
+      "md5": "46b99e5c57990b0966ba1fbdacf7cb97"
+    },
+    "claim": {
+      "rows": 17,
+      "md5": "24731fcf6004a18438f42a8dc1738f4d"
+    },
+    "evidence": {
+      "rows": 24,
+      "md5": "171dda1dd20465a4243c0f6074a19211"
+    },
+    "research_note": {
+      "rows": 348,
+      "md5": "765bc0b771e70ccf9f411e845e4131cf"
+    },
+    "place": {
+      "rows": 38489,
+      "md5": "24a21f3b947067b236b231b80d094525"
+    }
+  },
+  "backupSha256": "eb6e995e974cbf4557096dc51e03bdfc1af117f2a1851429636c76467990bde5",
+  "editionIds": [
+    14
+  ],
+  "poemIdRange": [
+    110757,
+    131802
+  ],
+  "copyMetrics": [
+    {
+      "table": "COPY corpus_poem",
+      "rows": 21046,
+      "seconds": 152.216
+    },
+    {
+      "table": "COPY corpus_poem_origin",
+      "rows": 21046,
+      "seconds": 121.208
+    },
+    {
+      "diagnostic": "unbounded-read-server-plan",
+      "executionMilliseconds": 123.338,
+      "plan": {
+        "Node Type": "Gather Merge",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 7824.88,
+        "Total Cost": 7971.67,
+        "Plan Rows": 1288,
+        "Plan Width": 297,
+        "Actual Startup Time": 94.386,
+        "Actual Total Time": 118.979,
+        "Actual Rows": 21046.0,
+        "Actual Loops": 1,
+        "Disabled": false,
+        "Workers Planned": 1,
+        "Workers Launched": 1,
+        "Shared Hit Blocks": 83378,
+        "Shared Read Blocks": 4384,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 219,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 3834,
+        "Temp Written Blocks": 3841,
+        "Plans": [
+          {
+            "Node Type": "Sort",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": false,
+            "Async Capable": false,
+            "Startup Cost": 6824.87,
+            "Total Cost": 6826.76,
+            "Plan Rows": 758,
+            "Plan Width": 297,
+            "Actual Startup Time": 90.692,
+            "Actual Total Time": 98.063,
+            "Actual Rows": 10523.0,
+            "Actual Loops": 2,
+            "Disabled": false,
+            "Sort Key": [
+              "o.ordinal"
+            ],
+            "Sort Method": "external merge",
+            "Sort Space Used": 16904,
+            "Sort Space Type": "Disk",
+            "Shared Hit Blocks": 83378,
+            "Shared Read Blocks": 4384,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 219,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 3834,
+            "Temp Written Blocks": 3841,
+            "Workers": [
+              {
+                "Worker Number": 0,
+                "Sort Method": "external merge",
+                "Sort Space Used": 13768,
+                "Sort Space Type": "Disk"
+              }
+            ],
+            "Plans": [
+              {
+                "Node Type": "Nested Loop",
+                "Parent Relationship": "Outer",
+                "Parallel Aware": false,
+                "Async Capable": false,
+                "Join Type": "Inner",
+                "Startup Cost": 18.82,
+                "Total Cost": 6788.61,
+                "Plan Rows": 758,
+                "Plan Width": 297,
+                "Actual Startup Time": 1.945,
+                "Actual Total Time": 62.158,
+                "Actual Rows": 10523.0,
+                "Actual Loops": 2,
+                "Disabled": false,
+                "Inner Unique": true,
+                "Shared Hit Blocks": 83371,
+                "Shared Read Blocks": 4384,
+                "Shared Dirtied Blocks": 0,
+                "Shared Written Blocks": 219,
+                "Local Hit Blocks": 0,
+                "Local Read Blocks": 0,
+                "Local Dirtied Blocks": 0,
+                "Local Written Blocks": 0,
+                "Temp Read Blocks": 0,
+                "Temp Written Blocks": 0,
+                "Workers": [],
+                "Plans": [
+                  {
+                    "Node Type": "Bitmap Heap Scan",
+                    "Parent Relationship": "Outer",
+                    "Parallel Aware": true,
+                    "Async Capable": false,
+                    "Relation Name": "corpus_poem_origin",
+                    "Alias": "o",
+                    "Startup Cost": 18.4,
+                    "Total Cost": 2492.33,
+                    "Plan Rows": 758,
+                    "Plan Width": 40,
+                    "Actual Startup Time": 1.897,
+                    "Actual Total Time": 7.993,
+                    "Actual Rows": 10523.0,
+                    "Actual Loops": 2,
+                    "Disabled": false,
+                    "Recheck Cond": "(batch_id = '3daa0c49f104b2152d5a704d23583ab25b9101169e49107edb7d87913f47a943'::text)",
+                    "Rows Removed by Index Recheck": 0,
+                    "Exact Heap Blocks": 1821,
+                    "Lossy Heap Blocks": 0,
+                    "Shared Hit Blocks": 3470,
+                    "Shared Read Blocks": 100,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 0,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0,
+                    "Workers": [
+                      {
+                        "Worker Number": 0,
+                        "Exact Heap Blocks": 1482,
+                        "Lossy Heap Blocks": 0
+                      }
+                    ],
+                    "Plans": [
+                      {
+                        "Node Type": "Bitmap Index Scan",
+                        "Parent Relationship": "Outer",
+                        "Parallel Aware": false,
+                        "Async Capable": false,
+                        "Index Name": "corpus_poem_origin_batch_id_ordinal_key",
+                        "Startup Cost": 0.0,
+                        "Total Cost": 18.08,
+                        "Plan Rows": 1288,
+                        "Plan Width": 0,
+                        "Actual Startup Time": 3.126,
+                        "Actual Total Time": 3.126,
+                        "Actual Rows": 21046.0,
+                        "Actual Loops": 1,
+                        "Disabled": false,
+                        "Index Cond": "(batch_id = '3daa0c49f104b2152d5a704d23583ab25b9101169e49107edb7d87913f47a943'::text)",
+                        "Index Searches": 1,
+                        "Shared Hit Blocks": 152,
+                        "Shared Read Blocks": 95,
+                        "Shared Dirtied Blocks": 0,
+                        "Shared Written Blocks": 0,
+                        "Local Hit Blocks": 0,
+                        "Local Read Blocks": 0,
+                        "Local Dirtied Blocks": 0,
+                        "Local Written Blocks": 0,
+                        "Temp Read Blocks": 0,
+                        "Temp Written Blocks": 0,
+                        "Workers": []
+                      }
+                    ]
+                  },
+                  {
+                    "Node Type": "Index Scan",
+                    "Parent Relationship": "Inner",
+                    "Parallel Aware": false,
+                    "Async Capable": false,
+                    "Scan Direction": "Forward",
+                    "Index Name": "corpus_poem_pkey",
+                    "Relation Name": "corpus_poem",
+                    "Alias": "p",
+                    "Startup Cost": 0.42,
+                    "Total Cost": 5.67,
+                    "Plan Rows": 1,
+                    "Plan Width": 265,
+                    "Actual Startup Time": 0.004,
+                    "Actual Total Time": 0.004,
+                    "Actual Rows": 1.0,
+                    "Actual Loops": 21046,
+                    "Disabled": false,
+                    "Index Cond": "(id = o.poem_id)",
+                    "Rows Removed by Index Recheck": 0,
+                    "Index Searches": 21046,
+                    "Shared Hit Blocks": 79901,
+                    "Shared Read Blocks": 4284,
+                    "Shared Dirtied Blocks": 0,
+                    "Shared Written Blocks": 219,
+                    "Local Hit Blocks": 0,
+                    "Local Read Blocks": 0,
+                    "Local Dirtied Blocks": 0,
+                    "Local Written Blocks": 0,
+                    "Temp Read Blocks": 0,
+                    "Temp Written Blocks": 0,
+                    "Workers": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "diagnostic": "unbounded-read-repeat",
+      "result": "statement-timeout; savepoint rolled back",
+      "seconds": 48.182
+    },
+    {
+      "table": "COPY corpus_poem",
+      "rows": 21046,
+      "seconds": 118.861
+    },
+    {
+      "table": "COPY corpus_poem_origin",
+      "rows": 21046,
+      "seconds": 125.006
+    }
+  ],
+  "inventory": {
+    "book": 38,
+    "edition": 6,
+    "text_unit": 2628,
+    "paragraph": 144212,
+    "corpus_poem": 88014
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "key": "闻乐天授江州司马",
+  "titleZh": "闻乐天授江州司马",
+  "titleEn": "Hearing of Bai Juyi Demoted to Marshal of Jiangzhou",
+  "aliases": [
+    "闻乐天授江州司马",
+    "聞樂天授江州司馬"
+  ],
+  "authorKey": "yuanzhen",
+  "genre": "shi",
+  "level": "popular",
+  "certainty": "unknown",
+  "composed": {
+    "year": 815,
+    "yearKind": "composition",
+    "placeZh": "通州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "殘燈無焰影幢幢，此夕聞君謫九江。",
+      "垂死病中驚坐起，暗風吹雨入寒窗。"
+    ],
+    "paragraphsSimplified": [
+      "残灯无焰影幢幢，此夕闻君谪九江。",
+      "垂死病中惊坐起，暗风吹雨入寒窗。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "残油将尽的孤灯已无火焰，只剩下摇曳昏暗的幢幢孤影；就在今夜，听闻你被贬谪到了九江。原本垂危重病中的我震惊得猛然坐起，只见窗外暗风裹挟着夜雨，阵阵吹入寒冷凄凉的窗棂。",
+  "notes": [
+    {
+      "term": "影幢幢",
+      "explain": "灯影摇曳晃动昏暗微弱的样子。"
+    },
+    {
+      "term": "九江",
+      "explain": "即江州，唐代江州治所在今江西九江。"
+    },
+    {
+      "term": "垂死病中",
+      "explain": "元和十年元稹贬通州司马，其地卑湿，元稹到任后染疟疾，几乎濒死。"
+    }
+  ],
+  "background": "唐宪宗元和十年（815），元稹先被贬为通州司马，患重病卧床；同年八月，白居易因上疏论宰相武元衡遇刺事触怒权贵，亦被贬为江州司马。元稹在病榻上惊闻挚友被贬，悲愤交加，写下这首传诵千古的悼亡友谊绝句。",
+  "appreciation": {
+    "text": "前两句以惨淡油灯之孤影起笔，蓦然点出闻谪之惊痛；后两句‘垂死病中惊坐起，暗风吹雨入寒窗’以极具动作感的戏剧性爆发写心理震动，复以暗风寒雨将内心的悲寒渲染到极点。二十八字中，挚友相通之生死交情跃然纸上。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "citation": "《全唐诗》卷三九七·元氏长庆集卷二十一",
+  "dating": [
+    {
+      "claim": "815",
+      "stance": "pending",
+      "note": "元和十年（815）秋元稹在通州病榻上闻白居易贬江州作。",
+      "evidence": [
+        {
+          "quote": "815",
+          "source": "《全唐诗》卷三九七",
+          "grade": "B"
+        }
+      ]
+    }
+  ],
+  "apparatus": []
+}

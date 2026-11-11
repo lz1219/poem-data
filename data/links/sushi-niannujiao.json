@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "status": "candidate",
+  "person": {
+    "editorKey": "sushi",
+    "editorSha256": "3f9c73f96a6a1270a7a64e3cac3a86cdebf2ba405fa03a67f2bb1add2d0759b6",
+    "corpusPersonId": 58,
+    "basis": "两侧人物键、姓名及 CBDB 3767 一致；身份映射尚未经具名人工审校。"
+  },
+  "work": {
+    "editorKey": "念奴娇",
+    "editorSha256": "ab9da24f6ce3360419f848674b4a3f4190868c70f631df4a691d4a872b458151",
+    "corpusPoemId": 112224,
+    "corpusBodySha256": "6ced758f6e037981c9c60b9a67cd93edb1429778bf54ca19473fedfe375eaf8e",
+    "corpusEditionId": 14,
+    "corpusBatchId": "3daa0c49f104b2152d5a704d23583ab25b9101169e49107edb7d87913f47a943",
+    "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry/blob/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.1000.json",
+    "sourcePointer": "/467",
+    "matchingText": [
+      "大江东去",
+      "千古风流人物",
+      "三国周郎赤壁",
+      "江山如画",
+      "一尊还酹江月"
+    ],
+    "differences": "两份电子文本分行与顿号标点不同；语料第6句作‘强虏’（精选作‘樯橹’），第8句作‘人间如梦’（精选作‘人生如梦’）。精选本题名作‘念奴娇 · 赤壁怀古’，语料题名作‘念奴娇’。",
+    "basis": "苏轼黄州赤壁词作，首句与全篇字句精确对应；异文由来源版本差异导致，仍待具名人工审校。"
+  }
+}

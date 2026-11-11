@@ -1,0 +1,305 @@
+{
+  "bookId": 53,
+  "bookTitle": "全宋词",
+  "source": {
+    "repository": "chinese-poetry/chinese-poetry",
+    "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+    "baseEdition": "固定Git电子汇编；纸本底本及每条网络来源未核，不等同某出版社核定本"
+  },
+  "licenseCapture": {
+    "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/LICENSE",
+    "checkedAt": "2026-11-02T04:45:37.368792+00:00",
+    "status": "reachable",
+    "sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+    "bytes": 1076
+  },
+  "files": [
+    {
+      "path": "宋词/ci.song.0.json",
+      "gitBlobSha": "9d5e71dbc818385ac90fc4e5a73bb1947aeab839",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.0.json",
+        "checkedAt": "2026-11-02T04:47:00.531668+00:00",
+        "status": "reachable",
+        "sha256": "7761bc5ef50305753ea3dcea9e1ef3164e153e3ee366169e9c5a9a7d85b21b22",
+        "bytes": 406936
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.1000.json",
+      "gitBlobSha": "c9723ff21a3ea7b2049733d2c5c674a852a9ca5c",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.1000.json",
+        "checkedAt": "2026-11-02T04:47:57.159496+00:00",
+        "status": "reachable",
+        "sha256": "5f79a2d9011e6d414f04e51176c5d4f4c762fd784dce98b035968367b6f2ef4e",
+        "bytes": 368986
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.2000.json",
+      "gitBlobSha": "ebc2ef35a9d1d9ddb0e4e25acb64831ef9695704",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.2000.json",
+        "checkedAt": "2026-11-02T04:48:10.207472+00:00",
+        "status": "reachable",
+        "sha256": "f700d8e14df62d371dfba7ce18bf1641c304540907b26b68d356c4b6b256fe8d",
+        "bytes": 389037
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.3000.json",
+      "gitBlobSha": "81294df318b4ac5dc0e9c43a8c28e1b956ab9aee",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.3000.json",
+        "checkedAt": "2026-11-02T04:48:16.239334+00:00",
+        "status": "reachable",
+        "sha256": "1791391a8a2ca855e133f7ea48bf0c104b3890d628ae2929f9378960a66c1427",
+        "bytes": 417829
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.4000.json",
+      "gitBlobSha": "232e7aa1a1c5e5de3d43d8fa3cd6c6a14720508b",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.4000.json",
+        "checkedAt": "2026-11-02T04:48:18.861479+00:00",
+        "status": "reachable",
+        "sha256": "48c3e33bab920e17929ea08300c4c5ca72b246669ed5767e5cb985d894514150",
+        "bytes": 395848
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.5000.json",
+      "gitBlobSha": "57a4c25205301dc7bc0cded24d75e7c3799f2bda",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.5000.json",
+        "checkedAt": "2026-11-02T04:48:16.934691+00:00",
+        "status": "reachable",
+        "sha256": "1e10ee4be18e225c2efa0bb8d58691ebb6d40cd83588f308d9635a37392bdadd",
+        "bytes": 388016
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.6000.json",
+      "gitBlobSha": "b62ee03b0f4eed639f1b47c50255f1d5e277a6c4",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.6000.json",
+        "checkedAt": "2026-11-02T04:48:18.050888+00:00",
+        "status": "reachable",
+        "sha256": "8ff2b21b4e92a435f72da04fcb935a6a3498e839cde5c837ea418871f133c248",
+        "bytes": 390822
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.7000.json",
+      "gitBlobSha": "0cc3566bfc912124a43bf25b68ba33d9397ca96d",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.7000.json",
+        "checkedAt": "2026-11-02T04:48:21.659478+00:00",
+        "status": "reachable",
+        "sha256": "8fe3f7ac40ab7d6c80cdd42305e848c1dc51cff26bc42b335ddfdfaccd48d1ba",
+        "bytes": 415095
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.8000.json",
+      "gitBlobSha": "6a3bd767d1c922bdfefd5b68a35046dcdb26d5e5",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.8000.json",
+        "checkedAt": "2026-11-02T04:48:21.776889+00:00",
+        "status": "reachable",
+        "sha256": "8d9c26a4aa62264d2eea853944e47a1420dd94e7465bee7c3e52cec2cf8bd653",
+        "bytes": 390756
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.9000.json",
+      "gitBlobSha": "b149fd79cad8d67620a5fbccd1265e06616de438",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.9000.json",
+        "checkedAt": "2026-11-02T04:48:23.897768+00:00",
+        "status": "reachable",
+        "sha256": "bd6a4d90b17ef195f32e38dfa483b0d39d671db3cdd5b462b292aac6916f26a6",
+        "bytes": 397207
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.10000.json",
+      "gitBlobSha": "c9499fe09d986b1973aa6704c1636383960a6143",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.10000.json",
+        "checkedAt": "2026-11-02T04:47:56.298512+00:00",
+        "status": "reachable",
+        "sha256": "8d37b015132bf9776fb41c44d445572d2cd9bf5e250dde213596c480e5962545",
+        "bytes": 401864
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.11000.json",
+      "gitBlobSha": "af91c5dc4b90d698bf489f98f9e918748d581359",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.11000.json",
+        "checkedAt": "2026-11-02T04:47:56.369588+00:00",
+        "status": "reachable",
+        "sha256": "9a4f5082638f82339afbde99f1af7bae1719207f77d5516cb8f6d370c9c1d0c9",
+        "bytes": 414634
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.12000.json",
+      "gitBlobSha": "370a3d6f7a5b764d6ad3e08645d23c2c2bb8375d",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.12000.json",
+        "checkedAt": "2026-11-02T04:47:56.814584+00:00",
+        "status": "reachable",
+        "sha256": "a89094fed6b3003c171a9036052ff6a289367b4dd68d97c000b5f5e90ea2df2f",
+        "bytes": 417329
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.13000.json",
+      "gitBlobSha": "22c81567b756a827485b99903e9d317a3c14a957",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.13000.json",
+        "checkedAt": "2026-11-02T04:48:02.215234+00:00",
+        "status": "reachable",
+        "sha256": "dd51b268dec508d44a18e2d4a84edd109ff8c532b6eace4160ea88674f62515c",
+        "bytes": 435352
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.14000.json",
+      "gitBlobSha": "39eb7488f2371d8804bd7841cc862129035a67e3",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.14000.json",
+        "checkedAt": "2026-11-02T04:48:01.229823+00:00",
+        "status": "reachable",
+        "sha256": "9d7410bcaebc31685e3d999c6af218a3583fd8e9f57cacf640c66607121e2dbf",
+        "bytes": 498986
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.15000.json",
+      "gitBlobSha": "ea7f9c29a0d6555cb61f2713f8dce51069e0fc54",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.15000.json",
+        "checkedAt": "2026-11-02T04:48:02.499401+00:00",
+        "status": "reachable",
+        "sha256": "5e441c85494955290138ed8561decb3f302d3628fe390cea3477e1d446039525",
+        "bytes": 502382
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.16000.json",
+      "gitBlobSha": "2f6cd18f0a0c931594c7d54d49809525526d3d48",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.16000.json",
+        "checkedAt": "2026-11-02T04:48:03.161098+00:00",
+        "status": "reachable",
+        "sha256": "d003d66c58e40fab1d2a40f17f6149eef53a126c7e54b035153ceae4fe707742",
+        "bytes": 478885
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.17000.json",
+      "gitBlobSha": "d5a986bce25ad77b6899b4f7ca84e6ce47e65d15",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.17000.json",
+        "checkedAt": "2026-11-02T04:48:06.597218+00:00",
+        "status": "reachable",
+        "sha256": "b46b9f908b5bb0a3b4dd18f268c233a50b8b794d6ab1ec79afcb3612792f0574",
+        "bytes": 472066
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.18000.json",
+      "gitBlobSha": "bde09664afbbf0de97777c2f0b43212b472803ce",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.18000.json",
+        "checkedAt": "2026-11-02T04:48:07.907420+00:00",
+        "status": "reachable",
+        "sha256": "751cf8ee2a925f4957d010e6f4bf46cc9e0a90a176cfb731185ba43ecb72b14b",
+        "bytes": 481281
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.19000.json",
+      "gitBlobSha": "665612fdda604d77e16499ae106238e7c6c74ebe",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.19000.json",
+        "checkedAt": "2026-11-02T04:48:11.816000+00:00",
+        "status": "reachable",
+        "sha256": "c6becb6a81cc04e25564f501ff768482b6c328d976c48e2003c8b8bd94ef4612",
+        "bytes": 341771
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.20000.json",
+      "gitBlobSha": "91930556c81a5bca977f50daf3333a7456075263",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.20000.json",
+        "checkedAt": "2026-11-02T04:48:12.278622+00:00",
+        "status": "reachable",
+        "sha256": "1dfc08051969ab2ecdfa3eea8b29bf79d3dfe9ad1133127f25f622c2b14348c2",
+        "bytes": 434930
+      },
+      "records": 1000
+    },
+    {
+      "path": "宋词/ci.song.21000.json",
+      "gitBlobSha": "1b5acde750de6dc2801263944009f8dc1811cb55",
+      "capture": {
+        "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/ci.song.21000.json",
+        "checkedAt": "2026-11-02T04:48:11.963053+00:00",
+        "status": "reachable",
+        "sha256": "3344ba453ae7840339944ce29e4295b5b668d79f79210a99e6e1a58ee874dbc5",
+        "bytes": 18904
+      },
+      "records": 50
+    }
+  ],
+  "upstreamCaptures": {
+    "collector-blog": {
+      "url": "https://jackeygao.github.io/r/words/crawl-ci.html",
+      "checkedAt": "2026-11-02T05:12:11.134131+00:00",
+      "status": "reachable",
+      "sha256": "6d076a0eeb0f03e04bfc002433d986e13004806cd9d28eb85c855e729d5ff018",
+      "bytes": 10741
+    },
+    "collector-code": {
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/main.py",
+      "checkedAt": "2026-11-02T05:11:57.814103+00:00",
+      "status": "reachable",
+      "sha256": "6f67135015f1b680e75cd6ee1770f0d0e07b40f8fb13a0302ca72fa343b13cb3",
+      "bytes": 1170
+    },
+    "update-code": {
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%AE%8B%E8%AF%8D/UpdateCi.py",
+      "checkedAt": "2026-11-02T05:11:57.639072+00:00",
+      "status": "reachable",
+      "sha256": "d6b7cf5241e5ea4e0bccf730938cc7f6585e4fdc224c1b48ec30acb85a1f28a6",
+      "bytes": 4667
+    }
+  }
+}

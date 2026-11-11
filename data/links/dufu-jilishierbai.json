@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "status": "candidate",
+  "person": {
+    "editorKey": "dufu",
+    "editorSha256": "b68b1f64ba8f286381e00060563347d602cad91a96e2fd4a53ae74bac427b3e9",
+    "corpusPersonId": 7,
+    "basis": "两侧人物键、姓名及 CBDB 3915 一致；身份映射尚未经具名人工审校。"
+  },
+  "work": {
+    "editorKey": "寄李十二白二十韵",
+    "editorSha256": "0a35974b771646efba81875d09801ea7597a7022c1a47939ee247968854b0fa0",
+    "corpusPoemId": 11184,
+    "corpusBodySha256": "20b805eda7a23a397223e01d1b6a4c7399e02c51a65160d6c3acf92a69118193",
+    "sourceUrl": "https://github.com/chinese-poetry/chinese-poetry",
+    "matchingText": [
+      "乞归优诏许",
+      "遇我宿心亲",
+      "醉舞梁园夜",
+      "行歌泗水春"
+    ],
+    "differences": "本站精选本为长篇摘录（节选第7联与第10联共4句）；《全唐诗》语料底本为卷二一六全篇40句（二十韵）。中间省略第8联‘未负幽栖志，兼全宠辱身’与第9联‘剧谈怜野逸，嗜酒见天真’等4句；诗首有前12句，诗尾有后20句。文字与版本仍待具名人工核校。",
+    "basis": "作者一致、题名对应；精选本所摘4句完整见于《全唐诗》卷二一六该排律中。"
+  },
+  "journey": {
+    "key": "libai",
+    "stopSeq": 8,
+    "stopSha256": "46bf8a19c92b06ab7b53fca195455c28de40b88adde119eca69f598ea25cd706",
+    "relation": "stop-quotes-work",
+    "matchingText": [
+      "乞归优诏许",
+      "遇我宿心亲",
+      "醉舞梁园夜",
+      "行歌泗水春"
+    ],
+    "basis": "李白行迹第8站（洛阳）引用杜甫赠李白此诗；仅表示史料引文关系，不证明作品写作地点。"
+  }
+}

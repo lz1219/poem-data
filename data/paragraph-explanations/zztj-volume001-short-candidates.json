@@ -1,0 +1,1083 @@
+{
+  "schemaVersion": 1,
+  "unitId": 2080,
+  "sourceRevision": 2489405,
+  "unitSha256": "5f724f677d0c3862348824c862f6f09cbf4e7e9ac5cdba1b802abb74d1578246",
+  "status": "candidate-not-imported",
+  "generation": {
+    "method": "ai-batch",
+    "model": "GPT-6 (session family)",
+    "modelSnapshot": null,
+    "snapshotAvailability": "Exact model snapshot not exposed in this session",
+    "generatedAt": "2026-11-05T05:47:12.026224+00:00",
+    "promptVersion": "paragraph-translation-v1",
+    "methodDescription": "当前Codex整理会话按固定原文起草；未人工审校。"
+  },
+  "items": [
+    {
+      "id": "paragraph-129647-explanation",
+      "revision": 1,
+      "paragraphId": 129647,
+      "sourceSha256": "3bc55903313b78f903db7edfec65ebabdc1ab24dffe947318d20675812ebea8b",
+      "sourceText": "燕湣公薨，子僖公立。",
+      "translation": "燕湣公去世，他的儿子燕僖公即位。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129647
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129647
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129648-explanation",
+      "revision": 1,
+      "paragraphId": 129648,
+      "sourceSha256": "4133f1c8d855345c0a1fe3b2d9394d5a29694d87fd7306424ac0f78c4b7054a7",
+      "sourceText": "王崩，子安王驕立。",
+      "translation": "周王去世，他的儿子骄即位，是为周安王。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129648
+      },
+      "notes": [
+        {
+          "quote": "崩",
+          "start": 1,
+          "end": 2,
+          "explanation": "古代对君主去世的称谓；此处“王”指周王。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129648
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129652-explanation",
+      "revision": 1,
+      "paragraphId": 129652,
+      "sourceSha256": "febbaabcd16f2571a56744ba2343503d184c520e34076ea88beccfb188096d71",
+      "sourceText": "鄭圍韓陽翟。",
+      "translation": "郑国包围韩国的阳翟。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129652
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129653-explanation",
+      "revision": 1,
+      "paragraphId": 129653,
+      "sourceSha256": "aa9968515bbba57cd29148d405794742643c635e7ae7fa05b111111f7f39dfe4",
+      "sourceText": "韓景侯薨，子烈侯取立。",
+      "translation": "韩景侯去世，他的儿子取即位，是为韩烈侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129653
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129653
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129654-explanation",
+      "revision": 1,
+      "paragraphId": 129654,
+      "sourceSha256": "4efd3ebacfc0d44902da99999fd211f41a3b17a573f367b60740a19364689a1f",
+      "sourceText": "趙烈侯薨，國人立其弟武侯。",
+      "translation": "赵烈侯去世，国人拥立他的弟弟武侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129654
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129654
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129655-explanation",
+      "revision": 1,
+      "paragraphId": 129655,
+      "sourceSha256": "944e0fd97802d9b0e02425864a11f66e366b07929b4d655c82d733baeb46640e",
+      "sourceText": "秦簡公薨，子惠公立。",
+      "translation": "秦简公去世，他的儿子秦惠公即位。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129655
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129655
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129656-explanation",
+      "revision": 1,
+      "paragraphId": 129656,
+      "sourceSha256": "c40ace8025b7ad71cb3c3177d1d2b3b90b2bd89e8f864fc9921fb5db28870601",
+      "sourceText": "王子定奔晉。",
+      "translation": "王子定逃往晋国。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129656
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129657-explanation",
+      "revision": 1,
+      "paragraphId": 129657,
+      "sourceSha256": "1f286365bf2184cb85ee0a9fcedf3d35ec25f753e22982b2f819c653d60806bf",
+      "sourceText": "虢山崩，壅河。",
+      "translation": "虢山崩塌，堵塞了黄河。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129657
+      },
+      "notes": [
+        {
+          "quote": "崩",
+          "start": 2,
+          "end": 3,
+          "explanation": "古代对君主去世的称谓；此处“王”指周王。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129657
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129659-explanation",
+      "revision": 1,
+      "paragraphId": 129659,
+      "sourceSha256": "fc9ef254d719cbd9b039b79ed72657e96d15ca81e1972c6c69b6565e000dd67f",
+      "sourceText": "日有食之。",
+      "translation": "发生了日食。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129659
+      },
+      "notes": [
+        {
+          "quote": "食",
+          "start": 2,
+          "end": 3,
+          "explanation": "日食，月球遮掩太阳的现象。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129659
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129661-explanation",
+      "revision": 1,
+      "paragraphId": 129661,
+      "sourceSha256": "1a3f52c5ce4669ff24504ba4073c90adb8ad3e5f0c2461618999e9b5ff127b12",
+      "sourceText": "鄭駟子陽之黨弒繻公，而立其弟乙，是為康公。",
+      "translation": "郑国驷子阳的党羽杀害郑繻公，拥立他的弟弟乙，是为郑康公。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129661
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129662-explanation",
+      "revision": 1,
+      "paragraphId": 129662,
+      "sourceSha256": "4a1453f1353a21309fac828d625736515ffb2030f61ada0ad1929d730fdbaf6b",
+      "sourceText": "齊伐魯，取最。〔韓救魯〕。",
+      "translation": "齐国攻打鲁国，夺取最地。韩国援救鲁国。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129662
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129663-explanation",
+      "revision": 1,
+      "paragraphId": 129663,
+      "sourceSha256": "9cca25affd44e5ad0d2453e7e50be4e41c8d3079d04d6ccf3d052c31dbc4deab",
+      "sourceText": "鄭負黍叛，復歸韓。",
+      "translation": "郑国的负黍叛乱，后来又归附韩国。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129663
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129664-explanation",
+      "revision": 1,
+      "paragraphId": 129664,
+      "sourceSha256": "c8a5d324a09f154c42f1efa8ca2f61380442ff7ebeb643269b932e8fc891b39a",
+      "sourceText": "魏伐鄭。",
+      "translation": "魏国攻打郑国。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129664
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129665-explanation",
+      "revision": 1,
+      "paragraphId": 129665,
+      "sourceSha256": "d394a397d7c2f4ea507b6cf4ea8f69e88d7afe7b6d69b6b68619e733c50f6e6b",
+      "sourceText": "晉烈公薨，子孝公傾立。",
+      "translation": "晋烈公去世，他的儿子倾即位，是为晋孝公。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129665
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129665
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129666-explanation",
+      "revision": 1,
+      "paragraphId": 129666,
+      "sourceSha256": "41fb44fc66789e4c7395081e97752adeafb26d8147fc5bbea5e3b9ac9df94b03",
+      "sourceText": "秦伐韓宜陽，取六邑。",
+      "translation": "秦国攻打韩国的宜阳，夺取了六座城邑。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129666
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129668-explanation",
+      "revision": 1,
+      "paragraphId": 129668,
+      "sourceSha256": "9a80320553f72dae5f75626df04a46efec464be8c92410ace1a2309465fe48e0",
+      "sourceText": "秦、晉戰於武城。",
+      "translation": "秦国与晋国在武城交战。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129668
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129670-explanation",
+      "revision": 1,
+      "paragraphId": 129670,
+      "sourceSha256": "b30074aec7c339e867cd0826681c706625cf8b0eb5d2d6c02e04087acb871fa2",
+      "sourceText": "魯敗齊師于平陸。",
+      "translation": "鲁国军队在平陆打败齐军。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129670
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129673-explanation",
+      "revision": 1,
+      "paragraphId": 129673,
+      "sourceSha256": "870221f1dd92e344ca5eddfb748979e7826906157db477ef215b92fff68c06f9",
+      "sourceText": "秦伐蜀，取南鄭。",
+      "translation": "秦国攻打蜀国，夺取南郑。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129673
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129674-explanation",
+      "revision": 1,
+      "paragraphId": 129674,
+      "sourceSha256": "1d285ed045de93c9261556663de560d6d4bbad375585147358b7707afc0adfb4",
+      "sourceText": "魏文侯薨，太子擊立，是為武侯。",
+      "translation": "魏文侯去世，太子击即位，是为魏武侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129674
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129674
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129677-explanation",
+      "revision": 1,
+      "paragraphId": 129677,
+      "sourceSha256": "6ad74c4fd04730cfee451cbc5e6212007ed8f2d5932cc90cf3528e999c80c1e5",
+      "sourceText": "秦惠公薨，子出公立。",
+      "translation": "秦惠公去世，他的儿子秦出公即位。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129677
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129677
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129678-explanation",
+      "revision": 1,
+      "paragraphId": 129678,
+      "sourceSha256": "da38af7dfa95e9d26e900328ee9dc9a6c44be8df409bb2c38f246ea09891c79a",
+      "sourceText": "趙武侯薨，國人復立烈侯之太子章，是為敬侯。",
+      "translation": "赵武侯去世，国人重新拥立赵烈侯的太子章，是为赵敬侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129678
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129678
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129679-explanation",
+      "revision": 1,
+      "paragraphId": 129679,
+      "sourceSha256": "11137c4e370db3f774bd1143d1e9da9715b571ab8b7d1faff84c22a24f1f3cba",
+      "sourceText": "韓烈侯薨，子文侯立。",
+      "translation": "韩烈侯去世，他的儿子韩文侯即位。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129679
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129679
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129680-explanation",
+      "revision": 1,
+      "paragraphId": 129680,
+      "sourceSha256": "42c345f06934f60cd26afbe637c25fd41e4740fea42d6254b710843a75801b93",
+      "sourceText": "初命齊大夫田和為諸侯。",
+      "translation": "周王首次册命齐国大夫田和为诸侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129680
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129683-explanation",
+      "revision": 1,
+      "paragraphId": 129683,
+      "sourceSha256": "e5576d16bcf84867c29fcba804fb017d942053122873e32ac6068bc9a9fea423",
+      "sourceText": "齊伐魯。",
+      "translation": "齐国攻打鲁国。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129683
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129685-explanation",
+      "revision": 1,
+      "paragraphId": 129685,
+      "sourceSha256": "e9d3b367fb82f69ab3c9d799940bdf8abbecc1d2558226f639860be6645b6202",
+      "sourceText": "齊太公薨，子桓公午立。",
+      "translation": "齐太公去世，他的儿子午即位，是为齐桓公。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129685
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129685
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129686-explanation",
+      "revision": 1,
+      "paragraphId": 129686,
+      "sourceSha256": "5f3c51da95759380a5b7bbfb4a9b3796deab20080355e96db9099632f57cd9e8",
+      "sourceText": "魏敗趙師於兔臺。",
+      "translation": "魏国军队在兔台打败赵军。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129686
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129688-explanation",
+      "revision": 1,
+      "paragraphId": 129688,
+      "sourceSha256": "1dcfc19247e13dfe55b56c5df648c4dfc26f968ecfdae65d3b55038452598f2e",
+      "sourceText": "日有食之，既。",
+      "translation": "发生日食，太阳被完全遮蔽。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129688
+      },
+      "notes": [
+        {
+          "quote": "食",
+          "start": 2,
+          "end": 3,
+          "explanation": "日食，月球遮掩太阳的现象。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129688
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129691-explanation",
+      "revision": 1,
+      "paragraphId": 129691,
+      "sourceSha256": "1eacaf83fac2b3cc87df8e3790c08d32ddd83c457eb3a85e2534c0f5b61dc3c5",
+      "sourceText": "趙襲衛，不克。",
+      "translation": "赵国袭击卫国，没有取胜。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129691
+      },
+      "notes": [
+        {
+          "quote": "不克",
+          "start": 4,
+          "end": 6,
+          "explanation": "没有取胜或没有攻下。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129691
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129693-explanation",
+      "revision": 1,
+      "paragraphId": 129693,
+      "sourceSha256": "7877eb92e89fb4858681a58a1920321af8afcbbda590851fc988f5445c88874e",
+      "sourceText": "狄敗魏師于澮。",
+      "translation": "狄人在浍地打败魏军。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129693
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129694-explanation",
+      "revision": 1,
+      "paragraphId": 129694,
+      "sourceSha256": "ce2409daacb496f5e72c0e4c4cdf4182e403d6a8ef5b1e0a3c1d6fbeeb848084",
+      "sourceText": "魏、韓、趙伐齊，至靈丘。",
+      "translation": "魏、韩、赵三国攻打齐国，到达灵丘。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129694
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129695-explanation",
+      "revision": 1,
+      "paragraphId": 129695,
+      "sourceSha256": "8abcfc25304a5a134b6f5b30b5831bd71c8ec21c7bf4a6023b777491be2edc2a",
+      "sourceText": "晉孝公薨，子靖公俱酒立。",
+      "translation": "晋孝公去世，他的儿子俱酒即位，是为晋靖公。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129695
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129695
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129696-explanation",
+      "revision": 1,
+      "paragraphId": 129696,
+      "sourceSha256": "a766998ead47b8c1f0f8eafb69a08facc0d066e871cbd80d557fea453454c065",
+      "sourceText": "蜀伐楚，取茲方。",
+      "translation": "蜀国攻打楚国，夺取兹方。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129696
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129698-explanation",
+      "revision": 1,
+      "paragraphId": 129698,
+      "sourceSha256": "5fc2299302e090f0fbcd27d87a2a2d12057e1c782cf534882ac86891acd0402c",
+      "sourceText": "韓文侯薨，子哀侯立。",
+      "translation": "韩文侯去世，他的儿子韩哀侯即位。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129698
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129698
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129699-explanation",
+      "revision": 1,
+      "paragraphId": 129699,
+      "sourceSha256": "7569af600e5042d8a78a728dc841178c18ffffe5656359d74c07ae78925b1cbe",
+      "sourceText": "王崩，子烈王喜立。",
+      "translation": "周王去世，他的儿子喜即位，是为周烈王。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129699
+      },
+      "notes": [
+        {
+          "quote": "崩",
+          "start": 1,
+          "end": 2,
+          "explanation": "古代对君主去世的称谓；此处“王”指周王。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129699
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129700-explanation",
+      "revision": 1,
+      "paragraphId": 129700,
+      "sourceSha256": "53f086512e42083b26a933c406eeebf2c3077f1ab478b4b1a7ebdc709866cfda",
+      "sourceText": "魏、韓、趙共廢晉靖公為家人而分其地。",
+      "translation": "魏、韩、赵三国共同废黜晋靖公，让他成为平民，并瓜分了晋国的土地。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129700
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129701-explanation",
+      "revision": 1,
+      "paragraphId": 129701,
+      "sourceSha256": "fc9ef254d719cbd9b039b79ed72657e96d15ca81e1972c6c69b6565e000dd67f",
+      "sourceText": "日有食之。",
+      "translation": "发生了日食。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129701
+      },
+      "notes": [
+        {
+          "quote": "食",
+          "start": 2,
+          "end": 3,
+          "explanation": "日食，月球遮掩太阳的现象。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129701
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129702-explanation",
+      "revision": 1,
+      "paragraphId": 129702,
+      "sourceSha256": "07ce0e21d1006420dec9c8b302ab3bc588f9ad568b90f41d71c633fe97188ce9",
+      "sourceText": "韓滅鄭，因徒都之。",
+      "translation": "韩国灭掉郑国，于是把国都迁到郑地。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129702
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129703-explanation",
+      "revision": 1,
+      "paragraphId": 129703,
+      "sourceSha256": "77c07dab4bb516e7f0bdc6c1ad3a02077529ac28634f97aae8d0d5d98dfca9c5",
+      "sourceText": "趙敬侯薨，子成侯種立。",
+      "translation": "赵敬侯去世，他的儿子种即位，是为赵成侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129703
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129703
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129705-explanation",
+      "revision": 1,
+      "paragraphId": 129705,
+      "sourceSha256": "3f3eda5f2dc6cccaaa6472c46497ff1ee5f2e58c44032eab558ed79815c4e7a6",
+      "sourceText": "燕敗齊師於林狐。",
+      "translation": "燕国军队在林狐打败齐军。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129705
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129706-explanation",
+      "revision": 1,
+      "paragraphId": 129706,
+      "sourceSha256": "dc179738df74767d93c661722db76ee9e8c7bf80fcc5a4635acffd64231c85b9",
+      "sourceText": "魯伐齊，入陽關。",
+      "translation": "鲁国攻打齐国，进入阳关。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129706
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129707-explanation",
+      "revision": 1,
+      "paragraphId": 129707,
+      "sourceSha256": "e5928566ade26a728a8befbadd7b3a99312c3bb314b0e9ba101424eb86e09849",
+      "sourceText": "魏伐齊，至博陵。",
+      "translation": "魏国攻打齐国，到达博陵。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129707
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129708-explanation",
+      "revision": 1,
+      "paragraphId": 129708,
+      "sourceSha256": "783cc164daf7da11f4267d367a6df04c72fe8b9e6e57b25b213f5f6664c29e60",
+      "sourceText": "燕僖侯薨，子桓侯立。",
+      "translation": "燕僖侯去世，他的儿子燕桓侯即位。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129708
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129708
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129709-explanation",
+      "revision": 1,
+      "paragraphId": 129709,
+      "sourceSha256": "1c686a86ef4569903c1c8d9879466c1d6b9aea17f1146e69aee2526f686fbcfa",
+      "sourceText": "衛慎侯薨，子聲侯訓立。",
+      "translation": "卫慎侯去世，他的儿子训即位，是为卫声侯。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129709
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129709
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129710-explanation",
+      "revision": 1,
+      "paragraphId": 129710,
+      "sourceSha256": "204a9a1c1e2d2044591a555475edd621a9657d7fa7239488060a8c2510a90c4f",
+      "sourceText": "趙伐衛，取都鄙七十三。",
+      "translation": "赵国攻打卫国，夺取了七十三处都邑。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129710
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129711-explanation",
+      "revision": 1,
+      "paragraphId": 129711,
+      "sourceSha256": "5f55252d6220d6658826809f31c4c058a0cf1e4cab1ccfe02795228ae7d991df",
+      "sourceText": "魏敗趙師于北藺。",
+      "translation": "魏国军队在北蔺打败赵军。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129711
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129712-explanation",
+      "revision": 1,
+      "paragraphId": 129712,
+      "sourceSha256": "173a8f816f0c03464bea447d16542207a64e92ab32eaf6e88d529ee9dbaecfb2",
+      "sourceText": "魏伐楚，取魯陽。",
+      "translation": "魏国攻打楚国，夺取鲁阳。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129712
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129714-explanation",
+      "revision": 1,
+      "paragraphId": 129714,
+      "sourceSha256": "8d8a31ce22a60a1441ff6b505aae50f400ae4002e483a1265f740a1f6390d3d9",
+      "sourceText": "趙伐齊，至鄄。",
+      "translation": "赵国攻打齐国，到达鄄地。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129714
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129715-explanation",
+      "revision": 1,
+      "paragraphId": 129715,
+      "sourceSha256": "3ec0faac379ff3255c822223ee13841ce8f6c527d4ef4de71dfa3ea85365a014",
+      "sourceText": "魏敗趙師于懷。",
+      "translation": "魏国军队在怀地打败赵军。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129715
+      },
+      "notes": []
+    },
+    {
+      "id": "paragraph-129716-explanation",
+      "revision": 1,
+      "paragraphId": 129716,
+      "sourceSha256": "c26a73d77ed0da4b452d34c98f92bd6fdb02878afe1f382978e5c39f5faf87bd",
+      "sourceText": "楚肅王薨，無子，立其弟良夫，是為宣王。",
+      "translation": "楚肃王去世，没有儿子，于是拥立他的弟弟良夫，是为楚宣王。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129716
+      },
+      "notes": [
+        {
+          "quote": "薨",
+          "start": 3,
+          "end": 4,
+          "explanation": "古代对诸侯等去世的称谓。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129716
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129718-explanation",
+      "revision": 1,
+      "paragraphId": 129718,
+      "sourceSha256": "fc9ef254d719cbd9b039b79ed72657e96d15ca81e1972c6c69b6565e000dd67f",
+      "sourceText": "日有食之。",
+      "translation": "发生了日食。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129718
+      },
+      "notes": [
+        {
+          "quote": "食",
+          "start": 2,
+          "end": 3,
+          "explanation": "日食，月球遮掩太阳的现象。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129718
+          }
+        }
+      ]
+    },
+    {
+      "id": "paragraph-129719-explanation",
+      "revision": 1,
+      "paragraphId": 129719,
+      "sourceSha256": "69e4d07edb5da514baa39f16a4f1a91ee39c57b02d9d133c8bbf379c89109526",
+      "sourceText": "王崩，弟扁立，是為顯王。",
+      "translation": "周王去世，他的弟弟扁即位，是为周显王。",
+      "reviewStatus": "unreviewed",
+      "aiLabel": "AI生成·未经人工审校",
+      "basis": {
+        "kind": "source-text",
+        "paragraphId": 129719
+      },
+      "notes": [
+        {
+          "quote": "崩",
+          "start": 1,
+          "end": 2,
+          "explanation": "古代对君主去世的称谓；此处“王”指周王。",
+          "attribution": "本站AI拟释",
+          "basis": {
+            "kind": "source-text",
+            "paragraphId": 129719
+          }
+        }
+      ]
+    }
+  ]
+}

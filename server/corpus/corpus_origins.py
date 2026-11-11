@@ -55,3 +55,15 @@ def attach_unit(unit, paragraphs):
         WHERE p.unit_id=%s""", (unit['id'],))}
     for paragraph in paragraphs:
         paragraph['origin'] = by_id.get(paragraph['id'])
+
+
+def attach_poem(poem):
+    present = db.one("SELECT to_regclass('public.corpus_poem_origin') IS NOT NULL AS ok")
+    if not present or not present['ok']:
+        return
+    row = db.one('''SELECT o.metadata,o.ordinal,o.edition_id,e.name AS edition,
+        b.manifest AS provenance FROM public.corpus_poem_origin o
+        JOIN public.corpus_ingest_batch b ON b.batch_id=o.batch_id
+        JOIN public.edition e ON e.id=o.edition_id WHERE o.poem_id=%s AND b.state='applied' ''', (poem['id'],))
+    if row:
+        poem['origin'] = row

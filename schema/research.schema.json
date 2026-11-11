@@ -15,6 +15,12 @@
     "claim": {"type": "string", "minLength": 1},
     "provenance": {"type": "object", "required": ["origin"], "properties": {"origin": {"enum": ["ai", "human", "mixed", "machine", "unknown"]}, "model": {"type": "string"}, "modelVersion": {"type": "string"}, "generatedAt": {"type": "string"}}},
     "evidence": {"type": "array", "items": {"type": "object", "required": ["sourceId", "quote", "locator", "sha256", "textFile"], "properties": {"sourceId": {"type": "string"}, "quote": {"type": "string", "minLength": 1}, "locator": {"type": "string", "minLength": 1}, "sha256": {"type": "string"}, "textFile": {"type": "string"}}}},
+    "imageObservations": {"type": "array", "items": {"type": "object", "required": ["sourceId", "fileTitle", "page", "metadataRevisionId", "originalSha256", "originalMetadataSha256", "previewSha256", "previewMetadataSha256", "previewUrl", "sourceUrl", "reading", "method", "origin", "generatedAt", "status", "reviewHistory"], "properties": {
+      "sourceId": {"type": "string"}, "fileTitle": {"type": "string", "minLength": 1}, "page": {"type": "integer", "minimum": 1}, "metadataRevisionId": {"type": "integer", "minimum": 1},
+      "originalSha256": {"type": "string"}, "originalMetadataSha256": {"type": "string"}, "previewSha256": {"type": "string"}, "previewMetadataSha256": {"type": "string"},
+      "previewUrl": {"type": "string"}, "sourceUrl": {"type": "string"}, "reading": {"type": "string", "minLength": 1}, "method": {"type": "string", "minLength": 1},
+      "origin": {"enum": ["ai", "human", "unknown"]}, "generatedAt": {"type": "string", "minLength": 1}, "status": {"enum": ["pending", "verified", "rejected"]}, "reviewHistory": {"type": "array"}
+    }}},
     "counterEvidence": {"type": "string"},
     "reviewHistory": {"type": "array"},
     "sha256": {"type": "string"},

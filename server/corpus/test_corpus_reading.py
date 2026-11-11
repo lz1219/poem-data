@@ -14,6 +14,39 @@ class CorpusReadingCompatibilityTests(SimpleTestCase):
     def setUp(self):
         self.factory = APIRequestFactory()
 
+    def test_legacy_poem_without_new_provenance_table_keeps_old_response(self):
+        poem = {'id': 1, 'body': '原文', 'author': '旧作者'}
+        with patch.object(views_corpus.db, 'available', return_value=True), \
+             patch.object(views_corpus.db, 'one', side_effect=[poem, {'ok': False}]):
+            result = views_corpus.poem_detail(self.factory.get('/api/corpus/poems/1'), 1)
+        self.assertEqual(result.data, poem)
+        self.assertNotIn('origin', result.data)
+
+    def test_poetry_book_is_paginated_and_percent_query_stays_literal(self):
+        book = {'id': 53, 'title': '全宋词'}
+        poem = {'id': 99, 'author': '作者', 'title': '词牌', 'head': '正文'}
+        with patch.object(views_corpus.db, 'available', return_value=True), \
+             patch.object(corpus_origins, 'attach_book'), \
+             patch.object(views_corpus.db, 'one', side_effect=[book, {'c': 21046}]), \
+             patch.object(views_corpus.db, 'query', side_effect=[[], [poem]]) as query:
+            result = views_corpus.book_detail(self.factory.get('/api/texts/53', {
+                'q': '%', 'limit': '1000', 'offset': '50'}), 53)
+        self.assertEqual(result.data['juan'], [])
+        self.assertEqual(result.data['total'], 0)
+        self.assertEqual(result.data['poems'], [poem])
+        self.assertEqual(result.data['poemLimit'], 200)
+        self.assertEqual(result.data['poemOffset'], 50)
+        self.assertEqual(query.call_args.args[1], (53, '%', ['%'], 200, 50))
+        self.assertNotIn('LIKE', query.call_args.args[0])
+
+    def test_bad_poetry_pagination_is_client_error(self):
+        with patch.object(views_corpus.db, 'available', return_value=True), \
+             patch.object(corpus_origins, 'attach_book'), \
+             patch.object(views_corpus.db, 'one', return_value={'id': 53}), \
+             patch.object(views_corpus.db, 'query', return_value=[]):
+            result = views_corpus.book_detail(self.factory.get('/api/texts/53', {'offset': 'oops'}), 53)
+        self.assertEqual(result.status_code, 400)
+
     def test_old_book_without_origin_tables_remains_readable(self):
         book = {'id': 7, 'title': '旧书目', 'edition': None, 'source_url': None}
         units = [{'id': 4, 'juan': '一', 'title': '卷一', 'chars': 2, 'punctuated': False}]
@@ -164,6 +197,7 @@ class CorpusReadingViewTests(SimpleTestCase):
         with self.assertRaises(ValueError):
             reading.attach_reading({'body': '原文'}, [{'body': '原文', 'origin': {
                 'annotations': [{'anchor': 3, 'body': '注'}]}}])
+
 
 class RetiredImporterTests(SimpleTestCase):
     def test_legacy_wiki_command_cannot_write_even_without_dry_run(self):

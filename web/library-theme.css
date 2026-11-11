@@ -1,0 +1,115 @@
+/* 文献馆 · 山水与书页。结构和交互仍由页面本身维护。 */
+:root {
+  --bg: #f0eee9;
+  --bg-soft: #ebe8e1;
+  --surface: #fcfbf8;
+  --paper: #f2f0ea;
+  --paper-deep: #e4e2dc;
+  --study: #f5f3ed;
+  --ink: #292b2a;
+  --ink-2: #494c49;
+  --muted: #737570;
+  --line: #dbd9d1;
+  --line-2: #c6c6bd;
+  --accent: #a4513f;
+  --accent-soft: rgba(164,81,63,.10);
+  --shadow: 8px 12px 28px rgba(65,65,57,.10), -6px -6px 18px rgba(255,255,255,.8);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#1a1c1b; --bg-soft:#242624; --surface:#242725; --paper:#2b2e2b; --paper-deep:#393c38; --study:#30332f; --ink:#f0eee7; --ink-2:#d2d0c8; --muted:#b4b5ad; --line:#474a45; --line-2:#62655e; --accent:#e4a380; --accent-soft:rgba(228,163,128,.14); --shadow:0 12px 36px rgba(0,0,0,.18); }
+}
+body { background:var(--bg) url('ink-landscape.svg') center top / cover fixed; }
+body::before { opacity:.16; }
+/* 流光位于内容背后，缓慢移动，不阻挡选择、点击或滚动。 */
+body::after { content:''; position:fixed; inset:-40%; z-index:0; pointer-events:none; background:linear-gradient(118deg,transparent 30%,rgba(255,255,251,.70) 43%,rgba(216,204,186,.48) 50%,transparent 64%),radial-gradient(ellipse 26% 22% at 75% 65%,rgba(190,205,197,.48),transparent 75%); opacity:.85; transform:translate3d(0,0,0); }
+@media (prefers-reduced-motion:no-preference) {
+  html[data-motion="full"] body::after { animation:ink-light-drift 9s ease-in-out infinite alternate; }
+  html[data-motion="gentle"] body::after { animation:ink-light-drift 9s ease-in-out 1 both; }
+  html[data-motion="gentle"] body[data-reading="true"]::after { animation:none; transform:none; }
+}
+@keyframes ink-light-drift { from { transform:translate3d(-14%,-4%,0); } to { transform:translate3d(16%,5%,0); } }
+@media (prefers-color-scheme:dark) { body::after { background:linear-gradient(118deg,transparent 30%,rgba(226,225,203,.10) 44%,rgba(224,177,143,.13) 51%,transparent 64%),radial-gradient(ellipse 26% 22% at 75% 65%,rgba(184,200,188,.10),transparent 75%); } }
+.container { max-width:1440px; padding-top:26px; }
+.masthead { padding:16px 24px; margin-bottom:24px; border:1px solid rgba(139,171,147,.38); border-radius:18px; background:rgba(251,253,249,.76); box-shadow:var(--shadow); }
+.visual-controls { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+.visual-controls label { color:var(--muted); font:12px var(--sans); white-space:nowrap; }
+.visual-controls select { height:34px; margin-left:4px; border:1px solid var(--line); background:var(--surface); }
+.reader { background:var(--surface); background:color-mix(in srgb,var(--surface) 96%,transparent); }
+.brand h1 { font-size:clamp(24px,2.4vw,32px); letter-spacing:.15em; }
+.subtitle { margin-top:5px; }
+.research-entry { color:var(--ink-2); border:1px solid var(--line-2); border-radius:999px; padding:8px 16px; }
+.home-hero { min-height:420px; gap:16px; }
+.home-intro { border:1px solid rgba(255,255,255,.75); border-radius:22px; background:linear-gradient(135deg,rgba(255,255,252,.84),rgba(241,239,233,.72)); box-shadow:var(--shadow); }
+.home-intro::before { content:'山水之间 / 一卷长读'; color:var(--muted); }
+.home-intro h2 { font-size:clamp(38px,4.6vw,62px); letter-spacing:.1em; line-height:1.4; }
+.home-intro p { font-size:15px; }
+.home-topic { margin:0; border:1px solid rgba(255,255,255,.75); border-radius:22px; background:linear-gradient(145deg,rgba(226,225,219,.84),rgba(250,249,245,.68)); box-shadow:var(--shadow); padding:42px; }
+.home-topic .topic-name { font-size:clamp(40px,4.5vw,62px); }
+.home-topic-art { width:125%; height:85%; opacity:.38; }
+.home-topic .topic-link { border:1px solid var(--line-2); border-radius:999px; padding:8px 16px; background:var(--surface); }
+.home-section-heading { border-color:var(--line-2); }
+.catalog { gap:10px; border:0; margin-top:16px; }
+.cat-card, .cat-card:first-child { min-height:160px; padding:22px 18px; border:1px solid rgba(255,255,255,.85); border-radius:14px; background:rgba(249,251,248,.76); box-shadow:var(--shadow); }
+.cat-card:hover { background:var(--paper); border-color:var(--line-2); transform:translateY(-2px); }
+.cat-card .idx { margin-bottom:18px; }
+.home-note { border-radius:16px; border:1px solid var(--line); background:var(--paper); }
+.pick-row { padding:13px 4px; }
+.modes { border:1px solid var(--line); border-radius:14px; padding:9px 12px; box-shadow:var(--shadow); }
+.modes button { border-radius:9px; min-height:38px; }
+.modes button.on { background:var(--paper-deep); color:var(--ink); }
+.toolbar input[type=text], .toolbar select { border-radius:11px; min-height:42px; }
+.btn { min-height:40px; }
+.btn-primary { background:var(--ink-2); box-shadow:none; }
+.btn-primary:hover { background:var(--ink); }
+.panel { border-radius:16px; }
+.list { background:rgba(251,253,249,.83); padding:10px; }
+.item { border-radius:9px; border-bottom:1px solid var(--line); }
+.item.on { background:var(--paper); box-shadow:inset 3px 0 0 var(--accent); }
+.reader { background:rgba(253,254,251,.94); }
+.work-heading .rt { font-size:clamp(30px,3.8vw,42px); }
+.work-reading { border:1px solid var(--line); border-top:2px solid var(--accent); border-radius:13px; background:var(--study); }
+.work-line[aria-pressed="true"] { color:var(--ink); background:var(--paper); }
+.person-intro.person-topic-header { border-radius:16px; padding:clamp(28px,3vw,44px); background:linear-gradient(125deg,var(--paper),var(--paper-deep)); }
+.person-path { border-radius:10px!important; }
+.person-stop-quote { border:1px solid var(--line); border-left:2px solid var(--line-2); border-radius:0 12px 12px 0; background:var(--surface); box-shadow:inset 1px 1px 0 rgba(255,255,255,.7), 4px 6px 16px rgba(65,65,57,.06); }
+.reader-tools button { border-radius:9px; background:var(--surface); }
+.corpus-study { border-radius:0 12px 12px 0; }
+@media (min-width:901px) {
+  .corpus-study { max-height:max(180px, calc(100vh - 280px)); overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; }
+}
+/* 同一套卡片材质覆盖作品、行迹、典籍及说明区；正文保持独立。 */
+.reader .note,.reader .work-reading,.reader .corpus-study,.home-note { background:var(--study); border-color:var(--line); box-shadow:inset 1px 1px 0 rgba(255,255,255,.6), 4px 6px 16px rgba(65,65,57,.05); }
+.reader .note { border-radius:10px; }
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .masthead,.modes,.home-intro,.home-topic,.cat-card,.list,.reader { -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); }
+  .masthead,.modes { background:rgba(251,253,249,.72); }
+  .reader { background:rgba(253,252,249,.78); border-color:rgba(255,255,255,.85); }
+  .person-intro.person-topic-header { background:linear-gradient(125deg,rgba(255,254,250,.60),rgba(227,225,219,.50)); border-color:rgba(255,255,255,.8); box-shadow:inset 1px 1px 0 rgba(255,255,255,.75), 8px 10px 24px rgba(65,65,57,.07); }
+  .person-stop-quote { background:linear-gradient(125deg,rgba(255,254,250,.60),rgba(235,234,229,.48)); border-color:rgba(255,255,255,.78); border-left-color:var(--line-2); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); }
+  .reader .note,.reader .work-reading,.reader .corpus-study,.home-note { background:linear-gradient(125deg,rgba(255,254,250,.72),rgba(235,234,229,.62)); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); }
+  #reader .person-path { background:rgba(255,255,252,.18); }
+  @media (prefers-color-scheme:dark) { .masthead,.modes { background:rgba(36,39,37,.88); } }
+}
+@media (prefers-color-scheme:dark) { body { background:radial-gradient(ellipse at 70% 10%,#41433f,transparent 48%),var(--bg); } .masthead,.list,.reader,.cat-card,.cat-card:first-child { background:var(--surface); } .person-intro.person-topic-header { background:linear-gradient(125deg,#30332f,#41443f); border-color:var(--line); box-shadow:none; } .person-stop-quote { background:rgba(59,62,57,.88); border-color:var(--line); box-shadow:none; } #reader .person-path { background:transparent; } .home-intro { background:linear-gradient(135deg,#272a27,#333632); border-color:var(--line); } .home-topic { background:linear-gradient(145deg,#41433f,#2a2d2a); border-color:var(--line); } }
+@media (prefers-color-scheme:dark) { .reader .note,.reader .work-reading,.reader .corpus-study,.home-note { background:var(--study); border-color:var(--line); box-shadow:none; } }
+@media (max-width:900px) {
+  .catalog { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .cat-card,.cat-card:first-child,.cat-card:nth-child(3) { border:1px solid var(--line); }
+}
+@media (max-width:600px) {
+  .container { padding:14px 12px 40px; }
+  .masthead { padding:14px 16px; border-radius:14px; }
+  .home-hero { min-height:0; gap:10px; }
+  .home-intro { padding:42px 24px 28px; border-radius:16px; }
+  .home-intro h2 { font-size:33px; }
+  .home-topic { min-height:220px; margin:0; padding:24px; border-radius:16px; }
+  .home-topic .topic-name { font-size:35px; }
+  .catalog { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+  .cat-card,.cat-card:first-child,.cat-card:nth-child(3) { padding:17px!important; border:1px solid var(--line); border-radius:12px; min-height:135px; }
+  .modes { border-radius:12px; }
+  .reader { border-radius:14px; }
+  .person-intro.person-topic-header { padding:24px; }
+  .work-reading { border-radius:18px 18px 0 0; }
+}
+@media (max-width:600px) and (prefers-color-scheme:dark) { #poetry-reading-slot.is-open .work-reading { background:rgba(48,51,47,.97); } }
+html[data-motion] .reader { background:var(--surface); background:color-mix(in srgb,var(--surface) 96%,transparent); }

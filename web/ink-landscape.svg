@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice">
+ <defs>
+  <linearGradient id="mist" x2="0" y2="1"><stop stop-color="#eeece7"/><stop offset="1" stop-color="#faf9f5"/></linearGradient>
+  <linearGradient id="mountain" x2="0" y2="1"><stop stop-color="#767d7a" stop-opacity=".30"/><stop offset="1" stop-color="#939792" stop-opacity=".02"/></linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+ </defs>
+ <path fill="url(#mist)" d="M0 0h1400v700H0z"/>
+ <g fill="url(#mountain)" filter="url(#soft)">
+  <path d="M-80 550Q80 460 180 230q35-60 79 4 48 75 104 184 72-77 140-210 26-49 54-6 100 156 210 338v160H-80z"/>
+  <path d="M510 590q92-95 162-222 31-57 63-5 60 95 112 144 64-82 132-224 26-53 58-7 112 157 236 287l207-58v195H510z"/>
+ </g>
+ <path d="M0 564q165-60 325-5t313-7q164-49 325 6t437-18" fill="none" stroke="#74827e" stroke-opacity=".13" stroke-width="2"/>
+ <path d="M0 604q180-48 350 0t335-7q165-37 340 8t375-18" fill="none" stroke="#74827e" stroke-opacity=".09" stroke-width="2"/>
+</svg>

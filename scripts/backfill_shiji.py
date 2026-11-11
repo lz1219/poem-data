@@ -140,8 +140,8 @@ def fingerprints(conn, exclusion=None):
     for table in TABLES:
         clause = sql.SQL('')
         params = ()
-        if exclusion and table in ('text_unit', 'paragraph', 'edition'):
-            ids = exclusion[{'text_unit': 'unitIds', 'paragraph': 'paragraphIds', 'edition': 'editionIds'}[table]]
+        if exclusion and table in ('text_unit', 'paragraph', 'edition', 'corpus_poem'):
+            ids = exclusion.get({'text_unit': 'unitIds', 'paragraph': 'paragraphIds', 'edition': 'editionIds', 'corpus_poem': 'poemIds'}[table], [])
             clause = sql.SQL(' WHERE NOT (id = ANY(%s))')
             params = (ids,)
         query = sql.SQL("SELECT count(*),md5(coalesce(string_agg(md5(to_jsonb(t)::text),'' ORDER BY id),'')) FROM public.{} t{}").format(sql.Identifier(table), clause)
@@ -153,11 +153,14 @@ def fingerprints(conn, exclusion=None):
 def new_fingerprints(conn, result):
     from psycopg import sql
     hashes = {}
-    for table, field, ids in [
+    targets = [
         ('text_unit', 'id', result['unitIds']), ('paragraph', 'id', result['paragraphIds']),
         ('edition', 'id', result['editionIds']),
         ('corpus_unit_origin', 'unit_id', result['unitIds']),
-        ('corpus_paragraph_origin', 'paragraph_id', result['paragraphIds'])]:
+        ('corpus_paragraph_origin', 'paragraph_id', result['paragraphIds'])]
+    if 'poemIds' in result:
+        targets += [('corpus_poem', 'id', result['poemIds']), ('corpus_poem_origin', 'poem_id', result['poemIds'])]
+    for table, field, ids in targets:
         query = sql.SQL("SELECT count(*),md5(coalesce(string_agg(md5(to_jsonb(t)::text),'' ORDER BY {}),'')) FROM public.{} t WHERE {}=ANY(%s)").format(sql.Identifier(field), sql.Identifier(table), sql.Identifier(field))
         count, sha = conn.execute(query, (ids,)).fetchone()
         hashes[table] = {'rows': count, 'md5': sha}
@@ -311,8 +314,12 @@ def guard_references(conn, plan, result):
     allowed = {'paragraph': ('id', result['paragraphIds']),
                'corpus_unit_origin': ('batch_id', [plan['batchId']]),
                'corpus_paragraph_origin': ('batch_id', [plan['batchId']]),
+               'corpus_poem_origin': ('batch_id', [plan['batchId']]),
                'corpus_ingest_batch': ('batch_id', [plan['batchId']])}
-    for table, ids in [('text_unit', result['unitIds']), ('paragraph', result['paragraphIds']), ('edition', result['editionIds'])]:
+    targets = [('text_unit', result['unitIds']), ('paragraph', result['paragraphIds']), ('edition', result['editionIds'])]
+    if 'poemIds' in result:
+        targets.append(('corpus_poem', result['poemIds']))
+    for table, ids in targets:
         refs = conn.execute("""SELECT n.nspname,r.relname,a.attname,cardinality(c.conkey)
             FROM pg_constraint c JOIN pg_class r ON r.oid=c.conrelid
             JOIN pg_namespace n ON n.oid=r.relnamespace

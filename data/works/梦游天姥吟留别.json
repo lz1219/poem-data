@@ -8,6 +8,7 @@
   ],
   "authorKey": "libai",
   "genre": "shi",
+  "excerpt": true,
   "level": "popular",
   "certainty": "unknown",
   "composed": {

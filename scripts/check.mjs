@@ -25,6 +25,9 @@ const run = (name, cmd, args, opts = {}) => {
 
 // ① 数据契约
 run('data', 'node', ['scripts/validate.mjs']);
+run('schema', 'node', ['--test','scripts/test-schema-check.mjs']);
+run('poetry', 'node', ['scripts/check-poetry-reading.mjs']);
+run('atlas-input', 'node', ['--test', 'scripts/test-emit-atlas-input.mjs']);
 
 // ② 索引同步
 run('index', 'node', ['scripts/build-index.mjs', '--check']);
@@ -37,13 +40,18 @@ if (existsSync(atlasDir)) {
   steps.push({ name: 'atlas', ok: true, skipped: true, out: '未找到 ../jiangshan-xingzhi，跳过生成物检查' });
 }
 
-// ③ 数据库往返（有 venv 才跑；没有则跳过）
+// ③ 数据库往返：仅在明确配置数据库并主动请求时执行。
 const py = isWin
   ? path.join(ROOT, 'server/.venv/Scripts/python.exe')
   : path.join(ROOT, 'server/.venv/bin/python');
 const django = path.join(ROOT, 'server');
 if (existsSync(py)) run('research', py, ['scripts/check-research.py']);
-if (existsSync(py) && existsSync(path.join(django, 'db.sqlite3'))) {
+else steps.push({ name: 'research', ok: true, skipped: true, out: '未找到 server Python 环境' });
+if (existsSync(py)) run('links', py, ['scripts/validate_literary_links.py', '--offline', '--link-dir', 'data/links']);
+else steps.push({ name: 'links', ok: true, skipped: true, out: '未找到 server Python 环境' });
+if (process.env.CHECK_DATABASE === '1' && !/^postgres(?:ql)?:\/\//.test(process.env.DATABASE_URL || '')) {
+  steps.push({ name: 'db', ok: false, out: 'CHECK_DATABASE=1 时必须明确配置 PostgreSQL DATABASE_URL' });
+} else if (process.env.CHECK_DATABASE === '1' && existsSync(py)) {
   run('db', py, ['manage.py', 'export_json', '--check'], {
     cwd: django,
     env: {
@@ -53,19 +61,21 @@ if (existsSync(py) && existsSync(path.join(django, 'db.sqlite3'))) {
       DJANGO_DEBUG: '0',
     },
   });
+} else if (process.env.CHECK_DATABASE === '1') {
+  steps.push({ name: 'db', ok: false, out: '未找到 server Python 环境' });
 } else {
-  steps.push({ name: 'db', ok: true, skipped: true, out: '未装 server 环境，跳过往返检查' });
+  steps.push({ name: 'db', ok: true, skipped: true, out: '未请求数据库往返检查；本地 SQLite 不再作为工作数据源' });
 }
 
 // ── 汇总 ──
 let failed = 0;
 for (const s of steps) {
   const mark = s.skipped ? '–' : s.ok ? '✓' : '✕';
-  console.log(`${mark} ${s.name.padEnd(6)} ${s.ok ? '' : s.out.split('\n').slice(-4).join('\n         ')}`);
+  console.log(`${mark} ${s.name.padEnd(6)} ${s.skipped ? s.out : s.ok ? '' : s.out.split('\n').slice(-4).join('\n         ')}`);
   if (!s.ok) failed++;
 }
 if (failed) {
   console.error(`\n${failed} 项未通过，提交已拦下。`);
   process.exit(1);
 }
-console.log('\n全部通过。');
+console.log(steps.some(s => s.skipped) ? '\n已执行的检查通过；部分检查已跳过。' : '\n全部通过。');

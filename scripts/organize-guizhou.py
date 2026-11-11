@@ -47,6 +47,9 @@ def evidence(meta,path,raw,found):
 
 def save_candidate(key,title,claim,issues,ev,subject):
     rid='guizhou-'+key;path=ROOT/'data/research'/(rid+'.json');old=read(path) if path.exists() else None
+    if old and (old.get('imageObservations') or old.get('relatedResearch')):
+        if {e['sha256'] for e in ev}<={e['sha256'] for e in old['evidence']}:return old
+        raise ValueError('已增强记录的原件片段变化，须保留增补后另核')
     doc={'id':rid,'subject':subject,'kind':'audit' if key=='volume28-conflict' else 'witness',
         'status':'pending' if key=='volume28-conflict' else 'partial','visibility':'public','title':title,
         'claim':'AI辅助资料解释·未经人工审校。'+claim,

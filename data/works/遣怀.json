@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0",
+  "key": "遣怀",
+  "titleZh": "遣怀",
+  "titleEn": "Expressing Feelings",
+  "aliases": [
+    "遣怀",
+    "遣懷"
+  ],
+  "authorKey": "dumu",
+  "genre": "shi",
+  "citation": "《全唐诗》卷五二四 · 樊川文集卷二",
+  "level": "popular",
+  "certainty": "unknown",
+  "composed": {
+    "year": 835,
+    "yearKind": "composition",
+    "placeZh": "扬州",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "落魄江湖載酒行，楚腰纖細掌中輕。",
+      "十年一覺揚州夢，贏得青樓薄倖名。"
+    ],
+    "paragraphsSimplified": [
+      "落魄江湖载酒行，楚腰纤细掌中轻。",
+      "十年一觉扬州梦，赢得青楼薄幸名。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "诗人追思昔年在扬州的放浪生涯与年华虚度：十年沉湎如同一场大梦，最终只换来青楼间的薄幸之名。",
+  "notes": [
+    {
+      "term": "落魄",
+      "explain": "失意潦倒，放浪不羁。"
+    },
+    {
+      "term": "楚腰",
+      "explain": "指细腰女子。《楚辞》：“楚王好细腰，宫中多饿死。”"
+    },
+    {
+      "term": "掌中轻",
+      "explain": "用汉成帝赵飞燕身轻能作掌上舞之典。"
+    },
+    {
+      "term": "薄幸",
+      "explain": "薄情，负心。"
+    }
+  ],
+  "background": "杜牧大和年间曾在淮南节度使牛僧孺幕府任掌书记，居扬州多年；后迁监察御史分司东都，追怀扬州往事而作此诗。",
+  "appreciation": {
+    "text": "前两句极写当年扬州游宴生活的放浪欢娱与沉湎，后两句忽作沉痛翻转：以「十年一觉」与「赢得薄幸」自嘲自悔，繁华落尽皆是空虚与落寞，感慨深沉。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [
+    {
+      "id": "a001",
+      "locator": {
+        "paragraph": 1,
+        "charOffset": 0,
+        "label": "落魄江湖载酒行"
+      },
+      "baseEdition": "quanshi-cp-2026",
+      "baseText": "落魄江湖载酒行，楚腰纤细掌中轻",
+      "variantEdition": null,
+      "variantText": "落魄江南载酒行，楚腰肠断掌中轻",
+      "basis": "本站语料库《全唐诗》卷五二四作‘江南/肠断’；宋本及通行选本作‘江湖/纤细’。",
+      "judgement": "both"
+    }
+  ],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "835",
+      "stance": "pending",
+      "note": "系年所附年份为常见说法占位符，待取得可定位史料证据后重新采信。",
+      "evidence": [
+        {
+          "quote": "835",
+          "source": "传统推算系年",
+          "grade": "C"
+        }
+      ]
+    }
+  ]
+}

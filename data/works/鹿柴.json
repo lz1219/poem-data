@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "key": "鹿柴",
+  "titleZh": "鹿柴",
+  "titleEn": "Deer Enclosure",
+  "aliases": [
+    "鹿柴"
+  ],
+  "authorKey": "wangwei",
+  "genre": "shi",
+  "citation": "《全唐诗》卷一二八 · 辋川集",
+  "level": "popular",
+  "certainty": "unknown",
+  "composed": {
+    "year": 745,
+    "yearKind": "composition",
+    "placeZh": "蓝田",
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "空山不見人，但聞人語響。",
+      "返景入深林，復照青苔上。"
+    ],
+    "paragraphsSimplified": [
+      "空山不见人，但闻人语响。",
+      "返景入深林，复照青苔上。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "空寂的山中不见人影，只隐隐听到说话的声音。落日的余晖穿入幽深的树林，又斑驳地映照在青苔之上。",
+  "notes": [
+    {
+      "term": "鹿柴",
+      "explain": "柴通“寨”，指用树木栅栏围成的防兽木栅；王维辋川别业二十景之一。"
+    },
+    {
+      "term": "返景",
+      "explain": "景通“影”，夕阳返照的光芒。"
+    }
+  ],
+  "background": "王维晚年居蓝田辋川别墅，与裴迪同游酬唱，各作绝句二十首，《鹿柴》为其中第四首。",
+  "appreciation": {
+    "text": "诗以空灵幽邃著称。前两句以「人语响」反衬山之幽静，以动衬静；后两句以夕阳微光透入深林照亮青苔，以光衬暗。全篇声与色、空与明浑然一体，极具禅趣。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "745",
+      "stance": "pending",
+      "note": "辋川集具体编撰年份史料未详，所附年份仅为占位。",
+      "evidence": [
+        {
+          "quote": "745",
+          "source": "传统推算系年",
+          "grade": "C"
+        }
+      ]
+    }
+  ]
+}

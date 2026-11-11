@@ -85,12 +85,17 @@ def attach_reading(unit, paragraphs):
             after = body[position:]
             segments.append({'kind': 'text', 'original': after,
                              'simplified': cc.convert(after) if cc else None})
+        explanation = paragraph.get('explanation')
+        if explanation:
+            explanation = {**explanation, 'notes': [{**note, 'quoteSimplified': cc.convert(note['quote']) if cc else None}
+                                                     for note in explanation['notes']]}
         pages.append({'seq': paragraph.get('seq', index), 'paragraphId': paragraph.get('id'),
                       'pageLabel': origin.get('pageLabel'), 'sourcePage': source_page,
                       'kind': origin.get('kind', 'paragraph'),
                       'headingLevel': origin.get('headingLevel'),
                       'headingPath': origin.get('headingPath', []),
-                      'eventNumber': origin.get('eventNumber'), 'segments': segments})
+                      'eventNumber': origin.get('eventNumber'), 'segments': segments,
+                      'explanation': explanation})
     unit['reading'] = {
         'simplifiedAvailable': cc is not None,
         'conversion': {'engine': 'OpenCC', 'version': release, 'config': 't2s.json',
