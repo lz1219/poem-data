@@ -27,7 +27,6 @@ const run = (name, cmd, args, opts = {}) => {
 run('data', 'node', ['scripts/validate.mjs']);
 run('schema', 'node', ['--test','scripts/test-schema-check.mjs']);
 run('poetry', 'node', ['scripts/check-poetry-reading.mjs']);
-run('atlas-input', 'node', ['--test', 'scripts/test-emit-atlas-input.mjs']);
 
 // ② 索引同步
 run('index', 'node', ['scripts/build-index.mjs', '--check']);
@@ -35,8 +34,10 @@ run('index', 'node', ['scripts/build-index.mjs', '--check']);
 // ④ 站点生成物是否与数据一致（兄弟仓库存在时才跑）
 const atlasDir = path.join(ROOT, '..', 'jiangshan-xingzhi');
 if (existsSync(atlasDir)) {
+  run('atlas-input', 'node', ['--test', 'scripts/test-emit-atlas-input.mjs']);
   run('atlas', 'node', ['scripts/emit-atlas.mjs', '--target', atlasDir, '--check']);
 } else {
+  steps.push({ name: 'atlas-input', ok: true, skipped: true, out: '未找到 ../jiangshan-xingzhi，跳过生成物输入测试' });
   steps.push({ name: 'atlas', ok: true, skipped: true, out: '未找到 ../jiangshan-xingzhi，跳过生成物检查' });
 }
 
