@@ -6,25 +6,112 @@
     "key": "liuyuxi:6"
   },
   "kind": "audit",
-  "status": "pending",
+  "status": "partial",
   "visibility": "public",
-  "title": "刘禹锡：二十三年弃置身 · 第6站 · 夔州",
-  "claim": "转夔州刺史，在巴东。",
+  "title": "刘禹锡 · 第6站 · 夔州任内与赴任前的居丧",
+  "claim": "连州与夔州两任之间有居丧经历。刘禹锡记自己途经衡阳时接到柳宗元讣书。长庆二年五月初一，他以夔州刺史身份为厅壁记署款。",
   "provenance": {
-    "origin": "unknown",
-    "method": "历史叙述生成方式未记录"
+    "origin": "ai",
+    "model": "Codex",
+    "modelVersion": "GPT-6",
+    "generatedAt": "2026-11-26T01:22:59.094826+00:00",
+    "method": "交叉核对祭文、谢表、厅壁记和《竹枝词》引的固定电子版本，并区分本人记载与后人编年。"
   },
   "issues": [
-    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+    "母丧离任系于 819 年，采用下列研究注 7 所引编年材料。祭文自述在任所遭丧、途经衡阳闻讣，开篇署元和十五年正月并明说遣使致祭。",
+    "谢表自述到任，未填诏令月日；厅壁记有独立的年、月、日署款。822 在地图上表示有据在任的年份。",
+    "《竹枝词》引自记正月来建平、听竹枝并作九篇。用作巴地歌俗的阅读材料，诗序未署某年，州治坐标也不能定位歌唱现场。"
   ],
-  "evidence": [],
-  "reasoning": "",
-  "counterEvidence": "尚未完成系统反证检索。",
+  "evidence": [
+    {
+      "sourceId": "wikisource",
+      "revision": "2496042",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2496042",
+      "locator": "《全唐文》卷六一〇，祭文第二段",
+      "quote": "謂復前約，忽承訃書。",
+      "startByte": 489,
+      "endByte": 703,
+      "textFile": "data/witnesses/07c24108fc03aff259233a04dcc1546ffc6c358b4bbd18a76e89310638bdf33b.txt",
+      "sha256": "07c24108fc03aff259233a04dcc1546ffc6c358b4bbd18a76e89310638bdf33b",
+      "originalFileSha256": "f76ef3132c37e7fac22e525ebb1456c67848436a5fc72955b95e22a427fc40e3",
+      "verifiedQuote": true,
+      "verification": "按固定电子修订逐字定位摘引。未经影印本及人工对校。",
+      "stance": "support",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "wikisource",
+      "revision": "1976825",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=1976825",
+      "locator": "《全唐文》卷六〇一，谢表末段",
+      "quote": "臣即以今月二日到任上訖。",
+      "startByte": 625,
+      "endByte": 859,
+      "textFile": "data/witnesses/ac16094c5e5df856c8bb8aee0426d42aab0d5d6a0739523e5690d8e8c706af90.txt",
+      "sha256": "ac16094c5e5df856c8bb8aee0426d42aab0d5d6a0739523e5690d8e8c706af90",
+      "originalFileSha256": "4c768dc8e31080dabbc8e67e3f7db2873017c3e9d81b60678cd0d58aad103f8a",
+      "verifiedQuote": true,
+      "verification": "按固定电子修订逐字定位摘引。未经影印本及人工对校。",
+      "stance": "support",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "wikisource",
+      "revision": "1974253",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=1974253",
+      "locator": "《全唐文》卷六〇六，厅壁记末段署款",
+      "quote": "長慶二年五月一日，刺史中山劉禹錫記。",
+      "startByte": 901,
+      "endByte": 1051,
+      "textFile": "data/witnesses/fbc6bc8d54b48bb42d3daf4fc3c5929ac53123cffb0110876b5d4aebf864982f.txt",
+      "sha256": "fbc6bc8d54b48bb42d3daf4fc3c5929ac53123cffb0110876b5d4aebf864982f",
+      "originalFileSha256": "aa1faea49327ac7579b4a052ef13a062e9200960f53d4b97ccbec9b906d79e87",
+      "verifiedQuote": true,
+      "verification": "按固定电子修订逐字定位摘引。未经影印本及人工对校。",
+      "stance": "support",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "kanripo-kr4c0051",
+      "commit": "26064975d6bfd4cb95fff64d54ccf0095617790c",
+      "url": "https://github.com/kanripo/KR4c0051/blob/26064975d6bfd4cb95fff64d54ccf0095617790c/KR4c0051_009.txt#L175-L182",
+      "locator": "四部丛刊本《刘梦得文集》卷九《竹枝词》引，8b",
+      "quote": "見聮歌竹枝吹短笛擊鼓以赴節",
+      "startByte": 7434,
+      "endByte": 7850,
+      "textFile": "data/witnesses/cfc82cef8fef06a1f7f1021f9d734dc630024c64e3d1d5f5b13a74a44a9881ff.txt",
+      "sha256": "cfc82cef8fef06a1f7f1021f9d734dc630024c64e3d1d5f5b13a74a44a9881ff",
+      "originalFileSha256": "8018cba22e9dbbb1d24ca3f44251a3915c81948397d2c7ebad0dbb7615b4f184",
+      "verifiedQuote": true,
+      "verification": "按固定电子修订逐字定位摘引。未经影印本及人工对校。",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "reasoning": "用祭文区分作者亲历与派人代祭，用谢表确认到任，用厅壁记断定最迟在任时间。原稿笼统的巴东与连续居于江南十四年之说均已收窄。地图以唐奉节县治为参照。",
+  "counterEvidence": "现代编年有长庆二年正月五日抵任之说。所核《全唐文》谢表及四部丛刊本《刘梦得文集》卷十八均记今月二日，未载月份。谢表与诗序不能拼出完整到任日期。衡阳闻讣日、连州离任月日和归葬沿途也未逐项定位。",
   "alternatives": [],
   "reviewHistory": [],
-  "searchLog": [],
-  "nextAction": "按原出处查卷篇：CBDB 33606（州刺史，夔州，822—824）；结合年代消歧地名，缺证时缩减叙述。",
-  "revision": 1,
-  "updatedAt": "2026-11-01T04:33:54.997949+00:00",
-  "sha256": "0e84c40c5f44ce9f96d18a8911987dba8d97090668fc9352373630a03e75dc05"
+  "searchLog": [
+    {
+      "source": "《南宋永州刊〈唐柳先生文集〉三三巻本初攷》注 7，转引陶敏等《刘禹锡简谱》并讨论系年",
+      "url": "https://ir.lib.shimane-u.ac.jp/files/public/3/35363/20170425034151515441/a007039002.pdf"
+    },
+    {
+      "source": "四部丛刊本《刘梦得文集》卷十八《夔州谢上》，9a—9b",
+      "url": "https://github.com/kanripo/KR4c0051/blob/26064975d6bfd4cb95fff64d54ccf0095617790c/KR4c0051_018.txt#L183-L198"
+    },
+    {
+      "source": "《旧唐书》地理志卷三十九夔州奉节条",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷39"
+    },
+    {
+      "source": "CHGIS 奉节县（649—1004），历史县治点",
+      "url": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_44488"
+    }
+  ],
+  "nextAction": "对校到任日的不同记载，寻找可直接断定授夔州日期、离连和归葬路线的原始材料。",
+  "revision": 2,
+  "updatedAt": "2026-11-26T01:22:59.095937+00:00",
+  "sha256": "9c385f9f2b7d796d258f572354320a6d6092df80243b48906625cd2a24d26b12"
 }

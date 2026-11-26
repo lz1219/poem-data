@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "key": "秋词",
+  "titleZh": "秋词二首·其一",
+  "titleEn": "Autumn Song",
+  "aliases": [
+    "秋词",
+    "秋词二首其一",
+    "秋詞"
+  ],
+  "authorKey": "liuyuxi",
+  "genre": "shi",
+  "citation": "《全唐诗》卷三六五《秋词二首》其一；《刘梦得文集》卷八《秋词》首篇",
+  "level": "popular",
+  "certainty": "unknown",
+  "composed": {
+    "year": null,
+    "yearKind": "composition",
+    "placeZh": null,
+    "placeKey": null
+  },
+  "text": {
+    "sourceEdition": "quanshi-cp-2026",
+    "paragraphs": [
+      "自古逢秋悲寂寥，我言秋日勝春朝。",
+      "晴空一鶴排雲上，便引詩情到碧霄。"
+    ],
+    "paragraphsSimplified": [
+      "自古逢秋悲寂寥，我言秋日胜春朝。",
+      "晴空一鹤排云上，便引诗情到碧霄。"
+    ],
+    "simplifiedBy": "opencc-t2s",
+    "traditionalDerived": false
+  },
+  "meaning": "自古以来每逢秋日，文人墨客无不感慨悲凉寂寥；我却偏要说秋高气爽的秋天远胜过繁花似锦的春朝。看那万里晴空之中，一只矫健的白鹤凌空冲排云层直上九霄，顿时把壮阔高远的诗情引到了蔚蓝的天空之巅。",
+  "notes": [
+    {
+      "term": "悲寂寥",
+      "explain": "悲叹秋天的冷清萧条。宋玉《九辩》：“悲哉秋之为气也！萧瑟兮草木摇落而变衰。”"
+    },
+    {
+      "term": "春朝",
+      "explain": "春天的早晨，这里借指明媚生机之春日。"
+    },
+    {
+      "term": "排云",
+      "explain": "冲破云层，凌空而上。"
+    },
+    {
+      "term": "碧霄",
+      "explain": "青天，蔚蓝的高空。"
+    }
+  ],
+  "background": "此篇为《秋词》二首的第一首。唐永贞元年（805），刘禹锡被贬为朗州司马。本站将此诗列为朗州经历的相关选读，所核诗集未载作年和作地。本次篇次、系年与赏析整理有 AI 参与，未经人工审校。",
+  "appreciation": {
+    "text": "前两句从向来悲秋说起，转而以「我言」写出与众不同的判断。后两句以晴空中的白鹤承接这一转折，从排云而上的动势写到诗情上冲碧霄。",
+    "inference": null,
+    "by": "本站自撰",
+    "license": "CC BY-SA 4.0"
+  },
+  "apparatus": [],
+  "commentaryFile": null,
+  "dating": [
+    {
+      "claim": "805",
+      "stance": "pending",
+      "note": "旧稿系于初贬朗州时。史籍记载当年的任官经过，已查的两种诗集均未系年或记作地。",
+      "evidence": [
+        {
+          "quote": "劉禹錫為朗州司馬",
+          "source": "《资治通鉴》卷二三六永贞元年十一月条（任官背景）",
+          "grade": "D"
+        }
+      ]
+    }
+  ]
+}

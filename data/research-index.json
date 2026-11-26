@@ -3096,17 +3096,20 @@
     },
     {
       "id": "audit-stop-bf74bf33ffe4a32e",
-      "revision": 1,
+      "revision": 2,
       "subject": {
         "type": "stop",
         "key": "liuyuxi:6"
       },
       "kind": "audit",
-      "status": "pending",
-      "title": "刘禹锡：二十三年弃置身 · 第6站 · 夔州",
+      "status": "partial",
+      "title": "刘禹锡 · 第6站 · 夔州任内与赴任前的居丧",
       "provenance": {
-        "origin": "unknown",
-        "method": "历史叙述生成方式未记录"
+        "origin": "ai",
+        "model": "Codex",
+        "modelVersion": "GPT-6",
+        "generatedAt": "2026-11-26T01:22:59.094826+00:00",
+        "method": "交叉核对祭文、谢表、厅壁记和《竹枝词》引的固定电子版本，并区分本人记载与后人编年。"
       }
     },
     {
@@ -3126,17 +3129,20 @@
     },
     {
       "id": "audit-stop-c1d4b86e06b49054",
-      "revision": 1,
+      "revision": 2,
       "subject": {
         "type": "stop",
         "key": "liuyuxi:5"
       },
       "kind": "audit",
-      "status": "pending",
-      "title": "刘禹锡：二十三年弃置身 · 第5站 · 连州",
+      "status": "partial",
+      "title": "刘禹锡 · 第5站 · 再授连州并到任",
       "provenance": {
-        "origin": "unknown",
-        "method": "历史叙述生成方式未记录"
+        "origin": "ai",
+        "model": "Codex",
+        "modelVersion": "GPT-6",
+        "generatedAt": "2026-11-26T01:10:08.329318+00:00",
+        "method": "对读固定电子原文，并核对历史地名，未经人工审校。"
       }
     },
     {
@@ -3726,17 +3732,20 @@
     },
     {
       "id": "audit-stop-f2b379a0bd796c3b",
-      "revision": 1,
+      "revision": 2,
       "subject": {
         "type": "stop",
         "key": "liuyuxi:4"
       },
       "kind": "audit",
       "status": "pending",
-      "title": "刘禹锡：二十三年弃置身 · 第4站 · 朗州",
+      "title": "刘禹锡 · 第4站 · 贬朗州司马",
       "provenance": {
-        "origin": "unknown",
-        "method": "历史叙述生成方式未记录"
+        "origin": "ai",
+        "model": "Codex",
+        "modelVersion": "GPT-6",
+        "generatedAt": "2026-11-25T09:02:46.178089+00:00",
+        "method": "按事件、地名与作品分项对读史籍、历史地名和诗集，未经人工审校"
       }
     },
     {

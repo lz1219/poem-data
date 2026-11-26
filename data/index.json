@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T08:34:57.811Z",
+  "generatedAt": "2026-11-26T01:29:15.803Z",
   "works": [
     {
       "key": "一剪梅·舟过吴江",
@@ -684,6 +684,18 @@
       "apparatus": 0,
       "hasComments": false,
       "file": "data/works/秋浦歌.json"
+    },
+    {
+      "key": "秋词",
+      "titleZh": "秋词二首·其一",
+      "authorKey": "liuyuxi",
+      "genre": "shi",
+      "level": "popular",
+      "year": null,
+      "traditionalDerived": false,
+      "apparatus": 0,
+      "hasComments": false,
+      "file": "data/works/秋词.json"
     },
     {
       "key": "秦妇吟",

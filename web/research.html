@@ -54,7 +54,12 @@ function imageObservations(d){const items=(d.imageObservations||[]).filter(x=>x.
 async function json(url){const r=await fetch(url);if(!r.ok)throw new Error('读取失败');return r.json()}
 async function load(api,file){try{if(location.hostname.endsWith('github.io'))throw new Error('static');return await json(api)}catch{return json(file)}}
 function renderList(){const q=$('#q').value.trim().toLowerCase(),kind=$('#kind').value,status=$('#status').value;
- const hits=records.filter(r=>(!params.get('type')||r.subject.type===params.get('type'))&&(!params.get('key')||r.subject.key===params.get('key'))&&(!kind||r.kind===kind)&&(!status||r.status===status)&&(!q||[r.id,r.title,r.subject.key].join(' ').toLowerCase().includes(q)));
+ const type=params.get('type'), key=params.get('key');
+ const hits=records.filter(r=>{
+   const stopInJourney=type==='journey' && key && r.subject.type==='stop' && r.subject.key.startsWith(key+':');
+   const subjectMatches=(!type||r.subject.type===type) && (!key||r.subject.key===key);
+   return (subjectMatches||stopInJourney) && (!kind||r.kind===kind) && (!status||r.status===status) && (!q||[r.id,r.title,r.subject.key].join(' ').toLowerCase().includes(q));
+ });
  $('#count').textContent=hits.length+' 条';$('#list').innerHTML=hits.length?hits.map(r=>'<button class="item" data-id="'+esc(r.id)+'">'+esc(r.title)+'<small>'+esc(STATUS[r.status])+' · 第 '+r.revision+' 修订</small></button>').join(''):'<p>没有符合条件的公开记录。</p>';
  $('#list').querySelectorAll('button').forEach(b=>b.onclick=()=>{location.hash=b.dataset.id+'/'+records.find(r=>r.id===b.dataset.id).revision;if(matchMedia('(max-width:760px)').matches)$('#record').scrollIntoView({block:'start',behavior:'smooth'})});
 }

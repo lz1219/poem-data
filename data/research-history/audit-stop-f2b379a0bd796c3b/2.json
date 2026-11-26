@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0",
+  "id": "audit-stop-f2b379a0bd796c3b",
+  "subject": {
+    "type": "stop",
+    "key": "liuyuxi:4"
+  },
+  "kind": "audit",
+  "status": "pending",
+  "visibility": "public",
+  "title": "刘禹锡 · 第4站 · 贬朗州司马",
+  "claim": "永贞元年（805）十一月，刘禹锡赴连州途中改贬朗州司马。地图以州治武陵定位。《秋词》其一列为相关选读，作年作地待核。",
+  "provenance": {
+    "origin": "ai",
+    "model": "Codex",
+    "modelVersion": "GPT-6",
+    "generatedAt": "2026-11-25T09:02:46.178089+00:00",
+    "method": "按事件、地名与作品分项对读史籍、历史地名和诗集，未经人工审校"
+  },
+  "issues": [
+    "《资治通鉴》卷二三六在十一月己卯条列刘禹锡为朗州司马。《子刘子自传》记赴连州行至荆南再贬，未载抵达朗州的日期。",
+    "地图坐标采用 CHGIS 的唐朗州下辖武陵县定位，精度为州治参照。",
+    "《全唐诗》卷三六五和《刘梦得文集》卷八的首篇均作「便引詩情到碧霄」，所核诗集未载写作时地。"
+  ],
+  "evidence": [],
+  "reasoning": "九月初授连州、十一月再贬的顺序据《资治通鉴》；途中行至荆南和在朗州居九年据刘禹锡自述。引诗的篇属与任官分别核验。",
+  "counterEvidence": "《旧唐书》卷一六〇称「在朗州十年」，《子刘子自传》自称「居九年」，站内按自述归引。旧稿的「直引」尚缺版本见证。",
+  "alternatives": [],
+  "reviewHistory": [],
+  "searchLog": [
+    {
+      "source": "《资治通鉴》卷二三六，永贞元年九月及十一月己卯条",
+      "url": "https://zh.wikisource.org/zh-hans/資治通鑒/卷236"
+    },
+    {
+      "source": "刘禹锡《子刘子自传》，赴连州至荆南段",
+      "url": "https://zh.wikisource.org/wiki/子劉子自傳"
+    },
+    {
+      "source": "《旧唐书》卷一六〇《刘禹锡传》",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷160#劉禹錫"
+    },
+    {
+      "source": "CHGIS 唐朗州（758—1011）",
+      "url": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_32880"
+    },
+    {
+      "source": "CHGIS 武陵县（朗州属县）",
+      "url": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_41918"
+    },
+    {
+      "source": "《全唐诗》卷三六五《秋词二首》其一",
+      "url": "https://zh.wikisource.org/zh/全唐詩/卷365#秋詞二首"
+    },
+    {
+      "source": "《刘梦得文集》卷八《秋词》首篇，四部丛刊景宋版",
+      "url": "https://www.shidianguji.com/zh/book/SBCK149/chapter/1kru6cauzzo6h"
+    }
+  ],
+  "nextAction": "如发现有明确卷页的系年或作地依据，复核后更新《秋词》作品记录。",
+  "revision": 2,
+  "updatedAt": "2026-11-25T09:02:46.179246+00:00",
+  "sha256": "884c219f6cc8e9cd76f69120acdc8c32a1ef7527da959dbf7cf37bfea9e816d5"
+}

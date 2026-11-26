@@ -6,25 +6,94 @@
     "key": "liuyuxi:5"
   },
   "kind": "audit",
-  "status": "pending",
+  "status": "partial",
   "visibility": "public",
-  "title": "刘禹锡：二十三年弃置身 · 第5站 · 连州",
-  "claim": "出为连州刺史（初授播州，因母老改连州），在连州五年。",
+  "title": "刘禹锡 · 第5站 · 再授连州并到任",
+  "claim": "805 年初授连州，途中改贬朗州。815 年还京后授播州，未赴而改授连州。刘禹锡自记到州视事。",
   "provenance": {
-    "origin": "unknown",
-    "method": "历史叙述生成方式未记录"
+    "origin": "ai",
+    "model": "Codex",
+    "modelVersion": "GPT-6",
+    "generatedAt": "2026-11-26T01:10:08.329318+00:00",
+    "method": "对读固定电子原文，并核对历史地名，未经人工审校。"
   },
   "issues": [
-    "已有出处字符串，但尚缺原句与段落定位；有来源不等于该来源支持整段叙述。"
+    "还京、授播州、裴度因刘母年高奏请改任，据《旧唐书》本传元和十年条。",
+    "《连州刺史厅壁记》末段回顾两次任命，记抵京、再次南下及到任后见厅壁题名。署款是撰记日期。",
+    "《谢上表》末段自述到州上任，只给相对日期。连州州治在唐桂阳县，州治位置仅供地图参照。"
   ],
-  "evidence": [],
-  "reasoning": "",
-  "counterEvidence": "尚未完成系统反证检索。",
+  "evidence": [
+    {
+      "sourceId": "wikisource",
+      "quote": "伏請屈法，稍移近處。",
+      "locator": "《旧唐书》卷一六〇《刘禹锡传》元和十年条",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=2689841",
+      "revision": "2689841",
+      "sha256": "3a01358b7d70e52d5767cb919934939407ed7d09bc1b403615db8b56f523871a",
+      "textFile": "data/witnesses/3a01358b7d70e52d5767cb919934939407ed7d09bc1b403615db8b56f523871a.txt",
+      "originalFileSha256": "11e48df8c18739bf6eee8813707fe5376e496e807006bd92277480cb931a51bb",
+      "verifiedQuote": true,
+      "verification": "逐字截取所列固定修订的维基文本并核对引句，未经影印本对校及人工审校。",
+      "stance": "support",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "wikisource",
+      "quote": "既視事，得前二千石名姓於壁端",
+      "locator": "《全唐文》卷六〇六《连州刺史厅壁记》末段，元和十一年七月署",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=1979684",
+      "revision": "1979684",
+      "sha256": "13c435f7afd1e31790c9bab9f4fbb953e250077a815d67615bd5d2217e8cf55c",
+      "textFile": "data/witnesses/13c435f7afd1e31790c9bab9f4fbb953e250077a815d67615bd5d2217e8cf55c.txt",
+      "originalFileSha256": "fbef3ea687e6ec1b4cacdce66c2bac3bab9a540085a734bb2f65a0b9ed376be5",
+      "verifiedQuote": true,
+      "verification": "逐字截取所列固定修订的维基文本并核对引句，未经影印本对校及人工审校。",
+      "stance": "support",
+      "grade": "ungraded"
+    },
+    {
+      "sourceId": "wikisource",
+      "quote": "即以今月十一日到州上訖。",
+      "locator": "《全唐文》卷六〇一《连州刺史谢上表》末段",
+      "url": "https://zh.wikisource.org/w/index.php?oldid=1980058",
+      "revision": "1980058",
+      "sha256": "568c6da7cfdb43b081c51fd3ec750aaa6e29e9deb7316ce61202e895f290b6b1",
+      "textFile": "data/witnesses/568c6da7cfdb43b081c51fd3ec750aaa6e29e9deb7316ce61202e895f290b6b1.txt",
+      "originalFileSha256": "85a8eb965adf013f68465a2fd86a1b706d25970566e7b5ba4d778569ad079ec8",
+      "verifiedQuote": true,
+      "verification": "逐字截取所列固定修订的维基文本并核对引句，未经影印本对校及人工审校。",
+      "stance": "support",
+      "grade": "ungraded"
+    }
+  ],
+  "reasoning": "用本传排列诏命，用本人谢表、厅壁记确认到任和视事。播州只写入任命经过，年表保留第 5 站连州。",
+  "counterEvidence": "《全唐文》谢表写自郴州出发，《文苑英华》卷五八六在郴字下注集作柳。途中地点有异文；正文所记的到州日未标月份。815—819 的任职年范围也不足以断定足五年。",
   "alternatives": [],
   "reviewHistory": [],
-  "searchLog": [],
-  "nextAction": "按原出处查卷篇：CBDB 33606（州刺史，連州，815—819；播州 815 未赴）；结合年代消歧地名，缺证时缩减叙述。",
-  "revision": 1,
-  "updatedAt": "2026-11-01T04:33:54.995773+00:00",
-  "sha256": "e291770718f7744bdd19898f94f32db1ca75584d249127d571394a1430f8458c"
+  "searchLog": [
+    {
+      "source": "《子刘子自传》，赴连州至荆南段",
+      "url": "https://zh.wikisource.org/wiki/子劉子自傳"
+    },
+    {
+      "source": "《文苑英华》四库本卷五八六《连州刺史谢上表》",
+      "url": "https://zh.wikisource.org/wiki/文苑英華_(四庫全書本)/卷0586"
+    },
+    {
+      "source": "《旧唐书》卷四十地理志连州桂阳县条",
+      "url": "https://zh.wikisource.org/wiki/舊唐書/卷40"
+    },
+    {
+      "source": "CHGIS 唐连州与桂阳县同一治所点",
+      "url": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_34048"
+    },
+    {
+      "source": "CHGIS 桂阳县",
+      "url": "https://tgaz.fudan.edu.cn/tgaz/placename/hvd_42604"
+    }
+  ],
+  "nextAction": "如取得具月日的同时期文书或可靠年谱，引原文对校谢表，再细化到任日期。",
+  "revision": 2,
+  "updatedAt": "2026-11-26T01:10:08.331249+00:00",
+  "sha256": "047239293f60eed55793cfda8d227677c3e4c5998eaf6c4071ff1cee2707d725"
 }
