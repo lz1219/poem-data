@@ -2324,7 +2324,9 @@ function renderJourneyLink(text) {
 }
 
 function renderJourney(j) {
-  const links = j.links || {};
+  const links = Array.isArray(j.links)
+    ? Object.fromEntries(j.links.map(link => [link.position, link]))
+    : (j.links || {});
   const rows = j.stops.map((s, i) => {
     const link = links[String(i + 1)];
     const place = s.place || {ancient:s.place_ancient, modern:s.place_modern};
@@ -2334,7 +2336,7 @@ function renderJourney(j) {
     const quotedWork = quotedWorkForStop(j, s, passage?.[1]);
     return `${link ? `<tr><td colspan="3"><div class="note"><div class="k">承接</div>${renderJourneyLink(link.text || '')}
         <div class="src">据 ${esc(link.source)}</div></div></td></tr>` : ''}
-      <tr data-journey-stop="${esc(s.seq || i + 1)}"><td style="width:96px;font-family:var(--serif);color:var(--gold)">${esc(s.eraZh || s.year || '')}</td>
+      <tr data-journey-stop="${esc(s.seq || i + 1)}"><td style="width:96px;font-family:var(--serif);color:var(--gold)">${esc(s.eraZh || s.era_zh || s.year || '')}</td>
       <td style="width:132px"><b>${esc(place.ancient || '地点待核')}</b>
         ${place.modern ? `<div class="src">${esc(place.modern)}</div>` : ''}
         ${place.ancient && hasCoordinates && Number.isInteger(s.year) ? `<a class="maplink" href="${atlasLink({ person: j.personKey || j.key, year: s.year, stopPlace: place.ancient })}" target="_blank" rel="noopener">地图 ↗</a>` : ''}</td>
